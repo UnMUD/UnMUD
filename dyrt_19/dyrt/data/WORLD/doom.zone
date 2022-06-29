@@ -1,0 +1,455 @@
+/*********************************************************
+* DOOM.ZONE                                              *
+* Written By: Slayer                                     *
+* Code By: Rex                                           *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:doom
+
+%mobiles
+
+Name            = doomguard
+PName           = "The Guard"
+Location        = 1
+Strength        = 100
+Damage          = 10
+Armor           = 2
+Speed           = 0 
+MFlags            { BarNorth }
+Description     = "There is a guard standing here looking down on you."
+End             = doomguard
+
+Name            = oldman
+PName           = "The Man"
+Location        = 3
+Strength        = 100
+Damage          = 10
+Aggression      = 70
+Speed           = 0
+Description     = "A smelly old man is standing in front of you."
+End             = oldman
+
+Name            = jeffery
+PName           = "Jeffery"
+Location        = 6
+Damage          = 90
+Armor           = 15
+Speed           = 0
+Description     = "Jeffery the gardener is here."
+End             = jeffery
+
+Name            = rudy
+PName           = "Rudy"
+Location        = 7
+Strength        = 120
+Damage          = 20
+Speed           = 2
+SFlags            { Female }
+Description     = "Rudy the Cook is here brandishing her knives at you." 
+End             = rudy
+
+Name            = drunk
+PName           = "The Drunk"
+Location        = 8
+Strength        = 50
+Damage          = 10
+Speed           = 0
+Description     = "There is a drunk here."
+End             = drunk
+
+Name            = skeleton
+PName           = "The Skeleton"
+Location        = 11
+Strength        = 150
+Damage          = 10
+Speed           = 0
+Description     = "There is a Skeleton warrior here."
+End             = skeleton
+
+Name            = nathan
+PName           = "Nathan"
+Location        = 12
+Strength        = 150
+Damage          = 12
+Aggression      = 60
+Speed           = 0
+Description     = "Nathan the angry ogre is here."
+End             = nathan
+
+Name            = huge
+PName           = "Huge"
+Location        = 14
+Strength        = 200
+Damage          = 10
+Aggression      = 60
+Speed           = 0
+Description     = "There is a huge guard standing here."
+End             = huge
+			      
+Name            = doom
+PName           = "Doom"
+Location        = 15
+Strength        = 300 
+Damage          = 30
+Speed           = 0
+PFlags            { NoSummon }
+Description     = "Doom, the town Lord is standing here laughing at you."
+End             = doom
+
+%objects
+
+Name            = gate1
+PName           = gate
+Location        = IN_ROOM:1
+State           = 2
+MaxState        = 2
+Linked          = gate2
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The gate is open."
+Desc[1]         = "The gate is closed."
+Desc[2]         = "The gate is locked."
+Examine         = "The gate is made of hefty materials and looks old and rusty."
+End             = gate1
+
+Name            = gate2
+PName           = gate
+Location        = IN_ROOM:2
+State           = 2
+MaxState        = 2
+Linked          = gate1
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The gate is open."
+Desc[1]         = "The gate is closed."
+Desc[2]         = "The gate is locked."
+Examine         = "The gate is made of hefty materials and looks old and rusty."
+End             = gate2
+
+Name            = pie
+AltName         = food
+Location        = IN_ROOM:5
+State           = 1
+MaxState        = 1
+BValue          = 5
+Size            = 2
+Weight          = 5
+OFlags            { Food GetFlips }
+Desc[0]         = "An apple pie has been left here."
+Desc[1]         = "There is an apple pie resting beside the window."
+Examine         = "It is freshly baked and looks delicious."
+End             = pie
+
+Name            = gatekey
+PName           = key
+Location        = WORN_BY:doomguard
+BValue          = 100
+Size            = 1
+Weight          = 1
+OFlags            { Key WearOnNeck }
+Desc[0]         = "A huge iron key is lying here."
+Examine         = "
+It looks as though it were meant for opening drawbridges or very large gates."
+End             = gatekey
+
+Name            = knife
+Location        = WIELDED_BY:rudy
+BValue          = 100
+Size            = 5
+Weight          = 3
+Damage          = 10
+OFlags            { Weapon PitReset }
+Desc[0]         = "A sharp butcher's knife is lying here."
+Examine         = "The blade is long, thick and sharp; a nasty weapon."
+End             = knife
+
+Name            = door1
+PName           = door
+Location        = IN_ROOM:13
+State           = 2
+MaxState        = 2
+Linked          = door2
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door1
+
+Name            = door2
+PName           = door
+Location        = IN_ROOM:14
+State           = 2
+MaxState        = 2
+Linked          = door1
+OFlags            { NoGet Lockable Openable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door2
+
+Name            = heavy
+PName           = shield
+Location        = WORN_BY:huge
+BValue          = 100
+Size            = 7
+Weight          = 5
+Armor           = 10
+OFlags            { WearOnArms Armor PitReset }
+Desc[0]         = "There is a heavy shield lying here."
+End             = heavy
+
+Name            = carvings
+Location        = IN_ROOM:13
+OFlags            { NoGet }
+Desc[0]         = "There are some strange carvings in the ground here."
+Examine         = "
+Looking at the carvings closely, you make out the word REDRUM."
+End             = carvings
+
+Name            = shelf
+Location        = IN_ROOM:14
+OFlags            { NoGet Container }
+Examine         = "There seem to be a few interesting books here."
+End             = shelf
+
+Name            = book
+Location        = IN_CONTAINER:shelf
+BValue          = 100
+Size            = 3
+Weight          = 5
+Desc[0]         = "There is a massive book lying here."
+Examine         = "
+The cover is dusty.  Wiping it off you can barely make out the word 'Death'."
+End             = book
+
+Name            = lairkey
+PName           = key
+Location        = WORN_BY:doom
+BValue          = 100
+Size            = 1
+Weight          = 1
+OFlags            { Key WearOnNeck }
+Desc[0]         = "There is a large key on the ground before you."
+Examine         = "
+The key looks like it belongs to a chest, but it is a skeleton key and can 
+probably open most anything."
+End             = lairkey
+
+Name            = chest
+Location        = IN_ROOM:15
+State           = 2
+MaxState        = 2
+OFlags            { Openable Lockable NoGet Container }
+Desc[0]         = "There is an open chest here."
+Desc[1]         = "The chest is closed."
+Desc[2]         = "The chest is locked."
+Examine         = "
+The chest is very old and falling apart.  It has an almost evil feel to it."
+End             = chest
+
+Name            = doomblade
+AltName         = sword
+Location        = IN_CONTAINER:chest
+BValue          = 200
+Size            = 8
+Weight          = 10
+Damage          = 20
+OFlags            { Weapon PitReset }
+Desc[0]         = "The Doomblade lies before your feet."
+Examine         = "The blade is very sharp, and not to be toyed with."
+End             = doomblade
+
+%locations
+
+/* 1 */
+f1 e:f2 d:f2 w:SNOW_TEMPLE@BLIZZARD u:SNOW_TEMPLE@BLIZZARD;
+lflags { Cold Outdoors RealTime }
+Path Down The Mountain^
+   You are on a steep path that leads up and down the mountain, with snow
+lashing you from all sides. Above you you can make out some sort of stone
+structure, while below you see the beginnings of a large forest. To the
+northeast you see what may be smoke rising above the trees.
+^
+/* 2 */
+f2 w:f1 u:f1 n:f3;
+lflags { Cold Outdoors RealTime }
+The Silent Forest^
+   The trees around you are silent and lifeless. The only thing you hear is
+the sound of snowflakes falling to the ground. To your west is a path 
+leading up a snowy mountain, and to the north the forest continues.
+^
+/* 3 */
+f3 s:f2 n:1;
+lflags { Outdoors RealTime }
+The Silent Forest^
+   This forest definitely needs some life. The trees on either side of the
+path block passage to the east and west, and to the south the forest path 
+continues. To the north you see a small clearing.
+^
+/* 4 */
+1 n:^gate1 s:f3;
+lflags { Outdoors RealTime }
+The Gates to Doom^
+   You are in a small clearing. To your south is a path through the forest
+surrounded by trees. To the north of you is a giant iron gate, and on each 
+side of the gate is a wall stretching out for miles.  Looking through the gate 
+you can kind of make out a small town.  The gates look very large and heavy.
+^
+/* 5 */
+2 n:4 s:^gate2 e:3;
+lflags { NoMobiles Outdoors RealTime }
+Road to Town^
+   You are on a road that leads to the north and south through a lifeless
+forest. You notice the flowers on the side of the road are dead and seem to 
+have been trampled on. To the north you can see a town and notice that there 
+are no houses, but little huts instead.  You can see that a lot of the huts 
+have been burned down or are damaged as if there had been a fire here.  The 
+road leads north to the town, or south to a large and heavy set of gates that 
+lead through a long wall. To the east you see a small wooden shack through 
+the trees.
+^
+/* 6 */
+3 w:2;
+lflags { RealTime }
+A Wooden Shack^
+   This shack appears to have not been used in a long time. You notice that 
+it is very messy and has a strong musty smell to it. There is a table in the 
+middle of the room that has scraps of old cut up fish on it. On the east 
+wall is an old rocking chair, the chair looks unused and has collected a lot 
+of dust. There are a lot of cracks in the ceiling and walls, letting dim,
+diffuse light into the room.
+^
+/* 7 */
+4 w:5 n:7 s:2;
+lflags { Outdoors RealTime }
+Town Road^
+   You are standing at the entrance to a small town.  There are a lot of old 
+shacks around you, although many of them are not standing anymore.  You 
+notice a pleasant-looking shack to the west; is doesn't look as dirty as the
+rest of the shacks that are still standing.  To the north you see that the
+forest closes back in on the town, while to the south you can see a gate in
+the distance.
+^
+/* 8 */
+5 e:4 w:6;
+lflags { RealTime }
+Shack^
+   You are in a large, tidy, and nice-smelling one room shack. There is a 
+nice sized dinner table in the middle of the room with a white cloth over 
+the it.  An old iron stove sits against the north wall.  The shack is nicely 
+decorated with paintings hanging from walls and resting on shelves around the 
+room. There is a door to the east that leads out to the town road, and to the 
+west a door goes out to a large yard.
+^
+/* 9 */
+6 e:5;
+lflags { Outdoors RealTime }
+The Backyard^
+   You are in a large and nicely maintained yard which appears to be the
+nicest place in town that you have seen. There is a small pond set in the 
+middle of the yard, with arranged groupings of flowers and bushes that 
+surround giant trees. You hear the sounds of birds and other animals here
+that you have noticed to be absent elsewhere in the forest. This is the only 
+nice place in town that you have seen so far. To the east you can enter the
+shack.
+^
+/* 10 */
+7 s:4 e:8 n:9;
+lflags { Outdoors RealTime }
+Town Road^
+   The forest to the north looks very thick and dark.  The road you are 
+standing on is narrower here than to the south, and it gets even narrower to
+the north. The dirt here looks like ashes, and there is a smell in the air
+of rotting flesh. There is a large shack to the east or you can go north 
+or south on the town road.
+^
+/* 11 */
+8 w:7;
+lflags { RealTime }
+The Bar^
+   You walk into a large bar. This seems to be where most of the people are,
+for the bar is very crowded. There are people sitting at tables having 
+drinks, talking, and people dancing on the dance floor. There are a bunch of 
+drunks on the stage trying to dance, but they are stumbling and laughing too 
+hard to do so. You notice one guy sitting at the bar by himself with a 
+strange look on his face, maybe you should talk to him.
+^
+/* 12 */
+9 s:7 e:10;
+lflags { Outdoors RealTime }
+Forest Path^
+   You enter a path in the woods. It is dark and very creepy. You can barely 
+see the path, only enough to know where to put your feet. You feel like 
+you're being watched and looking around you realize the trees have horrible 
+faces carved on them.  The path leads to the east where there is a little 
+more light, and to the south where it passes a large shack.
+^
+/* 13 */
+10 n:11 w:9;
+lflags { Outdoors RealTime }
+Forest Path^
+   You are deep in the forest.  You notice a house to the north of you which
+appears to be the source of light for this area. You can hear something 
+echoing in the background.  It sounds almost like the screams of children in 
+pain.
+^
+/* 14 */
+11 w:13 n:12 s:10;
+lflags { Outdoors RealTime }
+Path^
+   You are standing on a path in front of a large shack to your north. There 
+are very loud screams coming from the west. The path here is well lit due to
+the light that is spilling out through the open doorway of the shack. The 
+path also continues to the west and south.
+^
+/* 15 */
+12 s:11 d:16;
+lflags { RealTime }
+House^
+   You walk into the shack and notice that it is quite large.  There isn't 
+much in here though.  A large dinner table sits in the middle of the room 
+with broken plates and scraps of food on it.  Whoever was eating here was a 
+slob.  There is a stairwell leading down a flight of VERY old looking stairs.
+^
+/* 16 */
+13 e:11 w:^door1;
+lflags { Outdoors RealTime }
+Path^
+   You are at the end of a long road standing before a large brick house.  
+You notice a strange light and can hear the death cries from children and 
+adults coming from inside this place. You can go east back down the road, 
+or to your west is a door leading into the house. There are carvings on the 
+ground in front of you.
+^
+/* 17 */
+14 e:^door2;
+lflags { RealTime }
+Brick House^
+   You are in a large brick house. The main feature of this room is book-
+shelves; a lot of shelves and a lot of books. You can hear death cries much
+more loudly here coming from beneath you. Through an opening you can see
+stairs that lead down into darkness. 
+^
+/* 18 */
+15;
+lflags { Dark }
+Lair of DOOM^
+   You are in the cold damp basement of the house.  There are corpses 
+littering the floor and the smell down here is horrible.  You would not want 
+to stay down here for too long. You notice there are bats roosting in the 
+rafters above you. A set of heavy stone stairs lead up to the main floor.
+^
+/* 19 */
+16;
+lflags { Death }
+The Old Stairs^
+   You make it about half way down the stairs, when suddenly a step breaks from 
+under you.  The rotted foundation of the shack breaks and splinters under 
+your weight, impaling you through the abdomen.  
+
+   Suddenly you don't feel very well...
+^

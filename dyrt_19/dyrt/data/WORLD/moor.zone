@@ -1,0 +1,145 @@
+/*********************************************************
+* MOOR.ZONE                                              *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:moor
+
+%mobiles
+
+%objects
+
+Name            = ropetoppit
+PName           = rope
+AltName         = ladder
+Location        = IN_ROOM:3
+Linked          = ROPEBOTPIT@LEDGE
+OFlags            { Destroyed NoGet }
+Desc[0]         = "A rope ladder leads down into the pit."
+Desc[1]         = "It looks like a perfectly average rope."
+End             = ropetoppit
+
+Name            = heather
+Location        = IN_ROOM:11
+State           = 1
+MaxState        = 1
+BValue          = 30
+Size            = 1
+Weight          = 1
+OFlags            { GetFlips }
+Desc[0]         = "Some rare white heather has been left here."
+Desc[1]         = "Some white heather is growing here."
+Examine         = "
+This particular type of heather is white and extremely pretty.  It is also
+rather rare."
+End             = heather
+
+Name            = chalice
+Location        = IN_ROOM:5
+BValue          = 40
+Size            = 10
+Weight          = 5
+Desc[0]         = "A bloodstained chalice lies before you."
+End             = chalice
+
+Name            = altar
+Location        = IN_ROOM:5
+State           = 1
+MaxState        = 1
+OFlags            { NoGet }
+Desc[0]         = "A chalice rests upon the altar."
+Examine         = "
+The altar is blackened and pitted from the fires and blood of many sacrifices.
+The center of the altar simply bears the words: 'Acsthad of the Fiery Plains.'"
+End             = altar
+
+%locations
+
+1 n:4 e:2 s:MOORPATH@VALLEY ;
+Lflags { Outdoors RealTime }
+Misty Moorlands^
+   You are standing on the south-eastern edge of a vast tract of misty,
+tangled moorland.  Thick gorse and bracken make travel almost impossible
+save for narrow, animal-worn tracks to the north and east.
+^
+2 n:5 w:1 ;
+Lflags { Outdoors RealTime }
+Misty Moorland^
+   You are wandering amidst the thickets and stones far out upon the moor.
+Grey and barren, they extend all around you.  Thick gorse and bushes prevent
+even the most determined adventurer from doing anything but following the
+paths to the north and west.
+^
+3 n:6 ;
+Lflags { Outdoors RealTime }
+By the Pit^
+   You are standing on the rim of a huge open pit looking down some twenty
+feet to the floor below.  The walls of the pit are too sheer to climb
+down, which is unfortunate, as there seem to be caves leading off from it.
+A path winds its dusty way north out onto the moor.
+^
+4 n:11 e:5 s:1 ;
+Lflags { Outdoors RealTime }
+Western Edge of Moor^
+   You are standing somewhere near the western edge of the moors.  Narrow,
+gorse-walled paths wind their ways north, east, and south from here.
+^
+5 n:10 e:6 s:2 w:4 ;
+Lflags { Outdoors RealTime }
+The Stone Circle on the Moor^
+   You are standing in the center of an ancient circle of jagged stones
+hidden in a deep bowl in the center of the moors.  Narrow, scarcely-used
+tracks wind up from the deathly quiet bowl.  In the center of the circle
+is a black gloomy altar to some ancient god.
+^
+6 n:10 e:3 s:2 w:4 ;
+Lflags { Outdoors RealTime }
+Lost on the Moor^
+   You are lost on the moor.  Thick gorse and tangled bushes prevent you
+from seeing far in any direction.  A multitude of little twisted paths
+wind in all directions from here.
+^
+7 n:9 e:8 w:6 ;
+Lflags { Outdoors RealTime }
+By the Ruined Cottage^
+   You are standing somewhere on the eastern side of the moor.  A narrow,
+worn path leads east between two crumbling dry-stone walls toward the 
+remains of an old cottage.
+^
+8 w:7 ;
+Lflags { Outdoors RealTime }
+Inside the Ruined Cottage^
+   You are standing in the sad, desolate ruins of an old farmhouse.  The 
+roof has long since caved in, leaving a crumbling shell to gradually fall.
+A single doorway leads back outside onto the moor.
+^
+9 e:40@EASTCOAST s:7 w:10 ;
+Lflags { Outdoors RealTime }
+Rocky Waste^
+   You are standing on the northeastern corner of the moor, looking out
+across a mass of jumbled rock.  Paths lead south and west across the moor,
+while the rock steepens into precipitous cliffs to the east and north, 
+preventing further travel.
+^
+10 e:9 s:6 w:11 ;
+Lflags { Outdoors RealTime }
+Lost on the Moor^
+   You are lost somewhere on a vast expanse of ancient moorland.  Thick
+bushes and tangled piles of gorse and rock prevent you from seeing far in
+any direction.  Narrow paths wind east, west, and south across the moor.
+^
+11 s:4 w:ROAD7E@NEWVILLAGE ;
+Lflags { Outdoors RealTime }
+Rocky End^
+   The path you are following across the moor ends in a narrow rocky hollow.
+You can follow the path back toward the south, or follow a path to the west.
+You can't see far because of the thick gorse and rock, but you believe you
+can make out some smoke in the distance to the west.  Perhaps what you see
+are signs of civilization.
+^

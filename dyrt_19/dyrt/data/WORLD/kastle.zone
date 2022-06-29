@@ -1,0 +1,537 @@
+/*********************************************************
+* KASTLE.ZONE                                            *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 30 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:kastle
+
+%mobiles
+
+Name            = blix
+Location        = 13
+Strength        = 80
+Damage          = 10
+Speed           = 2
+Description     = "Blix the Goblin looks happy to see you."
+End             = blix
+
+Name            = crud
+Location        = 16
+Strength        = 120
+Damage          = 10
+Aggression      = 10
+Speed           = 2
+Description     = "A Creeping Crud is slushing around, trying to get at you."
+End             = crud
+
+Name            = knight
+PName           = "The Knight"
+Location        = 4
+Strength        = 200
+Damage          = 10
+Aggression      = 30
+Speed           = 0
+Description     = "A Skeletal Knight is waiting here for someone to strangle."
+Examine         = "According to him, your neck is just about the right size."
+End             = knight
+
+Name            = skapti
+Location        = 19
+Strength        = 100
+Damage          = 10
+Aggression      = 80
+Speed           = 0
+Description     = "
+Skapti the Tax Collector wrings his hands at the prospect of new taxes."
+Examine         = "
+You sense a future land known as the United States, and the word 'politician'
+finds its way into your brain.  You have never heard the word before."
+End             = skapti
+
+Name            = flosi
+Location        = 19
+Strength        = 100
+Damage          = 10
+Aggression      = 80
+Speed           = 0
+Description     = "
+Flosi the Tax Collector wrings his hands at the prospect of new taxes."
+Examine         = "
+You sense a future land known as the United States, and the word 'politician'
+finds its way into your brain.  You have never heard the word before."
+End             = flosi
+
+%objects
+
+Name            = fireplace
+Location        = IN_ROOM:4
+State           = 0
+MaxState        = 1
+OFlags            { Lit Extinguish Lightable NoGet }
+Desc[0]         = "
+A cheerful fire blazing in the fireplace makes the room feel quite toasty."
+Desc[1]         = "There is a cold draft coming from the stone cold fireplace."
+Examine         = "The flue is open leading up into a large chimney."
+End             = fireplace
+
+Name            = rock_wall
+PName           = wall
+Location        = IN_ROOM:1
+State           = 1
+MaxState        = 1
+Linked          = ROCK_WALL@CASTLE
+OFlags            { PushToggle NoGet }
+Desc[0]         = "
+An open panel disguised as solid rock allows passage to the north."
+Desc[1]         = "The passage ends to the north in a solid rock wall."
+End             = rock_wall
+
+Name            = null_door
+PName           = door
+Location        = IN_ROOM:2
+State           = 2
+MaxState        = 2
+Linked          = heavy_door
+OFlags            { Lockable Openable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = null_door
+
+Name            = heavy_door
+PName           = door
+AltName		= heavydoor
+Location        = IN_ROOM:3
+State           = 2
+MaxState        = 2
+Linked          = null_door
+OFlags            { Lockable Openable NoGet }
+Desc[0]         = "The heavy door is open."
+Desc[1]         = "The heavy door is closed."
+Desc[2]         = "The heavy door is locked."
+End             = heavy_door
+
+Name            = oak_door
+PName           = door
+AltName         = oakdoor
+Location        = IN_ROOM:3
+State           = 1
+MaxState        = 1
+Linked          = oak_door_1
+OFlags            { Lockable Openable NoGet }
+Desc[0]         = "The oak door is open."
+Desc[1]         = "The oak door is closed."
+End             = oak_door
+
+Name            = oak_door_1
+PName           = door
+Location        = IN_ROOM:4
+State           = 1
+MaxState        = 1
+Linked          = oak_door
+OFlags            { Lockable Openable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+End             = oak_door_1
+
+Name            = door
+Location        = IN_ROOM:20
+State           = 2
+MaxState        = 2
+Linked          = door_1
+OFlags            { Lockable NoGet Openable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door
+
+Name            = door_1
+PName           = door
+Location        = IN_ROOM:21
+State           = 2
+MaxState        = 2
+Linked          = door
+OFlags            { Lockable Openable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_1
+
+Name            = bar_stone
+PName           = stone
+AltName         = bar
+Location        = IN_ROOM:18
+State           = 1
+MaxState        = 1
+Linked          = WALL_STONE@CASTLE
+OFlags            { Pushable NoGet }
+Desc[0]         = "
+A block of stone is sitting on the stairs here beside an opening leading up."
+Desc[1]         = "
+The stairway is blocked by a large block of stone that is barred in place."
+End             = bar_stone
+
+Name            = hole
+Location        = IN_ROOM:12
+State           = 1
+MaxState        = 1
+Linked          = hole_1
+OFlags            { NoGet }
+Desc[0]         = "A hole has been dug through the snow leading down."
+End             = hole
+
+Name            = hole_1
+PName           = hole
+Location        = IN_ROOM:13
+State           = 1
+MaxState        = 1
+Linked          = hole
+OFlags            { NoGet }
+Desc[0]         = "A hole has been dug through the thick crusty snow."
+End             = hole_1
+
+Name            = snow_ice
+PName           = ice
+AltName         = snow
+Location        = IN_ROOM:14
+State           = 1
+MaxState        = 1
+Linked          = SNOW_ICE@BLIZZARD
+OFlags            { NoGet }
+Desc[0]         = "A hole has been chipped through the ice."
+End             = snow_ice
+
+Name            = gold_chain
+PName           = chain
+AltName         = gold
+Location        = IN_ROOM:1
+State           = 0
+MaxState        = 1
+OFlags            { PushToggle NoGet }
+Desc[0]         = "
+A very valuable looking gold chain lies here half buried in the dirt."
+End             = gold_chain
+
+Name            = skis
+Location        = IN_ROOM:5
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 20
+Weight          = 10
+OFlags            { GetFlips WearOnFeet }
+Desc[0]         = "A pair of wooden skis has been left here."
+Desc[1]         = "A pair of wooden skis stand in the corner, gathering dust."
+End             = skis
+
+Name            = sword_cuthbert
+PName           = cuthbert
+AltName         = sword
+Location        = IN_ROOM:4
+State           = 1
+MaxState        = 1
+BValue          = 200
+Size            = 20
+Weight          = 10
+Damage          = 13
+OFlags            { Weapon PitReset }
+Desc[0]         = "Cuthbert is lying here complaining about being left alone."
+Desc[1]         = "
+A magnificent-looking sword is displayed above the fireplace."
+Examine         = "
+The sword is finely engraved with the words 'Cuthbert the Scared'."
+End             = sword_cuthbert
+
+Name            = chair_lazyboy
+PName           = lazyboy
+AltName         = chair
+Location        = IN_ROOM:4
+State           = 1
+MaxState        = 1
+OFlags            { Container PushToggle Openable NoGet }
+Desc[0]         = "The lazyboy is reclining."
+Desc[1]         = "The lazyboy looks inviting."
+End             = chair_lazyboy
+
+Name            = old_coins
+PName           = coins
+Location        = IN_CONTAINER:chair_lazyboy
+BValue          = 60
+Size            = 3
+Weight          = 3
+Desc[0]         = "A few old coins are scattered about here."
+End             = old_coins
+
+Name            = armor_suit
+PName           = suit
+AltName         = armor
+Location        = IN_ROOM:2
+OFlags            { Container NoGet }
+Desc[0]         = "
+A suit of armor bearing the royal seal is standing here beside the door."
+End             = armor_suit
+
+Name            = fancy_key
+PName           = key
+Location        = IN_CONTAINER:armor_suit
+BValue          = 60
+Size            = 1
+Weight          = 1
+OFlags            { Key PitReset }
+Desc[0]         = "A fancy-looking key has been left here."
+End             = fancy_key
+
+Name            = chamber_pot
+PName           = pot
+Location        = IN_ROOM:6
+BValue          = 160
+Size            = 5
+Weight          = 5
+OFlags            { Container }
+Desc[0]         = "A splendid solid gold chamber pot is sitting here."
+End             = chamber_pot
+
+Name            = ledge
+Location        = IN_ROOM:7
+OFlags            { NoGet }
+End             = ledge
+
+Name            = nest_egg
+PName           = egg
+Location        = IN_ROOM:7
+BValue          = 160
+Size            = 5
+Weight          = 5
+OFlags            { Destroyed }
+Desc[0]         = "A silver egg has been left here."
+End             = nest_egg
+
+Name            = bread
+AltName         = food
+Location        = IN_ROOM:5
+State           = 1
+MaxState        = 1
+BValue          = 10
+Size            = 2
+Weight          = 2
+OFlags            { GetFlips Food }
+Desc[0]         = "Some stale bread has been left here."
+Desc[1]         = "The only thing left on the shelves is some stale bread."
+End             = bread
+
+Name            = ball
+Location        = IN_ROOM:17
+BValue          = 160
+Size            = 20
+Weight          = 10
+Desc[0]         = "Someone has left their bowling ball here."
+Examine         = "
+This is actually a very large black pearl with some holes drilled in it."
+End             = ball
+
+Name            = chest
+Location        = IN_ROOM:19
+State           = 2
+MaxState        = 2
+OFlags            { Container Lockable Openable NoGet }
+Desc[0]         = "The chest is open."
+Desc[1]         = "The chest is closed."
+Desc[2]         = "The chest is locked."
+End             = chest
+
+Name            = check
+Location        = IN_CONTAINER:chest
+State           = 0
+MaxState        = 0
+BValue          = 150
+Size            = 1
+Weight          = 1
+Desc[0]         = "There is a check lying here." 
+Examine         = "It is made out to His Royal Highness for $50."
+End             = check
+
+Name            = tapestry
+Location        = IN_ROOM:4
+OFlags            { NoGet }
+Examine         = "Behind the tapestry you find a doorway."
+End             = tapestry
+
+%locations
+
+1 n:^rock_wall s:2;
+lflags { RealTime }
+Escape Passage South^
+   The Passage opens up here allowing you to stand. There are lit torches
+spaced evenly along both walls providing plenty of light to see by. Much
+further to the south the torches end, and it appears that someone is standing
+there by a door. The floor here is dirt, but oddly enough your footsteps sound
+hollow.
+^
+2 n:1 s:8 w:^null_door;
+lflags { RealTime }
+Entrance to the Royal Hideaway^
+   The tunnel continues south here into darkness and you feel a cold draft
+coming from that direction. To the north you can feel the warmth of the
+many torches lining the passageway. A heavy wooden door, banded with iron,
+is set in the west wall.
+^
+3 e:^heavy_door s:^oak_door;
+lflags { RealTime }
+Side Hallway^
+   This is a small alcove off the main passageway. The walls are paneled with
+wood finely painted and inlaid with gold. This place looks fit for a king.
+There is a heavy wooden door banded with iron on the eastern wall.
+There is a stout oak door on the southern wall.
+^
+4 n:^oak_door_1 s:6 w:5 u:7;
+lflags { RealTime }
+Cozy Room^
+   You are in a cozy little room inside the royal hideout. The west wall is
+hung with a large colorful tapestry meant to depict the heroic deeds of the
+royal family. Oddly enough, however, it is completely blank.
+The east wall is occupied by a huge fireplace in front of which sits the
+royal Lazy-boy, a chair fit for a king.
+^
+5 e:4;
+lflags { Dark }
+Store Room^
+   This room is where emergency stores were kept. It is larger than it appears
+and the walls are lined with tall shelves. The shelves are now virtually empty.
+^
+6 n:4;
+lflags { Peaceful RealTime }
+Royal Bedroom^
+   A sense of awe briefly overcomes you at the splendor of the royal bedroom.
+Gold seems to guild everything here. Even the ceiling is inlaid with gold
+patterns surrounding the splendid royal seal. The bed, perhaps the largest you
+have ever seen, is covered with sheets of luxurious gold silk. You get the
+impression that this king was a little obsessed with his gold.
+^
+7 d:4;
+lflags { Dark OnePerson }
+Chimney^
+   Though this is a large chimney, it is still a tight squeeze. The bricks are
+coated with soot that rubs off on you and makes you sneeze. You can't climb
+any higher than this because of a small ledge constricting the chimney.
+^
+8 n:2 s:9;
+lflags { Dark Cold }
+Long Cold Passageway^
+   This passageway is filled with cold air that goes right through your clothes
+and makes you shiver uncomfortably. The heavy frost that has collected on the
+walls reminds you of an icebox that hasn't been cleaned out in years.
+To the north you can just make out the light of the many torches that line the
+walls there, and to the south there is a small light at the end of the tunnel.
+^
+9 n:8 u:10;
+lflags { Outdoors Cold RealTime }
+The Fells^
+   The escape passage emerges here high on the side of a steep rocky fell.
+The footing here is treacherous. Small avalanches of scree are set off by your
+footsteps as you scramble along the fell. Any descent would be impossible.
+The only other way out is up to the top of the fell which is covered in snow.
+^
+10 s:11 w:9 d:11;
+lflags { Outdoors Cold RealTime }
+Top of the Glacier^
+   This is the top of a large glacier that extends down the steep mountainside.
+The fresh snow here looks good for skiing. Of course you'd best be careful or
+you might set of an avalanche. To the south you can barely make out the bottom
+of the glacier through the glare from the snow. West of here lies the fells.
+^
+11 s:12;
+lflags { Outdoors Cold RealTime }
+Bottom of the Glacier^
+   You are at the bottom of the glacier. The top of the glacier is far above
+you, impossible to reach from here. The only exit appears to be through a snow
+bank to the south.
+^
+12 n:11 d:^hole;
+lflags { Outdoors Cold RealTime }
+Snow Drift^
+   The snow here is heaped up into a large drift, and the wind whips through
+here on its way to parts unknown. The only way out would seem to be back the
+way you came.
+^
+13 n:14 u:^hole_1;
+lflags { Dark Cold Soundproof NoMagic }
+Under the Snow Temple^
+   You are in a secret chamber beneath an old temple. It looks as though the
+place is ready to fall in. The walls are leaning precariously and there are
+cracks in the ceiling. There are some stairs at the north end of the chamber.
+^
+14 s:13 u:^snow_ice;
+lflags { Cold NoMobiles RealTime }
+Snowy Stairs^
+   The stairs here are blocked by snow that has hardened into an icy crust.
+Perhaps you could dig through the ice if you had something to dig with.
+^
+15 n:18 s:16;
+lflags { Dark }
+Under the Trap Door^
+   You are in the lower reaches of the castle, directly beneath a trap door.
+An open sewer runs to the south and a terrible odor is coming from that
+direction. The tunnel continues to the north.
+^
+16 n:15 d:23;
+lflags { Dark }
+Smelly Room^
+   The sewer empties into a large pit here creating an unbearable odor. A chain
+hangs from the ceiling directly over the pit and just out of your reach.
+^
+17 u:16;
+lflags { Dark OnePerson }
+Sewage Pit^
+   The walls of this pit are still coated with sewage and the stench here is
+overpowering. Sewage is still spilling in so you better not take too long.
+^
+18 n:19 e:20 s:15 u:^bar_stone;
+lflags { Dark }
+Damp Tunnel^
+   It is dank and musty here and slime coats the walls. To one side there is a
+a set of stairs leading up. To the north the tunnel opens up and to the east
+can be seen rows of cells.
+^
+19 s:18;
+lflags { RealTime }
+Tax Collectors^
+   This must be where the taxes are normally kept. However there is only one
+chest left and there is not much else to see.
+^
+20 e:^door w:18;
+lflags { Dark }
+Castle Dungeons^
+   Rows of cells line the the walls of this place, however they are all empty
+now. A heavy iron door has been set in the eastern wall.
+^
+21 w:^door_1;
+lflags { Dark }
+Solitary^
+   This must be where they put prisoners they didn't want to see anymore.
+There are several skeletons here and the floor is covered with soiled straw.
+^
+22 d:17;
+lflags { Dark OnePerson Soundproof NoMobiles NoSummon }
+On the Chain^
+   You are hanging from the chain over the sewage pit. You could climb down
+from here into the pit before it fills again or you could just hang here for
+the rest of your mortal life. Well?.. get going.
+^
+23;
+lflags { NoMobiles NoSummon Death }
+An Unpleasant Death^
+   You dive headlong into the sewage.
+Oh dear, you seemed to have drowned in.. er, well you know.
+^
+24;
+lflags { NoMobiles NoSummon Death }
+Buried Alive^
+   Your clumsy attempt to climb down the glacier has set off an avalanche
+burying you alive... well dead actually.
+^

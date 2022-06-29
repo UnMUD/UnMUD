@@ -1,0 +1,104 @@
+/*********************************************************
+* MOUNTAIN.ZONE                                          *
+* Written By: Elmo?                                      *
+* Notes:     Distribute with full DYRT distribution only *
+*            No code needed                              *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:mountain
+
+%mobiles
+
+Name            = vulture
+PName           = "The Vulture"
+Location        = 6
+Strength        = 100
+Damage          = 10
+Aggression      = 20
+Speed           = 2
+Description     = "A vulture is hovering above you, searching for prey."
+Examine         = "The vulture is circling dangerously close to your head."
+End             = vulture
+
+%objects
+
+Name            = rose
+AltName         = flower
+Location        = IN_ROOM:6
+State           = 1
+MaxState        = 1
+BValue          = 80
+Size            = 1
+Weight          = 1
+OFlags            { GetFlips }
+Desc[0]         = "An extremely beautiful white desert rose has been left here."
+Desc[1]         = "A beautiful white desert rose peeks out of the flower mat."
+Examine         = "Your beloved would like this flower..."
+End             = rose
+
+Name            = skull
+Location        = IN_ROOM:3
+BValue          = 10
+Size            = 2
+Weight          = 1
+Desc[0]         = "An old bleached ox skull is lying on the ground."
+Examine         = "You should be glad it's not yours!"
+End             = skull
+
+%locations
+
+1 n:SHADY@BLIZZARD s:2;
+lflags { Outdoors RealTime NoMobiles }
+Thick Bushes^
+   You are strolling through thick bushes, trying to find your way out.  The
+sun is climbing high up in the sky and is casting its warm rays down on you.
+A narrow path is winding from north to south through the bushes.
+^
+2 n:1 s:3;
+lflags { Outdoors Hot RealTime }
+Northern Edge of the Desert^
+   The sun has reached its zenith as you arrive at the edge of a desert.  Your
+feet start to feel heavy as you check your water bottle.  To the south you can
+see the rocky lands continuing far out of sight.  To the north the desert turns
+into thick thorny bushes.
+^
+3 n:2 e:4 w:6;
+lflags { Outdoors Hot RealTime }
+Wild Ox Crossing^
+   You stop for a moment to have a look around as you trudge through the 
+burning heat.  The sand reflects the heat, making you wish that night would
+come soon.  You find yourself desperately trying to distinguish reality from
+mirage.  You think you see paths leading in every direction.  To the south
+you can narrowly make out a red hill breaking the horizon.
+^
+4 w:3 e:5;
+lflags { Outdoors Hot RealTime }
+Shadow of the Cactus^
+   You take a deep breath of relief as you find a nice seat in the shadow of
+a tall, thorny cactus.  You kick off your shoes and let the heat dry your
+sweating toes.  Weak winds from the east blow gently through your hair and
+the sweat on your shirt slowly evaporates, cooling down your back.  You glance
+at the eastern skyline, which seems to be broken by odd structures in the 
+distance.  Paths lead east and west.
+^
+5 w:4 e:ANC24@ANCIENT;
+lflags { Outdoors RealTime NoMobiles Hot }
+Rocky Path^
+   You can hardly make out a stony path winding between big rocks to the east.
+The path widens as you wander further east and you can make out an old town
+far away at the edge of your sight.  Back to the west, a vast desert lies in
+the burning heat of the sun.
+^
+6 e:3;
+lflags { Outdoors RealTime Peaceful }
+Desert Rose^
+   A shower of rain has suddenly turned the normally dry and barren desert into
+a sea of small but colorful flowers.  The rain cloud is slowly moving west and
+the sun casts its first rays upon this scented little paradise.  You sit down
+on the ground, enjoying the peace and silence surrounding you.
+^

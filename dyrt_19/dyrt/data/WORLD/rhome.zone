@@ -1,0 +1,356 @@
+/*********************************************************
+* RHOME.ZONE                                             *
+* Written By: Rex                                        *
+* Code By: Rex                                           *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 30 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:rhome
+
+%mobiles
+
+Name            = fritz
+PName           = "Fritz"
+Location        = living
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle }
+Description     = "Fritz is curled up here on the back of the couch."
+Examine         = "
+Fritz is Rex and Kender's cat.  He's about 4 months old, and when he's awake,
+he's a holy terror.  He's rather cute while he's asleep, though."
+End             = fritz
+
+Name            = sam
+PName           = "Sam"
+Location        = living
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle }
+Description     = "Sam has curled herself around Fritz."
+Examine         = "
+Sam is Rex and Kender's cat.  She's about 4 months old, and when she's awake,
+she's a holy terror.  She's rather cute while she's asleep, though."
+End             = sam
+
+%objects
+
+Name            = invring
+Location        = IN_ROOM:15
+Visibility      = 90000
+Desc[0]         = "There is a glowing ring on an eerie pedestal here."
+End             = invring
+
+Name            = papers
+Location        = IN_ROOM:den
+OFlags            { NoGet }
+Examine         = "You feel badly for going through Rex's papers..."
+End             = papers
+
+Name            = fridge
+Location        = IN_ROOM:bar
+State           = 1
+MaxState        = 1
+OFlags            { Openable NoGet Container }
+Desc[0]         = "The fridge is open."
+Desc[1]         = "The fridge is closed."
+End             = fridge
+
+Name            = cabinet
+Location        = IN_ROOM:bar
+State           = 1
+MaxState        = 1
+OFlags            { NoGet Container Openable }
+Desc[0]         = "The cabinet is open."
+Desc[1]         = "The cabinet is closed."
+End             = cabinet
+
+Name            = doritos 
+AltName         = food
+Location        = IN_CONTAINER:cabinet
+OFlags            { Food }
+Desc[0]         = "There is a bag of Doritos lying here."
+Examine         = "The bag is a full one of Nacho Cheese flavor!"
+End             = doritos
+
+Name            = backpack
+AltName         = pack
+Location        = IN_ROOM:lab
+BValue          = 200
+Size            = 20
+Weight          = 5
+OFlags            { Container WearOnBack }
+Desc[0]         = "There is an old leather backpack lying here."
+Examine         = "
+The backpack is made of old leather and it is dusty.  It is apparently the bag
+that Rex uses on digs."
+End             = backpack
+
+Name            = porchdoor
+PName           = door
+Location        = IN_ROOM:den
+State           = 1
+MaxState        = 1
+Linked          = dendoor
+OFlags            { NoGet Openable }
+Desc[0]         = "The porch door is open."
+Desc[1]         = "The porch door is closed."
+End             = porchdoor
+
+Name            = dendoor
+PName           = door
+Location        = IN_ROOM:porch
+State           = 1
+MaxState        = 1
+Linked          = porchdoor
+OFlags            { NoGet Openable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+End             = dendoor
+
+Name            = bathdoor
+PName           = door
+Location        = IN_ROOM:upper
+State           = 0
+MaxState        = 2
+Linked          = halldoor
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The bathroom door is open."
+Desc[1]         = "The bathroom door is closed."
+Desc[2]         = "The bathroom door is locked."
+End             = bathdoor
+
+Name            = halldoor
+PName           = door
+Location        = IN_ROOM:bath
+State           = 0
+MaxState        = 2
+Linked          = bathdoor 
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = halldoor
+
+Name            = beddoor
+PName           = door
+Location        = IN_ROOM:upper
+State           = 0
+MaxState        = 2
+Linked          = hall2door
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The bedroom door is open."
+Desc[1]         = "The bedroom door is closed."
+Desc[2]         = "The bedroom door is locked."
+End             = beddoor
+
+Name            = hall2door
+PName           = door
+Location        = IN_ROOM:bed
+State           = 0
+MaxState        = 2
+Linked          = beddoor
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed." 
+Desc[2]         = "The door is locked."
+End             = hall2door
+
+Name            = balconydoor
+PName           = door
+Location        = IN_ROOM:bed
+State           = 0
+MaxState        = 1
+Linked          = bedroomdoor
+OFlags            { NoGet Openable }
+Desc[0]         = "The glass balcony door is open."
+Desc[1]         = "The glass balcony door is closed."
+End             = balconydoor
+
+Name            = bedroomdoor
+PName           = door
+Location        = IN_ROOM:balcony
+State           = 0
+MaxState        = 1
+Linked          = balconydoor
+OFlags            { NoGet Openable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+End             = bedroomdoor
+
+%locations
+
+/* 1 */
+entry n:stairs w:living e:dining s:ROAD3E@NEWVILLAGE;
+lflags { Party NoMobiles }
+Chez Rex^
+   You have stepped into a smallish house.  It seems new, but it could never be
+classified as 'modern.'  You can still smell the carpet, which is a warm,
+toasty brown.  The house is generally tidy, but you feel that, given Rex's
+nature, there are probably a few rooms and secluded places here that must be
+very messy.  The apartment is very comfortable and you grin evilly and 
+consider taking a self-guided tour.
+^
+/* 2 */
+living e:entry n:den;
+lflags { Party Private }
+The Living Room^
+   In the west wall there is a huge stone fireplace, in front of which is a very
+thick carpet that looks exceedingly comfortable to relax on.  There are two 
+windows in the wall but the view both in and out is blocked by trees.  There
+is a sense of total privacy here, which Rex must have seen as an important
+feature.
+^
+/* 3 */
+dining w:entry n:kitchen;
+lflags { Party }
+In the Dining Room^
+   The walls here are white and the same carpet comes in from the entry.  In
+the center of the room is a heavy oak table with four chairs around it.  The
+chairs are very elaborate in their design.  On the table is a white table
+cloth and a pair of tall red candles in crystal candlesticks, and a crystal
+vase holding six red roses, some greens, and a few sprigs of baby's breath.
+^
+/* 4 */
+kitchen s:dining;
+lflags { Party }
+Rex's Kitchen^
+   This room frightens you...  It looks like some of the world's worst culinary
+errors occurred in this very room.  You decide to leave quickly before
+something jumps out of the fridge and wraps itself around your ankle.
+^
+/* 5 */
+den s:living n:^porchdoor;
+lflags { Party }
+Rex's Den^
+   This is a small, quiet room with a huge, heavy oak desk and a plush desk
+chair in one corner of the room.  In another corner is a stereo and built into
+the walls are wooden bookcases that stand about waist high.  From that level on
+up, the walls are stucco and there is an oak border at the ceiling and oak beams
+that criss-cross the ceiling.  Papers are grouped into piles on the desk,
+in an attempt to make it look tidy.  On the desk sits a very sophisticated
+looking pentium.  There are two filing cabinets in here, but you are afraid 
+to look in them.
+^
+/* 6 */
+porch s:^dendoor;
+lflags { Party }
+The Back Porch^
+   You are on a screened-in porch at the back of the house.  There is a full
+roof, which may indicate a balcony above.  As you look toward the north, there
+is a large back yard, and beyond that, a huge green valley.
+^
+/* 7 */
+stairs s:entry u:upper;
+lflags { Party }
+On the Stairs^
+   The stairs go up half way and then turn the other way and finish their
+climb.  The carpeting is new and soft under your feet as you run up and down.
+^
+/* 8 */
+upper d:stairs e:^bathdoor w:^beddoor s:rec;
+lflags { Party }
+The Upper Hall^
+   Here in the upper hall, the same brown carpeting is soft beneath your feet.
+To the west is the main bedroom, and to the east is a large bathroom.
+^
+/* 9 */
+rec n:upper w:lab e:bar;
+lflags { Party }
+The Rec Room^
+   You have stepped into a huge room with fluffy carpeting and lots of light.
+In one corner is a ping pong table, while in the opposite corner is a pool
+table.  There is a big-screen TV against one wall with an endless collection of
+video tapes.  Most of the newest releases are already here.  Near the TV
+is an elaborate stereo system.  Many CD's are in messy piles around it, most of
+them not even in the right cases.  Two huge windows in the south wall let in 
+plenty of sunlight and fresh air.
+^
+/* 10 */
+lab e:rec;
+lflags { Party Dark } 
+The Darkroom^
+   The room you are in is painted black.  There are a few tables around for
+work spaces, but other than that there is very little that resembles
+furniture in here.  The more furniture one has in a darkroom, the better
+the chances of falling over something.  There are three trays of liquid
+on one of the counters.  One of them is emitting a quasi-nasty smell.
+Hanging on a line on one side of the room are several rolls of black
+and white film.  On shelves all around the room are lots of bottles of
+different chemicals.  They all look a little scary to you.  Against one
+wall is a large sink.  Behind the sink on pegboard there are several pairs
+of forceps, a thermometer, a rubber tube, a squeegie, and a few other
+photography tools.
+^
+/* 11 */
+bar w:rec;
+lflags { Party }
+The Bar^
+   There is a solid oak bar here with lots of shelves, cabinets, and a
+refrigerator built into the back.  There are many old bottles used as
+decoration here.  Just about every drink imaginable is available here.
+^
+/* 12 */
+bath w:^halldoor;
+lflags { Party Private }
+The Bath^
+   The bathroom is decorated in a very soft blue.  There are many huge white
+towels folded on the shelves here, as well as two drying on racks.  The shower
+is very powerful with a large tub for soaking in.  The newness makes the tile, 
+porcelain, counter tops and floors gleam.
+^
+/* 13 */
+bed e:^hall2door n:^balconydoor;
+lflags { Party Private }
+The Bedroom^
+   This bedroom is very simply decorated.   It has a plush white carpet and
+white walls.  Against the west wall is a king-sized bed.  On either side of the
+bed are two night stands.  There are a few tasteful pictures on the walls. 
+You also notice that there seems to be a few pieces of masculine clothing here.
+^
+/* 14 */
+balcony s:^bedroomdoor d:15;
+lflags { Party }
+The Balcony^
+   You have stepped out of Rex's room onto a large balcony.  There is an
+over hang built onto it to keep you dry in the rain, but it only covers half of
+the balcony, so that you can also watch the stars on clear nights.  There is an
+intricate railing that will block you from falling.  As you look beyond the
+railing you look into a deep valley that is perfectly green.  The land looks
+like a meadow.  Way beyond that valley are tall, majestic mountains.  The whole
+view gives you a feeling of complete and utter calm.  The breeze you feel is
+surprisingly warm.  The balcony is perfect for spending time with someone you
+love, or simply curling up with a book or watching the stars at night.
+^
+/* 15 */
+15 u: balcony e:16;
+lflags { Party Peaceful Private }
+Rex's Secret Garden^
+   This is the place where only Rex's friends are invited to.  Hidden in a
+group of old beech trees, a small grassy clearing opens up before you filled
+with sun and warmth.  Some fruit trees shade the garden from above, inviting
+you to lie down under them and listen to the soft whispering of the breeze
+through their branches.  There are some tiny mystical creatures called
+wuselchen wuseling busily around in the grass, just out of your reach.
+   To the east is a crystal clear pool, sparkling in the sunlight.  One edge is
+covered with beautiful water lilies, while the trunk of a birch reaches far 
+over the water, allowing you to rest comfortably on it.
+^
+/* 16 */
+16 w:15 n:POOL@VALLEY s:POOL@ICECAVE;
+lflags { Party Peaceful Private }
+In the Pool^
+   You dive into the pool and the cool waters surround you.  The sun overhead
+heats the water and makes the temperature very pleasant on this hot day.  The
+water is so crystal clear that you could probably drink it if you wanted to. 
+The tree overhead and the surrounding groves provide for complete privacy here.
+With a little bit of effort, you can dive through an underground waterway to
+reach other pools to the north and south.
+^

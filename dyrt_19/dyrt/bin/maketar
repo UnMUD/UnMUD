@@ -1,0 +1,30 @@
+#!/bin/csh -f
+#create an archive with today's date.. -val
+
+set COMP="gzip -v -9"  # your compressor (e.g. gzip, compress)
+set PACK="gtar -c +exclude-from dyrt/bin/.exclude.gtar -f"
+
+set END="z"        # the ending added by your compressor (eg. z, Z, gz)
+
+set ECHO="echo"
+set CD="cd"
+set MV="mv"
+
+
+# -----------------------
+
+$ECHO Creating archive..
+$CD ../..
+$PACK dyrt.tar dyrt
+$ECHO Compressing...
+$COMP dyrt.tar
+
+set DATE=`date '+%d%h%y'`
+set FILE=dyrt_$DATE.tar.$END
+
+if (-e $FILE) then
+	echo There is an old archive with the same date!
+	/bin/rm -i $FILE
+endif
+
+$MV dyrt.tar.$END $FILE

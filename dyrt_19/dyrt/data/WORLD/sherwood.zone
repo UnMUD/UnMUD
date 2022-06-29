@@ -1,0 +1,737 @@
+/*********************************************************
+* SHERWOOD.ZONE                                          *
+* Written By: Maklen                                     *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+*            No code needed                              *
+* Edited by Rex on 8 September 1996                      *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:sherwood
+
+%mobiles
+
+Name            = john
+PName           = "Little John"
+Location        = 20
+Strength        = 150
+Damage          = 10
+Armor           = 0
+Aggression      = 0 
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Little John stands here practicing his dodge, parry, thrust and spin."
+Examine         = ""
+End             = john
+
+Name            = tuck
+PName           = "Friar Tuck"
+Location        = 8
+Strength        = 150
+Damage          = 8
+Armor           = 0
+Aggression      = 20
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Friar Tuck sits here protecting his precious brew."
+Examine         = ""
+End             = tuck
+
+Name            = jim
+PName           = "Merryman Jim"
+Location        = 11
+Strength        = 170
+Damage          = 10
+Armor           = 0
+Aggression      = 40
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Jim is here on his watch."
+Examine         = ""
+End             = jim
+
+Name            = marian
+PName           = "Maid Marian"
+Location        = 13
+Strength        = 150
+Damage          = 10
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { Female }
+MFlags            { }
+Description     = "Maid Marian is here trying to catch a glimpse of your butt."
+Examine         = ""
+End             = marian
+
+Name            = sheriff
+PName           = "The Sheriff"
+Location        = 14
+Strength        = 170
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+The Sheriff is here, picking out the spot at which to bury you."
+Examine         = ""
+End             = sheriff
+
+Name            = stacy
+PName           = "Merryman Stacy"
+Location        = 22
+Strength        = 80
+Damage          = 4
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Stacy is following Merryman Greg around as always."
+Examine         = ""
+End             = stacy
+
+Name            = greg
+PName           = "Merryman Greg"
+Location        = 22
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Greg is telling Merryman Stacy about his new obsession."
+Examine         = ""
+End             = greg
+
+Name            = chad
+PName           = "Merryman Chad"
+Location        = 25
+Strength        = 120
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Chad is sitting here, playing with his lucky boiling sticks."
+Examine         = ""
+End             = chad
+
+Name            = tim
+PName           = "Merryman Tim"
+Location        = 26
+Strength        = 140
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Tim is here anxiously awaiting his weekly drive home."
+Examine         = ""
+End             = tim
+
+Name            = jason
+PName           = "Merryman Jason"
+Location        = 27
+Strength        = 160
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Jason is here complaining about his newest ailment."
+Examine         = ""
+End             = jason
+
+Name            = mike
+PName           = "Merryman Mike"
+Location        = 28
+Strength        = 180
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Mike is here mumbling about not being a farmer."
+Examine         = ""
+End             = mike
+
+Name            = butch
+PName           = "Merryman Butch"
+Location        = 29
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Butch is here, kickboxing and antagonizing Merryman Chris."
+Examine         = ""
+End             = butch
+
+Name            = sil
+PName           = "Merryman Sil"
+Location        = 30
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Sil is here awaiting Amy's next command."
+Examine         = ""
+End             = sil
+
+Name            = lars
+PName           = "Merryman Lars"
+Location        = 31
+Strength        = 140
+Damage          = 10
+Armor           = 0 
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Lars is here, puking after completing the Century Club."
+Examine         = ""
+End             = lars
+
+Name            = dan
+PName           = "Merryman Dan"
+Location        = 32
+Strength        = 160
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "Merryman Dan says 'You just better give it back!'"
+Examine         = ""
+End             = dan
+
+Name            = scott
+PName           = "Merryman Scott"
+Location        = 33
+Strength        = 100 
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "
+Merryman Scott is here, spitting in his little sister's mouth."
+Examine         = ""
+End             = scott
+
+Name            = robin
+PName           = "Robin Hood"
+Location        = 34
+Strength        = 250
+Damage          = 10
+Armor           = 0
+Aggression      = 40
+Speed           = 0
+Visibility      = 0
+Wimpy           = 0
+PFlags            { }
+SFlags            { }
+MFlags            { }
+Description     = "The famed Robin of Hood stands here, leading his merry men."
+Examine         = ""
+End             = robin
+
+%objects
+
+Name            = quiver
+Location        = WORN_BY:robin
+State           = 0
+MaxState        = 0
+BValue          = 100
+Size            = 10
+Weight          = 5
+Damage          = 0
+Armor           = 5
+Visibility      = 0
+OFlags            { Armor Container WearOnBack Wearable }
+Desc[0]         = "
+A very well-fashioned quiver lies here waiting for someone to pick it up."
+Examine         = ""
+End             = quiver
+
+Name            = stick
+AltName         = branch
+Location        = IN_ROOM:4
+State           = 1
+MaxState        = 1
+BValue          = 5
+Size            = 5
+Weight          = 2
+Damage          = 5
+Armor           = 0
+Visibility      = 0
+OFlags            { Lightable Extinguish Weapon }
+Desc[0]         = "A lit stick is lying here on the ground."
+Desc[1]         = "There is a stick here on the ground."
+Examine         = ""
+End             = stick
+
+Name            = parry
+AltName         = staff
+Location        = CARRIED_BY:john
+State           = 0
+MaxState        = 0
+BValue          = 200
+Size            = 10
+Weight          = 8
+Damage          = 10
+Armor           = 0
+Visibility      = 0
+OFlags            { Weapon }
+Desc[0]         = "Little John's parry staff sits here."
+Examine         = "
+It's a sturdy staff that could do some damage if used right."
+End             = parry
+
+Name            = beer
+AltName         = keg
+Location        = IN_ROOM:8
+State           = 0
+MaxState        = 0
+BValue          = 20
+Size            = 20
+Weight          = 20
+Damage          = 0
+Armor           = 0
+Visibility      = 0
+OFlags            { NoGet }
+Desc[0]         = "A key of beer sits here waiting to be tapped."
+Examine         = "Too bad you don't have a tap."
+End             = beer
+
+Name            = point
+AltName         = knife
+Location        = IN_ROOM:10
+State           = 0
+MaxState        = 0
+BValue          = 40
+Size            = 2
+Weight          = 1
+Damage          = 10
+Armor           = 0
+Visibility      = 0
+OFlags            { Weapon }
+Desc[0]         = "A sharp point has been left here."
+Examine         = "It's a knife.  What did you expect, an exclamation point?"
+End             = point
+
+Name            = necklace
+Location        = WORN_BY:marian
+State           = 0
+MaxState        = 0
+BValue          = 300
+Size            = 1
+Weight          = 1
+Damage          = 0
+Armor           = 0
+Visibility      = 0
+OFlags            { WearOnNeck Wearable }
+Desc[0]         = "A beautiful necklace lies at your feet."
+Examine         = ""
+End             = necklace
+
+Name            = badge
+Location        = WORN_BY:sheriff
+State           = 0
+MaxState        = 0
+BValue          = 50
+Size            = 5
+Weight          = 5
+Damage          = 0
+Armor           = 5
+Visibility      = 0
+OFlags            { WearOnBody Wearable Armor }
+Desc[0]         = "The sheriff's badge is here, stained with blood."
+Examine         = "It reads: 'To serve and protect'."
+End             = badge
+
+Name            = sticker
+Location        = IN_ROOM:17
+State           = 0
+MaxState        = 0
+BValue          = 30
+Size            = 25
+Weight          = 15
+Damage          = 10
+Armor           = 0
+Visibility      = 0
+OFlags            { Weapon }
+Desc[0]         = "A pig-sticker is here, tempting you to pick it up."
+Examine         = "Pig-sticker huh?  Hmm... any 5-0 around?"
+End             = sticker
+
+Name            = paperclip
+AltName         = clip
+Location        = IN_ROOM:30
+State           = 0
+MaxState        = 0
+BValue          = 20
+Size            = 1
+Weight          = 1
+Damage          = 0
+Armor           = 0
+Visibility      = 0
+OFlags            { }
+Desc[0]         = "A paper clip can barely be seen in the grass."
+Examine         = "A paper clip in the middle of Sherwood Forest?"
+End             = paperclip
+
+Name            = ironwood
+AltName         = sword
+Location        = IN_CONTAINER:brush
+State           = 0
+MaxState        = 0
+BValue          = 500
+Size            = 50
+Weight          = 25
+Damage          = 26
+Armor           = 0
+Visibility      = 0
+OFlags            { Weapon }
+Desc[0]         = "
+The infamous Ironwood Sword lies here, quivering and ready to kill."
+Examine         = "It's wood, yet it's iron?"
+End             = ironwood
+
+Name            = brush
+Location        = IN_ROOM:34
+State           = 0
+MaxState        = 0
+BValue          = 0
+Size            = 0
+Weight          = 0
+Damage          = 0
+Armor           = 0
+Visibility      = 0
+OFlags            { NoGet Container }
+Examine         = "
+It's brush.  What did you expect to find, a sword or something?"
+End             = brush
+
+%locations
+
+1 n:3 e:2 w:4 s:EFOREST@EFOREST;
+lflags { Peaceful NoMobiles Outdoors RealTime }
+Gateway^
+     You are standing at the Gateway to adventure.  There are three paths.
+Each path has a different adventure and each a different destiny.  Those
+who choose to enter must be willing to face the consequences of the choices
+they make.
+^
+2 w:1;
+lflags { RealTime }
+East Fork^
+     This is the road to a great adventure full of surprises, monsters, 
+and lots of adventure.  This is not for the 'weak of heart' or strength.  
+On each side of the road are trees that seem to reach out for you trying to
+pull you into their twisted webs of branches.
+^
+3 s:2;
+lflags { RealTime }
+North Fork^
+     The road stretches wide and long.  The trees on the side of the road
+are ominous, but friendly enough.  The path is well worn, probably indicating
+that it is not a rough one, but don't let that give you peace of mind.
+^
+4 e:1 w:5;
+lflags { Outdoors RealTime }
+West Fork^
+     You are traveling on a paved road, making the journey quite easy.
+The road continues west into a dense forest.  You sense danger, and prepare 
+yourself for what lies ahead.  What ever that may be.
+^
+5 e:4 n:6;
+lflags { Outdoors RealTime }
+South Fork^
+  The path continues north.
+^
+6 n:7 w:21 s:5;
+lflags { Outdoors RealTime }
+Road to Sherwood Forest^
+     You have entered a very dense forest.  The trees tower over you,
+blocking but only a little sunlight by which you can make out a path to
+the north and to the west.
+^
+7 s:6 n:8;
+lflags { Outdoors RealTime }
+Trampled Path^
+     You are on a heavily worn path.  It looks as if many a wagon has 
+traveled through here.  The trees thin here allowing the bright sunlight to
+shine down.  A tiny rabbit scurries through the bushes but he is too fast for
+you.  The path continues to the north.
+^
+8 s:7 e:9;
+lflags { Outdoors RealTime }
+Worn Path^
+     You have entered a small clearing of the sorts.  There is a wagon 
+sitting off the path to the north.  There is some kind of contraption there.
+It looks like it's brewing up some kind of magical potion or something.  Maybe 
+you can talk the owner, into parting with some of his brew.
+^
+9 w:8 n:10;
+lflags { Outdoors RealTime }
+Bend in the Road^
+     The path turns north here.  There is a rapidly running river to the
+east but it doesn't look safe to navigate.  Maybe there is a bridge or slow
+shallow point up north at which you can cross it.  Maybe not.
+^
+10 s:9 n:11;
+lflags { Outdoors RealTime }
+Path Straightens^
+     The path straightens.  You look across the river and see something far
+off in the distance.  It looks very interesting.  You shiver with anticipation
+of the time when you will be able to explore the region across the river.
+^
+11 n:12 s:10;
+lflags { Outdoors RealTime }
+Under the Oaks^
+     You are standing under oak trees.  You look up to admire their beauty.
+When a passing European Swallow flies by and defecates on your face, you
+frantically look around for a sink to wash your face, when you suddenly realize
+that you are in  forest.  I guess you will have to walk around with
+bird feces on your face.
+^
+12 w:13 s:11;
+lflags { Outdoors RealTime }
+Turn in Path^
+     The path turns west.  You definitely feel like you are getting
+somewhere now.  You know it won't be long before a great adventure falls
+upon you.  You shiver with anticipation.
+^
+13 e:12 w:14 n:16;
+lflags { Outdoors RealTime }
+Intersection^
+     You have come to an intersection.  You must now, once again, choose
+your fate.  Will you take the route to the north?  Or take the route to the
+west?  Or will you chicken out and take the route to the east, back from where
+your cowardly heart came from?  You must now choose.
+^
+14 s:15 e:13;
+lflags { Outdoors Dark RealTime }
+Dismal Forest^
+     Oh no!  You have reached a very dark dismal part of the forest.
+You do not feel safe here, and wish to get out of here as soon as possible.
+There is the intersection back to the east, but there is also a very nice path
+leading to the south.
+^
+15 ;
+lflags { Death RealTime }
+Dead End^
+     Ooops......  You seem to have come across a Dead End.
+And the DEAD END seems to be correct in more than one sense.  You suddenly
+find yourself zapped from the realms of Infinity.  You Have DIED!
+^
+16 s:13 n:17;
+lflags { Outdoors RealTime }
+Road to Wealth^
+     You have chosen the right path.  This is the road to fame and fortune.
+The trees are happy and friendly and the sun is shining bright down through 
+the bright greens leaves of the various trees.  The road continues happily
+to the north.
+^
+17 n:18 s:16;
+lflags { Outdoors RealTime }
+On the Road^
+     You can't help but to break out into song.  The one that comes to mind 
+goes something like, "On the road again, just can't wait to get on the road
+again..."  You can't remember who sang it, but you still gotta love it.
+^
+18 n:19 s:17;
+lflags { Outdoors RealTime }
+Near the End^
+     You are nearing the end of the road.  Your life long dreams lie just 
+ahead.  Money, power, love, fame, and happiness are waiting for you.  Your 
+ticket to all of this is just north of here.
+^
+19 ;
+lflags { Death RealTime }
+The End^
+     The moral of the story here is that everything that glitters isn't
+always gold.  In case you haven't figured it out yet....You're DEAD!!!!
+^
+20 e:21;
+lflags { Outdoors Private Party RealTime }
+Rainbow Waterfall^
+     You are standing in a small stream just below a breath-taking 
+waterfall.  The spray off the falls causes a beautiful rainbow to stretch 
+across the river.  You can not imagine a more beautiful place.  Jagged rocks 
+cover the bed of the stream just below the falls.  The stones become smoother 
+and polished further down stream from the continuous wearing of the water.  
+The grass is short, soft, and green, perfect for a picnic with your 
+sweetheart.
+^
+21 w:20 e:6 n:22;
+lflags { Outdoors RealTime }
+Near Waterfall^
+     You continue along the path.  You hear the rush of falling water to
+the west.  To the north runs a beaten path.  It is probably beaten down for
+some reason.
+^
+22 s:21 n:23;
+lflags { Outdoors RealTime }
+Beaten Path^
+     You continue to travel along the beaten path.  The brush grows thick
+along each side of the road.  The trees are thin allowing for plenty of light.
+This lightens your mood as you grow concerned about traveling so deep into the
+forest.
+^
+23 s:22 n:24;
+lflags { Outdoors RealTime }
+Rutted Path^
+     The path here is very rough.  You fall several time trying to make your
+way north.  There appear to be eyes peaking from the brush.  You frantically
+search but turn up nothing.  The path continues to the north.
+^
+24 s:23 w:25;
+lflags { Outdoors RealTime }
+Corner^
+     You have reached yet another turn in the road.  The trees grow dense
+to the west.  They are ominous and block all sunlight from reaching the ground.
+You stand here trying to muster up the courage to venture on.  You look toward
+the trees and a shiver runs up your spine.  You know that if you continue.
+There is no coming back.  It is all or nothing.  What are you a man or mouse?
+^
+25 e:24 n:26;
+lflags { Outdoors Dark RealTime }
+Under the Elms^
+     You stand under very thick Elm trees.  The path you are traveling on
+is more like a trail now.  It doesn't appear that too many people have ventured
+down this road.  And maybe they had a good reason.
+^
+26 s:25 n:27;
+lflags { Outdoors Dark RealTime }
+Under the Popular Trees^
+     You stand under many poplar trees that block out the sun.  The path
+continues to the north.
+^
+27 s:26 n:28;
+lflags { Outdoors Dark RealTime }
+Under the Cottonwood Trees^
+     You stand under many cottonwood trees that block out the sun.  The path
+continues to the north.
+^
+28 s:27 n:29;
+lflags { Outdoors Dark RealTime }
+Under the Maple Trees^
+     You stand under many Maple trees that block out the sun.  The path
+continues to the north.
+^
+29 s:28 n:30;
+lflags { Outdoors Dark RealTime }
+Under the Birch Trees^
+     You stand under many birch trees that block out the sun.  The path
+continues to the north.
+^
+30 s:29 n:31;
+lflags { Outdoors Dark RealTime }
+Under the Thorn Apple Trees^
+     You stand under many thorn apple trees that block out the sun.  The
+path continues to the north.
+^
+31 s:30 n:32;
+lflags { Outdoors Dark RealTime }
+Under the Oak Trees^
+     You stand under many oaks trees that block out the sun.  The path
+continues to the north.
+^
+32 s:31 n:33;
+lflags { Outdoors Dark RealTime }
+Under the Fig Trees^
+     You stand under many fig trees that block out the sun.  The path
+continues to the north.
+^
+33 s:32 n:34;
+lflags { Outdoors Dark RealTime }
+Under the Pine Trees^
+     You stand under many pine trees that block out the sun.  The path
+continues to the north.
+^
+34 s:33;
+lflags { Outdoors Dark RealTime }
+Clearing^
+     You have reached a clearing at the edge of the woods.  You are quite
+grateful that you have exited the forest and can rest from your many battles.
+Thick brush circles around the clearing keeping out any stray animals that 
+wander into this area.
+^

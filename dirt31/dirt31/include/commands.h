@@ -1,0 +1,38 @@
+void lookcom(void);
+void examcom(void);
+void incom(Boolean inv);
+void resetcom(int flags);
+void unveilcom(char *unv_pass);
+void posecom(void);
+void praycom(void);
+void reviewcom(void);
+void shoutcom(void);
+void saycom(void);
+void tellcom(void);
+void scorecom(void);
+void sitcom(void);
+void standcom(int plr);
+void pncom(void);
+void bugcom(void);
+void typocom(void);
+void helpcom(void);
+void help2(char *cont);
+void help3(char *cont);
+void help4(char *cont);
+int  showhelp(char *verb);
+void questcom(void);
+void infocom(void);
+void globalcom(void);
+void unalias(int player);
+void unpolymorph(int player);
+Boolean disp_file(char *fname, FILE *f);
+void flowercom(void);
+void ticklecom(void);
+void petcom(void);
+void polymorph(int plx,int turns);
+int  find_pretender(int plx);
+void aliascom(void);
+Boolean disp_file(char *fname, FILE *f);
+void bulletincom(void);
+
+#define RES_TEST  0x01  /* Perform check for pflag */

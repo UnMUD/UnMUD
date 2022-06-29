@@ -1,0 +1,36 @@
+scripts
+-------
+
+maketar - packs the directory into a distribution archive; currently
+	set to use tar/gnuzip.
+
+clean - removes the stuff that shouldn't be distributed.. called
+	by the makefiles with "make clean"
+
+watcher - should be used to run the mud; it will automatically
+	rerun the mud if it crashes.
+
+mkdep-x - a modified mkdep; ceates dependencies for your
+	makefile.. called by "makde depend"
+
+fixlog - extracts infomation from the log file.
+
+
+
+compiled programs
+-----------------
+
+Dump - extracts a nice printout from the uaf_rand file.
+
+generate - used to generate systemfiles; not needed after that.
+
+pfilter - used from inside the game. if you delete this, the help
+	system will not work.
+
+aberd - the main program.
+
+other
+-----
+
+.exclude.gtar - is not a program, it is used by the gnu tar program
+to block the packing of certain files/dirs.

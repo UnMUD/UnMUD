@@ -1,0 +1,21 @@
+#!/bin/sh -f
+#
+# runs the mud.. reruns it, if the mud exited
+# vpopesc@calstatela.edu
+# you may want to run the mud like:
+#   watcher | tee watcher.log
+
+DELAY=20     # how many seconds to wait before starting the mud again?
+
+while true
+	do
+	limit coredumpsize unlimited
+	date
+	aberd -f -k  # keep it in foreground. when this returns, it means
+		     # the mud has crashed.
+
+	sleep $DELAY
+done
+
+
+

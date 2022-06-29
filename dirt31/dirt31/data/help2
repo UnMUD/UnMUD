@@ -1,0 +1,22 @@
+Wizard Commands -- Please get help on a command before using it.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Utility                                      | Travel Messages
+ALIAS       CHANGE  SETSTART EMOTE  PFLAGS   | SETIN    SETOUT    PROMPT
+EXORCISE    ZAP     QUIET    RESET  LFLAGS   | SETMIN   SETMOUT   REVIEW
+RESURRECT   SET     SNOOP    GOTO   MFLAGS   | SETVIN   SETVOUT   SAVESET
+WAR/PEACE   IN/AT   TRACE    MASK            | SETQIN   SETQOUT   
+STOP/START                                   |
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Informational            | Communication     | Creation
+MOBILES   MWHO   OBJECTS | WIZ      NOWIZ    | CLONE    DESTRUCT
+SHOW      STATS  USERS   |                   |
+ZONES     GLOBAL         |          NOSHOUT  |
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Spells -- Combat spells kill mortals!        | Weather Control
+BANG      BLIND  CRIPPLE  CURE   DEAFEN      | SUN   RAIN   STORM
+FIREBALL  FROST  HEAL     FORCE  INVIS/VIS   | SNOW  HAIL   BLIZZARD
+MISSILE   MUTE   POSE     SHOCK  SUMMON      |
+WHERE                                        | 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Type HELP <command> for detailed help on a command.
+

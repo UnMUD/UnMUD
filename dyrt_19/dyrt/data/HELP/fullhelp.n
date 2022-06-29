@@ -1,0 +1,55 @@
+[A]NOAWIZ
+[A]Turns off the awiz channel.  If you type it a second time, it will
+[A]turn the channel back on.
+[A]
+[A]See also:  AWIZ.
+[A]^
+NOBATTLE
+Blocks out the battle messages of other peoples' fights when you are in 
+the room with them.
+^
+[D]NODGOD
+[D]Turns off the dgod channel.  If you type it a second time, it will
+[D]turn the channel back on.
+[D]
+[D]See also:  DGOD.
+[D]^
+[G]NOGOD
+[G]Turns off the god channel.  If you type it a second time, it will
+[G]turn the channel back on.
+[G]
+[G]See also:  GOD.
+[G]^
+NOGOSSIP
+Turns off the gossip channel.  If you type it a second time, it will 
+turn the channel back on.
+
+See also:  NOGOSSIP.
+^
+NOINVENTORY
+Blocks out the inventories of others when you move through rooms.
+^
+NORTH
+Moves you one room in the northern direction.  NORTH can be abbreviated "n".
+
+See also:  SOUTH, EAST, WEST, UP, DOWN.
+^
+[X]NOSHOUT <player>
+[X]For those of you with headaches.  When this is on you won't hear any 
+[X]noisy mortals.  Type NOSHOUT to hear shouts again.
+[X]
+[X]When you do NOSHOUT <player> to a mortal player you will make him or her
+[X]unable to shout.
+[X]^
+[X]NOSLAIN
+[X]Blocks the [Soandso has slain soandso message]
+[X]^
+[X]NOWIZ
+[X]Blocks messages from the WIZ channel.
+[X]
+[X]See also:  WIZ.
+[X]^
+[PNameRaw]NRAW
+[PNameRaw]Allows you to send a message with a beep to all players.  Unlike RAW, 
+[PNameRaw]NAMERAW will display the sender.
+[PNameRaw]^

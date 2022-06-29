@@ -1,0 +1,128 @@
+/*********************************************************
+* TREEHOUSE.ZONE                                         *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:treehouse
+
+%mobiles
+
+Name            = elf
+PName           = "The Elf"
+Location        = 1
+Strength        = 60
+Damage          = 10
+Aggression      = 5
+Speed           = 5
+Description     = "A tall, lean elf steps quietly amid the shadows."
+Examine         = "This is no cutesy Santa's Workshop type elf."
+End             = elf
+
+%objects
+
+Name            = shield
+Location        = IN_ROOM:1
+BValue          = 50
+Size            = 10
+Weight          = 6
+Armor           = 10
+OFlags            { Armor ExcludeWear WearOnArms PitReset }
+Desc[0]         = "A small shield has been left here."
+Examine         = "The shield is small, but it should help you in a fight."
+End             = shield
+
+Name            = waybread1
+PName           = waybread
+AltName         = food
+Location        = IN_ROOM:2
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { Food }
+Desc[0]         = "A loaf of waybread has been left here."
+Examine         = "
+Waybread is the traditional food of elves while traveling.  
+They call it lemba.  It is said to refresh the weary traveler greatly."
+End             = waybread1
+
+Name            = waybread2
+PName           = waybread
+AltName         = food
+Location        = IN_ROOM:2
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { Food }
+Desc[0]         = "A loaf of waybread has been left here."
+Examine         = "
+Waybread is the traditional food of elves while traveling.  
+They call it lemba.  It is said to refresh the weary traveler greatly."
+End             = waybread2
+
+Name            = amulet
+Location        = IN_ROOM:4
+BValue          = 70
+Size            = 1
+Weight          = 1
+OFlags            { Destroyed WearOnNeck PitReset }
+Desc[0]         = "An unadorned gold amulet has been left here."
+Examine         = "The amulet is polished gold on a leather strap."
+End             = amulet
+
+Name            = bedding
+AltName         = bed
+Location        = IN_ROOM:4
+OFlags            { NoGet }
+Examine         = "
+Although it's nice warm bedding, it's hardly the ideal thing in which to
+practice honeymoon tactics."
+End             = bedding
+
+Name            = ladder
+AltName         = rope
+Location        = IN_ROOM:1
+State           = 0
+MaxState        = 1
+Linked          = LADDER2ELF@VALLEY
+OFlags            { NoGet }
+Desc[0]         = "A rope ladder leads down the tree."
+Desc[1]         = "A coiled rope is lying here."
+Examine         = "The rope is long and heavy with knots tied in it."
+End             = ladder
+
+%locations
+
+1 w:2 d:^ladder;
+lflags { RealTime }
+On the Treehouse Porch^
+   You stand on the porch of a treehouse. The tree is surrounded by seemingly
+hundreds of others like it which form a thick forest around you.  To the west
+you can walk between two of the main branches into the center of the treehouse.
+^
+2 n:3 e:1 s:4;
+lflags { RealTime }
+Inside the Treehouse^
+   You are standing in the center of what appears to be an elven treehouse.
+Arched doorways between the branches lead north, south, and east.
+^
+3 s:2;
+lflags { RealTime }
+Treehouse North^
+   You stand at the northern end of the treehouse, looking out across the
+forest.  A single doorway carved into the trunk allows you access back to
+the south.
+^
+4 n:2;
+lflags { RealTime }
+Treehouse South^
+   You are at the southern end of the treehouse, which appears to be used by
+its occupant as a sleeping area.  Large amounts of thick bedding ensure that
+he will be comfortable even in very cold weather.  A path to the north has
+been cut through the branches.
+^

@@ -1,0 +1,47 @@
+UNTIE <object> [FROM <object>]
+Untie a rope from a stationary object.
+^
+USERS
+A shortened form of the WHO list.  For Wizards it shows where everyone
+is.  Not very useful for mortals.
+^
+UP
+Moves you one room in the upward direction.  UP can be abbreviated "u".
+
+See also:  NORTH, SOUTH, EAST, WEST, DOWN.
+^
+[X]USTATS
+[X]An expanded version of who and users.
+[X]^
+UNLIGHT [item]
+Unlights an item.
+^
+UNLOCK [item]
+Unlocks an item.  Usually used on doors.
+^
+UTILITY
+List of general utilities.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+&+WDetailed help can be obtained on any of the following by typing:&*
+
+	help <&+Ycommand&*>
+
+	COMPACT AUTOEXIT, BRIEF, ! and PATTERN
+	    Useful abreviations.
+
+	BUG and TYPO
+	    Enters a message into the system logs, use with care.
+
+	CLS, CLEAR and QUIT
+	    Clear the screen or quit the game.
+
+	COLOR
+	    Change from dull black and white to glorious &+Rc&+Yo&+Bl&+Go&+Wr&+r.&*
+
+	BECOME, SAVE, SAYBACK and DESCRIPTION
+	    General commands relating to your character.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+^
+	

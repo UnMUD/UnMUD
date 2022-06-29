@@ -1,0 +1,687 @@
+/*********************************************************
+* CAVE.ZONE                                              *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:cave
+
+%mobiles
+
+Name            = bomber
+PName           = "Bomber"
+Location        = guardroom
+Strength        = 50
+Damage          = 8
+Aggression      = 10
+Speed           = 3
+Description     = "Bomber the Heavy-Fan Dwarf glares evilly at you."
+End             = bomber
+
+Name            = owin
+Location        = store2
+Strength        = 50
+Damage          = 8
+Aggression      = 11
+Speed           = 3
+Description     = "Owin the Broke Dwarf watches you suspiciously."
+End             = owin
+
+Name            = glowin
+Location        = great
+Strength        = 50
+Damage          = 8
+Aggression      = 12
+Speed           = 3
+Description     = "Glowin the Radioactive Dwarf looks menacingly at you."
+End             = glowin
+
+Name            = smythe
+Location        = smithy
+Strength        = 50
+Damage          = 8
+Aggression      = 13
+Speed           = 3
+Description     = "
+Smythe the Upper Class Dwarven Smith stands here, worn by years at the forge."
+End             = smythe
+
+Name            = dio
+Location        = gatehall
+Strength        = 50
+Damage          = 8
+Aggression      = 14
+Speed           = 3
+Description     = "Dio the Singing Dwarf wanders around, singing arias."
+End             = dio
+
+Name            = dragon
+PName           = "The Dragon"
+Location        = treasury
+Strength        = 500
+Damage          = 32
+Armor           = 5
+Aggression      = 1
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball NoGrab }
+Description     = "
+A huge fire-breathing dragon stares menacingly in your direction."
+End             = dragon
+
+Name            = haggis
+PName           = "The Haggis"
+Location        = haggis
+Strength        = 50
+Damage          = 10
+Aggression      = 30
+Speed           = 0
+Description     = "A large, vicious-looking haggis runs around squeaking."
+End             = haggis
+
+%objects
+
+Name            = bagpipes
+Location        = IN_ROOM:piper
+BValue          = 50
+Size            = 15
+Weight          = 10
+Desc[0]         = "A set of bagpipes lies here, waiting to be played."
+Examine         = "It looks like a dead animal, and sounds even worse."
+End             = bagpipes
+
+Name            = sporran
+Location        = IN_ROOM:piper
+BValue          = 20
+Size            = 10
+Weight          = 10
+OFlags            { WearOnBody Container PitReset }
+Desc[0]         = "A Scottish sporran has been dumped here."
+Desc[1]         = "Although empty, this purse should come in handy."
+End             = sporran
+
+Name            = claymore
+AltName         = sword
+Location        = IN_ROOM:claymore
+BValue          = 300
+Size            = 40
+Weight          = 32
+Damage          = 13
+OFlags            { Weapon PitReset }
+Desc[0]         = "
+A wicked-looking claymore, decorated with silver wire, lies at your feet."
+Examine         = "
+This claymore seems very well-crafted.  Its balance is excellent, and its 
+leather hilt soft and comfortable.  An inscription reads 'William Wallace'."
+End             = claymore
+
+Name            = bat
+Location        = IN_ROOM:long
+BValue          = 10
+Size            = 2
+Weight          = 2
+Desc[0]         = "A dead bat decays slowly in a corner."
+Examine         = "
+This bat is dead, deceased, it has gone away, it is no longer a bat, it has
+flown away to the great perch in the sky.  Leave the poor thing alone..."
+End             = bat
+
+Name            = door_dw_st_room
+PName           = door
+Location        = IN_ROOM:store2
+State           = 2
+MaxState        = 2
+Linked          = door_dw_store
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_dw_st_room
+
+Name            = door_dw_store
+PName           = door
+Location        = IN_ROOM:store
+State           = 2
+MaxState        = 2
+Linked          = door_dw_st_room
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_dw_store
+
+Name            = door_armory
+PName           = door
+Location        = IN_ROOM:armory
+State           = 2
+MaxState        = 2
+Linked          = door_hall
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+Examine         = "It's an armored door.  What else do you expect in an armory?"
+End             = door_armory
+
+Name            = door_hall
+PName           = door
+Location        = IN_ROOM:hall
+State           = 2
+MaxState        = 2
+Linked          = door_armory
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+Examine         = "It's an armored door."
+End             = door_hall
+
+Name            = door_guard
+PName           = door
+Location        = IN_ROOM:guardroom
+State           = 2
+MaxState        = 2
+Linked          = door_wide
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_guard
+
+Name            = door_wide
+PName           = door
+Location        = IN_ROOM:wide
+State           = 2
+MaxState        = 2
+Linked          = door_guard
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_wide
+
+Name            = door_n_stairs
+PName           = door
+Location        = IN_ROOM:n_stairs2
+State           = 2
+MaxState        = 2
+Linked          = door_long
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_n_stairs
+
+Name            = door_long
+PName           = door
+Location        = IN_ROOM:long
+State           = 2
+MaxState        = 2
+Linked          = door_n_stairs
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_long
+
+Name            = warhammer
+PName           = hammer
+Location        = IN_ROOM:armory
+BValue          = 50
+Size            = 25
+Weight          = 20
+Damage          = 11
+OFlags            { Weapon PitReset }
+Desc[0]         = "A large, heavy-looking warhammer has been left here."
+Examine         = "It seems a bit big for just banging in nails, I must say!"
+End             = warhammer
+
+Name            = dwarfcoin
+PName           = coin
+Location        = IN_ROOM:store
+BValue          = 20
+Size            = 1
+Weight          = 1
+Desc[0]         = "A silver coin has been dropped here."
+Examine         = "
+The coin bears a profile view of Jim Morrison on one side.  On the other side
+is engraved a fiery ring with people walking through it."
+End             = dwarfcoin
+
+Name            = dwarfale
+PName           = ale
+Location        = IN_ROOM:side
+BValue          = 40
+Size            = 10
+Weight          = 10
+OFlags            { Drink }
+Desc[0]         = "A large bottle of strong ale has been left here."
+Examine         = "
+This fine ale is one of the better spirits associated with the Moog, who has
+been known to indulge in vast quantities of the drink."
+End             = dwarfale
+
+Name            = biscuit
+AltName         = food
+Location        = IN_ROOM:cellars
+BValue          = 20
+Size            = 1
+Weight          = 1
+OFlags            { Food }
+Desc[0]         = "A hard biscuit has been dropped here."
+Examine         = "
+The biscuit is truly very hard.  It was perhaps made out of dried sawdust."
+End             = biscuit
+
+Name            = gates
+Location        = IN_ROOM:gatehall
+State           = 0
+MaxState        = 1
+Linked          = GATES@VALLEY
+OFlags            { Openable NoGet }
+Desc[0]         = "The dwarven gates are open."
+Desc[1]         = "The dwarven gates are closed."
+Examine         = ^A sign on the gate reads "Pete's Pearly Hire Co."^
+End             = gates
+
+Name            = cutlery
+Location        = IN_ROOM:dining
+BValue          = 75
+Size            = 2
+Weight          = 2
+Desc[0]         = "Some gold cutlery has been left here."
+Examine         = "
+You see a fork, a small fruit knife, and two medium spoons, all gold."
+End             = cutlery
+
+Name            = platesilver
+PName           = plate
+Location        = IN_ROOM:pantry
+BValue          = 75
+Size            = 6
+Weight          = 10
+Desc[0]         = "A silver plate has been left here."
+Examine         = "
+This plate was made to commemorate the exploits of one Cannonfod The Killer.
+                          The Phantom"
+End             = platesilver
+
+Name            = dwarfcrystal
+PName           = crystal
+Location        = IN_ROOM:side_hall
+BValue          = 100
+Size            = 12
+Weight          = 2
+Desc[0]         = "A beautiful, well-cut crystal glints in front of you."
+Examine         = "
+You peer into the crystal...
+You see an image of a panther about to strike!
+Curiously, the panther is pink."
+End             = dwarfcrystal
+
+Name            = axe
+Location        = IN_ROOM:smithy
+BValue          = 50
+Size            = 10
+Weight          = 10
+Damage          = 10
+OFlags            { Weapon PitReset }
+Desc[0]         = "A small axe lies before you."
+Examine         = "
+The words 'If found, please return to thrower' are written on the handle.  This,
+taken with the fact that the axe is the dwarves' favorite weapon, would indicate
+something of its origins."
+End             = axe
+
+Name            = door_dw_top_east
+PName           = door
+Location        = IN_ROOM:top_east
+State           = 2
+MaxState        = 2
+Linked          = door_treasury
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_dw_top_east
+
+Name            = door_treasury
+PName           = door
+Location        = IN_ROOM:treasury
+State           = 2
+MaxState        = 2
+Linked          = door_dw_top_east
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_treasury
+
+Name            = ruby
+AltName         = gem
+Location        = IN_ROOM:treasury
+BValue          = 250
+Size            = 2
+Weight          = 2
+Desc[0]         = "A huge ruby sparkles at your feet."
+Examine         = "
+The ruby glows with a pleasant red light.  It looks quite valuable."
+End             = ruby
+
+Name            = sapphire
+AltName         = gem
+Location        = IN_ROOM:treasury
+BValue          = 250
+Size            = 2
+Weight          = 2
+Desc[0]         = "A massive sapphire glitters stunningly before you."
+Examine         = "
+The sapphire is about the size of a plover's egg, and is almost clear when
+you look into it."
+End             = sapphire
+
+Name            = diamond
+AltName         = gem
+Location        = IN_ROOM:treasury
+BValue          = 500
+Size            = 4
+Weight          = 2
+Desc[0]         = "There is a huge diamond on the floor in front of you."
+Examine         = "
+This diamond is really huge, almost the size of your fist.  It has a faint blue
+tint, making it even more valuable."
+End             = diamond
+
+Name            = armor
+AltName         = armour
+Location        = IN_ROOM:small
+BValue          = 80
+Size            = 30
+Weight          = 15
+Armor           = 15
+OFlags            { Armor WearOnBody ExcludeWear PitReset }
+Desc[0]         = "A tarnished suit of armor has been left here."
+End             = armor
+
+%locations
+
+/* 1 */
+small d:n_stairs;
+lflags { Dark }
+The Small Room^
+   You are in a small room at the top of a narrow flight of stairs.  The room
+looks bare and empty and is one of those rooms which have no real reason to
+exist apart from linking two other rooms together.
+^
+/* 2 */
+n_stairs u:small d:n_stairs2;
+lflags { Dark }
+Narrow Stairs^
+   You are descending a set of narrow stairs which twist and turn sharply as
+they plunge steeply down into darkness.  Above you the stairs flatten out into
+a small room.
+^
+/* 3 */
+n_stairs2 e:^door_n_stairs u:n_stairs d:n_stairs3;
+lflags { Dark }
+Narrow Stairs^
+   You are on a small landing on the narrow staircase.  The roof here is a mere
+four feet high so you are forced to stoop.  There is a low door in the east
+wall.  The stairs continue up and down from here.
+^
+/* 4 */
+n_stairs3 u:n_stairs2;
+lflags { Dark }
+Narrow Stairs^
+   The stairs end abruptly in a small room hewn from the living rock. The walls
+are rough, giving this room that "about to be worked on" feel.  At the moment,
+however, your only exit is back up the stairs.
+^
+/* 5 */
+armory s:^door_armory;
+lflags { Dark }
+Armoury^
+   You are in a small dwarven armoury.  The only exit is a door to the south.
+^
+/* 6 */
+hall n:^door_hall e:wide s:long;
+lflags { Dark }
+Dwarven Hall^
+   You are in a pillared dwarven hall, with a high arched roof.  The carefully
+sculpted ceiling bears a picture of Snow White at work, rest and play. The last
+is by far the most interesting...
+   Passages lead east and south, and a door lies north.
+^
+/* 7 */
+wide n:^door_wide s:tunnel w:hall;
+lflags { Dark }
+Wide Passage^
+   You are standing in a wide but low dwarven passage way which leads south and
+west.  There is a door to the north.
+^
+/* 8 */
+guardroom s:^door_guard;
+lflags { Dark }
+Dwarven Guardroom^
+   You are in what appears to be a dwarven guardroom.   The roof is low and you
+have to crouch down inside it.  A door leads south.
+^
+/* 9 */
+long n:hall w:^door_long;
+lflags { Dark }
+Long Passage^
+   You are following a long narrow passage which runs west to a door, and turns
+north into a hall.
+^
+/* 10 */
+tunnel n:wide e:store2 s:stairs;
+lflags { Dark }
+Dwarven Tunnel^
+   You are standing at a junction between passages.  A passage leads north and
+south, while another branches off to the east.
+^
+/* 11 */
+store2 s:^door_dw_st_room w:tunnel;
+lflags { Dark }
+Dwarven Store Room^
+   You are in a small dwarven store room.  To the south is another door, and
+a passage leads west.
+^
+/* 12 */
+stairs n:tunnel u:cellars;
+lflags { Dark }
+Stairs^
+   You are standing at the bottom of some dwarven stairs that lead north
+along a passage, and up into what appears to be the cellars of a huge dwarven
+fortress.
+^
+/* 13 */
+store n:^door_dw_store;
+lflags { Dark }
+Dwarven Store^
+   You are in a dark shadowy store room.  A single door leads north.  There is
+a small chute, too steep and slippery to climb, in the south wall.  Its purpose
+is a complete mystery.
+^
+/* 14 */
+cellars e:side u:great d:stairs;
+lflags { Dark }
+Dwarven Cellars^
+   You are in the huge cellar of the dwarven fortress.   Massive stone pillars
+and arches bear the weight of the mighty stoneworks above.  A narrow staircase
+winds down into darkness and up into the main castle hall.
+^
+/* 15 */
+side w:cellars;
+lflags { Dark }
+Side Cellar^
+   You are standing in a small damp side cellar.  The cellar is cold and musty
+and probably also serves as the dwarven cold store.
+^
+/* 16 */
+pantry s:kitchen;
+lflags { Dark }
+Pantry^
+   You are in the dwarves' pantry.  The only exit is south into the kitchens.
+^
+/* 17 */
+kitchen n:pantry e:dining;
+lflags { Dark }
+Dwarven Kitchen^
+   You are in a sooty, low roofed kitchen.  An exit leads north into a small
+pantry, and another leads east into a large hall.
+^
+/* 18 */
+great n:gatehall e:smithy s:dining u:landing d:cellars;
+lflags { Dark }
+Great Hall^
+   You stand in the dwarven Great Hall, a huge carved room of spectacular
+design, with a massive fan-vaulted ceiling.  The spectacular arches and pillars
+are all decorated with dwarvish battle scenes and, high up, dwarven momentos of
+great age are hung, golden banners, shining axes, helms, and many other items
+of war and craft.
+   High arched exits lead north, east and south, a set of narrow stairs leads
+down into the cellars, and a wide sweeping staircase leads up to a high balcony
+overlooking the hall.
+^
+/* 19 */
+dining n:great e:side_hall w:kitchen;
+lflags { Dark }
+The Dwarven Dining Hall^
+   This huge hall is another tribute to the skilled stonework of the dwarves,
+a circular hall with a spectacular painted domed roof that seems lost in the
+shadows high above you.  From the walls, spectacularly carved gargoyles leer
+down, attempting to put you off your food.
+   Passages lead north, east and west.
+^
+/* 20 */
+smithy w:great;
+lflags { Dark }
+Dwarven Smithy^
+   You are standing in the smithy, a large room given over to one of the
+dwarves great skills.  A narrow doorway leads west.
+^
+/* 21 */
+side_hall w:dining;
+lflags { Dark }
+Side Hall^
+   You are standing in a small pillared side hall.  Less splendid than the
+other halls, the room seems more sober and thoughtful.  A doorway leads west.
+^
+/* 22 */
+landing n:throne e:n_passage s:bedroom w:passage d:great;
+lflags { Dark }
+Upper Landing^
+   You are standing on the upper landing looking over the lower levels of the
+great hall.  A set of stairs lead down into the hall itself, while at various
+points around the landing doorways lead off.
+^
+/* 23 */
+n_passage e:e_tower w:landing;
+lflags { Dark }
+Narrow Passage^
+   You are standing in a narrow east west passage that links the east tower
+with the Great Hall.
+^
+/* 24 */
+e_tower w:n_passage u:top_east;
+lflags { Dark }
+East Tower^
+   You are standing in the lower room of the east tower.  The room is bare and
+the thick stone walls seem to hem you in.  A narrow staircase winds up to the
+top of the tower, and a passage leads west.
+^
+/* 25 */
+top_east w:^door_dw_top_east d:e_tower;
+lflags { Dark }
+Top Of East Tower^
+   You are standing at the top of the east tower.  A narrow staircase winds
+down, and to the west is a door.
+^
+/* 26 */
+treasury e:^door_treasury;
+lflags { Dark }
+The Treasury^
+   You are standing in the dwarven treasury.  A large and very well protected
+room that few are privileged to see.  A single door leads east.
+   There is a charred shape on the wall, somewhat resembling an ex neccy Moog
+and scratched on the wall you see the words "Die Frog...the ex knight to be!".
+A second notice reads "Who's he?" and another asks "What's a Moog?"
+^
+/* 27 */
+bedroom n:landing;
+lflags { Dark }
+Dwarven Bedroom^
+   You are in a dwarven bedroom.  A single doorway leads north.
+^
+/* 28 */
+passage e:landing w:w_tower;
+lflags { Dark }
+Passage^
+   You are following a narrow passage that leads east-west, linking the west
+tower and the Great Hall.
+^
+/* 29 */
+w_tower e:passage u:top_west;
+lflags { Dark }
+West Tower^
+   You are in a small room at the base of the west tower.  A narrow passage
+leads east, and a set of spiral stairs climb up towards the top of the tower.
+^
+/* 30 */
+top_west d:w_tower;
+lflags { Dark }
+Top Of West Tower^
+   You are in a small room at the top of the west tower.  It looks out across a
+vast expanse of land.  As your eyes wander across the skyline you can pick out
+the Desert of Fools, the valley and the black tower far in the distance.
+Clearly this is the dwarven watch post in times of war.
+   Stone stairs lead down.
+^
+/* 31 */
+throne s:landing;
+lflags { Dark }
+The Throne Room^
+   You stand in the center of the Dwarven Throne room, a vast arched hall whose
+ceiling appears to be a huge picture of a dwarf's head made purely from rare
+and precious metals.  A single door leads south.
+^
+/* 32 */
+gatehall n:^gates s:great;
+lflags { Dark }
+Dwarven Gatehall^
+   You are standing in the dwarven gatehall.  A wide passage leads south into
+the great hall.  To the north the huge dwarven gates stand solid, their massive
+iron bulk ready to bar all entry in the event of a war.
+^
+/* 33 */
+piper n:NPATH@VALLEY s:haggis;
+lflags { Dark }
+The Piper's Lair^
+   You are standing in a small dry cave, with a low roof some six feet high.
+The cavemouth is to the north but is twisted enough that you cannot see out,
+and it also provides good shelter against the wind.  To the south a narrow and
+low arched opening leads into another cave.
+   The cave is clean and evidently well used by its occupant although who he
+is, its hard to tell.
+^
+/* 34 */
+haggis n:piper s:claymore;
+lflags { Dark }
+The Lair Of The Haggis^
+   This small cave smells of the distinctive odour of haggis, its narrow
+entrance, and tiny size ensures that two people could not easily enter at the
+same time.  To the south another small entrance leads into a larger cave.
+^
+/* 35 */
+claymore n:haggis;
+lflags { Dark }
+The Piper's Storeroom^
+   You are in a small clean cave, which appears to serve as a storeroom for the
+owner of the cave.  A single narrow exit leads north.
+^

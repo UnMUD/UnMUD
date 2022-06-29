@@ -1,0 +1,77 @@
+
+* NOTE: before compiling, you may have to "make depend", to clean
+* up my old dependencies. the programis provided and the makefile will
+* know how to find it (assuming you make in the src dir).
+
+Systems supported: (the capital letter in paranthesis indicates the
+byte order: (N) = Non Intel (MSB), (I) = Intel (LSB)). This is very
+important, read "PORTING" for how this can affect you. You will not
+be able to enter the game using a character in an incompatible 
+user file!
+
+(N) Sun4 (4.1.2):
+
+		use gcc only; tested v1.4 and v2.4+
+		on v1.4 there was an interesting bug which caused
+		core dups in main.c. This was not present in the
+		2.4 compiler, but may be in yours. if so, define
+		BROKEN_GCC.
+
+		The handler may be left enabled for sun4's. The
+	 	handler at this current time may give false
+		output, so do not rely on it. It may be best
+		to just do without it (-UHANDLER).
+
+(I) Alliant Concentrix 2800 (3.0.00):
+
+
+		undefine -UHANDLER, it will not work.
+
+		use the scc (scalar) compiler; fxc has not yet been
+		tested.
+
+(N) MIPS:
+
+	This machine's cpp is incompatible, use the one provided in
+	misc/cpp. Install it as xpp in the game's bin dir.
+
+	I couldn't find the STRFTIME function on this machine, tho the
+	man page exists. Ergo, it automatically defines NEED_STRFTIME
+	in machine/mips.h
+
+(N) RS6000/AIX
+
+        Not very hard to port, except for some header files which
+        needed to be specifically added. the cpp seems okay, tho
+        it failed on one particular object (reset), so be careful.
+
+What the defines mean:
+
+  * These should be defined in the machine/*.h files:
+
+	SYS_EQBUG - define this if you don't have strcasecmp
+		It will be provided if you don't have it.
+
+	NO_VARARGS - don't use varargs (the machine cannot support
+		functions like vsprintf, etc). Note that you could
+		get a public domain implementation from various
+		internet sites (such as ftp.germany.eu.net).
+
+	NEED_RANDOM - define this if you don't have a random() function.
+		It will be provided if you don't have it.
+
+	NEED_STRFTIME - your library doesn't have strftime
+		It will be provided if you don't have it.
+
+  
+  * These should be defined in your Makefile:
+
+	-DDEBUG - along with the various meanings that can be assigned
+	 	to it during debugging, it will also refuse to catch
+		segmentation faults, bus errors, or sys errors.. However
+		it will not affect any custom handler you are using,
+		such as -DHANDLER.. So if you want core dumps, use
+		-UHANDLER and -DDEBUG.
+
+
+

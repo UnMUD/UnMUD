@@ -1,0 +1,69 @@
+
+Comment:  Which P-flag and Mask-bits to set when a player changes status...
+Comment:  The higher levels inherit bits from lower.
+
+PflagApprentice:
+  NoExorcise NoSnoop NoHassle NoAlias NoZap NoSummon NoTrace NoSteal
+  NoMagic NoForce TitleEdit Emote Goto;
+
+MaskApprentice:
+  NoExorcise NoSnoop NoHassle NoAlias NoZap NoSummon NoTrace NoSteal
+  NoMagic NoForce TitleEdit Emote Goto;
+
+PflagEmeriti:
+  ChScore ChLevel ChMobData TimeOut Clone Load/Store ObjectEdit
+  RoomEdit MflagEdit Exorcise Reset Echo Resurrect ShowUsers Stats SummonObj
+  Weather Lock Peace Healall StartInvis Trace Echoall;
+
+MaskEmeriti:
+  ChScore ChLevel ChMobData TimeOut Clone Load/Store ObjectEdit
+  RoomEdit MflagEdit Exorcise Reset Echo Resurrect ShowUsers Stats SummonObj
+  Weather Lock Peace HealAll StartInvis Trace Echoall;
+
+PflagWizard:
+  Asmortal InterMud;
+
+MaskWizard:
+  Asmortal InterMud;
+
+PflagSenior:
+  NameRaw Zap;
+
+MaskSenior:
+  NameRaw Zap;
+
+PflagArchWizard:
+  Frob UAFInfo Snoop Heal Alias WreckDoors Syslog;
+
+MaskArchWizard:
+  Frob UAFInfo Snoop Heal Alias WreckDoors Syslog;
+
+PflagHighArch:
+  ;
+
+MaskHighArch:
+  ;
+
+PflagDemiGod:
+  Ban PflagEdit Delete Socket;
+
+MaskDemiGod:
+  Ban PflagEdit Delete Socket;
+
+PflagHighDemi:
+  Disconnect  Shutdown  Raw Crash OpenGame MayCode;
+
+MaskHighDemi:
+  Disconnect Shutdown Raw Crash OpenGame MayCode;
+
+PflagGod:
+  MaskEdit AliasPlayer;
+
+MaskGod:
+  MaskEdit AliasPlayer; 
+
+PflagMaster:
+  ;
+
+MaskMaster:
+  ;

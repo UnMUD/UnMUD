@@ -1,0 +1,24 @@
+#!/bin/csh -f
+
+if ( ! -e syslog ) then
+echo "There is no syslog file here. Are you sure this is the data directory?"
+	exit 1
+endif
+	
+set DATE=`date '+%h%d_%T'`
+
+egrep SNOOP syslog > LOGS/Snoop.$DATE
+egrep '(SUGGEST|BUG|TYPO)' syslog > LOGS/Bugs.$DATE
+egrep '(ZAP|EXORCISE)' syslog > LOGS/ZapExo.$DATE
+egrep '(CLONE|DESTROY|STORE)' syslog > LOGS/Clone.$DATE
+egrep ERROR syslog > LOGS/Errors.$DATE
+egrep RESURRECT syslog > LOGS/Resurrect.$DATE
+egrep Quest syslog > LOGS/Quests.$DATE
+egrep '(score|FROB)' syslog > LOGS/Frob.$DATE
+egrep '(UNVEIL|DELETE|BECOME|SUMMON)' syslog > LOGS/Admin.$DATE
+egrep SLAIN syslog > LOGS/Deaths.$DATE
+egrep '(SIGNAL|Abnormal|CRASH|SHUTDOWN)' syslog > LOGS/System.$DATE
+
+gzip -9 LOGS/*
+chmod -w LOGS/*.$DATE.z
+mv syslog LOGS/syslog.$DATE

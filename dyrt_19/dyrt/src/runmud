@@ -1,0 +1,1 @@
+nohup ../bin/watcher | tee watcher.log &

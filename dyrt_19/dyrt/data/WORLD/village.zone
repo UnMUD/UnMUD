@@ -1,0 +1,819 @@
+/*********************************************************
+* VILLAGE.ZONE                                           *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+*            Northern area added by Ithor                *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:village
+
+%mobiles
+
+Name            = locksmith
+PName           = "The Locksmith"
+Location        = locksmith
+Strength        = 90
+Damage          = 8
+Aggression      = 95
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball NegFrost NegShock NegMissile }
+Description     = "A crazy-looking man stands here looking at you."
+End             = locksmith
+
+Name            = baker
+PName           = "The Baker"
+Location        = store
+Strength        = 50
+Damage          = 8
+Armor           = 2
+Aggression      = 0
+Speed           = 0
+Description     = "A tall, thin baker stands here."
+End             = baker
+
+Name            = lady
+PName           = "The Lady"
+Location        = store
+Strength        = 80
+Damage          = 8
+Speed           = 2
+SFlags            { Female }
+Description     = "A lady stands here looking around for something."
+End             = lady
+
+Name            = child
+PName           = "The Child"
+Location        = road10
+Strength        = 20
+Damage          = 4
+Speed           = 4
+SFlags            { Female }
+MFlags            { PickStuff PitIt }
+Description     = "A small child looks very lost."
+End             = child
+
+Name            = armorer
+PName           = "The Armorer"
+Location        = armory
+Strength        = 200
+Damage          = 10
+Armor           = 10
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { PickStuff }
+Description     = "A bulky armorer stands before you."
+End             = armorer
+
+Name            = barman
+PName           = "The Barman"
+Location        = saloon1
+Strength        = 80
+Damage          = 8
+Speed           = 0
+Description     = "A barman is here serving drinks."
+End             = barman
+
+Name            = drunk1
+PName           = "The Drunk"
+Location        = saloon1
+Strength        = 30
+Damage          = 5
+Aggression      = 20
+Speed           = 4
+Description     = "A drunk stumbles around in front of you."
+End             = drunk1
+
+Name            = drunk2
+PName           = "The Drunk"
+Location        = saloon1
+Strength        = 50
+Damage          = 5
+Aggression      = 40
+Speed           = 0
+Description     = "A drunk stumbles around in front of you."
+End             = drunk2
+
+Name            = bankteller
+PName           = "The Teller"
+Location        = bank
+Strength        = 50
+Damage          = 6
+Speed           = 0
+PFlags            { NoSummon }
+SFlags            { Female }
+MFlags            { PickStuff }
+Description     = "A bank teller waits here patiently."
+End             = bankteller
+
+Name            = bankguard
+PName           = "The Guard"
+Location        = vault1
+Strength        = 160
+Damage          = 8
+Aggression      = 80
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFrost NegFireball BarNorth }
+Description     = "The bank's security guard stands here."
+End             = bankguard
+
+Name            = bankmanager
+PName           = "The Manager"
+Location        = office
+Strength        = 100
+Damage          = 8
+Speed           = 0
+PFlags            { NoSummon }
+Description     = "A chubby bank manager stands here wearing a suit."
+End             = bankmanager
+
+%objects
+
+Name            = sack
+Location        = IN_ROOM:alley
+BValue          = 20
+Size            = 50
+Weight          = 2
+OFlags            { Container PitReset }
+Desc[0]         = "A very large sack has been left here."
+End             = sack
+
+Name            = fire
+AltName         = flames
+Location        = IN_ROOM:seadog
+State           = 1
+MaxState        = 1
+OFlags            { Extinguish Lit Lightable NoGet }
+Desc[0]		= "There is a large fire pit here."
+Desc[1]         = "A huge fire burns in the center of the room."
+Examine         = ""
+End             = fire
+
+Name            = poker
+AltName         = weapon
+Location        = IN_ROOM:seadog
+BValue          = 10
+Size            = 5
+Weight          = 2
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A heavy iron poker has been left here."
+Examine         = "
+This poker looks a bit more dangerous than a card game, and it appears to be
+slightly bent from meeting various adventurers' heads with force!"
+End             = poker
+
+Name            = gameboard
+Location        = IN_ROOM:seadog
+OFlags            { NoGet }
+Desc[0]         = "A gameboard has been left here."
+Examine         = "It's a monopoly board!"
+End             = gameboard
+
+Name            = knife
+AltName         = weapon
+Location        = IN_ROOM:yard
+BValue          = 10
+Size            = 2
+Weight          = 2
+Damage          = 4
+OFlags            { Weapon PitReset }
+Desc[0]         = "A small filleting knife has been left here carelessly."
+End             = knife
+
+Name            = oar
+Location        = IN_ROOM:shed
+BValue          = 15
+Size            = 4
+Weight          = 5
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A single oar from a boat lies here."
+End             = oar
+
+Name            = jug
+Location        = IN_ROOM:barman
+BValue          = 40
+Size            = 2
+Weight          = 2
+OFlags            { Container PitReset }
+Desc[0]         = "
+A large toby jug has been left here, its face a hideous grin."
+Examine         = "
+This jug is shaped somewhat like a stout man with a cocked hat for the brim."
+End             = jug
+
+Name            = whiskey
+Location        = IN_CONTAINER:jug
+BValue          = 10
+Size            = 2
+Weight          = 2
+OFlags            { Drink PitReset }
+Desc[0]         = "
+You see a puddle of whiskey on the ground. Some fool must have spilled it here."
+Examine         = "
+It isn't the best in the world, but it looks like it will give you a buzz.."
+End             = whiskey 
+
+Name            = beer
+Location        = IN_ROOM:saloon1
+State           = 1
+MaxState        = 1
+BValue          = 10
+Size            = 2
+Weight          = 2
+OFlags            { GetFlips Drink PitReset }
+Desc[0]         = "Someone has thoughtlessly left a draught beer here."
+Desc[1]         = "There is a draught beer on the counter here."
+Examine         = "Looks like cheap, run of the mill draught beer."
+End             = beer
+
+Name            = raft
+AltName         = boat
+Location        = IN_ROOM:cove
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat }
+Desc[0]         = "A small wooden raft has been dumped here."
+End             = raft
+
+Name            = boat
+Location        = IN_ROOM:jetty
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat PitReset }
+Desc[0]         = "A small rowing boat has been left here."
+End             = boat
+
+Name            = bed
+Location        = IN_ROOM:barman
+OFlags            { NoGet }
+Desc[0]         = "
+The barman's bed lies here, it doesn't appear to have been slept in."
+End             = bed
+
+Name            = sheets
+Location        = IN_ROOM:barman
+BValue          = 10
+Size            = 20
+Weight          = 20
+Desc[0]         = "Some sheets lie strewn on the floor."
+End             = sheets
+
+Name            = map
+Location        = IN_ROOM:slanted
+BValue          = 100
+Size            = 1
+Weight          = 1
+Desc[0]         = "
+A worn and battered old treasure map lies torn and tattered before you."
+Examine         = "Nothing doing here... yet..."
+End             = map
+
+Name            = pebble
+AltName         = stone
+Location        = IN_ROOM:cove
+BValue          = 10
+Size            = 1
+Weight          = 1
+Desc[0]         = "A bored pebble sits at your feet, philosophizing."
+End             = pebble
+
+Name            = rat
+Location        = IN_CONTAINER:barrel
+BValue          = 1
+Size            = 1
+Weight          = 1
+Desc[0]         = "A dead rat lies rotting on the floor before you."
+End             = rat
+
+Name            = bell
+Location        = IN_ROOM:barman
+BValue          = 120
+Size            = 30
+Weight          = 40
+Desc[0]         = "
+A huge brass bell has been placed here, its surface evidently well polished."
+End             = bell
+
+Name            = barrel
+Location        = IN_ROOM:cellar
+State           = 1
+MaxState        = 1
+BValue          = 10
+Size            = 100
+Weight          = 100
+OFlags            { Openable Container NoGet }
+Desc[0]         = "An open wooden barrel stands before you."
+Desc[1]         = "A large wooden barrel squats in a corner."
+End             = barrel
+
+Name            = top_boards
+PName           = floorboards
+Location        = IN_ROOM:cellar
+State           = 1
+MaxState        = 1
+Linked          = bot_boards
+OFlags            { NoGet }
+Desc[0]         = "
+One of the floorboards has been lifted, allowing access down under the cellar."
+End             = top_boards
+
+Name            = bot_boards
+PName           = floorboards
+Location        = IN_ROOM:passage
+State           = 1
+MaxState        = 1
+Linked          = top_boards
+OFlags            { NoGet }
+Desc[0]         = "
+The floorboards above you have been lifted, to allow access to some room above."
+End             = bot_boards
+
+Name            = flag
+Location        = IN_ROOM:chamber
+BValue          = 50
+Size            = 10
+Weight          = 2
+Desc[0]         = "
+An old Jolly Roger flag has been left here, carefully folded."
+End             = flag
+
+Name            = silk
+Location        = IN_ROOM:chamber
+BValue          = 150
+Size            = 40
+Weight          = 40
+Desc[0]         = "A bale of valuable silk has been dropped here."
+End             = silk
+
+Name            = outer_door
+PName           = door
+Location        = IN_ROOM:vault1
+State           = 2
+MaxState        = 2
+Linked          = inner_door
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = outer_door
+
+Name            = inner_door
+PName           = door
+Location        = IN_ROOM:vault2
+State           = 2
+MaxState        = 2
+Linked          = outer_door
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = inner_door
+
+Name            = batten
+Location        = WIELDED_BY:bankguard
+BValue          = 50
+Size            = 5
+Weight          = 5
+Damage          = 6
+OFlags            { Weapon PitReset }
+Desc[0]         = "A small solid batten is here."
+End             = batten
+
+Name            = silvercoins
+PName           = coins
+Location        = IN_CONTAINER:box
+BValue          = 250
+Size            = 3
+Weight          = 3
+Desc[0]         = "A large pile of silver coins sits here."
+End             = silvercoins
+
+Name            = money
+AltName         = cash
+Location        = IN_ROOM:vault2
+BValue          = 300
+Size            = 1
+Weight          = 1
+Desc[0]         = "A large bundle of money is here."
+Examine         = ""
+End             = money
+
+Name            = pen
+AltName         = biro
+Location        = IN_ROOM:office
+BValue          = 50
+Size            = 1
+Weight          = 1
+Desc[0]         = "A small gold biro is here."
+End             = pen
+
+Name            = desk
+Location        = IN_ROOM:office
+OFlags            { NoGet }
+Desc[0]         = "The manager's desk is here covered with papers."
+End             = desk
+
+Name            = box
+Location        = IN_ROOM:vault2
+State           = 1
+MaxState        = 1
+BValue          = 30
+Size            = 25
+Weight          = 2
+OFlags            { Container Openable PitReset }
+Desc[0]         = "A safety deposit box has been left here."
+Desc[1]         = "A closed safety deposit box has been left here."
+End             = box
+
+Name            = leather
+PName           = armor
+Location        = WORN_BY:armorer
+BValue          = 100
+Size            = 15
+Weight          = 10
+Armor           = 10
+OFlags            { WearOnBody ExcludeWear Armor PitReset }
+Desc[0]         = "A suit of leather armor lies here."
+End             = leather
+
+Name            = bread
+AltName         = food
+Location        = CARRIED_BY:baker
+BValue          = 10
+Size            = 2
+Weight          = 2
+OFlags            { Food }
+Desc[0]         = "A freshly-baked loaf of bread is here."
+End             = bread
+
+Name            = donut
+AltName         = food
+Location        = CARRIED_BY:baker
+BValue          = 15
+Size            = 2
+Weight          = 2
+OFlags            { Food }
+Desc[0]         = "A freshly-baked donut covered in chocolate icing is here."
+End             = donut
+
+%locations
+
+/* village1 */
+Green n:CHURCH@START e:Track s:R_LAND@BLIZZARD w:BRIDGE@BLIZZARD;
+lflags { Outdoors RealTime }
+The Village Green^
+   You are standing on a square of grass in the center of the village.  A road
+leads east into the rest of the village.
+   To the north is a small church, and a path leads west into the trees.
+To the south, you can see what appears to be a castle.
+^
+/* village2 */
+Track n:PATH0@JBS e:Road1 w:Green s:Hospital;
+lflags { Outdoors RealTime }
+Village Track^
+   You are following a path which leads east through the village towards the
+sea.  To the west a few buildings are clustered around the village green, while
+to the east the village becomes a collection of small houses and narrow
+streets.  There is a path to the north, and to the south is a hospital.
+^
+/* village3 */
+Road1 n:Yard e:Road2 s:Alley w:Track;
+lflags { Outdoors RealTime }
+Village Road^
+   You are following a narrow dirt road which leads east into the village.  To
+the north a track leads into a small yard of some sort, to the south it leads
+down a narrow walled alley to the village well.
+^
+/* village4 */
+Yard s:Road1 w:Shed;
+lflags { Outdoors RealTime }
+Yard^
+   You are in a small walled dirt yard in the village.  Various large pieces of
+rotten fishing netting lie all around you, and the yard stinks with the smell
+of rotting fish, a scent which seems to draw thousands of sea birds flapping
+around you.
+^
+/* village5 */
+Alley n:Road1 d:Well2 ;
+lflags { Outdoors RealTime }
+Narrow Alley^
+   You are standing in a narrow alleyway which dead ends to the south.  The
+alley is dark and dismal and is simply a walled passage down to a small well
+which appears to serve the village itself.
+^
+/* village6 */
+Road2 n:Road3 e:Shore s:Inn_Yard w:Road1 ;
+lflags { Outdoors RealTime }
+Village Road^
+   You are following the narrow main street of the village which leads east and
+west.  To the south, the worn sign of the Old Seadog Inn flaps quietly in the
+wind.
+^
+/* village7 */
+Inn_Yard n:Road2 e:Seadog ;
+lflags { Outdoors RealTime }
+Inn Yard^
+   You are standing in the yard of the Old Seadog Inn.  The inn itself stands
+to the east, a battered structure half timbered and sagging, with that pleasant
+atmosphere of ages.  To the north a narrow gateway leads back onto the road.
+^
+/* village8 */
+Seadog e:Behind w:Inn_Yard;
+lflags { RealTime }
+The Old Seadog^
+   You are standing in the 'Old Seadog' inn.  The inn radiates age and charm,
+with its oak beam roof, and many seafaring momentos secured firmly around the
+walls.  Even the bar is a single thick oak slab, worn and chipped with years of
+service to rowdy sailors.
+   The door out is west.
+^
+/* village9 */
+Behind e:Barman w:Seadog d:Steps ;
+lflags { RealTime }
+Behind The Bar^
+   You are standing behind the bar of the 'Old Seadog'.  The bar surface is
+worn and pitted from years and years of heavy use.  Names are carved into its
+surface, 'Black Sea Pete', 'Grey Hook', 'Moog The Kipper', no doubt some of the
+pirates who long ago made this their haunt.
+   A narrow stairway leads down, and a small room can be seen through a low
+doorway to the east.
+^
+/* village10 */
+Barman w:Behind;
+lflags { RealTime }
+Barman's Room^
+   You are crouched in the barman's small, and very personalized room.  The
+walls have a large collection of battered naval memorabilia fastened securely
+to them.  Indeed, even the lone window is a porthole, giving the room that
+distinctive sea-cabin look.  A single low doorway leads west into the inn
+proper.
+^
+/* village11 */
+Steps u:Behind d:Cellar ;
+lflags { RealTime }
+Cellar Steps^
+   You are standing on the narrow, precarious steps which lead down into the
+cellars of the inn.  A pale shaft of light shines down from the top of the
+steps, revealing the cellars below.
+^
+/* village12 */
+Shore e:Jetty w:Road2 ;
+lflags { Outdoors RealTime }
+Village Shore^
+   You stand on the sea shore, to the east of the village. A narrow jetty leads
+east out into the waves.  The road also leads westwards back into the center of
+the village.
+^
+/* village13 */
+Jetty e:2@SEA w:Shore n:30@EASTCOAST;
+lflags { Outdoors RealTime }
+The Jetty^
+   You stand on the jetty, looking east across the waves.  A path leads west
+along the jetty back to the village.
+^
+/* village14 */
+Well1 ;
+lflags { Death }
+Down The Well^
+   You slip and lose your grip, then plunge helplessly into the waters below...
+^
+/* village15 */
+Well2 e:Tunnel u:Alley d:Well1;
+lflags { RealTime }
+Down The Well^
+   You are hanging part of the way down the village well, looking upwards
+towards the light above.  The well descends further but it gets very slippery.
+A narrow passage leads east into absolute darkness.
+^
+/* village16 */
+Tunnel e:Dirt w:Well2 ;
+lflags { Dark }
+Narrow Tunnel^
+   You are squeezing down a narrow dirt tunnel, quite crudely dug, and
+supported with old ships timbers.  The tunnel leads westwards towards a faint
+light, or descends steeply to the east.
+^
+/* village17 */
+Dirt n:Slanted e:Chamber w:Tunnel;
+lflags { Dark }
+Dirt Tunnel^
+   You are clambering along a low dirt tunnel which leads east and west.
+A wider tunnel joins from the north.
+^
+/* village18 */
+Chamber s:Passage w:Dirt;
+lflags { Dark }
+Dim Chamber^
+   You are standing in a dim, and secret chamber deep underground.  Narrow
+rough passages lead west and south.
+^
+/* village19 */
+Passage n:Chamber u:^bot_boards;
+lflags { Dark }
+Passage End^
+   The passage here ends with a blank stone wall, possibly foundations to a
+building.  Above you is a set of floorboards.
+^
+/* village20 */
+Cellar u:Steps d:^top_boards;
+lflags { Dark }
+Cellars^
+   You are stooped down low, in the cellars of the 'Old Seadog'.  The room is
+dark and shadowy lit only by a pale light from high above at the top of the
+steps.  The room stinks of cheap ale and rotting wood.
+^
+/* village21 */
+Slanted n:Narrow s:Dirt;
+lflags { Dark }
+Slanted Tunnel^
+   You are clambering down a fairly wide earthen passage which descends from a
+junction of passages towards a turning of some sort.  The dirt floor is hard,
+as if heavy objects have passed this way many times.
+^
+/* village22 */
+Narrow e:Cave s:Slanted;
+lflags { Dark }
+Narrow Tunnel^
+   You are clambering down a narrow tunnel which slopes downwards and east
+turning from the south.  From the east you can smell the sea and hear the sound
+of waves against the shore...
+^
+/* village23 */
+Cave e:Cove w:Narrow;
+lflags { RealTime }
+Sea Cave^
+   You are standing in a low, reasonably dry sea cave.  The cave echoes the
+gentle pounding of the waves on the sandy beach to the east.  A single narrow
+passage leads west into darkness.
+^
+/* village24 */
+Cove e:7@SEA u:^LADDER2PIRATE@PIRATE w:Cave;
+lflags { RealTime }
+Secret Cove^
+   You are standing in a secret cove surrounded by high black crags.  A narrow
+cavemouth leads west into darkness. The rocks and pounding surf along the shore
+here makes launching boats well nigh impossible.
+^
+/* village25 */
+Hospital n:Track ;
+lflags { Peace RealTime }
+The Village Hospital^
+   You are in the waiting room of the hospital.  On the south wall is a
+door with a sign reading "Emergency" above it.  From the sounds coming from
+within, it seems as if the doctors are frantically trying to save someone.
+^
+/* village26 */
+Shed e:Yard ;
+lflags { Dark }
+Rotting Boat Shed^
+    As you enter the smell of old, rotting mouldy wood surrounds you. The shed
+is cluttered with old broken boats, fishing nets and other useless rubbish.
+^
+/* village27 */
+Road3 n:Road4 s:Road2 ;
+lflags { Outdoors RealTime }
+Village Road^
+   You are follow a narrow street of the village which leads north and south.
+This road looks to have been constructed more recently than the old main
+street of the village.
+^
+/* village28 */
+Road4 n:Road5 s:Road3 w:Road6 ;
+lflags { Outdoors RealTime }
+Main Street^
+   You are at an intersection in the village road. To the north you can see
+some shops, amongst which there is what looks like a weapons shop. The west
+leads to accommodation, the bank and some other stores, while to the south
+is the older part of the village.
+^
+/* village29 */
+Road5 n:Road8 s:Road4 w:Saloon1 ;
+lflags { Outdoors RealTime }
+Main Street^
+   The newly built main street might well become the main street of the town. 
+This part of it heads north-south. To the west is a saloon. Looks like a pretty
+mean place to go.
+^
+/* village30 */
+Road6 n:Saloon1 e:Road4 w:Road7 ;
+lflags { Outdoors RealTime }
+Main Street^
+   The newly built main street might well become the main street of the town. 
+This part of it heads east-west. To the north is a saloon. Looks like a pretty
+mean place to go.
+^
+/* village31 */
+Road7 n:Bank e:Road6 ;
+lflags { Outdoors RealTime }
+Main Street^
+    Standing in Main street, there is a bank to the north, and the back of
+the church is to the south.
+^
+/* village32 */
+Road8 n:Road9 e:Armory s:Road4 w:Weaponshop ;
+lflags { Outdoors RealTime }
+Main Street^
+    You see an armory to the East and a weapons shop to the West.  The Main
+street continues to the north and south.
+^
+/* village33 */
+Road9 n:Road10 e:Store s:Road8 w:Locksmith ;
+lflags { Outdoors RealTime }
+Main Street^
+    Standing near the northern end of main street, you can see
+a general store on the eastern side of the road. While on the west
+there is a strange looking little shop.
+^
+/* village34 */
+Road10 s:Road9 e:ENTRY@NARNIA;
+lflags { Outdoors NoMobiles RealTime }
+Main Street^
+    This is the northern end of main street. There are a few houses around
+here.
+^
+/*village35 */
+Armory w:Road8 ;
+lflags { RealTime }
+Armory^
+    Looking around this shop, you see piles of useless armor. The time
+it would take to look through it all for something useful you decide
+isn't worth it. 
+^
+/* village36 */
+Weaponshop e:Road8 ;
+lflags { RealTime }
+Weapons Shop^
+    This store has been abandoned for some time. The cob webs have built 
+up across the single room shop. There are several tables, and in the
+back you notice an old forge. Unused for a long time.
+^
+/* village37 */
+Locksmith e:Road9 ;
+lflags { RealTime }
+Locksmith's^
+    This run down little building apparently serves as a shop for the
+local locksmith. The air smells of dust, and something rotting. Looking
+round you are unable to find the source of the smell, but understand
+why no one comes in here.
+^
+/* village38 */
+Store w:Road9 ;
+lflags { RealTime }
+General Store^
+    The store is packed tight with shelves containing various items
+that towns people would need for there every day lives. But not a lot of
+good to a seasoned adventurer like you. There is a small bakery over
+by the southern wall, opposite the counter where you would pay for the 
+items you wanted.
+^
+/* village39 */
+Bank s:Road7 w:Office d:Vault1 ;
+lflags { RealTime }
+The Bank^
+    This is only a small bank, the village has yet to grow sufficiently
+to support anything larger. The counter is on the western side of the bank
+behind which lies the managers office. There is a set of stairs leading 
+down.
+^
+/* village40 */
+Office e:Bank ;
+lflags { RealTime }
+Manager's office^
+    Entering a well decorated room, you see a large book shelf, filled
+with interesting titles, several chairs and a window looking out into
+some trees.
+^
+/* village41 */
+Vault1 n:^Outer_door u:Bank ;
+lflags { RealTime }
+Before the Vault^
+    At the bottom of the stairs you enter a small, cold steel walled 
+chamber. There is a single door in the north wall made of thick steel
+bars.
+^
+/* village42 */
+Vault2 s:^Inner_door ;
+lflags { RealTime }
+Vault^
+    Luckily the vault itself is open. You enter a small, dull room
+made completely of steel. There are many shelves, and lockable drawers
+lining the walls.
+^
+/* village43 */
+Saloon1 e:Road4 s:Road6 ;
+lflags { RealTime }
+The Bar^
+    A smoke filled saloon is filled with people. Looking around you see
+several tables, and a bar toward the north. There are exits back into
+the fresh air outside, heading both south and east.
+^

@@ -1,0 +1,140 @@
+/*********************************************************
+* SEA.ZONE                                               *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:sea
+
+%mobiles
+
+%objects
+
+Name            = excalibur
+AltName         = sword
+Location        = IN_ROOM:7
+State           = 1
+MaxState        = 1
+BValue          = 600
+Size            = 20
+Weight          = 20
+Damage          = 20
+OFlags            { GetFlips Weapon PitReset }
+Desc[0]         = "
+Excalibur rests at your feet, its silvery blade gleaming in the light."
+Desc[1]         = "A hand holds the sword Excalibur up from the waves."
+Examine         = "
+The sword is a true piece of craftsmanship.  Gripping it in your hand you
+feel an otherworldly sense of power.  The sounds of ancient battles echo
+in your mind as you finger its gleaming blade.  This sword will surely
+serve you well in battle."
+End             = excalibur
+
+Name            = hole
+AltName         = portable
+Location        = IN_ROOM:11
+State           = 1
+MaxState        = 1
+Size            = 2
+Weight          = 1
+OFlags            { GetFlips PitReset }
+Desc[0]         = "A portable hole glistens darkly at your feet."
+Examine         = "Peering into the darkness you see the glint of treasure."
+End             = hole
+
+%locations
+
+1 n:7 e:BEACH@ISLAND s:7 w:3 ;
+Lflags { NoMobiles OnWater RealTime Maze }
+All at Sea^
+   You are just off the edge of a small island.  To the east, the waves
+break gently on a sandy beach, while to the north and south they swirl
+around huge lava flows, evidently from the volcano visible to the east.
+To the west is the open sea.
+^
+2 n:7 e:9 s:7 w:JETTY@VILLAGE d:7 ;
+Lflags { NoMobiles OnWater RealTime Maze }
+All at Sea^
+   You are all at sea, riding the waves.  To the north and south the waves
+are high and break heavily against the surrounding cliffs.  To the east it
+might be safe to continue.  The safety of the jetty is to the west.
+^
+3 n:7 e:1 s:4 w:7 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are lost at sea.  The waves pound heavily all around you, although
+the sea looks a little less rough to the south and east.
+^
+4 n:3 e:7 s:5 w:6 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are all at sea, amidst the high heaving waves.  The waters look no
+safer in any direction, although to the east they pound against a huge
+rock which rises straight and steeply upwards from the sea.
+^
+5 n:4 e:7 s:7 w:7 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are lost at sea amidst the pounding waves.  All around you the sea is
+high and heavy and almost sure to drown you.
+^
+6 n:8 e:4 s:10 w:5 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are all at sea, seemingly without hope of reaching land.  The heavy
+waves make your small craft sway and lurch horribly, sending you staggering
+as you try to keep your balance.  The seas ease off to the north and east
+and your craft might just about make it.
+^
+7 ;
+Lflags { Death NoMobiles OnWater Maze }
+All at Sea^
+   The heavy seas and strong waves send your craft flying into a large rock
+protruding from the water.  The craft is dashed into pieces on the rock,
+You land in the rough water and are immediately pulled under by the strong
+current...
+^
+8 n:7 e:5 s:6 w:9 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are all at sea, lost amidst the seething waves and grey skies.  You 
+are but a speck on an undulating dark mass.  The seas are heavy all around,
+though not as rough to the west.  To the south the waves smooth off quite 
+a bit, providing you can cross the rough waters between you and the calm
+place.
+^
+9 n:7 e:8 s:7 w:2 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are lost at sea amidst the waves.  The sea seems reasonably smooth
+to the east and west.  To the west is the reassuring sight of land.
+^
+10 n:7 e:7 s:11 w:7 ;
+Lflags { OnWater RealTime Maze }
+All at Sea^
+   You are all at sea seemingly without hope of seeing land.  The waves make
+your small craft sway and lurch terribly, sending you staggering as you try
+to keep your balance.  The seas appear a bit smoother to the south.  Perhaps
+your craft might just about make it.
+^
+11 n:EATEN@DEAD e:PIT@PIT s:12 w:7 u:JETTY@VILLAGE d:BEACH@ISLAND;
+Lflags { NoMobiles OnWater }
+Sea of Holes^
+   You are drifting in a sea of psychedelic holes.  In the water below, 
+you can just make out several blue gloves and clowns chasing each other 
+and bickering.  On the top of an undersea mountain sits a purple fractal 
+dragon, observing the ruckus while puffing on her purple hooka and sniffing 
+flowers.  Exits are everywhere.
+^
+12 ;
+Lflags { CantSummon NoMobiles UnderWater }
+Treasure Room^
+   Now you know why they call this the treasure room.  From the skeletons
+and debris, it appears you are not the first foolhardy soul to lose his
+loot to this fiendish trap.
+^

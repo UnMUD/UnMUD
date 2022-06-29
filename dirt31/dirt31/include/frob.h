@@ -1,0 +1,1 @@
+void frobcom(char *line);

@@ -1,0 +1,97 @@
+/*********************************************************
+* LIMBO.ZONE                                             *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:limbo
+
+%mobiles
+
+%objects
+
+Name            = koosh
+Location        = IN_ROOM:limbo
+Size            = 2
+Weight          = 2
+Desc[0]         = "A koosh ball lies here, wanting you to toss it to someone."
+Examine         = "
+The koosh is a wonderful toy.  It is soft and loves to be tossed around."
+End             = koosh
+
+Name            = crater
+Location        = IN_ROOM:limbo
+OFlags            { NoGet }
+Desc[0]         = "A small crater has been blasted into the ground."
+End             = crater
+
+Name            = rope
+AltName         = ladder
+Location        = IN_ROOM:limbo
+State           = 1
+MaxState        = 1
+OFlags            { Destroyed }
+Desc[0]         = "A coiled rope ladder lies here."
+Desc[1]         = "A rope has been coiled here."
+End             = rope
+
+Name            = bboard
+PName           = board
+Location        = IN_ROOM:HAVEN@HAVEN
+OFlags            { NoGet }
+Desc[0]         = "A bulletin board is hanging on the wall here."
+End             = bboard
+
+Name            = wiz_bboard
+PName           = board
+Location        = IN_ROOM:1@HOME
+Visibility      = 17
+OFlags            { NoGet }
+Desc[0]         = "A bulletin board is hanging on the wall here."
+End             = wiz_bboard
+
+Name            = awiz_bboard
+PName           = board
+Location        = IN_ROOM:1@POWERS
+Visibility      = 10000
+OFlags            { NoGet }
+Desc[0]         = "A bulletin board is hanging on the wall here."
+End             = awiz_bboard
+
+Name            = god_bboard
+PName           = board
+Location        = IN_ROOM:22@POWERS
+Visibility      = 90000
+OFlags            { NoGet }
+Desc[0]         = "A bulletin board is hanging on the wall here."
+End             = god_bboard
+
+Name            = reset
+Location        = IN_ROOM:limbo
+Desc[0]         = "A reset has been left here."
+Examine         = "
+Reset in progress....
+Reset Completed....
+A voice shouts 'Hey!  Who the hell reset the game?!"
+End             = reset
+
+%locations
+
+limbo;
+lflags { }
+Limbo^
+   You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative 
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+^
+under_construction;
+lflags { }
+World under construction^
+   There is a blinking construction sign here.
+^

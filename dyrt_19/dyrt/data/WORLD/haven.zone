@@ -1,0 +1,59 @@
+/*********************************************************
+* HAVEN.ZONE                                             *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:haven
+
+%mobiles
+
+Name            = bard
+PName           = "The Bard"
+Location        = haven
+Strength        = 50
+Damage          = 10
+Speed           = 0
+Description     = "An ageless bard sits on a stool by the fire."
+Examine         = "He plays a mandolin and tells tales of times long past."
+End             = bard
+
+%objects
+
+Name            = mistletoe
+AltName         = sprig
+Location        = IN_ROOM:haven
+OFlags            { NoGet }
+Desc[0]         = "A sprig of mistletoe hangs by the fireplace."
+Examine         = "
+You notice with amusement that the Bard has positioned himself directly
+underneath.  Well don't just stand there... kiss him!"
+End             = mistletoe
+
+Name            = fire
+Location        = IN_ROOM:haven
+State           = 1
+MaxState        = 1
+OFlags            { NoGet Extinguish Lit Lightable }
+Desc[0]         = "There is no fire in the fireplace."
+Desc[1]         = "A fire burns cheerfully here, warming the haven."
+End             = fire
+
+%locations
+
+haven s:BLIZZARD@BLIZZARD w:GATE@BLIZZARD;
+lflags { Party RealTime }
+Warm Haven^
+   After hours of trudging through the snow you come upon a tiny inn.  A sign
+above the door says "Warm Haven -- Abandon Cold, All Ye Who Enter."  The room
+is crowded with burly adventurers, shy novices, and the bustling of serving
+wenches and bar-maids trying to take everyones' orders.
+   The main door is to the south, while a side door heads west into the 
+frozen wastes.  A number of urchins are gathered around the cracking fire to
+hear tales and songs from the Bard.
+^

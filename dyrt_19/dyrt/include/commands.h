@@ -1,0 +1,103 @@
+#ifndef __COMMANDS_H__ 
+#define __COMMANDS_H__ 
+
+
+void lookcom(void);
+void examcom(void);
+void incom(Boolean inv);
+void resetcom(int flags);
+void unveilcom(char *unv_pass);
+void posecom(void);
+void saybackcom(void);
+void praycom(void);
+void busycom(void);
+void codecom(void);
+void sys_reset(void);
+void awaycom(void);
+void reviewcom(void);
+void throwcom(void);
+void spitcom(void);
+void nodcom(void);
+void noinventorycom(void);
+void autoexitcom(void);
+void shoutcom(void);
+void saycom(void);
+void tellcom(void);
+void scorecom(void);
+void sitcom(void);
+void followcom(void);
+void losecom(void);
+void rollcom(void);
+void playcom(void);
+void qdonecom(void);
+void comparecom();
+void tiecom(void);
+void treasurecom(void);
+void becom (char *passwd);
+void wavecom(void);
+void emptycom(void);
+void wishcom(void);
+void untiecom(void);
+void blowcom(void);
+void wherecom();
+void digcom(void);
+void standcom(int plr);
+void pncom(void);
+void boot_reset();
+void lightcom();
+void extinguishcom();
+void gossipcom(void);
+void homecom(void);
+void beepcom(void);
+void bugcom(void);
+void ringcom(void);
+void typocom(void);
+void helpcom(void);
+void help2(char *cont);
+void help3(char *cont);
+void help4(char *cont);
+int  showhelp(char *verb);
+void questcom(void);
+void infocom(void);
+void globalcom(void);
+void unalias(int player);
+void unpolymorph(int player);
+Boolean disp_file(char *fname, FILE *f);
+void flowercom(void);
+void ticklecom(void);
+void petcom(void);
+void polymorph(int plx,int turns);
+int  find_pretender(int plx);
+void aliascom(void);
+Boolean disp_file(char *fname, FILE *f);
+void bulletincom(void);
+
+#define RES_TEST  0x01  /* Perform check for pflag */
+
+void rosecom(void);
+void loadcom(void);
+void storecom(void);
+void debugcom(void);
+void asmortalcom(void);
+void mleftcom(void);
+void saveallcom(void);
+void levelscom(void);
+void read_file();
+void mailcom(void);
+void promptcom(void);
+void timeoutcom(void);
+void showplayer(void);
+void diagnosecom(void);
+void rebootcom(void);
+void puntcom(void);
+void conversecom(void);
+void putcom(void);
+void dircom(void);
+void pushcom(void);
+void set_msg();
+void usercom(void);
+void eehandler();
+void wizlock(void);
+void pcls();
+
+#endif   /* Add nothing past this line... */

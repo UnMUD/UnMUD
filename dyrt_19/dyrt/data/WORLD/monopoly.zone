@@ -1,0 +1,854 @@
+/*********************************************************
+* MONOPOLY.ZONE                                          *
+* Written By: Rex and Xtal                               *
+* Code By: Rex                                           *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 28 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:monopoly
+
+%mobiles
+
+Name            = car
+PName           = "The Car"
+Location        = medit_ave
+Strength        = 70
+Damage          = 10
+Speed           = 10
+Description     = "
+The sports car is driving here.  Make sure he doesn't run you over."
+Examine         = "The car is silver and looks very fast."
+End             = car
+
+Name            = steamship
+PName           = "The Steamship"
+Location        = pacific
+Strength        = 80
+Damage          = 15
+Aggression      = 5
+Speed           = 5
+Description     = "A silver steamship tries to run you off the board."
+Examine         = "The steamship is large, but does not move very fast."
+End             = steamship
+
+Name            = cannon
+PName           = "The Cannon"
+Location        = conn
+Strength        = 75
+Damage          = 10
+Speed           = 4
+Description     = "A cannon is here and ready to fire at you."
+Examine         = "The cannon has its head raised up and seems ready to fire."
+End             = cannon
+
+Name            = thimble
+PName           = "The Thimble"
+Location        = oriental
+Strength        = 65
+Damage          = 10
+Speed           = 3
+Description     = "A large silver thimble sits here waiting its turn."
+Examine         = "The thimble seems a very non-threatening opponent."
+End             = thimble
+
+Name            = hat
+PName           = "The Hat"
+Location        = st_charles
+Strength        = 80
+Damage          = 10
+Speed           = 3
+Description     = "A top hat is sitting here."
+Examine         = "The hat seems to be patiently waiting his turn."
+End             = hat
+
+Name            = terrier
+PName           = "The Terrier"
+Location        = chance3
+Strength        = 90
+Damage          = 10
+Aggression      = 50
+Speed           = 10
+Description     = "A yippy little terrier growls at you."
+Examine         = "You feel an overwhelming urge to punt the dog."
+End             = terrier
+
+Name            = horse
+PName           = "The Horse"
+Location        = st_james
+Strength        = 95
+Damage          = 10
+Speed           = 10
+Description     = "The horse is here, ready to trot all over you."
+Examine         = "The horse seems quick, and you are afraid of being trampled."
+End             = horse
+
+Name            = boot
+PName           = "The Boot"
+Location        = atlantic
+Strength        = 70
+Damage          = 8
+Aggression      = 10
+Speed           = 1
+Description     = "An old boot would like to kick your butt."
+Examine         = "The boot seems to mean business, surprisingly enough."
+End             = boot
+
+Name            = iron
+PName           = "The Iron"
+Location        = kent_ave
+Strength        = 90
+Damage          = 12
+Aggression      = 10
+Speed           = 5
+Description     = "An iron is here, wanting to burn you."
+Examine         = "The iron looks hot and seems to be advancing on you."
+End             = iron
+
+Name            = wheelbarrow
+PName           = "The Wheelbarrow"
+Location        = illinois
+Strength        = 80
+Damage          = 10
+Aggression      = 10
+Speed           = 10
+Description     = "An old wheelbarrow is here trying to dump its load on you."
+Examine         = "The wheelbarrow seems to be full of manure."
+End             = wheelbarrow
+
+%objects
+
+%locations
+
+/* 1 */
+go w:medit_ave s:SEADOG@VILLAGE n:boardwalk;
+lflags { Party NoMobiles }
+GO^
+
+  GGGGGG  OOOOOO
+  G       O    O
+  G  GGG  O    O
+  G    G  O    O
+  GGGGGG  OOOOOO
+
+  Good Luck!!!!!
+^
+/* 2 */
+medit_ave w:com_chest1 e:go;
+lflags { Party }
+Mediterranean Ave.^
+        TITLE DEED
+     MEDITERRANEAN AVE.
+
+          RENT  $2.
+With 1 House           $  10.
+With 2 Houses             30.
+With 3 Houses             90.
+With 4 Houses            160.
+       With HOTEL $250.
+
+     Mortgage Value $30.
+    Houses cost $50. each
+Hotels, $50. plus 4 houses
+^
+/* 3 */
+com_chest1 w:baltic e:medit_ave;
+Lflags  { Party }
+Community Chest^
+         COMMUNITY
+           CHEST
+          _________
+        /        / |
+       /________/  |
+       |        |  /
+       |________|/
+          FOLLOW
+       INSTRUCTIONS
+      ON TOP OF CARD
+^
+/* 4 */
+baltic w:inc_tax e:com_chest1;
+lflags { Party }
+Baltic Ave.^
+        TITLE DEED
+        BALTIC AVE.
+
+          RENT  $4.
+With 1 House           $  20.
+With 2 Houses             60.
+With 3 Houses            180.
+With 4 Houses            320.
+       With HOTEL $450.
+
+     Mortgage Value $30.
+    Houses cost $50. each
+Hotels, $50. plus 4 houses
+^
+/* 5 */
+inc_tax w:reading e:baltic;
+lflags { Party }
+Income Tax^
+
+      INCOME TAX
+
+     PAY  $250  OR
+
+   10% OF YOUR SCORE
+
+
+
+(We're greedy aren't we)
+^
+/* 6 */
+reading w:oriental e:inc_tax;
+lflags { Party NoMobiles }
+Reading Railroad^
+
+         ______
+         |    |  (---)
+         |    |---| |
+         |          |
+          ----------|
+          ()       ()
+
+      READING RAILROAD
+
+Rent                  $  25.
+If 2 R.R.'s are owned    50.
+If 3  "      "    "     100.
+If 4  "      "    "     200.
+
+Mortgage Value        $ 100.
+^
+/* 7 */
+oriental w:chance1 e:reading;
+lflags { Party }
+Oriental Ave.^
+        TITLE DEED
+       ORIENTAL AVE.
+
+          RENT  $6.
+With 1 House           $  30.
+With 2 Houses             90.
+With 3 Houses            270.
+With 4 Houses            400.
+       With HOTEL $550.
+
+     Mortgage Value $50.
+    Houses cost $50. each
+Hotels, $50. plus 4 houses
+^
+/* 8 */
+chance1 w:vermont e:oriental;
+lflags { Party }
+Chance^
+         ???
+       ??   ??
+       ??   ??
+            ??
+           ??
+          ??
+          ??
+
+          ??
+
+        FOLLOW
+     INSTRUCTIONS
+        ON TOP
+       OF CARD
+^
+/* 9 */
+vermont w:conn e:chance1;
+lflags { Party }
+Vermont Ave.^
+        TITLE DEED
+       VERMONT AVE.
+
+          RENT  $6.
+With 1 House           $  30.
+With 2 Houses             90.
+With 3 Houses            270.
+With 4 Houses            400.
+       With HOTEL $550.
+
+     Mortgage Value $50.
+    Houses cost $50. each
+Hotels, $50. plus 4 houses
+^
+/* 10 */
+conn w:visit e:vermont;
+lflags { Party }
+Connecticut Ave.^
+        TITLE DEED
+      CONNECTICUT AVE.
+
+          RENT  $8.
+With 1 House           $  40.
+With 2 Houses            100.
+With 3 Houses            300.
+With 4 Houses            450.
+       With HOTEL $600.
+
+     Mortgage Value $60.
+    Houses cost $50. each
+Hotels, $50. plus 4 houses
+^
+/* 11 */
+visit n:st_charles s:jail e:conn;
+lflags { Party NoMobiles }
+Just Visiting^
+
+Looking to your south, you
+see a brick building with
+one bared window. As you
+peer in you notice cuffs
+and chains attached to the
+walls. Fear fills you as
+you imagine the pain felt
+when you were cuffed
+to those very walls.
+^
+/* 12 */
+jail n:visit;
+lflags { Party }
+Jail^
+
+      ______________
+     |  |  |  |  |  |
+     |  |  |  |  |  |
+     |  |  |  |  |  |
+     |  |  |  |  |  |
+     |  |  |  |  |  |
+     |  |  |  |  |  |
+     |__|__|__|__|__|
+
+           JAIL
+^
+/* 13 */
+st_charles n:elec s:visit;
+lflags { Party }
+St. Charles Place^
+        TITLE DEED
+     ST. CHARLES PLACE.
+
+          RENT  $10.
+With 1 House           $  50.
+With 2 Houses            150.
+With 3 Houses            450.
+With 4 Houses            625.
+       With HOTEL $750.
+
+     Mortgage Value $70.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 14 */
+elec n:states s:st_charles;
+lflags { Party }
+Electric Company^
+           _
+          / \
+         | Y |
+          \|/
+           =
+           =
+--------------------------
+    ELECTRIC COMPANY
+--------------------------
+ If one "Utility" is owned
+rent is 4 times amount
+shown on dice.
+ If both "Utilities" are
+owned rent is 10 times
+amount shown on dice.
+
+Mortgage Value        $75.
+^
+/* 15 */
+states n:virginia s:elec;
+lflags { Party }
+States Ave.^
+        TITLE DEED
+        STATES AVE.
+
+          RENT  $10.
+With 1 House           $  50.
+With 2 Houses            150.
+With 3 Houses            450.
+With 4 Houses            625.
+       With HOTEL $750.
+
+     Mortgage Value $70.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 16 */
+virginia n:parr s:states;
+lflags { Party }
+Virginia Ave.^
+        TITLE DEED
+       VIRGINIA AVE.
+
+          RENT  $12.
+With 1 House           $  60.
+With 2 Houses            180.
+With 3 Houses            500.
+With 4 Houses            700.
+       With HOTEL $900.
+
+     Mortgage Value $80.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 17 */
+parr n:st_james s:virginia;
+lflags { Party NoMobiles }
+Pennsylvania R.R.^
+
+         ______
+         |    |  (---)
+         |    |---| |
+         |          |
+          ----------|
+          ()       ()
+
+    PENNSYLVANIA RAILROAD
+
+Rent                  $  25.
+If 2 R.R.'s are owned    50.
+If 3  "      "    "     100.
+If 4  "      "    "     200.
+
+Mortgage Value        $ 100
+^
+/* 18 */
+st_james n:com_chest2 s:parr;
+lflags { Party }
+Saint James Place.^
+        TITLE DEED
+      ST. JAMES PLACE
+
+          RENT  $14.
+With 1 House           $  70.
+With 2 Houses            200.
+With 3 Houses            550.
+With 4 Houses            750.
+       With HOTEL $950.
+
+     Mortgage Value $90.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 19 */
+com_chest2  n:tenn s:st_james;
+Lflags  { Party }
+Community Chest^
+         COMMUNITY
+           CHEST
+          _________
+        /        / |
+       /________/  |
+       |        |  /
+       |________|/
+          FOLLOW
+       INSTRUCTIONS
+      ON TOP OF CARD
+^
+/* 20 */
+tenn n:new_york s:com_chest2;
+lflags { Party }
+Tennessee Ave.^
+        TITLE DEED
+      TENNESSEE AVE.
+
+          RENT  $14.
+With 1 House           $  70.
+With 2 Houses            200.
+With 3 Houses            550.
+With 4 Houses            750.
+       With HOTEL $950.
+
+     Mortgage Value $90.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 21 */
+new_york n:free_park s:tenn;
+lflags { Party }
+New York Ave.^
+        TITLE DEED
+       NEW YORK AVE.
+
+          RENT  $16.
+With 1 House           $  80.
+With 2 Houses            220.
+With 3 Houses            600.
+With 4 Houses            800.
+       With HOTEL $1000.
+
+     Mortgage Value $100.
+    Houses cost $100. each
+Hotels, $100. plus 4 houses
+^
+/* 22 */
+free_park e:kent_ave s:new_york;
+lflags { Party NoMobiles }
+Free Parking^
+        _______
+       /      /\
+  ____/       |_\_______
+ |                      |
+ |    __          __    |
+ |___/  \ _______/  \___|
+      ()          ()
+
+          FREE
+
+        PARKING
+^
+/* 23 */
+kent_ave e:chance2 w:free_park;
+lflags { Party }
+Kentucky Ave.^
+        TITLE DEED
+       KENTUCKY AVE.
+
+          RENT  $18.
+With 1 House           $  90.
+With 2 Houses            250.
+With 3 Houses            700.
+With 4 Houses            875.
+       With HOTEL $1050.
+
+     Mortgage Value $110.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 24 */
+chance2 e:indiana w:kent_ave;
+lflags { Party }
+Chance^
+         ???
+       ??   ??
+       ??   ??
+            ??
+           ??
+          ??
+          ??
+
+          ??
+
+        FOLLOW
+     INSTRUCTIONS
+        ON TOP
+       OF CARD
+^
+/* 25 */
+indiana e:illinois w:chance2;
+lflags { Party }
+Indiana Ave.^
+        TITLE DEED
+       INDIANA AVE.
+
+          RENT  $18.
+With 1 House           $  90.
+With 2 Houses            250.
+With 3 Houses            700.
+With 4 Houses            875.
+       With HOTEL $1050.
+
+     Mortgage Value $110.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 26 */
+illinois e:borr w:indiana;
+lflags { Party }
+Illinois Ave.^
+        TITLE DEED
+       ILLINOIS AVE.
+
+          RENT  $20.
+With 1 House           $ 100.
+With 2 Houses            300.
+With 3 Houses            750.
+With 4 Houses            925.
+       With HOTEL $1100.
+
+     Mortgage Value $120.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 27 */
+borr e:atlantic w:illinois;
+lflags { Party NoMobiles }
+B & O Railroad^
+
+         ______
+         |    |  (---)
+         |    |---| |
+         |          |
+          ----------|
+          ()       ()
+
+         B & O RAILROAD
+
+Rent                  $  25.
+If 2 R.R.'s are owned    50.
+If 3  "      "    "     100.
+If 4  "      "    "     200.
+
+Mortgage Value        $ 100.
+^
+/* 28 */
+atlantic e:ventor w:borr;
+lflags { Party }
+Atlantic Ave.^
+        TITLE DEED
+       ATLANTIC AVE.
+
+          RENT  $22.
+With 1 House           $ 110.
+With 2 Houses            330.
+With 3 Houses            800.
+With 4 Houses            975.
+       With HOTEL $1150.
+
+     Mortgage Value $130.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 29 */
+ventor e:water w:atlantic;
+lflags { Party }
+Ventor Ave.^
+        TITLE DEED
+        VENTOR AVE.
+
+          RENT  $22.
+With 1 House           $ 110.
+With 2 Houses            330.
+With 3 Houses            800.
+With 4 Houses            975.
+       With HOTEL $1150.
+
+     Mortgage Value $130.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 30 */
+water e:marvin w:ventor;
+lflags { Party }
+Water Works^
+          ___
+       /\  |
+       ||=======|
+       ||=====| |
+       \/     | |
+              |_|
+
+ If one "Utility is owned
+rent is 4 times amount
+shown on dice.
+ If both "Utilities" are
+owned rent is 10 times
+amount shown on dice.
+
+Mortgage Value        $75.
+^
+/* 31 */
+marvin e:go_jail w:water;
+lflags { Party }
+Marvin Gardens.^
+        TITLE DEED
+      MARVIN GARDENS.
+
+          RENT  $24.
+With 1 House           $ 120.
+With 2 Houses            360.
+With 3 Houses            850.
+With 4 Houses           1025.
+       With HOTEL $1200.
+
+     Mortgage Value $140.
+    Houses cost $150. each
+Hotels, $150. plus 4 houses
+^
+/* 32 */
+go_jail s:pacific w:marvin;
+lflags { Party }
+Go To Jail^
+
+     GO TO JAIL
+
+GO DIRECTLY TO JAIL
+
+  DO NOT PASS GO
+
+  DO NOT COLLECT
+
+   BEAN SQUAT!
+^
+/* 33 */
+pacific s:no_carolina n:go_jail;
+lflags { Party }
+Pacific Ave.^
+        TITLE DEED
+       PACIFIC AVE.
+
+          RENT  $26.
+With 1 House           $ 130.
+With 2 Houses            390.
+With 3 Houses            900.
+With 4 Houses           1100.
+       With HOTEL $1275.
+
+     Mortgage Value $150.
+    Houses cost $200. each
+Hotels, $200. plus 4 houses
+^
+/* 34 */
+no_carolina s:com_chest3 n:pacific;
+lflags { Party }
+North Carolina Ave.^
+        TITLE DEED
+    NORTH CAROLINA AVE.
+
+          RENT  $26.
+With 1 House           $ 130.
+With 2 Houses            390.
+With 3 Houses            900.
+With 4 Houses           1100.
+       With HOTEL $1275.
+
+     Mortgage Value $150.
+    Houses cost $200. each
+Hotels, $200. plus 4 houses
+^
+/* 35 */
+com_chest3 s:penn n:no_carolina;
+Lflags  { Party }
+Community Chest^
+         COMMUNITY
+           CHEST
+          _________
+        /        / |
+       /________/  |
+       |        |  /
+       |________|/
+          FOLLOW
+       INSTRUCTIONS
+      ON TOP OF CARD
+^
+/* 36 */
+penn s:slrr n:com_chest3;
+lflags { Party }
+Pennsylvania Ave.^
+        TITLE DEED
+     PENNSYLVANIA AVE.
+
+          RENT  $28.
+With 1 House           $ 150.
+With 2 Houses            450.
+With 3 Houses           1000.
+With 4 Houses           1200.
+       With HOTEL $1400.
+
+     Mortgage Value $160
+    Houses cost $200. each
+Hotels, $200. plus 4 houses
+^
+/* 37 */
+slrr s:Chance3 n:penn;
+lflags { Party NoMobiles }
+Short Line R.R.^
+
+         ______
+         |    |  (---)
+         |    |---| |
+         |          |
+          ----------|
+          ()       ()
+
+       SHORT LINE R. R.
+
+Rent                  $  25.
+If 2 R.R.'s are owned    50.
+If 3  "      "    "     100.
+If 4  "      "    "     200.
+
+Mortgage Value        $ 100.
+^
+/* 38 */
+chance3 s:park n:slrr;
+lflags { Party }
+Chance^
+         ???
+       ??   ??
+       ??   ??
+            ??
+           ??
+          ??
+          ??
+
+          ??
+
+        FOLLOW
+     INSTRUCTIONS
+        ON TOP
+       OF CARD
+^
+/* 39 */
+park s:lux_tax n:chance3;
+lflags { Party }
+Park Place^
+        TITLE DEED
+        PARK PLACE.
+
+          RENT  $35.
+With 1 House           $ 175.
+With 2 Houses            500.
+With 3 Houses           1100.
+With 4 Houses           1300.
+       With HOTEL $1500.
+
+     Mortgage Value $175.
+    Houses cost $200. each
+Hotels, $200. plus 4 houses
+^
+/* 40 */
+lux_tax s:boardwalk n:park;
+lflags { Party }
+Luxury Tax^
+
+     LUXURY TAX
+
+     PAY 15% OF
+
+    YOUR SCORE!!!!!
+
+
+  (Just Kidding Guys)
+^
+/* 41 */
+boardwalk s:go n:lux_tax;
+lflags { Party }
+Boardwalk^
+        TITLE DEED
+        BOARDWALK
+
+          RENT  $50.
+With 1 House           $ 200.
+With 2 Houses            600.
+With 3 Houses           1400.
+With 4 Houses           1700.
+       With HOTEL $2000.
+
+     Mortgage Value $200.
+    Houses cost $200. each
+Hotels, $200. plus 4 houses
+^

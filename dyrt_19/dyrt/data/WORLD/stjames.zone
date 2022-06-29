@@ -1,0 +1,516 @@
+/*********************************************************
+* STJAMES.ZONE                                           *
+* Written By: Rex                                        *
+* Notes:     Distribute with full DYRT distribution only *
+*            No code needed                              *
+* Edited by Rex on 28 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:stjames
+
+%mobiles
+
+%objects
+
+Name            = boat1
+PName           = boat
+Location        = IN_ROOM:11
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat }
+Desc[0]         = "There is a tiny rowing boat on the ground in front of you."
+End             = boat1
+
+Name            = boat2
+PName           = boat
+Location        = IN_ROOM:25
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat }
+Desc[0]         = "There is a tiny rowing boat on the ground in front of you."
+End             = boat2
+
+Name            = boat3
+PName           = boat
+Location        = IN_ROOM:39
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat }
+Desc[0]         = "There is a tiny rowing boat on the ground in front of you."
+End             = boat3
+
+Name            = boat4
+PName           = boat
+Location        = IN_ROOM:44
+BValue          = 20
+Size            = 100
+Weight          = 100
+OFlags            { Boat }
+Desc[0]         = "There is a tiny rowing boat on the ground in front of you."
+End             = boat4
+
+%locations
+
+1 n:2 s:56 w:12;
+lflags { Outdoors Peaceful }
+Entrance to St. James Park^
+   You are standing at the entrance to St. James Park.  Set in the middle
+of London, very close to Westminster Abbey, the park is a refreshing change
+from the dirt and bustle of the city itself.  The park stretches out to the
+west and consists of many green lawns, a pond spanned by a single bridge,
+and two stone paths; one on either side of the pond.  To the north is the
+pond, to the south are the green lawns, and way ahead to the west you can
+just make out the back wings of Buckingham Palace.  Outside the park to the 
+south is the Abbey.
+^
+2 s:1 n:3 w:11;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are on a beautiful green lawn just north of the main park entrance.
+To the northwest is a pond full of cool and clear water.  To the south is
+an enormous open grassy area with a number of large shade trees.
+^
+3 n:4 s:2 w:10;
+lflags { Outdoors Peaceful }
+The Edge of the Pond^
+   The beautiful lawn on which you are treading meets with a pond just to
+the west.  It looks as if the section of the pond nearest you has been
+marked off for wading.  Perhaps it would feel good to dangle your feet
+in the cool water for a little while.
+^
+4 s:3 n:5 w:9;
+lflags { Outdoors Peaceful }
+The Edge of the Pond^
+   The pond that dominates the park meets with the lawn upon which you are
+standing, just to the west.  It looks as if the section of the pond nearest
+you has been marked off for wading.  Perhaps it would feel good to dangle
+your feet in the cool water for a little while.  From where you stand, you
+notice that there is a second path through the park just to the north of
+the pond.
+^
+5 s:4 n:6 w:8;
+lflags { Outdoors Peaceful }
+Entrance to St. James Park^
+   You are now at the northern entrance to St. James Park.  There is 
+another entrance to the south of you, beyond a pond.  There is also a
+northern entrance at the western edge of the park, over where you can
+just make out the back wings of Buckingham Palace in the distance.  The
+path you are on leads to the western entrance, past a pond to the south.
+^
+6 s:5 w:7;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are north of the northern path through St. James Park.  To the south
+you see a pond, beyond which lies a large expanse of beautiful green
+grass.  The park is a welcome change to the hustle and bustle of the city.
+The lawns are well-manicured and the pond looks cool and clear.
+^
+7 e:6 w:20 s:8;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are on the northernmost edge of the park, just north of the northern
+path.  The pond is to the south, with a large grassy area beyond it.  To 
+the west you can see a bridge that spans the pond to join with another
+path on the southern side.
+^
+8 n:7 s:9 w:19 e:5;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern east-west path through the park.  The northern
+entrance is to the east, and the park stretches out to the west.  To the 
+south of you is the wading area of the pond.  Beyond it is a large fountain,
+and you can make out a grassy area opposite the pond.
+^
+9 n:8 s:10 e:4;
+lflags { Outdoors Peaceful }
+The Wading Area^
+   Moving through the wading area, trying not to get your rolled-up pants
+too wet, you realize how good the water feels to your feet.  You dip your
+arms in and cool your wrists.  You then scoop up a little water in your
+hands and put it on the back of your neck.  The water is rejuvinating,
+and suddenly you feel refreshed.  To the west of you the water continues,
+but a rope line keeps you from wading into that area.  You can, however,
+canoe around the pond if you can find a boat along the shore.
+^
+10 n:9 s:11 e:3;
+lflags { Outdoors Peaceful }
+The Wading Area^
+   Moving through the wading area, the water is refreshing.  Feeling a 
+bit frisky, you splash a nearby child.  He looks at you pathetically and 
+goes quickly back to the edge of the pond.  To the west of you, the pond
+continues, but a rope line keeps you from wading into that area.
+^
+11 n:10 s:12 e:2 w:16;
+lflags { Outdoors Peaceful }
+The Edge of the Pond^
+   You are next to the wading area of the pond.  The water looks inviting.
+Hours of walking through the city of London have made you feel weary and
+dirty.  Perhaps a quick dip in the water would be refreshing.
+^
+12 n:11 s:13 e:1 w:15;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are standing west of the main entrance to St. James Park.  The park
+stretches out to the west and consists of many green lawns, a pond, fountains,
+and two stone paths.  To the north is the pond, to the south the green lawns,
+and way ahead to the west you can just make out the back wings of Buckingham
+Palace.  The path is lined on both sides by green park benches.
+^
+13 n:12 w:14 e:56;
+lflags { Outdoors Peaceful }
+St. James Park^
+   Rising up next to you is a large shade tree.  Its branches fan out above
+you, providing shade from the summer sun.  To the north you can see a large
+fountain in the pond, spitting water up into the air with magnificent
+grace.  Through the trees to the west you can just barely make out the
+back of Buckingham Palace.
+^
+14 e:13 w:27 n:15;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are southeast of the main park entrance, against the southern
+fence.  The city lies beyond it, but for now you are so taken with the
+park that you do not wish to go back out into it.  It amazes you how 
+such a clean and beautiful place can exist in such a large and dirty city.
+^
+15 s:14 n:16 w:26 e:12;
+lflags { Outdoors Peaceful }
+Pathway Through St. James Park^
+   You are on an east-west path through St. James Park.  To the east is the
+park entrance, and to the west is the expanse of the park.  The park ends
+to the west where it joins with the gardens of Buckingham Palace.  To the 
+north is a pond with a large fountain in it, and to the south is a huge 
+grassy place speckled with trees and people.  The path is lined on both
+sides by green park benches.
+^
+16 s:15 n:17 e:11 w:25;
+lflags { Outdoors Peaceful }
+The Edge of the Pond^
+   Standing on the edge of the pond, the glorious fountain is straight
+ahead of you.  The water it tosses into the air is clean and clear and
+looks very refreshing on this hot day.  The grass you are standing on is
+perfectly manicured.  To the northwest is a small island in the water.  It
+looks as though there are a few boats lying around on the shore that you 
+could take if you felt like canoeing.
+^
+17 s:16 n:18 w:24;
+lflags { Outdoors Peaceful OnWater }
+In the Fountain^
+   Oops... you seem to have steered your canoe into the park's fountain.
+Luckily, the only damage you seem to have done is to completely soak 
+yourself.  Now your troubles lie in trying to get your boat free of the
+strong current pulling you toward the fountain base.
+^
+18 s:17 w:23 n:19;
+lflags { Outdoors Peaceful OnWater }
+On the Pond^
+   You steer your boat to the northern side of the pond.  You are just east
+of the island just north of the fountain. You feel little specks of water
+landing on you from the fountain, but you are not getting all that wet.  The 
+water feels good in the heat of the summer.
+^
+19 n:20 s:18 w:22 e:8;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern east-west path through St. James Park.  To the
+east is the northern park entrance, and to the west is the expanse of the
+park.  The park meets Buckingham Palace to the west.  To the south is a
+pond with a large fountain in it.  Beyond the pond is a grassy place specked
+with trees and people.  The path is lined on both sides by green park benches.
+^
+20 s:19 w:21 e:7;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are on the northern edge of the park.  To the north of here is a large
+street and another section of the city which leads to the Buckingham Palace
+area.  You can just make out the palace through the trees to the west.
+^
+21 e:20 w:34 s:22;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are along the northern area of the park.  To the north of here is
+a large street which goes to Buckingham Palace.  There are many people
+walking along the street, and you notice that, in contrast to the rest of
+the city, no one walking there is in any hurry.  To the south is a beautiful
+pond with a fountain in it.  There is a bridge over the pond.  The whole
+park is very beautiful and serves as a relaxing change from the city.
+^
+22 n:21 s:23 e:19 w:33;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern east-west path through the park.  To the south of
+the pond you can make out another path, accessible via a bridge that spans
+the middle of the pond just off to the southwest.  To the west is Buckingham
+Palace, while to the east is the park entrance with the city beyond.  On the
+south side of the pond is a large grassy area.
+^
+23 n:22 s:24 w:37 e:18;
+lflags { Outdoors Peaceful }
+On the Island^
+   Your boat has reached a little island in the pond.  Somehow, the grass
+here is cut and as well-manicured as the rest of the park.  The grounds
+crew must have an easier way over than yours.  You disembark to enjoy some
+quiet time in the sun.
+^
+24 n:23 s:25 e:17 w:38;
+lflags { Outdoors Peaceful OnWater }
+On the Pond^
+  Drifting near the fountain, you get a good view of its set up.  There are
+many jets tossing water into the air, forming a striking pattern in the
+air.  You feel a little mist from the fountain landing on you, but you are
+not really getting wet.  In fact, the mist feels good on this hot day.
+^
+25 n:24 w:39 s:26 e:16;
+lflags { Outdoors Peaceful }
+The Edge of the Pond^
+   The pond is just beyond your toes now.  Directly to the west is the bridge
+which spans the pond to meet with another path on the northern side.
+^
+26 n:25 s:27 e:15 w:29;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the main east-west path through St. James Park.  To the
+northwest is a bridge which spans the pond.  To the west is Buckingham
+Palace, while to the east is the main park entrance with the city beyond.
+To the south is a large grassy space.  The fountain is very close to you
+now, spitting its water into the air with impeccable grace.
+^
+27 n:26 e:14 w:28;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are in the southern area of the park, surrounded by tall shade trees.
+Many of the trees have people sitting under them, protecting themselves from
+the summer sun while they hold their conversations.  You hear Big Ben chime
+the hour and wonder how long you have been in the park.
+^
+28 e:27 w:41 n:29;
+lflags { Outdoors Peaceful }
+St. James Park^
+   Standing along the southern fence of St. James Park, you can see straight
+ahead to the bridge over the pond.  The fountain is a little off to the 
+east.  To the west your view is obscured by the trees.
+^
+29 s:28 w:40 e:26 n:30;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the southern east-west path through the park.  To the north
+a bridge leads over the pond to join with another path on the northern
+side.  The path you are on continues back to the east and to the west
+to Buckingham Palace.  Just to the south is a green park bench.
+^
+30 s:29 n:31;
+lflags { Outdoors Peaceful }
+On the Bridge^
+   You have decided to cross over to the other side of the pond.  The water
+below is clean and clear.  You can even see fish in it.  Someone is canoeing
+on the pond off to the east.
+^
+31 s:30 n:32;
+lflags { Outdoors Peaceful }
+On the Bridge^
+   You are in the middle of the bridge which spans the pond.  The water below
+is clean and clear.  There are people talking under the trees to the south, 
+and some people on benches to the north.  One person is canoeing toward the
+pond's small island in the pond.  To the west is a great photo opportunity
+of Buckingham Palace.
+^
+32 s:31 n:33;
+lflags { Outdoors Peaceful }
+On the Bridge^
+   You have decided to cross over to the other side of the pond.  The water
+below is clean and clear.  You can even see fish in it.  Over to the east
+someone is paddling a canoe toward the small island in the pond.  Beyond
+him, children are wading.
+^
+33 s:32 e:22 w:36 n:34;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern east-west path through St. James Park.  To the
+south a bridge spans the pond and joins with another path on the southern
+side.  The path you are on continues back to the east and to the west to
+Buckingham Palace.  Just to the north is a green park bench.
+^
+34 s:33 e:21 w:35;
+lflags { Outdoors Peaceful }
+St. James Park^
+   Traveling along the northern edge of the park, you study the people
+walking on the street.  They are all headed toward the palace, and most
+of them are holding cameras and other objects which mark them as tourists.
+You hear many languages among the group.  It seems that a good portion of the
+world is in London for the V-E Day Celebrations.
+^
+35 e:34 w:48 s:36;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are near the western entrance to the park, along the northern wall.
+Just to the south is the northern path through the park.  You can get a
+clear view of most of the park from here:  the fountain and island to the 
+east, the grass to the south, and the street to the north.
+^
+36 n:35 s:37 w:47 e:33;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern path through the park, northwest of the bridge.
+To the south is the pond, and the street is out of the park to the north.
+You can reach the street by continuing to the west and leaving through the
+north entrance.
+^
+37 n:36 s:38 e:23 w:46;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   You are floating just to the west of the bridge over the pond.  The island
+is just to the eastern side of the bridge, with the fountain slightly beyond
+it.  Beyond them both is a well-populated wading area.  The water is smooth
+and clean.  The pond itself ends to the west at the Palace wall.
+^
+38 n:37 s:39 e:24 w:45;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   You are just to the west of the center of the bridge.  Your view of 
+the Palace is obscured by its tall fence.  To the east is the fountain.
+On the paths at the edges of the pond, people are walking and talking.
+^
+39 e:25 n:38 s:40 w:44;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are just south of the pond and just north of the main pathway through
+the park.  To the south is a large grassy clearing.  Just to the east, a
+bridge rises up out of the earth to span the pond.  The bridge joins the 
+path you are standing near to another on the northern side.
+^
+40 n:39 e:29 s:41 w:43;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the main path through the park, near the western end of it all.
+To the northeast is the splendid bridge over the water.  Straight ahead to
+the west, the park ends in a nasty-looking fence which joins with the
+Palace gardens.
+^
+41 n:40 w:42 e:28;
+lflags { Outdoors Peaceful }
+St. James Park^
+   Along the southern border of the park, you can look through the trees
+and light wrought-iron fence into the city.  The buildings near you are
+all rather old and have a lot of character.  You can hear the sounds of
+the city not far off.  There seems to be major construction work underway
+near the Abbey.
+^
+42 e:41 w:55 n:43;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are near the western edge of the park.  Off to the west, the park
+ends where it meets the fence of the Palace gardens.  You can see a bit
+of the garden through the ivy growing on the fence, but your view is pretty
+much obstructed.
+^
+43 s:42 e:40 w:54 n:44;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are almost at the western edge of the pond.  To the south is the 
+grassy area, while to the north, the pond is phasing out.
+^
+44 s:43 n:45 e:39 w:53;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are just south of the pond and east of the western gate of the park.
+The wall near you which divides this area from the palace gardens is rather
+nasty-looking.  To the north is the exit from the park to the palace.  The
+rest of the city is way back toward the east.
+^
+45 s:44 n:46 e:38 w:52;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   You are floating near the western side of the pond.  To the west the pond
+dies out in a pool of algae.
+^
+46 e:37 s:45 w:51 n:47;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   You are nearing the western side of the pond.  Near you is a fountain,
+much smaller than the other main fountain on the other side of the pond.
+Looming to the west is a gigantic wall.
+^
+47 n:48 s:46 e:36 w:50;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   You are on the northern path through the park, west of the bridge.  To the
+south the pond is coming to and end, meeting with a tall and unfriendly-
+looking fence around the gardens of the Palace.   To the north, people are
+walking toward the palace, which is decked out in its full splendour for
+the V-E Day Celebrations.
+^
+48 e:35 w:49 s:47;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are very near the northern entrance to the park.  You are almost out
+on the street, among the crowd.  They all seem to be moving toward the 
+palace grounds.  Perhaps you should follow them.
+^
+49 e:48 s:50;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   Here the path joins a sidewalk which runs along the street to Buckingham
+Palace.  The rest of the park is to the south and east.
+^
+50 n:49 e:47 s:51;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   The western exit from the park is just to the north, following a slender
+sidewalk onto the street.  The street heads to the front of Buckingham
+Palace.  Way ahead, you can just tell that the flag is flying over the 
+palace, indicating the presence of the Queen.
+^
+51 n:50 e:46 s:52;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   Here the pond ends, near the gardens of Buckingham Palace.  You can go
+no further to the west.  The entire park is now to the east.  All you can
+see is green on either side of the pond.  Ahead the bridge rises above the
+water, and you can see a bit of the island underneath it.
+^
+52 e:45 n:51 s:53;
+lflags { Outdoors OnWater Peaceful }
+On the Pond^
+   Here the pond ends, near the gardens of Buckingham Palace.  You can go no
+further to the west.  The entire park is now to the east.  All you can see
+is green on either side of the pond.  Ahead the bridge rises above the water,
+and you can see a bit of the island underneath it.
+^
+53 n:52 e:44 s:54;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are up against the western wall of the park.  It seems to be several
+feet thick.  At the top of the wall are rotating 6-inch spikes, each at an
+angle to the one next to it.  To climb over the wall, one would have to have
+a lot of faith in one's flexibility.  Perhaps it is best if you leave the
+Queen alone.
+^
+54 n:53 e:43 s:55;
+lflags { Outdoors Peaceful }
+Path Through St. James Park^
+   The path through the park meets its end at the fence to the Palace Gardens.
+Here too, the grassy lawns stop and the pond ends.  It seems your only
+choices are to either head back east, or to the northwestern exit.
+^
+55 n:54 e:42;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are in the very southwestern corner of the park.  The beauty of it
+spreads to the east.  To your west is a huge and unfriendly-looking wall,
+disguised with flowers and the like.
+^
+56 n:1 w:13;
+lflags { Outdoors Peaceful }
+St. James Park^
+   You are standing south of the southern path through St. James Park,
+just next to the bordering fence.  The lawn you are on is scattered with
+large shade trees.  Otherwise, the immaculate lawn is uninterrupted.  
+There are people here and there, holding conversations beneath the trees.
+^

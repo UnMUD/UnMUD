@@ -1,0 +1,190 @@
+
+
+Installing Dyrt on your machine
+Valentin Popescu <vpopesc@calstatela.edu>
+(for releases 1.x)
+
+Note: this is a little long winded, and I know most people don't like
+to read this stuff.. So browse quickly through it to get an idea of
+what you will have to do, then go to it. Always work on a backup. :)
+
+
+Contents:
+
+	I.	Configuring it for your machine.
+	II.     Editing System Files
+	III.    Startup
+	IV.     Miscellaneous
+
+
+
+I. Configuring Dyrt for your machine
+
+	The ideal situation would be that the mud would eventually
+be compiled by simply executing an autoconfig script. That will probably
+come later, but for now, it should be compilable by merely using a new
+makefile and [machine].h file.
+
+	We will consider porting to Dell Sys V as an example, in this
+doc file. I have not attempted it, and I don't know what the outcome
+would be.
+
+	The configuration files are in the dyrt/src/machine directory.
+They are a Makefile.<machine>, and <machine>.h. To start off, copy
+a closely related machine's config file to your own. In the case of
+the dell machine, just copy the mips config files. If you are not sure,
+just copy any set:
+
+	% cp Makefile.mips Makefile.dellsv
+	% cp mips.h dellsv.h
+
+now, edit the new Makefile.dellsv, and do the following changes:
+
+	1) in the CFLAGS = ... line, change the machine identifier. In
+	   this case, change -DMIPS to -DDELLSV. In code, you will refer
+	   to machine-specific stuff using the #ifdef DELLSV construct.
+
+	2) search for the following line:
+
+	# DO NOT DELETE THIS LINE -- mkdep uses it.
+
+	   if that line is not present, never mind.
+	   if that line IS present, delete everything from there to the end.
+			(you may delete it too)
+
+	3) at the top, there should be a LIBS =  line (it may equal nothing..)
+	   add any needed libraries here you want included. For example,
+	   for the mips, -lbsd was needed. On the sun, aix, etc, none
+	   were needed. 
+
+	4) edit the other definitions, such as compiler options, compiler
+	   name, etc.
+
+then, edit the dellsv.h. Here is the one from mips (line numbers are added
+by me)
+
+(01) #ifndef b_mips_
+(02) #define b_mips_
+(03) 
+(04) #define MBANNER "mips-ep/ix"
+(05)
+(06) #define S_ISFIFO(m)     (((m)&S_IFMT) == S_IFIFO)
+(07)
+(08) #define NEED_STRFTIME
+(09) #define USE_XPP
+(10) #undef HANDLER
+(11) #undef EQ_BUG
+(12) #undef NO_VARARGS
+(13) #undef NEED_RANDOM
+(14)
+(15) #endif
+
+in lines 1 and 2, change the b_mips_ to something unique, such as b_dellsv_.
+in line 4, change MBANNER to a machine identifier.. this is a string
+containing a literal description of your system. in the dell case, using
+"dell-sysv" would be apropriate.
+
+line 6 is a function that is used in the code, but wasn't defined on
+the mips machines. you can use the <machine>.h files to define any
+stuff that's not defined on your machine. if when compiling, your linker
+complains about S_ISFIFO not being defined, you will need that line. But
+you should probably start with it commented out.
+
+line 8 says you want the strftime supplied here in this distribution.
+you should probably start with that turned off, and define it if
+your linker complains about strftime not being defined.
+
+line 9 asks that you use a small cpp provided in dyrt/src/misc/cpp/.
+this was needed for the mips, whose preprocessor included some extra tabs
+which threw off the zone generator. the decision to use this preprocessor
+should be made only after examining the generated system files and
+determining that the files are not generated correctly (e.g. data/mobiles,
+data/objects, data/locations). If you do decide to turn this on, you
+will have to compile the preprocessor separatelly.
+
+	(cd dyrt/src/misc/cpp ; make )
+
+
+line 10 asks if to use a custom crash handler; you should keep this
+undefined unless you have a crash handler for your machine. The one provided
+is unstable and will work only on suns. Once again, please don't define
+this.
+
+line 11 asks if you have strcasecmp, strncasecmp. Define that if your
+linker complains about those functions not being defined.
+
+line 12 asks if your system supports the vprintf/vsprintf functions.
+define that if you don't, but it is suggested that you get a public domain
+version of those functions if you don't have'em.
+
+line 13 asks if you have the random() functions.. you probably do.
+
+And finally,
+
+	edit the file dyrt/src/machines.h
+
+	add something like:
+
+	#ifdef DELLSV
+	# include <machine/dellsv.h>
+	#endif
+
+
+
+This should be enough configuration.. type "make" in the src dir, and
+hope everything turns out okay. If there are any changes to be made to the
+code, use the #ifdef [machinename] directive to make machine-specific
+changes.. i.e.
+
+	#ifdef MIPS
+        # do something for MIPS
+	#endif
+	#ifdef DELLSV
+	# do something for dell sys v.
+	#endif
+
+
+Once compiled successfully, you may want to "make depend" to create
+dependencies (they are nifty things) for your new setup. This will
+take a little while, so don't panic if you don't get any output for
+up to a few mins (depending on how fast your machine is)
+
+
+II. Editing system files.
+
+	The files you will probably want to edit are:
+
+	src/config.h (pay attention to the master user and unveil password)
+	data/INFO/*  (info files for your particular mud)
+
+
+	You will also probably want to delete the following files:
+
+		data/uaf_rand
+		data/setins
+		data/wizlist
+
+III. Starting the mud server
+
+	to start the mud, simply type "aberd"
+	if you have -DDEBUG in your makefile, it will stay in the
+	foreground. if not, it will fork out.
+
+	If you want to run it in the background, yet have DEBUG defined,
+	run it as "aberd &"
+
+	There are other options for the server. Type aberd -h for
+	a list.
+
+IV. Miscellaneous
+
+	If you port it to a new machine, please let me know at
+	vpopesc@calstatela.edu
+
+	Also, edit the README file in the machine/ dir, describing your
+	port.
+
+	May the farce be with you.
+
+
+

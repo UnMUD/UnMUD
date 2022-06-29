@@ -1,0 +1,14 @@
+void becom (char *passwd);
+void blowcom (void);
+void beepcom (void);
+void homecom (void);
+void comparecom();
+void sitcom (void);
+void standcom (int player);
+void ticklecom (void);
+void diagnosecom(void);
+void digcom(void);
+void playcom (void);
+void scorecom (void);
+void meditatecom(void);
+void ringcom(void);

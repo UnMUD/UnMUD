@@ -1,0 +1,13 @@
+                           iDIRT Message System Help
+                           -------------------------
+
+<n>    : The number of the message to read           (Example: [Mail]: 4)
+r      : Reply to the last message that you read     (Example: [Mail]: r)
+h      : Display message headers                     (Example: [Mail]: h)
+d <n>  : Deletes the specified message number        (Example: [Mail]: d 2)
+u <n>  : Undelete the specified message number       (Example: [Mail]: u 2)
+?      : Print this help screen                      (Example: [Mail]: ?)
+i      : Print information about the message system  (Example: [Mail]: i)
+v      : Display version information                 (Example: [Mail]: v)
+q      : Quit mailer, deleting all tagged messages   (Example: [Mail]: q)
+*<com> : Execute the game command <com>              (Example: [Mail]: *look)

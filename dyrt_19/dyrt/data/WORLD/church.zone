@@ -1,0 +1,321 @@
+/*********************************************************
+* CHURCH.ZONE                                            *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:church
+
+%mobiles
+
+Name            = zombie
+PName           = "The Zombie"
+Location        = church2
+Strength        = 20
+Damage          = 10
+Aggression      = 2
+Speed           = 1
+MFlags            { Cross }
+Description     = "A rotting zombie stomps past."
+End             = zombie
+
+%objects
+
+Name            = cross
+Location        = IN_ROOM:behind
+BValue          = 200
+Size            = 10
+Weight          = 40
+Damage          = 5
+Desc[0]         = "A hefty gold cross lies sparkling before you!"
+Examine         = "
+The cross would like fine on the wall of St. Patt., but is out of place here."
+End             = cross
+
+Name            = lead
+Location        = IN_ROOM:tower
+BValue          = 100
+Size            = 15
+Weight          = 50
+Desc[0]         = "A neat pile of roofing lead has been stacked in a corner."
+Examine         = "The roofing is very heavy."
+End             = lead
+
+Name            = weathercock
+Location        = IN_ROOM:bells
+BValue          = 50
+Size            = 15
+Weight          = 20
+Desc[0]         = "A golden weathercock has been left here."
+End             = weathercock
+
+Name            = rope
+Location        = IN_ROOM:bell
+Damage          = 12
+OFlags            { NoGet }
+End             = rope
+
+Name            = stick
+AltName         = branch
+Location        = IN_ROOM:decaying
+State           = 1
+MaxState        = 1
+Size            = 1
+Weight          = 1
+Damage          = 3
+OFlags            { Lightable Extinguish Weapon PitReset }
+Desc[0]         = "A burning stick has been left here."
+Desc[1]         = "An old stick lies here."
+Examine         = "
+Stamped into its surface is:
+      ACME Dog Bait'"
+End             = stick
+
+Name            = key
+Location        = IN_ROOM:pulpit
+BValue          = 10
+Size            = 1
+Weight          = 1
+OFlags            { Key PitReset }
+Desc[0]         = "A long key lies here."
+Examine         = "The key is long, complicated and slightly tapered."
+End             = key
+
+Name            = slab_top
+PName           = slab
+Location        = IN_ROOM:t_barrow
+State           = 1
+MaxState        = 1
+Linked          = slab_bot
+OFlags            { Destroyed Openable NoGet }
+Desc[0]         = "
+A heavy stone slab has been shifted to one side, allowing access down."
+Desc[1]         = "A heavy stone slab appears to bar an exit downwards."
+Examine         = ""
+End             = slab_top
+
+Name            = slab_bot
+PName           = slab
+Location        = IN_ROOM:silent
+State           = 1
+MaxState        = 1
+Linked          = slab_top
+Desc[0]         = "
+A heavy stone slab has been shifted to one side, allowing access upwards."
+Desc[1]         = "A heavy stone slab seals the barrow from above."
+End             = slab_bot
+
+Name            = wreath
+Location        = IN_ROOM:silent
+BValue          = 50
+Size            = 2
+Weight          = 1
+OFlags            { WearOnNeck }
+Desc[0]         = "An old wreath lies here."
+End             = wreath
+
+Name            = shroud
+Location        = IN_ROOM:silent
+BValue          = 50
+Size            = 2
+Weight          = 1
+OFlags            { WearOnNeck }
+Desc[0]         = "A silk shroud has been placed here."
+End             = shroud
+
+%locations
+
+/* 1 */
+C_Yard n:G_Yard e:Entry s:PATH@VALLEY ;
+lflags { RealTime }
+Churchyard^
+   You stand in what is apparently an old and disused churchyard.  Weeds and
+moss cover the crumbling gravestones and paths.  To the east is a huge ancient
+church, now decaying and surrounded by bits of fallen stonework.  To the north
+the graveyard continues.
+^
+/* 2 */
+Entry e:Church2 w:C_Yard ;
+lflags { RealTime }
+Arched Entry^
+   You stand in what must have once been a magnificent arched entrance, with
+huge oak doors, and a carved doorway fit for a palace.  Now however the doors
+lie in rotting pieces on the floor, and rain drips down the moss covered
+stonework.
+^
+/* 3 */
+Church1 e:Decaying s:Church2 ;
+lflags { RealTime }
+North End Of Church^
+   You stand at the north end of the church, looking south down between the
+silent rows of rotting pews.  Another doorway leads east into a small room.
+^
+/* 4 */
+Decaying w:Church1 ;
+lflags { RealTime }
+A Decaying Room^
+   You stand in a decaying room, the stone walls and floor are soaked with damp
+and whatever used to be stored in here has long since rotted away.  The timbers
+of the roof above you now sag dangerously and the whole room smells of rot.  A
+single doorway leads west.
+^
+/* 5 */
+Church2 n:Church1 s:Altar w:Entry ;
+lflags { RealTime }
+The Church^
+   You stand in the center of the now battered and dilapidated church.  Water
+runs down the walls, dripping in pools onto the rotting remains of the pews.
+The church extends northwards, and southward towards the altar.  To the west is
+the exit.
+^
+/* 6 */
+Altar n:Church2 e:Stairs1 s:Behind ;
+lflags { RealTime }
+By The Altar^
+   You are standing beside the altar, now barely recognizable, a smashed and
+aged pile of rotten wood and fabrics, hiding mossy stonework beneath.  A set of
+steps lead up to the east, probably to the church tower.  The main church hall
+is north, and to the south you can go behind the altar.
+^
+/* 7 */
+Stairs1 s:Bell w:Altar u:Stairs2 d:CRYPT@CATACOMB ;
+lflags { RealTime }
+Stairs^
+   You stand on a set of slippery stone steps which lead both downwards and
+upwards from here.  Doorways lead south into a small room and west into the
+main church hall.
+^
+/* 8 */
+Bell n:Stairs1 u:Bells ;
+lflags { RealTime }
+The Bell Room^
+   You are standing in a small stone room, which is both wet and cold.  The
+wooden roof above you has holes in it through which ropes hang, presumably for
+the church bells.  A single doorway leads north.
+^
+/* 9 */
+Stairs2 w:Pulpit u:GiveWay d:Stairs1 ;
+lflags { RealTime }
+The Stairs^
+   You are climbing a set of steep, slippery stairs that lead up into the
+church tower.  Water runs down the steps, collecting in mossy pools, where the
+cracks and dips in the stonework allow it.  The steps turn from stone to wood
+up above, and look very rickety.
+   To the west a doorway leads out into the pulpit.
+^
+/* 10 */
+Pulpit e:Stairs2 ;
+lflags { RealTime }
+The Pulpit^
+   You stand in the rotting remains of what was the pulpit, looking north along
+the length of the church hall, a sorry sight indeed, and also gazing up through
+the holes in the roof, skyward.
+   A doorway leads east onto some stairs.
+^
+/* 11 */
+Tower s:Bells d:GiveWay;
+lflags { RealTime }
+The Tower^
+   You stand in the room at the top of the tower.  A set of dangerous looking
+steps lead down to the main part of the church.  To the south the room opens up
+into a large chamber full of bells.
+^
+/* 12 */
+Bells n:Tower d:Bell ;
+lflags { RealTime }
+The Bells, The Bells!!!!^
+   You stand in a large chamber packed with bells.  There is a doorway to the
+north, or you could shin down a bell rope.
+^
+/* 13 */
+G_Yard n:G_Yard2 s:C_Yard w:Gloop ;
+lflags { Outdoors Realtime }
+Graveyard^
+   You are standing at the southern end of the graveyard, following a path
+which leads north, beside a stone wall.  To the south is the churchyard, and
+the old church itself.  To the west a worn rut in the grass leads out across
+some marshy ground, past a sign which reads "Danger Marshland".
+   A small grave bears the inscription "Orcus: He wasn't nice and paid the
+price."
+^
+/* 14 */
+G_Yard2 n:Barrow s:G_Yard ;
+lflags { Outdoors Realtime }
+Graveyard^
+   You are standing at the southern end of the graveyard.  To the south a path
+leads out of the graveyard down towards the church.  To the north are several
+barrows.
+   A large gravestone bearing the words "The tomb of the unknown coder" catches
+your eye.
+^
+/* 15 */
+Barrow n:N_Barrow e:T_Barrow s:G_Yard2 ;
+lflags { Outdoors Realtime }
+The Barrow^
+   You stand near the top of a large mound. A path leads south back into the
+main part of the graveyard, north to another mound and east towards a pillar
+set on the top of the mound.
+   A small grave bears the words "Anarchy The Wizard (Out for lunch)"
+A plaque on the grave reads 'Anarchy The Wizard - slain by the Aberystwyth
+rules --- "If you can't pass your physics you can't have your degree.
+	   How can you have your degree if you can't pass your physics..."
+^
+/* 16 */
+N_Barrow s:Barrow ;
+lflags { Outdoors Realtime }
+The North Barrow^
+   You stand on the top of a large mound at the north end of the graveyard.
+A path leads back southward.
+   On a small gravestone is written "Beware of the Moog".
+^
+/* 17 */
+Silent u:^slab_bot e:BONES@ABYSS;
+lflags { RealTime }
+Silent Room^
+   You are standing in a small dark room, beneath the northern barrow.  All
+around you lie the relics of an ancient time, crumbling slowly into dust.
+Everything is dark and creepy, and the sense of malice and foreboding makes you
+jump at the slightest movement in the shadows.  The center of the room is a
+tall gravestone bearing the words:
+   "White The Wizard - A man pledged never to make his own coffee."
+^
+/* 18 */
+T_Barrow w:Barrow d:^slab_top;
+lflags { Outdoors Realtime }
+Top Of Barrow^
+   You stand on the top of a huge barrow. A single path leads back to the west.
+A huge stone pillar stands on the center of the barrow marked with the words:
+		Born To Live
+		Bound To Die
+		Born To Love
+		Bound To Cry
+		Born To Win
+		Bound To Lose
+		Peace At Last
+		Death Not Gloom
+^
+/* 19 */
+Gloop;
+lflags { Death }
+Gloop^
+   You sink into the treacherous marsh with a gloop!
+^
+/* 20 */
+GiveWay;
+lflags { Death }
+The stairs give way and...^
+   ...you fall to your death (what else did you expect to happen?)
+^
+/* 21 */
+Behind n:Altar;
+lflags { RealTime }
+Behind The Altar^
+   You stand behind the altar looking northwards along the length of the church
+which is a very sorry sight indeed, everything wooden is rotting, the stonework
+is moss covered, and gaping holes in the roof allow you to look skyward.
+^

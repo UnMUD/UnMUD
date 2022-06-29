@@ -1,0 +1,12 @@
+cd ../data/
+if [ -f .lock ]
+then echo Someone else is already compiling. Try later.
+else
+echo Locking compile
+cp .lockbase .lock
+cd ../src/
+make
+echo Removing lock
+rm ../data/.lock
+fi
+echo Done

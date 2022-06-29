@@ -1,0 +1,200 @@
+/*********************************************************
+* HOME.ZONE                                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:home
+
+%mobiles
+
+%objects
+
+Name            = disc1
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc1
+
+Name            = disc2
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc2
+
+Name            = disc3
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc3
+
+Name            = disc4
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc4
+
+Name            = disc5
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc5
+
+Name            = disc6
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc6
+
+Name            = disc7
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc7
+
+Name            = disc8
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc8
+
+Name            = disc9
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc9
+
+Name            = disc10
+PName           = disc
+Location        = IN_ROOM:1
+BValue          = 5000
+Size            = 5
+Weight          = 5
+OFlags            { NoLocate NoGet Lit }
+Desc[0]         = "One of the ten valuable golden &+Ydiscs&* is lying here."
+Examine         = "
+The disc is made of pure gold and is very valuable.  You better pit this one!"
+End             = disc10
+
+%locations
+
+1;
+lflags { Private Party }
+The Chat Room^
+   You are lounging in a quiet cosy parlour, warmed by a gentle magical
+fire which twinkles happily in a warm fireplace.   There are no doors out.
+Clearly the owner of this room needs none.
+^
+2;
+lflags { Party Outdoors }
+Sacred Clearing^
+   You find yourself in a clearing deep in the Misty Mountains.  Some mighty
+being has carved this niche out of the living rock, making the place 
+suitable for the gods themselves to wed.  A simple podium in the center of
+this clearing lends to the overall impression that this is a holy place.
+   Stands have been hewn out of the mountain and intricately carved with an
+animal motif.  Each of the 50 seats depicts a different creature, and all
+appear calm and serene.  
+   A feeling of peace and goodwill washes over you as you gaze in awe at 
+the majestic peaks that surround this place.
+^
+3;
+lflags { Private Party }
+In the Jacuzzi^
+  Tiny bubbles tickle your body as you emerge in warm water.  The pool is
+lit by lights in the sides which make the water look even more steamy and
+swirly.  Soft music and the heady smell of fresh-cut flowers complete this
+divine pleasure!
+^
+4 e:5;
+lflags { Party }
+The Happy Dwarf^
+   The room you have just stepped into is the biggest bar you have ever seen
+in your whole life. Dwarves, Elves, Halflings and Humans are all drinking
+together, toasting the well-being of each race.  The room's atmosphere is
+highlighted by a band of minstrels playing on stage.  On the stage is Marc
+the Songlord with his mellow-sounding guitar and Tracelor, the Master of 
+Music, playing his magical Songsword.  Standing behind the two of them is
+the final member of this musical band, Warmack.  Warmack is wielding his
+great tuba and is using it to provide the perfect amount of bass to make
+the music both moving and entertaining.
+  The bar itself is vast in size.  There is no trouble at all in finding a 
+place to sit and relax from a hard day of makin' death or handling mortals.
+On the walls of the bar are the words "Phi Mu Alpha Sinfonia."  Let music
+be a part of your life and bathe you within its vibrations.  The whole bar
+is decorated in only three colors... Red, Black, and Gold.
+^
+5 w:4;
+lflags { Party }
+The Meeting Room^
+   You move from the bar into a smaller room off to the east.  There are 
+several tables here which seem suitable for eating, drinking, or meeting.
+There are sofas in one corner of the room for smaller and more intimate
+conversations.  The entire meeting room is decorated in Red and White.
+You notice a picture on the wall of the band playing away in the other room.
+Next to it is a picture of several Human women who appear to make up a 
+vocal group.  In large letters on one wall are the words "Sigma Alpha Iota."
+On another wall there is a large crest with a large sword in it which catches
+your eye.  The words "Vita Brevis Ars Longa" line the bottom of the crest.
+The room itself is a bit quieter than the attached bar.  You can still hear
+the music coming from the other room, but the noise level isn't nearly as 
+rowdy.
+^

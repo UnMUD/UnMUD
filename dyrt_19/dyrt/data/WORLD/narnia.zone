@@ -1,0 +1,1290 @@
+/*********************************************************
+* NARNIA.ZONE                                            *
+* Written By: Rex                                        *
+* Code By: Rex                                           *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:narnia
+
+%mobiles
+
+Name            = ivy
+Location        = kitchen
+Strength        = 120
+Damage          = 8
+Speed           = 5
+SFlags            { Female }
+Description     = "
+Ivy skitters around the house, cleaning everything in sight."
+Examine         = "
+Ivy seems to be a very gentle woman, but she is also in a rush to clean things."
+End             = ivy
+
+Name            = margaret
+Location        = dining
+Strength        = 120
+Damage          = 8
+Speed           = 5
+SFlags            { Female }
+Description     = "A female servant is here trying to clear off the table."
+Examine         = "Margaret is a dark-haired, frail woman."
+End             = margaret
+
+Name            = betty
+Location        = living
+Strength        = 130
+Damage          = 10
+Speed           = 5
+SFlags            { Female }
+Description     = "Betty is dusting the room from top to bottom."
+Examine         = "Betty seems a little silly, but she's good help."
+End             = betty
+
+Name            = professor
+PName           = "The Professor"
+Location        = lib2
+Strength        = 150
+Damage          = 10
+Speed           = 0
+Description     = "
+The Professor is sitting in the armchair, reading a book on quantum physics."
+Examine         = "
+The Professor is a very wise man of fifty-two.  He is unmarried and has shaggy
+white hare and a beard to match.  You like him instantly, and when he looks
+at you, you notice a sort of knowing twinkle in his eyes."
+End             = professor
+
+Name            = macready
+PName           = "Macready"
+Location        = hall2
+Strength        = 150
+Damage          = 10
+Speed           = 8
+SFlags            { Female }
+Description     = "
+Macready is here, glaring at you as she removes fingerprints from the glass."
+Examine         = "
+Mrs. Macready is the Professor's housekeeper, and she does not like children.
+She has resigned herself to giving frequent tours of the old house to curious
+visitors."
+End             = macready
+
+Name            = moth
+PName           = "The Moth"
+Location        = inwardrobe2
+Strength        = 100
+Damage          = 8
+Aggression      = 80
+Speed           = 8
+Description     = "
+A huge angry-looking moth is upset that you barged in on its meal."
+Examine         = "
+He looks much bigger and much more vicious than the average moth."
+End             = moth
+
+Name            = fen
+PName           = "Fen"
+Location        = cast7
+Strength        = 200
+Damage          = 10
+Speed           = 0
+Description     = "There is a wolf asleep on the castle stairs."
+Examine         = "The wolf appears to be but a statue."
+End             = fen
+
+Name            = fenris
+PName           = "Fenris Ulf"
+Location        = LIMBO@LIMBO
+Strength        = 1800
+Damage          = 20
+Speed           = 0
+Description     = "Fenris Ulf growls at you menacingly."
+Examine         = "
+Fenris Ulf is a huge gray wolf and is the captain of the White Witch's secret
+police." 
+End             = fenris
+
+Name            = peter
+PName           = "Peter"
+Location        = cair5
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle NoSteal }
+Description     = "King Peter the Magnificent is here upon his throne."
+Examine         = "
+Peter is the oldest of the kings and queens you see before you.  He looks to
+be very brave and adventurous."
+End             = peter
+
+Name            = susan
+PName           = "Susan"
+Location        = cair5
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle NoSteal }
+SFlags            { Female }
+Description     = "Queen Susan the Gentle is here upon her throne."
+Examine         = "
+Susan is a young, beautiful, black-haired woman.  She has an air of maturity
+and grace about her, but something about her seems uncomfortable in Narnia."
+End             = susan
+
+Name            = edmund
+PName           = "Edmund"
+Location        = cair5
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle NoSteal }
+Description     = "King Edmund the Just is here upon his throne."
+Examine         = "
+Edmund was once a traitor to Aslan in his younger days, but thanks to Peter's
+forgiving heart, he has had the chance to become a handsome and brave king."
+End             = edmund
+
+Name            = lucy
+PName           = "Lucy"
+Location        = cair5
+Strength        = 200
+Damage          = 10
+Speed           = 0
+PFlags            { NoHassle NoSteal }
+SFlags            { Female }
+Description     = "Queen Lucy the Valiant is here upon her throne."
+Examine         = "
+Lucy is the youngest of the kings and queens you see before you, and one of
+Aslan's best friends.  She is fair-haired and seems to be a very happy and
+compassionate person."
+End             = lucy
+
+%objects
+
+Name            = key
+Location        = IN_ROOM:dining
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { Key PitReset }
+Desc[0]         = "Lying un-noticed in a corner is a small silver key."
+Examine         = "
+This is not a house key... it looks like it might open a cabinet or drawer."
+End             = key
+
+Name            = kitchendoor
+PName           = door
+Location        = IN_ROOM:kitchen
+State           = 1
+MaxState        = 1
+Linked          = bstairdoor
+OFlags            { Openable NoGet }
+Desc[0]         = "An open door leads to a dark staircase."
+Desc[1]         = "A closed door in the east wall catches your eye."
+End             = kitchendoor
+
+Name            = bstairdoor
+PName           = door
+Location        = IN_ROOM:bstair
+State           = 1
+MaxState        = 1
+Linked          = kitchendoor
+OFlags            { Openable NoGet }
+Desc[0]         = "There is an open door at the bottom of the stairs."
+Desc[1]         = "At the bottom of the stairs is a closed door."
+End             = bstairdoor
+
+Name            = lib2door
+PName           = door
+Location        = IN_ROOM:lib2
+State           = 1
+MaxState        = 1
+Linked          = porchdoor
+OFlags            { Openable NoGet }
+Desc[0]         = "An open door allows a breeze to come in off the porch."
+Desc[1]         = "The door is closed."
+End             = lib2door
+
+Name            = porchdoor
+PName           = door
+Location        = IN_ROOM:porch
+State           = 1
+MaxState        = 1
+Linked          = lib2door
+OFlags            { Openable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+End             =  porchdoor
+
+Name            = apron
+Location        = WORN_BY:margaret
+BValue          = 100
+Size            = 1
+Weight          = 1
+Armor           = 3
+OFlags            { WearOnBody Armor PitReset }
+Desc[0]         = "A small white apron lies here."
+Examine         = "It appears to be used for cleaning house."
+End             = apron
+
+Name            = armour
+AltName         = armor
+Location        = IN_ROOM:green
+OFlags            { NoGet }
+Desc[0]         = "Standing in a corner is a very old suit of armour."
+End             = armour
+
+Name            = harp
+Location        = IN_ROOM:green
+OFlags            { NoGet }
+Desc[0]         = "A large harp stands in the corner of the room."
+End             = harp
+
+Name            = picture
+Location        = IN_ROOM:picture
+OFlags            { NoGet }
+Desc[0]         = "One picture in particular catches your attention."
+Examine         = "
+The picture is of the four kings and queens of a land called 'Narnia'."
+End             = picture
+
+Name            = halldoor
+PName           = door
+Location        = IN_ROOM:hall1
+State           = 1
+MaxState        = 1
+Linked          = balconydoor 
+OFlags            { NoGet Openable }
+Desc[0]         = "An open door leads east onto a peaceful balcony."
+Desc[1]         = "The door is closed."
+End             = halldoor
+
+Name            = balconydoor
+PName           = door
+Location        = IN_ROOM:balcony
+State           = 1
+MaxState        = 1
+Linked          = halldoor 
+OFlags            { Openable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+End             = balconydoor
+
+Name            = wardrobedoor
+PName           = door
+Location        = IN_ROOM:wardrobe
+State           = 2
+MaxState        = 2
+Linked          = insidedoor
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The wardrobe door is open."
+Desc[1]         = "The wardrobe door is closed."
+Desc[2]         = "The wardrobe door is locked."
+End             = wardrobedoor
+
+Name            = insidedoor
+PName           = door
+Location        = IN_ROOM:inwardrobe1
+State           = 2
+MaxState        = 2
+Linked          = wardrobedoor
+OFlags            { NoGet }
+Desc[0]         = "The door to the wardrobe has slammed shut behind you!"
+Desc[1]         = "The door to the wardrobe has slammed shut behind you!"
+Desc[2]         = "The door to the wardrobe has slammed shut behind you!"
+End             = insidedoor
+
+Name            = coat
+Location        = IN_ROOM:inwardrobe1
+State           = 1
+MaxState        = 1
+BValue          = 100
+Size            = 6
+Weight          = 10
+Armor           = 2
+OFlags            { WearOnBack GetFlips Container PitReset }
+Desc[0]         = "An old coat that smells of mothballs lies here."
+Desc[1]         = "
+One of the coats catches your eye because it is particularly ugly."
+Examine         = "
+The coat is very ugly, but rather warm with roomy pockets."
+End             = coat
+
+Name            = mothball
+Location        = IN_CONTAINER:coat
+BValue          = 50
+Size            = 1
+Weight          = 1
+Desc[0]         = "A smelly old mothball is lying on the ground." 
+End             = mothball
+
+Name            = dam
+AltName         = beaverdam
+Location        = IN_ROOM:pts4
+OFlags            { NoGet }
+Desc[0]         = "Where the two rivers join, there is a huge beaver dam."
+End             = dam
+
+Name            = stonefaun
+PName           = faun
+Location        = IN_ROOM:cast5
+OFlags            { NoGet }
+Desc[0]         = "You nearly bump into a stone statue of a little faun."
+Examine         = "
+You run your hands over the statue and your fingers tell you of its tremendous
+life-like detail."
+End             = stonefaun
+
+Name            = turkishdelight
+Location        = IN_ROOM:pts1
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { Food }
+Desc[0]         = "A dish of magical turkish delight has been abandoned here."
+Examine         = "The turkish delight looks DELICIOUS!"
+End             = turkishdelight
+
+Name            = horn
+Location        = CARRIED_BY:susan
+BValue          = 100
+Size            = 4
+Weight          = 5
+Desc[0]         = "Queen Susan's horn is lying here."
+Examine         = "
+The horn is made of ivory and was Susan's gift from Father Christmas.  Its tone
+is much richer than a bugle, and legend has it that when you blow it, some kind
+of help will come to you."
+End             = horn
+
+Name            = quiver
+Location        = WORN_BY:susan
+BValue          = 10
+Size            = 3
+Weight          = 4
+OFlags            { WearOnBack PitReset }
+Desc[0]         = "There is a quiver full of arrows lying here."
+Examine         = "The arrows seem somehow magical."
+End             = quiver
+
+Name            = bow
+Location        = CARRIED_BY:susan
+BValue          = 100
+Size            = 5
+Weight          = 2
+Damage          = 10
+OFlags            { Weapon PitReset }
+Desc[0]         = "There is a small bow lying in the grass."
+End             = bow
+
+Name            = cordial
+AltName         = potion
+Location        = CARRIED_BY:lucy
+BValue          = 200
+Size            = 1
+Weight          = 2
+OFlags            { Drink PitReset }
+Desc[0]         = "There is a small bottle of orangish liquid here."
+Examine         = "
+The potion is in a bottle made of diamond.  It is made of the juice of one of
+the fire-flowers that grows in the mountains of the sun."
+End             = cordial
+
+Name            = dagger
+Location        = CARRIED_BY:lucy
+BValue          = 20
+Size            = 3
+Weight          = 4
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A small dagger has been abandoned here."
+Examine         = "
+The dagger is small and is meant more for self-protection than for battle."
+End             = dagger
+
+Name            = rhindon
+AltName         = sword
+Location        = IN_ROOM:picture
+State           = 0
+MaxState        = 1
+BValue          = 100
+Size            = 5
+Weight          = 10
+Damage          = 10
+OFlags            { Weapon GetFlips PitReset }
+Desc[0]         = "There is an impressive sword hanging on the wall."
+Desc[1]         = "King Peter's mighty sword, Rhindon, lies here."
+Examine         = "
+The hilt of the sword is ornate and made of gold.  It is truly a beautiful
+and well-balanced weapon." 
+End             = rhindon
+
+Name            = petershield
+PName           = shield
+Location        = IN_ROOM:LIMBO@LIMBO
+BValue          = 500
+Size            = 5
+Weight          = 10
+Armor           = 15
+OFlags            { Armor WearOnArms ExcludeWear PitReset }
+Desc[0]         = "King Peter's shield lies here."
+Examine         = "
+The shield is silver in color and has a large red lion on the front.  It seems
+to be light yet incredibly sturdy, and will protect you well in battle."
+End             = petershield
+
+Name            = dwarves
+Location        = IN_ROOM:cy1
+OFlags            { NoGet }
+Desc[0]         = "
+Two dwarves were frozen in a conversation that would never be finished."
+End             = dwarves
+
+Name            = aslan
+Location        = IN_ROOM:table
+OFlags            { NoGet }
+Desc[0]         = "
+Aslan lies upon the stone table.  He is shaven, muzzled, and tethered down."
+Examine         = "You can not tell whether or not he is alive."
+End             = aslan
+
+Name            = squirrels
+Location        = IN_ROOM:ttfq2
+OFlags            { NoGet }
+Desc[0]         = "
+Some squirrels were having their dinner when they were frozen by the Queen."
+End             = squirrels
+
+Name            = lion
+Location        = IN_ROOM:cy2
+OFlags            { NoGet }
+Desc[0]         = "A noble lion has been turned to stone."
+End             = lion
+
+Name            = giant
+Location        = IN_ROOM:cy3 
+OFlags            { NoGet }
+Desc[0]         = "A tremendous stone giant towers over you."
+End             = giant
+
+Name            = rabbits
+Location        = IN_ROOM:cy4
+OFlags            { NoGet }
+Desc[0]         = "
+Some rabbits were frolicking here until they were turned to stone."
+End             = rabbits
+
+Name            = dryads
+Location        = IN_ROOM:cy5
+OFlags            { NoGet }
+Desc[0]         = "Two dryads have been frozen here forever." 
+End             = dryads
+
+Name            = fauns
+Location        = IN_ROOM:cy6
+OFlags            { NoGet }
+Desc[0]         = "A circle of fauns was dancing when they were frozen."
+End             = fauns
+
+%locations
+
+/* 1 */
+entry w:ROAD10@VILLAGE n:dining s:living e:stair;
+lflags { RealTime NoMobiles }
+Entrance to the Professor's House^
+   You have entered a charming and large old house.  The house is not in the
+best of upkeep, but it is charming just the same.  As you enter, you can hear
+the floors creak under your feet.  You peer around the corners into the other
+rooms on this floor, and a sense of wonder overcomes you.  This house seems
+full of mystery and enchantment, of a type you can not explain.  For some
+reason you feel an uncontrollable urge to explore.
+^
+/* 2 */
+stair u:hall1 w:entry;
+lflags { NoMobiles RealTime }
+The Old Staircase^
+   You are standing on an old staircase that reaches up  to the second floor.
+Each step creaks and gives a little under your weight, but the stairs seem
+very solid.  Straight ahead of you at the top off the stairs, you can look 
+into a room that is painted a curious green colour.  You can see light coming
+from the hall that seems to indicate open doors of some sort, although you
+are not yet far enough up the stairs to see the source.
+^
+/* 3 */
+living n:entry e:lib1;
+lflags { RealTime }
+The Living Room^
+   You find yourself in the living room of this old house.  The wallpaper is
+peeling and the floors are in disrepair, but there is something about this
+place that you like.  The more you look around, the more you feel an urge
+to explore.
+^
+/* 4 */
+dining e:kitchen s:entry;
+lflags { RealTime }
+The Dining Room^
+   The only furniture in this simple dining room are a small table and a
+drysink.  There is a small throw rug under the table to keep it from 
+further damaging the floor.  Covering the drysink are all sorts of papers
+that look like they are probably important to the Professor.  You do not
+dare to touch them.
+^
+/* 5 */
+kitchen w:dining e:^kitchendoor;
+lflags { RealTime }
+The Kitchen^
+   Wandering into the kitchen, it is the appliances that first catch your
+eye.  They are old-fashioned and look like they have been in use for many
+more years than you have been alive.  They are all functional, however.
+The air in the kitchen is warm and smells of chocolate.  You look around
+hungrily for whatever was made.
+^
+/* 6 */
+bstair w:^bstairdoor u:picture;
+lflags { RealTime }
+The Back Stairs^
+   You find yourself climbing the back stairs of the house.  These stairs
+obviously aren't used very often, as there is no light here.  The stairs
+themselves are free of dust and objects, but you still get the idea that
+they aren't used much.  The stairs are very loud under your feet.  At
+first the darkness is such that you can't see well, but your eyes adjust
+and the further up you go, the more light that is provided by the room
+above.
+^
+/* 7 */
+lib1 w:living e:lib2;
+lflags { RealTime }
+The Library^
+   You are now standing in the library of this large house.  There is an
+impressive number of books here, all musty and covered with dust from age.
+The books are well-worn and are obviously very treasured by the owner.
+The Professor merely seems to have very poor house-cleaning skills and he
+wouldn't dream of letting the maids near his library.  This room seems
+to be where the Professor spends most of his time.
+^
+/* 8 */
+lib2 w:lib1 n:^lib2door;
+lflags { RealTime }
+The Library^
+You have moved to the eastern end of the library.  At this end is an easy 
+chair with a small table on one side, upon which is sitting a lamp.  The
+lampshade and table are dusty and a book is resting on the table.  In the
+wall is a fireplace, which makes a great decoration.  However it seems like
+it hasn't been used in years.
+^
+/* 9 */
+porch s:^porchdoor;
+lflags { RealTime }
+The Back Porch^
+   Moving outside to the back porch, you take in the view in the back of the
+house.  Behind the house is a large woods, which is alive with summer. The
+leaves on the trees are big and green.  There is a small stream running
+somewhere nearby.  The large open lawn looks healthy and green.  You look
+into the woods and ponder all of the interesting adventures that could
+probably be had out there.
+^
+/* 10 */
+hall1 d:stair n:green s:hall2 w:room e:^halldoor;
+lflags { RealTime }
+The Upper Hall^
+   You climb up the stairs and into the upper hall.  From here you look
+north into a curious green room.  To the south is a hallway that is lined
+with open doors.
+^
+/* 11 */
+room e:hall1;
+lflags { RealTime }
+The Bed Room^
+   You turn to the east and find yourself in a large old bedroom.  Here too
+the paper is peeling and the floors are creaky, but the room itself is rather
+pleasant.  In the room at one end are four twin sized beds.  At the other 
+end of the room are four wooden dressers with mirrors over them.  There are
+also two large closets at that end of the room.  The room seems tidy but
+occupied.
+^
+/* 12 */
+balcony w:^balconydoor;
+lflags { Party Peace RealTime }
+The Balcony^
+   You open the door and step out onto the balcony.  From the angle of the
+view of the woods, it seems to you that this balcony is directly over the
+porch on the lower floor.  The view is the same, except for the angle.
+You look off into the woods behind and can almost make out a flowing stream.  
+If you listen carefully you can hear the calls of summer life.
+^
+/* 13 */
+green s:hall1 e:picture w:wardrobe;
+lflags { RealTime }
+The Green Room^
+   You have entered a long room that is painted green.  As curious as it
+looked from the hallway, you find the room quite boring.  The ONLY thing 
+that is here of any interest whatsoever is a harp.  The rest of the room
+is void of furniture...void of anything.
+^
+/* 14 */
+hall2 e:spare w:guest n:hall1;
+lflags { RealTime }
+The Upper Hall^
+   You wander down the upper hall.  On your left and right are what look
+like more spare rooms.  The floor creaks under your feet as you look around
+with curiosity.  Your sense of adventure is getting stronger.
+^
+/* 15 */
+wardrobe e:green w:^wardrobedoor;
+lflags { RealTime }
+The Wardrobe Room^
+   You are in the only room on the face of the earth that you think can
+possibly be more boring than the Green Room.  At least that room had a harp...
+All that you can see here is a wardrobe.  Just a boring old wardrobe....
+Or is it?
+^
+/* 16 */
+picture w:green d:bstair;
+lflags { RealTime }
+The Picture Room^
+   You have entered a long room with pictures all over the walls.  This 
+room seems to be the only place in the house with any sort of decoration.
+You secretly think that the Professor should have spread the pictures out
+over the entire house instead of cramming them all into this one room, but
+hey, who died and made you the interior decorator?
+^
+/* 17 */
+spare w:hall2;
+lflags { Party Private RealTime }
+The Spare Room^
+   You have entered yet another spare bedroom.  The room has painted white
+walls and is the first well-decorated room you have been into in this house.
+There is a queen-sized bed covered with a white spread.  There is a small
+table next to the bed with a vase of flowers on it.  The room looks almost
+as though the Professor expects it to be needed at any moment.
+^
+/* 18 */
+guest e:hall2;
+lflags { Party Private RealTime }
+The Guest Room^
+   You have entered another spare bedroom.  This one is decorated with
+a queen-sized bed against one wall.   Other than that, there is only
+a dresser with mirror and a picture of flowers on the wall of any
+interest in here.
+^
+/* 19 */
+inwardrobe1 w:inwardrobe2;
+lflags { RealTime }
+Inside the Wardrobe^
+   You step into the wardrobe, very careful to leave the door open behind 
+you.  Your mother always warned you that it was rather a silly thing to
+shut yourself up in a wardrobe... unfortunately you never listened to 
+a word she said.
+^
+/* 20 */
+inwardrobe2 e:inwardrobe1 s:path1;
+lflags { }
+Inside the Wardrobe^
+   You head toward the back of the wardrobe, expecting to run into the 
+back wall at any time.  You keep searching and feeling your way through
+the coats that surround you.  Soon, however, your hands reach out and 
+feel something rough and cold.  It turns out your hands are not on a coat
+as expected, but a tree!
+^
+/* 21 */
+path1 n:inwardrobe2 e:path2 s:path3;
+lflags { Cold NoMobiles }
+Between Worlds^
+   You step out of the wardrobe and into a wintery land.  Remembering that it
+was summer back at the house, you are at first alarmed by the climate change.
+As you look around at the woods around you, however, your sense of adventure
+overtakes your fears, and you decide to head on into the woods.  Now you must
+only choose between the path to the west and the path to the north.
+^
+/* 22 */
+path2 w:path1 s:path5;
+lflags { Cold }
+The Forest Path^
+   You decide to take the path to the west.  You can only hope that this was
+the right decision.  The path is fairly wide at first, however, you have
+to watch your step so that you don't get tangled in all of the underbrush.
+The path heads straight to the north from here.
+^
+/* 23 */
+path3 w:path4 n:path1;
+lflags { Cold }
+The Forest Path^
+   You decide to take the path to the north.  You pick your way down the hill,
+hoping that you made the correct choice.   For now the path seems wide 
+enough for you to walk down it.  You do have to watch your step so that you
+don't get tangled in the underbrush, but for now the moving is quick.
+The path turns slightly to the east from here.
+^
+/* 24 */
+path4 e:path3 s:path9;
+lflags { Cold }
+The Forest Path^
+   You continue down the path that originally went to the north and is now
+turning to the east.  Here the path rounds another corner and once again
+heads north.  In front off you, preventing you from going east is a large
+fallen tree.  It looks as though either going north or back the way you
+came are your only choices.
+^
+/* 25 */
+path5 n:path2 s:path6;
+lflags { Cold }
+The Forest Path^
+   Here the path continues to the north.  The path is still fairly clear,
+and you have a feeling that you are actually getting somewhere.  If you
+ever feel in doubt, you can always turn around and follow your steps backward
+if you need.
+^
+/* 26 */
+path6 n:path5 s:path7;
+lflags { Cold }
+The Forest Path^
+   The path continues to the north.  You think you can see the formings of
+another path off to the north and east, but you are not sure.  You are 
+beginning to think that perhaps both paths were headed in the same direction
+but you can't confirm that just yet.
+^
+/* 27 */
+path7 n:path6 w:path8;
+lflags { Cold }
+The Forest Path^
+   Here the path turns to the east, off toward where the other path could
+be by now.  Your feeling that both paths will join further on down the hill
+is becoming stronger.
+^
+/* 28 */
+path8 s:path12 e:path7;
+lflags { Cold }
+The Forest Path^
+   To the north, you can see a spot where the other path comes in.   The
+path is running just to  the east... however a large fallen tree prevents you
+from joining it now.
+^
+/* 29 */
+path9 n:path4 s:path10;
+lflags { Cold }
+The Forest Path^
+   Here the path continues to the north.  You think you can see the other
+path off to  the west, but you are not sure.  Perhaps the two will meet
+further down into the woods.
+^
+/* 30 */
+path10 s:path11 n:path9;
+lflags { Cold }
+The Forest Path^
+  Continuing on toward the north, you trudge through the snow.  The path
+is getting a bit more narrow here than you like, but it is passable.
+You look to the northwest and  think you see a small dead tree with no
+branches in the middle of a clearing.  However, something about that
+tree looks very odd.
+^
+/* 31 */
+path11 n:path10 e:path12;
+lflags { Cold }
+The Forest Path^
+   You trudge on to the north, finally coming to a place where you can
+definitely make out the western trail.  Apparently  the two of them meet
+just ahead and to the west.  You can no longer go straight forward due
+to a large tree.  It looks like you will have to go west.
+^
+/* 32 */
+path12 w:path11 n:path8 e:light;
+lflags { Cold }
+The Forest Path^
+   Here is where the two paths come together.  You are just to the east of
+a strange object that looks like a dead tree without branches.  At a closer
+glance you can tell that it is a lamp post.
+^
+/* 33 */
+light w:path12 e:path13;
+lflags { Cold }
+In the Clearing^
+   You have reached the clearing that looked so curious from above on the
+trail.  What once looked like a dead tree is now obvious to you as a 
+lamp post.  The lamp is not lit, although it looks like it has been recently.
+^
+/* 34 */
+path13 w:light e:path14;
+lflags { Cold }
+The Forest Path^
+   You continue on from the lamp post.  You figure you can always trace your
+steps back to it if need be.  It is getting dark and you should probably 
+be heading back, but your sense of adventure wins out for now.
+^
+/* 35 */
+path14 e:path15 w:path13;
+lflags { Cold }
+The Forest Path^
+   Wandering down the path, you continue to the west.   You are feeling
+pretty cold and starting to get hungry and tired.  The sky is darkening
+around you and you sense that you had better find food and shelter before
+it gets much darker.
+^
+/* 36 */
+path15 w:path14 e:rock;
+lflags { Cold }
+The Forest Path^
+  You stumble down more of the path, when suddenly to the west, you see
+a large rock.  At least that will make good cover from the wind, since
+there doesn't seem to be any other cover around.
+^
+/* 37 */
+rock w:path15 s:pts1 e:cave;
+lflags { Cold }
+Whale Rock^
+   You find yourself at the rock.  To your surprise, behind the rock is
+a hidden cave mouth.  It looks as if it was was once inhabited although
+now it is pretty well torn apart and looks deserted.  Perhaps that would
+make a good home for the night.
+^
+/* 38 */
+cave w:rock;
+lflags { Dark }
+Inside the Cave^
+   You are inside the cave now where the air is nice and warm.  Your only
+problem is that it is dark and you cannot see very well.  You find a corner
+and curl up tight for the night.  In the morning when there is enough light
+for you to see by, you take a look around the cave.  It was most definitely
+occupied recently, but everything the occupant owned has been dashed apart
+and broken.  It looks as if someone has searched the place for something, and
+destroyed everything in his path.
+^
+/* 39 */
+pts1 n:rock s:pts2;
+lflags { Outdoors Cold }
+Winter Path^
+   The path you are walking on seems to go on for miles into the wintery
+wonderland.  All around you, everything is white.  Off in the distance
+you hear what sounds like the jingling of bells.  Ahead of you to the 
+north are huge mountains.
+^
+/* 40 */
+pts2 s:pts3 n:pts1;
+lflags { Outdoors Cold }
+Woodsy Path^
+   Wandering through the snows, everything you see is white.  Ahead of you
+to the north are mountains.  They seem to be not very far off.
+^
+/* 41 */
+pts3 s:pts4 n:pts2;
+lflags { Outdoors Cold }
+The Path^
+   You trudge on through the snows.  To the north the mountains are getting 
+closer.  You can make out a leveling in the path ahead.
+^
+/* 42 */
+pts4 w:ptq1 s:ptt1 n:pts3;
+lflags { Outdoors Cold }
+The Path^
+   You are at the base of some rather large foothills.  The ground you are
+on is curiously flat, until you realize by looking at a mound of sticks
+nearby that you are walking on a frozen river.  To the west you can see
+where this river meets another one.  The smooth frozen path leads up to
+the northeast.  You can follow a path beside it, or continue north across
+the second river and north to the unknown.  You can also turn back south.
+^
+/* 43 */
+ptt1 n:pts4 s:ptt2;
+lflags { Outdoors Cold }
+The Path^
+   You find yourself crossing another river.  There is one to the south,
+and now the path crosses a second one.  Way off in the hills to the north
+the path continues.
+^
+/* 44 */
+ptt2 n:ptt1 s:ptt3;
+lflags { Outdoors Cold }
+Path to the North^
+   As you continue along the path, the world around you is becoming more
+and more mountainous.  The climb becomes tougher and more slippery.
+You are still following a rather clear path.
+^
+/* 45 */
+ptt3 n:ptt2 s:ptt4;
+lflags { Outdoors Cold }
+Path to the Table^
+   The path continues through the mountains and reaches the crest of one of
+them.  To the north you can see a downhill slope and then a flat area, which
+looks very odd.  To the south is a long trail down the mountains which leads
+back into the woods.
+^
+/* 46 */
+ptt4 s:table n:ptt3;
+lflags { Outdoors Cold }
+Path to the Table^
+   You head down the downhill slope, trying to keep your feet under you.
+The path is rather treacherous and uneven.
+^
+/* 47 */
+table e:underground w:ttfq4 n:ptt4 s:ptc1;
+lflags { Outdoors Cold }
+The Stone Table^
+    You come to a sharp incline at the bottom of the hill, and climb it.
+To the north the path flattens a bit an continues downhill.  Before you is 
+a gigantic stone known to those of Narnia as the Stone Table.
+^
+/* 48 */
+underground w:table;
+lflags { Outdoors Cold }
+The Underground Fortress^
+   There is an entrance to an underground fortress under the western side
+of the Stone Table.  You hear evil cackling and other distressful noises
+coming from inside that make you sure you don't want to go down.  You hear
+the voices of incubuses, wraiths, horrors, efreets, orknies, cruels, hags,
+spectres, wooses, ettins, werewolves, boggles, minotaurs, ghouls, and other 
+spirits coming from below and are gripped with fear.
+^
+/* 49 */
+ptc1 n:table s:ptc2;
+lflags { Outdoors }
+Path to the Sea^
+   You continue down the sloping path to the sea.  You can't see much through
+the evergreens, but you think you can make out water ahead.
+^
+/* 50 */
+ptc2 n:ptc1 s:ptc3;
+lflags { Outdoors }
+Path to the Sea^
+   The path has thawed quickly, and the going is much easier.  It is almost
+as if the huge amount of snow covering this land not so long ago never existed.
+^
+/* 51 */
+ptc3 n:ptc2 s:ptc4;
+lflags { Outdoors }
+Path to the Sea^
+   You continue along the path to the sea.  Ahead of you is a grand body of
+water, but suddenly, your gaze shifts, and the water becomes trivial.  Ahead
+of you, on the opposite bank, is an enormous golden castle of breathtaking
+beauty.
+^
+/* 52 */
+ptc4 n:ptc3 s:shore;
+lflags { Outdoors }
+Path to the Sea^
+   You stumble along the path, suddenly in a hurry to explore the castle.  You
+are just feet from the shore.  The water is crystal clear and still.  As you
+look at the castle, a sense of almost holy awe comes over you.  You are 
+overcome by its beauty.
+^
+/* 53 */
+shore n:ptc4 s:sea1;
+lflags { Outdoors }
+The Seashore^
+    Standing on the shore, you contemplate the crossing.  Due to the drastic
+change in weather, there is a mist over the water, only a few feet tall,
+which will make steering to the other side difficult.
+^
+/* 54 */
+ttfq1 w:ptq6 e:ttfq2;
+lflags { Outdoors }
+Woodsy Path^
+   You are on an east-west path through the forest.  To the east is the Queen's
+castle, and way off in the west is the Stone Table.
+^
+/* 55 */
+ttfq2 w:ttfq1 e:ttfq3;
+lflags { Outdoors }
+Path through the Forest^
+  The path here is rather thin and the going is not easy.  You notice fresh
+sled tracks in the path.  You just hope that the Queen's sled has not been
+here too recently.
+^
+/* 56 */
+ttfq3 w:ttfq2 e:ttfq4;
+lflags { Outdoors }
+The Woodsy Path^
+   The path continues east and west.  To the west you can make out a dip in
+the path, and a sudden uprise.  You can just make out the flat area of 
+the Stone Table.
+^
+/* 57 */
+ttfq4 w:ttfq3 e:table;
+lflags { Outdoors }
+The Path^
+   Here the path dips a little and then rises again just before the Stone
+Table.  You have come out of the woods into the edge of a clearing.
+^
+/* 58 */
+cy1 w:cy2 s:cy4;
+lflags { Cold  Outdoors }
+In the Courtyard^
+   You are in a rectangular courtyard, surrounded on three sides by the
+imposing residence of the Snow Queen.  You feel as though you are not alone,
+as there are many stone statues all around you.  They seem amazingly life-
+like, except for the snow that is resting on top of all of them.  In this
+area there are a lot of statues of Dwarves.
+^
+/* 59 */
+cy2 e:cy1 w:cy3 n:ptq7 s:cy5;
+lflags { Cold  Outdoors }
+The Snow Queen's Courtyard^
+   You have entered the Courtyard of the Castle of the Snow Queen.  All
+around you are statues of creatures that seem incredibly life-like.  Dead
+in front of you is a huge lion.  He looks so life-like that at first you
+are afraid.  Suddenly you realize that snow has settled on top of him and
+you realize that this could never be a real lion.
+^
+/* 60 */
+cy3 e:cy2 s:cy6;
+lflags { Cold  Outdoors }
+In the Courtyard^
+   All around you in the courtyard are the statues of various beings.
+There is a huge and proud lion in striking pose to the west, and slightly
+to the north of you is a humungus giant!
+^
+/* 61 */
+cy4 n:cy1 w:cy5;
+lflags { Cold  Outdoors }
+In the Courtyard^
+   You are in the northwest corner of the courtyard, almost up against the
+junction of two of the castle walls.  On the ground in front of you, several
+stone rabbits look like they are playing... except for the fact that of
+course they aren't moving.
+^
+/* 62 */
+cy5 e:cy4 w:cy6 n:cy2 s:cast7;
+lflags { Cold  Outdoors }
+In the Courtyard^
+   You are just south of the castle entrance.  On your left and right are
+two stone statues of dryads.  How real they look!
+^
+/* 63 */
+cy6 e:cy5 n:cy3;
+lflags { Cold  Outdoors }
+In the Courtyard^
+   You are in the northeast corner of the courtyard, almost up against the
+two imposing walls of the castle.  Surrounding you are little stone fauns,
+frozen in a circle of dance.
+^
+/* 64 */
+cast1 s:cast2;
+lflags { }
+The Southwest Wing^
+   You are now at the end of the southwest wing of the castle.  Down toward
+this end the hallways get even darker, as there is no light reaching this
+place from the entryway.
+^
+/* 65 */
+cast2 n:cast1 w:cast7 s:cast3;
+lflags { }
+The Castle Hallway^
+   Here is the place where the front hall meets the western wing.  The light
+here is still dim, yet to the north and south the light seems to disappear
+into utter blackness.
+^
+/* 66 */
+cast3 n:cast2 w:cast4;
+lflags { }
+The Northwest Corner^
+   Standing in the northwest corner of the castle, the light is very dim.
+You find yourself squinting in order to examine interesting bas relief
+shapes on the wall.  You can not quite make them out.
+^
+/* 67 */
+cast4 e:cast3 w:cast5;
+lflags { }
+The North Wing^
+   Here the light is very dim.  You can just see a little bit in front of
+your face because of light that bends around the castle walls.  You feel
+an urge to leave this place as soon as possible.
+^
+/* 68 */
+cast5 e:cast4 n:cast6;
+lflags { }
+The Northeast Corner^
+   Standing in the northeast corner of the castle, the light is rather dim.
+You squint to try to make out designs on the wall.  They seem to be pictures
+of winter, but you can make out little else.
+^
+/* 69 */
+cast6 s:cast5 n:cast8 e:cast7;
+lflags { }
+The Castle Hallway^
+   Here the hallway is still semi-well lit from the entry way.  To the north
+and south the light grows ever dimmer until you can not see the end of the
+hall in either direction.  The whole castle has a dark and evil feel to it.
+^
+/* 70 */
+cast7 e:cast2 w:cast6 n:cy5;
+lflags { }
+North Entrance Hall^
+   The entrance hall in which you are standing is very dark and gloomy. 
+There is not much light here, and the halls echo with every step that you
+make.  You are afraid to move around too quickly, for someone might hear
+you.
+^
+/* 71 */
+cast8 s:cast6;
+lflags { }
+The Southeast Wing^
+   You are in the southeast wing of the castle.  Here the hallway is very
+dark, as there is no light penetrating here from the entryway.
+^
+/* 72 */
+ptq1 e:pts4 w:ptq2;
+lflags { Outdoors Cold }
+The Eastern River^
+   You follow the river that runs to the east and west.  To the west of here,
+two rivers join.  The other is running north and south.  The river continues
+to the northeast in what would be the upstream direction, if the water was
+flowing rather than frozen.
+^
+/* 73 */
+ptq2 w:ptq3 e:ptq1;
+lflags { Outdoors Cold }
+Following the River^
+   You continue to follow the river that flows from the northeast to the 
+southwest.  Up to the northeast, the river's origin lies in a mountain
+range.  Those mountains form a wall to the north that runs all the way 
+across in front of you.  To the south are more of the same woods.
+^
+/* 74 */
+ptq3 e:ptq2 w:ptq4;
+lflags { Outdoors Cold }
+The River^
+   Here the river bends more to the north and south, rather than east and
+west.  To the north is a majestic mountain range, and to the south lie
+the woods and the point at which you entered this strange world.
+^
+/* 75 */
+ptq4 s:ptq5 e:ptq3;
+lflags { Outdoors Cold }
+The Turn in the River^
+   The river begins to turn to the northeast going upstream.  It seems 
+to head directly up to the mountains to the north.
+^
+/* 76 */
+ptq5 n:ptq4 s:ptq6;
+lflags { Outdoors Cold }
+The Frozen Path^
+   You are getting into some more mountainous territory to the north.  A
+blanket of white snow covers everything in sight.  Ahead of you are two
+tall mountains.  Between them sits what appears to be a castle.
+^
+/* 77 */
+ptq6 e:ttfq1 n:ptq5 s:ptq7;
+lflags { Outdoors Cold }
+The Mountainous Path^
+   To the north are two large mountains with a castle between them. 
+Around you everything is covered in snow.  A frozen river-bed runs off to 
+the east and joins another one to the south.
+^
+/* 78 */
+ptq7 s:cy2 n:ptq6;
+lflags { Outdoors Cold }
+Before the Yard^
+   To the north of you is a huge and imposing castle.  The gate to its
+courtyard is right in front of you.  You fill with a sense of fear as
+you approach.  You can still go back to the south.
+^
+/* 79 */
+sea1 s:sea2 e:sea1 n:shore d:shore w:sea3;
+lflags { OnWater Maze OnePerson }
+On the Sea^
+    You find yourself floating on a foggy sea.  For some reason you have
+utterly lost your sense of direction.  You would like nothing more than
+to get back to land, but you can't seem to find any land in any direction.
+^
+/* 80 */
+sea2 s:sea3 w:sea2 e:sea2 n:sea2;
+lflags { OnWater Maze OnePerson }
+On the Sea^
+    You find yourself floating on a foggy sea.  For some reason you have
+utterly lost your sense of direction.  You would like nothing more than
+to get back to land, but you can't seem to find any land in any direction.
+^
+/* 81 */
+sea3 w:sea4 s:sea3 e:sea3 n:sea3;
+lflags { OnWater Maze OnePerson }
+On the Sea^
+    You find yourself floating on a foggy sea.  For some reason you have
+utterly lost your sense of direction.  You would like nothing more than
+to get back to land, but you can't seem to find any land in any direction.
+^
+/* 82 */
+sea4 s:sea5 e:sea4 w:sea4 n:sea1;
+lflags { OnWater Maze OnePerson }
+On the Sea^
+    You find yourself floating on a foggy sea.  For some reason you have
+utterly lost your sense of direction.  You would like nothing more than
+to get back to land, but you can't seem to find any land in any direction.
+^
+/* 83 */
+sea5 s:northshore n:sea2 w:sea5 e:sea4 u:northshore;
+lflags { OnWater Maze OnePerson }
+On the Sea^
+    You find yourself floating on a foggy sea.  For some reason you have
+utterly lost your sense of direction.  You would like nothing more than
+to get back to land, but you can't seem to find any land in any direction.
+^
+/* 84 */
+northshore n:sea5 d:sea5 s:cair1;
+lflags { Outdoors }
+On the North Shore of the Sea^
+   You finally make your way back onto solid land, and find yourself
+at the feet of the largest, most beautiful castle you have ever seen or
+heard of.  The entire building seems to be made of gold and it shines
+like a beacon in the strong sunlight.  You have traveled far, and a few
+moments of rest in this awesome place would do you some good.  You trudge
+toward the entrance hall.
+^
+/* 85 */
+cair1 s:cair2 n:northshore;
+lflags { }
+The Entrance to Cair Paravel^
+   You are standing in the great entrance hall of the golden castle of Cair
+Paravel.  The halls and corridors are stunningly large and very beautiful.
+Gold shimmers around you in the form of columns, paint, artwork, and statues.
+^
+/* 86 */
+cair2 n:cair1 s:cair3;
+lflags { }
+The Halls of Cair Paravel^
+   Heading to the north of the great entrance hall, the gold and glimmer do 
+not end.  The halls continue to be filled with golden light.
+^
+/* 87 */
+cair3 n:cair2 u:cair4;
+lflags { }
+The Halls of Cair Paravel^
+   Standing amongst the golden glory of this castle, you take a few moments
+to really look at all of the splendour that is around you.  To the north is
+a stately marble staircase which leads to a well-lit glowing room at the top.
+^
+/* 88 */
+cair4 s:cair5 d:cair3;
+lflags { }
+On the Stairs^
+   You have come to a beautiful marble staircase.  Down is the golden hallway
+from whence you came.  At the top is a shining throne room.
+^
+/* 89 */
+cair5 n:cair6;
+lflags { }
+The Throne Room^
+   You are now in a huge and shimmering throne room.  The ceiling must be 
+a few hundred feet tall and the room seems so wide that it would take a 
+couple of minutes to cross it.  There are four thrones here, all apparently
+occupied.
+^
+/* 90 */
+cair6 s:cair5 d:cair7;
+lflags { }
+On the Stairs^
+   Leaving the throne room, you can see the staircase from a different
+perspective.  In the different lighting, you notice that the stairs seem
+to go down to a level they didn't before.  Instead of the elaborate hall
+that you expected to see, ahead of you is a huge black space.
+^
+/* 91 */
+cair7;
+lflags { Dark }
+Darkness^
+   The space in which you find yourself can hardly be defined as a room.
+The space is dark, life a vacuum in space.
+^

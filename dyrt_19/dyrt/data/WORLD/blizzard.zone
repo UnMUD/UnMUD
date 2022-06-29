@@ -1,0 +1,350 @@
+/*********************************************************
+* BLIZZARD.ZONE                                          *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:blizzard
+
+%mobiles
+
+Name            = seamas
+Location        = stream
+Strength        = 70
+Damage          = 10
+Speed           = 2
+Description     = "
+Seamas the Leprechaun eyes you cautiously, an evil grin upon his face."
+End             = seamas
+
+Name            = yeti
+PName           = "The Yeti"
+Location        = pass2
+Strength        = 80
+Damage          = 10
+Aggression      = 30
+Speed		= 0
+MFlags            { NegFrost NoHeat }
+Description     = "A huge, furry yeti rears up threateningly in front of you!"
+End             = yeti
+
+%objects
+
+Name            = snow_ice
+PName           = snow
+Location        = IN_ROOM:snow_temple
+State           = 1
+MaxState        = 1
+Linked          = SNOW_ICE@KASTLE
+OFlags            { NoGet }
+Desc[0]         = "
+A hole has been chipped through the ice that covered a stairway leading down."
+Desc[1]         = "Ice-encrusted snow is piled up against one ruined wall."
+End             = snow_ice
+
+Name            = garland
+Location        = IN_ROOM:shady
+BValue          = 100
+Size            = 6
+Weight          = 1
+OFlags            { WearOnNeck }
+Desc[0]         = "
+A beautiful garland of flowers sends a sweet smell wafting around you."
+Examine         = "
+You see written on it, in small flowing letters, the word...
+                       'Judy'"
+End             = garland
+
+Name            = talisman
+Location        = IN_ROOM:elemental
+BValue          = 100
+Size            = 2
+Weight          = 2
+OFlags            { WearOnNeck }
+Desc[0]         = "A battered silver talisman has been dumped here."
+End             = talisman
+
+Name            = branch_village
+PName           = branch
+AltName         = stick
+Location        = IN_ROOM:r_land
+State           = 1
+MaxState        = 1
+Size            = 2
+Weight          = 2
+Damage          = 2
+OFlags            { PitReset Lightable Extinguish Weapon }
+Desc[0]         = "A burning branch has been left here."
+Desc[1]         = "An old branch has been dropped here."
+End             = branch_village
+
+Name            = pick
+Location        = IN_ROOM:snow_temple
+BValue          = 20
+Size            = 5
+Weight          = 2
+Damage          = 11
+OFlags            { Weapon PitReset }
+Desc[0]         = "A small but well-made ice pick has been dropped here."
+End             = pick
+
+Name            = stick
+AltName         = branch
+Location        = IN_ROOM:valley
+State           = 1
+MaxState        = 1
+BValue          = 10
+Size            = 1
+Weight          = 1
+Damage          = 2
+OFlags            { Lightable Extinguish Weapon PitReset }
+Desc[0]         = "A burning stick lies on the ground."
+Desc[1]         = "An old stick lies on the ground."
+End             = stick
+
+Name            = reset_stone
+PName           = stone
+Location        = IN_ROOM:shady
+OFlags            { NoGet }
+Desc[0]         = "
+A huge stone stands in the center of the clearing, its sides strangely marked
+and scored."
+Examine         = "
+The ancient runes, battered as they are, indicate that the stone can be struck
+to reset the game."
+End             = reset_stone
+
+Name            = scimitar
+AltName         = sword
+Location        = IN_ROOM:shady
+BValue          = 30
+Size            = 12
+Weight          = 10
+Damage          = 7
+OFlags            { Weapon PitReset }
+Desc[0]         = "A long, curved scimitar has been placed here."
+Examine         = "
+This is a hefty and gruesome weapon, much favoured by orcs, who often use them
+for cutting cakes, trimming toe nails, and ripping out the insides of hobbits!"
+End             = scimitar
+
+Name            = wintergreen
+Location        = IN_ROOM:ravine
+State           = 1
+MaxState        = 1
+BValue          = 30
+Size            = 1
+Weight          = 2
+OFlags            { Food GetFlips }
+Desc[0]         = "A sprig of wintergreen has been left here."
+Desc[1]         = "Peeking out of the snow you spy some wintergreen."
+Examine         = "
+As you examine the sprig of wintergreen, you break a leaf, releasing the
+delicious aroma of fresh mint."
+End             = wintergreen
+
+%locations
+
+/* 1 */
+pass n:blizzard s:pass2 u:WINDOW@WINDOW e:1@MITHDAN;
+lflags { Outdoors Realtime Cold }
+Blizzard Pass^
+   You are trudging through deep snow as you follow a narrow track that winds
+down a long pass leading ever southward, its end is hidden by the flurries of
+snow that are still falling.  On either side of you the mountains tower high
+above the pass, their peaks veiled in clouds.  At one point, however, the cliff
+is nowhere near as steep and a fair way up a single window has been cut,
+looking out across the snows. To the east a snowy path leads among the trees.
+^
+/* 2 */
+blizzard n:HAVEN@HAVEN e:crevasse s:pass w:gate;
+lflags { Outdoors Realtime Cold }
+Blizzard^
+   You are lost in a blizzard, almost blinded by the driving snows. The howling
+icy wind sends huge clouds of snow whistling across the plain totally obscuring
+your view.
+   The snows extend in all directions save north, where a lighted inn offers
+warmth, food, and shelter from the elements.
+^
+/* 3 */
+gate w:ENTRY@NEWBIE n:DARK@VALLEY e:HAVEN@HAVEN s:blizzard;
+lflags { Cold Outdoors Realtime }
+Gate of Sorcerers^
+   You are outside The Gate of Sorcerers.  Its mighty pillars tower up around
+you, shielding you from the worst of the snow that is falling and from some of
+the icy winds.  The ancient arched gateway between the pillars leads north into
+a wide magically lit passage which disappears into the roots of the earth.
+   You may enter the gate to the north, a lighted inn to the east, or trudge
+south into the snows.
+^
+/* 4 */
+crevasse n:blizzard s:blizzard w:blizzard d:bottom;
+lflags { RealTime }
+Crevasse^
+   You are standing on the edge of a deep crevasse looking down into darkness.
+Heavy snow is falling all around you partially hiding the distant mountains in
+clouds of whiteness.
+   The snows extend in all direction save east, where the crevasse bars the
+route.  You could clamber down into the crevasse but would have great problems
+in getting back out of it.
+^
+/* 5 */
+bottom e:elemental;
+lflags { RealTime }
+Crevasse Bottom^
+   You are at the bottom of the crevasse.  Daylight, and a great deal of snow,
+comes through the top of the crevasse.  A single man-made passage leads east
+into a strange temple.
+^
+/* 6 */
+elemental w:bottom;
+lflags { RealTime }
+Elemental Temple^
+   You are in the Temple Of The Elements, surrounded by decorations depicting
+Earth, Air, Fire and Water.  This strange icy place gives off a feeling of
+unbalance and growing evil.
+There is a blinking construction sign here.
+^
+/* 7 */
+pass2 n:pass s:n_pass w:S_CAVE@ICECAVE;
+lflags { Cold Outdoors Realtime }
+The Pass^
+   You are following the pass as it runs north-south through the mountains.
+There is a small cave mouth to the west.
+^
+/* 8 */
+n_pass n:pass2 s:pass3;
+lflags { Cold Outdoors Realtime }
+Narrow Pass^
+   You are trudging along a gloomy narrow pass pelted with snow while the icy
+wind feels like daggers stabbing into your unprotected flesh.  The pass
+continues north and south.
+^
+/* 9 */
+pass3 n:n_pass e:ravine s:s_pass;
+lflags { Cold Outdoors Realtime }
+The Pass^
+   You are trudging along the pass.  The wind here whips around in a circular
+pattern, almost veiling a narrow ravine leading eastwards.  The pass continues
+north and south.
+^
+/* 10 */
+ravine e:snow_temple w:pass3;
+lflags { Cold Outdoors Realtime }
+Ravine^
+   You are on a path climbing up a narrow ravine towards the crumbling remains
+of a snow shrouded temple.
+^
+/* 11 */
+snow_temple w:ravine;
+lflags { Cold Outdoors Realtime }
+Snow Temple^
+   You are in the snowy ruins of an ancient temple.  The view from here is
+stunning and very picturesque but the lashing snow and icy wind are enough to
+dissuade you from sightseeing.
+^
+/* 12 */
+s_pass n:pass3 s:e_pass;
+lflags { Cold Outdoors Realtime }
+Southern Pass^
+   You are trudging down the pass.  The towering mountains, their heads cloaked
+in snow, seem to leer down at you as your feet crunch into the fresh, deep and
+rather cold snow.  The pass continues north and south.
+^
+/* 13 */
+e_pass n:s_pass e:valley w:PATH1@ORCHOLD u:PATH1@ORCHOLD;
+lflags { Outdoors Realtime }
+The End Of The Pass^
+   You are at the southern end of the pass.  The snow gives way rapidly to a
+pleasant autumn sun, its gentle beams filling the whole vista with a shimmering
+beautiful golden hue.  Tracks lead North, and East.
+^
+/* 14 */
+valley n:GROVE@OAKTREE e:bridge s:woods w:e_pass;
+lflags { Outdoors Realtime }
+The Valley^
+   You are in a green and fair valley amidst the gently murmuring oaks.  The
+sun shines gently through the trees sending dancing, golden beams rippling
+across the shadowy grass while midges dance between the branches.  One
+particularly large oak tree rises up to the north.
+^
+/* 15 */
+bridge e:GREEN@VILLAGE s:stream w:valley;
+lflags { Outdoors Realtime }
+The Humpbacked Bridge^
+   You are standing on a crumbling humpbacked bridge looking over the side down
+onto a wide but shallow stream.  The sun sparkles gently off the ripples as the
+stream passes across pebbles and rocks and the fish swim between them. You hear
+the faint roar of a waterfall somewhere downstream.
+   You can go east or west across the bridge or follow the stream southwards.
+^
+/* 16 */
+woods n:valley e:waterfall s:shady w:MPATH@VALLEY;
+lflags { Outdoors Realtime }
+In The Woods^
+   You are in the woods. The great trees cast green shadows across the flowers
+and undergrowth as they sway peacefully in the wind.  You can walk in any
+direction.
+^
+/* 17 */
+waterfall e:r_land n:PATH@FEMNAZ s:grassy w:woods;
+lflags { Outdoors Realtime }
+The Waterfall^
+   You are in a secluded clearing beside a waterfall which sprays cool water
+gently over you.  Several paths diverge here, leading south, east and west.
+^
+/* 18 */
+r_land n:GREEN@VILLAGE e:1@QUARRY w:waterfall;
+lflags { Outdoors Realtime }
+Rough Land^
+   You are on a patch of rough land to the south of the village.  To the east
+is an old, seemingly deserted quarry.  Other paths lead north and west.
+^
+/* 19 */
+woods2 n:woods3 e:woods3 s:woods3;
+lflags { Outdoors Realtime }
+The Woods^
+   You are in the woods listening to the trees as they rustle in the wind.
+There are no visible tracks here, but you could travel through the woods in any
+direction, save to the west where thick holly bushes block the route.
+^
+/* 20 */
+woods3 n:GREEN@VILLAGE e:woods3 s:woods3 w:woods2;
+lflags { Outdoors Realtime }
+The Woods^
+   You are in the woods, walking amongst the huge trunks watching the birds as
+they flit from branch to branch, filling the air with their lively chirping
+calls.
+^
+/* 21 */
+shady n:woods s:1@MOUNTAIN;
+lflags { Outdoors Realtime }
+Shady Clearing^
+   You are in a shady clearing surrounded by proud and mighty oaks.  The oaks
+are surrounded by hollies and thick bushes, while creepers and weeds girdle
+their ancient trunks.  The only route from the clearing is a single path
+winding north, worn into a deep rut by the passing of endless footsteps.
+^
+/* 22 */
+grassy n:waterfall;
+lflags { Outdoors Realtime }
+Grassy Clearing^
+   You are in a grassy clearing beside a crystal clear, spring-fed pool that
+reflects the swaying trees above.  A sandy path leads north alongside the
+burbling stream.
+^
+/* 23 */
+stream n:bridge w:F6@FOREST;
+lflags { Outdoors Realtime }
+Stream Bank^
+   You stand on a quiet grassy stream bank.  The water burbles gently past you,
+shaded by the thick trees and bushes which grow along the bank.  Towering oaks
+cast dark shimmering shadows across the almost mirror-like rippling water which
+flickers in the light.  The undergrowth blocks any way southwards along the
+stream, but thins out to the north and west where paths lead off.
+^

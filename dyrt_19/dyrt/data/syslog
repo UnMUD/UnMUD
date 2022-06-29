@@ -1,0 +1,630 @@
+cannot open file wizlist (No such file or directory)Fri Oct 31 08:01:55: --------  SYSTEM RELOAD  --------
+Fri Oct 31 08:02:29: ENTRY: Rex [lev 90000, scr 250000] (www.hollyfeld.org)
+Fri Oct 31 08:02:37: UNVEIL: Rex to 99999
+Fri Oct 31 08:06:01: ENTRY: Steffi [lev 1, scr 0] (aslan.hollyfeld.org)
+Fri Oct 31 08:12:39: Steffi to level 2
+Fri Oct 31 08:12:43: Steffi to level 3
+Fri Oct 31 08:12:49: Steffi to level 4
+Fri Oct 31 08:14:47: FROB: Rex has given Steffi a godfrob.
+Fri Oct 31 08:24:29: EXIT:  Steffi [lev 13, scr 104057, str 77/128]
+Fri Oct 31 08:24:45: ENTRY: Steffi [lev 13, scr 104057] (aslan.hollyfeld.org)
+Fri Oct 31 08:30:45: EXIT:  Steffi [lev 13, scr 104237, str 97/128]
+Fri Oct 31 08:31:19: EXIT:  Rex [lev 99999, scr 250055, str 540188/600044]
+Fri Oct 31 08:35:41: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Fri Oct 31 09:18:30: REBOOT--------------------------------------14303
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file14303.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Fri Oct 31 09:18:37: --------  SYSTEM RELOAD  --------
+Fri Oct 31 09:18:51: EXIT:  Rex [lev 99999, scr 250055, str 540399/600044]
+Fri Oct 31 11:55:56: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Fri Oct 31 11:56:28: EXIT:  Rex [lev 99999, scr 250055, str 540402/600044]
+Fri Oct 31 14:38:38: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Fri Oct 31 14:38:42: EXIT:  Rex [lev 99999, scr 250055, str 540402/600044]
+Sun Nov  2 10:04:34: ENTRY: Rex [lev 99999, scr 250055] (aslan95.hollyfeld.org)
+Sun Nov  2 10:05:38: EXIT:  Rex [lev 99999, scr 250055, str 540406/600044]
+Sun Nov  2 19:17:14: ENTRY: Kender [lev 1, scr 0] (localhost)
+Sun Nov  2 19:17:22: UNVEIL: Kender to 90000
+Sun Nov  2 19:17:54: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:17:54: REBOOT--------------------------------------4825
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4825.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:18:07: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:18:17: Puff PUNTed Kender to powers2
+Sun Nov  2 19:18:35: Puff PUNTed Kender to femnaz1
+Sun Nov  2 19:18:35: Puff PUNTed Kender to nibelung104
+Sun Nov  2 19:18:37: Puff PUNTed Kender to orchold16
+Sun Nov  2 19:18:53: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  2 19:19:45: EXIT:  Rex [lev 99999, scr 250055, str 540411/600044]
+Sun Nov  2 19:21:49: Kender PUNTed Kender to femnaz66
+Sun Nov  2 19:21:49: Puff PUNTed Kender to newvillage5
+Sun Nov  2 19:21:55: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:21:55: REBOOT--------------------------------------4884
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4884.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:22:04: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:22:10: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:22:10: REBOOT--------------------------------------4888
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4888.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:22:16: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:22:16: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:22:16: REBOOT--------------------------------------4889
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4889.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:22:23: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:22:29: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:22:29: REBOOT--------------------------------------4890
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4890.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:22:35: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:23:19: SIGNAL: SIGSEGV[11]
+Sun Nov  2 19:23:19: REBOOT--------------------------------------4900
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file4900.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun Nov  2 19:23:24: --------  SYSTEM RELOAD  --------
+Sun Nov  2 19:23:26: EXIT:  Kender [lev 90000, scr 0, str 65/540050]
+Mon Nov  3 12:39:30: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Mon Nov  3 12:39:32: EXIT:  Rex [lev 99999, scr 250055, str 540411/600044]
+Tue Nov  4 22:35:47: ENTRY: Crimefighter [lev 1, scr 0] (csc213.uis.edu)
+Tue Nov  4 22:38:19: EXIT:  Crimefighter [lev 1, scr 0, str 54/56]
+Wed Nov  5 08:41:14: gethostbyaddr: Couldn't find hostentry for 207.73.22.189
+Wed Nov  5 10:40:44: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Wed Nov  5 10:41:24: EXIT:  Rex [lev 99999, scr 250055, str 540414/600044]
+Wed Nov  5 10:41:58: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Wed Nov  5 10:42:14: EXIT:  Rex [lev 99999, scr 250055, str 540414/600044]
+Wed Nov  5 21:29:15: ENTRY: Crimefighter [lev 1, scr 0] (eagle.uis.edu)
+Wed Nov  5 21:29:23: EXIT:  Crimefighter [lev 1, scr 0, str 54/56]
+Thu Nov  6 06:08:26: ENTRY: Woopy [lev 1, scr 0] (rsunh.crn.cogs.susx.ac.uk)
+Thu Nov  6 06:11:32: No match for verb = 98
+Thu Nov  6 06:11:40: No match for verb = 93
+Thu Nov  6 06:11:58: EXIT:  Woopy [lev 1, scr 0, str 56/56]
+Thu Nov  6 13:11:54: ENTRY: Impish [lev 1, scr 0] (tigger.StCloudState.edu)
+Thu Nov  6 13:13:18: EXIT:  Impish [lev 1, scr 0, str 46/56]
+Sat Nov  8 14:37:08: Connection failure: Connection reset by peer []
+Sun Nov  9 05:31:31: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 05:31:59: EXIT:  Rex [lev 99999, scr 250055, str 540414/600044]
+Sun Nov  9 05:36:09: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 05:36:37: EXIT:  Rex [lev 99999, scr 250055, str 540417/600044]
+Sun Nov  9 06:10:15: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 07:38:28: EXIT:  Rex [lev 99999, scr 250055, str 540813/600044]
+Sun Nov  9 07:39:44: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 07:46:06: EXIT:  Rex [lev 99999, scr 250055, str 540843/600044]
+Sun Nov  9 07:46:20: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 07:47:00: Rex &+gSUMMON&*ed mobile The Chicken from blizzard5 to ancient44.
+Sun Nov  9 07:48:46: EXIT:  Rex [lev 99999, scr 250055, str 540851/600044]
+Sun Nov  9 07:49:54: ENTRY: Rex [lev 99999, scr 250055] (www.hollyfeld.org)
+Sun Nov  9 07:49:58: EXIT:  Rex [lev 99999, scr 250055, str 540852/600044]
+Mon Nov 10 21:34:30: ENTRY: Crimefighter [lev 1, scr 0] (eagle.uis.edu)
+Mon Nov 10 21:34:48: EXIT:  Crimefighter [lev 1, scr 0, str 56/56]
+Thu Nov 13 14:11:13: SIGNAL: SIGTERM
+Thu Nov 13 14:11:13: SIGNAL: SIGTERM Handled
+Thu Nov 13 14:11:13: Thu Nov 13 03:11:40: --------  SYSTEM RELOAD  --------
+Sun Nov 16 01:07:09: ENTRY: Crimefighter [lev 1, scr 0] (eos103.eosinc.com)
+Sun Nov 16 01:07:47: EXIT:  Crimefighter [lev 1, scr 0, str 56/56]
+Sun Nov 16 07:01:33: Connection failure: Connection reset by peer []
+Sun Nov 16 14:07:17: ENTRY: Rex [lev 99999, scr 250055] (aslannt.hollyfeld.org)
+Sun Nov 16 14:08:33: FROB: Crimefighter by Rex: Lev = 10, Sco = 40000, Str = 110
+Sun Nov 16 14:09:01: EXIT:  Rex [lev 99999, scr 250055, str 540862/600044]
+Sun Nov 16 20:04:04: ENTRY: Rhadamanthus [lev 1, scr 0] (as2511-23.sl003.cns.vt.edu)
+Sun Nov 16 21:21:44: Connection failure: No route to host [Rhadamanthus]
+Sun Nov 16 21:21:44: EXIT:  Rhadamanthus [lev 1, scr 0, str 56/56]
+Sat Nov 22 14:36:38: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Sat Nov 22 14:36:42: EXIT:  Rex [lev 99999, scr 250055, str 540862/600044]
+Sat Nov 22 19:14:24: ENTRY: Crimefighter [lev 10, scr 40000] (eos177.eosinc.com)
+Sat Nov 22 19:15:00: EXIT:  Crimefighter [lev 10, scr 40000, str 110/110]
+Sun Nov 23 18:31:16: gethostbyaddr: Couldn't find hostentry for 141.30.225.57
+Sun Nov 23 18:31:58: ENTRY: Sorisor [lev 1, scr 0] (141.30.225.57)
+Sun Nov 23 18:32:18: EXIT:  Sorisor [lev 1, scr 0, str 41/56]
+Wed Nov 26 02:30:24: ENTRY: Talan [lev 1, scr 0] (mon-pq4-43.netcom.ca)
+Wed Nov 26 02:44:20: EXIT:  Talan [lev 1, scr 2, str 56/56]
+Wed Nov 26 11:29:32: gethostbyaddr: Couldn't find hostentry for 198.79.227.35
+Thu Nov 27 00:19:34: ENTRY: Tenaj [lev 1, scr 0] (PPP214-166.cyberspace.com)
+Thu Nov 27 00:20:24: EXIT:  Tenaj [lev 1, scr 0, str 46/56]
+Fri Nov 28 00:41:27: Multiple login-failures: Steffi from aslannt.hollyfeld.org
+Fri Nov 28 00:41:47: Multiple login-failures: Steffi from aslannt.hollyfeld.org
+Fri Nov 28 00:42:15: ENTRY: Rex [lev 99999, scr 250055] (aslannt.hollyfeld.org)
+Fri Nov 28 00:42:23: DELETE: Rex deleted steffi
+Fri Nov 28 00:42:29: EXIT:  Rex [lev 99999, scr 250055, str 540862/600044]
+Fri Nov 28 00:42:45: ENTRY: Steffi [lev 1, scr 0] (aslannt.hollyfeld.org)
+Fri Nov 28 00:42:51: ENTRY: Dranmorte [lev 1, scr 0] (sanja-8.seidata.com)
+Fri Nov 28 00:43:05: EXIT:  Steffi [lev 1, scr 0, str 41/56]
+Fri Nov 28 00:43:07: ENTRY: Steffi [lev 1, scr 0] (aslannt.hollyfeld.org)
+Fri Nov 28 00:44:01: EXIT:  Steffi [lev 1, scr 0, str 48/56]
+Fri Nov 28 00:44:05: ENTRY: Steffi [lev 1, scr 0] (aslannt.hollyfeld.org)
+Fri Nov 28 00:44:07: UNVEIL: Steffi to 99999
+Fri Nov 28 00:44:17: FROB: Dranmorte by Steffi: Lev = 99999, Sco = 99999, Str = 99999
+Fri Nov 28 00:44:35: DELETE: Steffi deleted dranmorte
+Fri Nov 28 00:49:33: EXIT:  Dranmorte [lev 99999, scr 99999, str 100029/600044]
+Fri Nov 28 00:56:57: EXIT:  Steffi [lev 99999, scr 320, str 110/600044]
+Fri Nov 28 00:57:03: ENTRY: Steffi [lev 99999, scr 320] (aslannt.hollyfeld.org)
+Fri Nov 28 01:15:27: EXIT:  Steffi [lev 99999, scr 320, str 189/600044]
+Fri Nov 28 16:47:06: ENTRY: Sedwick [lev 1, scr 0] (poinkhoff.csm.uc.edu)
+Fri Nov 28 16:48:16: EXIT:  Sedwick [lev 1, scr 0, str 46/56]
+Sat Dec  6 23:23:30: ENTRY: Crimefighter [lev 10, scr 40000] (eos190.eosinc.com)
+Sat Dec  6 23:25:16: EXIT:  Crimefighter [lev 10, scr 40000, str 110/110]
+Mon Dec  8 11:47:48: ENTRY: Mathies [lev 1, scr 0] (s9.terminal1.totalnetnh.net)
+Mon Dec  8 11:48:32: EXIT:  Mathies [lev 1, scr 0, str 41/56]
+Mon Dec  8 17:36:58: gethostbyaddr: Couldn't find hostentry for 141.30.225.57
+Mon Dec  8 17:38:02: ENTRY: Sorisor [lev 1, scr 0] (141.30.225.57)
+Mon Dec  8 17:39:46: EXIT:  Sorisor [lev 1, scr 0, str 48/56]
+Fri Dec 12 13:47:33: ENTRY: Deser [lev 1, scr 0] (ip174.portland3.or.pub-ip.psi.net)
+Fri Dec 12 13:50:03: EXIT:  Deser [lev 1, scr 0, str 51/56]
+Fri Dec 12 13:50:11: ENTRY: Deser [lev 1, scr 0] (ip174.portland3.or.pub-ip.psi.net)
+Fri Dec 12 13:51:33: EXIT:  Deser [lev 1, scr 0, str 56/56]
+Mon Dec 15 11:48:00: ENTRY: Random [lev 1, scr 0] (vmh-bm-489.umd.edu)
+Mon Dec 15 11:56:38: EXIT:  Random [lev 1, scr 0, str 56/56]
+Mon Dec 15 12:37:26: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Mon Dec 15 12:37:26: Connection failure: Connection reset by peer []
+Mon Dec 15 12:39:34: ENTRY: Random [lev 1, scr 0] (vmh-bm-489.umd.edu)
+Mon Dec 15 12:40:28: EXIT:  Random [lev 1, scr 0, str 56/56]
+Wed Dec 17 14:46:57: ENTRY: Apocalypse [lev 1, scr 0] (dd28-163.dub.compuserve.com)
+Wed Dec 17 14:47:57: EXIT:  Apocalypse [lev 1, scr 0, str 44/56]
+Fri Dec 19 20:33:40: gethostbyaddr: Couldn't find hostentry for 192.122.237.1
+Fri Dec 19 20:34:56: ENTRY: Li [lev 1, scr 0] (192.122.237.1)
+Fri Dec 19 20:41:50: EXIT:  Li [lev 1, scr 46, str 41/56]
+Fri Dec 19 20:42:18: gethostbyaddr: Couldn't find hostentry for 192.122.237.1
+Fri Dec 19 20:43:06: ENTRY: Liu [lev 1, scr 0] (192.122.237.1)
+Fri Dec 19 20:45:14: EXIT:  Liu [lev 1, scr 0, str 48/56]
+Sat Dec 20 02:02:02: ENTRY: Deser [lev 1, scr 0] (ACCS-AS05-DP13.SNFC.grid.net)
+Sat Dec 20 02:05:54: Connection failure: Connection reset by peer [Deser]
+Sat Dec 20 02:05:54: EXIT:  Deser [lev 1, scr 0, str 56/56]
+Sat Dec 20 20:48:18: ENTRY: Gestahl [lev 1, scr 0] (reality.microserve.net)
+Sat Dec 20 20:50:42: EXIT:  Gestahl [lev 1, scr 0, str 46/56]
+Sun Dec 21 22:25:18: --------  SYSTEM RELOAD  --------
+Mon Dec 22 00:07:48: SIGNAL: SIGTERM
+Mon Dec 22 00:07:48: SIGNAL: SIGTERM Handled
+Mon Dec 22 00:07:48: Normal termination of mud
+Mon Dec 22 00:22:29: --------  SYSTEM RELOAD  --------
+Mon Dec 22 00:31:31: SIGNAL: SIGTERM
+Mon Dec 22 00:31:31: SIGNAL: SIGTERM Handled
+Mon Dec 22 00:31:31: Normal termination of mud
+Mon Dec 22 00:35:19: --------  SYSTEM RELOAD  --------
+Mon Dec 22 00:38:07: SIGNAL: SIGTERM
+Mon Dec 22 00:38:07: SIGNAL: SIGTERM Handled
+Mon Dec 22 00:38:07: Normal termination of mud
+Mon Dec 22 00:42:56: --------  SYSTEM RELOAD  --------
+Tue Dec 23 08:01:44: Connection failure: Connection reset by peer []
+Tue Dec 23 08:05:56: SIGNAL: SIGTERM
+Tue Dec 23 08:05:56: SIGNAL: SIGTERM Handled
+Tue Dec 23 08:05:56: Normal termination of mud
+Mon Dec 22 21:14:02: --------  SYSTEM RELOAD  --------
+Tue Dec 23 00:38:05: gethostbyaddr: Couldn't find hostentry for 207.108.160.241
+Tue Dec 23 01:07:25: ENTRY: Gestahl [lev 1, scr 0] (reality.microserve.net)
+Tue Dec 23 01:08:27: No match for verb = 98
+Tue Dec 23 01:10:23: EXIT:  Gestahl [lev 1, scr 0, str 54/56]
+Fri Dec 26 20:50:08: ENTRY: Thern [lev 1, scr 0] (PPP90.dallas.dfw.net)
+Fri Dec 26 20:50:56: EXIT:  Thern [lev 1, scr 0, str 42/56]
+Fri Dec 26 20:54:00: Connection failure: Connection reset by peer []
+Sun Dec 28 19:11:34: ENTRY: Rex [lev 99999, scr 250055] (aslan.hollyfeld.org)
+Sun Dec 28 20:41:24: EXIT:  Rex [lev 99999, scr 250375, str 541263/600044]
+Mon Dec 29 18:43:06: Connection failure: Connection reset by peer []
+Tue Dec 30 10:35:52: ENTRY: Nick [lev 1, scr 0] (tryfan.paraglyph.com)
+Tue Dec 30 10:38:02: Connection failure: Connection reset by peer [Nick]
+Tue Dec 30 10:38:02: EXIT:  Nick [lev 1, scr 0, str 48/56]
+Sat Jan  3 15:56:41: ENTRY: Deser [lev 1, scr 0] (ACCS-AS03-DP15.SNFC.grid.net)
+Sat Jan  3 15:57:19: Bad &+rMAIL&* by Deser, Number was -1
+Sat Jan  3 15:57:27: Connection failure: Connection reset by peer [Deser]
+Sat Jan  3 15:57:27: EXIT:  Deser [lev 1, scr 0, str 56/56]
+Sun Jan  4 23:42:44: ENTRY: Deser [lev 1, scr 0] (ACCS-AS28-DP08.SNFC.grid.net)
+Sun Jan  4 23:42:52: Connection failure: Connection reset by peer [Deser]
+Sun Jan  4 23:42:52: EXIT:  Deser [lev 1, scr 0, str 56/56]
+Mon Jan  5 18:58:19: ENTRY: Apocalypse [lev 1, scr 0] (hd18-158.hil.compuserve.com)
+Mon Jan  5 18:58:27: EXIT:  Apocalypse [lev 1, scr 0, str 45/56]
+Mon Jan  5 23:30:46: ENTRY: Rex [lev 99999, scr 250375] (aslannt.hollyfeld.org)
+Mon Jan  5 23:31:24: REBOOT--------------------------------------508
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file508.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 0  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Mon Jan  5 23:31:30: --------  SYSTEM RELOAD  --------
+Mon Jan  5 23:33:06: EXIT:  Rex [lev 99999, scr 250375, str 541274/600044]
+Mon Jan  5 23:33:44: ENTRY: Airdog [lev 1, scr 0] (rev.randomc.com)
+Mon Jan  5 23:34:44: ENTRY: Steffi [lev 99999, scr 320] (aslannt.hollyfeld.org)
+Tue Jan  6 00:37:42: EXIT:  Steffi [lev 99999, scr 640, str 460/600044]
+Tue Jan  6 00:40:06: EXIT:  Airdog [lev 1, scr 0, str 56/56]
+Thu Jan  8 14:25:29: ENTRY: Spice [lev 1, scr 0] (wdcsun2.usdoj.gov)
+Thu Jan  8 14:39:36: Spice to level 2
+Thu Jan  8 14:40:26: Spice to level 3
+Thu Jan  8 15:04:14: EXIT:  Spice [lev 3, scr 1293, str 68/68]
+Sat Jan 10 01:15:20: ENTRY: Crimefighter [lev 10, scr 40000] (eos175.eosinc.com)
+Sat Jan 10 01:17:04: EXIT:  Crimefighter [lev 10, scr 40000, str 110/110]
+Sat Jan 10 13:47:00: gethostbyaddr: Couldn't find hostentry for 131.171.162.82
+Sat Jan 10 23:50:48: ENTRY: Blurr [lev 1, scr 0] (wilkes1.wilkes.edu)
+Sat Jan 10 23:51:08: Blurr to level 2
+Sat Jan 10 23:51:10: Blurr to level 3
+Sat Jan 10 23:51:16: Blurr to level 4
+Sat Jan 10 23:51:42: EXIT:  Blurr [lev 4, scr 2000, str 74/74]
+Sun Jan 11 01:41:20: gethostbyaddr: Couldn't find hostentry for 204.146.73.43
+Sun Jan 11 01:42:50: ENTRY: Porno [lev 1, scr 0] (204.146.73.43)
+Sun Jan 11 02:34:40: EXIT:  Porno [lev 1, scr 0, str 56/56]
+Sun Jan 11 15:45:54: gethostbyaddr: Couldn't find hostentry for 204.146.74.185
+Sun Jan 11 15:46:24: ENTRY: Porno [lev 1, scr 0] (204.146.74.185)
+Sun Jan 11 15:46:38: EXIT:  Porno [lev 1, scr 0, str 56/56]
+Wed Jan 14 15:47:31: ENTRY: Miki [lev 1, scr 0] (gundam.UU.NET)
+Wed Jan 14 15:53:07: EXIT:  Miki [lev 1, scr 0, str 56/56]
+Sat Jan 17 04:50:51: ENTRY: Marty [lev 1, scr 0] (mas03-07.dial.xs4all.nl)
+Sat Jan 17 04:55:53: EXIT:  Marty [lev 1, scr 0, str 56/56]
+Sat Jan 17 11:21:26: ENTRY: Brog [lev 1, scr 0] (hercules.mirageport.com)
+Sat Jan 17 11:23:36: EXIT:  Brog [lev 1, scr 0, str 45/56]
+Sat Jan 17 14:03:17: ENTRY: Sorisor [lev 1, scr 0] (Hell.WH8.TU-Dresden.De)
+Sat Jan 17 14:03:31: EXIT:  Sorisor [lev 1, scr 0, str 49/56]
+Sat Jan 17 15:36:43: gethostbyaddr: Couldn't find hostentry for 131.171.162.51
+Sat Jan 17 15:36:57: ENTRY: Random [lev 1, scr 0] (131.171.162.51)
+Sat Jan 17 15:37:03: EXIT:  Random [lev 1, scr 0, str 56/56]
+Mon Jan 19 17:59:04: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Mon Jan 19 17:59:08: REBOOT--------------------------------------508
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file508.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 0  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Mon Jan 19 17:59:18: --------  SYSTEM RELOAD  --------
+Mon Jan 19 17:59:40: SHUTDOWN +CRASH by Kender
+Mon Jan 19 18:17:27: --------  SYSTEM RELOAD  --------
+Mon Jan 19 18:17:53: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Mon Jan 19 18:17:57: SHUTDOWN +CRASH by Kender
+Mon Jan 19 19:29:48: --------  SYSTEM RELOAD  --------
+Mon Jan 19 19:30:04: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Mon Jan 19 19:30:20: EXIT:  Kender [lev 90000, scr 0, str 67/540050]
+Mon Jan 19 23:15:55: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Mon Jan 19 23:16:31: EXIT:  Kender [lev 90000, scr 0, str 68/540050]
+Wed Jan 21 21:23:59: ENTRY: Rex [lev 99999, scr 250375] (aslannt.hollyfeld.org)
+Wed Jan 21 21:25:25: EXIT:  Rex [lev 99999, scr 250375, str 541277/600044]
+Fri Jan 23 18:59:00: ENTRY: Crimefighter [lev 10, scr 40000] (pmlitchfield-15.ctinetcom.com)
+Fri Jan 23 18:59:18: EXIT:  Crimefighter [lev 10, scr 40000, str 110/110]
+Fri Jan 30 12:23:17: PERROR : [32] Broken pipe
+Sat Jan 31 23:07:17: ENTRY: Random [lev 1, scr 0] (vmh-bm-489.umd.edu)
+Sat Jan 31 23:07:27: EXIT:  Random [lev 1, scr 0, str 56/56]
+Wed Feb  4 08:51:38: ENTRY: Schleppel [lev 1, scr 0] (ut129.pi.net)
+Wed Feb  4 08:56:36: EXIT:  Schleppel [lev 1, scr 0, str 56/56]
+Sat Feb  7 16:07:58: ENTRY: Schleppel [lev 1, scr 0] (ut0348.wxs.nl)
+Sat Feb  7 16:23:32: EXIT:  Schleppel [lev 1, scr 0, str 56/56]
+Tue Feb 10 16:16:54: ENTRY: Rex [lev 99999, scr 250375] (bela.pegasystems.com)
+Tue Feb 10 16:25:46: EXIT:  Rex [lev 99999, scr 250375, str 541325/600044]
+Tue Feb 10 16:44:47: ENTRY: Rex [lev 99999, scr 250375] (bela.pegasystems.com)
+Tue Feb 10 16:45:17: EXIT:  Rex [lev 99999, scr 250375, str 541327/600044]
+Wed Feb 11 02:07:22: PERROR : [32] Broken pipe
+Sat Feb 14 05:16:38: ENTRY: Schleppel [lev 1, scr 0] (ut0444.wxs.nl)
+Sat Feb 14 05:17:06: EXIT:  Schleppel [lev 1, scr 0, str 56/56]
+Sat Feb 14 17:01:06: Connection failure: Connection reset by peer []
+Tue Feb 17 21:47:09: PERROR : [32] Broken pipe
+Wed Feb 18 01:54:02: PERROR : [32] Broken pipe
+Sat Feb 21 02:56:35: PERROR : [32] Broken pipe
+Mon Feb 23 00:23:55: ENTRY: Crimefighter [lev 10, scr 40000] (pmlitchfield-24.ctinetcom.com)
+Mon Feb 23 00:24:19: Crimefighter changed password on Crimefighter.
+Mon Feb 23 00:24:29: EXIT:  Crimefighter [lev 10, scr 40000, str 110/110]
+Mon Feb 23 15:18:56: ENTRY: Rhadamanthus [lev 1, scr 0] (as2511-33.sl014.cns.vt.edu)
+Mon Feb 23 15:19:18: EXIT:  Rhadamanthus [lev 1, scr 0, str 56/56]
+Mon Feb 23 16:36:31: ENTRY: Tzvika [lev 1, scr 0] (ts002p2.pop9a.netvision.net.il)
+Mon Feb 23 17:02:14: No match for verb = 8
+Mon Feb 23 17:02:24: No match for verb = 8
+Mon Feb 23 17:05:52: No match for verb = 8
+Mon Feb 23 17:07:48: No match for verb = 9
+Mon Feb 23 17:08:16: EXIT:  Tzvika [lev 1, scr 0, str 56/56]
+Mon Feb 23 17:08:30: ENTRY: Tzvika [lev 1, scr 0] (ts002p2.pop9a.netvision.net.il)
+Mon Feb 23 17:11:04: No match for verb = 8
+Mon Feb 23 17:12:16: EXIT:  Tzvika [lev 1, scr 0, str 56/56]
+Mon Feb 23 17:12:38: ENTRY: Tzvika [lev 1, scr 0] (ts002p2.pop9a.netvision.net.il)
+Mon Feb 23 17:17:00: No match for verb = 11
+Mon Feb 23 17:17:58: No match for verb = 8
+Mon Feb 23 17:23:06: EXIT:  Tzvika [lev 1, scr 0, str 56/56]
+Mon Feb 23 17:28:24: ENTRY: Rex [lev 99999, scr 250375] (localhost)
+Mon Feb 23 17:28:32: No match for verb = 8
+Mon Feb 23 17:28:46: EXIT:  Rex [lev 99999, scr 250375, str 541329/600044]
+Mon Feb 23 17:29:00: ENTRY: Rex [lev 99999, scr 250375] (localhost)
+Mon Feb 23 17:29:04: SHUTDOWN +CRASH by Rex
+Mon Feb 23 18:09:01: --------  SYSTEM RELOAD  --------
+Mon Feb 23 18:09:15: ENTRY: Rex [lev 99999, scr 250375] (localhost)
+Mon Feb 23 18:09:31: EXIT:  Rex [lev 99999, scr 250375, str 541331/600044]
+Wed Feb 25 10:20:04: ENTRY: Rex [lev 99999, scr 250375] (localhost)
+Wed Feb 25 10:23:44: EXIT:  Rex [lev 99999, scr 250375, str 541342/600044]
+Tue Mar  3 16:26:01: ENTRY: Dean [lev 1, scr 0] (linex2.linex.com)
+Tue Mar  3 16:26:29: EXIT:  Dean [lev 1, scr 0, str 45/56]
+Wed Mar  4 01:54:48: ENTRY: Aso [lev 1, scr 0] (eldorado.nmt.edu)
+Wed Mar  4 01:55:40: EXIT:  Aso [lev 1, scr 0, str 46/56]
+Sat Mar  7 09:20:26: ENTRY: Tzvika [lev 1, scr 0] (ts009p1.pop9a.netvision.net.il)
+Sat Mar  7 09:23:28: Tzvika to level 2
+Sat Mar  7 09:23:32: Tzvika to level 3
+Sat Mar  7 09:23:42: Tzvika to level 4
+Sat Mar  7 09:31:26: EXIT:  Tzvika [lev 4, scr 2234, str 74/74]
+Sat Mar  7 09:32:04: ENTRY: Tzvika [lev 4, scr 2234] (ts009p1.pop9a.netvision.net.il)
+Sat Mar  7 09:33:18: RESET (all zones) by Tzvika
+Sat Mar  7 09:33:44: EXIT:  Tzvika [lev 4, scr 2234, str 74/74]
+Sat Mar  7 13:52:28: ENTRY: Marty [lev 1, scr 0] (mas03-09.dial.xs4all.nl)
+Sat Mar  7 13:53:42: EXIT:  Marty [lev 1, scr 0, str 56/56]
+Sat Mar  7 22:07:50: --------  SYSTEM RELOAD  --------
+Sun Mar  8 06:59:27: --------  SYSTEM RELOAD  --------
+Wed Mar 11 18:27:22: ENTRY: Grond [lev 1, scr 0] (cghent.erols.com)
+Wed Mar 11 18:28:02: EXIT:  Grond [lev 1, scr 0, str 41/56]
+Fri Mar 13 18:25:29: SIGNAL: SIGTERM
+Fri Mar 13 18:25:29: SIGNAL: SIGTERM Handled
+Fri Mar 13 18:25:29: Normal termination of mud
+Fri Mar 13 07:33:36: --------  SYSTEM RELOAD  --------
+Fri Mar 13 07:42:16: SIGNAL: SIGTERM
+Fri Mar 13 07:42:16: SIGNAL: SIGTERM Handled
+Fri Mar 13 07:42:16: Normal termination of mud
+Fri Mar 13 07:44:12: --------  SYSTEM RELOAD  --------
+Fri Mar 13 23:20:28: --------  SYSTEM RELOAD  --------
+Sun Mar 15 08:52:41: --------  SYSTEM RELOAD  --------
+Tue Mar 17 15:58:03: ENTRY: Chickin [lev 1, scr 0] (shell1.tiac.net)
+Tue Mar 17 15:59:31: EXIT:  Chickin [lev 1, scr 0, str 48/56]
+Tue Mar 17 16:01:21: ENTRY: Chickin [lev 1, scr 0] (shell1.tiac.net)
+Tue Mar 17 16:04:05: EXIT:  Chickin [lev 1, scr 0, str 56/56]
+Tue Mar 17 22:58:38: ENTRY: Melchior [lev 1, scr 0] (cygnus.dataserv.net)
+Tue Mar 17 22:58:52: EXIT:  Melchior [lev 1, scr 0, str 41/56]
+Wed Mar 18 10:12:27: --------  SYSTEM RELOAD  --------
+Wed Mar 18 10:13:27: SIGNAL: SIGTERM
+Wed Mar 18 10:13:27: SIGNAL: SIGTERM Handled
+Wed Mar 18 10:13:27: Normal termination of mud
+Wed Mar 18 10:19:14: --------  SYSTEM RELOAD  --------
+Wed Mar 18 21:10:16: SIGNAL: SIGTERM
+Wed Mar 18 21:10:16: SIGNAL: SIGTERM Handled
+Wed Mar 18 21:10:16: Normal termination of mud
+Wed Mar 18 21:19:15: --------  SYSTEM RELOAD  --------
+Sun Mar 22 21:18:43: --------  SYSTEM RELOAD  --------
+Sun Mar 22 21:32:13: SIGNAL: SIGTERM
+Sun Mar 22 21:32:13: SIGNAL: SIGTERM Handled
+Sun Mar 22 21:32:13: Normal termination of mud
+Sun Mar 22 21:37:08: --------  SYSTEM RELOAD  --------
+Sun Mar 22 21:55:00: --------  SYSTEM RELOAD  --------
+Sun Mar 22 23:05:07: SIGNAL: SIGTERM
+Sun Mar 22 23:05:07: SIGNAL: SIGTERM Handled
+Sun Mar 22 23:05:07: Normal termination of mud
+Sun Mar 22 23:07:15: --------  SYSTEM RELOAD  --------
+Sun Mar 22 23:25:11: SIGNAL: SIGTERM
+Sun Mar 22 23:25:11: SIGNAL: SIGTERM Handled
+Sun Mar 22 23:25:11: Normal termination of mud
+Sun Mar 22 23:27:25: --------  SYSTEM RELOAD  --------
+Mon Mar 23 16:04:24: --------  SYSTEM RELOAD  --------
+Thu Mar 26 21:58:37: Connection failure: Connection reset by peer []
+Sat Mar 28 18:26:21: gethostbyaddr: Couldn't find hostentry for 198.189.111.109
+Sat Mar 28 18:26:25: Connection failure: Connection reset by peer []
+Thu Apr  2 19:06:09: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr  3 01:18:20: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr  3 01:44:00: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr  3 01:45:00: ENTRY: Doran [lev 1, scr 0] (206.190.74.105)
+Fri Apr  3 01:45:38: EXIT:  Doran [lev 1, scr 0, str 43/56]
+Fri Apr  3 04:13:33: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr  3 14:57:31: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr  4 02:02:55: PERROR : [32] Broken pipe
+Sat Apr  4 03:12:35: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr  4 14:57:36: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sun Apr  5 04:08:20: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sun Apr  5 14:57:22: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Mon Apr  6 03:11:11: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Mon Apr  6 14:57:13: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Tue Apr  7 03:07:53: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Tue Apr  7 10:39:19: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Tue Apr  7 10:39:21: Connection failure: Connection reset by peer []
+Tue Apr  7 14:57:13: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr  8 03:08:21: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr  8 14:57:07: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Thu Apr  9 03:57:45: SIGNAL: SIGTERM
+Thu Apr  9 03:57:45: SIGNAL: SIGTERM Handled
+Thu Apr  9 03:57:45: Normal termination of mud
+Tue Apr  7 02:54:20: --------  SYSTEM RELOAD  --------
+Tue Apr  7 03:02:32: SIGNAL: SIGTERM
+Tue Apr  7 03:02:32: SIGNAL: SIGTERM Handled
+Tue Apr  7 03:02:32: Normal termination of mud
+Tue Apr  7 03:04:44: --------  SYSTEM RELOAD  --------
+Tue Apr  7 03:10:24: SIGNAL: SIGTERM
+Tue Apr  7 03:10:24: SIGNAL: SIGTERM Handled
+Tue Apr  7 03:10:24: Normal termination of mud
+Tue Apr  7 03:12:53: --------  SYSTEM RELOAD  --------
+Tue Apr  7 03:14:23: SIGNAL: SIGTERM
+Tue Apr  7 03:14:23: SIGNAL: SIGTERM Handled
+Tue Apr  7 03:14:23: Normal termination of mud
+Tue Apr  7 03:20:09: --------  SYSTEM RELOAD  --------
+Tue Apr  7 07:52:57: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Tue Apr  7 08:11:15: SIGNAL: SIGTERM
+Tue Apr  7 08:11:15: SIGNAL: SIGTERM Handled
+Tue Apr  7 08:14:49: --------  SYSTEM RELOAD  --------
+Tue Apr  7 08:31:17: --------  SYSTEM RELOAD  --------
+Tue Apr  7 08:34:25: SIGNAL: SIGTERM
+Tue Apr  7 08:34:25: SIGNAL: SIGTERM Handled
+Tue Apr  7 08:34:25: Normal termination of mud
+Tue Apr  7 08:36:44: --------  SYSTEM RELOAD  --------
+Tue Apr  7 09:09:18: SIGNAL: SIGTERM
+Tue Apr  7 09:09:18: SIGNAL: SIGTERM Handled
+Tue Apr  7 09:09:18: Normal termination of mud
+Tue Apr  7 09:11:54: --------  SYSTEM RELOAD  --------
+Tue Apr  7 19:41:06: SIGNAL: SIGTERM
+Tue Apr  7 19:41:06: SIGNAL: SIGTERM Handled
+Tue Apr  7 19:41:06: Normal termination of mud
+Tue Apr  7 19:43:20: --------  SYSTEM RELOAD  --------
+Tue Apr  7 19:53:32: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr  8 08:02:53: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr  8 19:52:33: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Thu Apr  9 08:01:16: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Thu Apr  9 16:46:52: SIGNAL: SIGTERM
+Thu Apr  9 16:46:52: SIGNAL: SIGTERM Handled
+Thu Apr  9 16:46:52: Normal termination of mud
+Thu Apr  9 16:49:09: --------  SYSTEM RELOAD  --------
+Thu Apr  9 16:58:05: SIGNAL: SIGTERM
+Thu Apr  9 16:58:05: SIGNAL: SIGTERM Handled
+Thu Apr  9 16:58:05: Normal termination of mud
+Thu Apr  9 17:00:21: --------  SYSTEM RELOAD  --------
+Thu Apr  9 19:52:13: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr 10 08:01:15: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr 10 19:59:06: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr 11 08:08:24: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr 11 10:36:04: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Sat Apr 11 10:36:06: Connection failure: Connection reset by peer []
+Mon Apr 13 21:07:06: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Tue Apr 14 09:16:57: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Tue Apr 14 21:06:54: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr 15 09:17:39: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr 15 21:06:40: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Wed Apr 15 22:30:03: Connection failure: Connection reset by peer []
+Thu Apr 16 15:18:35: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Thu Apr 16 16:12:08: ENTRY: Marty [lev 1, scr 0] (mas03-23.dial.xs4all.nl)
+Thu Apr 16 16:14:22: EXIT:  Marty [lev 1, scr 0, str 56/56]
+Thu Apr 16 16:14:34: ENTRY: Sierra [lev 1, scr 0] (bela.pegasystems.com)
+Thu Apr 16 16:15:38: Sierra has BECOME Rex
+Thu Apr 16 16:15:44: Rex has BECOME Sierra
+Thu Apr 16 16:16:12: Sierra has BECOME Rex
+Thu Apr 16 16:16:20: EXIT:  Rex [lev 99999, scr 250475, str 541342/600044]
+Fri Apr 17 03:08:17: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Fri Apr 17 13:00:27: ENTRY: Multi [lev 1, scr 0] (dixie.dixie-net.com)
+Fri Apr 17 13:05:11: No match for verb = 101
+Fri Apr 17 13:05:21: No match for verb = 102
+Fri Apr 17 13:11:06: Multi to level 2
+Fri Apr 17 13:11:18: Multi to level 3
+Fri Apr 17 13:11:58: Multi to level 4
+Fri Apr 17 13:13:42: RESET (all zones) by Multi
+Fri Apr 17 13:14:00: EXIT:  Multi [lev 4, scr 2000, str 74/74]
+Fri Apr 17 15:14:57: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr 18 03:08:00: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sat Apr 18 15:23:27: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sun Apr 19 03:07:24: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sun Apr 19 15:13:30: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Sun Apr 19 16:11:10: ENTRY: Melchior [lev 1, scr 0] (cygnus.dataserv.net)
+Sun Apr 19 16:12:40: EXIT:  Melchior [lev 1, scr 0, str 48/56]
+Mon Apr 20 03:07:24: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Mon Apr 20 14:30:58: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Mon Apr 20 15:14:51: gethostbyaddr: Couldn't find hostentry for 206.190.74.105
+Mon Apr 20 23:24:33: ENTRY: Shadowolf [lev 1, scr 0] (firewall.nrtc.net)
+Mon Apr 20 23:27:11: EXIT:  Shadowolf [lev 1, scr 3, str 52/56]
+Wed Apr 22 17:12:54: gethostbyaddr: Couldn't find hostentry for 198.189.111.107
+Wed Apr 22 17:14:32: ENTRY: Miamor [lev 1, scr 0] (198.189.111.107)
+Wed Apr 22 17:15:04: Connection failure: Connection reset by peer [Miamor]
+Wed Apr 22 17:15:04: EXIT:  Miamor [lev 1, scr 0, str 42/56]
+Fri May  1 05:39:38: gethostbyaddr: Couldn't find hostentry for 141.30.225.3
+Fri May  1 08:52:27: gethostbyaddr: Couldn't find hostentry for 141.30.225.3
+Fri May  1 16:20:55: gethostbyaddr: Couldn't find hostentry for 198.234.91.100
+Fri May  1 16:22:09: gethostbyaddr: Couldn't find hostentry for 198.234.91.100
+Fri May  1 16:22:43: ENTRY: Patrick [lev 1, scr 0] (198.234.91.100)
+Fri May  1 16:23:07: EXIT:  Patrick [lev 1, scr 0, str 41/56]
+Sun May  3 11:11:14: ENTRY: Detjen [lev 1, scr 0] (ip-206-155-37-232.psln.com)
+Sun May  3 11:13:40: Connection failure: Connection reset by peer [Detjen]
+Sun May  3 11:13:40: EXIT:  Detjen [lev 1, scr 0, str 50/56]
+Tue May  5 06:24:48: ENTRY: Rhadamanthus [lev 1, scr 0] (as2511-1.sl007.cns.vt.edu)
+Tue May  5 06:25:08: EXIT:  Rhadamanthus [lev 1, scr 0, str 56/56]
+Fri May 15 09:52:34: --------  SYSTEM RELOAD  --------
+Fri May 15 09:52:44: ENTRY: Rex [lev 99999, scr 250475] (localhost)
+Fri May 15 09:52:48: EXIT:  Rex [lev 99999, scr 250475, str 541343/600044]
+Fri May 15 19:13:33: gethostbyaddr: Couldn't find hostentry for 204.39.203.2
+Fri May 15 19:14:51: ENTRY: Matt [lev 1, scr 0] (204.39.203.2)
+Fri May 15 19:25:27: Matt SLAIN by The Vulture
+Fri May 15 19:30:25: EXIT:  Matt [lev 1, scr 51, str -1/56]
+Fri May 15 19:41:21: PERROR : [9] Bad file number
+Sun May 17 11:18:31: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Sun May 17 11:18:33: REBOOT--------------------------------------38
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file38.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun May 17 11:18:39: --------  SYSTEM RELOAD  --------
+error on opening destination file for concat_files.
+Sun May 17 11:23:59: REBOOT--------------------------------------38
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file38.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun May 17 11:24:03: --------  SYSTEM RELOAD  --------
+error on opening destination file for concat_files.
+Sun May 17 11:24:31: Bad &+rMAIL&* by Kender, Number was -1
+Sun May 17 11:26:45: REBOOT--------------------------------------38
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file38.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun May 17 11:26:49: --------  SYSTEM RELOAD  --------
+error on opening destination file for concat_files.
+Sun May 17 11:28:39: REBOOT--------------------------------------38
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file38.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun May 17 11:28:44: --------  SYSTEM RELOAD  --------
+Sun May 17 11:30:46: REBOOT--------------------------------------38
+Wed Dec 31 19:00:00: REBOOT: Opening file reboot_file38.
+Wed Dec 31 19:00:00: REBOOT: Port: 0  Masterport: 3  Number of Entries: 1
+Wed Dec 31 19:00:00: REBOOT: Bootstrapping again.
+Wed Dec 31 19:00:00: REBOOT: Done with bootstrap - reading player info.
+Sun May 17 11:30:50: --------  SYSTEM RELOAD  --------
+Sun May 17 11:32:24: EXIT:  Kender [lev 90000, scr 0, str 135/540050]
+Sun May 17 12:28:06: ENTRY: Kender [lev 90000, scr 0] (localhost)
+Sun May 17 20:45:36: EXIT:  Kender [lev 90000, scr 320, str 2347/540050]
+Mon May 18 06:33:05: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Wed May 20 15:01:51: ENTRY: Kas [lev 1, scr 0] (dnas-01-39.sat.txdirect.net)
+Wed May 20 15:02:37: Connection failure: Connection reset by peer [Kas]
+Wed May 20 15:02:37: EXIT:  Kas [lev 1, scr 0, str 41/56]
+Sun May 24 21:43:46: ENTRY: Kas [lev 1, scr 0] (hdn98-080.hil.compuserve.com)
+Sun May 24 21:52:48: Connection failure: Connection reset by peer [Kas]
+Sun May 24 21:52:48: EXIT:  Kas [lev 1, scr 0, str 56/56]
+Mon May 25 15:44:42: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Mon May 25 16:43:23: SIGNAL: SIGTERM
+Mon May 25 16:43:23: SIGNAL: SIGTERM Handled
+Mon May 25 16:43:23: Closing listening socket
+Mon May 25 16:43:23: Normal termination of mud
+Sun Jun  7 23:06:36: --------  SYSTEM RELOAD  --------
+Sun Jun  7 23:06:44: ENTRY: Rex [lev 99999, scr 250475] (localhost)
+Mon Jun  8 00:56:25: EXIT:  Rex [lev 99999, scr 250475, str 541851/600044]
+Mon Jun  8 07:58:27: Connection failure: Connection reset by peer []
+Mon Jun  8 08:59:16: ENTRY: Rex [lev 99999, scr 250475] (localhost)
+Mon Jun  8 09:18:39: EXIT:  Rex [lev 99999, scr 250475, str 541925/600044]
+Mon Jun  8 09:26:23: ENTRY: Rex [lev 99999, scr 250475] (aslan.hollyfeld.org)
+Mon Jun  8 09:26:25: EXIT:  Rex [lev 99999, scr 250475, str 541925/600044]
+Mon Jun  8 10:19:09: ENTRY: Rex [lev 99999, scr 250475] (aslan.hollyfeld.org)
+Mon Jun  8 15:37:41: EXIT:  Rex [lev 99999, scr 250475, str 543370/600044]
+Tue Jun  9 00:08:56: ENTRY: Crimefighter [lev 10, scr 40000] (pmlitchfield-8.ctinetcom.com)
+Tue Jun  9 00:17:50: RESET (all zones) by Crimefighter
+Tue Jun  9 00:21:36: ENTRY: Crimefighter [lev 10, scr 40585] (pmlitchfield-8.ctinetcom.com)
+Tue Jun  9 00:26:54: EXIT:  Crimefighter [lev 10, scr 41918, str 81/110]
+Wed Jun 10 17:54:19: PERROR : [32] Broken pipe
+Thu Jun 11 10:18:22: ENTRY: Everdawn [lev 1, scr 0] (summer.wisdom.weizmann.ac.il)
+Thu Jun 11 10:21:08: EXIT:  Everdawn [lev 1, scr 0, str 55/56]
+Sat Jun 13 00:18:37: Connection failure: Connection reset by peer []
+Mon Jun 15 07:32:35: Connection failure: Connection reset by peer []
+Mon Jun 15 21:41:44: gethostbyaddr: Couldn't find hostentry for 0.0.0.0
+Mon Jun 15 21:41:46: Connection failure: Connection reset by peer []
+Sun Jun 21 18:32:33: ENTRY: Kender [lev 90000, scr 320] (localhost)
+Sun Jun 21 18:35:53: EXIT:  Kender [lev 90000, scr 640, str 2364/540050]
+Wed Jun 24 23:32:37: gethostbyaddr: Couldn't find hostentry for 200.240.17.206
+Wed Jun 24 23:32:39: gethostbyaddr: Couldn't find hostentry for 200.240.17.206
+Wed Jun 24 23:32:39: PERROR : [32] Broken pipe
+Wed Jun 24 23:32:41: Connection failure: Connection reset by peer []
+Sun Jun 28 11:48:28: SIGNAL: SIGTERM
+Sun Jun 28 11:48:28: SIGNAL: SIGTERM Handled
+Sun Jun 28 11:48:28: Normal termination of mud
+Tue Aug 18 14:06:20: --------  SYSTEM RELOAD  --------
+Tue Aug 18 14:08:24: ENTRY: Rex [lev 99999, scr 250475] (localhost)
+Tue Aug 18 14:08:28: SHUTDOWN by Rex
+Tue Aug 18 14:08:32: SHUTDOWN +CRASH by Rex
+Fri Nov 13 16:33:44: --------  SYSTEM RELOAD  --------
+Fri Nov 13 16:34:04: ENTRY: Rex [lev 99999, scr 250475] (bela.pegasystems.com)
+Fri Nov 13 16:34:54: EXIT:  Rex [lev 99999, scr 250475, str 543375/600044]
+Thu Nov 19 23:30:00: Connection failure: Connection reset by peer []
+Sun Nov 29 20:58:32: Connection failure: Connection reset by peer [Earendil]
+Mon Nov 30 23:04:23: gethostbyaddr: Couldn't find hostentry for 209.37.186.82
+Mon Nov 30 23:05:51: gethostbyaddr: Couldn't find hostentry for 209.37.186.82
+Mon Nov 30 23:06:05: gethostbyaddr: Couldn't find hostentry for 209.37.186.82
+Tue Dec  8 11:12:29: gethostbyaddr: Couldn't find hostentry for 204.91.236.200
+Sun Dec 13 22:23:17: ENTRY: Rex [lev 99999, scr 250475] (aslannt.hollyfeld.org)
+Sun Dec 13 22:24:13: EXIT:  Rex [lev 99999, scr 250475, str 543378/600044]
+Sat Dec 19 01:40:17: gethostbyaddr: Couldn't find hostentry for 210.75.40.190
+cannot open file verbs (No such file or directory)Wed Dec 31 19:00:00: Abnormal termination of mud
+cannot open file wizlist (No such file or directory)Sun Oct 10 23:48:10: --------  SYSTEM RELOAD  --------
+Sun Oct 10 23:48:24: ENTRY: Rex [lev 90000, scr 250000] (localhost)
+Sun Oct 10 23:49:04: ENTRY: Kender [lev 1, scr 0] (www.hollyfeld.org)
+Sun Oct 10 23:49:06: EXIT:  Kender [lev 1, scr 0, str 40/56]
+Sun Oct 10 23:49:12: ENTRY: Kender [lev 1, scr 0] (localhost)
+Sun Oct 10 23:49:52: FROB: Kender by Rex: Lev = 99999, Sco = 0, Str = 43
+Sun Oct 10 23:52:34: FROB: Rex by Rex: Lev = 99999, Sco = 250000, Str = 540050
+Sun Oct 10 23:56:00: SHUTDOWN by Rex
+Sun Oct 10 23:56:06: EXIT:  Kender [lev 99999, scr 0, str 85/600044]
+Sun Oct 10 23:56:36: SHUTDOWN +CRASH by Rex

@@ -1,0 +1,454 @@
+#include "undef.h"
+#include "cflags.h"
+
+%mobiles
+Name		= linkdeath
+Location	= torture
+Strength	= 100
+Damage		= 10
+Aggression      = 0
+Armor		= 0
+Pflags		{ NOSummon }
+Description	= "
+The vicious Linkdeath is here, with a torn-off computer cable in his hand."
+End             = linkdeath
+
+%objects
+
+Name		= Bracelet
+Location	= IN_ROOM:Nicknack
+Oflags		{ Wearable }
+BValue		= 200
+Size		= 1
+Desc[0]		= "Shoikana's gold bracelet has been left here."
+Examine		= '
+An engraving on the inside reads:
+ "To Shoikana with love from her husband Nicknack."
+'
+End             = bracelet
+
+Name		= ring
+Location	= IN_ROOM:Nicknack
+Oflags		{ Wearable }
+BValue		= 400
+Size		= 1
+Desc[0]		= "Nicknack's magical ring is here waiting for his return."
+Examine		= '
+On the inside of the ring is the inscription:
+ Given with love to Nicknack from his wife Shoikana.
+'
+End             = ring
+
+Name		= tree
+Location	= IN_ROOM:Nicknack
+Oflags		{ NoGet Container }
+size		= 1
+Desc[0]		= "A tall tree is standing here in front of you."
+Examine		= "
+The tree looks as if it has been well taken care of by its guardian.
+"
+End             = tree
+
+Name		= birds
+AltName		= bluebirds
+Location	= IN_CONTAINER:tree
+Desc[0]		= "A family of bluebirds is here, looking for their tree."
+Examine		= "
+You hear the birds singing happily!
+"
+End             = birds
+
+Name            = coke
+AltName         = bottle
+Location        = IN_ROOM:Alf_secret
+Oflags          { Food }
+Bvalue          = 30
+Desc[0]         = "A bottle of Coke is here."
+Examine         = "The bottle contains ordinary old-fashioned Coca-Cola."
+End             = coke
+
+Name      = epee
+Location  = IN_ROOM:night
+Oflags    {Weapon}
+State     = 0
+MaxState  = 0
+Damage    = 9
+BValue    = 200
+Size      = 5
+Weight    = 2
+Desc[0]   = "Nightcrawler's epee is lying here momentarily displaced."
+Examine   = "
+This is Nightcrawler's favorite weapon. You'd better treat it with care,
+and return it to him unharmed."
+End       = epee
+
+%locations
+
+Chat ;
+lflags { Private Party }
+The Chat Room^
+   You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
+which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
+the owner of this room needs none.
+^
+Hell ;
+lflags { Private Party }
+Ancient Shrine of Hell^
+   A chill crawls down your spine as you enter this volumous room with high,
+arching ceilings.  To the far north you see a granite altar in front of a 30
+ft. high ivory statue of The Crimson Angel of Hell, Rocker.  The altar is
+stained with blood and worn with years of sacrifice.
+   The dim light of a fireplace in the south wall casts flickering, erotic
+shadows on the walls. Near the fireplace sits a futon.  A curling poster on
+the wall shows itself to be a Zeppelin logo.
+   A few pictures sit on the mantle, wedding pictures of Alf & Jynx and
+Nicknack & Shoikana as well as Djfast & Mead.
+^
+Torture ;
+lflags {}
+Atropos' Torture Room^
+   You are in what seems to be a room filled with electronic items of one
+persuasion or another.  Upon closer inspection their use and identity become
+clear to you: they are instruments of computer torture...  Shoes with
+datastreams at right angles with itself and another with large magnets
+surrounding it to name just a few...
+^
+Fogey ;
+lflags {}
+Old Fogeys' Room^
+   This room is for Old Fogeys to sit in and lament all the mistakes of their
+lives.  Forlornly scattered about this depressing room are old dentures, broken
+eyeglasses, and rotting toupees.  Next to a boarded-up window is what was
+obviously once an elegant indoor flower garden, its contents long wilted and
+desiccated.  An old wind-up phonograph is producing a very scratchy sounding
+rendition of sad songs from decades past.  In the center of the room are
+several uncomfortable-looking chairs made of rotting wood, arranged in a
+circle.
+^
+Clearing ;
+lflags { Outdoors Party }
+Sacred Clearing^
+   You find yourself in a clearing deep in the Misty Mountains.  Some mighty
+being has carved this niche out of the living rock, making a place suitable for
+the gods themselves to wed.  A simple podium in the center of this clearing
+lends to the overall impression that this is a holy place.
+   Stands have been hewn out of the mountain and intricately carved with an
+animal motif.  Each of the 50 seats depicts a different creature, and all
+appear calm and serene.
+   A feeling of peace and goodwill washes over you as you gaze in awe at the
+majestic peaks that surround this place.
+^
+Dojo ;
+lflags { Private Party }
+The Dojo^
+   This is a place of austere beauty.  High up on one wall is a kamiza shrine.
+An elaborately painted plaque beside the kamiza reads:
+
+        In the eyes of a child true innocence is reflected.
+        In the spirit of the blade natural truth is revealed.
+
+A sense of tranquility descends upon you...
+^
+Lair ;
+lflags{ Party }
+Lair of the Bandersnatch^
+   This comfortable room shows ample evidence of Bandersnatch habitation.
+Several Mac IIci's are scattered around the room, and a Cray ('I just
+needed a Unix box...') sits in the corner. Several walls are completely
+obscured by manuals of various kinds. In another corner, a huge bag of corn
+chips is dwarfed by the tower of Cherry Coke cans next to it. A bookcase
+contains the collected works of Niven, Zelazny, McCaffrey, and Asprin.
+   There are two signs visible on the wall:  'No Smoking' and 'No C'.
+^
+Plane ;
+lflags{ Private Party }
+The Higher Plane^
+   You are standing on an infinite plane, perfectly flat as far as the eye
+can see in all directions.  The sky is a strange glowing pattern of lines
+that seem to twist and writhe.  The flat surface under your feet seems to be
+covered with some sort of fractal pattern.
+   As you stare at the patterns, you begin to sense a higher order of reality,
+feeling that if you stared long enough, you would understand the nature of
+the universe...
+^
+Jacuzzi ;
+lflags{ Private Party }
+In The Jacuzzi^
+   Tiny bubbles tickles your body as you emerge in warm water.  The pool is
+lit by lights in the sides which make the water look even more steaming and
+swirly.  Soft music and the heady smell of fresh-cut flowers complete this
+divine pleasure!
+^
+Witches ;
+lflags{ Party }
+Witches Sauna^
+    The warmth of the heater makes you feel very relaxed and not
+at all in the mood of wearing anything! This is a real Norwegian
+High Quality Sauna (NHQS) and it offers pleasures of all kinds.
+^
+Wizards ;
+lflags{ Party }
+Wizards' Sauna^
+   You find yourself in a hot, dim and steamy room. Strangely enough there
+seems to be no real light source in the room. The walls are lined with
+boards. There are wooden benches on three tiers. A bathhouse stove, 'kiuas',
+is set in one corner of the room so that you can throw some water onto it
+to increase the humidity. A cool stream flows across the room. On one wall
+there are hanging several fresh whisks of birch twigs. You won't get
+thirsty here: there is a small refridgerator embedded into one wall. It
+always seems to be full of cold beers from the finest dwarven breweries...
+^
+Empty ;
+lflags{ Party }
+The Empty Room^
+    What is there to see?
+^
+Balcony w:Nicknack;
+lflags { Private Party }
+The Balcony^
+   This is a wide balcony with a low railing, overlooking the sea to the east.
+Below you are treacherous, rocky cliffs leading far down from this ledge to the
+water below.  You can hear the surf, huge waves crashing against the rocks in a
+thundering roar.  The moon shines brightly on the water, and a cool breeze
+blows.  You are kept quite warm, however, by the heat of a blazing fire,
+glowing brightly inside to the west.  There is a trace of a strange, sweet
+smell on the air, something you cannot place...
+^
+Nicknack n:temple@start e:Balcony s:church@start w:Alf d:InTree@forest;
+lflags { Party Peaceful Private }
+Nicknack and Shoikana's Playground^
+   A colorful array of sights and sound filter through the warm, fragrant air
+in this cheery room.  A photograph of Nicknack posing in some exuberant fashion
+rests on a pale marble mantle above the fireplace.  Next to it rests a 10"x8"
+glossy photo of Shoikana smiling dreamily.  Soft music echoes lightly in the
+background, bringing images of sun-warmed nordic hills, and fleecy snow to your
+mind.
+^
+Alf_secret s:Alf u:chat d:temple@start;
+lflags { Party Private }
+Alf's Secret Room.^
+This is the room where Alf keeps his hidden secrets. You see a large shelf
+with a lot of books on. Pity for you the shelf is magical and you cannot touch
+any of the books.
+^
+Alf n:Alf_secret e:Nicknack w:Alf_small u:chat d:temple@start s:church@start;
+lflags { Party }
+Alf's Room.^
+This is Alf's Room. You see huge amounts of bottles of coke, 'How odd' you
+think to yourself, they are all full.. You also see a stereo and stores of
+CD's and records of Jean-Luc Ponty, Andreas Vollenweider, Pink Floyd,
+Barclay James Harvest, Lynyrd Skynyrd, Dire Straits, Paul McCartney with a
+seperate section for The Beatles.
+^
+Alf_small;
+lflags { Soundproof NoQuit }
+Alf's Small Room.^
+This is a small room used when talking with mortals...
+^
+Horse d:Haven@Haven;
+lflags { Party }
+Horse's Stable^
+  If you look north, you will see vast, loose and divine piles of hay, where
+you can tussle and scuffle and ..Hmm.
+  If you look south, you will see vast, loose and divine piles of hay, where
+you can tussle and scuffle and ..Well.
+  If you look east, you will see vast, loose and divine piles of hay, where
+you can tussle and scuffle and ..You know.
+  If you look west, you will see vast, loose and divine piles of hay, where
+you can tussle and scuffle and ..Don't you?
+  If you by a mistake look down, you will see the Warm Haven and feel warm wind
+rising from it and fondling you lovely.
+         You couldn't be closer to Heaven than you are here and now.
+^
+Luxor n:Cavern@Catacomb s:Temple@Start w:Church@Start;
+lflags { Party }
+The Keep of Moon^
+        You are standing in the grand hall where the Lords of the Free usually
+meet when they want to celebrate their victory over Doomdark. Open windows
+reveal a magnificent view of the land. Looking to the north, you see tiny
+mortals arguing, complaining and fighting over mortal things. You sigh and turn
+your attention to the sword Fenixslayer that's embedded in the stone floor,
+waiting for Luxor to wield it again. Paintings of voluptous heroines hangs on
+the walls and you start to blush when you recognize some of them.
+A big jacuzzi and a waterbed blends tastefully in among the other furniture.
+Exits lead north, west and south.
+^
+Moses;
+lflags { Private Party }
+Moses' and Amybe's Hangout^
+   You see here a cozy little room with a fireplace, you can tell it is Moses's
+room by the two stone tablets and a bible on a small ledge near the fireplace.
+This room was designed for total relaxation.  You can watch television, listen
+to the stereo, even soak in a hot tub.
+There is a bell here for the butler.
+^
+Djfast;
+lflags { Party }
+Djfast's and Mead's Party Room^
+You find yourself in a room that obviously has been designed by the crazy
+fellow called Djfast. Even if his wife probably loves order and things to be
+on the right place, records and botles of the finest wines are placed all
+over this room. In the middle you can see a golden table with musicmachines of
+all kinds. On the east wall there is a huge picture of the happy couple,
+hugging eachother with love and passion. The furniture in here seems to be
+able to be used in all kinds of ways.. so please, feel welcome to this
+place of love, party and happiness.
+^
+Stargazer;
+lflags { Private Party }
+Stargazer's Quarters^
+     You are in a clearing under a green, airy  canopy  somewhere
+in  a  luxuriant  forest.  Gigantic trees of majestic proportions
+surround you in all directions.  However, as far as your eyes can
+see, there is nowhere dark under the trees.  Even where the trees
+are largest the sunshine penetrates, subdued by  the  foliage  to
+exquisite  greenish-golden  tints,  fills  the wide lower spaces.
+Above you, golden shafts of light filtered through some break  in
+the  foliage,  give a strange glory to everything they touch.  At
+the center of the clearing is a great green  mound  covered  with
+sward  of fragrant grass.  The mound is dotted with small golden,
+white, and pale-green flowers shaped like stars, glimmering  like
+a  mist amid the rich hue of the grass.  On the top of the mound,
+upon a low pedstal stands a basin of silver,  wide  and  shallow,
+filled with crystal clear water.  In the distance, like a tempest
+of wind mixed with the shrilling music of  some  unknown  musical
+instrument,  the  songs  of birds fill the air.  This place gives
+you a strange sense of vibrant energy and contentment.
+^
+
+smiles ;
+lflags { Party }
+Smiles' Paradise^
+   As you enter you feel an overwhelming sense of tranquility and happiness.
+The room sparkles and glows as sunlight flows in through a large open window
+in the north wall and gently bounces off the water of a sunken, heart-shaped
+pool in the center of the room.  Rainbows spring forth from the pool and arc
+upwards to just touch the arced ceiling high above and then slide back down
+to the plushly carpeted floor.
+   Music emanates from a stereo and floats through the room like fluffy white
+clouds caressing a deep blue sky.  A plush velvet loveseat patiently awaits
+lovers and large silk pillows lay strewn in a corner.
+   A full lenght mirror is on the eastern wall and just above it hangs a 
+brass plaque reading, "Smile, it's the second best thing you can do with 
+your lips."
+^
+
+vidur ;
+lflags {Party}
+The Warehouse^
+   This is a big old warehouse packed with people, dancing and having fun.
+There must be over thousand people in the warehouse enjoying the good music
+Vidur is making with his keyboards, turntables and mixers.
+He is really doing all that is in his force to make this a good party.
+^
+Ra n:Cosette u:Cosette;
+lflags { Private }
+Cosette's and Ra's Little Place in The Sky^
+   A warm feeling of comfort overcomes you as you sit on a soft brown
+carpet, in front of a fire.  To the north is a large bay window, which
+overlooks several large hills covered with a variety of trees, as a
+gentle rain falls from the darkened sky.  To the south is a wall covered
+with wedding pictures of Cosette and Ra and their special moments they
+had together in the past.  To the east is a large, brick fireplace
+which a warm fire happily burns here filling the room with a soft glow.
+Above the fireplace, hangs an oak mantle which has a large flower
+arrangement in a gold vase and other mantle pieces to decorate the place.
+There also is a stairwell that leds up to a bedroom.  To the west is a
+large sofa that looks like it wants to be sit on.
+^
+Cosette s:Ra d:Ra;
+lflags{}
+Cosette's and Ra's Bedroom^
+   This is a large bedroom with a double bed that lies against the
+eastern wall.  To the north and west are two dressers one for each
+occupant of this home.  To the south is a single doorway that leads
+down to the den.
+^
+Multi n:temple@start s:start@labyrinth e:Multi2 w:Green@village
+      d:snow_temple@blizzard;
+lflags {Private Party Peaceful}
+The Blaze of a Snowstorm...^
+  Fated to burn and to melt, to light and to obscure, to halt and to
+flee, you have come.  At anytime, this is a place for all of us.
+  The prism lights shine from the flickering howls of everyday.  Multi-hued
+flames and frosts touch your skin as you search for certainty.
+  Passion may build houses of air and look from a thousand tall windows
+while the north winds scream...to weave bright lights, pale shadows,
+tiger lilies, and fantasies.
+      ~Let the world's sharpness, like a clasping knife,
+           shut in upon itself and do no harm.~
+  Deep love and thanks to those who pause here to seek red answers
+to a white riddle...to listen to the racy music of a dream, before going to
+the business of the village or the temple.
+^
+Multi2 w:Multi s:start@labyrinth d:Green@village e:Racy;
+lflags {Private Party Peaceful}
+On the Edge of a Waking Dream^
+
+                         -------> 'Oh, I wish they ALL could be
+                                   California girls....'
+                  __-====-_  _-====-__
+            _--~~~#####//      **#####~~~--_
+         _-~##########// (    ) **##########~-_
+        -############//  "*""/"  **############-
+      _~############//   (o::o)   **############~_
+     ~#############((     **//     ))#############~
+    -###############**    (oo)    //###############-
+   -#################**  / `' *  //#################-
+  -###################**/      *//###################-
+ _#/"##########/*######(   /*   )######/*##########"*#_
+ "/ "#/*#/*#/*/  *#/*##*  "    "/##/*#/  */*#/*#/*#" *"
+ "  "/  V  V  "   V  *#/" "  " "* */  V   "  V  V  *"  "
+    "   "  "      "   / " "  " " *   "      "  "   "
+                     (  " "  " "  )
+                    __* " "  " " /__           lyrics by Beach Boys
+                                               dragon by Vision
+
+Multi's magical tour cloak might be here, but isn't.
+^
+Racy n:lookout@frobozz w:Multi2 s:Holes@sea e:Beach@island d:Anc37@ancient
+     u:Cave@eforest;
+lflags {Private Peaceful Party Outdoors}
+None Dare Call It Love^
+   You are on board Racy's Clipper ship, "None Dare Call It Love".
+  The sounds and the smells of the sea are all around you.............
+You experience a strange sensation in the pit of your stomach...is
+it love or is it, is it MOTION SICKNESS?  You see many large wooden
+buckets filled with small items; belt buckles, shirt buttons, socks
+and other items of male apparel left behind by Racy's SeaCadets!
+  You look across the deck and up at the tall, thick, tapering masts
+with their complex riggings.   You wonder what training takes place here.
+                            YOU BLUSH!!!
+^
+Michel;
+lflag { Party }
+The Lair of Russian Bear.^
+     It is a large room with wooden walls and strange soft-green light.
+All space near eastern wall is blocked up with numberless books: skin
+covers and modern paperbacks are mixed here. Huge bench covered with
+skins of wolves and deers is standing near the opposite wall. Large bear
+in fur hat is standing near it, carrying scarlet cloak with fur and
+white cloak with black cross. The bear is keeping his eyes on each your
+move!!! Beware [if Michel is not here...]!!!
+     An oak table and arm-chair are situated right before you. Huge
+boar with golden skin is lying near them. He is very lazy and just
+grunding with your approach. There is a niche above the table. Strange
+shimmering blue light protects its contents: blue shield and sword with
+moonstone in its handle. The host has put this sword there after getting
+it from The Sorceror of Black Castle. Nobody can say that he has seen
+blade of this sword and stay alive.
+^
+
+
+Night d:haven@haven n:temple@start s:church@start;
+lflag {party}
+Nightcrawler's Fencing Room^
+This large room is used for Nightcrawler's favorite sport--fencing.  At the
+far end of the room there is a fencing strip with electric scoring equipment.
+The strip is surrounded by racks of the three fencing weapons--sabres, epees,
+and foils--although the epee seemed to be the favored weapon.  There are
+masks, fencing jackets, lames, and gloves for both Nightcrawler and any
+opponent(s) he may have convinced to join him in a bout.  You also notice an
+Errol Flynn hat sitting on a chair in a corner.  If you are interested in
+challenging Nightcrawler, see him or send him mail, he'd love the challenge.
+^

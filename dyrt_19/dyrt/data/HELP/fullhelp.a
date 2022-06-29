@@ -1,0 +1,62 @@
+ACCT
+Shows you the number of mobiles and locations on the game, as well as a 
+breakdown of the types of objects one can find.
+^
+ACTIONS <action>
+Alone, will give you a list of the available actions.  With an action name
+as an argument, will give you a listing of the messages that are displayed
+out when one performs this action.
+^
+[PAliasMob & !PAliasPlayers]ALIAS [mobile]
+[PAliasMob & !PAliasPlayers]Puts you in control of the mobile specified.
+[!PAliasMob & PAliasPlayers]ALIAS [player]
+[!PAliasMob & PAliasPlayers]Puts you in control of the specified player.
+[PAliasMob & PAliasPlayers]ALIAS [player/mobile]
+[PAliasMob & PAliasPlayers]Puts you in control of the specified player or mobile
+[PAliasMob | PAliasplayers]Type QUIT to return to your own body.
+[PAliasMob | PAliasplayers]^
+[X]ALOOF
+[X]For those moments when you don't feel like being disturbed by mortals' actions
+[X]Aloof will prevent actions such as HUG, KISS, SLAP, etc from being used on you.
+[X]Type ALOOF again to disable this.
+[X]^
+APPLY
+See also:  WEAR.
+^
+ASK
+See also:  TELL.
+^
+[PGoto]AT <room/mobile/player/object> <command>
+[PGoto]Executes "command" as if you were with the specified mobile/player/object 
+[PGoto]or in the specified room.
+[PGoto]^
+ATTACK <mobile/player>
+See also:  KILL.
+^
+AUTOEXIT
+Allows you to see exits upon entering a room.  The directions are shown
+to you in a one-line format.  You must use EXITS to see the names of the
+rooms that lie in each direction.  To stop seeing exits automatically, type
+AUTOEXIT a second time.
+^
+AWAY
+Notifies others that you are away from the keyboard at the moment.  Others
+may still talk to you while you are gone, but they will receive a warning
+that you are not near the keyboard at the time.  Typing away will also flag
+you as AWAY on the who listing.
+ 
+See also:  BUSY.
+^
+[A]AWIZ
+[A]Sends a message to all who are listening to the awiz channel.
+[A]
+[A]See also:  NOAWIZ.
+[A]^
+[A]AWIZRULES
+[A]    Not a command.
+[A]
+[A]You may consider the WIZRULES as guidelines, you have been promoted
+[A]because we trust your judgement, so it is up to you to decide individual
+[A]cases. You have more powers than wizards and you should use them wisely.
+[A]Remember: What God giveth, we can also taketh away!
+[A]^

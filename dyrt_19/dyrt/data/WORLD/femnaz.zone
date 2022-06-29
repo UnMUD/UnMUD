@@ -1,0 +1,1155 @@
+/*********************************************************
+* FEMNAZ.ZONE                                            *
+* Author:    Rex and Random                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 30 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:femnaz
+
+%mobiles
+
+Name            = femmie
+PName           = "Femmie"
+Location        = tower2
+Strength        = 120
+Damage          = 10
+Aggression      = 80
+Speed           = 5
+SFlags            { Female }
+Description     = "A die-hard Femmenazi glares at you contemptuously."
+Examine         = "
+You are looking at an Arnold Schwarzeneger with two X chromosomes."
+End             = femmie
+
+Name            = pike
+PName           = "The Pike"
+Location        = pikeroom
+Strength        = 60
+Damage          = 10
+Speed           = 0
+Description     = "A pike swims sluggishly by."
+Examine         = "The pick swims lazily... lazy... just like a man."
+End             = pike
+
+Name            = curly
+PName           = "Curly"
+Location        = curlyroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "This pirahna bears a striking resemblance to Curly Stoodge."
+Examine         = "But is that really surprising?  After all, he IS male."
+End             = curly
+ 
+Name            = goldfish
+PName           = "The Goldfish"
+Location        = goldroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "A goldfish glides gracefully by."
+End             = goldfish
+
+Name            = moe
+PName           = "Moe"
+Location        = moeroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "This pirahna bears a striking resemblance to Moe Stoodge."
+Examine         = "Moe is rather bland looking.  Nothing special here."
+End             = moe
+
+Name            = guppy
+PName           = "The Guppy"
+Location        = guppyroom
+Strength        = 60
+Damage          = 10
+Speed           = 0
+Description     = "A guppy nibbles at your toe."
+Examine         = "About the size of the average male... oh... nevermind."
+End             = guppy
+
+Name            = larry
+PName           = "Larry"
+Location        = larryroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "This pirahna bears a striking resemblance to Larry Stoodge."
+Examine         = "This particular fish is... uh... intellectually challenged."
+End             = larry
+
+Name            = seahorse
+PName           = "The Seahorse"
+Location        = searoom
+Strength        = 60
+Damage          = 10
+Speed           = 0
+Description     = "A seahorse bobs lazily by."
+Examine		= "
+He looks rather at-ease despite his maleness; or perhaps because of it."
+End             = seahorse
+
+Name            = tom
+Location        = tomroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "This vicious pirahna looks like a run-of-the-mill Tom."
+End             = tom
+
+Name            = turtle
+PName           = "The Turtle"
+Location        = turtleroom
+Strength        = 50
+Damage          = 10
+Aggression      = 40
+Speed           = 0
+Description     = "A snapping turtle tries to take a chunk out of you!"
+Examine         = "
+This turtle gets along fine with the Femmenazis... nothing gets through its
+thick armour."
+End             = turtle
+
+Name            = dick
+Location        = dickroom
+Strength        = 90
+Damage          = 10
+Speed           = 0
+Description     = "This vicious pirahna looks like a run-of-the-mill Dick."
+Examine         = "You sicko!  This is NOT what you think!"
+End             = dick
+
+Name            = shrimp
+PName           = "The Shrimp"
+Location        = shrimproom
+Strength        = 50
+Damage          = 10
+Speed           = 0
+Description     = "A vicious-looking shrimp crawls by."
+Examine         = "
+This shrimp has had JUST about enough abuse and is SICK and TIRED of being
+thought of as an easy mobile."
+End             = shrimp
+
+Name            = harry 
+PName           = "Harry"
+Location        = harryroom
+Strength        = 90
+Damage          = 10
+Speed           = 0
+Description     = "This vicious pirahna looks like a run-of-the-mill Harry."
+End             = harry
+
+Name            = crab
+PName           = "Sebastian"
+Location        = crabroom
+Strength        = 55
+Damage          = 10
+Aggression      = 50
+Speed           = 0
+Description     = "
+Sebastian looks around and mumbles 'weemon... I tell you...'."
+Examine         = "
+The Femmenazis happen to think that Sebastian is the impossible one."
+End             = crab
+
+Name            = batman
+PName           = "Batman"
+Location        = batroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "
+This pirahna bears a striking resemblance to the Caped Crusader."
+Examine         = "
+Those years of parading around in tights have definitely unbalanced our 'hero'."
+End             = batman
+
+Name            = bottomfeeder
+PName           = "The Bottomfeeder"
+Location        = feederroom
+Strength        = 60
+Damage          = 10
+Speed           = 0
+Description     = "A slime-sucking bottomfeeder wiggles by."
+Examine         = "Hm.... reminds me of a man."
+End             = bottomfeeder
+
+Name            = robin
+PName           = "Robin"
+Location        = robinroom
+Strength        = 90
+Damage          = 10
+Aggression      = 75
+Speed           = 0
+Description     = "
+This pirahna resembles Robin: the sidekick of the Caped Crusader."
+Examine         = "
+Not many people know that this particular sidekick is an Aussie."
+End             = robin
+
+Name            = jellyfish
+PName           = "The Jellyfish"
+Location        = jellyroom
+Strength        = 60
+Damage          = 10
+Speed           = 0
+Description     = "A spineless wimp of a jellyfish swims by."
+Examine         = "Spineless + wimp = Male"
+End             = jellyfish
+
+Name            = PMS
+PName           = "PMS"
+Location        = dungeon2
+Strength        = 200
+Damage          = 10
+Aggression      = 95
+Speed           = 0
+SFlags            { Female }
+Description     = "
+The evil PMS monster glares at you, clearly in a VERY bad mood."
+Examine         = "
+This hulking, monstrous thing is too horrible to even describe."
+End             = PMS
+
+Name            = testo
+PName           = "Testo"
+Location        = dungeon3
+Strength        = 75
+Damage          = 10
+Speed           = 0
+Description     = "
+A whipped and wimpy testosterone monster sulks in the corner."
+Examine         = "This monster reeks of futile aggression and self-pity."
+End             = testo
+
+Name            = ego
+PName           = "Ego"
+Location        = dungeon4
+Strength        = 200
+Damage          = 15
+Aggression      = 30
+Speed           = 0
+Description     = "A huge hulking beast glares at you menacingly."
+Examine         = "
+Frothing at the mouth, this creature looms huge in its own mistaken glory."
+End             = ego
+
+Name            = estro
+PName           = "Estro"
+Location        = dungeon5
+Strength        = 200
+Damage          = 10
+Speed           = 0
+SFlags            { Female }
+Description     = "A flaky estrogen monster sobs at you from the corner."
+Examine         = "
+This flighty bit of goods is never sure of her emotional state."
+End             = estro
+
+Name            = nag
+PName           = "The Nag"
+Location        = dungeon7
+Strength        = 150
+Damage          = 10
+Aggression      = 90
+Speed           = 0
+SFlags            { Female }
+Description     = "A baggy old lady scowls at you."
+Examine         = "
+The old nag waves at you with the sagging skin of her biceps."
+End             = nag
+
+Name            = dave
+PName           = "Dave"
+Location        = dungeon9
+Strength        = 20
+Damage          = 2
+Aggression      = 97
+Speed           = 0
+Description     = "
+A poor wimpy male prisoner sulks here, glaring at you viciously."
+Examine         = "Hmm... kinda resembles Imzadi."
+End             = dave
+
+Name            = piggy
+PName           = "Piggy"
+Location        = dungeon11
+Strength        = 60
+Damage          = 10
+Aggression      = 50
+Speed           = 0
+Description     = "
+A Male Chauvinist Pig sits here, a prisoner of the Femmenazis."
+Examine         = "Hmm... kinda resembles Imzadi."
+End             = piggy
+
+%objects
+
+Name            = box
+Location        = IN_ROOM:tower2
+State           = 1
+MaxState        = 1
+BValue          = 20
+Size            = 1
+Weight          = 1
+OFlags            { Openable Container }
+Desc[0]         = "There is an open box lying here."
+Desc[1]         = "A small box lies here. It is closed."
+Examine         = "The box reads 'Trojan'."
+End             = box
+
+Name            = condom
+Location        = IN_CONTAINER:box
+BValue          = 10
+Size            = 1
+Weight          = 1
+Desc[0]         = "There is a condom lying here.  How gross!"
+Examine         = "This is a Trojan Ribbed:  the condom of champions."
+End             = condom
+
+Name            = nuprin
+AltName         = food
+Location        = CARRIED_BY:PMS
+BValue          = 10
+Size            = 1
+Weight          = 1
+OFlags            { Food }
+Desc[0]         = "There is a bottle of Nuprin lying here."
+Examine         = "Little.... yellow.... different."
+End             = nuprin
+
+Name            = sign
+Location        = IN_ROOM:entry
+OFlags            { NoGet }
+Desc[0]         = "A crude sign of GIGANTIC PROPORTIONS has been tacked here."
+Examine         = "
+The sign reads as follows:
+Due to the overwhelming number of ANNOYING adventurers desecrating our beloved
+castle, we are hereby declaring war on this MUD.  We have moved our base of 
+operations to our war camp to facilitate the taking of further steps toward
+the utter destruction of our vile enemies.  THIS MEANS YOU!!!
+BE WARNED!  We WILL be ready for you, and the penis party WILL end!
+						Signed,
+						The Generals"
+End             = sign
+
+Name            = banner
+Location        = IN_ROOM:entry
+OFlags            { NoGet }
+Desc[0]         = "A long banner is displayed on the wall here."
+Examine         = "It reads: 'Welcome to Hell'."
+End             = banner
+
+Name            = pamphlet
+Location        = IN_ROOM:tower1
+BValue          = 10
+Size            = 1
+Desc[0]         = "A small pamphlet lies here."
+Examine         = "The pamphlet is entitled: 'How to Pick and Train your Man'."
+End             = pamphlet
+
+Name            = article
+Location        = IN_ROOM:tower2
+BValue          = 10
+Size            = 1
+Desc[0]         = "A clipped article lies here for all to read."
+Examine         = "The title reads: 'Rapist Killed by Angry Woman'."
+End             = article
+
+Name            = leaflet
+Location        = IN_ROOM:tower3
+BValue          = 10
+Size            = 1
+Desc[0]         = "A thin leaflet lies here."
+Examine         = "
+This leaflet is a warning about AIDS and the evil men who carry it."
+End             = leaflet
+
+Name            = flyer
+Location        = IN_ROOM:tower4
+BValue          = 10
+Size            = 1
+Desc[0]         = "A small flyer lies here."
+Examine         = "The flyer gives tips on beating PMS."
+End             = flyer
+
+Name            = ad
+Location        = CARRIED_BY:femmie
+BValue          = 10
+Size            = 1
+Desc[0]         = "A long informational ad lies here."
+Examine         = "
+The ad informs men on why it is so difficult to be a woman in today's world."
+End             = ad
+
+Name            = heatingpad
+AltName         = pad
+Location        = IN_ROOM:dungeon12
+BValue          = 200
+Size            = 3
+Weight          = 4
+Desc[0]         = "A warm heating pad lies here."
+End             = heatingpad
+
+Name            = flagstone1
+PName           = flagstone
+AltName         = stone
+Location        = IN_ROOM:dungeon6
+State           = 1
+MaxState        = 1
+Linked          = flagstone2
+OFlags            { NoGet PushToggle }
+Desc[0]         = "
+A large flagstone has been pushed aside, revealing a passage to the north."
+Desc[1]         = "A large flagstone looks a bit loose from the floor."
+Examine         = "It looks kind of heavy, but maybe you can move it."
+End             = flagstone1
+
+Name            = flagstone2
+PName           = flagstone
+AltName         = stone
+Location        = IN_ROOM:escape
+State           = 1
+MaxState        = 1
+Linked          = flagstone1
+OFlags            { NoGet PushToggle }
+Desc[0]         = "
+The flagstone to the south has been moved, allowing access to the castle."
+Desc[1]         = "A huge flagstone blocks your way south."
+Examine         = "It looks heavy, but you might be able to move it."
+End             = flagstone2
+
+Name            = orb
+Location        = IN_ROOM:maze20
+BValue          = 5000
+Size            = 2
+Weight          = 10
+Desc[0]         = "There is a smallish orb lying here."
+Examine         = "Although it is not all that impressive in size, it is made 
+of gold and diamond, and is definitely very valuable.  I guess it was worth 
+going through the maze afterall!"
+End             = orb
+
+%locations
+
+/* 1*/
+path n:moat s:WATERFALL@BLIZZARD;
+lflags { Outdoors RealTime }
+Overgrown Path^
+   Leading north is a slightly overgrown path winding through the trees and 
+rocks.  You feel uneasy as you remember tales of a horrid castle run entirely 
+by evil Femmenazis.  You see sunlight glittering off of white stone in the 
+distance to the north.
+^
+/* 2 */
+moat s:path n:bridge;
+lflags { Outdoors RealTime }
+On the Drawbridge^
+   You are standing on the rotting remains of a drawbridge.  Looking down into 
+the murky gloom of the moat, you can spy the silvery bodies of fish darting 
+here and there.
+^
+/* 3 */
+bridge s:moat n:entry w:pikeroom e:jellyroom;
+lflags { Outdoors RealTime }
+On the Drawbridge^
+   Here you find your footing to be more sure as the wood seems to be better-
+preserved.
+^
+/* 4 */
+entry s:bridge n:yard2 w:hela e:athena;
+lflags { Outdoors NoMobiles RealTime }
+Entrance to Castle Femmenazi^
+   You are standing in the entrance hall of an enormous stone castle.  Looking 
+at the walls you realize that this castle must have been carved out of one 
+enormous piece of stone.  Surely this must be the work of women, for no man 
+could ever conceive of such a thing, much less complete it!
+^
+/* 5 */
+hela e:entry w:queen;
+lflags { RealTime }
+Shrine to Hela^
+   A bust of Hela, the Norn Goddess of the Dead and the Underworld, sits atop 
+an onyx pedestal.  Truly this woman caused much suffering to many men.  The 
+Femmenazis idolize her.
+^
+/* 6 */
+queen e:hela w:stairs4;
+lflags { RealTime }
+Shrine to Queen^
+   This female entity of the psychic world has the Femmenazi attitude for 
+creating havoc, destruction, and overall mayhem.  This room's oppressive decor 
+makes you feel faintly uncomfortable.
+^
+/* 7 */
+stairs4 u:tower4 n:tgore e:queen;
+lflags { RealTime }
+Southwest Stairs^
+   You can follow this grand staircase up to the southwest tower of the castle.
+The stairway is dark and forboding.
+^
+/* 8 */
+tower4 d:stairs4;
+lflags { RealTime }
+Southwest Tower^
+   This is the Femmenazi Training Room, (FTR).  All young women can take 
+classes in self-defense, verbal abuse, nasty attitudes, property damage, and 
+the all-time favourite; male-bashing.
+^
+/* 9 */
+tgore s:stairs4 n:wonder;
+lflags { RealTime }
+Shrine to Tipper Gore^
+   Decicated remains of Kiss dolls, Ozzie Ozbourne parafinalia, and other
+heavy metal artifacts are strewn over the altar.  There is a big picture of
+Tipper surrounded by candles here.  Your skin crawls.
+^
+/* 10 */
+wonder n:joan s:tgore;
+lflags { RealTime }
+Shrine to Wonder Woman^
+   Magic gold bracelets are mounted on a mahogany base, silent testament to the 
+many battles against the evils of man.  Wonder Woman was inducted into the 
+ranks of the Femmenazis for her upstaging of the Man of Kleenex himself, 
+Superman.
+^
+/* 11 */
+joan n:cat s:wonder;
+lflags { RealTime }
+Shrine to Joan of Arc^
+   This room is filled with thousands of white candles.  The light reflects off 
+of the guilded shrine of the sainted Joan of Arc.  The walls are draped in 
+white silk.  In this room only, there is a white marble floor.  Please remove 
+your footwear when you come to worship this divine departed sister.
+^
+/* 12 */
+cat n:stairs1 s:joan;
+lflags { RealTime }
+Shrine to Cat Woman^
+   Batman and Robin dolls are hanging from the wall here, many pins stuck in 
+them.  Every good Femmenazi knows that Cat Woman did indeed vanquish her nasty 
+male enemies, the despicable Batman and his evil sidekick Robin.
+^
+/* 13 */
+stairs1 u:tower1 d:dungeon1 s:cat e:witch;
+lflags { RealTime }
+Northwest Stairs^
+   This grand stone staircase winds up to the northwest tower and down to the 
+lower levels.
+^
+/* 14 */
+tower1 d:stairs1;
+lflags { RealTime }
+The Northwest Tower^
+   This is the Propaganda Room.  The Femmenazis gather here to put out their 
+various pieces of literature on many subjects dealing with men; such as 
+curfews, visiting hours, pregnancy and birth control, and testosterone 
+regulation.
+^
+/* 15 */
+witch w:stairs1 e:ursula;
+lflags { RealTime }
+Shrine to the Wicked Witch^
+   Some outdoorsy elements are worked into this room.  Some twisted trees stand 
+in pots on either side of a large black cauldron.  Hundreds of strange things 
+stand in jars.  You think on of those jars my hold male... EEEEWWWWW!!!
+^
+/* 16 */
+ursula e:medusa w:witch;
+lflags { RealTime }
+Shrine to Ursula^
+   Blue cellophane covers the walls to give this shrine an underwater look.  
+Plastic fish and a crab resembling Sebastian are glued to the fake water.  This 
+room is really tacky.  The Femmenazi who decorated this probably threw 
+Tupperware parties in a former life.
+^
+/* 17 */
+medusa e:she w:ursula;
+lflags { RealTime }
+Shrine to Medusa^
+   There appear to be lots of stone statues here.  They seems somehow familiar. 
+ At the base of each statue you see odd runes that look like:
+
+K#+EN~D*E>R			R*E&NDo;O;R			I'MZ~&%A*D/I
+R~I*$C+K			J#I@!%M				S*$C%H*!O?N
+I@T=#H~O~&R			T*&%HR!A#(#C&*E			K~&!A*G~%A*N
+T%#H1U!N$D(ER			T*R~~A)C*O#N			Z!AR#N*IW~OO@P
+D~@E)*(TO@X			K*(&^I!$~R@O			E!R#$IO@$N~D
+				E*#S*O~X
+^
+/* 18 */
+she e:mal w:medusa;
+lflags { RealTime }
+Shrine to She-Ra^
+   A powerful golden sword is embedded in an anvil here.  A winged headdress 
+sits at its base.  The Femmenazis like her because they know that she outshines 
+He-Man anytime.  Besides... she's good-looking.
+^
+/* 19 */
+mal e:stairs2 w:she;
+lflags { RealTime }
+Shrine to Malefiscence^
+   The smell of evil, ichorous incense fills this room.  In the smoky light you 
+can just make out a spinning wheel in the corner.  Somehow you feel that you 
+shouldn't go play with it, tho that feeling could stem from the fact that the 
+Femmenazis would be very upset at you  for even considering doing any domestic 
+work.  You do NOT want to upset a Femmenazi...
+^
+/* 20 */
+stairs2 u:tower2 d:dungeon12 s:shriek w:mal;
+lflags { RealTime }
+The Northeast Stairs^
+   You can follow a large marble staircase up to the Northeast Tower or down 
+into the dungeons from here.
+^
+/* 21 */
+tower2 d:stairs2;
+lflags { RealTime }
+The Northeast Tower^
+   This is a meeting room where the Femmenazis who live here can come to 
+discuss hot topics such as curfews for men, visiting hours, leash laws, and 
+whether or not men should be allowed into Ladies Nite at their favorite bar.
+^
+/* 22 */
+shriek n:stairs2 s:cleo;
+lflags { RealTime }
+Shrine to Shriek^
+   Shriek is a serial kiler. 'Nuff said?
+^
+/* 23 */
+cleo n:shriek s:jane;
+lflags { RealTime }
+Shrine to Cleopatra^
+   The sarcophagus of Lady Cleopatra stands in the middle of the room, heavily 
+adorned and enameled.  No wonder these people were so well-preserved.  Next to 
+the monument stands a tall plastic palm tree.  Stuffed into its branches is an 
+asp.
+^
+/* 24 */
+jane n:cleo s:hulk;
+lflags { RealTime }
+Shrine to Calamity Jane^
+   A tattered and shot-up outfit lies here on a board covered with velvet.  
+Calamity Jane was a great gunfighter in the American Old West.  Why she felt 
+she had to disguise herself as a man no Femmenazi will ever understand.  But 
+none the less... they liked her.
+^
+/* 25 */
+hulk n:jane s:stairs3;
+lflags { RealTime }
+Shrine to She-Hulk^
+   This shrine more resembles a weight-lifting room.  Bar-bells and weights lie 
+scattered here and there, but then again... no Femmenazi was ever known for her 
+ability to clean house.
+^
+/* 26 */
+stairs3 u:tower3 n:hulk w:siren;
+lflags { RealTime }
+Southeast Stairs^
+   You can follow this grand staircase up to the southeast tower of the castle.
+^
+/* 27 */
+tower3 d:stairs3;
+lflags { RealTime }
+The Southeast Tower^
+   You have stepped into the Femmenazi Armoury.  Looking around you can see 
+hammers, chainsaws, explosives, rape whistles, a small rocket launcher or two, 
+a few high-heeled shoes, and of course, the ever-popular cans of mace.
+^
+/* 28 */
+siren e:stairs3 w:athena;
+lflags { RealTime }
+Shrine to Siren^
+   Probably one of the favorite Femmenazi heroines of all time... the Siren.  
+She would lull men to a rocky isle with her voice, where they would drown; 
+their boats destroyed on the rocks.  She killed a good many men in her day... 
+and caused a lot of ego-downers.
+^
+/* 29 */
+athena e:siren w:entry;
+lflags { RealTime }
+Shrine to Athena^
+   Another of the Femmenazi heroines was Greek.  See, the Greeks knew the score 
+HOW many years ago???  Athena's breastplate, helmet, and spear are lined up 
+against the wall, gleaming.  This was one woman not to be trifled with.
+^
+/* 30 */
+pikeroom w:curlyroom e:moat;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 31 */
+curlyroom n:goldroom e:pikeroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 32 */
+goldroom s:curlyroom n:moeroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 33 */
+moeroom s:goldroom n:larryroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 34 */
+guppyroom s:moeroom n:larryroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 35 */
+larryroom n:searoom s:guppyroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 36 */
+searoom e:tomroom s:larryroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 37 */
+tomroom e:turtleroom w:searoom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 38 */
+turtleroom w:tomroom e:dickroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 39 */
+dickroom e:shrimproom w:turtleroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it. As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 40 */
+shrimproom s:harryroom w:dickroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 41 */
+harryroom n:shrimproom s:crabroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 42 */
+crabroom n:harryroom s:batroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 43 */
+batroom n:crabroom s:feederroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 44 */
+feederroom s:robinroom n:batroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 45 */
+robinroom n:feederroom w:jellyroom;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 46 */
+jellyroom e:robinroom w:moat;
+lflags { Outdoors RealTime }
+On the Moat^
+   The water is so thick and viscous that you can walk on it.  As you trudge 
+through the murk and ooze you can feel fish nibbling at your toes.
+^
+/* 47 */
+yard1 e:yard2;
+lflags { Outdoors Party RealTime }
+Stone Bench^
+   A marble bench gleams invitingly, surrounded by climbing honeysuckle and 
+gorgeous Black Jasmine.  The ground is carpeted with pansies of all colors and 
+a brilliant snapdragon or two. This place looks ideal to relax in.
+^
+/* 48 */
+yard2 e:yard3 w:yard1 s:entry n:yard5;
+lflags { Outdoors Party RealTime }
+Courtyard Path^
+   You stand on a path that winds through the courtyard.  On either side, you 
+see beautiful beds of flowers and gleaming marble statues.  The breeze here is 
+colored with the flowers' perfumes and the soft nature of music.
+^
+/* 49 */
+yard3 w:yard2;
+lflags { Outdoors Party RealTime }
+Rose Trellis^
+   Golden and scarlet roses cling tightly to a trellis that appears to be 
+ancient.  You can't be sure, but it seems that carnations are a predominant 
+flower in this garden too.  A marble angle stands impishly in the center of 
+this bed of flowers.
+^
+/* 50 */
+yard4 w:wonder e:yard5;
+lflags { Outdoors Party RealTime }
+Western Path^
+   The path leads into the castle and into the rest of the courtyard.  The 
+arched entryway into the castle looks dark and forboding.  The sounds of birds 
+chirping seems to help lighten the atmosphere a bit, though.
+^
+/* 51 */
+yard5 n:yard8 s:yard2 e:yard6 w:yard4;
+lflags { Outdoors Party RealTime }
+Center of the Yard^
+   You stand at the center of the courtyard.  The cobbled path leads off in all 
+four directions.  This place's gardens lend an aromatic delight to the area's 
+atmosphere.  Bright butterflies can be seen flitting here and there.
+^
+/* 52 */
+yard6 w:yard5 e:jane;
+lflags { Outdoors Party RealTime }
+Eastern Path^
+   The path cuts east and west leading deeper into the courtyard and into the 
+castle itself.  You spy a small bird chirping at you from its nest high above.
+^
+/* 53 */
+yard7 e:yard8;
+lflags { Outdoors Party RealTime }
+Fountain^
+   Beautiful pansies and mums flower here, creating a soft blanket of warm 
+color, a striking background for the white marble fountain that stands here.  A 
+warm breeze gently caresses your skin.
+^
+/* 54 */
+yard8 n:medusa s:yard5 e:yard7 w:yard9;
+lflags { Outdoors Party RealTime }
+Central Entrance^
+   The cobbled path leads straight into the castle and to the small garden beds 
+on either side.  The arched entrance to the castle is carved with intricate 
+runes.
+^
+/* 55 */
+yard9 e:yard8;
+lflags { Outdoors Party RealTime }
+Marble Angels^
+   Large marble angels lie here, covered in moss and lichen.  More jasmine and 
+honeysuckle cover the area.  The warm breeze caresses your skin softly.
+^
+/* 56 */
+dungeon1 u:stairs1 e:dungeon3;
+lflags { Dark NoMobiles }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 57 */
+dungeon2 s:dungeon3 e:dungeon4;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 58 */
+dungeon3 n:dungeon2 w:dungeon1 e:dungeon5;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 59 */
+dungeon4 e:dungeon6 w:dungeon2 s:dungeon5;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 60 */
+dungeon5 e:dungeon7 w:dungeon3 n:dungeon4;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 61 */
+dungeon6 n:^flagstone1 s:dungeon7 w:dungeon4 e:dungeon8;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 62 */
+dungeon7 n:dungeon6 e:dungeon9 w:dungeon5;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/*63 */
+dungeon8 e:dungeon10 w:dungeon6 s:dungeon9;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 64 */
+dungeon9 e:dungeon11 n:dungeon8 w:dungeon7;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 65 */
+dungeon10 w:dungeon8 s:dungeon11;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 66 */
+dungeon11 e:dungeon12 n:dungeon10 w:dungeon9;
+lflags { Dark }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 67 */
+dungeon12 w:dungeon11 u:stairs2;
+lflags { Dark NoMobiles }
+The Dungeon^
+   This dank and oppressive basement of the castle is the perfect setting for 
+the Femmenazis to torture their victims.  You can hear low moanings and 
+coughing coming from the cells.
+^
+/* 68 */
+escape s:^flagstone2 n:maze1;
+lflags { Dark }
+The Escape Tunnel^
+   Whew! You've found an escape from this horrible place!  You only wish Dave 
+could have been so lucky...
+^
+/* 69 */
+maze1 n:maze2 s:escape;
+lflags {  Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  The path continues straight ahead to the north.
+^
+/* 70 */
+maze2 n:maze3 s:maze1 e:maze2 w:maze3;
+lflags {  Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 71 */
+maze3 e:maze4 s:maze2 w:maze3 n:maze4;
+lflags {  Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 72 */
+maze4 s:maze5 w:maze3 n:maze3 e:maze4;
+lflags {  Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 73 */
+maze5 e:maze6 n:maze4 s:maze5 w:maze4;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 74 */
+maze6 e:maze7 w:maze5 n:maze6 s:maze4;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 75 */
+maze7 n:maze8 w:maze6 s:maze7 e:maze6;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 76 */
+maze8 n:maze9 s:maze7 e:maze6 w:maze5;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 77 */
+maze9 w:maze10 s:maze8 e:maze7 n:maze8;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 78 */
+maze10 e:maze9 w:maze11 n:maze8 s:maze7;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/*79 */
+maze11 w:maze12 e:maze10 n:maze9 s:maze8;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 80 */
+maze12 n:maze13 e:maze11 w:maze9 s:maze10;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You have entered a large maze whose walls are made of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 81 */
+maze13 n:maze14 s:maze12 e:maze13 w:maze11;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You're getting a bit sick of seeing the same thing every time you turn a 
+corner.  You hope there is a bench nearby that you can relax on.  There seems 
+to be a fork in the paths to the north.
+^
+/* 82 */
+maze14 e:maze15 s:maze12 w:maze13 n:maze14;
+lflags { Outdoors maze RealTime }
+In the Maze^
+   It looks like your wish for a bench may have come true.  To the east there 
+is a small white bench that looks very inviting right now.
+^
+/* 83 */
+maze15 e:maze16 n:maze14 w:maze13 s:maze12;
+lflags { Outdoors maze RealTime }
+In the Maze^
+   There is a small bench here where you can rest your tired bones while you 
+try to figure your way out of this mess.
+^
+/* 84 */
+maze16 w:maze17 e:maze16 n:maze15 s:maze14;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You are standing in a large maze whose walls consist of well-pruned bushes.  
+The bushes are tall enough that you can't see over them and so thick that you 
+can't see through them.  This maze is clearly an attempt to contain prisoners 
+who may escape.  Paths lead in all directions from here.
+^
+/* 85 */
+maze17 s:maze18 n:maze15 e:maze16 w:maze17;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   You are standing in a large maze whose... aww... you know the story.  
+Anyway, you can't help but wonder if you will ever reach the end of this bloody 
+maze.
+^
+/* 86 */
+maze18 e:maze19 n:maze16 s:maze14 w:maze15;
+lflags { Outdoors Maze RealTime }
+In the Maze^
+   Paths lead in all directions, but you think you see a tree off to the 
+southwest.  It doesn't look terribly far away, and it just might be the end of 
+the maze.
+^
+/* 87 */
+maze19 s:maze14 e:maze18 n:maze16 w:maze20;
+lflags {Outdoors Maze RealTime }
+In the Maze^
+   To the south of here is a very large oak tree that takes your breath away 
+with its sheer size.  Despite all of the trouble it took for you to get here, 
+it was worth it just to see this spot.  Maybe... Actually, it probably wasn't 
+worth it at all. 
+^
+/*88 */
+maze20 n:maze19;
+lflags { Outdoors Maze RealTime }
+The Grand Oak^
+   After all your work, you reach the end of the maze.  You are standing at the 
+base of a huge oak tree.  Oh joy oh rapture... you have finally arrived... at 
+nothing.  Well the area is pretty, and you wish that you had brought along a 
+blanket, because this looks like a wonderful place for a picnic.
+^

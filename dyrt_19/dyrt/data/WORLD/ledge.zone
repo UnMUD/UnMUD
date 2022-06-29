@@ -1,0 +1,146 @@
+/*********************************************************
+* LEDGE.ZONE                                             *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:ledge
+
+%mobiles
+
+%objects
+
+Name            = ropebotpit
+PName           = rope
+AltName         = ladder
+Location        = IN_ROOM:8
+State           = 0
+MaxState        = 2
+Linked          = ROPETOPPIT@MOOR
+OFlags            { NoGet Destroyed }
+Desc[0]         = "A rope ladder leads up out of the pit."
+Desc[1]         = "A rope leads up out of the pit."
+Examine         = "The rope seems sturdy and reliable." 
+End             = ropebotpit
+
+Name            = ropewest
+PName           = rope
+AltName         = ladder
+Location        = IN_ROOM:1
+State           = 1
+MaxState        = 1
+Linked          = ROPEEAST@VALLEY
+OFlags            { Destroyed NoGet }
+Desc[0]         = "A rope ladder leads west across the steps."
+Desc[1]         = "A rope hangs west across the steps."
+Examine         = "The rope seems sturdy and dependable."
+End             = ropewest
+
+Name            = tunnwest
+PName           = tunnel
+AltName         = rockfall
+Location        = IN_ROOM:6
+State           = 1
+MaxState        = 1
+Linked          = tunneast
+OFlags            { NoGet }
+Desc[1]         = "A large rockfall blocks the passage to the east."
+Examine         = "The rockfall is made up of little stones and earth."
+End             = tunnwest
+
+Name            = tunneast
+PName           = tunnel
+AltName         = rockfall
+Location        = IN_ROOM:7
+State           = 1
+MaxState        = 1
+Linked          = tunnwest
+OFlags            { NoGet }
+Desc[1]         = "
+A huge rockfall to the west has sealed off the only exit to this chamber."
+Examine         = "The rockfall is made up of little stones and earth."
+End             = tunneast
+
+Name            = orb
+Location        = IN_ROOM:7
+BValue          = 1000
+Size            = 5
+Weight          = 10
+Desc[0]         = "
+A large glittering platinum orb sparkles in the light, sending rainbows of
+glittering fire twinkling around you."
+Examine         = "
+The orb is round, large, and in incredibly good shape for having sat here so
+long.  There is no doubt in your mind that it is exceedingly valuable."
+End             = orb
+
+%locations
+
+/* 1 */
+1 e:2;
+lflags { Outdoors RealTime }
+On The Ledge^
+   You are standing on a narrow ledge high up in the side of some steep cliffs.
+The ledge continues west beside a narrow cave mouth.  To the east, the ledge
+ends some twenty feet short of a set of steps, which climb up the cliff side
+from the valley below.
+^
+/* 2 */
+2 n:5 e:3 w:1 ;
+Lflags { Outdoors RealTime }
+Cavemouth^
+   You are standing on a narrow precipitous ledge.  The ledge runs
+east-west and to the north a narrow cavemouth leads into semi-darkness.
+Braving vertigo, you gaze over the lip of the ledge across the vast
+expanse of trees far below.
+^
+/* 3 */
+3 e:4 w:2 ;
+Lflags { Outdoors RealTime }
+Ledge^
+  The ledge narrows here, only a few inches wide as it leads further 
+eastwards.  To the west the ledge widens out.
+^
+/* 4 */
+4 ;
+Lflags { Death NoMobiles Outdoors }
+Ledge^
+   Your feet slip on the dangerously thin ledge, and you plunge rapidly
+downwards to your death...
+^
+/* 5 */
+5 n:8 e:6 s:2 ;
+Lflags { RealTime }
+Narrow Cave^
+   You are standing in a long, narrow cave.  Dim and pallid light shines
+in from the cavemouth to the south, illuminating passageways north and east.
+^
+/* 6 */
+6 e:^tunnwest w:5 ;
+Lflags { RealTime }
+Narrow Tunnel^
+   You are clambering along a narrow slanted passage.  Rubble and loose
+stones rain down on you as you move, suggesting the roof is not very strong.
+Light shines along the passage from a junction to the west.
+^
+/* 7 */
+7 w:^tunneast ;
+Lflags { RealTime }
+Forgotten Place^
+   You are standing in a dim forgotten place, deep underground.  The rocks
+around you seem placid and silent, as if in silent contemplation of some
+deeper more ancient power of the earth.
+^
+/* 8 */
+8 s:5 ;
+Lflags { Outdoors RealTime }
+Bottom of Pit^
+   You are standing at the bottom of a huge open pit.  The pit walls are
+almost sheer, and well beyond climbing.  A narrow tunnel leads south
+into the shadows.
+^

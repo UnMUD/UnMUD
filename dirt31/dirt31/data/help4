@@ -1,0 +1,11 @@
+
+God Commands:
+
+SYSLOG              Display selected part of the syslog file.
+SHUTDOWN <msg>	    Kicks everyone off, disables logins, and displays <msg>
+CRASH <msg>         Same as SHUTDOWN, but kills the mud-server as well.
+OPENGAME	    Reopens the game after a shutdown.
+DELETE [player]	    Totally deletes a player from the system's datafiles.
+GOD <msg>           Communication channel for gods.
+
+Type HELP <command> for detailed help on a command.

@@ -1,0 +1,490 @@
+/*********************************************************
+* TOWER.ZONE                                             *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:tower
+
+%mobiles
+
+Name            = wraith
+PName           = "The Wraith"
+Location        = wraith
+Strength        = 60
+Damage          = 10
+Aggression      = 50 
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { Cross DrainScr }
+Description     = "The shadowy form of a wraith swirls around you."
+Examine         = "What you feel is more of a presence than a being."
+End             = wraith
+
+Name            = shazareth
+PName           = "Shazareth"
+Location        = sorcerer
+Strength        = 99
+Damage          = 10
+Aggression      = 100
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { CanFrost }
+Description     = "Shazareth the Sorcerer stands here."
+Examine         = "
+Shazareth holds magical secrets beyond your possible comprehension."
+End             = shazareth
+
+Name            = cat
+PName           = "The Cat"
+Location        = sorcerer
+Strength        = 20
+Damage          = 10
+Speed           = 3
+SFlags            { Female }
+MFlags            { Blind }
+Description     = "A cat stares at you from the shadows."
+Examine         = "The cat is as black as midnight."
+End             = cat
+
+%objects
+
+Name            = shelf
+AltName         = wall
+Location        = IN_ROOM:black
+State           = 1
+MaxState        = 1
+Linked          = panel
+OFlags            { NoGet PushToggle }
+Desc[0]         = "There is a passageway beneath the shelf."
+Desc[1]         = "
+A wooden shelf on the north wall looks as if it once held many ancient tomes."
+Examine         = "
+The shelf seems to be on some kind of wooden sliders, maybe you could push it?"
+End             = shelf
+
+Name            = panel
+AltName         = door
+Location        = IN_ROOM:candle
+State           = 1
+MaxState        = 1
+Linked          = shelf
+OFlags            { NoGet PushToggle }
+Desc[0]         = "A small wooden panel is open in the southern wall."
+End             = panel
+
+Name            = red_candle
+PName           = candle
+AltName         = red
+Location        = IN_ROOM:candle
+State           = 1
+MaxState        = 1
+BValue          = 20
+Size            = 1
+Weight          = 1
+OFlags            { Extinguish Lightable }
+Desc[0]         = "A red candle burns here, emitting a soft flickering flame."
+Desc[1]         = "There is a red candle here."
+End             = red_candle
+
+Name            = blue_candle
+PName           = candle
+AltName         = blue
+Location        = IN_ROOM:candle
+State           = 1
+MaxState        = 1
+BValue          = 20
+Size            = 1
+Weight          = 1
+OFlags            { Extinguish Lightable }
+Desc[0]         = "A blue candle burns here, emitting a soft flickering flame."
+Desc[1]         = "There is a blue candle here."
+End             = blue_candle
+
+Name            = green_candle
+PName           = candle
+AltName         = green
+Location        = IN_ROOM:candle
+State           = 1
+MaxState        = 1
+BValue          = 20
+Size            = 1
+Weight          = 1
+OFlags            { Extinguish Lightable }
+Desc[0]         = "A green candle burns here, emitting a soft flickering flame."
+Desc[1]         = "There is a green candle here."
+End             = green_candle
+
+Name            = scroll
+Location        = IN_ROOM:scroll
+BValue          = 20
+Size            = 20
+Weight          = 1
+Desc[0]         = "A tattered scroll lies at your feet."
+Examine         = "
+The scroll reads:
+   'Read the words in the true light and be amazed as you take flight'."
+End             = scroll
+
+Name            = runes
+AltName         = writing
+Location        = IN_ROOM:scroll
+OFlags            { NoGet }
+Desc[0]         = "Some mysterious runes are etched on the wall."
+Examine         = "
+The runes are worn and hard to read, but seem to allude to some kind of 
+mystical ball which radiated a 'true color' of some sort."
+End             = runes 
+
+Name            = candlestick
+Location        = IN_ROOM:spell
+State           = 2
+MaxState        = 2
+BValue          = 100
+Size            = 20
+Weight          = 20
+OFlags            { Weapon }
+Desc[0]         = "
+A hefty gold candlestick lies here, a candle flickering brightly within it."
+Desc[1]         = "A hefty gold candlestick lies here with a candle in it."
+Desc[2]         = "A hefty gold candlestick lies here."
+Examine         = "
+The candlestick is very ornate, with fancy scrollwork and small figurines of
+dragons and knights locked in mortal combat."
+End             = candlestick
+
+Name            = cauldron
+Location        = IN_ROOM:potion
+OFlags            { NoGet }
+Desc[0]         = "A large cauldron bubbles away before you."
+Examine         = "
+It is the latest luxury model, with contoured edges, inlaid paneling, a timer,
+and even a simmer control!  It is dark black and big enough to cook a man in!"
+End             = cauldron
+
+Name            = fire
+AltName         = ashes
+Location        = IN_ROOM:potion
+State           = 1
+MaxState        = 1
+OFlags            { NoGet Lit Lightable Extinguish }
+Desc[0]         = "A large fire blazes away in one corner."
+Desc[1]         = "The ashes of a fire smolder in a corner."
+End             = fire
+
+Name            = wand
+Location        = IN_ROOM:magical
+BValue          = 100
+Size            = 2
+Weight          = 2
+Damage          = 10
+OFlags            { Weapon }
+Desc[0]         = "A short, slender wand lies here."
+Examine         = "It seems to be discharged."
+End             = wand
+
+Name            = ball
+Location        = IN_ROOM:treasure
+State           = 0
+MaxState        = 3
+OFlags            { NoGet Lit Lightable Extinguish }
+Desc[0]         = "A ball of light floats in the centre of the room."
+Desc[1]         = "
+The centre of the room is filled with an expanding ball of light."
+Desc[2]         = "The room is filled with an expanding ball of light."
+Examine         = "
+You attempt to examine the ball closer, but it's much too bright.  Your eyes
+start watering and you get a headache."
+End             = ball
+
+Name            = coins
+Location        = IN_ROOM:treasure
+BValue          = 200
+Size            = 10
+Weight          = 10
+Desc[0]         = "Some silver coins lie piled up in a heap on the floor."
+Examine         = "
+The coins are very tarnished, but seem to be silver.  They could be valuable."
+End             = coins
+
+Name            = staff
+Location        = IN_ROOM:treasure
+BValue          = 400
+Size            = 10
+Weight          = 3
+Desc[0]         = "A long runed staff lies here, etched with strange markings."
+Examine         = "
+You attempt to decipher the runes.  They seem to be some kind of protective
+spell, maybe against other magical items."
+End             = staff
+
+Name            = orb
+Location        = IN_ROOM:treasure
+BValue          = 50
+Size            = 2
+Weight          = 6
+Desc[0]         = "A small gold orb has been left here."
+Examine         = "
+The orb is golden, and probably dates from the times of the good king Pippin."
+End             = orb
+
+Name            = ring
+Location        = WORN_BY:shazareth
+BValue          = 100
+Size            = 1
+Weight          = 1
+OFlags            { WearOnHands PitReset }
+Desc[0]         = "A small gold ring has been dropped here."
+Examine         = "It looks as if it will fit tightly on any sized finger."
+End             = ring
+
+Name            = sceptre
+Location        = IN_ROOM:ante
+BValue          = 100
+Size            = 1
+Weight          = 1
+Damage          = 7
+OFlags            { Weapon }
+Desc[0]         = "A large silver sceptre has been placed here."
+Examine         = "
+The sceptre tapers to a narrow end, scarcely two inches in diameter, which
+seems scratched and worn away.  Otherwise, the silver finish is perfect."
+End             = sceptre
+
+Name            = door_treasure
+PName           = door
+Location        = IN_ROOM:treasure
+State           = 1
+MaxState        = 2
+Linked          = door_shazareth
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The door to the north is open."
+Desc[1]         = "The door to the north is closed."
+Desc[2]         = "The door to the north is locked."
+Examine         = "
+The door is made of solid marble and perfectly fits the doorway.  It is very
+smooth and appears to be unmarked in any way, except for a single, large red
+eye at its center, which appears to follow you around the room."
+End             = door_treasure
+
+Name            = door_shazareth
+PName           = door
+Location        = IN_ROOM:sorcerer
+State           = 1
+MaxState        = 2
+Linked          = door_treasure
+OFlags            { NoGet Openable Lockable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+Examine         = "
+The door is made of solid marble and perfectly fits the doorway.  It is very
+smooth and appears to be unmarked in any way, except for a single, large red
+eye at its center, which appears to follow you around the room."
+End             = door_shazareth
+
+Name            = book
+Location        = IN_ROOM:black
+State           = 1
+MaxState        = 1
+BValue          = 30
+Size            = 2
+Weight          = 2
+Desc[0]         = "There is a large mystical-looking book here."
+Examine         = "
+The book details the preparation of a potion of magical strength recovery.
+
+Ingredients:
+     Bat's Wing
+     Toad's Foot
+     Lizard's Claw
+     Four Pints of Blood
+     Eagle's Egg
+
+Stir well and leave to simmer for at least 10 minutes."
+End             = book
+
+Name            = hole
+Location        = IN_ROOM:sorcerer
+State           = 0
+MaxState        = 1
+OFlags            { NoGet }
+Desc[0]         = "There is a small hole carved into the south wall."
+Examine         = "It's about 2 inches in diameter."
+End             = hole
+
+Name            = door_tower
+PName           = door
+Location        = IN_ROOM:base
+State           = 1
+MaxState        = 1
+Linked          = DOOR_GOLEM@CASTLE
+OFlags            { NoGet Openable }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Examine         = "
+You see a jet black marble door, etched with runes and strange symbols which
+you do not recognize.  You see no locks of mortal means."
+End             = door_tower
+
+Name            = fountain
+Location        = IN_ROOM:sorcerer
+OFlags            { Extinguish Lit NoGet }
+Examine         = "
+You see a fountain of fire, not the sort to jump into on New Year's Day, 
+though it would seem very cosy to have in the living room."
+End             = fountain
+
+Name            = potion
+Location        = IN_ROOM:treasure
+BValue          = 250
+Size            = 2
+Weight          = 2
+Desc[0]         = "A potion of restore strength lies here."
+Examine         = "
+The potion has a small label on it that reads: 'Restore Strength'."
+End             = potion
+
+Name            = crown
+Location        = IN_ROOM:treasure
+BValue          = 400
+Size            = 12
+Weight          = 10
+OFlags            { WearOnHead }
+Desc[0]         = "A beautiful gold crown lies here."
+Examine         = "
+The crown seems suitable for a king, since it is lavishly decorated with
+sparkling gems and has a silken lining.  Wouldn't you want to be one?"
+End             = crown
+
+Name            = chute_top
+PName           = chute
+Location        = IN_ROOM:ante
+OFlags            { NoGet }
+Desc[0]         = "There is a chute in the wall, too small to climb down."
+End             = chute_top
+
+Name            = chute_bot
+PName           = chute
+Location        = IN_ROOM:magical
+OFlags            { NoGet }
+Desc[0]         = "There is a chute in the wall, too small to climb up."
+End             = chute_bot
+
+%locations
+
+/* 1 */
+Base n:^Door_Tower e:Black;
+lflags { RealTime }
+Base of the Tower^
+   You are now inside the black tower which stretches up out of the castle.
+The walls glisten with sorcery and from high above come the noises of high
+level spells and experimentation.
+   A doorway leads east into another room, and a door lies north.
+^
+/* 2 */
+Black n:^Shelf w:Base ;
+lflags { RealTime }
+Black Tower^
+   You are in a small dark room in one of the lower levels of the black tower.
+It appears to be a store room for spell ingredients which line the shelves on
+the northern wall.  An archway leads west to the tower entrance.
+^
+/* 3 */
+Candle s:^Panel w:Scroll ;
+lflags { RealTime }
+Candle Room^
+   This room looks like a cross between a Queen video and Madam Toussaud's
+after an arson attack, as candles of all shapes, sizes and colors fill the
+room.  A passageway leads west.
+^
+/* 4 */
+Scroll e:Candle ;
+lflags { RealTime }
+Scroll Room^
+   You are in a large, dry and well lit store room for scrolls, which would
+appear to be the Sorcerer's supply.
+^
+/* 5 */
+Potion s:Spell ;
+lflags { RealTime }
+Potion Store Room^
+   This would appear to be the potion preparation and store room for the
+Sorcerer, as around you lie shelves once lined with glass vials and bottles
+ready to be filled.  A single doorway leads south.
+^
+/* 6 */
+Spell n:Potion ;
+lflags { RealTime }
+Spell Room^
+   This room would appear to be one of the Sorcerer's many spell rooms as its
+scorched walls show the signs of many a fireball spell or a more dangerous
+variant of it.  A single scorched doorway leads north.
+^
+/* 7 */
+Magical e:Wraith;
+lflags { RealTime }
+Magical Item Storeroom^
+   You are standing in a large storeroom which would be packed with magical
+artifacts in normal times but it seems that the Sorcerer is using their power
+for a large spell project that crackles from the top-most level of the tower.
+   A doorway leads through to the east to the wraith room, and you tremble at
+the thought of the creature which may lie through it, a creature which has been
+known to slay even Enchanters in but a single blow...
+^
+/* 8 */
+Wraith n:Levitation w:Magical;
+lflags { RealTime }
+Wraith Room^
+   You find yourself in the room where the Sorcerer keeps his undead creatures,
+in particular his pet Wraith, until he needs them.  Exits lead north and west.
+^
+/* 9 */
+Levitation s:Wraith u:Ante;
+lflags { RealTime }
+Levitation Room^
+   You find yourself in a completely black room, even light seems afraid to go
+here.  It is completely bare of adornment, and even the walls wouldn't stay if
+they had somewhere else to lean!
+   There is a single exit in the ceiling high above, and another to the south.
+You seem to be floating!
+^
+/* 10 */
+Ante e:Sorcerer d:Levitation ;
+lflags { RealTime }
+Sorcerer's Ante-room^
+   You are standing in the Sorcerer's ante-room, which sizzles with magical
+energy.  Apart from the hole in the floor the only exit available is to the
+east.
+^
+/* 11 */
+Sorcerer e:Ledge s:^Door_Shazareth w:Ante;
+lflags { RealTime }
+Sorcerer's Room^
+   You are in a very large and exceedingly magical room, devoted to the pursuit
+of magic in all its form.  Flames dance over the walls to light the scene,
+although they are merely for effect as a permanent fire fountain erupts from
+the center of the room.  Gargoyles wink at you from the walls and objects move
+quietly in complex patterns, getting on with the jobs they have been given.
+   There is a door to the south, and a doorway leads west.  A splendid arched
+window looks east across the world.
+^
+/* 12 */
+Treasure n:^Door_Treasure;
+lflags { RealTime }
+Treasure Chamber^
+   This is large treasure store and naturally everything in it belongs to the
+Sorcerer and might take a rather nasty attitude to being removed.
+^
+/* 13 */
+Ledge w:Sorcerer;
+lflags { RealTime }
+The Window Ledge^
+   You are perched on a precarious window ledge looking down the black tower
+into the courtyard below.  The safety (?) of the Sorcerer's Room is back west.
+^

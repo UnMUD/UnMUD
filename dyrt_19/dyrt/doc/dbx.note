@@ -1,0 +1,3 @@
+If you are using dbx which is different than the one on the sun,
+you may wanna edit/delete the .dbxinit in the src/ dir.
+

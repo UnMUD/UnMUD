@@ -1,0 +1,35 @@
+#!/bin/csh -f
+# this is usually called from the Makefiles...
+# it deletes all the files not needed for distribution. Be prepared
+# to enter log comments if you are using RCS and have made any changes.
+# -val
+
+
+cd ..
+echo Deleting all object files, and temporary files...
+
+find . \( -name '*core*' -o -name '*.o' -o -name '*~' -o -name '#*#' -o -name '*.BAK' \) -exec rm {} \; -o -fstype nfs -prune
+
+echo Deleting aberd, generate, pfilter, xpp...
+
+rm -f src/aberd
+rm -f bin/aberd
+rm -f bin/generate
+rm -f bin/pfilter
+rm -f bin/xpp
+
+
+echo Deleting non-distributable files...
+rm -f data/locations data/mkdata.log data/mobiles data/objects
+rm -f data/reset.list data/verbs data/zones
+
+
+#uncomment following if you are not using RCS
+#exit 0
+
+echo Checking in any checked out files...
+cd src
+foreach i (*.c *.h)
+	echo "---->>>> " $i
+	ci -q $i
+end

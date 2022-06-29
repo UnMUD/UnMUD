@@ -1,0 +1,931 @@
+/*********************************************************
+* POWERS.ZONE                                            *
+* Written By: Rex                                        *
+* Code By: Kender                                        *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 30 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:powers
+
+%mobiles
+
+%objects
+
+Name            = map
+Location        = IN_ROOM:1
+OFlags            { NoGet }
+Desc[0]         = "There is a map of the powers building here."
+Examine         = "
+        28---7---29                            22: Conference Room
+             |                                 23: Storage Room
+        27---6---30
+             |
+24  25  26---5---31  32  33
+ |   |   |   |   |   |   |
+10---9---8---4---11--12--13
+ |   |   |   |   |   |   |
+23  22  21---3---16  17  18
+             |
+        20---2---15
+             |
+        19---1---14"
+End             = map
+
+Name            = chest
+Location        = IN_ROOM:23
+State           = 1
+MaxState        = 1
+OFlags            { NoGet Container Openable }
+Desc[0]         = "The chest is open."
+Desc[1]         = "The chest is closed."
+Examine         = "
+The chest is made of cedar wood and is stamped on the lid with:
+            'High quality staves enclosed.
+                  Handle with Care'."
+End             = chest
+
+Name            = staff1
+PName           = staff
+AltName         = up1staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #1's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff1
+
+Name            = staff2
+PName           = staff
+AltName         = up2staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #2's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff2
+
+Name            = staff3
+PName           = staff
+AltName         = up3staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #3's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff3
+
+Name            = staff4
+PName           = staff
+AltName         = up4staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #4's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff4
+
+Name            = staff5
+PName           = staff
+AltName         = up5staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #5's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff5
+
+Name            = staff6
+PName           = staff
+AltName         = up6staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #6's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff6
+
+Name            = staff7
+PName           = staff
+AltName         = up7staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #7's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff7
+
+Name            = staff8
+PName           = staff
+AltName         = up8staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #8's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff8
+
+Name            = staff9
+PName           = staff
+AltName         = up9staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #9's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff9
+
+Name            = staff10
+PName           = staff
+AltName         = up10staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #10's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff10
+
+Name            = staff11
+PName           = staff
+AltName         = up11staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #11's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff11
+
+Name            = staff12
+PName           = staff
+AltName         = up12staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #12's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff12
+
+Name            = staff13
+PName           = staff
+AltName         = up13staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #13's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff13
+
+Name            = staff14
+PName           = staff
+AltName         = up14staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #14's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff14
+
+Name            = staff15
+PName           = staff
+AltName         = up15staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #15's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff15
+
+Name            = staff16
+PName           = staff
+AltName         = up16staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #16's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff16
+
+Name            = staff17
+PName           = staff
+AltName         = up17staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #17's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff17
+
+Name            = staff18
+PName           = staff
+AltName         = up18staff
+Location        = IN_CONTAINER:chest
+Size            = 10
+Weight          = 20
+Damage          = 3
+OFlags            { Weapon Lit }
+Desc[0]         = "Unknown Power #18's staff is lying here."
+Examine         = "
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within."
+End             = staff18
+
+Name            = closet
+Location        = IN_ROOM:23
+State           = 1
+MaxState        = 1
+OFlags            { Container Openable NoGet }
+Desc[0]         = "The door to the closet is open."
+Desc[1]         = "The door to the closet is closed."
+Examine         = "
+The closet is large and has the word 'mawwiage' branded into it."
+End             = closet
+
+Name            = ring1
+PName           = ring
+AltName         = engring
+Location        = IN_CONTAINER:closet
+Size            = 1
+Weight          = 1
+OFlags            { WearOnHands Wearable }
+Desc[0]         = "A shining gold engagement ring is lying here."
+Examine         = "
+This ring is hand-crafted from the finest white gold available.  It reflects 
+the sunlight off of it as though it were a mirror.  The diamond held in the 
+center of the ring reflects and refracts the light in a way that seems to play
+with the very meaning of reality.  The very fibres of your inner being tingle 
+as you look at it.  The receiver of this ring must be one special lady!"
+End             = ring1
+
+Name            = ring2
+PName           = ring
+AltName         = manring
+Location        = IN_CONTAINER:closet
+BValue          = 200
+Size            = 1
+Weight          = 1
+OFlags            { WearOnHands Lit Wearable }
+Desc[0]         = "A shining gold man's wedding ring has been left here."
+Examine         = "The ring is made out of shining white gold."
+End             = ring2
+
+Name            = ring3
+PName           = ring
+AltName         = womanring
+Location        = IN_CONTAINER:closet
+BValue          = 200
+Size            = 1
+Weight          = 1
+OFlags            { WearOnHands Lit Wearable }
+Desc[0]         = "A woman's wedding ring has been left here."
+Examine         = "The ring is made out of shining white gold."
+End             = ring3
+
+Name            = weddingdress
+AltName         = dress
+Location        = IN_CONTAINER:closet
+Size            = 6
+Weight          = 20
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "A beautiful white wedding gown has been left here."
+End             = weddingdress
+
+Name            = tuxedo
+Location        = IN_CONTAINER:closet
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "A tuxedo has been left lying here."
+End             = tuxedo
+
+Name            = flowers
+AltName         = bouquet
+Location        = IN_CONTAINER:closet
+Size            = 6
+Weight          = 5
+Desc[0]         = "A bride's bouquet has been left here."
+End             = flowers
+
+Name            = book
+Location        = IN_ROOM:22
+Size            = 100
+Weight          = 100
+OFlags            { NoGet }
+Desc[0]         = "A great leather-bound book is resting here on its stand."
+Examine         = "
+You notice that the book is locked not by a key but by some magical force that 
+only the gods can unleash.  Try as you might, you can not see what is written 
+in it."
+End             = book
+
+Name            = table
+Location        = IN_ROOM:22
+Size            = 100
+Weight          = 100
+OFlags            { NoGet }
+Examine         = "
+The table is large, round and dark.  The surface is perfect and doesn't seem to 
+have so much as a single scratch in it.  It would appear to be for important 
+meetings."
+End             = table
+
+Name            = wardrobe
+Location        = IN_ROOM:23
+State           = 1
+MaxState        = 1
+OFlags            { Openable Container NoGet }
+Desc[0]         = "The wardrobe is open."
+Desc[1]         = "The wardrobe is closed."
+Examine         = "A label on the door reads 'robes'."
+End             = wardrobe
+
+Name            = robe1
+PName           = robe
+AltName         = up1robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #1's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe1
+
+Name            = robe2
+PName           = robe
+AltName         = up2robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #2's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe2
+
+Name            = robe3
+PName           = robe
+AltName         = up3robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #3's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe3
+
+Name            = robe4
+PName           = robe
+AltName         = up4robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #4's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe4
+
+Name            = robe5
+PName           = robe
+AltName         = up5robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #5's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe5
+
+Name            = robe6
+PName           = robe
+AltName         = up6robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #6's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe6
+
+Name            = robe7
+PName           = robe
+AltName         = up7robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #7's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe7
+
+Name            = robe8
+PName           = robe
+AltName         = up8robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #8's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe8
+
+Name            = robe9
+PName           = robe
+AltName         = up9robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #9's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe9
+
+Name            = robe10
+PName           = robe
+AltName         = up10robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #10's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe10
+
+Name            = robe11
+PName           = robe
+AltName         = up11robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #11's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe11
+
+Name            = robe12
+PName           = robe
+AltName         = up12robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #12's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe12
+
+Name            = robe13
+PName           = robe
+AltName         = up13robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #13's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe13
+
+Name            = robe14
+PName           = robe
+AltName         = up14robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #14's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe14
+
+Name            = robe15
+PName           = robe
+AltName         = up15robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #15's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe15
+
+Name            = robe16
+PName           = robe
+AltName         = up16robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #16's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe16
+
+Name            = robe17
+PName           = robe
+AltName         = up17robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #17's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe17
+
+Name            = robe18
+PName           = robe
+AltName         = up18robe
+Location        = IN_CONTAINER:wardrobe
+Size            = 6
+Weight          = 5
+OFlags            { WearOnBody Wearable }
+Desc[0]         = "Unknown Power #18's robe is lying here."
+Examine         = "
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material."
+End             = robe18
+
+%locations
+
+1 n:2 e:14 w:19;
+lflags { Party Peaceful }
+Entrance to the Powers Building^
+   You have stepped into the main lobby of the Powers Building.  The building 
+itself is of the newest design.  The floor looks like it is made of highly
+polished marble.  The walls are a beautiful and pure white, and the doors that
+surround you are made of the heaviest dark wood and have golden door knobs.  
+This building was clearly designed to be an office building, which is exactly 
+what it is being used for.
+^
+2 s:1 w:20 e:15 n:3;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the southern hall of the Powers Building.  To the north 
+the hallways meet in a cross and head out in all directions from there.  To the 
+south is the main entrance to the building.  There are office doors all around 
+you.
+^
+3 s:2 n:4 w:21 e:16;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the southern hall of the Powers Building.  To the north of 
+you the hallways meet in a cross and head out in all four directions from 
+there.  To the south is the main entrance to the building.  There are offices 
+all around you.
+^
+4 w:8 e:11 n:5 s:3;
+lflags { Party Peaceful }
+The Powers Building^
+   You have come to the cross in the center of the building.  There are 
+hallways of equal length in all four directions from here.
+^
+5 s:4 n:6 w:26 e:31;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the northern hallway of the Powers Building.  To the south 
+of you, the hallways meet in a cross and head out from there in all four 
+directions.  Far to the south is the main entrance, and to the north the 
+hallway ends in a huge bay window.
+^
+6 s:5 n:7 w:27 e:30;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the northern hallway of the Powers Building.  To the south 
+the hallways meet in a cross and head out in the four directions from there.  
+Far to the south you can see the main entrance, and to the north there is a 
+huge bay window.
+^
+7 s:6 w:28 e:29;
+lflags { Party Peaceful }
+The Powers Building^
+   You have reached the northern end of the building.  In front of you is a 
+huge bay window, looking out into the area behind the village.  There is a 
+quiet field out there, providing a lovely view.
+^
+8 w:9 e:4 n:26 s:21;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the western hallway of the Powers Building.  To the east 
+the hallways meet in a cross and head out in the four directions from there.  
+To the west, the hallway ends in a huge bay window.
+^
+9 e:8 w:10 n:25 s:22;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the western hallway of the Powers Building.  To the east 
+the hallways meet in a cross and head out in the four directions.  To the west, 
+the hallway ends in a huge bay window.
+^
+10 e:9 n:24 s:23;
+lflags { Party Peaceful }
+The Powers Building^
+   You have reached the end of the western hallway.  To the east the hallway 
+goes back to the central cross where the four hallways meet.  To the west there 
+is a huge bay window, allowing a view of the back of the village.  You can see 
+a few houses and slightly older buildings as well as an old church.
+^
+11 w:4 e:12 n:31 s:16;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the eastern hallway of the Powers Building.  To the west 
+the hallways meet in a cross and head out in the four directions from there.  
+To the east, the hallway ends in a huge bay window.
+^
+12 w:11 e:13 n:32 s:17;
+lflags { Party Peaceful }
+The Powers Building^
+   You continue down the eastern hallway of the Powers Building.  To the west 
+the hallways meet in a cross and head out in the four directions from there.  
+To the east the hallway ends in a huge bay window.
+^
+13 w:12 n:33 s:18;
+lflags { Party Peaceful }
+The Powers Building^
+   You have reached the end of the eastern hall.  To the west the hallway 
+stretches back to the central cross.  To the east is a window that looks out on 
+a bit of an old village, and in the distance you can see a body of water.
+^
+14 w:1;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #1^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+15 w:2;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #2^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+16 w:3 n:11;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #3^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the southern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+17 n:12;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #4^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the southern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+18 n:13;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #5^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+19 e:1;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #6^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+20 e:2;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #7^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the southern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+21 e:3 n:8;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #8^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the southern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+22 n:9;
+lflags { Party Peaceful }
+The Conference Room^
+   You have entered the Conference Room.  It is here that the powers hold their
+meetings and conduct important MUD business.  In front of you is a huge table
+with seats for eighteen.  The table is round, made of very heavy wood, and has
+plenty of space for everyone to move around as well as take notes and memos.
+It seems like the wood is very old, but it has been beautifully restored and
+polished.  You can feel that many important decisions have been made around
+this table for many centuries.  The chairs that surround the table are silver
+and shine in the provided light.
+^
+23 n:10;
+lflags { Party Peaceful }
+The Storage Room^
+   This is the storage area.  This room seems to be filled with filing cabinets
+and other such things that would store documents, backups, important files,
+and the like.  The whole MUD would probably go up in flames if a careless match
+was lit in here.  In the filing cabinets there is a lot of paper and tons of
+disks, holding backup after backup.  In addition to all of the filing cabinets,
+there are a lot of cabinets, closets and storage chests here that seem to hold
+ceremonial items.
+^
+24 s:10;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #9^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+25 s:9;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #10^
+€€   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the northern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+26 s:8 e:5;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #11^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the northern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+27 e:6;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #12^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+28 e:7;
+lflags { Peaceful Private Party }
+The Office of Unknown Power #13^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+29  w:7;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #14^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the eastern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+30 w:6;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #15^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+31 w:5 s:11;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #16^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the northern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+32 s:12;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #17^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the northern wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^
+33 s:13;
+lflags { Party Peaceful Private }
+The Office of Unknown Power #18^
+   This office is hideously boring.  There is no decoration here whatsoever.
+There is a plain window in the western wall that lets light into the room.
+There is a new-smelling industrial carpet on the floor.  Would the person
+who inherits this room PLEASE send in a description?!
+^

@@ -1,0 +1,124 @@
+          A Guide for Writing Actions Under the DYRT1.* Gaming System
+    ========================================================================
+                     Copyright (c)1993 The Mystique Project
+                    Internet: owner-mystique@gnu.ai.mit.edu
+
+                          written by Valentin Popescu
+                         <vpopesc@opus.calstatela.edu>
+
+		updated for use with Dyrt 1.2* by Katie Mowry
+                            <96mowry@matt.alma.edu>
+   ===========================================================================
+Actions are defined in a file residing in the /data directory, and are 
+called...well... "actions".
+
+An action is defined by 3 to 6 lines.  An example of an action is:
+
+	:worship sa
+	all:%a falls to the ground in worship of the gods of MUD.
+	me:You fall to your knees in reverence of the gods of MUD.
+	target:%a snivels and grovels and shamelessly worships you.
+	sender:You worship %t.
+	others:%a falls down to worship %t.
+
+
+
+1.0 DEFINING AN ACTION
+
+First line (:worship sa) denotes the name of the action (preceded by a 
+colon), then a number of special flags:
+
+	s = single action.  Something that can be done to a person in
+		particular.
+
+	a = room action.  Something that can be done to the room (i.e. wave).
+
+	h = hostile action.  If this is done to a person or mobile, the 
+		receiver will consider it hostile and a fight would ensue.  
+		(for example, "slap puff" on some muds would start a fight 
+		with Puff).
+
+	i = ignore if aloof.  People who have "aloof" on will not be bothered
+		by these actions.
+
+	f = action can be performed on people not in the same room.
+
+Now... the s/a flags determine how many lines the description will require.
+If the flag "s" is set, you will need to put in a description that the
+receiver will see, one that the sender will see, and one that the room will
+see.  For "a", you will need one for sender and one for room.  The above
+example illustrates the required fields for an "sa" action.  Another action
+may be defined as:
+
+	:yawn a
+	all:%a yawns.
+	me:My, what big teeth you have!
+
+or
+
+	:kick shi
+	target:%a kicks you.  "Ooof!"
+	sender:You kick %t.
+	others:%a kicks %t!
+
+(notice the use of h[ostile] and i[ignore if aloof] flags in the last example).
+
+Note also that there is a different set of messages for what the person sees
+and what the target sees, depending on if the action has a destination or not.
+Sender: and Others: will be used if there is a target, whereas All: and Me:
+if there is no target.
+
+
+
+2.0 USING PRONOUN FLAGS
+
+The following flags may be used within an action:
+
+	%~ = This flag will be replaced by "him or her", as in "You kiss %~".
+		When this is used in the Sender: field, it will pertain to 
+		the sex of the target, whereas in the other fields, to the 
+		sex of the actor.
+
+	%^ - This flag will be replaced by "his or her", as in "You take
+		%^ hand".  Otherwise same as for %~.
+
+	%a - This is the actor, the one who performs the action.
+
+	%t - This is the target, the one on whom the action is being done.
+
+Also, the following clauses allow for the selection of whole strings based
+on gender.  These can be tricky at first.
+
+	%<string 1:string 2%>
+	%[string 1:string 2%]
+
+The first one will select string 1 if the ACTOR is male and string 2 if she's
+female.  The second one will select string one if the TARGET is male, and
+string 2 if she's female.
+
+
+
+3.0 QUICK EXAMPLES
+ 
+        :accuse s
+        target:%a puts all the blame on you.
+        sender:%<He%:She%> did it! Not me!
+        others:%a points a finger at %t and yells '%<He%:She%> did it!'
+
+        :beam a
+        all:%a is beaming so brightly. What could be the source?
+        me:You beam with utter brilliance.
+
+        :beg sai
+        all:%a gets out %^ tin cup and starts to beg.
+        me:You get out your tin cup and begin to beg.
+        target:%a stares at you with %^ best puppy face.
+        sender:You prostrate yourself in front of %t.
+        others:%a kneels in front of %t and puts on a puppy face.
+
+        :think as
+        all:%a is thinking about %^ next hot date.
+        me:What's on your mind?
+        target:%a is thinking about you...
+        sender:Oh, isn't %<he%:she%> wonderful!
+        others:%a is thinking about %t.

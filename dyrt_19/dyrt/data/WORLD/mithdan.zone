@@ -1,0 +1,908 @@
+/*********************************************************
+* MITHDAN.ZONE                                           *
+* Written By: Dragorn                                    *
+* Code By: Dragorn                                       *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 30 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:mithdan
+
+%mobiles
+
+Name            = red_dragon
+PName           = "The Dragon"
+Location        = 40
+Strength        = 9999
+Damage          = 100
+Armor           = 100
+Speed           = 0
+Description     = "
+A huge red dragon settles down and wraps itself around the fountain.  Although
+it looks very calm, you remember the old adage, 'Let Sleeping Dragons Lie'
+and decide that it is not a good idea to irritate it."
+Examine         = "
+The dragon's scales glitter in the magical light, and it keeps one eye half
+open to gaze back at you."
+End             = red_dragon
+
+Name            = earth_elemental
+PName           = "The Elemental"
+Location        = 3
+Strength        = 400
+Damage          = 30
+Armor           = 8
+Speed           = 5
+Description     = "
+On the edge of your vision a graceful but immensely huge earth elemental
+slips among the trees."
+Examine         = "
+The elemental is formed of rocks, earth, and living greenery.  Although it 
+is thin and graceful, beneath its features ripples immense strength."
+End             = earth_elemental
+
+Name            = druid
+PName           = "The Druid"
+Location        = 69
+Strength        = 100
+Damage          = 5
+Speed           = 5
+Description     = "A druid wanders the town, his face concealed by a deep cowl."
+Examine         = "
+The druid's robes appear to made of soft cotton or a similar cloth.
+His face is hidden in the shadow of his cowl."
+End             = druid
+
+Name            = druid2
+PName           = "The Druid"
+Location        = 69
+Strength        = 100
+Damage          = 5
+Speed           = 5
+Description     = "A druid wanders the town, his face concealed by a deep cowl."
+Examine         = "
+The druid's robes appear to be made of soft cotton or a similar cloth."
+End             = druid2
+
+Name            = beauty
+PName           = "Beauty"
+Location        = 74
+Strength        = 100
+Damage          = 10
+Speed           = 0
+SFlags            { Female }
+Description     = "
+A beautiful woman sits on the edge of the fountain, sunning herself."
+Examine         = "
+The woman is exquisitely beautiful, and your heart yearns for her.
+However, she seems very cold and aloof."
+End             = beauty
+
+Name            = snowcritter
+PName           = "The Critter"
+Location        = 24
+Strength        = 180
+Damage          = 25
+Aggression      = 100
+Speed           = 0
+Description     = "
+A creatures with glowing red eyes and snow-white fur snarls and leaps at you!"
+Examine         = ""
+End             = snowcritter
+
+Name            = beast
+PName           = "The Beast"
+Location        = 47
+Strength        = 210
+Damage          = 25
+Speed           = 0
+PFlags            { NoSteal }
+Description     = "
+An immense beast, a living combination of fire and ice, stands before you."
+Examine         = "
+Huge and incredibly powerful in appearance, the beast rears up on its hind
+legs and roars at you."
+End             = beast
+
+%objects
+
+Name            = inscription_stone
+PName           = inscription
+AltName         = stone
+Location        = IN_ROOM:35
+OFlags            { NoGet }
+Desc[0]         = "An inscription has been carved into the stone at your feet."
+Examine         = "
+The inscription reads:
+   The Guardian Dragons will allow only those who pay proper homage to the gods
+to pass through the portal.  Those who try to force their passage will be 
+punished."
+End             = inscription_stone
+
+Name            = fountain
+Location        = IN_ROOM:40
+OFlags            { NoGet Drink }
+Desc[0]         = "
+A large fountain bubbles in front of you, a clean scent rising from the water."
+Examine         = "
+The fountain seems immeasurably deep, and you think you can see trees far
+away at the bottom of it."
+End             = fountain
+
+Name            = berries
+Location        = IN_ROOM:9
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 20
+Weight          = 8
+Damage          = 0
+Desc[0]         = "A small group of berries has been dropped on the floor."
+Desc[1]         = "A small cluster of berries grows on a nearby bush."
+Examine         = "The berries look very sweet and juicy."
+End             = berries
+
+Name            = stoutstick
+PName           = branch
+AltName         = stick
+Location        = IN_ROOM:11
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 20
+Weight          = 8
+Damage          = 6
+OFlags            { Lightable Weapon Extinguish }
+Desc[0]         = "A lit branch has been dropped here."
+Desc[1]         = "A stout branch has been dropped here."
+End             = stoutstick
+
+Name            = torch
+Location        = IN_ROOM:39
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 20
+Weight          = 8
+OFlags            { Lightable Extinguish }
+Desc[0]         = "A torch made of dried reeds burns here."
+Desc[1]         = "A torch made of dried reeds rests in a wrought-iron sconce."
+Examine         = "The torch looks as if it will burn for a good long time."
+End             = torch
+
+Name            = shard
+AltName         = crystal
+Location        = IN_ROOM:54
+State           = 1
+MaxState        = 1
+BValue          = 300
+Size            = 50
+Weight          = 29
+Damage          = 15
+Desc[0]         = "A sharp shard of crystal has been dropped here."
+Desc[1]         = "
+A shard of crystal from the shattered branches lies at your feet."
+Examine         = "
+The shard refracts the light in a beautiful rainbow of color, and it looks 
+as if it would make a sturdy sword."
+End             = shard
+
+Name            = ivyarmor
+PName           = armor
+Location        = IN_ROOM:65
+State           = 1
+MaxState        = 1
+BValue          = 250
+Size            = 50
+Weight          = 29
+Armor           = 10
+OFlags            { Armor GetFlips WearOnBody ExcludeWear }
+Desc[0]         = "
+A vest that appears to be made of living ivy has been dropped here."
+Desc[1]         = "A vest made of ivy hangs on a hook."
+Examine         = "
+A fine example of Elven work, the armor is crafted out of living ivy that
+conforms itself to the wearer's body, ensuring a perfect fit."
+End             = ivyarmor
+
+Name            = firearmor
+PName           = armor
+Location        = IN_ROOM:47
+State           = 1
+MaxState        = 1
+BValue          = 250
+Size            = 50
+Weight          = 29
+Armor           = 12
+OFlags            { Armor WearOnBody ExcludeWear GetFlips }
+Desc[0]         = "
+A suit of armor has been dropped here, withering the small weeds around it."
+Desc[1]         = "
+An armor suit of fire is against one wall, ice strands growing over it."
+Examine         = "
+The fire seems to burn hot, but as you reach for it, it is cool to the touch."
+End             = firearmor
+
+Name            = iceblade
+PName           = sword
+Location        = IN_ROOM:47
+State           = 1
+MaxState        = 1
+BValue          = 250
+Size            = 50
+Weight          = 29
+Damage          = 13
+OFlags            { Weapon GetFlips }
+Desc[0]         = "A short and broad sword of ice has been dropped here."
+Desc[1]         = "A blade of ice is here, seeming to burst into flames."
+Examine         = "
+The ice is neither cold nor warm, and the hilt of the sword seems to conform
+to your hand."
+End             = iceblade
+
+Name            = crystal
+AltName         = sculpture
+Location        = IN_ROOM:51
+State           = 1
+MaxState        = 1
+BValue          = 600
+Size            = 10
+Weight          = 10
+OFlags            { GetFlips }
+Desc[0]         = "A delicate crystal sculpture lies here."
+Desc[1]         = "
+A crystal sculpture rests in the middle of the clearing, glowing internally."
+Examine         = "
+The crystal has been sculpted into a dragon, and its eyes glow faintly red.
+As you turn the crystal it refracts the light into a thousand rainbows around
+you.  This sculpture must be highly revered by the druids."
+End             = crystal
+
+Name            = prettystone
+PName           = stone
+Location        = IN_ROOM:75
+State           = 1
+MaxState        = 1
+BValue          = 400
+Size            = 10
+Weight          = 10
+OFlags            { GetFlips }
+Desc[0]         = "A sparkling shiny stone has been dropped here."
+Desc[1]         = "
+A shiny stone sits on the edge of the pool, the waves gently rocking it."
+Examine         = "The stone is very pretty, and sparkles in the sun."
+End             = prettystone
+
+%locations
+
+1 e:2 s:6 w:PASS@BLIZZARD;
+lflags { Outdoors NoMobiles Cold }
+Thin Trail^
+   Originally created by animals, this trail has been widened by human passage,
+although it looks as if it has not been traveled lately.  The forest has grown
+close to the edge of the trail, and thick branches reach overhead to catch the
+snow.  The thin trail continues to the east and to the south, the snow much
+thinner there, and to the west there is an icy trail.
+^
+2 w:1;
+lflags { Outdoors NoMobiles Cold }
+Dead End^
+   The trail here is overrun with heavy brambles and thorns which completely
+block your passage through.  Beyond the brambles the forest continues, but
+there do not seem to be any trails.  The only way out is to follow the thin
+trail back to the west.
+^
+3 s:8 e:4;
+lflags { Outdoors Cold }
+Heavy Woods^
+   The smell of pine is overwhelming.  The floor of the forest is thick with
+pine needles which rustle with each step you take.  The sun shines through 
+the trees and creates shifting shadows.  The forest continues to the east and
+south, but is much too thick in other directions to travel.
+^
+4 w:3 e:5 s:9;
+lflags { Outdoors Cold }
+Thick Woods^
+   The woods are thick and confusing.  The smell of pine clogs your senses,
+adding to the effect.  The woods continue to the west and south.  To the east
+is a sandy clearing.  Heavy brambles make passage to the north impossible,
+which is unfortunate, because there appears to be something in the distance
+between the trees.
+^
+5 w:4 e:6;
+lflags { Outdoors Cold }
+Sandy Clearing^
+   The floor of the clearing is covered in pure white sand.  The edges are
+well-defined, the sand not mixing with the dirt of the forest.  The clearing
+is filled with a sense of magic, but there is nothing noticeable.  In the
+center of the clearing is a fire pit, but the edges of the pit have no soot.
+Thick brambles line the north and south of the pit, but the forest looks 
+thinner to the east and west.
+^
+6 w:5 e:7 n:1 s:10;
+lflags { Outdoors Cold }
+Thin Trail^
+   The trail is thin and unkempt, the forest struggling to reclaim it.  To the
+east and west the trail thins out into forest, but to the north and south the
+trail continues.  The east trail is heavily overgrown with brambles and thorns.
+You can only see the sky in patches, as the forest canopy has grown thick over
+the trail.
+^
+7 w:6;
+lflags { Outdoors Cold Death }
+Brambles^
+   The thick brambles catch at your clothes as you walk.  The trail ahead
+is covered with them but you persevere.  Hidden by the growth, the trail
+unexpectedly drops out from under you.  You trip and fall into the brambles,
+unable to stop yourself from rolling.  The trail becomes steeper, and the
+last sight you see is an endless sea of brambles and thorns.
+^
+8 n:3 s:13 e:9;
+lflags { Outdoors Cold }
+Thick Forest^
+   The thick forest surrounds you, overwhelming your senses.  The forest
+stretches to the north, south and east.  The forest to the west is thick
+and overgrown with brambles as far as you can see.  There appear to be
+trails, but after following them for a short time they fade away, leaving
+you more lost then when you began.
+^
+9 w:8 n:4 s:14;
+lflags { Outdoors Cold }
+Thick Forest^
+   The forest turns you around, leading you along on false trails.  You wish
+you had a compass but with these woods it might not do much good.  The forest
+leads to the north, south, and east.  As is much of the trail, the western
+route is blocked by thick and heavy forests.
+^
+10 n:6 e:11;
+lflags { Outdoors Cold }
+Dirt Trail^
+   Although the trail still has a lingering abandoned feel, it appears to be
+used occasionally.  The trail winds through the deep woods to the east and
+north.  The canopy of the forest reaches overhead, blocking out much of the
+sunlight, but the forest still has a warm feel.
+^
+11 w:10 e:12 s:16;
+lflags { Outdoors Cold }
+Dirt Trail^
+   In the distance to the east you catch a glimpse of small huts and other
+buildings between the trees.  A thin wisp of smoke rises overhead.  The
+dirt trail continues to the east and west, and to the south there is a small
+clearing filled with ferns.
+^
+12 w:11 e:67;
+lflags { Outdoors Cold NoMobiles }
+Town Entrance^
+   The town entrance is on a slight rise, giving you a good view of the town
+before you.  It is dotted by several temples, and has only a few merchants.
+Thick woods lead away to the west, and what appears to be the main street of
+the town continues to the east.
+^
+13 n:8 e:14;
+lflags { Outdoors Cold }
+Thick Forest^
+   All around you the forest is filled with brambles, although they look
+much thinner to the north, and the eastern route has few.  The forest turns
+you around, confusing your senses.  The musty smell of aged leaves clogs your
+mind.
+^
+14 w:13 e:15 n:9;
+lflags { Outdoors Cold }
+Thick Woods^
+   The woods stretch off into the distance, filling the area from horizon to
+horizon.  You struggle not to lose your sense of direction, but it is
+impossible to tell if you are still facing the way you began.  The forest is
+full of sharp thorns to the south, but to the north and west it continues
+uninterrupted.  To the east there is a thin patch covered in snow.
+^
+15 w:14 s:18;
+lflags { Outdoors Cold }
+Snowy Path^
+   The path is drifted with snow and there is a sharp chill in the air.  A
+gust of wind brings more snow down on you from the mountain peak that covers
+the south-eastern horizon.  The path continues to the south, and fades away
+into the forest to the west.
+^
+16 n:11;
+lflags { Outdoors NoMobiles }
+Sacred Clearing^
+    This clearing throbs with magic, the very trees almost glow with the
+force of it.  A heavy wind whips through the trees as you enter, as if the
+force that guards this clearing is displeased with your presence. It would
+probably be a good idea to leave and not anger it further.
+^
+17 e:18 s:19 u:19 d:18;
+lflags { Outdoors Cold }
+Snowy Trail^
+    The trail is covered with snow that buried the rocks, making travel very
+difficult. The trail slopes upwards steeply, obviously leading up the side
+of the snow covered mountain that covers the south-eastern horizon. Far above
+you there appears to be some sort of structure, but from here it is
+impossible to tell. The trail slopes down to the east and up to the south.
+^
+18 w:17 u:17 n:15;
+lflags { Outdoors Cold }
+Mountain Trail^
+    The trail here slopes upwards, leading towards the top of the mountain,
+although the end of the trail is obscured by the drifting snow. Forest covers
+the horizon to the north, the green leaves a sharp contrast to the snowy
+peaks above you. The trail continues flat towards the forest, or you can
+follow it up the side of the mountain.
+^
+19 d:17 n:17 e:20;
+lflags { Outdoors Cold }
+Huge Rock^
+    You stand atop a huge snow-covered rock. The rock itself is over thirty
+paces long, and it slants upwards to the east. The snow makes it difficult
+to keep from slipping on the slick surface of the stone. The path drops away
+to the north, and thick green forest stretches below you.
+^
+20 w:19 e:21;
+lflags { Outdoors Cold }
+Winding Ledge^
+    The ledge is covered with snow, and with each step you risk plunging into
+the deep gorge below you. The stone at your back is rough and cold, and the
+ledge is only a few paces wide. To the west a huge flat stone slants down
+towards a path, and the ledge continues to the east.
+^
+21 w:20 e:22;
+lflags { Outdoors Cold }
+Winding Ledge^
+    The ledge here is beginning to crumble, but it is still strong enough
+to cross. The wind whips in dangerous whirlwinds, funneled up towards you
+by the deep gorge at your feet. The ledge continues to the east and west.
+^
+22 w:21 e:23 s:24;
+lflags { Outdoors Cold }
+Thin Ledge^
+    The ledge here narrows out further, but thankfully the cliff at your back
+is lower and you can clamber into a small snowy field to the south. The snow
+is blinding, and you cannot see the bottom of the gorge or the end of the
+field. The ledge continues to the west, but to the east it becomes even
+narrower.
+^
+23 w:22;
+lflags { Outdoors Cold Death }
+Thin Ledge^
+   The ledge narrows until you are balancing only on your heels.  The ice is 
+slick, and on your next step you slip.  As you fall, you manage a desperate 
+grab at the ledge, and by some miracle manage to grasp it.  You dangle from 
+the ledge, unable to scramble back up, for hours, shouting for help. No one is 
+here to hear you.  Finally your strength gives out, and you plunge hundreds of 
+paces into the deep gorge below you.
+^
+24 n:22 s:30;
+lflags { Outdoors Cold }
+Snowy Field^
+    The whipping snow makes it impossible to see how big the field is, but
+it seems to be larger then you first thought. Steep, unclimbable cliffs
+stretch above you to the east and west. To the north you can dimly make
+out a thin ledge before a deep gorge, and the whipping snows continue to
+the south.
+^
+25 s:31;
+lflags { Outdoors Cold  Death}
+Fall^
+   Blinded by the swirling snows, you stumble into an ice-covered hole.  
+Before you have the chance to grab anything, you plunge to your death.
+^
+26 s:33 e:27;
+lflags { Outdoors Cold }
+Bare Trail^
+    Rising above the clouds, the trail is bare and rocky. Below you the storm
+swirls snow and ice onto the mountain peak, but the air is calm here. The
+bare path leads down the mountain to the south, and further up towards the
+east.
+^
+27 w:26 e:28;
+lflags { Outdoors Cold }
+Cold Trail^
+    The wind is bitter cold here, the force of it almost enough to send you
+staggering back down the mountain. The air is perfectly clear, and far
+below you the storm clouds roil. To the east the trail widens out into a
+clearing, and the trail leads back down the mountain to the west.
+^
+28 w:27 s:34;
+lflags { Outdoors Cold }
+Stone Clearing^
+    The clearing looks as if it was formed hundreds of years ago by a searing
+heat. The ground beneath you is perfectly smooth stone, and its almost
+polished surface reflects the suns rays into your face. The clearing becomes
+a thin trail leading down the side of the mountain to the west, and to the
+south the trail passes beneath a huge stone arch.
+^
+29;
+lflags { Death Outdoors Cold }
+Icy Slide^
+     You slip on the ice and plummet to your death.
+^
+30 w:29 n:24 e:31;
+lflags { Outdoors Cold }
+Blinding Snow^
+    The snow whips in circular patterns, blinding you. You can faintly make
+out the shapes of trails leading to the east and west, and to the north there
+appears to be a large clearing. The clouds appear to be less then ten paces
+above your head.
+^
+31 w:30 e:32;
+lflags { Outdoors Cold }
+In the clouds^
+    The clouds swirl around you, and the snow whips with stinging force into
+your face. The dampness of the clouds soaks into your clothes, only to be
+frozen by the cold wind. The trail disappears into the clouds to the
+east, and slops back down the mountain to the west.
+^
+32 w:31 e:33;
+lflags { Outdoors Cold }
+Above the Clouds^
+    The trail stretches beneath you, lost in the swirling mass of the clouds.
+A light dusting of snow is swept up by the wind, but the bulk of it remains
+beneath you, exposing a bare rock path. The path continues up the side of
+the mountain to the east.
+^
+33 w:32 n:26;
+lflags { Outdoors Cold }
+Bare Path^
+    The sun shines down brilliantly here, practically blinding you. Beneath
+you the storm clouds roil and turn in hypnotic patterns. The stone path
+winds up to the north, and slopes down into the clouds to the west.
+^
+34 n:28 s:35;
+lflags { Outdoors Cold }
+Stone Arch^
+    The stone arch stretched above you, its massive columns over four paces
+wide. The columns themselves are carved with incredibly intricate runes
+that seem to gently throb with power. The stone path leads to a large
+clearing to the north, and to the south a stone temple is carved into the
+mountainside.
+^
+35 n:34 s:50;
+lflags { }
+Temple Entrance^
+    Huge stone dragons stand guard at the entrance of the temple. At first
+glance they appear to be stone, but as you try to enter the temple one
+swivels its head towards you and growls menacingly. The one on your other
+side stands and stretches its stone wings.
+^
+36 e:37 s:39;
+lflags { }
+Stone Corner^
+    The smooth stone hall turns to the south in a perfect right angle.
+Whoever built the temple had incredible precision. Through the walls to
+the south-west there is a heavy thrumming sound, but you cannot reach its
+source yet.
+^
+37 w:36 e:38 n:35;
+lflags { }
+Temple Chamber^
+    You stand just inside the temple. To the north the huge stone dragons
+return to their positions guarding the entrance. To the east and west
+smooth stone corridors turn corners to the south with mathematical
+precision.
+^
+38 w:37 s:41;
+lflags { }
+Stone Corner^
+    The stone tiles join each other is complex patters that stretch the entire
+hallway. The hall turns the corner to the south with a perfect right angle,
+and with further inspection you see that the hall itself is perfectly
+straight.
+^
+39 n:36 s:42;
+lflags { }
+Stone Hall^
+    The patterns of the tiles draw you into them, and it takes a great
+conscious effort to pull your gaze away. The deep thrumming of magical
+forces is even stronger now, but you still cannot find its source.
+The hall turns corners to the north and south.
+^
+40 s:43;
+lflags { }
+Elemental Chamber^
+    The center of the chamber is dominated by a crystalline fountain that
+is carved with intricate runes. The air is sweet, and it is hard to remember
+that you are in a closed chamber. The fountain itself hums with immense
+magical power.
+^
+41 n:38 s:44;
+lflags { }
+Tiled Hallway^
+    The tiles beneath your feet appear to shift as you walk, but when you
+look closer they seem perfectly normal. The walls are windowless and made
+of perfectly smooth polished stone. The hallway turns a corner to both the
+north and south.
+^
+42 n:39 e:43 s:45;
+lflags { }
+Hallway^
+    The hall stretches to the north where it turns a sharp corner, and to the
+south it widens and huge icicles hang from the ceiling. To the east the
+magical humming noise gets stronger.
+^
+43 w:42 e:44 n:40;
+lflags { }
+Stone Hallway^
+    The stone in the hall flows and drips as you walk, but is not hot. The
+floor beneath you rises and falls as if it were an ocean, and the walls shift
+in liquid, flowing patterns. The noise is much stronger here, and an
+ethereal light spills out of the northern chamber. The hall turns a corner
+to the east.
+^
+44 w:43 n:41 s:46;
+lflags { }
+Hallway^
+    The floor tiles shift in hypnotic patterns, possibly following the
+forms of nature. The hall becomes much hotter and intermittent bursts of flame
+jet from the floor and walls to the south. The hall continues normally to
+the east and north.
+^
+45 n:42 s:47;
+lflags { }
+Ice Hall^
+    The hallway here is dripping with slowly flowing icicles and the floor is
+slick with ice. No matter how much you try, you cannot focus on the walls, as
+if they are actually further away then they appear. To the north the hall
+becomes more normal, and to the south it appears that fire and ice meet
+each other in a flowing artwork.
+^
+46 n:44 s:47;
+lflags { }
+Fire Hall^
+    The floor and ceiling are scorching hot, and the walls jet flame
+occasionally that you have to jump over. The walls waver and shimmer in
+the heat, and you cannot survive much longer. To the north the hall becomes
+smooth stone, and to the south fire and ice meet in a flowing, moving
+artwork.
+^
+47 n:43 s:49;
+lflags { }
+Fire and Ice^
+    Amazingly, in this room fire and ice flow together, covering the walls
+and creating a living, moving sculpture in the center of the chamber. You
+gaze at it briefly, but when you look away it is several hours later. Time
+means nothing in this room. To the north there is a smooth stone hallway,
+and to the south there is a terrific wind, and you see what appears to be
+a contained tornado.
+^
+48;
+lflags { }
+Shadowrealms^
+    Dark, living shadows swirl around you, and the sky overhead is pure
+black without a hint of sunlight. Every step you take drains your strength
+as your hope bleeds away into the darkness.
+^
+49 n:TEMPLE@START w:CHURCH@START e:TEMPLE@START s:CHURCH@START;
+lflags { }
+Tornado^
+    The forceful wind of the tornado whips around you, picking up pieces of
+dust and debris and swirling them around you. The wind is so fierce that you
+cannot see which way you are traveling, and when you stagger out you could
+end up anywhere.
+^
+50;
+lflags { Death }
+Entrance Hall^
+   As you step into the entrance hall, the stone dragons bellow in anger and 
+chase after you. You run ahead of them, terror in your heart. One spreads its 
+stone wings and flies ahead of you. You are trapped between the two of them. 
+The last sight you see is them approaching you.
+^
+51 w:59 e:60 n:57 s:62;
+lflags { Outdoors NoMagic }
+Sacred Clearing^
+    The floor of the clearing is lined with pure white sand, and the
+air throbs with immense stored magical energy. Time seems to pass in a
+blur: Flowers sprout beneath your feet and die off again in seconds.
+You feel a strange sensation on your legs and when you look down there
+is a large ivy twining itself around your calfs. Paths lead off in all
+directions. To the south, east, and west thin trails lead through lush
+green forest, and to the north lies a huge forest of living crystal.
+^
+52 e:53 s:55;
+lflags { Outdoors }
+Crystal Trail^
+    Huge crystaline trees overhang the trail and delicate crystal flowers
+grow on the edge. You are afraid to touch any of them for fear that they
+will shatter. Heavy wind blows through the tops of the trees, and to the
+east there is an ominous groaning and cracking noise.
+^
+53 w:52;
+lflags { Outdoors Death }
+Crystal Trees^
+   As you pass beneath the majestic crystal trees, a gust of wind blows 
+through the top branches. There is a tremendous crack, and as you gaze up in 
+horror a huge crystal branch crashes through the thinner boughs.  You run as 
+fast as possible, and throw yourself to the ground. The huge branch misses 
+you, but when it strikes the ground it shatters into thousands of needle sharp 
+shards. Almost is slow motion, several pieces fly at you, and the last thing 
+you see is the sunlight glinting through them in beautiful rainbow patterns.
+^
+54 e:55;
+lflags { Outdoors }
+Dead End^
+    Huge boughs from the crystalline trees have broken off and fallen to
+the ground here, creating an impassable blockage of needle sharp crystal
+shards. The only way out is to return to the narrow path to the east.
+^
+55 w:54 n:52 s:56;
+lflags { Outdoors }
+Crystal Path^
+    A small path leads through the heart of this forest of living crystal.
+A light breeze whistles through the boughs overhead, and as the branches
+rub together a beautiful melody floats through the air. The path continues
+to the north and south, but it appears to dead end to the west.
+^
+56 e:57 n:55;
+lflags { Outdoors }
+Crystal Border^
+    Here the magical crystaline forest merges with normal forest, the green
+crystal merging in a shifting kaleidescope. The crystal forest stretches
+away to the north, and a thin path winds through it. The path continues to
+the east.
+^
+57 w:56 s:51;
+lflags { Outdoors }
+Forest Edge^
+    The magical crystaline forest here merges with normal forest, the green
+refracted through the crystal boughs into a shimmering rainbow of color.
+The crystal forest continues to the west and north, but the northern forest
+if much too thick to try to forge through. To the south the natural green
+forest continues.
+^
+58 s:61 e:59;
+lflags { Outdoors }
+Green Forest^
+    Healthy green forest stretches as far as the eye can see. Far to the north
+you hear a faint musical song. The forest to the west is filled with brambles
+and there is no way to get through. A thin trail that must have been made by
+animals leads to the south, and the forest continues unabated to the north.
+^
+59 w:58 e:51;
+lflags { Outdoors }
+Forest Path^
+    A thin path made by animals as they traveled daily to a water hole or
+food source leads away to the west. Thick, green forest spreads away around
+you. To the east a large clearing throbs with stored magical energy.
+^
+60 w:51;
+lflags { Outdoors }
+Forest^
+    Heavy brambles line every direction but west, where a large clearing
+throbs with immense magical energy. Far to the northwest you hear a
+beautiful, but oddly random melody.
+^
+61 n:58 s:64;
+lflags { Outdoors }
+Forest Trail^
+    The thin trail leads to the north and south through the thick green
+oak forest. The majestic trees stretch hundreds of feet above your head,
+their leaves swaying gently in the wind. To the south the trees thin out
+and you hear the muted crackle of pent-up magical energy.
+^
+62 n:51 e:63;
+lflags { Outdoors }
+Thick Forest^
+    It is hard to tell which direction is which in this thick forest. The
+only way you can tell directions is that there is a huge clearing filled
+with immense magical energy to the north. The forest continues to the east,
+but all other directions are blocked by brambles and thorns.
+^
+63 w:62 s:65;
+lflags { Outdoors }
+Forest^
+    Thick forest continues on to the west, north, and east, but only the west
+is passable. Majestic elms and oaks tower above you. To the south is a very
+small clearing with some kind of hut in it.
+^
+64 n:61 s:1;
+lflags { Outdoors }
+Small Clearing^
+    The grass here is trimmed short, and to the north the deep forest
+stretches towards the horizon. To the south is an immense wooden gate that
+stand open, showing what appears to be a perfectly normal rocky path. The
+gate itself crackles with heavy stored magical energy that occasionally
+discharges into the sky in huge reverse lightning bolts.
+^
+65 n:63;
+lflags { Outdoors }
+Tiny Hut^
+    You stand within a tiny hut that appears to be woven of living branches
+and vines, probably by an elf for temporary shelter. The roof of the hut
+stands open to the weather, the magic that allowed air to pass through but
+not rain having since worn off. The only exit from the hut is back to the
+north.
+^
+66 s:68;
+lflags { Peaceful }
+Temple^
+    This temple is dedicated to the elemental gods. Each wall is painted with
+intricate and beautiful murals, each of a different elemental deity. The
+north wall is painted with a figure surrounded with lightning bolts, the
+west wall is painted with a figure made completely of water stands up from
+the sea, and on the east wall there is a figure that is made of living
+vines, rocks, and other matter standing high above a forest. The south wall
+is open to the air, and leads to the main street of the town.
+^
+67 w:12 e:68;
+lflags { Outdoors }
+Street^
+    The street is well maintained, and the main gates to the west are
+freshly painted. To the west the gates open out onto a great forest of
+oak and pine, and to the east the street continues. The wind carries a
+faint scent of flowers.
+^
+68 w:67 e:69 n:66 s:70;
+lflags { Outdoors }
+Street^
+    The street is slightly dusty but well maintained. The cobblestones are
+neatly laid in geometric patterns. To the north is a small temple, to the
+west are the main village gates and beyond them the forest. To the east is
+a small garden filled with delicately carved stone statues. To the south
+there is nothing but beautifully manicured gardens.
+^
+69 w:68;
+lflags { Outdoors Peaceful }
+Statue Yard^
+    The small garden is filled by beautifully carved statues of the elemental
+gods: Naidrk the water god, Thandrain the earth god, and Klendoth the thunder
+god. In between the statues are immense guardian dragon statues, their
+immense size almost rivaling that of the statues. Clearly among these people
+dragons are held almost at the level of the elemental gods.
+^
+70 n:68 e:71;
+lflags { Outdoors Peaceful }
+Gardens^
+    The gardens is well cared for, and smooth brick pathways wind among the
+plants. The air is thick with the scent of flowers, and the grass is deep
+and green. The path winds through the garden to the east, and to the north it
+joins the main street of the town.
+^
+71 w:70 e:72 s:73;
+lflags { Outdoors Peaceful }
+Garden Path^
+    Large, beautiful flowers overhang the pathway, and hundreds of honey
+bees buzz around them. Stately ash trees line the edges of the brick
+path. The path winds to the west and south. To the east a large fishpond
+glitters in the sunlight.
+^
+72 w:71;
+lflags { Outdoors Peaceful }
+Fish Pond^
+    You stand on the bank of a large crystal clear fish pond. Large tropical
+fish glitter irredescently in the sunlight, occasionally leaping out of the
+water to snatch a bug that has strayed too close to the surface. The
+atmosphere is one of calm and serenity, and you could sit and watch the fish
+for hours.
+^
+73 n:71 s:74;
+lflags { Outdoors Peaceful }
+Path^
+    The path here is slightly more overgrown, and creeping ivy occasionally
+snakes a tendril across the bricks. The ground on either side of you is
+a beautiful sea of ivy that rolls and sways with each gust of wind. The path
+leads to the north, and to the south you hear the gentle burble of a
+fountain.
+^
+74 e:75 n:73;
+lflags { Outdoors Peaceful }
+Fountain Pool^
+    The fountain draws water from an immense pool in which several large
+fish swim. The fountain itself is covered with runes and is made of the
+finest polished marble. The water jets over twenty paces into the sky before
+cascading down several marble terraces back to the fountain pool. A path
+winds through the garden to the north, and to the east is a quiet rock
+garden.
+^
+75 w:74;
+lflags { Outdoors Peaceful }
+Rock Garden^
+    Large rocks have been placed in the center of a large stretch of pure
+white sand, which has been carefully raked into curving lines that swirl
+around the stones like eddies in water. A wooden bench has been provided
+to sit upon and contemplate the garden. The soft burble of the fountain
+to the west adds a pleasant undertone.
+^

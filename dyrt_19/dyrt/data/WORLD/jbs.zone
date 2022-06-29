@@ -1,0 +1,2263 @@
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%mobiles
+
+Name             = rosebud
+Pname            = "Rosebud"
+Location         = gate
+Speed            = 0
+Strength         = 120/120
+Damage           = 13
+Armor            = 0
+Aggression       = 10
+Mflags		{bareast}
+Sflags          = { female }
+Description      = "Rosebud the killer attack cow is here guarding the gate."
+End              = rosebud
+
+Name             = eugene
+Pname            = "Eugene"
+Location         = npond
+Strength         = 50/50
+Damage           = 10
+Armor            = 0
+Aggression       = 0
+Description      = "Eugene the duck is here quacking softly to himself"
+End              = eugene
+
+Name             = goat
+Pname            = "The goat"
+Location         = sestall
+Speed            = 0
+Strength         = 100
+Damage           = 15
+Armor            = 0
+Aggression       = 0
+Description      = "There's a goat here with it's belly rumbling"
+End              = goat
+
+Name             = sheep
+Pname            = "The sheep"
+Location         = fallow1
+Strength         = 80/80
+Damage           = 10
+Armor            = 0
+Aggression       = 0
+Description      = "A sheep is here bleating softly."
+End              = sheep
+
+Name             = ruffles
+Pname            = "Ruffles"
+Location         = fallow2
+Strength         = 100/100
+Damage           = 13
+Armor            = 0
+Aggression       = 60
+Description      = "Ruffles the sheepdog is here guarding his flock."
+end              = ruffles
+
+Name             = bob
+Pname            = "The farmer"
+Location         = foyer
+Speed            = 0
+Strength         = 120/120
+Damage           = 10
+Armor            = 0
+Aggression       = 90
+Description      = "
+Farmer Bob is here, and he wants you to stay away from his daughter."
+
+Name             = belinda
+Pname            = "Belinda"
+Location         = sbedroom
+Speed            = 0
+Strength         = 100/100
+Damage           = 10
+Armor            = 0
+Aggression       = 40
+Sflags           = { female }
+Description      = "The farmer's daughter Belinda is here with her boyfriend."
+end              = belinda
+
+Name             = jack
+Pname            = "Jack"
+Location         = sbedroom
+Speed            = 0
+Strength         = 100
+Damage           = 15
+Armor            = 0
+Aggression       = 60
+Description      = "Belinda's boyfriend Jack is here fondling his girlfriend"
+End              = jack
+
+Name             = mugwump
+Pname            = "The mugwump"
+Location         = mugwumps
+Strength         = 250
+Damage           = 17
+Armor            = 0
+Aggression       = 0
+Description      = "A tall, skinny, ugly, slimy mugwump is here sneering greedily at you."
+
+Name             = hedgehog
+Pname            = "The hedgehog"
+Location         = fwood1
+Speed            = 0
+Strength         = 60/60
+Damage           = 10
+Armor            = 0
+Aggression       = 100
+Description      = "A viscious little hedgehog leaps out of the mist at you!"
+end              = hedgehog
+
+Name             = jane
+Pname            = "Mary Jane"
+Location         = fwood6
+Strength         = 120/120
+Damage           = 13
+Armor            = 0
+Aggression       = 20
+Sflags           = { female }
+Description      = "Mary Jane is here wondering where up is."
+
+Name             = hector
+Pname            = "Hector"
+Location         = campfire
+Strength         = 150/150
+Damage           = 13
+Armor            = 0
+Aggression       = 0
+Description      = "Hector the happy-go-lucky hippie is wandering absent mindedly by"
+end              = hector
+
+Name             = mac
+Pname            = "Seargent Big Mac"
+Location         = fwood6
+Strength         = 200/200
+Damage           = 15
+Armor            = 0
+Aggression       = 40
+Description      = "Seargent Big Mac is here waiting to arrest you for eating one too many hamburgers."
+
+Name             = tree
+Pname            = "The Tree"
+Location         = vines
+Speed            = 0
+Strength         = 200/200
+Damage           = 11
+Armor            = 0
+Aggression       = 70
+Mflags 		{bareast}
+Description      = "A large tree is looming over you preparing to do you in"
+End              = tree
+
+Name             = fish
+Pname            = "The fish"
+Location         = fountain5
+Speed            = 0
+Strength         = 120/120
+Damage           = 13
+Armor            = 0
+Aggression       = 70
+Description      = "
+A huge fish is here making you finally realize what fish-food must feel like."
+
+Name             = gatekeeper
+Pname            = "The Gatekeeper"
+Location         = cloud_gate
+Speed            = 0
+Strength         = 200/200
+Damage           = 15
+Armor            = 0
+Aggression       = 60
+Mflags		{bareast}
+Description      = "There is a giant gatekeeper here keeping you out."
+end              = gatekeeper
+
+Name             = gopherr
+Pname            = "The Gopherr"
+Location         = gopher_den
+Strength         = 120/120
+Damage           = 13
+Armor            = 0
+Aggression       = 60
+Description      = "A giant gopher is here busily scurrying around"
+End              = gopherr
+
+Name             = people eater
+Pname            = "The people eater"
+Location         = large
+Speed            = 0
+Strength         = 320/320
+Damage           = 20
+Armor            = 0
+Aggression       = 90
+Description      = "The One-eyed-one-horned-flying-purple-people-eater is here
+and he's hungry!"
+end              = people eater
+
+Name             = chef
+Pname            = "The Swedish Chef"
+Location         = lkitchen
+Speed            = 0
+Strength         = 100/100
+Damage           = 25
+Armor            = 0
+Aggression       = 90
+Description      = "
+The Swedish Chef is here throwing things at you!  Bork Bork Bork!"
+
+Name             = guest
+Pname            = "The guest"
+Location         = guest1
+Speed            = 0
+Strength         = 150/150
+Damage           = 15
+Armor            = 0
+Aggression       = 60
+Description      = "There is a giant guest sitting in this giant room"
+end              = guest
+
+Name             = crier
+Pname            = "The Crier"
+Location         = waiting
+Speed            = 0
+Strength         = 250/250
+Damage           = 17
+Armor            = 0
+Aggression       = 70
+Description      = "The king's crier is here waiting to announce the guests of
+the king.  He knows that you are not a guest."
+end              = crier
+
+Name             = sentry
+Pname            = "The sentry"
+Location         = side
+Speed            = 0
+Strength         = 250/250
+Damage           = 20
+Armor            = 0
+Aggression       = 80
+mflags		 {barwest}
+Description      = "There is a giant sentry here."
+
+Name             = jesse
+Pname            = "Jesse"
+Location         = eyes
+Speed            = 0
+Strength         = 150/150
+Damage           = 10
+Armor            = 0
+Aggression       = 90
+Description      = "Jesse, the man inside the giant, is here, and he isn't happy
+to see you."
+end              =jesse
+
+Name             = john
+Pname            = "John"
+Location         = guard
+Speed            = 0
+Strength         = 125/125
+Damage           = 12
+Armor            = 0
+Aggression       = 90
+Description      = "John the guard is here, and he doesn't look happy to see
+you."
+end              = john
+
+Name             = rob
+Pname            = "Rob"
+Location         = guard
+Speed            = 0
+Strength         = 150/150
+Damage           = 15
+Armor            = 0
+Aggression       = 50
+Description      = "Rob the guard is here, and he doesn't look happy to see you
+either."
+
+Name             = seargent
+Pname            = "The seargent"
+Location         = corridor3
+Strength         = 300/300
+Damage           = 20
+Armor            = 0
+Aggression       = 90
+Description      = "The seargent at arms is here keeping an eye on the prisoners"
+
+Name             = prisoner
+Pname		 = "The Prisoner"
+Location         = cell4
+Speed            = 0
+Strength         = 100/100
+Damage           = 15
+Armor            = 0
+Aggression       = 30
+Description      = "There is a prisoner sitting in here recovering from his torture."
+
+Name		 = rat
+Pname            = "The rat"
+Location         = secret1
+Strength         = 80/80
+Damage           = 10
+Armor            = 0
+Aggression       = 50
+Description      = "There is giant rat scurrying around here."
+
+Name             = goose
+Pname            = "The goose"
+Location         = secret_treasury
+Speed            = 0
+Strength         = 100/100
+Damage           = 10
+Armor            = 0
+Aggression       = 0
+Sflags		 { Female }
+Description      = "The goose that lays golden eggs is sitting here"
+end              = goose
+
+%objects
+
+Name		= clock
+Location	= IN_ROOM:clock
+Oflags		  {NoGet}
+Examine		= "
+This mammoth clock takes up the entire south wall and has its pendulum swinging
+tirelessly in front of it.  Although it has never stopped ticking its hands
+never seem to leave 8:46."
+End		= clock
+
+Name             = stick
+Location         = IN_ROOM:pond
+Oflags             {Lightable Extinguish Weapon }
+State            = 1
+Maxstate         = 1
+Damage           = 5
+Bvalue           = 10
+Size             = 1
+Weight           = 1
+Desc[0]          = "A burning stick lies on the ground."
+Desc[1]          = "An old stick lies on the ground."
+Examine          = "Looks like a stick."
+End              = stick
+
+Name             = gate_gate
+Pname            = gate
+Altname          = door
+Location         = IN_ROOM:gate
+Oflags             {Openable Lockable NoGet}
+Linked           = gate_farmpath
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The gate is open."
+Desc[1]          = "The gate is closed."
+Desc[2]          = "The gate is locked."
+
+Name             = gate_farmpath
+Pname            = gate
+Altname          = door
+Location         = IN_ROOM:farmpath
+Oflags             {Openable Lockable NoGet}
+Linked           = gate_gate
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The gate is open."
+Desc[1]          = "The gate is closed."
+Desc[2]          = "The gate is locked."
+
+Name             = flop_pasture
+Pname            = flop
+Location         = IN_ROOM:pasture
+Oflags             {NoGet}
+Linked           = flop_glade
+State            = 1
+Maxstate         = 0
+Desc[0]		 = "
+A path has been dug through a large pile of flop to the east."
+Desc[1]          = "A large, nasty pile of flop blocks the way east."
+
+Name             = flop_glade
+Pname            = flop
+Location         = IN_ROOM:glade
+Oflags             {NoGet}
+Linked           = flop_pasture
+State            = 1
+Maxstate         = 0
+Desc[0]          = "
+A path has been dug through a large pile of flop to the west."
+Desc[1]          = "
+There is a large, nasty pile of flop here blocking the way west."
+
+Name             = shrooms
+Altname          = mushrooms
+Location         = IN_ROOM:sepasture
+Oflags           {food getflips}
+State		 = 1
+MaxState	 = 0
+Bvalue           = 15
+Size             = 2
+Weight           = 2
+Desc[0] = "Three fragrant mushrooms have been left on the ground here."
+Desc[1]          = "
+There are three nice looking mushrooms growing in a pile of flop here."
+Examine = "They look slightly magical."
+End              = shrooms
+
+Name             = line
+Altname          = fishing
+Location         = IN_ROOM:pond
+Bvalue           = 20
+Size             = 1
+Weight           = 1
+Desc[0]          = "
+There is a roll of fishing line here with a small hook on the end."
+
+Name             = pond
+Location         = IN_ROOM:fish
+State		 = 1
+MaxState	 = 0
+Oflags             {NoGet}
+Examine          = "
+You see many silvery fish flitting to and fro under the water."
+
+Name             = fish
+Location         = IN_ROOM:fish
+Oflags             {Food Destroyed}
+Bvalue           = 10
+Size             = 2
+Weight           = 2
+Desc[0]          = "A delicious looking fish has been left here."
+Examine          = "Looks like a fish."
+
+Name             = can
+Altname          = tin
+Location         = IN_ROOM:path4
+Bvalue           = 10
+Size             = 3
+Weight           = 2
+State		 = 1
+MaxState	 = 0
+Desc[0]          = "There is an old tin can lying on the ground here."
+Desc[1]          = "There is an old tin can lying on the ground here."
+End              = can
+
+Name             = sign
+Location         = IN_ROOM:barn
+Oflags             {NoGet}
+Desc[0]          = "There is a small sign hanging over the barn door"
+Examine		 = "The sign reads: Recycle tin, feed it to the goats."
+End              = sign
+
+Name             = helmet
+/* Which room does it start? */
+Location         = IN_ROOM:limbo@limbo
+Oflags             {WearOnHead Armor Wearable }
+Armor            = 4
+Bvalue           = 120
+Size             = 5
+Weight           = 5
+Desc[0]          = "
+A shiny tin helmet has been dropped on the ground here."
+End              = helmet
+
+Name             = key
+Location         = IN_ROOM:sloft
+Oflags             {Destroyed Key }
+Bvalue           = 50
+Size             = 1
+Weight           = 1
+Desc[0]          = "A key has been dropped here."
+End              = key
+
+Name             = bail
+Altname          = hay
+Location         = IN_ROOM:sloft
+Oflags             {NoGet}
+Desc[0]          = "There is a bail of hay sitting by the wall."
+End              = bail
+
+Name             = shovel
+Location         = IN_ROOM:nbarn
+Oflags             {weapon getflips }
+State		 = 1
+Maxstate         = 1
+Damage           = 6
+Bvalue           = 100
+Size             = 4
+Weight           = 3
+Desc[0]          = "Someone has left an old shovel here."
+Desc[1]          = "There is a shovel leaning against the wall here."
+Examine = "Looks like a shovel."
+End              = shovel
+
+name		 = hole_ground
+PName             = hole
+Location         = IN_ROOM:fallow3
+Oflags             {NoGet}
+Size             = 30
+Desc[0]          = "There is a hole in the ground here."
+Examine          = "Looks like a great place to plant some seeds."
+
+Name		 = stalk_bottom
+Pname		 = beanstalk
+Location	 = fallow3
+Oflags		 { noget }
+Linked		 = stalk_top
+State		 = 1
+MaxState	 = 1
+Desc[0]		 = "
+The base of a giant beanstalk is here, reaching to the clouds."
+
+Name		 = stalk_top
+Pname		 = beanstalk
+Location	 = beanstalk
+Oflags		 { noget }
+Linked		 = stalk_bottom
+State		 = 1
+MaxState	 = 1
+
+Name             = door_front
+Pname            = door
+Location         = IN_ROOM:front
+Oflags             {openable noget lockable}
+Linked           = door_foyer
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+
+Name             = door_foyer
+Pname            = door
+Location         = IN_ROOM:foyer
+Oflags             {Openable lockable noget}
+Linked           = door_front
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+
+Name             = pitchfork
+Altname          = fork
+Location         = WIELDED_BY:Bob
+Oflags             {weapon }
+Damage           = 13
+Bvalue           = 200
+Size             = 6
+Weight           = 3
+Desc[0]          = "There is a pitchfork lying here."
+Examine          = "
+Looks like this pitchfork has been used to impale more than hay!"
+End              = pitchfork
+
+Name             = toilet
+Altname          = john
+Location         = IN_ROOM:bathroom
+Oflags             {NoGet Container}
+Size             = 500
+Examine          = "
+Upon closer examination you find that the toilet hasn't been flushed."
+End              = toilet
+
+Name             = door_bathroom
+Pname            = door
+Location         = IN_ROOM:bathroom
+Oflags             {NoGet Openable Lockable}
+Linked           = door_hall
+State            = 0
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_bathroom
+
+Name             = door_hall
+Pname            = door
+Location         = IN_ROOM:hall
+Oflags             {NoGet Openable Lockable}
+Linked           = door_bathroom
+State            = 0
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_hall
+
+Name             = door_top
+Pname            = door
+Location         = IN_ROOM:top
+Oflags             {NoGet Openable Lockable}
+Linked           = door_sbedroom
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_top
+
+Name             = door_sbedroom
+Pname            = door
+Location         = IN_ROOM:sbedroom
+Oflags             {NoGet Openable Lockable}
+Linked           = door_top
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_sbedroom
+
+Name             = door_backdoor
+Pname            = door
+Location         = IN_ROOM:backdoor
+Oflags             {NoGet Openable Lockable}
+Linked           = door_pantry
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_backdoor
+
+Name             = door_pantry
+Pname            = door
+Location         = IN_ROOM:pantry
+Oflags             {NoGet Openable Lockable}
+Linked           = door_backdoor
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_pantry
+
+Name            = peas
+AltName          = food
+Location         = IN_ROOM:pantry
+Oflags             {Food}
+Bvalue           = 22
+Size             = 2
+Weight           = 2
+Desc[0]          = "Some blackeyed peas are here waiting to be eaten."
+
+Name             = okra
+Altname		 = food
+Location         = IN_ROOM:pantry
+Oflags             {food}
+Bvalue           = 22
+Size             = 2
+Weight           = 2
+Desc[0]          = "Some fried okra is here."
+End              = okra
+
+Name             = mugwump
+Location         = IN_ROOM:mugwumps
+Oflags             {NoGet}
+Desc[0]          = "
+There's a mugwump right in front of you oozing plenty of goo to keep you here
+forever if you want it."
+Examine          = "Looks like a mugwump."
+
+Name             = coffee
+Altname		 = food
+Location         = IN_ROOM:green
+Oflags             {Drink}
+Bvalue           = 22
+Size             = 2
+Weight           = 2
+Desc[0]          = "There is a fragrant cup of coffee sitting here."
+Examine          = "This looks like a great cup of coffee."
+End              = coffee
+
+Name             = seeds
+Altname		 = pile
+Location         = IN_ROOM:green
+Oflags		 { food }
+Bvalue           = 22
+Size             = 2
+Weight           = 2
+Desc[0]          = "There are some seeds sitting here in a small pile."
+Examine          = "
+As you hold them, you feel these seeds vibrating with magical energy."
+
+Name             = coin
+Altname          = gold
+Location         = IN_ROOM:fountain5
+Bvalue           = 900
+Size             = 15
+Weight           = 15
+Desc[0]          = "
+There is a gigantic gold coin lying here that you just might be able to lift."
+Examine          = "There is a head engraved on it that you don't recognize."
+End              = coin
+
+Name		 = fountain_coins
+PName             = coins
+Location         = IN_ROOM:fountain5
+Oflags             {NoGet}
+Bvalue           = 0
+Desc[0]          = "
+There are several huge coins here that have been tossed into the fountain."
+
+Name             = hole
+Location         = IN_ROOM:garden3
+Oflags             {NoGet}
+Examine          = "
+Around the edges of the hole, you see many large claw marks."
+End              = hole
+
+Name             = door_courtyard
+Pname            = door
+Location         = IN_ROOM:courtyard
+Oflags             {NoGet}
+State		 = 0
+MaxState	 = 0
+Linked           = door_entry
+Desc[0]          = "The door is open just enough for you to squeeze through."
+Examine          = "
+This is a really big door.  You couldn't shift it if you tried."
+
+Name             = door_entry
+Pname            = door
+Location         = IN_ROOM:entry
+Oflags             {NoGet}
+State		 = 0
+MaxState	 = 0
+Linked           = door_courtyard
+Desc[0]          = "The door is open just enough for you to squeeze through."
+Examine          = "
+This is a really big door.  You couldn't shift it if you tried."
+
+Name             = fireplace
+Altname          = fire
+Location         = IN_ROOM:parlor
+Oflags             {Lit NoGet}
+Desc[0]          = "
+A huge fireplace is set in the north wall with a fire blazing fiercely in it."
+Examine          = "Looks hot in there!"
+End              = fireplace
+
+Name             = book2
+Pname		 = book
+Location         = IN_ROOM:library
+Oflags             {NoGet}
+/*
+Desc[0]          = "There is a huge book that has been left open in the corner."
+*/
+Examine          = "
+You climb up on the book and begin to read...
+
+
+The book tells of a great hero of this giant race and how he was brutally fooled
+and murdered by one of an impish race of little people while he was heading down
+to their world on a mission of friendship and peace.  It goes on to say that,
+ever since this brutal murder, these giants have been at war with all of those
+of the same race as this evil villain:  Jack."
+
+Name             = book
+Location         = IN_ROOM:study
+Oflags		{ GetFlips }
+Bvalue           = 220
+Size             = 5
+Weight           = 3
+State            = 1
+Maxstate         = 1
+Desc[0]          = "There is an old book lying here."
+Desc[1]          = "There is an old book lying open on the desk."
+Examine          = "The book tells the heroic tale of Jack and the Beanstalk."
+
+Name             = table
+Location         = IN_ROOM:banquet
+Oflags             {NoGet}
+End              = table
+
+Name             = steaknife
+Altname          = knife
+Location         = IN_ROOM:banquet
+Oflags             {destroyed weapon }
+Damage           = 22
+Bvalue           = 500
+Size             = 20
+Weight           = 14
+Desc[0]          = "There is a huge steaknife lying here."
+Examine          = "
+This steaknife is as large as a broadsword.  It would probably make a mighty
+fine weapon."
+
+Name             = brick_storage
+PName            = brick
+Location         = IN_ROOM:storage
+Oflags             {PushToggle NoGet}
+Linked		 = hole_secret3
+State            = 1
+Maxstate         = 0
+Desc[0]          = "A loose brick has been pushed aside revealing a hole leading south."
+Desc[1]		 = "There is a loose brick in the south wall."
+
+Name             = hole_secret3
+Pname            = lever
+Location         = IN_ROOM:secret3
+Oflags             {NoGet PushToggle}
+Linked           = brick_storage
+State            = 1
+Maxstate         = 0
+Desc[0]          = "A lever has been pulled revealing a hole in the north wall."
+Desc[1]		 = "There is a lever here that looks like it might open a secret door."
+
+Name             = plunger
+Altname          = helper
+Location         = IN_ROOM:storage
+Oflags             {weapon}
+Damage           = 8
+Bvalue           = 100
+Size             = 10
+Weight           = 5
+Desc[0]          = "A huge toilet plunger is standing in the corner."
+Examine          = "
+Just think of what it would take to stop up a toilet big enough to need this!"
+End              = plunger
+
+Name             = throne
+Location         = IN_ROOM:throne
+Oflags             {NoGet}
+Examine          = "If only you could haul this treasure off!"
+End              = throne
+
+Name             = door_side
+Pname            = door
+Location         = IN_ROOM:side
+Oflags             {NoGet Openable Lockable}
+Linked           = door_treasury
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+
+Name             = door_treasury
+Pname            = door
+Location         = IN_ROOM:treasury
+Oflags             {NoGet Openable Lockable}
+Linked           = door_side
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_treasury
+
+Name             = emerald
+Location         = IN_ROOM:treasury
+Bvalue           = 1000
+Size             = 6
+Weight           = 5
+Desc[0]          = "A giant emerald is lying here on the floor."
+Examine          = "Looks like an emerald."
+End              = emerald
+
+Name             = necklace
+Altname          = pearls
+Location         = IN_ROOM:treasury
+Oflags             {wearonneck Wearable }
+Bvalue           = 500
+Size             = 7
+Weight           = 4
+Desc[0]          = "There is a giant pearl necklace here."
+Examine          = "You'd need a big neck to wear this comfortably."
+End              = necklace
+
+Name             = coins
+Location         = IN_ROOM:treasury
+Bvalue           = 600
+Size             = 7
+Weight           = 9
+Desc[0]          = "There are several large coins scattered about."
+Examine          = "Look like coins."
+End              = coins
+
+Name             = bookcase
+Altname          = case
+Location         = IN_ROOM:sitting
+Oflags             {NoGet Pushtoggle}
+Linked           = hole_secret7
+State            = 1
+Maxstate         = 0
+Desc[0]          = "
+The bookcase has been pushed aside leading to secret passage to the north."
+Desc[1]          = "There is a large bookcase against the north wall."
+Examine          = "Looks like a bookcase."
+
+Name             = hole_secret7
+Pname            = lever
+Location         = IN_ROOM:secret7
+Oflags             {NoGet PushToggle}
+Linked           = bookcase
+State            = 1
+Maxstate         = 0
+Desc[0]          = "A lever has been pulled revealing a hole in the south wall."
+Desc[1]		 = "There is a lever here that looks like it might open a secret door."
+
+Name             = giant
+Location         = IN_ROOM:giants_bed
+Oflags             {NoGet}
+Examine          = "Looks bloody big from here."
+End              = giant
+
+Name             = hatch_nose
+Pname            = hatch
+Altname          = door
+Location         = IN_ROOM:nose_chamber
+Oflags             {NoGet Openable Lockable}
+Linked           = hatch_head
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The hatch is open."
+Desc[1]          = "The hatch is closed."
+Desc[2]          = "The hatch is locked."
+
+Name             = hatch_head
+Pname            = hatch
+Altname          = door
+Location         = IN_ROOM:head
+Oflags             {NoGet Openable Lockable}
+Linked           = hatch_nose
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The hatch is open."
+Desc[1]          = "The hatch is closed."
+Desc[2]          = "The hatch is locked."
+End              = hatch_head
+
+Name             = window
+Altname          = glass
+Location         = IN_ROOM:eyes
+Oflags             {NoGet}
+Examine          = "You get a birdseye view of the giants bedroom."
+End              = window
+
+Name		 = hole_bed
+Pname		 = hole
+Location	 = under
+Oflags		 { NoGet }
+Desc[0]		 = "There is a small hole in the floor here."
+Examine		 = "As you look at the hole, you find a small panel cut in the floor."
+
+Name		 = panel_bed
+Pname		 = panel
+Location	 = under
+Oflags		 = { NoGet }
+Linked		 = panel_secret
+State		 = 1
+MaxState	 = 1
+Desc[0]		 = "There is an open panel in the floor."
+
+Name		 = panel_secret
+Pname		 = panel
+Location	 = secret_treasury
+Oflags		 = { NoGet }
+Linked		 = panel_bed
+State		 = 1
+MaxState	 = 1
+Desc[0]		 = "There is an open panel in the floor."
+
+Name             = staff
+Location         = WIELDED_BY:jesse
+Oflags             {Weapon}
+Damage           = 15
+Bvalue           = 300
+Size             = 7
+Weight           = 4
+Desc[0]          = "A strange twisted staff has been left here."
+Examine          = "
+This staff is old, and strong.  It looks as if it has been twisted and
+corrupted, though by the one who used it.  The bottom of the staff has been
+smoothed around the edges."
+End              = staff
+
+Name             = egg
+Altname          = gold
+Location         = IN_ROOM:secret_treasury
+Bvalue           = 2000
+Size             = 20
+Weight           = 20
+Desc[0]          = "The Goose's golden egg is here gleaming in the light."
+Examine          = "This is a big hunk of gold."
+End              = egg
+
+Name             = door_corridor1
+Pname            = door
+Location         = IN_ROOM:corridor1
+Oflags             {NoGet Openable Lockable}
+Linked           = door_corridor2
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_corridor1
+
+Name             = door_corridor2
+Pname            = door
+Location         = IN_ROOM:corridor2
+Oflags             {NoGet Openable Lockable}
+Linked           = door_corridor1
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+End              = door_corridor2
+
+Name             = door_corridor3
+Pname            = door
+Location         = IN_ROOM:corridor3
+Oflags             {NoGet Openable Lockable}
+Linked           = door_cell4
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+
+Name             = door_cell4
+Pname            = door
+Location         = IN_ROOM:cell4
+Oflags             {NoGet Openable Lockable}
+Linked           = door_corridor3
+State            = 2
+Maxstate         = 2
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+Desc[2]          = "The door is locked."
+
+Name             = hole_secret
+Pname            = lever
+Location         = IN_ROOM:secret
+Oflags             {NoGet PushToggle}
+Linked           = brick
+State            = 1
+Maxstate         = 0
+Desc[0]          = "A lever has been pulled revealing a hole in the north wall."
+Desc[1]		 = "There is a lever here that looks like it might open a secret door."
+
+Name             = brick
+Location         = IN_ROOM:torture
+Oflags             {NoGet Pushtoggle}
+Linked           = hole_secret
+State            = 1
+Maxstate         = 0
+Desc[0]          = "A loose brick has been pushed aside revealing a hole in the south wall."
+Desc[1]          = "There is a loose brick in the south wall."
+Examine          = "Looks like a brick."
+End              = brick
+
+Name             = peephole
+Altname          = hole
+Location         = IN_ROOM:secret4
+Oflags             {NoGet}
+Desc[0]          = "There's a peephole in the wall."
+Examine          = "
+Looking in this peephole offers you a great view of a giant making use of this
+castles' facilities."
+End              = peephole
+
+/*
+Name             = path_pasture
+Pname            = path
+Location         = IN_ROOM:pasture
+Oflags             {NoGet}
+Linked           = path_glade
+Desc[0]          = "A path has been dug through the flop to the east."
+
+Name             = path_glade
+Pname            = path
+Location         = IN_ROOM:glade
+Oflags             {NoGet}
+Linked           = path_pasture
+Desc[0]          = "A path has been dug through the flop to the west."
+*/
+
+Name             = lodestone
+Altname          = rock
+Location         = IN_ROOM:glade
+Bvalue           = 220
+Size             = 1
+Weight           = 1
+Desc[0]          = "A dull red rock is lying here."
+Examine          = "Upon closer examination it appears to be a lodestone."
+End              = lodestone
+
+Name             = ruby
+Location         = IN_ROOM:glade
+Bvalue           = 500
+Size             = 4
+Weight           = 2
+Desc[0]          = "A glistening ruby rests on the ground here."
+Examine          = "Looks like a ruby."
+End              = ruby
+
+Name             = gems
+Location         = IN_ROOM:glade
+Bvalue           = 850
+Size             = 3
+Weight           = 3
+Desc[0]          = "
+You see tiny gems that seem to have popped out the ground itself."
+Examine          = "
+The gems seem to glow with an inner beauty that could only have been inspired by
+nature itself."
+End              = gems
+
+%locations
+
+path0 e:path1 s:Track@village;
+lflags { outdoors }
+Small Path^
+  You are on a small stretch of path that takes a bend here.  You can go east
+and continue on the path or go south to the village.
+^
+path1 e:path2 w:path0;
+lflags {outdoors}
+Path to the Farm^
+     You are on a path that leads from east to west.
+^
+path2 w:path1 e:pasture n:path3;
+lflags {outdoors}
+Farm Path^
+     The path here turns towards the north, but further to the east you can see
+a large field.
+^
+pasture w:path2 n:nwpasture s:swpasture e:^flop_pasture;
+lflags {outdoors}
+In the Pasture^
+     You are in a large, fragrant cow pasture. The field continues to the north
+and south and you can enter the path to the west.
+^
+nwpasture s:pasture e:deeppasture;
+lflags {outdoors}
+Northwest Corner of the Pasture^
+As you walk through the pasture you notice that, although the grass is patchy in
+some places, it is generally quite lush from the large amounts of fertilizer
+left on the ground.
+^
+deeppasture w:nwpasture e:gate;
+lflags {outdoors}
+Deep in the Pasture^
+     As you enter this part of the pasture you notice that the grass is a little
+more sparse than in other areas.  You look around and see a fence to the north
+and more pasture to the east and west.
+^
+gate w:deeppasture s:sepasture e:^gate_gate;
+lflags {outdoors}
+By the Gate^
+     You are now in the northeast corner of the pasture.  through the gate to
+the east you see a short path up to a quaint little farmhouse. The pasture
+continues to the south and west.
+^
+sepasture n:gate w:swpasture;
+lflags {outdoors}
+Southeastern Corner of the Pasture^
+     The grass here is much thicker than in the rest of the field.  The pasture
+continues to the north and west, and to the northeast you see the farmhouse
+where the proprietors of this fine pasture must live.  In the corner by the
+fence you see a pile of flop.
+^
+swpasture n:pasture e:sepasture;
+lflags {outdoors}
+Southwest Corner of the Pasture^
+     Looks about like any other cow pasture from here.
+^
+farmpath e:front w:^gate_farmpath;
+lflags {outdoors}
+Path to the Farmhouse^
+     This path runs east to the farmhouse and west back into the pasture.
+^
+front w:farmpath e:^door_front;
+lflags {outdoors}
+In Front of the House^
+     You are standing in front of a well kept two story farmhouse.  The door to
+the house is to the east, or you can go back down the path to the west.
+^
+path3 s:path2 n:pond;
+lflags {outdoors}
+Farm Path^
+     This path runs north and south along the fence of the pasture. To the north
+you see a small pond and to the south the path continues.
+^
+pond s:path3 e:epond w:fish;
+lflags {outdoors}
+By the Pond^
+     The path forks here to run east and west around a small, clear fish pond.
+The trees here have not been cleared like they have on the rest of the farm so
+you cannot see very far along the path in either direction, but the sounds of
+the birds and other small woodland animals living here make you feel at ease.
+^
+fish s:pond n:npond;
+lflags {outdoors}
+The Fishin' Hole^
+     The path here runs very close to the pond along a small overhang that goes
+over a fairly deep area of water for this close to the shore.  This looks like a
+great spot to sit down, cast in a line, and relax for a little while.
+^
+npond w:fish e:epond;
+lflags {outdoors}
+Northern End of the Pond^
+     The small wood is very peaceful here, and the air smells fresh and sweet.
+The path continues around to the east and west.
+^
+epond n:npond s:pond e:path4;;
+lflags {outdoors}
+Eastern End of the Pond^
+     You are next to a small pond in the middle of a small peaceful wood.  The
+sounds of birds singing and of the water lapping gently up against the shore
+make you feel very at ease here.  The small path around the pond continues to
+the north and south, while another path heads east past a medium sized barn.
+^
+path4 w:epond s:barn e:field;
+lflags {outdoors nomobiles}
+Long Path^
+     This is a long east, west path that runs between a small pond to the west
+and a fairly large field to the east.  South of here you see a quaint little
+barn.
+^
+barn n:path4 s:nbarn;
+lflags {outdoors}
+Before the Barn^
+     You are standing in front of the fading red barn where the farmer who owns
+this place keeps his hay and other farming necessities that need to stay out of
+the rain.  You can enter the barn to the south.
+^
+nbarn n:barn s:sbarn e:nestall w:nwstall u:loft;
+lflags {}
+Northern End of the Barn^
+     From here the barn looks about like any other barn that you've ever seen.
+The floor is covered with a thin layer of hay, and there are tools of various
+descriptions lining the walls.  There is a leather saddle on the ground next to
+an old, horse-pulled plow against the east wall that doesn't seem to have moved
+for a while.  The barn continues to the south, to the east and west are small
+stalls, and there is a ladder leading up to the hayloft against the west wall.
+^
+sbarn n:nbarn e:sestall w:swstall;
+lflags {}
+Southern End of the Barn^
+     Looks just like the northern end of the barn here.  To the east and west
+are more stalls.
+^
+nestall w:nbarn;
+lflags {}
+Stall^
+     This is a small animal stall.
+^
+nwstall e:nbarn;
+lflags {}
+Stall^
+     This is a small animal stall.
+^
+sestall w:sbarn;
+lflags {}
+Stall^
+     This is a small animal stall.
+^
+swstall e:sbarn;
+lflags {}
+Stall^
+     This is a small animal stall.
+^
+loft d:nbarn s:sloft;
+lflags {}
+The Loft^
+     You are now in the hayloft of this terrific barn!  There are hay bails
+stacked up all over the place and the smell is making your nose itch.  To the
+south you see more hay and you can go back down the ladder to the barn if you
+don't want to see the rest of this wonderful hayloft.
+^
+sloft n:loft;
+lflags {}
+The Loft^
+     You have now entered the southern end of the hayloft, and, to your great
+surprise, you find more hay.  You can exit to the north.
+^
+field w:path4 n:fallow e:fallow2;
+lflags {outdoors}
+Fallow Field^
+     This is a large field that looks like it has been fallow for much longer
+than is usually recommended in the Farmer's Almanac.  The field continues to the
+north and east, and you can head down the path to the pond to the west.
+^
+fallow s:field e:fallow1;
+lflags {outdoors}
+Fallow Field^
+     The field here is still fallow, and you notice small animal footprints in
+the soft ground beneath your feet.  The soil in this field looks very fertile
+and you wonder why the farmer hasn't planted here is so long.  The field here
+extends to the south and east.
+^
+fallow1 w:fallow s:fallow2 e:fallow3;
+lflags {outdoors}
+Fallow Field^
+     The field here continues in all directions from here except north, where
+there is a small wooden fence.
+^
+fallow2 n:fallow1 w:field e:fallow4 s:backdoor;
+lflags {outdoors}
+Fallow Field^
+     This is the southern part of a fairly large, fertile field.  The field here
+continues in all directions except to the south where there is a path to the
+backdoor of the farmhouse.
+^
+fallow4 n:fallow3 w:fallow2;
+lflags {outdoors}
+Fallow Field^
+     The field here continues to the north and west, and there is a small fence
+to the east.
+^
+fallow3 s:fallow4 w:fallow1 u:^stalk_bottom; /*up: beanstalk when applicable */
+lflags {outdoors}
+North Eastern Corner of the Field^
+     This is the north east corner of the field.  Ordinarily you can only go
+South or East form here.
+^
+backdoor n:fallow2 s:^door_backdoor;
+lflags {outdoors}
+The Back Porch^
+     You are right outside the backdoor of a small, somewhat quaint farmhouse.
+To the north there is a short path that leads to a large fallow field and to the
+south you can enter the farmhouse.
+^
+pantry n:^door_pantry s:kitchen;
+lflags {}
+The Pantry^
+     This is the small pantry that holds the food for this small farmhouse.  The
+backdoor is to the north allowing you to leave this wonderful place if you would
+like to or you can go into the kitchen to the south.
+^
+kitchen n:pantry s:dining w:foyer;
+lflags {}
+The Kitchen^
+     As you enter the kitchen you are overwhelmed by the incredible aroma of
+fresh country cooking.  The walls in here are covered with beige, flowery
+wallpaper, and there are all kinds of pots and pans hanging from a rack above a
+counter in the center of the room.  Exits lead north, south and east.
+^
+dining n:kitchen w:den;
+lflags {}
+The Dining Room^
+     This is the place where the people who live here gather to eat.  You can
+leave this room to the north or west.
+^
+den e:dining n:foyer;
+lflags {}
+The Den^
+     This is a fairly small sitting room with a couch against the south wall and
+recliner by a quaint little fireplace against the west wall.  The room is neat,
+but looks as if it is used often.  You can exit to the north or east.
+^
+foyer s:den e:kitchen u:top n:study w:^door_foyer;
+lflags {}
+The Foyer^
+     This is just a small entry room.  Not much here to describe.  Go to the
+kitchen to the east, the den to the south, the study to the north, or upstairs
+to the up.
+^
+study s:foyer;
+lflags {}
+The Study^
+     This is a small, neatly kept study with a a few bookshelves against the
+north wall.
+^
+top d:foyer n:hall s:^door_top e:master;
+lflags {}
+Top of the stairs^
+     This is the top of the stairs.  You can go north or east, and there is a
+door to the south.
+^
+hall s:top e:^door_hall n:nbedroom;
+lflags {}
+The Hall^
+     The stairs are south, the bathroom is east, and there is a bedroom to the
+north.
+^
+bathroom w:^door_bathroom;
+lflags {soundproof private}
+The Bathroom^
+     This is the bathroom that serves the family that lives here.  It looks like
+any other ordinary bathroom.  It has a sink and a toilet and a bathtub.  You can
+even close and lock the door while you use it.  When you're done, you can leave
+to the west.
+^
+nbedroom s:hall;
+lflags {private party}
+Bedroom^
+     This is just a bedroom.  You can leave to the south or hang out for a
+while.  It's really kinda up to you.
+^
+master w:top;
+lflags {private party}
+Master Bedroom^
+     This is the master bedroom.  It is slightly larger than the other rooms
+upstairs, and it has a king sized bed in the center of the east wall.  You can
+leave to the west.
+^
+sbedroom n:^door_sbedroom;
+lflags {soundproof private party}
+Bedroom^
+     This is a bedroom.  You can leave to the north.
+^
+fgate n:fwood s:fwood e:fwood w:fwood u:fwood d:fwood;
+lflags {outdoors}
+The Gates to Fairyland^
+     As you float through eternity you feel your existence coming once again
+into a loose, but solid, sense of twisting realities.  Before you, above you,
+below you, or somewhere like that you see the gates to a strange, mystical land.
+^
+fwood w:fgate e:fwood5 s:fwood1 n:fwood2 u:fwood3;
+lflags {outdoors}
+Fairy Wood^
+     Lost.... You find yourself stumbling through a large, misty wood that seems
+to extend in all directions to infinity.  The trees seem to be moving around you
+opening paths through the thickest brush and closing before allowing you to go
+down the clearest path.  The sky above you is fairly visible through the tree
+tops, but as you look up all you see are incredible vortices of swirling color.
+^
+fsun d:mugwumps w:campfire s:bears u:mugwumps n:dreams;
+lflags {outdoors}
+The Sun^
+     You find yourself suddenly walking on the surface of the sun.  You are
+surrounded by a vast expanse of incredibly bright surface upon which through
+much squinting and shading you can vaguely make out the shapes of strange
+creatures floating around you in all directions.  As you look down at your feet,
+you notice that they are on fire, but it seems ok because you can't feel any
+pain right now.
+^
+campfire w:vines e:fsun n:bears;
+lflags {outdoors}
+Around the Campfire^
+     As you come to your senses for another burst of something that looks as if
+it could vaguely approach reality, you find yourself sitting by a small campfire
+in the middle of nowhere discussing the finer qualities of crossbreeding
+earthworms with racehorses with several people you have never seen before in
+your life.  This, however, doesn't strike you as very inconvenient or unusual
+because your having a good time anyway.
+^
+vines w:fwood4 s:fwood5 n:fwood2 e:campfire;
+lflags { outdoors nomobiles}
+Gripping Vines^
+     All around you the woods seem to have come to life!  You find yourself
+struggling through the branches of mighty trees and thick ivy vines that are
+trying their best not to let you past.  The mist is very thick here too making
+it quite difficult for you to know which way you came from and which way might
+lead out of here.
+^
+brown s:mugwumps;
+lflags {death}
+Brown^
+     Brown is not a good color.  This was a very bad room to try.  Sorry you had
+a bad trip.. better luck next time *wave*
+^
+mugwumps d:brown s:dreams w:bears e:space u:campfire;
+lflags {}
+Mugwump Central^
+     You stand in the center of a large rectangular room with exits in all
+directions.  As you look around this place you see several rows of disgusting,
+lizard-like creatures that could only have come out of a horrible nightmare.
+All of them are strung upside down from the ceiling and most have a person or
+two kneeling on the floor beneath them sucking thick fluids from erect, hollow
+tubes growing from the heads of the creatures.  As you look at the people here,
+you notice that they seem to be enjoying themselves, but you also get the
+feeling that many of them have been here for years.
+^
+fwood1 n:fwood s:fwood e:fwood5 w:fwood4 d:fgate u:fwood3;
+lflags {outdoors}
+Fairy Wood^
+     You are lost in a large wood.  There is thick mist covering the ground in
+all directions and you think you see small animals moving around underneath it,
+but you can't make out what they might be.
+^
+fwood2 n:fwood3 w:fwood1 s:fwood e:fwood4 u:fwood d:fwood5;
+lflags {outdoors}
+Fairy Wood^
+     This is one of those spots that looks incredibly familiar, but you know
+you've probably never been here before.  The mist is thick here and wrapped
+around your feet and ankles so that whenever you take a step it creates swirls
+and eddies in surface of the mist.
+^
+fwood3 n:cliff s:fwood4 e:fwood1 w:fwood5 d:fgate u:fwood3;
+lflags {outdoors}
+Fairy Wood^
+     The mist is thickening here and almost obscuring your entire view.  You can
+barely see your hand in front of your face, and the mist is so thick you can
+feel it against your skin.
+^
+cliff s:fwood5 e:fwood6;
+lflags {outdoors}
+Side of a Cliff^
+     OUCH!!!  You just rammed your nose into the side of a cliff that was
+concealed by the mist.
+^
+fwood4 n:fwood1 s:fwood w:fwood5 e:fwood4 d:fwood4 u:fwood;
+lflags {outdoors}
+Fairy Wood^
+     You are still in the fairy wood.  The mist here is thinner than in other
+places, but still thick enough to make you feel as eerie as everywhere else in
+this place.  There is a small brook here that looks like it would be a rather
+nice place to hang about for a while, if only the water wasn't lime green.
+^
+fwood5 n:fwood2 s:fwood2 e:fwood3 w:fwood u:fwood5 d:fwood1;
+lflags {outdoors}
+Fairy Wood^
+     You are following a twisty path through the fairy wood.  Small paths lead
+off from here in several directions and there is a thick layer of mist covering
+the ground all around you.
+^
+fwood6 s:vines w:fwood3 n:fwood2 e:fwood u:fwood6;
+lflags {outdoors}
+Fairy Wood^
+     These woods seem to continue almost to forever and back.  Every where you
+turn it looks almost exactly the same.  Large old trees everywhere, mist
+covering the ground, no end in sight...
+^
+space w:fsun d:other_side u:dreams;
+lflags {outdoors}
+Space^
+     You find yourself in an infinite void.  You seem to have forgotten where
+you made the wrong turn that brought you here, but you have to deal with it
+anyway.  Off in the distances all around you you can make out millions of stars,
+but you can't seem to focus on any of them long enough to get your bearings
+because every time you move your head your field of vision is filled with
+millions of brightly colored trails coming from each star.
+^
+other_side w:space s:green;
+lflags {outdoors}
+The Other Side^
+     You have broken through to the other side... of a big black sheet with a
+bunch of little holes in it.  It is bright on this side of the sheet and you
+seem to have vague recollections of coming this way once before and then getting
+lost and not being able to figure out where you were.
+^
+green n:clock s:fsun e:dreams w:bears u:mugwumps d:fgate;
+lflags {outdoors peaceful}
+Green^
+     Green is a good color.  In fact, it's such a good color that it's making
+you very relaxed and even a bit tired.  You had better wake up a bit before you
+fall asleep right here.
+^
+dreams u:mugwumps d:brown w:bears n:campfire;
+lflags {outdoors}
+Bad Dreams^
+     All of existence has turned on its head and started spiraling around you.
+You don't know where you are or how you got here or how to get out or even what
+your name is for that matter.  All you can manage to make out are myriads of
+colors spinning everywhere off into nowhere....
+^
+bears e:dreams u:fsun n:campfire;
+lflags {outdoors}
+Dancing Bears^
+     You have reached a small clearing in the middle of somewhere, and to your
+surprise you find a group of five or six small bears, all different colors
+ranging from blue to red and green, dancing around and grooving to a really
+tripped out version of what sounds like Dark Star...  You have no idea where the
+music might be coming from.
+^
+beanstalk d:^stalk_top u:beanstalk1;
+lflags {outdoors}
+Up the Beanstalk^
+     You are about half way up this huge beanstalk.  Small vines and branches
+grow out everywhere making it an easy climb to get the rest of the way up, or
+you can go back down to the field below you.  As you look around from here you
+see a small village off to the south and the vast expanse of the sea to the
+east.  To both the north and the west you see a magnificent chain of mountains
+running in the distance.
+^
+beanstalk1 d:beanstalk u:top_beanstalk;
+lflags {outdoors}
+On the Beanstalk^
+     You have climbed so far up the beanstalk that you are totally immersed in
+clouds.  The air is very thin up here and you are running out of breath fairly
+often. luckily there are plenty of branches you can stop and rest on.  You can
+continue up the beanstalk or go back down from here.
+^
+top_beanstalk d:beanstalk n:cloudy;
+lflags {}
+Top of the Beanstalk^
+     You have reached the top of the beanstalk and to your great surprise the
+tops of the clouds are solid!  As you look around you notice that the sun is
+really bright this far up and you realize that the weather up here must always
+be great without any clouds above you to block out the sun.  There is a path
+that leads off to the north over the cloudy terrain and you can climb back down
+the beanstalk if you want to.
+^
+cloudy s:top_beanstalk e:cloudy1;
+lflags {}
+Cloudy Path^
+     The ground is solid under your feet, but there is a haze of cloud over
+everything.  The path here turns to the east up ahead and goes south back
+towards the beanstalk.
+^
+cloudy1 w:cloudy e:cloud_gate;
+lflags {}
+Cloudy Path^
+     This is an east west path through a magical realm above the clouds.  To the
+east you see a huge palace with a thin mist clinging to it's gigantic structure,
+while to the west you see the path continue into the clouds.
+^
+cloud_gate w:cloudy1 e:bridge;
+lflags {}
+Gates of the Cloud Castle^
+     You are standing in front of a gigantic gateway that leads to a drawbridge
+that leads into the courtyard of what has to be the largest structure you've
+ever laid eyes on.  You can go onto the bridge to the east or head back west,
+whichever you think is wiser.
+^
+bridge w:cloud_gate e:courtyard;
+lflags {}
+The Drawbridge^
+     Every good castle has a drawbridge.  The thing about this one that jump out
+at you immediately though is that under it there isn't a moat, as a matter of
+fact, there isn't anything.  Looking down all you see are mountain tops.  Better
+not fall off of this one.
+^
+mountains ;
+lflags {death outdoors}
+Mountain Tops^
+     You have fallen to your death and now you can't get any of your stuff back
+until after a reset.. I hope you're pleased....  Oh yeah.. you are also
+splattered all over the peak of a really big mountain.
+^
+courtyard w:bridge s:garden n:fountain e:^door_courtyard;
+lflags {}
+The Courtyard^
+     This is a gigantic courtyard.  Not only is the place almost a mile across,
+but everything is HUGE!  The path you are standing on is paved with cobblestones
+almost the size of things that you seem to remember being called Cadillacs, and
+the flowers that fringe the edges are as large as small trees.  From the north
+you hear a loud roar that sounds like a waterfall and to the south you see what
+must be the garden, but it looks like a rain forest to you.  The drawbridge is
+back to the west and the door to this gigantic castle is to the east.
+^
+fountain s:courtyard e:fountain1 w:fountain2 u:fountain4;
+lflags {}
+By the Fountain^
+     You are standing next to a huge fountain.  The noise from the water is
+nearly deafening there is so much of it.  The mist that comes off from the
+splashing water feels almost like rain, even though, here above the clouds, the
+sun is always out.  If you stand on your tippie-toes you can just reach the top
+edge of the side to climb up if you want to.
+^
+fountain4 e:fountain1 w:fountain2 d:fountain5 s:fountain n:fountain3;
+lflags {}
+The Rim of the Fountian^
+     You are standing on the rim of this huge fountain.
+The water splashing out from around the fountain feels like a gentle spring
+rain.  As you look into the fountain you see a few VERY BIG fish swimming around
+and on the bottom what must be some of the currency of this land.
+^
+fountain5 u:fountain4;
+lflags {underwater soundproof}
+In the Fountain^
+     You are walking along the bottom of the fountain now.  The noise from the
+water crashing over your head is so loud that you can't hear a thing.
+^
+fountain1 s:fountain n:fountain3 u:fountain4;
+lflags {}
+Eastern Side of the Fountain^
+     Looks about the same as where you just came from except you have to face
+west to see the fountain.
+^
+fountain3 e:fountain1 w:fountain2 u:fountain4;
+lflags {}
+Northern Side of the Fountain^
+     Looks about the same as where you just came from except you have to face
+south to see the fountain.
+^
+fountain2 n:fountain3 s:fountain u:fountain4;
+lflags {}
+Western Side of the Fountain^
+     Looks about the same as where you just came from except you have to face
+east to see the fountain.
+^
+garden n:courtyard e:garden1 w:garden2;
+lflags {}
+The Garden^
+     You have entered a vast garden filled with all kinds
+of huge plants.  Unfortunately, though,  you can't go and wander among them
+because apparently they have enough of a rodent problem up here to have a fence
+with holes just barely too small for you to squeeze through.
+^
+garden1 w:garden s:garden3;
+lflags {nomobiles}
+The Garden^
+     You are at the end of a what must be a small path for the proprietor of
+this garden.  The path is surrounded on all sides by fencing.  To the south,
+however, it looks like one of the links has been bent just enough for you to
+squeeze through.
+^
+garden3 n:garden1 d:hole;
+lflags {}
+In the Monkeygrass^
+     You have entered a small clearing in the midst of several large clumps of
+monkey grass that block all exits into the garden.  There is, however, a gaping
+hole in the ground here that you can venture down if you want to.
+^
+garden2 e:garden;
+lflags {}
+The Garden^
+     You have reached the end of the path. As you look around, though, you can't
+help but marvel at the enormity of the plants here.  What must only be small
+shrubs here look like the mightiest redwoods you have ever encountered.  You can
+only imagine the size of the beings that must care for this place.
+^
+hole u:garden3 d:bottom;
+lflags {}
+In the Hole^
+     You are scrambling down the side of a huge tunnel that goes straight down
+for about fifty yards and then continues off into darkness.  Fortunately, the
+walls are rough enough to allow you to climb back out if you need to.
+^
+bottom u:hole e:tunnel w:tunnel1 ;
+lflags {dark}
+Bottom of the Hole^
+     You are standing in a dirt tunnel that looks as if it was dug rather
+recently.  The tunnel is large enough for you to stand easily upright and still
+have plenty of room to spare.  The tunnel runs east and west into darkness.
+^
+tunnel w:bottom s:damp;
+lflags {dark}
+In the Tunnel^
+     The tunnel turns to south up ahead and continues into darkness.  As you
+look at the floor you see some very large footprints that seem to indicate that
+this is a fairly well traveled route, although by looking at the prints you
+can't really tell what it is that travels here.
+^
+damp n:tunnel w:steep d:steep s:end;
+lflags {dark}
+Damp Intersection^
+     The tunnel is intersected here by another tunnel that is coming up from the
+west.  The dirt is fairly wet here and there are small drop of water dripping
+slowly from the ceiling in some places.  Someone must be watering the garden
+above you.
+^
+steep u:damp e:damp d:sloping w:sloping;
+lflags {dark}
+Steep Tunnel^
+     This tunnel slopes sharply down to the west or up to the east, depending on
+which way you're going.
+^
+end n:damp d:gopher_den;
+lflags {dark}
+End of the Tunnel^
+     The tunnel runs into a dirt wall here.  Obviously whatever dug this tunnel
+decided that this was far enough to go.  There is, however, a hole leading down
+into some sort of chamber.
+^
+gopher_den u:end;
+lflags {dark}
+The Gopher's Den^
+     This is a large room that has been dug out for the gopher who dug all of
+these tunnels to live in.  It doesn't look like the most comfortable place in
+the world to live, but to a gopher.. who knows?  It might be paradise.
+^
+tunnel1 e:bottom w:blocked;
+lflags {dark}
+In the Tunnel^
+     You are in a freshly dug east west tunnel.
+^
+blocked e:tunnel1;
+lflags {dark}
+Blocked Tunnel^
+     The tunnel is blocked off here by a recent cave-in.  The only exit is back
+to the east.
+^
+sloping u:steep e:steep d:landing s:landing;
+lflags {dark}
+Sloping Tunnel^
+     The tunnel begins to level out here and turns to the south.  As you
+continue you begin to wonder how far down this tunnel can go as you remember
+that you are still up among the clouds.
+^
+landing n:sloping s:mountains e:smelly;
+lflags {nomobiles}
+Landing Bay^
+     You have reached the lowest possible point of the tunnel.  Directly to the
+south you see an opening that is letting in small tufts of cloud.  You see many
+deep claw markings around the edge of the drop off and you wonder what could
+possibly have made them.  There is a chamber to the east, or you can go back up
+the tunnel to the north.
+^
+smelly w:landing s:slippery n:large;
+lflags {}
+Smelly Chamber^
+     You have entered a fair sized chamber that stinks of rotting flesh.  There
+is light coming in from the landing bay to the south, and there are other rooms
+to the north and south.  The smell seems to be coming from the south.
+^
+slippery n:smelly;
+lflags {dark}
+Feeding Chamber^
+     As you enter this room, you step on a pile of intestines and fall to the
+floor where you are covered with blood and guts.  After a few tries you manage
+to scramble to your feet and maintain your balance.  The stench of rotten flesh
+in here is almost overwhelming, and as you examine the many entrails and bones
+lying around the room you notice that they are exclusively human.
+^
+large s:smelly;
+lflags {dark}
+Large Chamber^
+     You discover rather quickly that this large chamber is the lair of the
+legendary One-Eyed-One-Horned-Flying-Purple-People-Eater.  This creature is
+reputed to be a very nasty thing and you would be well advised to depart before
+it gets home.
+^
+entry w:^door_entry n:parlor e:lhall1 s:lhall8;
+lflags {}
+Entry Hall^
+     You are in the gigantic entryway to Cloud Castle.  The walls are covered
+with huge tapestries depicting grand scenes and the walls are lined with
+magnificent suits of armor that tower above you so that you almost have to get a
+crick in your neck to see the tops of them.  There are grand archways that lead
+to the north and south into other rooms and east down a huge hall.
+of the castle is to the west.
+^
+parlor s:entry w:library;
+lflags {}
+The Parlor^
+     This is a vast room with several colossal sofas and chairs scattered
+strategically through the room.  Large archways lead south and west.
+^
+library e:parlor s:lhall1;
+lflags {}
+The Library^
+     This is a fairly small library for being in a place of this size.  There
+could scarcely be many more than a hundred volumes in here, making you think
+that this would definitely not be a good place to start work on a research
+paper.  The books that there are, however, are so big that you would have to
+stand on them to read them.
+^
+lhall1 w:entry e:lhall2 n:library;
+lflags {}
+Large Hallway^
+     You are in a large east west hallway that is lined with magnificent pillars
+and draperies.  There is a large room off to the north.
+^
+lhall2 w:lhall1 n:banquet s:lhall3 u:first_step d:half_way_d;
+lflags {}
+Large Hallway^
+     The hallway turns to either the south or the west here depending on which
+way you are going.  To the east is a huge staircase that goes up and down, but
+the stairs are almost as tall as you are and you would have to struggle to get
+all the way up or down them.  There is a large hall to the north.
+^
+lhall3 n:lhall2 w:lhall4;
+lflags {}
+Large Hallway^
+     This is a long stretch of north south hallway that turns to the west at
+southernmost end.
+^
+lhall4 e:lhall3 w:lhall5 n:lavatory;
+lflags {}
+Large Hallway^
+     You are in a large east west hallway.  There is a large room off to the
+north.
+^
+lhall5 e:lhall4 s:storage w:lhall6;
+lflags {}
+Large Hallyway^
+     This is also a large east west hallway.  There is another exit to the
+south.
+^
+lhall6 e:lhall5 w:lhall7 s:guest1;
+lflags {}
+Large Hallway^
+     This is a large east west hallway.  There is also an exit into a room to
+the south.
+^
+lhall7 e:lhall6 n:lhall8;
+lflags {}
+Large Hallway^
+     The hall turns here so that you can continue down it to the north or east.
+^
+lhall8 s:lhall7 n:entry e:guest2;
+lflags {}
+Large Hallway^
+     You are in a large north south hallway that is lined with magnificent
+pillars and draperies.  There is a large room that opens to the east.
+^
+banquet s:lhall2 n:lkitchen;
+lflags {}
+Banquet Hall^
+     You have entered a gargantuan banquet hall, and as you look around you find
+that the place is a total mess!  There are old bits of food lying on the tables,
+and all over the floor.  There are bits of dirty silverware lying haphazardly
+around as well.  From the north you hear the loud banging and crashing of
+utensils that tells you it must be the kitchen.
+^
+lkitchen s:banquet e:lpantry;
+lflags {}
+The Kitchen^
+     This a really big kitchen.  There pots and pans here that are easily big
+enough to cook you in.  To the south is the banquet hall and there is a pantry
+to the east.
+^
+lpantry w:lkitchen;
+lflags {}
+Pantry^
+     This is a large pantry with lots and lots of food that is on shelves way
+too high for you to reach.  You can leave to the west when you finish drooling.
+^
+guest1 n:lhall6;
+lflags {}
+Guest Room^
+     This is an enormous bedroom.  Other than that it looks about like any other
+bedroom.  It has a bed, a dresser, a night table, and all the other stuff that
+bedrooms usually have.  It's all just really big.
+^
+guest2 w:lhall8;
+lflags {}
+Guest Room^
+     This is an enormous bedroom.  Other than that it looks about like any other
+bedroom.  It has a bed, a dresser, a night table, and all the other stuff that
+bedrooms usually have.  It's all just really big.
+^
+storage n:lhall5 s:^brick_storage;
+lflags {}
+Storage Room^
+     This is a large storage room that contains mostly cleaning supplies.  There
+are a lot of big brooms and mops and other things like that.
+^
+lavatory s:lhall4;
+lflags {}
+The Lavatory^
+     This must be where the inhabitants of Cloud Castle come when they have to
+satisfy that natural urge that holds sway over all of nature's creations.  This
+is rather reassuring considering that now you can stop wondering if rain was
+actually these people satisfying their natural yearnings, though you may still
+not be so sure about thunder.
+^
+first_step d:lhall2 u:top_step;
+lflags {}
+The First Step^
+     After much heaving, groaning, and pulling you finally make it onto the
+first step of this mammoth staircase.  As you look up you begin to feel
+disheartened at the prospect of climbing the rest of this thing.
+^
+top_step d:first_step u:landing1 ;
+lflags {}
+Top Step^
+     In the interest of time you have now reached the top step.  only one more
+to go and you'll be at the top  :).
+^
+landing1 d:top_step e:archway;
+lflags {}
+Landing^
+     You are now at the landing at the top of the stairs.  As you look back down
+you heave a sigh of relief that you don't have to climb those things again, and
+you think that going back down will be much easier.  There is a giant archway to
+the east.
+^
+archway w:landing1 n:antechamber;
+lflags {}
+Giant Archway^
+     This is giant archway.  It goes west back to the stairs and turns north and
+leads into a vast antechamber.
+^
+antechamber s:archway e:waiting;
+lflags {}
+Vast Antechamber^
+     This a big room that doesn't seem to have much purpose.  The only reason
+you see for anyone wanting to sit in it is if they wanted an empty room to heal
+in.
+^
+waiting w:antechamber e:throne n:chambers;
+lflags {}
+Waiting Room^
+     This is where those who seek audience with the king of this castle wait.
+There are several very fine, plush chairs in here waiting to accommodate
+visitors.  Unfortunately for you, though, they are all way to high off the
+ground for you to sit in one.
+^
+throne n:sitting s:side w:waiting e:balcony;
+lflags {}
+Throne Room^
+     As you enter this room you are immediately struck by a gigantic throne made
+of pure gold!  Once you manage to tear your eyes away from that huge treasure,
+you notice many finely woven tapestries and banners hung tastefully about the
+room.  There are exit's leading in all directions, and to the east you can go
+out onto the balcony.
+^
+balcony w:throne;
+lflags {outdoors}
+The Balcony^
+     You have emerged onto a large balcony about 25 yards across.  You realize
+that this is where the ruler of this realm must stand to deliver public speeches
+and other stuff like that.
+^
+side n:throne w:^door_side;
+lflags {}
+Side Room^
+     This is a small side room just south of the throne room.
+^
+treasury e:^door_treasury;
+lflags {}
+The Treasury^
+     This is the treasury of this mighty castle.  You see mountains of gold and
+jewels all over the place.  Pity that most of it is too big and heavy for to
+even shift much less carry home with you.
+^
+sitting s:throne w:giants_bed n:^bookcase;
+lflags {}
+Sitting Room^
+     This is the kings private sitting room.  A kind of cozy looking place even
+though it is pretty huge.  exits lead south and west.
+^
+giants_bed u:bed s:chambers e:sitting w:under;
+lflags {}
+Giants Bedroom^
+     This is the giants bedroom.  You know this from the mammoth figure who is
+asleep on the bed about ten feet above you and to the west.  You can easily walk
+under it if you want to, or you could even climb up the bedpost onto the bed if
+you want you risk getting that close to the giant.  There are also exits to the
+east and south.
+^
+chambers s:waiting n:giants_bed;
+lflags {}
+Kings Chambers^
+     This is the reception area to the king's private chambers.  The waiting
+room is just north of here, and the chambers continue to the  south.
+^
+bed d:giants_bed u:giant;
+lflags {}
+On the Bed^
+     You are now on the giants bed standing very close to a very big thing.  If
+you're feeling REALLY brave you can climb up onto this guys mammoth chest, or
+you can scramble back down the bedpost and hide under the bed in case this guy
+awakens.
+^
+giant d:bed w:nose;
+lflags {}
+On the Giant^
+     You are standing on the giant's chest.  As you look to the west you can see
+up his cavernous nose!  Looks like a nice place to go spelunking.
+^
+nose e:giant w:nose_chamber u:nose_chamber;
+lflags {}
+In the Nose^
+     You are standing inside of the giant's nose, and you find yourself
+fervently hoping that your walking around in here won't make you sneeze.  You
+can go back out onto his chest to the east or continue exploring up to the west.
+^
+nose_chamber e:nose d:nose u:^hatch_nose;
+lflags {dark}
+Small Chamber in the Nose^
+     You have reached a small somewhat square chamber deep in the giants nose
+and to your great amazement there's a steel hatch in the ceiling here and a
+12-runged ladder leading up to it.
+^
+head d:^hatch_head e:eyes;
+lflags {dark}
+Inside the Head^
+     You are deep inside this giants head now and things are starting to look
+really fishy.  There is a steel walkway here leading to the east where you think
+you might make out a vague light.
+^
+eyes w:head;
+lflags {dark}
+Behind the Eyes^
+     You suddenly find yourself in a spacious hollow room with all kinds of
+strange panels with buttons and switches and lights all over them.  In the front
+of the room you see two huge glass windows.
+^
+under d:^panel_bed e:giants_bed;
+lflags {}
+Under the Bed^
+     You are under the giants bed.  You have to stoop just a little because the
+bed sagging pretty badly  under the giant's weight, but the bed looks like it
+can hold...for the time being at least.
+^
+secret_treasury u:^panel_secret;
+lflags {dark}
+Secret Treasury^
+     This is a small, secret treasury where the giant keeps only his most valued
+possession.
+^
+half_way_d u:lhall2 d:bottom_stairs;
+lflags {}
+Half Way Down^
+     You have stopped to rest half way down the giant staircase.  It's easier
+going while you are trying to go down them than it will be trying to get back
+up, but if you're on your way back up you know that by now.
+^
+bottom_stairs u:half_way_d w:corridor1;
+lflags {}
+Bottom of the Stairs^
+     You are at the bottom of the stairs.  Looking up to the east, you see the
+huge staircase that you're going to have to struggle back up, and from the west
+you hear many anguished screams and groans coming from the dungeon of this
+castle.
+^
+corridor1 e:bottom_stairs w:^door_corridor1 n:guard s:seargent;
+lflags {}
+Dungeon Corridor^
+     This is a large, dim, smoky corridor that is lit by sparsely separated
+torches that are giving of sputtery light and lots of smoke.  So much smoke has
+come from these torches that all of the walls and ceilings have been stained
+black with soot from them.  The corridor leads west back to the stairs or east
+through a door deeper into the dungeon.  There are also rooms to the north and
+south.
+^
+guard s:corridor1;
+lflags {}
+Guard Room^
+     This is a small guardroom.  There are three chairs scattered loosely around
+a comparatively small table.  That's about all there is to see in here.  You can
+leave to the south.
+^
+seargent n:corridor1 s:quarters;
+lflags {}
+Seargent's Office^
+     This is a small office with a desk and a chair.  That's about all there is
+in here.  You can leave to the north or south.
+^
+quarters n:seargent;
+lflags {}
+Seargent's Quarters^
+     This is the seargent's bedroom.  He sleeps here.  There is a bed.  There is
+a closet.  There is a dresser with a mirror on it.  You can leave to the north.
+^
+corridor2 w:corridor3 e:^door_corridor2 n:cell1 s:cell2;
+lflags {}
+Dungeon Corridor^
+     This is a sooty east west corridor that runs through the dungeon.  There
+are open cells to the north and south.
+^
+corridor3 w:torture e:corridor2 n:cell3 s:^door_corridor3;
+lflags {}
+Dungeon Corridor^
+     This is a sooty east west corridor that runs through the dungeon.  There
+are cells to the north and south.
+^
+cell1 s:corridor2;
+lflags {}
+Cell^
+     This is a small, uncomfortable looking cell.  There is a wooden bed
+suspended from the wall and no pillow.  You wonder where these prisoners go to
+the bathroom.
+^
+cell2 n:corridor2;
+lflags {}
+Cell^
+     This is a small, uncomfortable looking cell.  There is a wooden bed
+suspended from the wall and no pillow.  You wonder where these prisoners go to
+the bathroom.
+^
+cell3 s:corridor3;
+lflags {}
+Cell^
+     This is a small, uncomfortable looking cell.  There is a wooden bed
+suspended from the wall and no pillow.  You wonder where these prisoners go to
+the bathroom.
+^
+cell4 n:^door_cell4;
+lflags {}
+Cell^
+     This is a small, uncomfortable looking cell.  there is a wooden bed
+suspended from the wall and no pillow.  You wonder where these prisoners go to
+the bathroom.
+^
+torture e:corridor3 s:^brick;
+lflags {}
+Torture Chamber^
+     As you enter the torture chamber, you are almost overwhelmed by the sheer
+size of the equipment here.  Luckily for you, though, none of it is small enough
+for you to fit on it.  This brings you little relief, though, when you think
+that all these people have to do is step on you.
+^
+secret n:^hole_secret e:secret1;
+lflags {dark nomobiles}
+Secret Passage^
+     To your amazement you are standing in a secret passageway built into the
+walls of the castle that is only big enough for someone the size of an ordinary
+human.  The passage here turns from east to north.
+^
+secret1 w:secret u:secret2;
+lflags {dark}
+Secret Passage^
+     You are in a small secret passage that runs from east to west.  To the east
+is a flight of stairs that is cut the size of normal feet.
+^
+secret2 d:secret1 u:intersection;
+lflags {dark}
+Secret Stairs^
+     You are on a flight of stairs. They go up and down.  The only thing
+remarkable about these stairs is how easy it is going up and down them compared
+with the other stairs in this place.
+^
+intersection d:secret2 w:secret3 n:secret4;
+lflags {dark}
+Dark Intersection^
+     You have come to a three way intersection.  You can go to the north or west
+down the passage, or you can go down a flight of stairs that leads into
+darkness.
+^
+secret3 e:intersection n:^hole_secret3;
+lflags {dark}
+Secret Passage^
+     To your amazement you are standing in a secret passageway built into the
+walls of the castle that is only big enough for someone the size of an ordinary
+human.  The passage here leads east and north.
+^
+secret4 s:intersection n:secret5;
+lflags {dark}
+Secret Passage^
+     You are in a north south passageway that runs through the walls of Cloud
+Castle.
+^
+secret5 u:secret_stairs s:secret4;
+lflags {dark}
+Secret Passage^
+     The passage here goes off into darkness to the south and up a flight of
+stairs to the north.
+^
+secret_stairs d:secret5 u:secret6;
+lflags {dark}
+Secret Stairs^
+     You are on a flight of stairs. They go up and down.  The only thing
+remarkable about these stairs is how easy it is going up and down them compared
+with the other stairs in this place.
+^
+secret6 d:secret_stairs e:secret7;
+lflags {dark}
+Secret Passage^
+     You are at the west end of a small east west passage.  From here you can go
+down the passage to the east or climb down a small flight of stairs that starts
+here.
+^
+secret7 s:^hole_secret7 w:secret6;
+lflags {dark}
+Secret Passage^
+     To your amazement you are standing in a secret passageway built into the
+walls of the castle that is only big enough for someone the size of an ordinary
+human.  The passage here leads west and south.
+^
+glade w:^flop_glade;
+lflags {outdoors}
+Hidden Glade^
+     You are in the deepest inner reaches of this cow pasture.  The thick Grass
+grows almost up to your waist, and, to your surprise, there aren't even any
+flies in here!  The grass is soft and gentle and seems to be caressing you as
+you walk through this mystical place.  As you look down at your feet you make
+out millions of tiny pinpoints sparkling in myriads of different colors.  As you
+look closer you realize that this is just the light sparkling off of the rich
+soil on the ground.
+^
+clock s:green;
+lflags {Peaceful Party}
+The Clock Room^
+   As you enter you are nearly knocked to the floor by a giant pendulum
+swinging in front of the door.  After regaining your balance you look around 
+the room and realize that the whole wall behind you is a giant clock!  As you
+survey the rest of the room you find that it is completely HUNG with clocks of
+all shapes and sizes, and to your surprise they are all set on different times!
+Every few minutes you hear a different clock chime out a different hour.
+^

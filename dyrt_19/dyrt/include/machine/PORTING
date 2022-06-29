@@ -1,0 +1,18 @@
+VERY IMPORTANT:
+
+some machines use Intel byte format (LSB, or DCBA), and some Non-intel
+(MSB, or ABCD).. For example, Sun is MSB, and Concetrix is LSB.
+
+What does this mean to you?
+
+well, not much, except that the user files are not compatible between
+a MSB and a LSB machine. You will need to have them either converted (see 
+ntohl man pages) to the proper format, or start anew.
+
+
+read the install.doc file for detailed info on configuring the game for
+your machine.
+
+gcc is the suggested compiler, although any ansi compiler should
+work (concentrix version was compiled with its native compiler)
+

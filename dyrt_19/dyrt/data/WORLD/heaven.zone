@@ -1,0 +1,513 @@
+/*********************************************************
+* HEAVEN.ZONE                                            *
+* Written By: Martyr                                     *
+* Code By: Martyr                                        *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 29 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:heaven
+
+%mobiles
+
+Name            = peter
+Location        = 1
+Strength        = 500
+Damage          = 8
+Speed           = 0
+PFlags            { NoSummon }
+Description     = "Saint Peter observes you peacefully."
+End             = peter
+
+Name            = thor
+Location        = 25
+Strength        = 320
+Damage          = 20
+Armor           = 10
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { PickStuff }
+Description     = "Thor stands here glaring at Agnes."
+End             = thor
+
+Name            = agnes
+Location        = 25
+Strength        = 150
+Damage          = 15
+Speed           = 0
+SFlags            { Female }
+MFlags            { PickStuff }
+Description     = "Agnes laughs, prepared to meet all of Thor's needs."
+End             = agnes
+
+Name            = odin
+Location        = 25
+Strength        = 350
+Damage          = 22
+Armor           = 10
+Speed           = 0
+MFlags            { PickStuff }
+Description     = "Odin glares at you with his one eye."
+End             = odin
+
+Name            = valkyrie
+Location        = 20
+Strength        = 175
+Damage          = 18
+Speed           = 0
+SFlags            { Female }
+Description     = "Valkyrie glances around for a rabbit."
+End             = valkyrie
+
+Name            = terrance
+Location        = 23
+Strength        = 140
+Damage          = 14
+Aggression      = 1
+Speed           = 0
+Description     = "
+Terrance the ugly troll sits here preparing his dinner."
+Examine         = "He looks hungry."
+End             = terrance
+
+Name            = giant
+PName           = "The Giant"
+Location        = 22
+Strength        = 150
+Damage          = 14
+Aggression      = 2
+Speed           = 0
+Description     = "A giant was relaxing here until you walked in."
+End             = giant
+
+Name            = bear
+PName           = "The Bear"
+Location        = 32
+Strength        = 170
+Damage          = 12
+Speed           = 0
+Description     = "The Great Bear is here eating honey."
+End             = bear
+
+Name            = bison
+PName           = "The Bison"
+Location        = 29
+Strength        = 130
+Damage          = 12
+Speed           = 0
+Description     = "A bison grazes upon the land here."
+End             = bison
+
+Name            = coyote
+PName           = "The Coyote"
+Location        = 34
+Strength        = 80
+Damage          = 10
+Speed           = 0
+Description     = "A small coyote threatens to nip your ankles."
+Examine         = "
+Despite his nasty attitude, he is indeed a beautiful creature."
+End             = coyote
+
+Name            = snake
+PName           = "The Snake"
+Location        = LIMBO@LIMBO
+Strength        = 60
+Damage          = 10
+Aggression      = 3
+Speed           = 5
+Description     = "
+A snake with very narrow slits for eyes swishes around on the ground."
+End             = snake
+
+%objects
+
+Name            = mjolnir
+AltName         = hammer
+Location        = WIELDED_BY:thor
+BValue          = 1600
+Size            = 100
+Weight          = 50
+Damage          = 30
+OFlags            { Weapon PitReset }
+Desc[0]         = "Mjolnir, the sacred hammer of Thor, has been left here."
+End             = mjolnir
+
+Name            = vase
+Location        = IN_ROOM:SHRINE@ICECAVE
+State           = 1
+MaxState        = 1
+BValue          = 100
+Size            = 3
+Weight          = 4
+OFlags            { GetFlips }
+Desc[0]         = "There are shards of ice all over the floor."
+Desc[1]         = "A vase made of ice has been set on a pedestal."
+Examine         = "
+The vase is made of a cloudy ice and is inscripted with images of great
+glaciers.  Turning the vase over, you see the inscription:
+		         Jiffy Script, Inc.
+                 'Converse with us, We talk better'."
+End             = vase
+
+Name            = ark 
+Location        = IN_ROOM:3
+State           = 1
+MaxState        = 1
+BValue          = 100
+Size            = 40
+Weight          = 20
+OFlags            { Openable Container NoGet }
+Desc[0]         = "The Ark of the Covenant is open."
+Desc[1]         = "The Ark of the Covenant is here."
+Examine         = "
+The ark is two and a half cubits long, one and a half cubits wide, one and a 
+half cubits high, and is made of shittim wood covered with pure gold, with a
+crown of gold around it.  A ring of gold is set on each corner, with two rings
+of shittim wood (overlaid with gold, of course) passing through them."
+End             = ark
+
+Name            = tablet
+Location        = IN_CONTAINER:ark
+BValue          = 80
+Size            = 1
+Weight          = 1
+Desc[0]         = "Two stone tablets are here."
+Examine         = "
+Carved into the stones are ten commandments.  At the very bottom of each is 
+written:
+                           Jiffy Scripts, Inc.
+                   'Converse with us, We talk better'."
+End             = tablet
+
+Name            = staff1
+PName           = staff
+Location        = IN_ROOM:4
+BValue          = 100
+Size            = 10
+Weight          = 1
+Desc[0]         = "The Staff of Moses rests against the wall."
+Desc[1]         = "The Staff of Moses rests against the wall."
+Examine         = "You notice that the staff feels faintly like a snake."
+End             = staff1
+
+Name            = headdress
+Location        = IN_ROOM:29
+BValue          = 50
+Size            = 1
+Weight          = 1
+Desc[0]         = "A headdress has been left here."
+Examine         = "It appears to belong to a chieftain."
+End             = headdress
+
+Name            = feather
+Location        = IN_ROOM:30
+State           = 1
+MaxState        = 1
+BValue          = 80
+Size            = 1
+Weight          = 1
+OFlags            { WearOnBody GetFlips }
+Desc[0]         = "An eagle feather has been left here."
+Desc[1]         = "An eagle feather is drifting down from the sky."
+End             = feather
+
+Name            = medicine
+AltName         = bag
+Location        = IN_ROOM:34
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { GetFlips }
+Desc[0]         = "A medicine bag has been dropped here."
+Desc[1]         = "A medicine bag hangs suspended from a tree."
+End             = medicine
+
+Name            = bow
+Location        = IN_ROOM:32
+BValue          = 100
+Size            = 1
+Weight          = 1
+Desc[0]         = "A silver bow rests here."
+End             = bow
+
+Name            = arrow
+Location        = IN_ROOM:31
+BValue          = 100
+Size            = 1
+Weight          = 1
+Desc[0]         = "A silver arrow sticks up out of the ground."
+End             = arrow
+
+Name            = rainbow
+Location        = IN_ROOM:7
+OFlags            { NoGet }
+Desc[0]         = "A rainbow wraps around the room."
+End             = rainbow
+
+Name            = watermelon
+Location        = IN_ROOM:6
+State           = 1
+MaxState        = 1
+BValue          = 50
+Size            = 1
+Weight          = 1
+OFlags            { Food GetFlips }
+Desc[0]         = "A watermelon lies before you."
+Desc[1]         = "A watermelon hangs temptingly from the Tree of Knowledge."
+End             = watermelon
+
+Name            = staff2
+PName           = staff
+Location        = IN_ROOM:11
+BValue          = 90
+Size            = 1
+Weight          = 1
+OFlags            { Armor }
+Desc[0]         = "A shepherd's staff leans against the wall."
+End             = staff2
+
+%locations
+
+1 e:2 ;
+lflags { Private RealTime }
+The Pearly Gates^
+   You seem to be  standing on a cloud.  Before you stand a pair of huge
+gates, which seem to be made of pearl.  The air about you is peaceful,
+yet a tinge of expectancy can also be felt.
+^
+2 n:19 e:3 s:28 w:1 u:3 ;
+lflags { Private RealTime }
+Paradise Crossroads^
+   You are standing at the place where the heavens meet.  Other than the
+fact that you are standing on a cloud, this place seems rather ordinary.
+To the north, you see a land of mountains and fjords, with a sign at the
+beginning of the road which reads "Valhalla."  To the south you see a great
+and varied land with a sign reading "The Happy Hunting Grounds."  To the
+east you see you see a large tent with a firey cloud above it.
+^
+3 e:4 u:4 ;
+lflags { Private RealTime }
+The Tabernacle^
+   You are standing within a large tent.  To the east is a plain, while to
+the west you can see the gates of pearl.
+^
+4 n:9 e:5 s:15 w:3 u:5 d:3 ;
+lflags { Private RealTime }
+Plains^
+   You are on the plains.  To the west is a tent, to the east an untouched
+wilderness, to north is a cloud bank, and to the south you can see the
+ruins of a walled city.
+^
+5 e:6 w:4 u:3 d:4 ;
+lflags { Private RealTime }
+Wilderness^
+   You are wandering in the wilderness.  You have been here for so long
+that you have lost track of the years.
+^
+6 e:7 s:16 w:5 u:7 d:5 ;
+lflags { Private Peaceful RealTime }
+The Garden^
+   You are in a lush garden.  All forms of trees, flowers, and shrubbery
+surround you.  All the creatures of the land and air approach you
+innocently, and the creatures of the water leap out of a near-by lake to
+give you their greetings.  You feel peaceful.
+   To the south you see the glimmer of gold.
+^
+7 e:8 u:8 d:6 ;
+lflags { Private RealTime }
+Cloud 6^
+   The soft, fluffy surface of the cloud is slightly strange to walk on,
+and you notice for the first time that you do not have wings.
+^
+8 n:12 w:7 u:12 d:7 ;
+lflags { Private RealTime }
+Seventh ^
+   Streams of milk and honey roll down the sides of the purple and white
+mountains to water the green plains.  The blue sky plays host to a blue
+moon and a golden sun, which is setting in magnificent splendor.
+   To the west you spy a rainbow.  To the north you see a palace.
+^
+9 e:10 u:10 ;
+lflags { Private RealTime }
+Cloud 8^
+   The entire landscape is made of white, fluffy clouds.  You feel slightly
+uneasy about the situation, as the thought of falling to the earth below
+does not want to leave your mind.
+^
+10 n:17 w:9 u:11 d:9 ;
+lflags { Private Peaceful RealTime }
+Cloud 9^
+   All is peaceful.  All around you flit angels with harps, singing
+beautiful melodies full of joy and love.  Folds of the cloud form chairs
+and couches to rest on.
+^
+11 u:12 d:10 ;
+lflags { Private RealTime }
+Entrance to 's Forest^
+   You stand just within a vast forest.  The trees grow so close together 
+that you have no choice but to walk the path, either to go down to Cloud 9
+or to go deeper into the forest to the east.
+^
+12 e:18 u:13 d:8 ;
+lflags { Private RealTime }
+'s Forest^
+   You on a path in a vast forest.  Above you is a palace seemingly made
+of diamond.  To the east is a silver sea.  Below you you spy a land of
+milk and honey.
+^
+13 u:14 d:12 ;
+lflags { Private RealTime }
+Diamond Palace^
+   The entire palace is made of diamond.  The light from above is broken
+into rainbows, and their glitterings seem to enchant you.
+^
+14 ;
+lflags { Private RealTime }
+Cloud 13^
+   You are in a simply furnished room which stands in stark contrast to the
+diamond palace which contains it.
+^
+15 ;
+lflags { Private RealTime }
+Ruins of a walled city^
+   You are standing in the ruins of a walled city.  One building stands,
+with a rope hanging from an upper-story window.  It seems as if a battle
+has taken place here.
+^
+16 ;
+lflags { Private RealTime }
+The Land of Gold^
+   The entire landscape is coated with gold.
+^
+17 ;
+lflags { Private RealTime }
+The Place of Martyrs^
+   Strewn about this room are discarded crosses, gibbets, and stakes.
+^
+18 ;
+lflags { Private RealTime }
+The Silver Sea^
+   You are floating on a silver sea.
+^
+19 n:20 ;
+lflags { Private RealTime }
+Ydalir^
+   You  are standing in series of dales.  Yews are growing here, and you
+can see signs of Ull roaming about nearby.
+^
+20 n:21 s:19 ;
+lflags { Private RealTime }
+Alfheim^
+   You stand in the god's gift to Freyr when he cut his first tooth.  The
+light elves dance around you.
+^
+21 e:23 s:20 w:22 ;
+lflags { Private RealTime }
+Valaskjalf^
+   You stand in the Hall of the Slain.  The roof is thatched with silver.
+Below you, you see the spirits of all the slain creatures of the land.
+^
+22 n:26 e:21 ;
+lflags { Private RealTime }
+Sokkvabekk^
+   The floor seems to be sinking.  All around you, cool murmuring water
+laps the sides.  Two great chairs are here, seemingly for Odin and Saga to
+sit in while they drink joyfully from gold goblets.
+^
+23 n:24 w:21 ;
+lflags { Private RealTime }
+Thrymheim^
+   Mountains surround you.  A loud roar fills the air, though you can not
+locate the source.  This hall once belonged to the great giant Thiazi, but
+is now owned by his daughter, fair Skadi-- who was Njord's bride.
+^
+24 s:23 w:25 ;
+lflags { Private RealTime }
+Gladsheim^
+   You heart suddenly feels lighter, filled with gladness.  Nearby, you can
+see Valhalla, vast and gold-bright.
+^
+25 n:27 e:24 w:26 ;
+lflags { Private RealTime }
+Valhalla^
+   Looking up, you notice that the roof is made of shields, and the rafters
+are spears.  Breast-plates litter the benches.  A wolf lurks at the western
+door, and an eagle hovers over it.  A deep and wild looking river, Thund,
+roars beside Valgrind, the outer gate.  Five hundred and forty doors lead
+off in different directions, but you suspect that eight hundred warriors
+stand behind each one, so you opt not to open any of them.
+^
+26 e:25 s:22 ;
+lflags { Private RealTime }
+Breidablik^
+   You stand in Broad Splendour, Balder's hall.  The country around you is
+beautiful, blessed and untainted by any evil.
+^
+27 ;
+lflags { Private RealTime }
+Vidi^
+   This is a land of long grass and saplings.
+^
+28 s:29 ;
+lflags { Private RealTime }
+Northern Tundra^
+   You are travelling in a land of ice and snow.  The sun and the
+reflections from the brilliant white snow conspire to blind you, but
+through squinted eyes you can catch sight of the stark, raw beauty.  Though
+the wind howls about you, the cold does not seem to have any affect.  
+^
+29 n:28 s:30 ;
+lflags { Private RealTime }
+Hardwood Forest^
+   You stand under a canopy of leaves and intertwined branches.  Through
+the trees, you can glimpse deep blue lakes, which you imagine to have been
+created by the northern glaciers thousands of years ago.
+^
+30 n:29 e:32 w:31 ;
+lflags { Private RealTime }
+Northern Plains^
+   Golden grass stretches as far as you can see in all directions.
+^
+31 e:30 s:35 ;
+lflags { Private RealTime }
+Northwestern Rainforest^
+   Far to the west you can spy the blue of the ocean.  The abundant
+vegetation causes you to believe that you are standing in a rainforest.
+Dark clouds gather to the west.
+^
+32 s:33 w:30 ;
+lflags { Private RealTime }
+Northeastern Forest^
+   You are standing in a grove of maple trees.  To the east you spy the
+ocean, upon which waves are breaking.
+^
+33 n:32 w:34 ;
+lflags { Private RealTime }
+Swamp^
+   The earth sucks at your feet as you walk.  Off in the trees you can
+hear the sounds of alligators in search of food.  It is getting dark.  The
+alligators are hungry.
+^
+34 e:33 s:36 w:35 ;
+lflags { Private RealTime }
+The Southern Plains^
+   You stand in an arid land.  Tumbleweeds blow in the wind about you.
+^
+35 n:31 e:34 ;
+lflags { Private RealTime }
+Land of Giants^
+   All around you are huge redwoods and sequoias.
+^
+36 ;
+lflags { Private RealTime }
+Home of the Great Spirit^
+   The Great Spirit is not in right now, and there does not seem to be any
+place to leave a message.
+^

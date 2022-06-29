@@ -1,0 +1,15 @@
+   DIRT-3      Changes & additions from DIRT-2  (Winter 1991/spring 1992)
+ ===========================================================================
+
+  DIRT-2 was rewritten from a one-process-per-player mud to a 
+  one-process mud by Alf, which makes it DIRT-3.
+  There is no longer one process per player communicating thru a shared
+  data space. Large parts of DIRT-3 was made from scratch, the changes are
+  too extensive to be decribed in detail here.
+
+
+
+
+
+
+

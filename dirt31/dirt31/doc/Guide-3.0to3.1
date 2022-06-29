@@ -1,0 +1,477 @@
+This is the first version of a small guide for those who want to 
+incorporate the dirt3.1 changes into their dirt3 muds.
+
+I'll start with an explanation of the new data structures, then some
+selected topics, and then file by file give an estimate on how many
+changes/how much work you need to do to update them.
+
+
+Data-structures.
+---------------
+
+Each of the 3 entities, locations, objects and mobiles are stored in
+arrays, just like before, now pointed to by "objects", "room_data" and
+"ublock".
+
+             _______________________________________________________
+objects -->  |   |   |   |   |   |   |........|   |.............|  |
+             -------------------------------------------------------
+               0   1   2   ....... ^ .......... ^  ............  ^
+                                   |            |                |
+                    num_const_obs -+    numobs -+  obj_array_len-+
+
+
+"numobs", "numchars" and "numloc" says how many there are of each
+(like before), but "num_const_obs", "num_const_loc"  et.c. say how many
+of them are constant, which means the original zones that are read at startup.
+
+"obj_array_len", "loc_array_len" et.c. contain the current length of the
+arrays. The arrays aren't constant length anymore, but resized when needed.
+In a resize, new memory can be allocated and the contents copied over,
+so array indices are used in all references to the data, not pointers.
+
+In order to hide the internal representation of information, macros are
+provided for all access to attributes like the values above and for
+score, damage, and so on (like before) and many more have been added.
+
+MudMacros start with either p (player/mobile), o (object), l (location)
+or z (zone) according to what they operate on. For instance, the owner
+of a mobile (or name of the zone it belongs to), given its array-index,
+is powner(), while the owner of a location is lowner(). The inventory of
+a player is accessed with pinv(), while the inventory of a container
+(object) is oinv(), and a location's inventory is accessed with linv().
+To test if a location is permanent (termed constant above),
+we would use lpermanent().
+All macros are in mudmacros.h.
+A few previous macros have been made into functions ( setoloc(), setploc() ),
+since they do much more now then before. In addition to recording the new
+location of an object or player in the respective object/player entry,
+they have to update the set in the destination entry which contains all the
+indexes of its contents.
+
+A new type, "int_set", is used to store the array-indexes of things
+located in or contained in other things, but you only need to know about
+the macros that operate on them.
+
+-----------------------------------------------------------------------------
+
+How to look at each object carried by someone, (or each mobile/player in
+a room or each object in a container et.c.) in turn ? Let's for example 
+see how we can obtain all objects carried by a player/mobile:
+
+
+The traditional way:
+
+for (i = 0; i < numobs; i++) {
+
+	< test i to see if it's among those we want >
+}
+
+
+Alternative 1:
+
+for (i = pfirst_obj(player); i != SET_END; i = pnext_obj(player)) {
+
+	< i is among those we want >
+}
+
+Here, pfirst_obj() = "player's first object", generally use Xfirst_Y(), where
+X = { p, o, l, or z}, and Y = { obj, loc, or mob }
+
+
+Alternative 2:
+
+for (i = 0; i < pnumobs(player); i++) {
+
+	< pobj_nr(i, player) is among those we want >
+}
+
+Here, pnumobs(player) means the number of objects in the player's
+inventory, and pobj_nr(a, b) means object number a in player b's inventory.
+There are also oobj_nr(), lobj_nr() et.c.
+
+
+The traditional way is clearly very unefficient, but still works like
+before since "numobs" et.c. have the same meaning as before.
+
+Alternative 1 uses "current"-pointers (there is one for each int_set) to
+remember where we are, so you can't use nested loops on the same set.
+You can, however, freely remove elements from a set while inside the loop
+without messing up the "current"-pointer stuff.
+
+Alternative 2 just accesses element number 0 through the number of elements
+in a set. You can't remove elements from the set inside this loop, since
+that would change the element numbers (if you just visited element number n,
+and then removed element number n-1, your next element, which WAS n+1 would
+now be number n, and would be skipped.)
+You can however have nested loops on the same set.
+
+The whole story regarding the "numobs" et.c. naming conventions is as follows:
+
+ numobs		Number of objects in the game
+znumobs()	Number of objects in a zone
+pnumobs()       Number of objects carried by someone
+onumobs()       Number of objects in an object
+lnumobs()       Number of objects in a room
+
+ numchars	Number of characters in the game
+znumchars()     Number of characters in a zone
+lnumchars()     Number of characters in a room
+
+ numloc		Number of locations in the game
+znumloc()	Number of locations in a zone
+
+------------------------------------------------------------------------
+
+How to make cloned stuff behave like the originals, if the originals
+behaviors are hardcoded.
+
+In the code, there are statements like this:
+
+if (object == OBJ_CASTLE_RUNESWORD)
+
+where OBJ_CASTLE_RUNESWORD is the array-index of the runesword. Now, if the
+runesword was cloned, this test would fail, since the clone would be given
+another index.
+
+The original index numbers are now placed in each object/mobile/location,
+so that the clones inherit them. They are accessed with:
+
+pnum(), onum(), lnum()
+
+The test above would need to be rewritten like this:
+
+if ( onum(object) == OBJ_CASTLE_RUNESWORD )
+
+and will succeed for clones as well.
+Another example, a Puff test like this:
+
+if ( mobile == MOB_START_PUFF + max_players )
+
+Needs to be changed to:
+
+if ( pnum(mobile) == MOB_START_PUFF )
+
+-------------------------------------------------------------------------
+
+ID's.
+
+All objects, mobiles and locations (and even players) are assigned a
+unique ID. For the old constant stuff, this is equal to its array-index
+(since these don't change). Clones are assigned numbers from a variable
+called "id_counter", which is then incremented. Each time something is saved
+to a file, the id_counter is also saved. When the mud executable starts,
+the saved id_counter is read from that file. The ID numbers are used for a
+lot of things. They are used to uniquely identify a players home, and they
+are used in all objects/mobiles/location's reset-value-entrys to
+determine where they go on a reset.
+
+There is a hash-table "id_table" that maps all currently loaded ID's to the
+array-indexes they are currently placed at.
+
+Example 1:You reset a zone which contains an object O that is supposed to
+	  be put inside another object on reset. This other object is a
+	  wizard created object, and may or may not be in the game.
+
+	  O's oloc_reset() entry is supposed to contain another
+	  objects ID. That ID is looked up in the hash-table. If it exists,
+	  it is in tha game, and the lookup function returns its current
+	  index. O is then placed inside that object. If it doesn't exist,
+	  O is just placed in the room called 'destroyed'.
+
+Example 2:You set your starting location to a room you've just created.
+	  Then you destruct the room and reenter the game. The game will
+	  look at your phome() value, which is supposed to contain the ID
+	  of a location. It is looked up in the hash-table and not found
+	  there, so you're put either in the Village Church or in the Temple.
+	  If you load your room again, and reenter, you will be placed in it
+	  off course.
+
+Players also have an ID, which makes it possible to set the location-on-reset
+of an object to a player.
+
+-------------------------------------------------------------------------
+
+Files.
+
+(Even if it says 'no changes', check anyway, for differences between them
+ and yours)
+
+
+actions.c:
+---------
+	No changes.
+
+bootstrap.c
+-----------
+	Large parts of the file changed.
+
+	The routines that 'boot', or read the data/locations,
+	data/mobiles et.c. files have been made more general, as they
+	are now also used to read the files that contain the wizards
+	saved creations.
+
+	Two routines added that deal with the "ID-counter" (more about
+	this later)
+
+bprintf.c
+---------
+	No changes, except for a funtion snoop_off() that fixes a bug
+	that used to appear if a snooper quits without quitting the snoop.
+	(A call to that function needs to be uncommented in crapup() too).
+
+change.c
+--------
+	Some changes.
+	Added change_wimpy(), which changes wimpy-mode (idea from LPmud),
+	which is just about implemented but not used, as I got 2nd thoughts
+	about it.
+
+	change_title() will change title on wiz-created mobiles, ie the
+	text that appears when you walk into his room.
+
+	change_name() will change name on mobiles too.
+
+	change_desc() will now change the description of wiz-created
+	mobiles, objects and rooms as well as on other players.
+
+
+clone.c
+-------
+	New file.
+
+commands.c
+----------
+	Many smaller changes here and there.
+	The reset system is new.
+
+
+condition.c
+-----------
+	No changes.
+
+
+config.h
+--------
+	Added some #defines neccesary for system V and some #defines that
+	determine how large the locations/objects/mobiles arrays can grow.
+
+database.c
+----------
+	No changes, except that the table antry that checks for the
+	NOLOGIN file has been removed, it checked too often and used
+	too much resources. The shutdown command now kicks people off instead.
+
+exec.c
+------
+	No changes.
+
+exitnames.h
+-----------
+	New file. Since many files declares an array containing the names
+	"North" et.c, I put them in a file so that they're only included once.
+
+fight.c
+-------
+	Only a few small changes.
+
+flags.c
+-------
+	No changes.
+	Well, I removed the mudlog() calls in lflagscom() and	etc....
+
+move.c
+------
+	Some minor changes.
+
+mud.c
+-----
+	Some minor additions.
+	The code that loads a wizards zone into the game when he enters.
+
+
+mudmacros.h
+-----------
+	No changes I think, but lots of new macros were neccesary.
+
+
+mudtypes.h
+----------
+	Most of the file changed, since the data structures are changed.
+
+
+objsys.c
+--------
+	As with mobile.c, lots of small changes here and there were
+	neccesary.
+
+oflagnames.h
+------------
+	No changes.
+
+parse.c
+-------
+	Few changes.
+
+
+pfilter.c
+---------
+	Just changed the name of a function.
+
+pflagnames.h
+------------
+	"Clone" and "Load/Store" added. "as-mortal" removed. "Set" removed, and
+	"OflagEdit" renamed to "ObjectEdit".
+
+questnames.h
+------------
+	No changes.
+
+rooms.c
+-------
+	Many changes, large and small.
+
+s_socket.c
+----------
+	No changes.
+
+
+sendsys.c
+---------
+	No changes.
+
+sflagnames.h
+------------
+	NoWiz added.
+
+
+timing.c
+--------
+	Few changes.
+	Instead of all those expensive calls to the time() system call,
+	I have a variable called 'global_clock' which is incremented
+	at each interrupt.
+
+types.h
+-------
+	No changes.
+
+uaf.c
+-----
+	Few changes.
+
+utils.c
+-------
+	Few changes, but a routine resize_array() and two small packages
+	added to the end of the file.
+
+	One defines a data type called int_set, which defines a set of
+	integers. It is used for example, to store the array indexes
+	of the players in a room, the objects in a container etc.c.
+
+	The other maintains a hash table which is used to map ID's to the
+	in-game array indexes.
+
+weather.c
+---------
+	No changes.
+
+wizard.c
+--------
+	Some changes.
+	The Set command. The shutdown command.
+
+wizlist.c
+---------
+	No changes.
+
+writer.c
+--------
+	No changes, but two small functions are added.
+
+	(which gives the number of characters and the number of lines a player
+	typed in (DESC). This is neccesary, in order to know how long
+	a buffer to allocate to store new descriptions.)
+
+zones.c
+-------
+	Some changes.
+	The old functions use array-indexes now, instead of pointers.
+	This is neccesary, since the zones array might get reallocated
+	if becomes too short.
+	New functions to load a zone and reset a zone added.
+
+data/WIZ_ZONES
+--------------
+	Directory to contain the wizards creations.
+	The files are named <name>.locations, <name>.objects and
+	<name>.mobiles and the format is the same as data/mobiles etc...
+
+	This directory will also contain a file called ID_COUNTER
+	which contains a number, the current value of the id_counter
+	variable in the game.
+
+data/bootstrap
+--------------
+	Some changes if I remember correctly.
+
+data/fullhelp
+-------------
+	Help on the new commands, old help texts updated, added
+	cross-references.
+
+data/pflags
+-----------
+	updated.
+
+data/reset_data
+---------------
+	This file used to contain the objects reset-data. No longer
+	needed since all reset data are kept in the game.
+
+data/uaf_rand
+-------------
+	New format, you will need to convert your player file.
+	A program, 3.0-3.1.c in the /src directory can be used for this.
+
+data/ZONE/files
+---------------
+	Some changes.
+	It's important that you remove reset_data from it!
+
+In addition to these, come the files in the /include directory.
+They are equally important.
+
+ywhere.
+	And the manual entry too...
+	A system-V version of go_background() added.
+	Possibly other minor stuff.
+
+mflagnames.h
+------------
+	No changes.
+
+mkdata.c
+--------
+	Some changes here and there.
+
+	Output format made to match the new bootstrap.c so that the
+	objects/locations/mobiles files written by mkdata.c is in the same
+	format as those written by the STORE command, since both aftp_game.org                                                                                        100644       0       0         2122  6377450051  11434  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                    =============================================================================
+/   ______ _______ ____   _____   ___ __    _ ______    ____  ____   _____   /
+\  |  ____|__   __|  _ \ / ____\ / _ \| \  / |  ____|  / __ \|  _ \ / ____\  \
+/  | |__     | |  | |_| | |     | |_| | |\/| | |___   | |  | | |_| | |       /
+/  | ___|    | |  | ___/| |   __|  _  | |  | | ____|  | |  | |  __/| |   ___ \
+\  | |       | |  | |   | |___| | | | | |  | | |____  | |__| | |\ \| |___| | /
+/  |_|       |_|  |_|  o \_____/|_| |_|_|  |_|______|o \____/|_| \_|\_____/  \
+\                                                                            /
+ ============================================================================
+
+------------------------------------------------------------------------------
+ftp://ftp.game.org/pub/mud      FTP.GAME.ORG      http://www.game.org/ftpsite/
+------------------------------------------------------------------------------
+
+ This archive came from FTP.GAME.ORG, the ultimate source for MUD resources.
+
+------------------------------------------------------------------------------
+                                        

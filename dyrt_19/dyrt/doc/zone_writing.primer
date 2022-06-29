@@ -1,0 +1,587 @@
+                   The DYRT 1.1*/1.2* World Builder's Tutorial
+    ========================================================================
+                     Copyright (c)1993 The Mystique Project
+                    Internet: owner-mystique@gnu.ai.mit.edu
+
+                          written by Valentin Popescu
+                         <vpopesc@opus.calstatela.edu>
+
+                updated for use with DYRT 1.2* by Katie Mowry
+                            <96mowry@matt.alma.edu>
+   ===========================================================================
+1.0 FOREWORD
+
+	This document is intended to be a quick introduction to building a 
+	world under the DYRT Game System, which is based on DIRT 3.1/3.0 code 
+	by Alf Salte and Nicknack, which in turn is based on the AberMUD game 
+	system, originally by Richard Acott, Alan Cox, and Jim Finnis.
+
+	A zone, as defined within this document, is a text file written in
+	a special format (a language, if you will).  It contains definitions 
+	for objects, mobiles, and/or rooms used in the game.  All you need
+	to create one is an editor that writes plain text files, some spare 
+	time, and a lot of imagination.
+
+	Since this document is intended mostly as a reference manual, refer
+	to the table of contents to locate the topic you are interested in.  
+	Don't be afraid to experiment, and always keep backups!  
+
+	In addition to this reference manual, it is a good idea to obtain a 
+	sample zone from someone who is willing to mail you one.  Ask your 
+	nearest god for this little bit of assistance.  You should ask for a 
+	zone that you think you know rather well so that you can understand 
+	more of the intricate parts of zone writing.  Once you have looked at 
+	a sample zone, you will realize how big a project writing a zone is, 
+	but don't get discouraged.  It can be time-consuming, but it is not 
+	difficult.
+
+	Think about what you want your zone to be about.  Is it based on
+	an existing theme?  book?  movie?  a place you have been?  Is it a 
+	newbie zone? or a zone intended for higher-level players?  Try to 
+	imagine the layout of the zone you want to build, and then make a 
+	paper map.  Your first map will necessarily be rough.  You will 
+	probably change it a lot as you go along.  When making a layout of 
+	your map, try to imagine the puzzles you want to build into your 
+	zone.  Make sure that they will be solvable by the average player 
+	once he has put in a bit of work.
+
+1.1 TIPS ON STARTING A ZONE
+
+	When creating your zone, the first three lines you should type are
+	as follows:
+
+		#include "cflags.h"
+		#include "exits.h"
+		#include "undef.h"
+
+	They must start at the very beginning of the line.  They read the
+	definitions of the flags you will be learning about in subsequent 
+	files, and also prevent some headaches you may have later on.
+
+	After those three lines, you should type in the following lines:
+
+		%mobiles
+		%objects
+		%locations
+
+	They should be in that order.  Below each of the headings you will
+	write that division of your zone.  Not only will it help you to keep 
+	things straight in your head, but it will make for very few necessary 
+	changes when it comes time to insert your zone into a MUD.  These 
+	keywords tell the program what type of data follows.
+
+1.2 ADVANCED FEATURES
+
+	Zones are run through the C preprocessor when the world is rebuilt.
+	Therefore, you can use C preprocessor features, such as comments using 
+	the /* and */ delimiters, macros, etc.  If you don't exactly know what 
+	that means, don't worry about it.
+
+	Just remember, to put a comment inside a zone file, enclose it between
+	/* and */ symbols.  For example:
+
+			/* this is a comment */
+
+	This will have absolutely no effect on the zone.  Nothing after a
+	/* will be processed until a */ is found.
+
+	If you use #defines, try to always use capital letters for your macro
+	name.  This is a convention, and also a way to prevent headaches when 
+	one of your macro names appears inside a description.
+
+2.0 CREATING ROOMS
+
+	It is simplest to start by writing your room descriptions.  Mobiles
+	and objects need places to be, and there is no sense in confusing the 
+	issue by trying to intermix all three right away.  Try to imagine 
+	exactly how each room and its surroundings will look.  As you write 
+	the description, try not to assume that a player is coming from one 
+	specific direction.  For example: "You move to the east" is not 
+	desirable, because the person may already have entered from the west, 
+	moved to the north , and then re-entered the room by going south.  As 
+	you have a room completed, re-read it to make sure the images you want 
+	the player to see are in there.  Keep a list of mobiles and objects 
+	that you would like to add to your zone.  Keep a list of their names, 
+	maybe a few key things about them, and of course their beginning 
+	location.  For the early steps you may even wish to add this 
+	information right into your room descriptions, and then remove the 
+	information as you create the objects and mobiles later on.
+
+	What is a room?  A room is what you find yourself in every time
+	you move on a mud.  It is composed of four main parts:
+
+	1. a room name and exits
+	2. the location flags (lflags)
+	3. the room title
+	4. the room description
+
+	The following are examples of room entries:
+
+	waitingroom e:outside w:hallway n:bedroom;
+	lflags {peaceful party}
+	The Waiting Room^
+             You stand  inside  a  small  room. Nothing fancy here, just
+        ladies in waiting. Maybe you should leave?
+        ^
+        outside w:waitingroom e:forest1 n:forest2 s:forest@arcadia;
+        lflags {Outdoors RealTime NoSummon}
+        In the garden^
+             You stand in a beautiful garden.
+        ^
+
+	You just saw how two simple rooms are defined.  For each room, the
+	very first thing you should type in is the label of the room.  The 
+	keyword for the first room was "waitingroom" and the keyword for the 
+	second was "outside".  You may use any name you wish here, but you 
+	may not have two different rooms in the same zone with the same label.
+	This will never be seen by players, it is just for programmers.
+
+	The next fields on the same line are exits.  e:outside simply means
+	that there should be an exit leading east to the room labeled "outside"
+	in the current zone.  Valid exits are south (s), north (n), west (w), 
+	east (e), up (u), and down (d).
+
+	When making an exit to another room, you may want to make sure that
+	room has an exit leading back to this original room, else the player 
+	will get stuck there without an exit.
+
+	Direct your attention now to the second room, exit leading south.
+	It states:  s:forest@arcadia.  What this means is that the exit to the 
+	south will lead to the room labeled forest, but in a DIFFERENT zone, 
+	namely arcadia.  This allows you to connect your zone to existing 
+	zones already on the mud.
+
+	There is a special type of exit, which depends upon objects.  Such
+	is the case with doors.  However, refer to the section on doors
+	for a detailed explanation of handling those.
+
+	To finish up this very first line of a room definition, the trailing
+	semicolon (;) must be included.  It signals the end of that particular 
+	field.
+
+	The second line is a set of lflags.  If you don't want any special
+	lflags for this room, you must still specify that line, but nothing in 
+	between the curly brackets.  The various flags are described at the 
+	end of this chapter.
+
+	The third field is the title of the room.  Notice the trailing ^
+	sign.  That sign must exist there, to mark the end of the title.  It 
+	will not be printed to players.
+
+	The remaining lines of the room are the room description itself.
+	As with the title, end it with a ^ on an EMPTY line.  It is standard 
+	practice that room descriptions start with a 4-space indentation, 
+	but that is up to you.
+
+2.1 LFLAGS AND THEIR MEANINGS
+
+	Valid lflags are as follows:
+
+	Death
+		This is a very special room, which mortals dread.  Any mortals 
+		entering this room will die.  They will not lose points, but 
+		their inventory will be trapped here, and they will be kicked 
+		off the game.
+
+	CantSummon
+		Players can not be summoned out of this room.
+
+	NoSummon
+		Players can not be summoned to this room.
+
+	NoQuit
+		Players can not quit from this room.
+
+	NoSnoop
+		Players may not be snooped in this room.
+
+	NoMobiles
+		Mobiles will not enter this room.  This flag is useful to stop 
+		mobiles from wandering in or out of certain places.  Should 
+		be used to at least confine them to their own zone.
+
+	NoMagic
+		Mortals may not cast magic from inside this room.
+
+	Peaceful
+		There will be no fighting permitted inside this room.
+
+	Soundproof
+		This room is soundproof.  Tells, shouts, etc., will not be 
+		heard inside the room.
+
+	OnePerson
+		This room is only big enough for one person.  Mortals will 
+		not be able to enter it if there is already a person inside.
+
+	Party
+		Anyone is allowed to use the Emote command here.
+
+	Private
+		This room is only big enough for two persons.  A third player 
+		trying to enter the room will be told the room is full.
+
+	OnWater
+		This room is on water.  A boat will be required for mortals.
+
+	Underwater
+		This room is under water.  Special gear must be used by mortals.
+
+	Outdoors
+		This room is outdoors.  Weather messages will be seen.
+
+	NegRegen
+		Mortals will actually lose their strength if sitting around 
+		in this room.
+
+	WizOnly
+	AwizOnly
+	DgodOnly
+	GodOnly
+		These rooms are for immortals.  An AwizOnly room may be 
+		entered only by Archwizards or higher, for example.
+
+	RealTime
+		This room is subject to day/night messages, and the effects 
+		thereof.
+
+	Cold
+		This is a cold room.  The difference will be noticed by the 
+		fact that it will snow rather than rain.
+
+	Hot
+		This is a hot room.
+
+	Dark
+		This room is dark all the time.  Mortals will need sources of 
+		light.
+
+	Light
+		This room is lit at all times.
+
+	Maze
+		This room is part of a maze.  Here wizards cannot see to 
+		which rooms the exits lead, and therefore, they cannot guide 
+		mortals through the maze.
+
+
+3.0 CREATING OBJECTS
+
+	What is an object?  An object on a MUD can be many things.  It can 
+	be as simple as a banana, or as complex as an invisible mist blocking 
+	an exit.  This chapter will deal with basic objects.  Refer to the 
+	"Doors" chapter for an analysis of linked objects, such as doors.
+
+	A standard object may contain the following fields:
+
+		Name		= little_knife
+		PName		= knife
+		AltName		= dagger
+		State 		= 1
+		MaxState	= 1
+		Armor		= 0
+		Damage		= 5
+		BValue		= 30
+		Size		= 5
+		Weight		= 4
+		Location	= IN_ROOM:armory@arcadia
+		Desc[0]		= "A small knife has been dropped here."
+		Desc[1]		= "A small knife rests on the table."
+		OFlags		  {Weapon GetFlips}
+		Examine		= "It is a small knife covered with blood."
+		End		= little_knife
+
+	There is another field that has not been included above, namely the
+	Linked field.  That will be discussed in the chapter on Doors.  As 
+	with mobiles, not all of the field listed above are required.
+
+	Once again, the field defined by Name is the object's label.  At
+	the end of the description, note the End field, which has the same 
+	value as Name.
+
+	The AltName field is an alternate name for the object.  It may
+	help mortals to pick up the object.  For example, a branch may 
+	alternatively be called a stick, or a knife may be called a dagger.
+
+	The PName field is how players will refer to the object, although
+	AltName will still be valid.  This will be the primary name.
+
+	Armor is the armor class of the object if it is wearable.  It must 
+	have one of the Wear oflags and the oflag Armor set, for this field 
+	to have any effect.  See the section on oflags.
+
+	Damage is the damage a weapon may make.  It must have the Weapon
+	oflag set for this to have any effect.
+
+	BValue is the base value of the object.  The actual value is adjusted
+	according to the number of mortals on the game (the more mortals, the 
+	higher the value).
+
+	Size and Weight are self-explanitory.
+
+	MaxState and State are special flags.  Each object has a state 
+	associated with it.  MaxState.  MaxState specifies the maximum state, 
+	whereas State specifies the initial state.  According to the example, 
+	if the state on the object is 0, the test defined as Desc[0] will be 
+	seen upon entering the room.  If state is 1, then Desc[1]... etc.  
+	See also the discussion on the GetFlips and PushToggle Oflags at the 
+	end of this chapter.
+
+	The Desc[x] fields are the object descriptions upon entering
+	a room.  The current description will be chosen according to the 
+	current state of the object.  See the previous paragraph, and also
+	the GetFlips and PushToggle flags.  Also refer to the appendix, the
+	section on entering string fields.  Sometimes it is desirable that
+	the objects have no description.  That is fine, just leave the field
+	out.  You may specify just one field, two, or three.
+
+	The location of an object is a bit more complex than it
+	appears.  An object can be in one of three states:  carried by
+	someone, worn by someone, or in a room.  The way you can specify
+	this is by the use of four different keywords.  Example:
+
+                 Location        = CARRIED_BY:puff
+                 Location        = IN_ROOM:forest
+                 Location        = WORN_BY:seamas
+                 Location        = IN_CONTAINER:pillowcase
+
+	In the first example, an object is carried by the mobile
+	Puff.   In the second example, the object is simply in the room
+	labeled "forest".  In the third example, it is worn by the mobile
+	Seamas.  In the fourth, it is inside the pillowcase.
+
+	The Oflags field is a collection of object flags, enclosed
+	in curly brackets, {'s and }'s.  Note there is no = sign on this field.
+
+
+3.1 OBJECT FLAGS AND THEIR MEANINGS:
+
+	Destroyed:
+		This oflag really means "invisible to mortals".  Indeed,
+		mortals will not be able to see it.
+
+	NoGet:
+		This object cannot be taken using the "take" or "get" commands.
+		It should be used for objects that should not be taken, like 
+		doors, furniture, etc.
+
+	Openable:
+		This object can be opened.  Note that opening an object
+		toggles its state.
+
+	Lockable:
+		This object can be locked with a key.  Note that locking
+		an object toggles its state.
+
+	Boat:
+		This object can be used to float on water, such as a boat
+		or a raft
+
+	Pushable:
+		This object is pushable or movable, such as a boulder.
+
+	PushToggle:
+ 		Pushing this object will toggle its state.
+
+	Food:
+		This object is edible, and will improve stamina (hitpoints)
+		when eaten.
+
+	Armor:
+		This object is armor.  The Armor field will be considered
+		during fights.  The object must also have one of the wearable 
+		oflags set. 
+
+	Wearable (WearonXXX, ExcludeWear)
+		This flag has been superceeded by five separate flags, and
+	a modifier flag.  Do not use this flag anymore, use "WearOnArms",
+	"WearOnHead", "WearOnFeet", "WearOnHands", and "WearOnBody".  They
+	are self-explanitory.  A modifier flag, "ExcludeWear", has been added
+	to disallow wearing two items on the same part of the body (such
+	as two shields).  Two items that are wearable with the WearOnBody flag
+	may normally be worn at the same time.  If one has the ExcludeWear
+	flag and the other doesn't, they still can be worn together.  However,
+	if they both have the ExcludeWear flag set, the player will only be
+	able to wear one or the other.
+
+	Lightable:
+		The object can be lit, to provide light.
+
+	Extinguish:
+		The object can be extinguished
+
+	Key:
+		The object can be used as a key to unlock doors.
+
+	GetFlips:
+		This flag will cause the status of the object to be set to
+		0, when a successful get/take is performed.  The reason is
+		as follows.
+
+		At times, you may have to have a room, with a table, and
+		on the table a pen described as "A pen is on the table."
+		However, if someone takes the pen, and then drops it in a
+		room with no table, the description will still read "A pen
+		is on the table."  GetFlips to the rescue!
+
+		By setting GetFlips on, and State to 1, you can set Desc[1]
+		to the original description.  When someone takes the object,
+		it will be toggled to state 0, so if he drops it, Desc[0] 
+		will be seen.
+	
+		Or in other words:
+			State 		= 1
+			Oflags		  {GetFlips}
+			Desc[0]		= "A pen has been dropped here."
+			Desc[1]		= "A pen is on the table."
+
+	Lit
+		The object is providing light.  This does not imply it
+		is extinguishable, or re-lightable.
+
+	Container
+		The object is a container.  You can put stuff in it, and
+		take stuff out.
+
+	Weapon
+		The object is a weapon.  The Weapon field will be taken
+		into consideration during fights.
+
+	Broken
+		The meaning of this flag is a bit obscure, and left to the
+		interpretation of the programmer.  For example, if the flags
+		Boat and Broken are set, the boat would sink at sea.
+
+	NoSummon
+		This object cannot be summoned.
+
+
+4.0 CREATING DOORS
+
+	What's so special about doors?
+
+	Well, nothing is special about doors, except that you need two of
+	them.  First, let's consider two rooms, labeled 'outside' and 
+	'inside.'
+
+		outside s^outside_door;
+		lflags {outdoors realtime}
+		Outside^
+			You are outside.
+                 ^
+
+                 inside n:^inside_door;
+                 lflags {}
+                 Inside^
+
+                      You are inside.
+                 ^
+
+	Notice how the two room exits, s: and n: respectively, point to 
+	something starting with a ^ sign.  That marks an object.  What
+	this means is that the room exit depends on the state of the object
+	named there.
+
+	Let's now define the two objects, inside_door and outside_door:
+
+                 Name    = inside_door
+                 PName   = door
+                 Linked  = outside_door
+                 State   = 1
+                 MaxState= 1
+                 Location= IN_ROOM:inside
+                 oflags  { Openable NoGet Lockable }
+                 Desc[0] = "The door is open."
+                 Desc[1] = "The door is closed."
+                 Desc[2] = "The door is locked."
+                 End     = inside_door
+
+                 Name    = outside_door
+                 PName   = door
+                 Linked  = inside_door
+                 State   = 1
+                 MaxState= 1
+                 Location= IN_ROOM:outside
+                 oflags  { Openable NoGet Lockable }
+                 Desc[0] = "The door is open."
+                 Desc[1] = "The door is closed."
+                 Desc[2] = "The door is locked."
+                 End     = outside_door
+
+	This is all it takes to make a door.  Note the linked fields on
+	the object descriptions.  They point to each other.  So, in theory,
+	what happens is that if someone tries to go through an exit that
+	points to an object, the game will check the status of the object.
+	If the object is status 0, it will check the Linked field, and 
+	allow the player to move into the room where the Linked object is.
+
+	So, to recap.  To make a door, you must do the following:
+
+	1.  Create two objects, one for each side of the door.  The objects
+		must have a Linked field.  On the Linked field put each
+		other's name.  Note that the Openable/Lockable flags depend
+		on your applications.  For some applications, you may not
+		need  those flags.  NoGet flag is highly desirable tho!
+
+	2.  Edit the description of the room you are leaving from and set 
+		the respective exit to ^object_name, where object_name is
+		the label of the first object you created.  Then edit the
+		descriptions of the destination room, and put an exit back
+		to the first room, pointing to the other object.
+
+	The object's state must be 0 if you wish the door to be open at reset,
+	1 if you want it closed (not locked) and 2 if you want it locked.
+
+	Remember that the exit from one room should point to the object inside
+	that particular room, and not in the destination room.
+
+5.0 APPENDIX
+5.1 SOME IMPORTANT NOTES
+
+	Referencing one zone from another:
+
+	You may reference any object contained in one zone from another zone,
+	using the @ sign.  For example, if you would like to refer to the 
+	object stick in room blizzard, you would specify it as stick@blizzard.
+	Some examples:
+
+                 Location        = forest@arcadia
+                 Location        = CARRIED_BY:dragon@cave
+
+                 etc...
+
+	Entering text strings:
+
+	Certain fields accept variable length strings.  However, you must
+	first acquaint yourself with the legal (and illegal) ways to type in
+	a string.
+
+	Legal Ways:
+
+		Field1 		= "This is legal."
+		Field2		= "
+		This is also legal."
+		Field3		= "
+		And this too.  There is no problem with typing in a few lines
+		of description.  Just make sure you don't forget the ending 
+		quote."
+
+	Illegal Ways:
+	
+		Field1 		=
+		"This is not legal.  The beginning quote must be on the same
+		line as the equal sign."
+
+5.2 TABLE OF CONTENTS
+
+        Foreword..................................................    1.0
+	   Tips on Starting a Zone................................    1.1
+	   Advanced Features......................................    1.2
+	Creating Rooms............................................    2.0
+	   Lflags and Their Meanings..............................    2.1
+	Creating Objects..........................................    3.0
+           Object Flags and Their Meanings........................    3.1
+	Creating Doors............................................    4.0
+	Appendix..................................................    5.0
+	   Some Important Notes...................................    5.1
+	   Table of Contents......................................    5.2

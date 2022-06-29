@@ -1,0 +1,48 @@
+      DIRT-2      Changes & additions from DIRT-1  (Summer 1991)
+ ===========================================================================
+
+  DIRT-2 is essentially DIRT-1 but fine-tuned for speed and efficiency.
+
+  The installation-procedure has been greatly simplified. The
+  masteruser is generated automaticaly, with the correct level and flags,
+  A new world-file is generated whenever needed and reset is done whenever
+  needed. No more getting caught by the tree etc. when trying to get in
+  for the first time.....
+  The wizlist, the password file etc are generated automaticly too.
+
+  The title-system has been changed. The titles are now contained in the
+  player file along with the level, score etc. A side effect is the fact
+  that each player has his own private title which is changable, the titles
+  are no longer linked to your level. And so all wizards may very well be of
+  the same level. The titles are contained in an in-game data structure,
+  the one that is shared among processes, so there is no need for the
+  game to read the  old title files every time you walk into a room and see
+  another player.
+
+  The size of the shared data area has been cut in half to double the speed
+  if IPC using files has to be used.
+
+  A bug fixed, to allow yet another doubling of speed if IPC by files has to
+  be used.
+
+  New commands:  I don't remember everthing at this time of writing (1992), but
+  CHANGE NAME, CHANGE DAMAGE, CHANGE ARMOR, CHANGE SPEED are new with dirt-2.
+  So are OPENGAME, and DELETE. 
+
+  Lots of things are improved, like the 'stat player' showing which
+  weapon (and damage), the armors (and protection) and the accumulated
+  protection for the player.
+
+  Parts of the old code has been cleaned up and made 'readable' :-). 
+  The logging in and main-loop has been rewritten so that it's relatively
+  easy to follow step by step.
+
+  ---Alf and Nicknack, 1991.
+
+
+
+
+
+
+
+

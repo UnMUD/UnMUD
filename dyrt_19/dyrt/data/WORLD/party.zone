@@ -1,0 +1,310 @@
+/*********************************************************
+* PARTY.ZONE                                             *
+* Written By: Marty                                      *
+* Notes:     Distribute with full DYRT distribution only *
+*            No code needed                              *
+* Edited by Rex on 19 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:party
+
+%mobiles
+
+Name            = nguard
+PName           = "The Guard"
+Location        = entrance
+Strength        = 200
+Damage          = 10
+Armor           = 1
+Speed           = 0
+Description     = "
+A novice guard stands here guarding the entrance to the house."
+Examine         = "A fairly well-built guard."
+End             = nguard
+
+Name            = captain
+PName           = "The Captain"
+Location        = 2
+Strength        = 300
+Damage          = 9
+Speed           = 3
+Description     = "The Captain of the Guard is standing here."
+Examine         = "
+Yep, he's a Captain alright.  He's starting to get a beer belly."
+End             = captain
+
+Name            = guard2
+PName           = "The Guard"
+Location        = 4
+Strength        = 320
+Damage          = 12
+Aggression      = 20
+Speed           = 0
+Description     = "A guard is standing in the corner."
+Examine         = "A fairly well-built guard."
+End             = guard2
+
+Name            = guard3
+PName           = "The Guard"
+Location        = 4
+Strength        = 270
+Damage          = 10
+Aggression      = 10
+Speed           = 0
+Description     = "A guard is standing here."
+Examine         = "A fairly well-built guard."
+End             = guard3
+
+Name            = guard4
+PName           = "The Guard"
+Location        = 4
+Strength        = 290
+Damage          = 10
+Aggression      = 30
+Speed           = 0
+Description     = "A large guard is standing here."
+Examine         = "A fairly well-built guard."
+End             = guard4
+
+Name            = guard5
+PName           = "The Guard"
+Location        = 5
+Strength        = 300
+Damage          = 10
+Armor           = 2
+Aggression      = 10
+Speed           = 0
+MFlags            { BarSouth BarWest BarEast }
+Description     = "A guard is standing here."
+Examine         = "A fairly well-built guard."
+End             = guard5
+
+Name            = guard6
+PName           = "The Guard"
+Location        = 5
+Strength        = 300
+Damage          = 10
+Armor           = 2
+Aggression      = 10
+Speed           = 0
+MFlags            { BarWest BarSouth BarEast }
+Description     = "A guard is standing here."
+Examine         = "A fairly well-built guard."
+End             = guard6
+
+Name            = cook
+PName           = "The Cook"
+Location        = 6
+Strength        = 500
+Damage          = 8
+Speed           = 0
+Description     = "The cook is standing between his pots and pans."
+Examine         = "He looks confused as to what to serve for dinner."
+End             = cook
+
+Name            = guard7
+PName           = "The Guard"
+Location        = 7
+Strength        = 300
+Damage          = 15
+Aggression      = 30
+Speed           = 0
+Description     = "A large guard is standing here."
+Examine         = "A fairly well-built guard."
+End             = guard7
+
+Name            = dog
+PName           = "The Dog"
+Location        = grassfield
+Strength        = 200
+Damage          = 15
+Armor           = 1
+Aggression      = 90
+Speed           = 0
+Description     = "A security dog is standing here."
+Examine         = "He is a solidly-built German Shepherd."
+End             = dog
+
+%objects
+
+Name            = collar
+Location        = WORN_BY:dog
+BValue          = 70
+Size            = 2
+Weight          = 1
+Armor           = 3
+OFlags            { Armor WearOnNeck PitReset }
+Desc[0]         = "A nicely-decorated dog collar is lying here."
+End             = collar
+
+Name            = fryingpan
+AltName         = pan
+Location        = WIELDED_BY:cook
+BValue          = 100
+Size            = 4
+Weight          = 6
+Damage          = 13
+OFlags            { Weapon PitReset }
+Desc[0]         = "A large frying pan has been dropped here."
+Examine         = "
+This is a strong iron frying pan.  You'd better not get hit with it."
+End             = fryingpan
+
+Name            = guardsword
+PName           = sword
+Location        = WIELDED_BY:captain
+BValue          = 200
+Size            = 4
+Weight          = 5
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A sword has been left here."
+End             = guardsword
+
+Name            = shield1
+PName           = shield
+Location        = WORN_BY:guard6
+BValue          = 250
+Size            = 3
+Weight          = 3
+Armor           = 9
+OFlags            { Armor ExcludeWear WearOnArms PitReset }
+Desc[0]         = "A small round shield has been left here."
+End             = shield1
+
+Name            = shield2
+PName           = shield
+Location        = WORN_BY:guard5
+BValue          = 250
+Size            = 3
+Weight          = 3
+Armor           = 9
+OFlags            { Armor WearOnArms ExcludeWear PitReset }
+Desc[0]         = "A small round shield has been left here."
+End             = shield2
+
+Name            = garmor1
+PName           = armor
+AltName         = bodyarmor
+Location        = WORN_BY:guard5
+BValue          = 300
+Size            = 5
+Weight          = 5
+Armor           = 10
+OFlags            { Armor WearOnBody ExcludeWear PitReset }
+Desc[0]         = "A suit of bodyarmor has been left here."
+Examine         = "
+The bodyarmor is strong and sturdy with the emblem of the royal guard on it."
+End             = garmor1
+
+Name            = garmor2
+PName           = armor
+AltName         = bodyarmor
+Location        = WORN_BY:guard6
+BValue          = 300
+Size            = 5
+Weight          = 5
+Armor           = 10
+OFlags            { Armor WearOnBody ExcludeWear PitReset }
+Desc[0]         = "A suit of bodyarmor has been left here."
+Examine         = "
+The bodyarmor is strong and sturdy with the emblem of the royal guard on it."
+End             = garmor2
+
+Name            = sword1
+PName           = sword
+Location        = WIELDED_BY:guard6
+BValue          = 200
+Size            = 3
+Weight          = 3
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A guard's sword has been left here."
+End             = sword1
+
+Name            = sword2
+PName           = sword
+Location        = WIELDED_BY:guard5
+BValue          = 200
+Size            = 3
+Weight          = 3
+Damage          = 5
+OFlags            { Weapon PitReset }
+Desc[0]         = "A guard sword has been left here."
+End             = sword2
+
+%locations
+
+/* 1 */
+entrance s:2 e:grassfield n:PL6@PLAIN;
+Lflags { Outdoors NoMobiles RealTime }
+The Entrance of the Bungalow^
+   You are standing in the entrance of a great bungalow. To the south a door
+leads further into the bungalow. The entrance to the bungalow is quite dark
+and moist. To the west you can see a small doghouse in the grass.
+^
+/* 2 */
+grassfield w:entrance;
+Lflags { Outdoors RealTime }
+On the Lawn^
+   You are standing in the middle of a small lawn in front of the bungalow.
+A small dog house stands here. To the north you can see the large plain with 
+high grass. It sure is a beautiful sight.
+^
+/* 3 */
+2 n:entrance e:3 w:4 s:5;
+Lflags { RealTime }
+The Reception Hall^
+   You stroll into the main reception hall. It is quite large if you think
+about it. Several door lead east and west into different rooms. The door to
+the right leads into the guard room. To the east a door leads into the
+toilet. A strong smell comes from the east, making you feel a bit sick.
+^
+/* 4 */
+3 w:2;
+Lflags { Death }
+The Toilet^
+   You bravely step into the toilet, but the smell is too bad... Some guard
+must be really sick because the smell makes you dizzy.... 
+
+You faint and hit your head against a sharp edge... Ooops.
+^
+/* 5 */
+4 e:2;
+Lflags { RealTime }
+The Guard Room^
+   This is the place where the guards go when they are off duty. The room is
+decorated by various pictures of girls and weapons. A small window lets a
+bit of fresh air and some sunlight in. A large table stands in the middle of
+the room.
+^
+/* 6 */
+5 n:2 w:6 e:7;
+Lflags { RealTime }
+The Reception Hall^
+   You walk further into the reception hall. A smell of freshly made food is
+coming from the western door. A large red carpet with various blood stains
+is lying in the middle of the hall. The walls are decorated with some nice
+paintings of ugly people
+^
+/* 7 */
+6 e:5;
+Lflags { RealTime }
+The Kitchen^
+   This is the kitchen of the bungalow. All around you you can see pots and
+pans in great fires. The smell of various types of food rise to your nose
+making you a bit hungry. On a table you can see some dishes, all nicely
+decorated and laid out. Large stoves take in most of the northern wall.
+^
+/* 8 */
+7 w:5;
+Lflags { Dark }
+A Dark Room^
+   This is a small storage room. The planks are all filled with cleaning
+substances, brooms and buckets. Its not very large when you come to think of
+it.
+^

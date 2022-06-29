@@ -1,0 +1,112 @@
+&+WYou may obtain help on any of the following subjects by typing:&*
+------------------------------------------------------------------------------
+
+        help <&+Ysubject&*>
+
+        &+YMOVEMENT&*         How to get about the game.
+        &+YCOMMUNICATION&*    How to talk to other people.
+        &+YITEMS&*            Using objects in the game.
+        &+YINFORMATION&*      Getting information about the game.
+        &+YCOMBAT&*           Fighting commands.
+        &+YUTILITY&*          Additional utilities.
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+
+%WIZARD
+
+&+WAdditional Mortal commands&* -- Mortals can use the following commands but
+are expected to find out about them themselves.
+-----------------------------------------------------------------------------
+&+YItems&*                             | &+YSpells&*
+BLOW 	BREAK	DIG	LIFT	  | SUMMON	POSE	BANG	WHERE
+THROW   TIE     UNTIE   PRAY      | MISSILE	FROST	SHOCK	FIREBALL
+STEAL   HIT     SMASH   SEARCH    | CURE
+PLAY                              |
+-----------------------------------------------------------------------------
+
+
+&+WFlags and Classifications -- These are not commands&*
+-----------------------------------------------------------------------------
+CLASS	DAMAGE	MOBILE	ROOM	VISIBILITY
+-----------------------------------------------------------------------------
+
+
+
+&+WWizard Commands -- Please get help on a command before using it.&*
+-----------------------------------------------------------------------------
+&+YUtility&*                                           		|
+COLORCODES  CHANGE  SETSTART HOME   PFLAGS   NOBATTLE		|
+EXORCISE    ALIAS   QUIET    RESET  LFLAGS   NOINVENTORY	|
+RESURRECT   SET     CALENDAR GOTO   MFLAGS   NOSLAIN		|
+WAR/PEACE   IN/AT   TRACE    MASK   PROMPT       		|
+STOP/START  ALOOF   AWAY     BUSY   WIZLOCK                     |
+-----------------------------------------------------------------------------
+&+YInformational&*                   | &+YCommunication&* 
+MOBILES   MLEFT  OBJECTS   SHOW	| WIZ    NOWIZ    NOSHOUT 
+USTATS    STATS  USERS     ACCT | EMOTE  EMOTEALL         
+ZONES     GLOBAL LOCATIONS 	| ECHO   ECHOALL          
+-----------------------------------------------------------------------------
+&+YSpells&* -- &+RCombat spells kill mortals!&*| &+YTravel Messages&*
+INVIS/VIS BLIND  CURE  DEAFEN BANG   | SETIN   SETOUT   SETSIT     SETSTAND
+FIREBALL  FROST  HEAL  FORCE         | SETMIN  SETMOUT  SETTRVICT  SAVESET
+MISSILE   WHERE  POSE  SHOCK         | SETVIN  SETVOUT  SETTRROOM  REVIEW
+CRIPPLE   PUNT   MUTE  SUMMON        | SETQIN  SETQOUT  SETTRENTER
+-----------------------------------------------------------------------------
+
+%ARCHWIZARD
+
+&+WArch-Wizard Commands:&*
+
+-----------------------------------------------------------------------------
+&+YUtility&*                                 | &+YCommunication&*
+SYSTEM	  FROB	 TOURNAMENT	RAW	| ECHOTO  ECHOALL  EMOTETO
+NRAW					| AWIZ    NOAWIZ   EMOTEALL
+-----------------------------------------------------------------------------
+&+YCreation&*				| &+YSpells&*
+LOAD	  STORE				| HEALALL	SAVEALL	  TIMEOUT
+DESTRUCT  CLONE 			| ZAP		SNOOP	  TIPTOE
+DESTROY 				| WARNZAP
+-----------------------------------------------------------------------------
+In addition to these, many Wizard commands have more options and are more
+powerful then they are for Wizards.
+
+%DEMIGOD
+
+&+WDemigod commands..&*
+
+DGOD	- print message on the demigod channel
+NODGOD	- Prevents you from hearing messages on the dgod channel.
+REBOOT	- Reboots the game without kicking everybody off.
+DELAY	- Makes the next reset a reboot.
+SOCINFO - Info on connected sockets.
+KILLSOC - Remove a dead socket.
+
+%GOD
+
+&+WGod commands&*
+
+CODE                Sets or removes coding flag on who listing.
+SYSLOG              Display selected part of the syslog file.
+SHUTDOWN <msg>	    Kicks everyone off, disables logins, and displays <msg>
+CRASH <msg>         Same as SHUTDOWN, but kills the mud-server as well.
+OPENGAME	    Reopens the game after a shutdown.
+DELETE [player]	    Totally deletes a player from the system's datafiles.
+GOD <msg>           Communication channel for gods.
+NOGOD               Prevents you from hearing messages on the god channel.
+VERIFY <plr> <addr> Verifies a players email addr for remote mail.
+
+
+
+
+
+
+
+
+

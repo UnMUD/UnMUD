@@ -1,0 +1,98 @@
+Hi!
+
+
+1. Running the mud under DBX.
+
+Best way to use DBX is to run the mud under DBX, and let it crash.
+Two ways to do this (we'll use aberd for example)
+
+interactive:
+
+(a)	% dbx aberd
+	Reading symbolic information...
+	Read 20748 symbols.
+	(dbx) run
+		[mud will start to run]
+
+more transparent:
+
+(b)	% dbx -r aberd
+	Reading sumbolix information...
+	Read 20748 symbols.
+		[mud starts automatically]
+
+in (a) you may specify arguments to aberd after run.. (i.e. run -x -y would
+be same as "aberd -x -y". in (b) simply add arguments after aberd.
+
+see man dbx for more
+
+
+p.s. if you have a core file from a previous crash, you may check where
+the program crashed (assuming you have the binary that produced the core)
+by loading it as:
+
+	% dbx aberd core
+
+(the core will usually be in ../data/core)
+
+Once loaded, you may use any of the commands in 2.
+
+
+2. Examining a crash point.
+
+Once the mud crashes, some info will be displayed.. If that is not enuff
+to pinpoint the problem, type "where". It will give you a traceback, the
+topmost function being the function in which the program crashed.
+
+At the same type, you may type "list". This displays portions in the code
+where the crashpoint is believed. Note the line number may not be accurate
+when you type "list" (since it's been advanced, and you usually wanna see
+what's before and after the crash) so you may need to use "list 10, 20" for
+example to list between lines 10 and 20.
+
+see help list/where for more
+
+
+3. Examining variables.
+
+You may want to check some variables. Easiest way is to type "dump", which
+will display all variables. You may also type:
+
+	display [variable]
+
+to display a particular variable. Note that if you have a variable x,
+display *x, display &x, and display x may give different results. Check
+a C manual for what *, & means.. You can even check the member of a structure
+by simply typing "display structure->member"...
+
+see help display/dump for more
+
+
+4. A word about TRACE
+
+tracing is fun with small programs, but it is pretty much useless with 
+aberd, since a full trace would take over an hour just to get to the motd.
+
+however, you may trace simpler stuff.. like "trace homecom" will print
+a message every time "homecom()" is called. Or "trace var" where var
+is a variable, will tell you every time that variable changes.
+
+see help trace for more.
+
+
+5. Breakpoints
+
+If you want the progra to stop at various points, you can do something like:
+
+	stop in homecom()
+
+and it will stop whenever homecom() is executed and present you with a
+(dbx) prompt. You can examine the state at that point, or type "cont" to
+continue execution. You can also stop when a variable changes values, etc.
+You can clear breakpoints with "clear".
+
+see help clear/stop for more.
+
+-val
+
+

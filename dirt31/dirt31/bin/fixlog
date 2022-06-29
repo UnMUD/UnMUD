@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#ask if mud is running. tell them to stop-run-start
+
+grep ' slain ' ../data/syslog >> ../data/Deaths
+grep 'TYPO' ../data/syslog >> ../data/Typos
+grep 'BUG' ../data/syslog >> ../data/Bugs
+
+mv syslog syslog.old

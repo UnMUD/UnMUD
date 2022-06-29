@@ -1,0 +1,11 @@
+[PZap]ZAP [player]
+[PZap]Wizard command. It utterly annihilates a mortal-character, or one with
+[PZap]a lower wizard-level then yourself, or one with your wizard-level
+[PZap]which is not protected with the "NoZap" P-flag.
+[PZap](A wizard-level here is for instance wizard, arch-wizard or god.)
+[PZap]Otherwise, it sends a lightning bolt at your victim.
+[PZap]Example: Zap kantele
+[PZap]^
+[X]ZONES
+[X]List of zones and locations.
+[X]^

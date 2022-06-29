@@ -1,0 +1,374 @@
+      DIRT-1      Changes & additions from version IV abermud  (June 1990)
+ ===========================================================================
+
+
+o New data-structure
+  ------------------
+  Made ublock, objinfo and world_file into structs. Everything is
+  now defined in the file types.h.
+
+
+o Shared-Memory
+  -------------
+  Implemented Shared-memory. The world-file will be mapped in main-memory
+  and be shared by all the processes if SHARED_MEM is defined in kernel.h and
+  thus avoid most of the time-consuming disk i/o. It may not work on older 
+  op.sys versions (like the one our machine "Lars" runs...)
+
+  A small note, (May 1992) by Nicknack:
+	We later implemented shared-mem using the sys-V sytem calls, so that
+	it is possible to chose which to use.. and it turned out that "Lars"
+	_could_ have used those if we had known that at the time *sigh* :)
+
+o New Level
+  -------------
+  This version supports a Demi-God level. The idea is that while the
+  Arch-Wizards take care of frobs, the Demi-God has access to the
+  system log-file and handles bug-messages, making new titles, setin/out
+  messages and prompts on-line (if the god is too lazy to do this himself.
+  if not, it may be better to avoid the extra level...) 
+  Apprentice level is 12, Wizard-levels go from 13-9999 as before, 
+  Arch-Wizard-levels from 10000-67999, Demi-God levels from 68000-89999
+  and Gods have levels from 90000 to 99999.
+
+
+o S-flags, P-flags & Mask
+  -----------------------
+  Most priveliges are no longer asociated with certain levels, but
+  P-flags determine what a player is allowed to do. The number of
+  flags has been increased to 64. Everyone can change his own P-flags with
+  the PFLAGS command, but his MASK determines which flags he is allowed to
+  change. (or change on others if he has the PflagEdit bit set.)
+  Everyone can see his own mask by doing "Mask me".  When becomming a wizard,
+  or beeing frobbed to a new level, the player gets certain standard flags
+  set as defined by the "DATA/pflags" file. The MASK command works just like
+  the PFLAGS command, but normally only gods have MaskEdit which allows him
+  to change peoples mask. This system is very secure since if, say a mortal,
+  accidently got PflagEdit, he couldn't do any harm since he normally has no
+  bits set in his mask. Many of the flags that were p-flags in version IV,
+  has been made into S (status) flags, like Blind, Brief,Female, HasMail et.c.,
+  so the p-flags are now pure priveliges. They are also used on mobiles,
+  for instance to keep mobiles who have special purposes from being summoned,
+  or to determine their sex.
+
+  New usage is:   PFLAGS <player> <flag-name> <true or false>
+
+  Example:    Pflags Kantele NoZap False
+              Pflags me Zap True
+              Zap Kantele 
+
+  See also: pflags.h, pflagnames.h, DATA/pflags, sflagnames.h and sflags.h.
+
+
+o Changes to Existing Commands
+  ----------------------------
+
+  --Wizards can summon/trans multiple players/objects at once, example:
+    "AT dead1 TRANS kantele boddiker steinar"
+
+  --It is now possible to GOTO <object> or AT <object> <command> et.c.
+
+  --Most commands like Heal, Privs, Stats, Pflags, Mask, Change-score, et.c
+    also work on players who are not in the game now. The "UAFinfo" p-flag
+    must be set to allow you to do this. 
+
+  --Wizards and above may chose POSE-text, examples: "Pose fireball",
+    "Pose hamster" or by numbers: "Pose 2", "Pose 3"....Abbreviations may
+    of course be used as long as the argument is unique, ex: "Pose f".
+
+  --The Wizlock command has been generalised and replaces the old wizlock,
+    awizlock, and godlock commands. 
+    Usage is now WIZLOCK followed by either a level number or string,
+    examples:  "Wizlock wizard" or "Wizlock 13" locks the game for all non-
+    wizards, "wizlock magician" or "wizlock 7" locks the game for everyone
+    below level 7 , "Wizlock 79" locks the game for all but Wizards above
+    level 78, "wizlock apprentice" locks the game for mortals and
+    "Wizlock Off" unlocks the game et.c et.c......
+    Wizlock without arguments displays the current lock-status.
+
+  --The Change command is expanded to also being able to handle changing a
+    players score, level or strength, terminal-type and the damage and
+    aggressiveness of mobiles. And Change [pflags | mask | lflags | mflags] is
+    identical to the pflags/mask/lflags/mflags commands. A players
+    visibility level is also saved with his score et.c, and is used to
+    determine which vis-level he will have when entering again. Of course
+    this can also be changed on players not in the game.
+    (subject to "UAFinfo" being set of course.)
+
+  --Wizards (or rather, those who have the Resurrect p-flag) can now
+    resurrect mobiles as well as objects. The mobile will appear with its
+    strength intact at the location of the player issuing the command.
+    (if the mobile was not dead, it will just have its strength reset.)
+    This is the wizards chance of manipulating mobiles since they normally
+    aren't given the ChMobStr flag needed to change a mobiles strength freely.
+
+  --Lflags can be used to not only read, but also change the location-flags
+    in rooms. Example:
+
+      LFLAGS start1 death true
+      LFLAGS start2 death true
+    (My favourite way of doing wizlock :-)
+
+    LflagEdit is needed to be able to do this.
+    
+  --All names of flags and other arguments to commands are now text strings
+    instead of numbers, and may be abbreviated as long as they are 
+    still unique.
+
+
+o New Commands & stuff
+  --------------------
+  --The IP adress of the callers host is available. It is avaiable to
+    players which have the ShowUsers p-flag set, and it is used in:
+    
+         -The (new) TTY command which displayes that adress for a given user,
+
+         -The enter-game messages for wizards, example:
+           [Gandalf [128.39.10.59] has entered the game]
+ 
+         -The 'Users' command, where it is listed after each players name.
+  
+    It is also displayed in the syslog file on game-entry.
+
+    If the game is local (private) the local account-name is used instead
+    of the machine-adress. (Actually, if the player logs in under a 
+    name different from the USE_TTY_NAME defined in the kernel.h file.)
+
+  --Made the MAIL command. Users may send mail to each other ala LP-Mud.
+
+  --Made the SYSLOG command. Gods (or Demi-Gods) can use this to look at
+    the syslog file on-line.  See "help syslog" for details.
+
+  --It is worth noting that the output from various commands such as the
+    SYSLOG and MAIL commands, are for convenience run through a pager.
+    What pager to use is defined in the kernel.h file, we found
+    that 'more' was well suited for this.
+
+  --Converse [player]  
+    Everything you type is sent to [player]. (like tell..)
+
+  --The [wizard-msg] also says who a mobile was killed by.
+
+  --Setin/out messages for wizards and prompts are now possible to set
+    permanently from within the game with the commands:
+
+         - PSETIN, PSETOUT, PSETMIN, PSETMOUT, PSETVIN, PSETVOUT,
+           PSETPROMPT
+    
+    Messages for entering/quitting the game, PSETQIN and PSETQOUT
+    have been added too.
+    
+  --Titles can also be changed in that way with the TITLE command.
+    See Help Title for details.
+
+    The Setin/out and Title commands can be run by those who have
+    the TitleEdit flag set on his character. 
+    (Normally only Gods (or Demi-Gods if they are used) ) 
+
+  --Wizards can chose which room to enter when entering the game,this
+    is specified in the same file/system which holds the titles/setins
+    and prompts...note that these are in the same file now, DATA/titles.src.
+    which is a readable form of the binary title file used by the program.
+    The conversion between these is done automaticly with the help
+    of Make.
+
+  --New format for the setout command: Name/direction et.c can be placed
+    anywhere in the string, if user Gandalf had this setout:
+
+    %n has gone %d, you can see %f footprints behind %F.
+
+    It will show up like this if he went south:
+    Gandalf has gone south, you can see his footprints behind him.
+    'his' and 'him' will show as 'her' if he changes his sex...
+
+  --The Wizlist is automaticly updated when a change of level on
+    someone occurs, like "change level", "frob", "zap", etc,
+    so there should be no need to edit the wizlist manually anymore.
+    
+o M-flags
+  ------
+  --The behavior of mobiles (i.e if it casts missiles like the Hermit, or
+    picks stuff like the Minotaur et.c) is determined by the Mobile-flags of
+    the mobile, they are not limited to a certain mobile like in version IV.
+    The flags can also be changed in the game with the MFLAGS command.
+    Example: 
+    >Mflags troll CanFireball true           Make the Troll cast fireballs.
+    >Mflags Wraith                           Show the Wraith's M-flags.
+
+    Some Mflags are:
+
+    NegFrost/NegFireball/et.c..   Become STRONGER instead of weaker.
+    PickStuff                     Pick up stuff, wield weapon and wear armors.
+    CanShock/Can..et.c...         Casts Shock/fireballs/missiles or frost.
+    NoMove                        Don't move.
+    DrainScr                      Drain score. (like the Wraith)
+    Thief                         Steals stuff from players!
+
+    MflagEdit is needed to change these from the values given at reset.
+
+o Logging
+  -------
+  --The 'mudlog' function is changed to handle a variable number of
+    arguments which makes logging more compact and easier:
+
+  --Level and score is logged on game entry and exit, which host a user is
+    calling from is also logged on entering the game. Which flag and to
+    what value is now logged on every command like pflags, lflafs, mflags,
+    et.c...in adittion to who set the flag on who which was the only thing
+    that was logged in version IV.
+
+  --_Who_ killed a player magically is now logged.
+
+
+o Changes to existing game-stuff
+  -------------------------
+  --The Minotaur Wields the best weapon he can find and wears armor. Also
+    put him closer to the normal route players take..
+  --Half of a weapons damage is added to a mobiles damage is he is wielding
+    the weapon. Cosimo and The Djinni wield weapons at reset.
+  --The Flame, Lavaman and Efreet become stronger if fireballed, the Yeti
+    and the Guardian become stronger if frosted, (i.e they have NegFireball
+    and NegFrost, see Mflags)
+  --The Talisman enhances the missile-spell now like the library-book says.
+    The chance of success is doubled, but the impact doesn't increase
+    past level 5. This so that low-level players have a spell to use
+    until they get stronger.
+  --The horseshoe-percentage is raised from 3 to 8 so it will have some
+    practical use.
+  --Update or Become is not allowed while fighting (to prevent people 
+    from cheating.)   
+
+o Help
+  ----
+  --The 'fullhelp' file is filtered before being inputted to the HELP 
+    command. The filter only lets through help-text on commands that the
+    player is allowed to use. If a Warrior typed 'Help Pose' for instance,
+    he would get 'No such command' or something like that. The filter can
+    test both on levels or Pflags/Sflags/Mask.. any logical expression
+    can be used. Last, the desired helptext is piped through the defined PAGER.
+    See the file DATA/fullhelp for examples.
+
+
+o Technical Changes & Fixed Bugs
+  ------------------------------
+  --Major bug fixed, if NO_SUMMON was defined, the talisman/pendant/amulet
+    et.c didn't protect against summoning...
+
+  --Fixed bug that had you eaten by the tree et.c when you entered the
+    game after having made a new world-file but before reset. And the 
+    max is set to MAX_USERS automaticly, not to 0.
+
+  --The '!' command does no longer treat previous <cr>'s as commands
+    anymore, so you can still type '!' and have your spells work after
+    having accidentally hit return in the middle of a fight for instance.
+
+  --Corrected bug: A character is no longer *saved* with level=1, sc=0 if
+    he is not allowed to enter for some reason. (host banned...)
+
+  --Fixed bug, Gods may now force Arch-Wizards.
+
+  --Every hard-coded object/room/mobile/sendsys code has been replaced with
+    #define'd values to make the code more readable/flexible.
+
+  --Made a 'Busy' S-flag. If you can't receive messages for some reason,
+    like if you are reading help or a letter, (i.e closeworld() has been
+    done) players who try to talk to you get a "He is busy" message.
+
+  --New and better cls() routine, courtsey of Elrond (ds@ifi.uio.no)
+
+  --The message-sending system is changed. sendsys() takes as arguments
+    an upper and lower bound for which level the message is to be sent to.
+    This is very convenient, for instance when a wizard quits the game, 
+    only those with a level above his vis-level will get the [quit..] msg.
+    Or if a player is in the same room as others to which he is invisible,
+    and he types 'invis' to become _more_ invisible, the others will not get
+    the 'has vanished' message. Lots of small things like that is improved.
+    So the SYS_WIZ and SYS_AWIZ have been replaced with the more general
+    SYS_MSG. And more have been added, SYS_PFL for example is used when
+    determining which enter-game message to send to wizards, the one
+    with or the one without the host-info. See entergame() in tk.c
+         In adittion, you can easily specify if the message is to be
+    sent in color, of if the bell is to be sounded , if the message is to be 
+    ignored if the 'quiet' S-flag is set and so on....
+    See the file sendsys.c for details.
+  
+  --Banned characters & banned Hosts.
+    Banned character names are to be placed in the DATA/banned file as
+    usual. But you can now put a '!' in the first line by itself and
+    the banned file is instead a guest-file, only those characters are
+    allowed.
+    It is now possible to ban players from hosts too, by placing the
+    address of the machine in the DATA/banned_hosts file as it would
+    appear in the TTY command. '*' notation is allowed, example:
+    If 129.240.*.* is in that file, noone from the University of Oslo
+    will be allowed to enter. The '!' in the first character pos. works
+    here too. It is writetty() and infile() that checks all of this.
+
+  --There is a separate bulletin for mortals/wizards/awizards, they
+    appear after eachother like in 'help' with 'hit return to cont." et.c...
+
+
+o Generate
+  --------
+  --The biggest change (though not visible to players) is probably the new
+    way of describing the data, rooms, mobiles and objects. These are now
+    grouped zone by zone, everything that belongs to the same zone is
+    in a file called "DATA/ZONES/zone-name.zone". They are in a very free 
+    format, easy to read and understand. Flags are refered to by names et.c..
+    Here is an example from blizzard.zone:
+
+                    Name            = hermit
+                    Pname           = "The Hermit"
+                    Location        = hut
+                    Strength        = 60
+                    Level           = -2
+                    Damage          = 10 
+                    Pflags  {NoSummon NoSteal}
+                    Mflags  {CanMissile QFood}
+                    Description     = "A hungry, unwashed hermit sits here."
+                    End             = hermit
+
+    Agression can also be specified but default is mod(level,100) if level
+    is > 200, else 0.
+
+  --And this is an example of an object from the same zone:
+
+    Name      = ball
+    AltName   = crystal
+    Location  = IN_CONTAINER:bag
+    MaxState  = 3
+    BValue    = 20
+    Size      = 15
+    Desc[0]   = "A crystal ball has been placed here."
+    Desc[1]   = "A crystal ball has been placed here, glowing a pale red."
+    Desc[2]   = "A crystal ball has been placed here, glowing a pale blue."
+    Desc[3]   = "A crystal ball has been placed here, glowing a pale green."
+    End       = ball
+
+  --The program that converts these descriptions also checks for 
+    consistency in the data, and produces a log-file. The idea is that you
+    should have great freedom in chosing to include or exclude a zone...
+         For example in the valley you have a gate and the other side of
+    that gate is in the zone cave... if you therefore choose to not include
+    the cave that gate-object will not be included...and the exit that
+    leads trough this gate will not be present.
+
+  --The format of the Uaf-rand file (that holds all the player-info) has
+    been changed and a conversion-program is avaiable. (NEWUAF)
+
+    This has been some of the things we did...but there are
+    numerous other stuff, basically the whole source-code has been taken apart
+    and rewritten.
+                            July 1990,
+
+             Alf Salte (Alf)          Gjermund S|rseth (Nicknack) 
+
+
+
+
+
+
+
+
+
+

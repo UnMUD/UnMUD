@@ -1,0 +1,124 @@
+Congratulations!  You have just downloaded a fine program that would run for
+thousands of trouble-free years, except that you or someone else will 
+undoubtably do something to break it via some typical bonehead internet-user
+maneuver.  Which is why we ask you to please for God's sake don't email us
+with every little problem, and read this README file carefully before you 
+start to mess with the code.  You've already started messing with it, haven't
+you?  You started messing with it, and you've already deleted the Makefile,
+and now, someone else you've known for a few months over the net is logged
+into the account, fiddling with the code too:  probably the same friend who
+completely fried the userfile on some other mud just a little while ago.
+And now this person is editing start.zone and making start1 and start2 into
+deathrooms, right?  And you've just started reading these instructions, right?
+We might as well just force the program to crash upon startup for you, you know
+that?!
+
+We're sorry.  We just get a little crazy sometimes because we're always getting
+email about "bugs" where it turns out that the user inadvertently inserted an
+infinite loop into the code and got upset when it started eating CPU time
+like there was no tomorrow.  So, in writing these instructions, we naturally
+tend to assume that your skull is filled with dead insects, but we mean
+nothing by it.  OK?  Now let's talk about:
+
+1. UNPACKING THE CODE.  You have obviously already done this, or you wouldn't
+be reading this file.
+
+2. UNPACKING GDBM.  The game uses the gdbm library system in its playerfile.
+A distribution of gdbm is included in this package in case it is not already 
+installed on your system.  If it is not already installed on your system, you
+will need to unpack that as well.  Go ahead and deal with dgbm now, get it 
+all compiled and such (if you need to).  If it has already been installed on
+your system, you should feel lucky and pray to the gods you have as UNIX
+administrators.  If you find that you need to install gdbm, it does not mean
+that you do not have gods for administrators, but it probably does mean that
+someone whined about not having it in the past, and now the admins are refusing
+to even think about gdbm.  It does not need to be installed in any particular 
+directory, but somewhere in a publicly accessible bin directory would be nice 
+and unselfish of you.  It will also make the setup of the Makefile slightly 
+easier.  Otherwise, go ahead and setup a bin directory in your root directory
+and unpack gdbm in its own directory inside that.  Refer to that package for 
+instructions on gdbm (most importantly the README file).  We don't guarantee 
+it any more than we guarantee our own code (see section 8 below).  All we know 
+is it works great.
+
+3. THE MAKEFILE.  There used to be multiple Makefiles in the ../include/machine
+directory, but we have since modernized and made one central Makefile, mostly
+because we finally realized that the Makefiles, with the exception of the
+Linux Makefile were not being updated and were REALLY REALLY old (although we 
+have heard that the sun Makefile was quite nice).  We have, however, left 
+corresponding .h files in the directory mentioned above.  When you set up the 
+Makefile for your platform, it will use the appropriate .h file.  Make a backup
+of the Makefile, and edit the file.  Follow the instructions within to set
+up the Makefile for your particular platform.  The platforms which have been
+examined most closely are: Linux, SunOS (not Solaris, although the 
+all-wonderful Watz has struggled through porting the mud to Solaris, and 
+MIGHT be willing to help you.  Then again, maybe not ;), AIX, MIPS, and 
+Concentrix.  Once you have edited the Makefile (you should really only have to 
+work with the top section), move on to step 4.  You may have to come back
+to this step later on, and you will know if you need to by the humungus number
+of errors that you will get when you get to the compiling stage.
+
+4. CONFIG.H.  Find the file config.h in ../include.  You will want to 
+edit this, particularly the lines where the master user and unveil password
+are chosen.  Make your own character name the master user so that you can log
+onto the mud and become a god automatically.  Otherwise you and everyone else 
+will be stuck at a mortal level forever.  (Wouldn't that suck?!)  Choose an 
+unveil password that is easy to remember but tough for people to figure out.  
+The name of your mud would make a VERY BAD unveil password.  Remember that 
+only the people listed in ../data/prived can use the unveil command, whether 
+or not someone else figures out the password.  It's best to limit your prived 
+people to as few as possible.  There is no reason for anyone below archwizard 
+or even dgod or god to ever need to unveil.  You will probably want to limit
+unveil access to coders, so that they can change their levels as needed to 
+test code.
+
+5. MAKE DEPEND.  Once you have chosen a Makefile that suits your machine and
+set up your config.h, you should run make depend so that the correct 
+dependancies are set up.  This should run smoothly, unless it finds fault with
+the Makefile, in which case it will give you a cryptic error which only the
+compiler can understand. If this dumps entirely and you email us about it, we 
+will laugh in the chilling manner exhibited by Joseph Stalin just after he 
+enslaved Eastern Europe, and tell you to buy a real machine.
+
+6. MAKE.  After you have successfully run make depend, you can try typing
+"make" and see what fun the compiler has in store for you.  When generate
+kicks in, it might generate the world, but it might not.  If something is
+not set up correctly, you will probably get at least one error per zone 
+displayed to your screen.  Do not let this scare you, as configuring the
+world is the most difficult part.  If, by some luck, you manage to get the
+world to compile, but the verbs are not generated right after the zones, kill
+the compile and run the script called 'verbgen', which you will find 
+conveniently stored in the ../src directory. Type make again.  Warnings can be 
+ignored for now.  Errors won't be ignored.  If you are lucky, the code will 
+compile in a matter of minutes.  If you are average, it will take you a few 
+hours, and if you are really unlucky, the machine you are attempting to run 
+the code on will gulp, shudder, and refuse to do anything; displaying random 
+"WARNING" messages to the screen. Should this happen, you should back off very 
+slowly in an apologetic manner and then run off screaming before it blows.  At 
+this point, you should probably go back to running more mortals up to wizard 
+on your favorite muds, or beg for a power position on one of 
+them. (although the gods REALLY hate this, so beware).
+
+7. RUNNING THE MUD.  Once the code will make and link, you should type
+"aberd &" and pray really hard to the diety of your choice (DOYC).  Or don't.
+Either way we claim no responsibility for what happens next.
+
+If aberd will not run, or if any code is damaged or missing, you should 
+immediately turn to your neighbor and say: "Margaret, you know why this 
+country can't make a car that can get all the way through the drive-through at 
+Burger King without a major transmission overhaul? Because nobody cares, 
+that's why." 
+
+WARNING: This is assuming your neighbor's name is Margaret. 
+
+8. WARRANTY: Be it hereby known that this program, together with but not
+excluding all those certain parts thereunto, shall be warrantied against all
+defects, failures and malfunctions as shall occur between now and Thursday
+afternoon at shortly before 2, during which time the Manufacturer will, at no
+charge to the Owner, send the program to our Service People, who will emerge 
+from their caves and engage in rituals designed to cleanse it of evil spirits. 
+This warranty does not cover any actual code.
+
+(c) 1995-1999 by The Dyrt Project.  Shamelessly stolen and adapted 
+from Dave Barry.
+

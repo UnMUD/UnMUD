@@ -1,0 +1,356 @@
+/*********************************************************
+* WASTE.ZONE                                             *
+* Core Zone: Author Unknown                              *
+* Notes:     Distribute with full DYRT distribution only *
+* Edited by Rex on 27 September 1996                     *
+*********************************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%zone:waste
+
+%mobiles
+
+Name            = beast
+PName           = "The Beast"
+Location        = flaming
+Strength        = 100
+Damage          = 15
+Aggression      = 100
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A huge, fiery beast stands before you."
+Examine         = "The Beast is twelve feet tall and ripples with muscle."
+End             = beast
+
+Name            = wolf
+PName           = "The Wolf"
+Location        = 2
+Strength        = 100
+Damage          = 12
+Aggression      = 100
+Speed           = 2
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = A huge wolf stalks you, ready to pounce at any moment."
+Examine         = "
+The wolf is large and grey.  The way he foams at the mouth makes you concerned
+that he may be rabid.  He growls at you as if he is challenging you."
+End             = wolf
+
+Name            = flame
+PName           = "The Flame"
+Location        = hall
+Strength        = 200
+Damage          = 10
+Aggression      = 30
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A giant flame flickers here, seemingly alive."
+Examine         = "
+The flame dances and flickers against the walls in an incandescent haze of 
+heat.  Something about the way it moves makes you think it might be alive."
+End             = flame
+
+Name            = efreet
+PName           = "The Efreet"
+Location        = guard
+Strength        = 120
+Damage          = 12
+Aggression      = 30
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A huge, flaming efreet glares ferociously at you."
+Examine         = "
+You can not make out the efreet's face, as its whole body is a flaming mass of
+fire.  You feel sure, however, that it is not pleasant."
+End             = efreet
+
+Name            = guard
+PName           = "The Guard"
+Location        = top
+Strength        = 50
+Damage          = 10
+Aggression      = 30
+Speed           = 1 
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A strange-looking guard watches you cautiously."
+Examine         = "
+The guard indeed looks strange.  His body shape and features are unlike those
+of any other being you have ever seen."
+End             = guard
+
+Name            = lavaman
+PName           = "The Lavaman"
+Location        = crack
+Strength        = 40
+Damage          = 12
+Aggression      = 30
+Speed           = 2
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A lavaman snarls harshly as he sees you."
+Examine         = "
+His entire form is made of dark lava which has flickers of heat in it."
+End             = lavaman
+
+Name            = djinni
+PName           = "The Djinni"
+Location        = king
+Strength        = 130
+Damage          = 10
+Aggression      = 60
+Speed           = 0
+PFlags            { NoSummon }
+MFlags            { NegFireball }
+Description     = "A huge djinni glares at you and flexes his muscles."
+Examine         = "
+The intimidating form of Acsthad of the Fiery Plains glares at you with an
+unmistakable intolerance."
+End             = djinni
+
+%objects
+
+Name            = throne
+Location        = IN_ROOM:king
+State           = 1
+MaxState        = 1
+BValue          = 500
+Size            = 200
+Weight          = 200
+OFlags            { GetFlips }
+Desc[0]         = "A huge golden throne is here, a masterpiece of regal style."
+Desc[1]         = "A huge throne is set against the western wall."
+End             = throne
+
+Name            = greatsword
+AltName         = sword
+Location        = WIELDED_BY:djinni
+BValue          = 1200
+Size            = 100
+Weight          = 100
+Damage          = 25
+OFlags            { Weapon Lit PitReset }
+Desc[0]         = "A huge flaming greatsword is lying here, burning fiercely."
+Examine         = "
+The greatsword is an immense, two-handled sword.  It glows with an eerie inner
+light.  The balance on it is very good, although it is a little on the heavy
+side.  This sword will surely prove worthy in battle."
+End             = greatsword
+
+Name            = staff
+Location        = CARRIED_BY:beast
+BValue          = 200
+Size            = 10
+Weight          = 20
+OFlags            { Lit PitReset }
+Desc[0]         = "A golden staff shines before you with a hellish red light."
+Examine         = "The staff is long and covered with runes."
+End             = staff
+
+Name            = ball
+Location        = IN_ROOM:gardens
+BValue          = 200
+Size            = 5
+Weight          = 5
+Desc[0]         = "A golden ball has been placed here."
+Examine         = "
+The ball doesn't seem to have any magical abilities as far as you can tell,
+but it glitters nicely and looks to be a keeper."
+End             = ball
+
+Name            = door_fire
+PName           = door
+Location        = IN_ROOM:fire
+State           = 2
+MaxState        = 2
+Linked          = door_king
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+Examine         = "It's a door...."
+End             = door_fire
+
+Name            = door_king
+PName           = door
+Location        = IN_ROOM:king
+State           = 2
+MaxState        = 2
+Linked          = door_fire
+OFlags            { Openable Lockable NoGet }
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+Examine         = "It's a door....."
+End             = door_king
+
+%locations
+
+/* waste1 */
+before n:1 e:flaming s:2 w:2;
+lflags { RealTime }
+Before the Gates^
+   You are standing on a vast wind-swept plain, formed entirely of black
+volcanic dust.  The dark gloomy waste extends as far as your eye can follow,
+reflecting strangely against a fiery red sky.  The only landmark in sight
+is a huge golden citadel whose walls reflect the flames and blood-red glow
+of the hellish skies above.
+^
+/* waste2 */
+flaming e:hall w:before;
+lflags { RealTime }
+The Flaming Gates^
+   You are standing before a set of gigantic flaming gates, wrought entirely
+of a strange blood-tinged gold.  The gates reflect the hellish, fiery red
+glow from two huge lava channels which flank the path you walk.  To the east
+through the gates everything becomes a confusing mass of reflected flames
+against gold.
+^
+/* waste3 */
+hall n:crystal s:salamander w:flaming;
+lflags { RealTime }
+Fiery Hall^
+   You are standing in a fiery red hall whose walls are caked with sulphur.
+It's very hot in here, but strangely the heat doesn't seem to be affecting you
+too badly.  Twisting, flame-lined passages lead north and south.
+^
+/* waste4 */
+salamander n:hall s:passage;
+lflags { RealTime }
+Salamander's Fire Pit^
+   You are standing on a precarious catwalk high above a pit of molten fire.
+Huge walls of fire and molten rock leap up around you, in stunning crescendos
+of sound and light.  By some strange chance, maybe magical, the fires never
+touch the path itself.
+^
+/* waste5 */
+crystal s:hall;
+lflags { RealTime }
+Crystal Fire^
+   You are standing in a huge, crystal-carved hall, designed so that the
+glittering crystal walls pick up the fiery light from around you and scatter it
+back in rainbows of red and yellow light. A single arched crystal doorway leads
+southwards.
+^
+/* waste6 */
+1 n:1 e:1 s:2 w:3;
+lflags { }
+Wasteland^
+   You are traversing a black and dusty wasteland, a dull, black, flat, 
+mind-numbing extent which recedes on and on and on...
+^
+/* waste7 */
+2 n:1 e:1 s:1 w:2;
+lflags { }
+Wasteland^
+   You are traversing a black and dusty wasteland, a dull, black, flat, 
+mind-numbing extent which goes on and on and on...
+^
+/* waste8 */
+3 n:2 e:2 s:2 w:Crack;
+lflags { }
+Wasteland^
+   You are traversing a black and dusty wasteland, a dull, black, flat, 
+mind-numbing extent which goes on and on and on...
+^
+/* waste9 */
+crack n:2 e:3 s:2 w:2;
+lflags { RealTime }
+Fiery Crack^
+   You stand at the top of a huge fiery crack gazing down into the boiling
+flame beyond.  The ground shakes and trembles under the continued pounding
+from deep beneath the world.
+^
+/* waste10 */
+passage n:salamander e:ledge w:gardens;
+lflags { RealTime }
+Fiery Passage^
+   You are walking down a narrow fiery passage, the walls glow and pulsate with
+a dull red light.  You have to tread carefully to avoid burning yourself on
+some of the hotter parts of the floor.  The passage leads east and west, and a
+turning leads north towards a fiery pit.
+^
+/* waste11 */
+gardens e:passage;
+lflags { RealTime }
+Burning Gardens^
+   You are standing in a wide open room.  The ceiling ends in a fancy wave of
+rolled gold, which artfully reflects the fiery red skies down across the pools
+of molten metal which form the centerpiece of the room.  The light from the
+skies and the molten pits flickers around the room, flashing off the polished
+and carved golden walls.
+^
+/* waste12 */
+ledge e:tunnel w:passage;
+lflags { RealTime }
+Fiery Ledge^
+   You stand on a wide golden path, set on a high ledge overlooking a huge
+crater.  The tremendous flames and explosions shake the whole mountain around
+you, making the fiery red skies seem to vibrate and dance with each flash and
+rumble.  The ledge goes back underground to the east and west.
+^
+/* waste13 */
+tunnel e:foot w:ledge;
+lflags { RealTime }
+Fiery Tunnel^
+   You are walking along a trembling, and shaking volcanic tunnel of some sort.
+The glowing walls are thick with sulphur, and the stench makes you want to
+throw up.  The passage enters an open air amphitheater to the west, but to the
+east it continues towards some steps.
+^
+/* waste14 */
+foot e:guard w:tunnel u:golden;
+lflags { RealTime }
+The Foot Of The Golden Stairs^
+   You are standing at the foot of a huge golden staircase, which rises upwards
+out of sight, reflecting the fiery red light, like a river of molten flame.
+Passages lead east and west to other halls.
+^
+/* waste15 */
+guard w:foot;
+lflags { RealTime }
+Guard Room^
+   You are standing in a red burning guard room which glitters redly with the
+heat of the surrounding rock.  A single doorway leads west.
+^
+/* waste16 */
+golden u:top d:foot;
+lflags { RealTime }
+The Golden Stairs^
+   You are ascending a set of golden stairs, which reflect a fiery red light
+from the hot rocks all around it. The stairs lead upwards to some kind of guard
+room, and downwards to a passage.
+^
+/* waste17 */
+top w:fire d:golden;
+lflags { RealTime }
+Top Of Stairs^
+   You are standing at the top of a set of glowing golden stairs.  A wide, gold
+lined doorway leads west into a huge hall.
+^
+/* waste18 */
+fire e:top w:^door_fire;
+lflags { RealTime }
+The Fire Hall^
+   You are standing in the center of a vast hall, lit by huge fountains of
+molten rock.  The walls are carved, and inlaid with polished gold so that they
+reflect huge fiery figures, in a stunning almost life-like fashion.  A huge
+arched doorway leads east, while to the west there is a small bronze door.
+^
+/* waste19 */
+king e:^door_king;
+lflags { RealTime }
+The Fiery King's Hall^
+   You stand in a small fantastically carved hall, decorated with millions of
+reflecting crystals which collect the fiery red which glows through a huge
+glass dome high above you, and scattering it around the hall, so that the ruddy
+glow of its walls burns like some incandescent hell.
+   There is a small bronze door to the east.
+^

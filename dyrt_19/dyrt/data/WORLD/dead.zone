@@ -1,0 +1,42 @@
+		/*******************************************
+		* DEAD.ZONE                                *
+		* Original Zone: Author Unknown            *
+		* Edited by Rex on 31 October 1997         *
+		* FOR USE WITH FULL DYRT DISTRIBUTION ONLY *
+		*******************************************/
+
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%mobiles
+
+%objects
+
+%locations
+
+/* 1 */
+dead;
+lflags { Death }
+The Mobile Pub^
+   You are standing in the pub where all of the mobiles go to await the
+next reset after they have been killed by mortals like you.  You notice
+that you are getting some strange looks from the mobiles you have killed
+before.  The zombie seems to be looking at you particularly fiercely.
+The crowd looks tough, and you think you might not be welcome here.
+You try to gather up the nerve to order a drink.
+^
+/* 2 */
+eaten;
+lflags { Death }
+Eaten^
+   You slide down the gullet of an enormous whale...
+^
+/* 3 */
+destroyed;
+lflags { Death }
+Destroyed^
+   This oppressive room contains the broken remnants of shattered dreams,
+foiled ambitions, and unrequited love.  The sight of such loss is more
+than your tortured soul can bear.  You decide to end it all.........
+^

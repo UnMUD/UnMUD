@@ -1,0 +1,157 @@
+       DIRT-3.1     Changes & additions from DIRT-3  (spring 1993)
+ ===========================================================================
+
+There are two major improvements in dirt3.1:
+
+1)	Dynamic creation of locations/mobiles/objects.
+
+	New commands: CLONE, DESTRUCT   (with the new PFlag 'Clone')
+                      LOAD, STORE     (with the new PFlag 'Load/Store')
+
+	It's now possible, with these commands, to create and store
+	your own personal zone while on the game, or just to have fun by
+	throwing new mobiles at mortals, or confuse them by having a new
+	room suddenly pop up in a maze they thought they knew.
+
+	The help on these commands are included below.
+
+	Many commands have been expanded to accomodate this, for instance:
+
+	EXITS <dir> <new exit>  may now also be used to change exits on rooms,
+	RESET <zone>            may be used to reset zones individually
+
+	And so on.
+
+	Since it will now be common for many mobiles (and objects) to
+	have the same name, a new and consistant way of giving objects
+	and mobiles as arguments to commands is neccesary to tell them apart:
+
+	If a command expects a mobile as argument, it may be given as
+	either one of:
+
+	1) <mobile-name>
+	2) <mobile-name><number-in-room-with-that-name>
+	3) <number>
+
+	Example, if there are 5 orcs in a room, and you want to kill the 2nd,
+	you could say "kill orc2".  "kill orc1" and "kill orc" means the 1st
+	orc.
+
+	The  3) <number>  is a unique mobile-ID number that shows up on the
+	WHERE command.
+
+	Examples:  "at 1512 kiss 1512", "heal 1611", "give biscuit to 1779"
+
+	You can specify an object to a command in several ways:
+
+	1) <object-name>
+	2) <alternate-name>
+	3) <object-name><number-in-sequence-with-that-name>
+	4) <number>
+
+	Examples:
+	If there are several rings in a room, "get ring3" would get the 3rd.
+        "get ring" or "get ring1" would get the 1st.
+
+        If you have 8 cakes in a sack, "get cake7 from sack" would get the 7th.
+
+	The <number> that shows up on 'where', can now be used anywhere.
+	For instance: "give 244 to Elmo", "show 315"
+
+CLONE:
+	Usage: CLONE <location/mobile/object> <optional new name>
+
+	Create a copy of an existing location, mobile or object.
+	Examples: "clone puff The Big Red Dragon" or "clone home2 My New Home"
+	(In case a new mobile name contains spaces, its name in the game
+	 will be  whatever word comes after the last space).
+	
+	The intended way of creating your unique room, mobile or object, is to
+	clone something close to what you want, and then use the SET and CHANGE
+	commands to forge it to exactly match your needs.
+
+	All new creations will normally be destructed at RESET unless you have
+	the power, by invoking the STORE command, to mark it as non-temporary.
+
+DESTRUCT:
+	Usage: DESTRUCT <location/mobile/object>
+
+	Destruct (remove from the game) something that was created with CLONE.
+
+STORE:
+	Usage: STORE <player-name>
+
+	If not followed by any argument, it means yourself.
+	This command creates a zone for you, its name will be your 
+	characters name.
+	It is not intended for making zones for mortals to adventure in,
+	but it lets you build your own personal stuff with much more fun 
+	and ease then the traditional way of bugging your God do it for you.
+
+	The STORE command does the following:
+
+	- Marks all mobiles/locations/objects you have created (with CLONE)
+	  as non-temporary, so that they will be reset on a reset instead 
+	  of destructed.
+
+	- Sets their reset-values to the exact state the mobiles/locations/
+	  objects are in when the STORE command is issued.
+	  Your zone will be reset on every reset to the exact state it was in,
+	  the last time you did a STORE.
+
+	- Saves everything on disk, so that you may LOAD your zone at a 
+	  later time.
+	  Your zone will remain in the the game even after you quit,
+	  but will go away if you don't come back within a certain period of 
+	  time, (currently 3 days). 
+	  It will in any case be loaded again automatically the next time 
+	  you enter the game.
+
+LOAD:
+	Usage: LOAD <player-name>
+	
+	If not followed by any argument, it means your own zone.
+	This command loads a zone stored with the STORE command from its saved
+	state on disk and into the game.
+	(or parts of it, if some of the items are allready in the game.)
+
+	It then resets everything that's not temporary (remember that 
+	anything you have created after the last invocation of STORE is 
+	only temporary)
+	
+	A LOAD is normally done automaticly if your zone is not allready in the
+	game when you enter.
+
+
+2) 	Performance improvement.
+
+	The dirt/abermud data structures have been very simple, nothing
+	more then one-dimentional arrays for each of the three object types
+	locations, mobiles, and objects.
+
+	This creates inordinate amounts of processor time usage since one
+	has to loop through every single item of the appropriate type just
+	to find the one we are looking for.
+
+	For instance, when checking if a mobile can attack someone, we have
+	to loop through all mobiles just to find those that are in the same
+	room as itself. When someone enters a room, we have to loop through
+	all players and mobiles, and all objects several times, just to
+	print a list of who is in that room and what they carry.
+
+	These data structures have now been changed, so that every room
+	contains a set of objects and players in it, every player/mobile
+	contains a set of objects it carries, and every object has an
+	associated set of objects it contains (if it's a container).
+
+	The search-algorithms the game uses have been changed accordingly,
+	and I believe this will improve performance significantly.
+
+	(especially now that the number of items can temporarily grow quite
+         large, with the new CLONE stuff).
+
+	(Algorithm-efficiency should change from the order of (n*n) to
+	 the order of (n), and from the order of (n) to the order O(1),
+	 where appropriate)
+
+	-Nicknack, May 1993

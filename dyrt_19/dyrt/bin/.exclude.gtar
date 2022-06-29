@@ -1,0 +1,9 @@
+dyrt/data/uaf_rand
+dyrt/data/wizlist
+dyrt/data/setins
+dyrt/data/syslog
+dyrt/data/WIZ_ZONES/*
+dyrt/data/MAIL/*
+dyrt/data/DESC/*
+dyrt/data/LOGS/*
+

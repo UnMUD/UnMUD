@@ -1,0 +1,11 @@
+void showemail(void);
+void nodcom(void);
+void rawcom();
+void namerawcom();
+void wishcom (void);
+void conversecom(void);
+void tellcom (void);
+void saycom (void);
+extern char * shout_test (int player, int sender, char *text);
+void shoutcom (void);
+void eehandler (int type);
