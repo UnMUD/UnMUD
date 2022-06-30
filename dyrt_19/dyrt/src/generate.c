@@ -101,7 +101,7 @@ make_verbs (char *home)
   sprintf(buff,"%s/src",home);
   if (chdir(buff) < 0) {
     fprintf(stderr,"Cannot change to source directory '%s' (%s)\n",
-	    buff,sys_errlist[errno]);
+	    buff,strerror(errno));
     exit(2);
   }
   
@@ -2290,7 +2290,7 @@ make_data (char *home)
   sprintf(buff,"%s/src",home);
   if (chdir(buff) < 0) {
     fprintf(stderr,"Cannot change to source directory '%s' (%s)\n",
-	    buff,sys_errlist[errno]);
+	    buff,strerror(errno));
     exit(2);
   }
   

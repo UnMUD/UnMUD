@@ -7,8 +7,8 @@
  *
  */
 
-#define MASTERUSER      "Rex"    /* Name of the MASTER character */
-#define UNVEIL_PASS     "unveil"         /* The UNVEIL-password. */
+#define MASTERUSER      "admin"    /* Name of the MASTER character */
+#define UNVEIL_PASS     "admin"         /* The UNVEIL-password. */
 
 #define MUD_NAME	"Milliways"
 #define ADMIN_EMAIL	"kmowry@hollyfeld.org"
