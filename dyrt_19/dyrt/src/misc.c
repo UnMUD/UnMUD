@@ -68,7 +68,7 @@ FILE * bopen (char *file)
       if (fp)
 	goto bopen_cont;
       errno = x;
-      fprintf (stderr, "cannot open file %s (%s)", file, sys_errlist[errno]);
+      fprintf (stderr, "cannot open file %s (%s)", file, strerror(errno));
       return (NullF);
     }
  bopen_cont:
@@ -83,7 +83,7 @@ FILE * bopen (char *file)
   fp = popen (command, "r");
   if (!fp)
     {
-      fprintf (stderr, "Pipe failed while opening %s (%s)", command, sys_errlist[errno]);
+      fprintf (stderr, "Pipe failed while opening %s (%s)", command, strerror(errno));
       return (NullF);
     }
   return (fp);
@@ -98,7 +98,7 @@ void bclose (FILE * fp)
   n = fileno (fp);
   if (fstat (n, &s) < 0)
     {
-      fprintf (stderr, "Fstat failed in zclose (%s)", sys_errlist[errno]);
+      fprintf (stderr, "Fstat failed in zclose (%s)", strerror(errno));
       return;
     }
   if (S_ISFIFO (s.st_mode))

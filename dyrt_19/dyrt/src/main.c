@@ -1054,12 +1054,12 @@ handle_packet (int fd)
 	      errno == ENETRESET ||	/* Net dropped connection on reset */
 	      errno == ENETDOWN)
 	    {			/* Network is down */
-	      mudlog ("Connection failure: %s [%s]", sys_errlist[errno], pname (mynum));
+	      mudlog ("Connection failure: %s [%s]", strerror(errno), pname (mynum));
 	      crapup (NULL, CRAP_SAVE | CRAP_UNALIAS | CRAP_RETURN);
 	      
 	      send_msg (DEST_ALL, MODE_QUIET | MODE_COLOR, max (pvis (mynum), LVL_APPREN),
 			LVL_MAX, mynum, NOBODY,
-			"[%s (%s) Link error: %s]\n", pname (mynum), cur_player->hostname, sys_errlist[errno]);
+			"[%s (%s) Link error: %s]\n", pname (mynum), cur_player->hostname, strerror(errno));
 	      
 	      errno = 0;
 	      longjmp (to_main_loop, JMP_QUITTING);

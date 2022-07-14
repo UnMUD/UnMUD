@@ -1,0 +1,7509 @@
+940
+koosh <null> 0 0 0 -1 0 0 -1 0 0 0 0 0 0 2 2
+A koosh ball lies here, wanting you to toss it to someone.^
+^
+^
+^
+The koosh is a wonderful toy.  It is soft and loves to be tossed around.
+^
+
+crater <null> 0 1 1 -1 0 0 -1 0 0 0 8589934592 0 0 0 0
+A small crater has been blasted into the ground.^
+^
+^
+^
+^
+
+rope ladder 0 2 2 -1 0 0 -1 1 0 0 4294967296 1 0 0 0
+A coiled rope ladder lies here.^
+A rope has been coiled here.^
+^
+^
+^
+
+board <null> 0 3 3 -1 0 0 -10 0 0 0 8589934592 0 0 0 0
+A bulletin board is hanging on the wall here.^
+^
+^
+^
+^
+
+board <null> 0 4 4 -1 17 0 -1744 0 0 0 8589934592 0 0 0 0
+A bulletin board is hanging on the wall here.^
+^
+^
+^
+^
+
+board <null> 0 5 5 -1 10000 0 -1387 0 0 0 8589934592 0 0 0 0
+A bulletin board is hanging on the wall here.^
+^
+^
+^
+^
+
+board <null> 0 6 6 -1 90000 0 -1408 0 0 0 8589934592 0 0 0 0
+A bulletin board is hanging on the wall here.^
+^
+^
+^
+^
+
+reset <null> 0 7 7 -1 0 0 -1 0 0 0 0 0 0 0 0
+A reset has been left here.^
+^
+^
+^
+Reset in progress....
+Reset Completed....
+A voice shouts 'Hey!  Who the hell reset the game?!
+^
+
+umbrella <null> 1 8 8 -1 0 0 -3 1 5 0 1266637395197952 1 30 20 12
+A furled umbrella lies here.^
+An unfurled umbrella lies here.^
+^
+^
+It is a large black umbrella, somewhat battered.  The initials 'M. Poppins'
+are engraved on the handle.
+^
+
+fire <null> 1 9 9 -1 0 0 -3 0 0 0 39591008534528 0 0 0 0
+An old fire pit smolders in one corner of the temple.^
+A roaring fire burns here.  Its flames alight the temple.^
+^
+^
+In the fire you see faint images of the ghost of dead players.  The sparks
+fly up and away, disappearing amongst the pillars of the temple.
+^
+
+pit <null> 1 10 10 -1 0 0 -3 0 0 0 8589934592 0 0 0 0
+There is a sacrificial pit at your feet.^
+^
+^
+^
+The pit allows you to sacrifice valuables to the gods for a small reward.
+^
+
+pit <null> 1 11 11 -1 0 0 -4 0 0 0 8589934592 0 0 0 0
+There is a huge sacrificial pit at your feet.^
+^
+^
+^
+The pit allows you to sacrifice valuables to the gods for a small reward.
+^
+
+mistletoe sprig 4 12 12 -1 0 0 -10 0 0 0 8589934592 0 0 0 0
+A sprig of mistletoe hangs by the fireplace.^
+^
+^
+^
+You notice with amusement that the Bard has positioned himself directly
+underneath.  Well don't just stand there... kiss him!
+^
+
+fire <null> 4 13 13 -1 0 0 -10 1 0 0 41790031790080 1 0 0 0
+There is no fire in the fireplace.^
+A fire burns cheerfully here, warming the haven.^
+^
+^
+^
+
+bodyarmor armor 5 14 14 -1 0 0 -95 1 0 20 297255717348311040 1 160 35 50
+Abaddon's jet black body-armor is here humming quietly.^
+Hanging on the coat rack is Abaddon's body-armor.^
+^
+^
+This armor is made of some strange material that absorbs light.  On the left
+shoulder is a patch with a white trident on a field of blue.  Each arm has
+three yellow chevrons and there are some colorful ribbons on the left breast.
+The right breast has been inscribed with the name Stine.
+^
+
+boulder <null> 5 15 15 16 0 0 -38 1 0 0 77309411328 0 0 0 0
+^
+A huge boulder blocks the tunnel.^
+^
+^
+^
+
+boulder <null> 5 16 16 15 0 0 -23 1 0 0 77309411328 1 0 0 0
+A huge slimy boulder sits beside the tunnel.^
+A huge slimy boulder has been jammed into the tunnel.^
+^
+^
+^
+
+web webs 5 17 17 18 0 0 -27 1 0 0 2207613190144 0 0 0 0
+A thick mass of webs have been burned away from the tunnel entrance.^
+A thick mass of webs are blocking the tunnel entrance.^
+^
+^
+^
+
+web webs 5 18 18 17 0 0 -22 1 0 0 2207613190144 0 0 0 0
+A thick mass of webs have been burned away from the tunnel entrance.^
+A thick mass of webs are blocking the tunnel entrance.^
+^
+^
+^
+
+stairs <null> 5 19 19 20 0 0 -12 1 0 0 8589934592 0 0 0 0
+A stairway leads upward here.^
+A stairway leading up is blocked by rubble.^
+^
+^
+^
+
+stairs <null> 5 20 20 19 0 0 -11 1 0 0 8589934592 0 0 0 0
+A stairway leading downward has been cleared of rubble.^
+The ceiling has collapsed blocking a stairway leading down.^
+^
+^
+^
+
+rope <null> 5 21 21 22 0 0 -25 1 0 0 8589934592 1 0 0 0
+A rope hangs down here allowing you to climb up.^
+^
+^
+^
+^
+
+rope <null> 5 22 22 21 0 0 -24 1 0 0 8589934592 1 0 0 0
+A rope spans the gap allowing you to climb down.^
+^
+^
+^
+^
+
+lance <null> 5 23 23 -1 0 4 2 1 16 0 140737488355328 1 160 35 50
+The deadly Demon Lance is here glowing with a faint blue light.^
+A dull iron lance lays here gathering rust.^
+^
+^
+The lance is made out of iron and appears rather heavy.
+^
+
+door <null> 5 24 24 25 0 0 -91 1 0 0 8589934592 1 0 0 0
+The elevator door is open.^
+The elevator door is closed tightly.^
+^
+^
+^
+
+door black 5 25 25 24 0 0 -90 1 0 0 8589934592 1 0 0 0
+The southern door is open.^
+The southern door is closed tightly.^
+^
+^
+^
+
+panel <null> 5 26 26 27 0 0 -95 1 0 0 8589934592 1 0 0 0
+A secret panel has been opened in the northern wall.^
+^
+^
+^
+^
+
+panel <null> 5 27 27 26 0 0 -94 1 0 0 8589934592 1 0 0 0
+A secret panel has been opened in the southern wall.^
+^
+^
+^
+^
+
+door front 5 28 28 29 0 0 -90 1 0 0 8589934592 0 0 0 0
+The front door is open.^
+The front door is closed.^
+^
+^
+^
+
+door front 5 29 29 28 0 0 -87 1 0 0 8589934592 0 0 0 0
+The front door is open.^
+The front door is closed.^
+^
+^
+^
+
+door wood 5 30 30 31 0 0 -77 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door wood 5 31 31 30 0 0 -68 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door iron 5 32 32 33 0 0 -76 2 0 0 60129542144 2 0 0 0
+The cell door is open.^
+The cell door is closed.^
+The cell door is locked.^
+^
+^
+
+door iron 5 33 33 32 0 0 -75 2 0 0 60129542144 2 0 0 0
+The cell door is open.^
+The cell door is closed.^
+The cell door is locked.^
+^
+^
+
+door iron 5 34 34 35 0 0 -53 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 5 35 35 34 0 0 -24 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+timber <null> 5 36 36 37 0 0 -44 1 0 0 8589934592 1 0 0 0
+A timber spans the river allowing you to cross to the west bank.^
+^
+^
+^
+^
+
+timber <null> 5 37 37 36 0 0 -40 1 0 0 8589934592 1 0 0 0
+A timber spans the river allowing you to cross to the east bank.^
+^
+^
+^
+^
+
+wall <null> 5 38 38 39 0 0 -76 1 0 0 8589934592 1 0 0 0
+The west wall has disappeared.^
+^
+^
+^
+^
+
+wall <null> 5 39 39 38 0 0 -68 1 0 0 8589934592 1 0 0 0
+The east wall has been swung back allowing entry to a prison cell.^
+^
+^
+^
+^
+
+box slot 5 40 40 -1 0 0 -15 0 0 0 70377334112256 0 0 1 0
+^
+^
+^
+^
+^
+
+slot <null> 5 41 41 -1 0 0 -87 0 0 0 70377334112256 0 0 1 0
+^
+^
+^
+^
+The slot is the size of a small card.
+^
+
+forge <null> 5 42 42 43 0 0 -89 2 0 0 2207613190144 2 0 0 0
+The forge is lit.^
+The forge is glowing hotly.^
+The forge is cold.^
+^
+The forge is large enough to create even very large weapons.  There is a 
+notch in the side of the forge for weapons that are being heated.
+^
+
+bellows <null> 5 43 43 42 0 0 -89 2 0 0 146028888064 2 0 0 0
+The bellows is not moving.^
+The bellows is pumping air into the forge.^
+The bellows is not moving.^
+^
+The bellows is a complicated looking device.  Apparently is works automatically
+once it is started.
+^
+
+button <null> 5 44 44 -1 0 0 -96 0 0 0 12884901888 1 0 0 0
+The dust has been cleared from a square button here.^
+The dust has been cleared from a square button here.^
+^
+^
+^
+
+button green 5 45 45 -1 0 0 -90 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+button red 5 46 46 -1 0 0 -91 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+potion milkey 5 47 47 -1 0 0 -67 0 0 0 0 0 50 5 2
+A milky potion has been left here.^
+^
+^
+^
+There is a small label on the side that says 'FDA and EPA approved'.
+^
+
+potion clear 5 48 48 -1 0 0 -84 1 0 0 17592186044416 0 50 5 2
+A clear potion has been left here.^
+A clear potion sits on the shelf.^
+^
+^
+It's a clear liquid, did you expect a label or something?
+^
+
+diadem <null> 5 49 49 -1 0 0 -31 1 0 0 288247968337756160 0 200 3 0
+A gold diadem inset with a pearl is here.^
+A finely crafted gold diadem inset with a pearl is on the altar.^
+^
+^
+^
+
+pearls string 5 50 50 -1 0 0 -31 1 0 0 144132780261900288 0 200 3 0
+A string of pearls has been cast off here.^
+A string of pearls is on the altar.^
+^
+^
+^
+
+card orange 5 51 51 -1 0 0 -67 0 0 0 0 0 20 2 0
+A small orange card has been left here.^
+^
+^
+^
+The card is inscribed with the words 'Get out of Jail Free'.
+^
+
+tooth <null> 5 52 52 -1 0 0 -76 0 0 0 0 0 350 3 1
+A dragon's tooth has been dropped here.^
+^
+^
+^
+^
+
+carbuncle gem 5 53 53 -1 0 0 -76 0 0 0 0 0 350 3 1
+A dragon's carbuncle is lying here.^
+^
+^
+^
+The carbuncle is a large gem with a fiery gleam inside.
+^
+
+ring opal 5 54 54 -1 0 0 -32 0 0 0 2305843013508661248 0 160 1 0
+An opal ring is here gathering dust.^
+^
+^
+^
+The ring is etched in the shape of a feather.
+^
+
+husks <null> 5 55 55 -1 0 0 -32 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+cheese wheel 5 56 56 -1 0 0 -36 0 0 0 274877906944 0 20 5 2
+A wheel of cheese has been left here.^
+^
+^
+^
+^
+
+rope <null> 5 57 57 -1 0 0 -48 0 0 0 0 0 10 10 3
+A rope has been coiled up here.^
+^
+^
+^
+^
+
+flask wine 5 58 58 -1 0 0 -52 0 0 0 2251799813685248 0 5 5 1
+A flask of wine is here.^
+^
+^
+^
+^
+
+goblet cup 5 59 59 -1 0 0 -52 0 0 0 0 0 160 5 1
+A gem encrusted goblet is lying here.^
+^
+^
+^
+^
+
+oats <null> 5 60 60 -1 0 0 -77 0 0 0 274877906944 0 10 5 1
+A small bag of oats has been left here.^
+^
+^
+^
+^
+
+rice <null> 5 61 61 -1 0 0 -77 0 0 0 274877906944 0 10 5 1
+A small bag of rice has been left here.^
+^
+^
+^
+^
+
+card plastic 5 62 62 -1 0 0 -87 0 0 0 4294967296 0 20 1 0
+A small white plastic card is here.^
+^
+^
+^
+The card has some strange writing on it and a black strip on the back.
+^
+
+mat <null> 5 63 63 -1 0 0 -87 0 0 0 8589934592 1 0 0 0
+A welcome mat has been placed here.^
+A welcome mat has been placed here.^
+^
+^
+^
+
+icebox door 5 64 64 -1 0 0 -93 1 0 0 70394513981440 1 0 0 0
+The icebox door is open.^
+The icebox door is closed.^
+^
+^
+^
+
+soda can 5 65 65 -1 0 1 64 1 0 0 2269391999729664 1 200 3 1
+A can of Mountain Dew has been dropped here.^
+There is one can of Mountain Dew left.^
+^
+^
+^
+
+dust <null> 5 66 66 -1 0 0 -96 0 0 0 8589934592 1 0 0 0
+^
+^
+^
+^
+^
+
+graffiti <null> 5 67 67 -1 0 0 -68 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+In one area it says:   Guxx is a Putz!
+Right below that is:   Puff likes it doggie style.
+^
+
+timber <null> 5 68 68 -1 0 0 -39 1 0 0 24189255811072 0 10 20 5
+A large timber has been left here.^
+There is a good sized timber among the fallen trees.^
+^
+^
+^
+
+longsword sword 5 69 69 -1 0 0 -11 1 8 0 158329674399744 0 60 15 7
+A broken longsword is lying here.^
+A broken longsword lies half buried in the dust.^
+^
+^
+Although eight inches have been broken from the top of the sword it still looks
+like it might be serviceable.
+^
+
+coin golden 5 70 70 -1 0 0 -33 0 0 0 0 0 50 1 0
+A golden coin is lying here.^
+^
+^
+^
+^
+
+coin silver 5 71 71 -1 0 0 -33 0 0 0 0 0 50 1 0
+A silver coin is lying here.^
+^
+^
+^
+^
+
+stone large 5 72 72 -1 0 0 -52 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+On the stone is written a tale of how the demons were tricked into making a
+a powerful lance that could destroy the most powerful demon with one blow.
+But the demons discovered the trickery before the lance was completed and
+sent a Death Knight to kill those who had tricked them. When he returned the
+Knight was given the lance to guard lest it fall into the wrong hands and be
+completely wrought.
+^
+
+doorbell bell 5 73 73 -1 0 0 -87 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+slot <null> 5 74 74 -1 0 0 -76 0 0 0 70377334112256 0 0 0 0
+There is a slot on the south wall.^
+^
+^
+^
+^
+
+spear <null> 6 75 75 -1 0 0 -98 0 8 0 140737488355328 0 25 5 5
+An old spear lies here on the ground.^
+^
+^
+^
+This old spear has seen death and sorrow more than you could ever dream of.
+^
+
+knife stony 6 76 76 -1 0 0 -104 0 14 0 140737488355328 0 15 2 2
+A stone knife has been left here.^
+^
+^
+^
+There's blood all over the blade.
+^
+
+statue <null> 6 77 77 -1 0 0 -112 0 0 0 70377334112256 0 0 5 0
+^
+^
+^
+^
+The statue is far too heavy to lift. The eyes of it seem to be two big gems.
+^
+
+gem white 6 78 78 -1 0 1 77 0 0 0 0 0 200 1 1
+A massive white gem glistens before your eyes.^
+^
+^
+^
+You feel the hatred of gods descending above you.
+^
+
+gem blue 6 79 79 -1 0 1 77 0 0 0 0 0 200 1 1
+A big blue gem twinkles before your eyes.^
+^
+^
+^
+You can't exactly remember what happened to those who found the grave of 
+King Tut, but you feel deep inside that you should get rid of this cursed
+thing.
+^
+
+boat <null> 6 80 80 -1 0 0 -116 0 0 0 281474976710656 0 20 5 5
+An old canoe has been forgotten here.^
+^
+^
+^
+It is made of leather and could give you a safe passage through the waters.
+^
+
+altar <null> 6 81 81 -1 0 0 -104 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The surface of this altar is smooth and tidy.
+^
+
+cross <null> 6 82 82 -1 0 0 -117 1 0 0 8589934592 1 0 0 0
+Looks like someone had moved the cross a bit...^
+^
+^
+^
+This is a big cross, believe me.
+^
+
+pot <null> 6 83 83 -1 0 0 -119 1 0 0 87960930222080 1 40 3 3
+A small clay pot has been tossed here.^
+^
+^
+^
+^
+
+balsam cream 6 84 84 -1 0 1 83 0 0 0 0 0 25 1 1
+Some white balsam has been dropped here.^
+^
+^
+^
+The smell of this balsam fills your mind with strange thoughts of mummies
+and preservation.
+^
+
+pot <null> 6 85 85 -1 0 0 -130 1 0 0 87960930222080 1 10 2 2
+A big pot made of clay stands before you.^
+^
+^
+^
+You've seen hundreds of these in museums.
+^
+
+balsam cream 6 86 86 -1 0 1 85 0 0 0 0 0 25 1 1
+Some creamy balsam has been left here.^
+^
+^
+^
+Hmmm...the balsam has a very antiseptic smell.  Applying this balsam can
+perhaps heal some wounds in short time.
+^
+
+map <null> 6 87 87 -1 0 0 -123 1 0 0 0 1 80 1 1
+A rather torn map has been left here.^
+There's a map lying on the floor.^
+^
+^
+
+^
+
+mask <null> 6 88 88 -1 0 0 -124 1 0 7 45054138215563264 1 200 2 4
+A heavy golden mask is dumped here.^
+A heavy golden mask is hanging on the wall.^
+^
+^
+The mask has covered some upper class soldiers face protecting it and making
+the bearer look more scaring.
+^
+
+shield bronze 6 89 89 -1 0 0 -124 0 0 8 1161929253617401856 0 50 2 2
+A small bronze shield is lying on the ground.^
+^
+^
+^
+The shield is small, but seems to be good for protecting you against the hits 
+of your enemies.
+^
+
+cross <null> 6 90 90 -1 0 0 -127 1 0 0 8589934592 1 0 0 0
+The cross seems to be somewhat out of its' original place.^
+^
+^
+^
+You might have seen something like this before.
+^
+
+cheese <null> 6 91 91 -1 0 0 -134 1 0 0 17867063951360 1 20 1 1
+A slice of tasty Emmental cheese has been dropped here.^
+^
+^
+^
+It sure looks tasty.
+^
+
+cheese <null> 6 92 92 -1 0 0 -134 1 0 0 17867063951360 1 20 1 1
+A slice of tasty Emmental cheese has been dropped here.^
+^
+^
+^
+It even smells good.
+^
+
+rod <null> 6 93 93 -1 0 0 -130 0 0 0 0 0 100 1 1
+A silver rod twinkles before you.^
+^
+^
+^
+The rod might be used by priests or lords in ceremonies.
+^
+
+feather <null> 6 94 94 -1 0 0 -114 0 0 0 0 0 100 1 1
+There's a big colorful feather on the ground.^
+^
+^
+^
+The feather glistens in all the colors of rainbow.
+^
+
+altar <null> 6 95 95 -1 0 0 -132 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The altar is covered with blood all over it. The blood is dried a long time
+ago, but it still makes you shivering.
+^
+
+pedestal <null> 6 96 96 -1 0 0 -133 1 0 0 8589934592 1 0 0 0
+^
+Your toe hits a cylindrical object standing on the ground, but the blinding
+light makes it difficult to see what it is.^
+^
+^
+Shielding your eyes from the sun with your hands you see that something has
+been attached to the pedestal, but taken away afterwards.
+^
+
+hole <null> 6 97 97 98 0 0 -135 1 0 0 8589934592 1 0 0 0
+A large hole leads out to the daylight.^
+^
+^
+^
+^
+
+hole <null> 6 98 98 97 0 0 -128 1 0 0 8589934592 1 0 0 0
+A large hole leads to a cave under the pyramid.^
+^
+^
+^
+
+^
+
+fountain <null> 6 99 99 -1 0 0 -138 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The water looks fresh and clean.  Through the water, written on the bottom
+of the fountain you see the words FOUNTAIN OF YOUTH.
+^
+
+stone <null> 6 100 100 -1 0 0 -139 0 0 0 0 0 250 1 1
+A small rock shimmers in the corner.^
+^
+^
+^
+As you examine this stone you feel a sudden headache.
+^
+
+jewel gem 6 101 101 -1 0 0 -140 0 0 0 0 0 400 1 1
+In the hand of the poor fellow you discover a glistening white jewel.^
+^
+^
+^
+You wonder about the destiny of the former bearer of this mighty white gem.
+^
+
+lamp <null> 6 102 102 -1 0 0 -144 0 0 0 35184372088832 0 20 2 1
+A lit lamp is bringing light in the otherwise dim chamber.^
+^
+^
+^
+You just can't figure out how to extinguish it.
+^
+
+lunch food 6 103 103 -1 0 2 37 0 0 0 274877906944 0 30 1 1
+A delicious lunch is waiting for you here.^
+^
+^
+^
+You've never eaten this before, but it sure smells good.
+^
+
+broom <null> 6 104 104 -1 0 4 36 0 5 0 140737488355328 0 15 2 1
+An old broom has been left here.^
+^
+^
+^
+Feel like cleaning up the place, mate?
+^
+
+disc <null> 6 105 105 -1 0 0 -145 1 0 0 36283883716608 2 800 4 4
+A giant Sun Disc is shining brightly here.^
+There's an extremely bright golden disc attached to the ceiling. It looks as
+you will need more then just 'two hands and a Black & Decker' if you want to
+remove it....^
+Securely attached to a pedestal on the ground is a brightly shining sundisc.^
+^
+It looks very valuble.
+^
+
+throne <null> 6 106 106 -1 0 0 -146 0 0 0 8589934592 0 0 0 0
+The throne is set on the north wall.^
+^
+^
+^
+The throne is not for mortals.
+^
+
+talisman <null> 6 107 107 -1 0 3 40 0 0 0 144115188075855872 0 80 1 1
+A small gold talisman lies here.^
+^
+^
+^
+It's a kind of an animal figure.
+^
+
+cloak <null> 6 108 108 -1 0 3 39 0 0 5 288230925907525632 0 50 3 2
+An astronomers cloak is here carefully folded.^
+^
+^
+^
+It has a golden snakefigure on it.
+^
+
+wand <null> 6 109 109 -1 0 2 41 0 0 0 0 0 200 1 1
+There's a long curved wand leaning against the wall.^
+^
+^
+^
+It's garnished with silver and small jewels.
+^
+
+plate <null> 6 110 110 -1 0 0 -151 0 0 0 0 0 200 2 2
+A gold plate lies on the floor^
+^
+^
+^
+Pure gold!
+^
+
+chain <null> 6 111 111 -1 0 0 -151 0 0 0 0 0 100 1 1
+A gold chain has been tossed on the floor.^
+^
+^
+^
+It looks like it has been torn apart from something.
+^
+
+block <null> 6 112 112 -1 0 0 -151 0 0 0 0 0 150 2 4
+A huge silver block twinkles before you.^
+^
+^
+^
+Might be valuable.
+^
+
+coins <null> 6 113 113 -1 0 0 -151 0 0 0 0 0 400 3 4
+There are small silver and gold coins all over the place.^
+^
+^
+^
+The coins have a hole in the center and beautiful carvings around it.
+^
+
+book <null> 6 114 114 -1 0 0 -154 1 0 0 17592186044416 1 1000 3 2
+An old book is lying here.^
+^
+^
+^
+
+^
+
+stone block 6 115 115 -1 0 0 -156 0 0 0 0 0 100 1 1
+A small stone block fills the emptiness.^
+^
+^
+^
+It's black as the night.
+^
+
+ice snow 22 116 116 117 0 0 -822 1 0 0 8589934592 1 0 0 0
+A hole has been chipped through the ice.^
+^
+^
+^
+^
+
+snow <null> 7 117 117 116 0 0 -167 1 0 0 8589934592 1 0 0 0
+A hole has been chipped through the ice that covered a stairway leading down.^
+Ice-encrusted snow is piled up against one ruined wall.^
+^
+^
+^
+
+garland <null> 7 118 118 -1 0 0 -177 0 0 0 144115188075855872 0 100 6 1
+A beautiful garland of flowers sends a sweet smell wafting around you.^
+^
+^
+^
+You see written on it, in small flowing letters, the word...
+                       'Judy'
+^
+
+talisman <null> 7 119 119 -1 0 0 -162 0 0 0 144115188075855872 0 100 2 2
+A battered silver talisman has been dumped here.^
+^
+^
+^
+^
+
+branch stick 7 120 120 -1 0 0 -174 1 2 0 1273234464964608 1 0 2 2
+A burning branch has been left here.^
+An old branch has been dropped here.^
+^
+^
+^
+
+pick <null> 7 121 121 -1 0 0 -167 0 11 0 1266637395197952 0 20 5 2
+A small but well-made ice pick has been dropped here.^
+^
+^
+^
+^
+
+stick branch 7 122 122 -1 0 0 -170 1 2 0 1273234464964608 1 10 1 1
+A burning stick lies on the ground.^
+An old stick lies on the ground.^
+^
+^
+^
+
+stone <null> 7 123 123 -1 0 0 -177 0 0 0 8589934592 0 0 0 0
+A huge stone stands in the center of the clearing, its sides strangely marked
+and scored.^
+^
+^
+^
+The ancient runes, battered as they are, indicate that the stone can be struck
+to reset the game.
+^
+
+scimitar sword 7 124 124 -1 0 0 -177 0 7 0 1266637395197952 0 30 12 10
+A long, curved scimitar has been placed here.^
+^
+^
+^
+This is a hefty and gruesome weapon, much favoured by orcs, who often use them
+for cutting cakes, trimming toe nails, and ripping out the insides of hobbits!
+^
+
+wintergreen <null> 7 125 125 -1 0 0 -166 1 0 0 17867063951360 1 30 1 2
+A sprig of wintergreen has been left here.^
+Peeking out of the snow you spy some wintergreen.^
+^
+^
+As you examine the sprig of wintergreen, you break a leaf, releasing the
+delicious aroma of fresh mint.
+^
+
+stone bar 22 126 126 127 0 0 -826 1 0 0 77309411328 1 0 0 0
+A block of stone is sitting on the stairs here beside an opening leading up.^
+The stairway is blocked by a large block of stone that is barred in place.^
+^
+^
+^
+
+wall <null> 8 127 127 126 0 0 -195 1 0 0 8589934592 1 0 0 0
+There is a stairway leading down here.^
+A stairway leading down here ends in a stone wall.^
+^
+^
+^
+
+wall <null> 22 128 128 129 0 0 -809 1 0 0 146028888064 1 0 0 0
+An open panel disguised as solid rock allows passage to the north.^
+The passage ends to the north in a solid rock wall.^
+^
+^
+^
+
+wall <null> 8 129 129 128 0 0 -192 1 0 0 146028888064 1 0 0 0
+A panel has been opened in the rock wall allowing passage south.^
+The passage seems to end in a brick wall to the south.^
+^
+^
+^
+
+torch <null> 8 130 130 -1 0 0 -186 0 0 0 8589934592 1 0 0 0
+A battered torch hangs on the south wall.^
+^
+^
+^
+It seems unusual, perhaps it has some hidden purpose?
+^
+
+key <null> 8 131 131 -1 0 0 -196 0 0 0 1134695999864832 0 5 1 1
+A small brass key has been left here.^
+^
+^
+^
+^
+
+door <null> 43 132 132 133 0 0 -1556 1 0 0 25769803776 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+You see a jet black marble door, etched with runes and strange symbols which
+you do not recognize.  You see no locks of mortal means.
+^
+
+door <null> 8 133 133 132 0 0 -186 1 0 0 146028888064 1 0 0 0
+There is a small door open in the south wall.^
+^
+^
+^
+The door is perfectly smooth and rounded to fit against the wall perfectly.
+There appear to be no markings on it, save a single, large blue eye, which
+appears to follow you around the chamber.  There is no lock that you can see to
+operate the door, at least by mortal means.
+^
+
+portcullis <null> 8 134 134 135 0 0 -183 0 0 0 8589934592 1 0 0 0
+A raised portcullis allows access south.^
+A heavy iron portcullis bars the way south.^
+^
+^
+You find yourself examining a hard iron portcullis, which you have no chance in
+Hell of lifting or breaking through.
+^
+
+portcullis <null> 8 135 135 134 0 0 -190 0 0 0 8589934592 1 0 0 0
+The portcullis is raised.^
+The heavy iron portcullis bars the way north.^
+^
+^
+You find yourself examining a hard iron portcullis, which you have absolutely
+no chance of lifting or breaking through.
+^
+
+lever <null> 8 136 136 -1 0 0 -190 0 0 0 8589934592 0 0 0 0
+There is a large iron lever on the east wall.^
+^
+^
+^
+This is a very solid-looking lever, jutting out from the wall, which could seem
+to work the portcullis system, but you never know until you try!
+^
+
+horseshoe <null> 8 137 137 -1 0 0 -191 0 0 3 0 0 10 3 5
+An old horseshoe lies nearby.^
+^
+^
+^
+This looks really lucky, though not for the horse whose lower leg is still
+attached to it!
+^
+
+runesword sword 8 138 138 -1 0 0 -186 1 25 0 193514046488576 1 500 20 30
+A huge sword has been left here, its black blade strangely pulsing with light.^
+A huge sword stands upright before you, embedded in the solid stone floor.^
+^
+^
+The sword is covered with runes which form a curse.  The black, faintly glowing
+blade also seems to hum quietly.
+^
+
+shortsword sword 8 139 139 -1 0 0 -196 0 10 0 1266637395197952 0 50 15 10
+A sharp shortsword has been dropped here.^
+^
+^
+^
+The sword, though not up to dwarven standards, still seems pretty sharp.
+^
+
+dagger sword 8 140 140 -1 0 0 -196 0 5 0 1266637395197952 0 20 10 10
+A small dagger has been dropped here.^
+^
+^
+^
+This is no fake stage knife... as the blade is fixed quite firmly.  It would
+certainly hurt anyone who was silly enough to get in the way of it, and it 
+would be advisable to stop playing with it before you cut yourself.
+^
+
+door maiden 8 141 141 142 0 0 -197 0 0 0 25769803776 1 0 0 0
+The iron maiden's door is open.^
+The iron maiden's door is closed.^
+^
+^
+The door has several sharp spikes on it, designed to penetrate certain delicate
+parts of anyone inside the maiden when the door is closed.
+^
+
+maiden <null> 8 142 142 141 0 0 -195 0 0 0 25769803776 1 0 0 0
+The iron maiden is open.^
+The iron maiden is closed.^
+^
+^
+It has some names written on it...
+     Bruce, Steve, Nicko, Dave, Adrian
+          and underneath...
+          '12 Wasted Years, So Run To The Hills!'.
+^
+
+throne tunnel 8 143 143 144 0 0 -192 1 0 0 146028888064 1 0 0 0
+A small hole leads north into the wall.^
+The exit north is blocked by the back of a throne.^
+^
+^
+The back of the throne is no less impressive than the front, though its wooden
+surface is now covered with rough graffiti reading:
+                'Argh!  Who closed the bloody throne?!?'.
+^
+
+throne tunnel 8 144 144 143 0 0 -189 1 0 0 146028888064 1 0 0 0
+A huge gleaming throne is set against the south wall, beside a narrow tunnel.^
+A huge gleaming throne is set against the south wall.^
+^
+^
+As you gaze at the throne, you think how great it would look behind a nice seven
+piece Sonor Performer drum kit, but unfortunately it's stuck in this dismal
+castle.
+^
+
+peppers food 8 145 145 -1 0 0 -194 0 0 0 274877906944 0 30 2 2
+Some peppers have been left here.^
+^
+^
+^
+The peppers are about an inch long, red, and wicked looking.  They might give you
+heartburn if you ate them.  Or, remember what happened in 'Alien'?
+^
+
+plank <null> 8 146 146 -1 0 0 -181 1 6 0 1273234464964608 1 0 20 12
+A burning plank has been left here.^
+An old plank lies here.^
+^
+^
+It has the word VERYODD, and a picture of a sherman tank on it.
+^
+
+dust <null> 9 147 147 -1 0 0 -198 0 0 0 8589934592 0 0 0 0
+A thick layer of dust covers everything, and swirls around as you move.^
+^
+^
+^
+^
+
+koan message 9 148 148 -1 0 0 -198 0 0 0 12884901888 0 0 0 0
+A koan has been carved into the eastern wall.^
+^
+^
+^
+The koan reads:
+        One day, Cedric and Ged found themselves standing at the entrance to
+        the catacombs.
+        Said Ced, 'How are we ever to traverse this maze of catacombs?'
+        Said Ged, 'I do not know, for the interconnections of its chambers are
+        most intricate.  Perhaps we should ask Tedd, the Zen Master of Aber.'
+        So they did.
+        Said Ged, 'Oh wise and most learned Tedd, how can one find one's way
+        through the treacherous maze of the catacombs?'
+        Said Tedd, ' One can't.  Send Ned.'
+        And suddenly Cedric and Ged were most pleased, for Tedd had shown them
+        the path to enlightenment.
+^
+
+umbrellas <null> 9 149 149 -1 0 0 -241 0 0 0 8589934592 0 0 0 0
+A pile of discarded umbrellas does nothing to lift your spirits.^
+^
+^
+^
+^
+
+cup grail 9 150 150 -1 0 0 -244 1 0 0 17592186044416 1 1600 5 10
+A simple stone cup lies before you.^
+A stone cup rests upon the pedestal.^
+^
+^
+It looks very old, and inspires a strange sense of awe and wonder.
+^
+
+notebook diary 9 151 151 -1 0 2 48 0 0 0 0 0 50 3 3
+An old notebook, its pages and binding in decay, has been left here.^
+^
+^
+^
+Most of the writing is too faint to read.  It appears to have been a diary.
+The only legible parts remaining are individual phrases scattered throughout
+its pages:
+        long quest ... nearly ended
+        who is Ned?
+        lost in Catacombs
+        torch exhausted
+        last of my rations
+        dark ... lonely ... hungry
+        a locked door ... my quest is over!
+^
+
+mace <null> 9 152 152 -1 0 2 49 0 15 0 1266637395197952 0 150 10 20
+A heavy iron mace has been dropped here.^
+^
+^
+^
+The mace consists of an iron ball, covered with deadly spikes, chained to a
+wooden handle.  What else were you expecting?
+^
+
+shield silver 9 153 153 -1 0 3 49 0 0 10 1163055153524244480 0 300 10 15
+A silver shield, bearing a striking coat of arms, lies at your feet.^
+^
+^
+^
+It's rather heavy, and, being made of silver, looks quite valuable.  The coat
+of arms includes the sigil of Camelot, suggesting that the original owner was
+among those few honored with a seat at the Round Table.
+^
+
+pit <null> 9 154 154 -1 0 0 -229 0 0 0 8589934592 1 0 0 0
+There is a sacrificial pit in the floor.  Within it you see only darkness.^
+There is a sacrificial pit in the floor.  A faint glow emanates from within.^
+^
+^
+
+^
+
+pit <null> 9 155 155 -1 0 0 -230 0 0 0 8589934592 1 0 0 0
+There is a sacrificial pit in the floor.  Within it you see only darkness.^
+There is a sacrificial pit in the floor.  A faint glow emanates from within.^
+^
+^
+^
+
+pit <null> 9 156 156 -1 0 0 -231 0 0 0 8589934592 1 0 0 0
+There is a sacrificial pit in the floor.  Within it you see only darkness.^
+There is a sacrificial pit in the floor.  A faint glow emanates from within.^
+^
+^
+^
+
+pit <null> 9 157 157 -1 0 0 -232 0 0 0 8589934592 1 0 0 0
+There is a sacrificial pit in the floor.  Within it you see only darkness.^
+There is a a sacrificial pit in the floor.  A faint glow emanates from within.^
+^
+^
+^
+
+door <null> 9 158 158 159 0 0 -226 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 9 159 159 158 0 0 -215 2 0 0 60129542144 2 0 0 0
+A massive iron door lies open to the south.^
+A massive iron door blocks your passage south.^
+A massive iron door with a mighty lock bars the south passage.^
+^
+^
+
+door <null> 9 160 160 161 0 0 -244 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 9 161 161 160 0 0 -243 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+bagpipes <null> 10 162 162 -1 0 0 -277 0 0 0 0 0 50 15 10
+A set of bagpipes lies here, waiting to be played.^
+^
+^
+^
+It looks like a dead animal, and sounds even worse.
+^
+
+sporran <null> 10 163 163 -1 0 0 -277 0 0 0 289426644802732032 0 20 10 10
+A Scottish sporran has been dumped here.^
+Although empty, this purse should come in handy.^
+^
+^
+^
+
+claymore sword 10 164 164 -1 0 0 -279 0 13 0 1266637395197952 0 300 40 32
+A wicked-looking claymore, decorated with silver wire, lies at your feet.^
+^
+^
+^
+This claymore seems very well-crafted.  Its balance is excellent, and its 
+leather hilt soft and comfortable.  An inscription reads 'William Wallace'.
+^
+
+bat <null> 10 165 165 -1 0 0 -253 0 0 0 0 0 10 2 2
+A dead bat decays slowly in a corner.^
+^
+^
+^
+This bat is dead, deceased, it has gone away, it is no longer a bat, it has
+flown away to the great perch in the sky.  Leave the poor thing alone...
+^
+
+door <null> 10 166 166 167 0 0 -257 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 167 167 166 0 0 -255 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 168 168 169 0 0 -250 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+It's an armored door.
+^
+
+door <null> 10 169 169 168 0 0 -249 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+It's an armored door.  What else do you expect in an armory?
+^
+
+door <null> 10 170 170 171 0 0 -251 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 171 171 170 0 0 -252 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 172 172 173 0 0 -253 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 173 173 172 0 0 -247 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+hammer <null> 10 174 174 -1 0 0 -249 0 11 0 1266637395197952 0 50 25 20
+A large, heavy-looking warhammer has been left here.^
+^
+^
+^
+It seems a bit big for just banging in nails, I must say!
+^
+
+coin <null> 10 175 175 -1 0 0 -257 0 0 0 0 0 20 1 1
+A silver coin has been dropped here.^
+^
+^
+^
+The coin bears a profile view of Jim Morrison on one side.  On the other side
+is engraved a fiery ring with people walking through it.
+^
+
+ale <null> 10 176 176 -1 0 0 -259 0 0 0 2251799813685248 0 40 10 10
+A large bottle of strong ale has been left here.^
+^
+^
+^
+This fine ale is one of the better spirits associated with the Moog, who has
+been known to indulge in vast quantities of the drink.
+^
+
+biscuit food 10 177 177 -1 0 0 -258 0 0 0 274877906944 0 20 1 1
+A hard biscuit has been dropped here.^
+^
+^
+^
+The biscuit is truly very hard.  It was perhaps made out of dried sawdust.
+^
+
+gates <null> 45 178 178 179 0 0 -1573 0 0 0 25769803776 1 0 0 0
+The dwarven gates are open.^
+The dwarven gates are closed.^
+^
+^
+A sign on the gate reads 'Pete's Pearly Hire Co.'
+^
+
+gates <null> 10 179 179 178 0 0 -276 0 0 0 25769803776 1 0 0 0
+The dwarven gates are open.^
+The dwarven gates are closed.^
+^
+^
+A sign on the gate reads "Pete's Pearly Hire Co."
+^
+
+cutlery <null> 10 180 180 -1 0 0 -263 0 0 0 0 0 75 2 2
+Some gold cutlery has been left here.^
+^
+^
+^
+You see a fork, a small fruit knife, and two medium spoons, all gold.
+^
+
+plate <null> 10 181 181 -1 0 0 -260 0 0 0 0 0 75 6 10
+A silver plate has been left here.^
+^
+^
+^
+This plate was made to commemorate the exploits of one Cannonfod The Killer.
+                          The Phantom
+^
+
+crystal <null> 10 182 182 -1 0 0 -265 0 0 0 0 0 100 12 2
+A beautiful, well-cut crystal glints in front of you.^
+^
+^
+^
+You peer into the crystal...
+You see an image of a panther about to strike!
+Curiously, the panther is pink.
+^
+
+axe <null> 10 183 183 -1 0 0 -264 0 10 0 1266637395197952 0 50 10 10
+A small axe lies before you.^
+^
+^
+^
+The words 'If found, please return to thrower' are written on the handle.  This,
+taken with the fact that the axe is the dwarves' favorite weapon, would indicate
+something of its origins.
+^
+
+door <null> 10 184 184 185 0 0 -270 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 10 185 185 184 0 0 -269 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+ruby gem 10 186 186 -1 0 0 -270 0 0 0 0 0 250 2 2
+A huge ruby sparkles at your feet.^
+^
+^
+^
+The ruby glows with a pleasant red light.  It looks quite valuable.
+^
+
+sapphire gem 10 187 187 -1 0 0 -270 0 0 0 0 0 250 2 2
+A massive sapphire glitters stunningly before you.^
+^
+^
+^
+The sapphire is about the size of a plover's egg, and is almost clear when
+you look into it.
+^
+
+diamond gem 10 188 188 -1 0 0 -270 0 0 0 0 0 500 4 2
+There is a huge diamond on the floor in front of you.^
+^
+^
+^
+This diamond is really huge, almost the size of your fist.  It has a faint blue
+tint, making it even more valuable.
+^
+
+armor armour 10 189 189 -1 0 0 -245 0 0 15 298364025069109248 0 80 30 15
+A tarnished suit of armor has been left here.^
+^
+^
+^
+^
+
+cross <null> 11 190 190 -1 0 0 -300 0 5 0 0 0 200 10 40
+A hefty gold cross lies sparkling before you!^
+^
+^
+^
+The cross would like fine on the wall of St. Patt., but is out of place here.
+^
+
+lead <null> 11 191 191 -1 0 0 -290 0 0 0 0 0 100 15 50
+A neat pile of roofing lead has been stacked in a corner.^
+^
+^
+^
+The roofing is very heavy.
+^
+
+weathercock <null> 11 192 192 -1 0 0 -291 0 0 0 0 0 50 15 20
+A golden weathercock has been left here.^
+^
+^
+^
+^
+
+rope <null> 11 193 193 -1 0 0 -287 0 12 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+stick branch 11 194 194 -1 0 0 -283 1 3 0 1273234464964608 1 0 1 1
+A burning stick has been left here.^
+An old stick lies here.^
+^
+^
+Stamped into its surface is:
+      ACME Dog Bait'
+^
+
+key <null> 11 195 195 -1 0 0 -289 0 0 0 1134695999864832 0 10 1 1
+A long key lies here.^
+^
+^
+^
+The key is long, complicated and slightly tapered.
+^
+
+slab <null> 11 196 196 197 0 0 -296 1 0 0 0 1 0 0 0
+A heavy stone slab has been shifted to one side, allowing access upwards.^
+A heavy stone slab seals the barrow from above.^
+^
+^
+^
+
+slab <null> 11 197 197 196 0 0 -297 1 0 0 30064771072 1 0 0 0
+A heavy stone slab has been shifted to one side, allowing access down.^
+A heavy stone slab appears to bar an exit downwards.^
+^
+^
+
+^
+
+wreath <null> 11 198 198 -1 0 0 -296 0 0 0 144115188075855872 0 50 2 1
+An old wreath lies here.^
+^
+^
+^
+^
+
+shroud <null> 11 199 199 -1 0 0 -296 0 0 0 144115188075855872 0 50 2 1
+A silk shroud has been placed here.^
+^
+^
+^
+^
+
+gate <null> 12 200 200 201 0 0 -305 2 0 0 60129542144 2 0 0 0
+The gate is open.^
+The gate is closed.^
+The gate is locked.^
+^
+The gate is made of hefty materials and looks old and rusty.
+^
+
+gate <null> 12 201 201 200 0 0 -304 2 0 0 60129542144 2 0 0 0
+The gate is open.^
+The gate is closed.^
+The gate is locked.^
+^
+The gate is made of hefty materials and looks old and rusty.
+^
+
+pie food 12 202 202 -1 0 0 -308 1 0 0 17867063951360 1 5 2 5
+An apple pie has been left here.^
+There is an apple pie resting beside the window.^
+^
+^
+It is freshly baked and looks delicious.
+^
+
+key <null> 12 203 203 -1 0 3 60 0 0 0 144123984168878080 0 100 1 1
+A huge iron key is lying here.^
+^
+^
+^
+It looks as though it were meant for opening drawbridges or very large gates.
+^
+
+knife <null> 12 204 204 -1 0 4 63 0 10 0 1266637395197952 0 100 5 3
+A sharp butcher's knife is lying here.^
+^
+^
+^
+The blade is long, thick and sharp; a nasty weapon.
+^
+
+door <null> 12 205 205 206 0 0 -317 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 12 206 206 205 0 0 -316 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+shield <null> 12 207 207 -1 0 3 67 0 0 10 1154047954269503488 0 100 7 5
+There is a heavy shield lying here.^
+^
+^
+^
+^
+
+carvings <null> 12 208 208 -1 0 0 -316 0 0 0 8589934592 0 0 0 0
+There are some strange carvings in the ground here.^
+^
+^
+^
+Looking at the carvings closely, you make out the word REDRUM.
+^
+
+shelf <null> 12 209 209 -1 0 0 -317 0 0 0 70377334112256 0 0 0 0
+^
+^
+^
+^
+There seem to be a few interesting books here.
+^
+
+book <null> 12 210 210 -1 0 1 209 0 0 0 0 0 100 3 5
+There is a massive book lying here.^
+^
+^
+^
+The cover is dusty.  Wiping it off you can barely make out the word 'Death'.
+^
+
+key <null> 12 211 211 -1 0 3 68 0 0 0 144123984168878080 0 100 1 1
+There is a large key on the ground before you.^
+^
+^
+^
+The key looks like it belongs to a chest, but it is a skeleton key and can 
+probably open most anything.
+^
+
+chest <null> 12 212 212 -1 0 0 -318 2 0 0 70428873719808 2 0 0 0
+There is an open chest here.^
+The chest is closed.^
+The chest is locked.^
+^
+The chest is very old and falling apart.  It has an almost evil feel to it.
+^
+
+doomblade sword 12 213 213 -1 0 1 212 0 20 0 1266637395197952 0 200 8 10
+The Doomblade lies before your feet.^
+^
+^
+^
+The blade is very sharp, and not to be toyed with.
+^
+
+cloak <null> 13 214 214 -1 0 0 -340 0 0 1 289356825814368256 0 110 5 10
+A cloak lies in a crumpled pile here.^
+^
+^
+^
+It is fancifully woven from sheep's wool, with interesting runes making artistic
+designs around the hood and edges, an ornate metal clasp for the neck, and 
+dyed in a rich red color.  You almost expect a see a picnic basket nearby.
+^
+
+buttercup <null> 13 215 215 -1 0 0 -321 1 0 0 288247968337756160 1 50 1 1
+You see a pretty buttercup lying limp nearby, awaiting some attention.^
+A large yellow buttercup grows here.^
+^
+^
+This is a splendid specimen of a buttercup, and its rich golden-yellow color
+compels you to take it with you.
+^
+
+robe <null> 13 216 216 -1 0 3 69 0 0 0 288230376151711744 0 30 13 10
+A woolen robe lies uselessly on the ground.^
+^
+^
+^
+Looks like it could keep you warm most anywhere.
+^
+
+lantern <null> 13 217 217 -1 0 2 74 1 0 0 1132496976609280 1 30 12 10
+A lantern rests here, emitting a bright, unflickering flame.^
+You see a lantern tossed carelessly aside.^
+^
+^
+This small red lantern has a round latch-lock door on one side, a wick 
+adjustment handle, ornately-shaped vents, and a wooden handle.  Indeed, this
+is just the sort of lantern that real adventurers use!
+^
+
+chain <null> 13 218 218 -1 0 4 74 0 6 3 145382375226867712 0 50 20 20
+A hefty length of chain lies in a rusty pile here.^
+^
+^
+^
+It appears to be an extra chain for use in securing animal traps into place.
+^
+
+furs <null> 13 219 219 -1 0 0 -333 0 0 0 288230376151711744 0 120 30 10
+A pile of old and musty furs lies here.^
+^
+^
+^
+An assortment of beaver, squirrel, bear, tiger, grue, and shark skins make up 
+the majority of the fur in this pile.  You can only guess to the rest of the 
+exotic, colorful furs.
+^
+
+diary <null> 13 220 220 -1 0 0 -333 1 0 0 17592186044416 1 100 8 8
+You see a small book labeled 'My Diary' lying at your feet.^
+A small book labeled 'My Diary' rests here on a small shelf.^
+^
+^
+This appears to be a poorly written diary of a trapper that practices his
+trade in the swamplands.   Most of the entries recount mundane catches and
+places that the trapper has been to, but one entry catches your attention:
+
+'Reset 509, 2 hours and 45 minutes:
+	I hav wanderd far into the swamplans in the hopes of settin some new
+trapps, wheir I stumbeld into a small, peeramid-like buildin.  This plase
+didn't evn show up on my map, which I uuz to saafly travle the swamps.  I
+looked insyde this thingy-ma-bob, onlee to fynd a small jayde figgurine.  It
+seem to have a tenglin feeling whin I tuch it.  I plan on keepin it unteal I
+figgur out what it myte meen.'
+^
+
+artifact <null> 13 221 221 -1 0 0 -333 1 0 0 17592186044416 1 250 3 3
+A small, cleverly-carved jade artifact rests here.^
+A jade artifact rests next to the book.^
+^
+^
+It seems to be painstakingly hand-crafted into the shape of a fabled Aztec
+serpent, called a Quetzalcoatl.  Strangely, the small figure seems to squirm
+under your hand, but doesn't seem to move at all.
+^
+
+backpack pack 13 222 222 -1 0 0 -335 1 0 0 577674613140488192 1 30 45 10
+An old and worn equipment backpack lies here.^
+An equipment backpack lies useless in a corner.^
+^
+^
+It looks a little old, with holes worn in the corners, but the straps are 
+still intact, and the clasps are still serviceable.  It looks like it couldn't
+contain an elephant, but hey, you might be surprised.
+^
+
+meats <null> 13 223 223 -1 0 0 -335 0 0 0 274877906944 0 40 10 10
+A small assortment of dried meats, enough for one meal, lies in a pile here.^
+^
+^
+^
+Dry and salty for your taste, but it will look good when you're hungry
+^
+
+branch <null> 13 224 224 -1 0 0 -342 1 3 0 1273234464964608 1 0 2 2
+A burning branch of brambleweed lies here.^
+A large branch of brambleweed appears usable, though still covered in thorns.^
+^
+^
+This branch looks hefty enough for a light source, but looking at the thorns,
+you surmise that it could serve as a pretty wicked weapon as well.  Stop
+playing with the thorns, you might prick yourself!
+^
+
+dollar <null> 13 225 225 -1 0 0 -360 1 0 0 17592186044416 1 300 5 2
+A small, glittering sand dollar lies here on the ground.^
+A small and perfectly round sand dollar winks at you through the water.^
+^
+^
+Gold flecks are scattered in the face of the dollar.  Definitely this is no
+ordinary sand dollar!
+^
+
+conch <null> 13 226 226 -1 0 0 -338 1 0 0 17592186044416 1 150 6 6
+A conch shell lies forgotten here.^
+A good-sized conch shell lies partially buried in the sand.^
+^
+^
+Putting it to your ear, you hear the rolling waves of the sea...
+^
+
+trap <null> 13 227 227 -1 0 0 -332 1 0 0 8589934592 1 0 0 0
+A large and nasty claw trap lies uncovered here, set off, and covered in blood.^
+A large and nasty claw trap lies uncovered here, set to go.^
+^
+^
+The only thing you can think is how bad your day would have become if those 
+teeth were clamped snugly around your ankle!
+^
+
+pile <null> 13 228 228 -1 0 0 -332 1 0 0 8589934592 1 0 0 0
+Piles of leaves are spread about, save for a swept path through the trail.^
+Piles of leaves and plant matter are strewn about.^
+^
+^
+These piles seem to be arranged in a more orderly way than nature would have
+placed them, making it hard to avoid stepping on at least one of them.
+^
+
+berries food 13 229 229 -1 0 0 -343 1 0 0 17867063951360 1 30 2 2
+A small pile of ripe brambleberries are carefully set to one side.^
+Some juicy-looking brambleberries grow here in the bushes.^
+^
+^
+Your mouth waters at the though of biting into one of those juicy and
+succulent berries.
+^
+
+fish salmon 13 230 230 -1 0 0 -345 1 0 0 17592186044416 1 150 15 10
+You see a freshly-dead salmon carefully set aside here.^
+A large salmon swims near the rocks, looking very catchable.^
+^
+^
+He looks like a forty-pounder at least!  You'd love to hang this one up back
+at home.
+^
+
+door <null> 14 231 231 232 0 0 -372 1 0 0 25769803776 1 0 0 0
+An open door is set in the west side of the tree.^
+You see a closed door here.^
+^
+^
+^
+
+tree <null> 14 232 232 231 0 0 -371 1 0 0 8589934592 1 0 0 0
+An open panel is slightly recessed into the tree here.^
+^
+^
+^
+^
+
+door <null> 14 233 233 234 0 0 -384 2 0 0 60129542144 2 0 0 0
+To the East is an open door.^
+To the East is a closed door.^
+To the East is a locked door.^
+^
+^
+
+door <null> 14 234 234 233 0 0 -386 2 0 0 60129542144 2 0 0 0
+To the West is an open door.^
+To the West is a closed door.^
+To the West is a locked door.^
+^
+^
+
+door <null> 14 235 235 236 0 0 -394 1 0 0 25769803776 1 0 0 0
+There is an open door to the East.^
+There is a closed door to the East.^
+^
+^
+^
+
+hole <null> 14 236 236 235 0 0 -387 1 0 0 8589934592 1 0 0 0
+The stone door rests open.^
+The stone door is tightly shut.^
+^
+^
+It looks like a gem of some sort could fit in that hole.
+^
+
+thorns wall 14 237 237 238 0 0 -400 1 0 0 8589934592 1 0 0 0
+^
+The passage to the West is blocked by thorns.^
+^
+^
+^
+
+thorns <null> 14 238 238 237 0 0 -377 1 0 0 8589934592 1 0 0 0
+The wall of thorns to the east has been burned away.^
+^
+^
+^
+The thorns look very brittle.  Be careful with fire around here!
+^
+
+door <null> 14 239 239 240 0 0 -404 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 14 240 240 239 0 0 -403 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 14 241 241 242 0 0 -410 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 14 242 242 241 0 0 -408 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+lake water 14 243 243 244 0 0 -429 1 0 0 8589934592 1 0 0 0
+^
+Above your head, you see water, apparently suspended in thin air.  You
+have no idea why it does not rush down the tunnel towards you.  You must
+be under a lake.  How strange!^
+^
+^
+^
+
+lake water 14 244 244 243 0 0 -392 1 0 0 8589934592 1 0 0 0
+The lake seems to have dried up!^
+^
+^
+^
+Below the surface of the water, you seem to see dark shapes...
+^
+
+throne <null> 14 245 245 246 0 0 -412 1 0 0 146028888064 1 0 0 0
+Just to the side of the passage heading up is a throne.^
+A throne blocks your way up!^
+^
+^
+^
+
+throne granite 14 246 246 245 0 0 -402 1 0 0 8589934592 1 0 0 0
+The throne has been moved to the side, revealing a hole below.^
+^
+^
+^
+You notice faint scratch marks on one side of the throne.
+^
+
+desk oak 14 247 247 -1 0 0 -404 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+button <null> 14 248 248 -1 0 0 -404 0 0 0 12884901888 1 0 0 0
+^
+^
+^
+^
+^
+
+fountain <null> 14 249 249 -1 0 0 -365 0 0 0 70377334112256 0 0 0 0
+A dried-up fountain sits in the middle of this glen.^
+^
+^
+^
+The fountain is quite large.  In fact, it is large enough to be able
+to hold stuff in it.
+^
+
+sponge <null> 14 250 250 -1 0 1 249 0 0 0 0 1 30 1 0
+A large sponge is lying here.^
+A large sponge is lying here, bloated with water.^
+^
+^
+This sponge looks like it could hold quite a bit of water.
+^
+
+hope <null> 14 251 251 -1 0 0 -385 0 0 0 2305843009213693952 0 100 3 0
+The fabled Hope diamond lies here, sparkling amidst the light.^
+^
+^
+^
+This diamond is, without a doubt, of great value! Hold onto it carefully.
+^
+
+journal book 14 252 252 -1 0 0 -366 1 0 0 17592186044416 0 100 6 0
+The journal of Dinthiar lies here.^
+On the table lies the journal of Dinthiar, the Elven King.^
+^
+^
+The journal seems to belong to Dinthiar, the elven king.  It speaks of what
+has happened to this once beautiful land.  It seems that there were two
+great evils, who had been engaged in an eternal war with each other.  They
+had shifted from world to world, leaving each one a desolate ruin behind
+them.  Sadly, one day the two evils came down upon this beautiful realm.
+Here, their last battle was fought.  One of the two, a demon of great power,
+still resides in the caves to the west, lording over the land he helped
+destroy.  The other, a deathless lich, was forced to flee.  It is rumored
+though, that he still hides somewhere in these lands.  Dinthiar believes
+that the elven lands can still be restored.  What is needed is a great hero
+to vanquish the two ancient evils...
+^
+
+toadstool food 14 253 253 -1 0 0 -368 1 0 0 17867063951360 0 10 2 0
+A tasty-looking toadstool has been tossed here.^
+One toadstool sitting here looks quite edible.^
+^
+^
+^
+
+sulphur <null> 14 254 254 -1 0 0 -369 1 0 0 17592186044416 0 20 1 0
+A pile of sulphur lies here.^
+A pile of sulphur lies amidst the ashes of a warped tree.^
+^
+^
+^
+
+throne <null> 14 255 255 -1 0 0 -372 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+crown <null> 14 256 256 -1 0 0 -372 0 0 0 81064797587636224 0 100 10 0
+You see a golden crown gleaming here!^
+^
+^
+^
+Engraved into the inside of the crown is the name Dinthiar.  This must be
+the crown of an Elven King.
+^
+
+torch <null> 14 257 257 -1 0 0 -381 0 0 0 41781441855488 1 10 2 0
+A torch burns merrily here.^
+A burnt out torch lies here.^
+^
+^
+^
+
+coat <null> 14 258 258 -1 0 0 -383 1 0 0 288247968337756160 0 10 10 0
+A large coat has been left here.^
+^
+^
+^
+^
+
+coin <null> 14 259 259 -1 0 0 -383 0 0 0 4294967296 0 0 0 0
+A beautiful elven coin has been carefully placed here.^
+^
+^
+^
+^
+
+table broken 14 260 260 -1 0 0 -384 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+gauntlets armor 14 261 261 -1 0 0 -384 0 0 6 2314850762519216128 0 30 3 0
+A pair of shiny gauntlets lies here.^
+^
+^
+^
+^
+
+bust demon 14 262 262 -1 0 0 -388 1 0 0 17592186044416 0 300 30 0
+A bust of Asmodeus has been left here.^
+A bust of Asmodeus, the demon lord, sits on a table here.^
+^
+^
+^
+
+painting <null> 14 263 263 -1 0 0 -390 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+note <null> 14 264 264 -1 0 0 -390 0 0 0 4294967296 0 10 1 0
+A note has been tossed here.^
+^
+^
+^
+The note reads : "What did you expect to find here, a safe ?"
+^
+
+mushroom food 14 265 265 -1 0 0 -391 1 0 0 17592186044416 0 20 1 0
+An edible looking mushroom has been left here.^
+One large mushroom looks quite edible.^
+^
+^
+This mushroom does not look poisonous at all.
+^
+
+sign <null> 14 266 266 -1 0 0 -395 0 0 0 8589934592 0 0 0 0
+A sign sits above the door here.^
+^
+^
+^
+The sign reads, abandon Hope all ye who enter here.
+^
+
+contracts <null> 14 267 267 -1 0 0 -396 1 0 0 17592186044416 0 100 4 0
+A pile of contracts has been carelessly left here.^
+A pile of contracts lies on the desk.^
+^
+^
+These contracts seem to be signed in blood.  How bizarre!
+^
+
+bracelet <null> 14 268 268 -1 0 0 -399 0 0 0 2305843009213693952 0 200 1 0
+A platinum bracelet has been discarded here.^
+^
+^
+^
+^
+
+coins <null> 14 269 269 -1 0 0 -399 0 0 0 0 0 200 10 0
+A large pile of gold coins sparkles brightly.^
+^
+^
+^
+^
+
+scarf <null> 14 270 270 -1 0 0 -399 0 0 0 144115188075855872 0 100 3 0
+A mink scarf has been carefully placed in a pile here.^
+^
+^
+^
+Do you know how many minks were killed to make this scarf for you?
+^
+
+chair <null> 14 271 271 -1 0 0 -399 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+ring diamond 14 272 272 -1 0 0 -399 0 0 0 2305843013508661248 0 200 1 0
+A diamond ring has been set here.^
+^
+^
+^
+Someone has inscribed the following message on this ring:
+     "One Ring to rule them all, One Ring to find them,
+      One Ring to bring them all, and in the darkness bind them."
+However, the ring does not seem to turn you invisible.
+^
+
+gargoyles <null> 14 273 273 -1 0 0 -401 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You notice that one gargoyle seems to be missing.
+^
+
+flask food 14 274 274 -1 0 0 -403 0 0 0 2251799813685248 0 20 2 0
+A small flask of Dragon's Milk lies here.^
+^
+^
+^
+^
+
+sandwich food 14 275 275 -1 0 0 -403 0 0 0 274877906944 0 10 2 0
+Laying on the ground is a large sandwich.^
+^
+^
+^
+^
+
+bracelet golden 14 276 276 -1 0 0 -403 0 0 0 2305843009213693952 0 100 2 0
+A small golden bracelet has been lost here.^
+^
+^
+^
+^
+
+rack <null> 14 277 277 -1 0 0 -407 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+scarab golden 14 278 278 -1 0 0 -407 0 0 0 288230380446679040 0 100 2 0
+A golden scarab lies on the ground at your feet.^
+^
+^
+^
+^
+
+key small 14 279 279 -1 0 2 89 0 0 0 8796093022208 0 0 1 0
+A small key has been discarded here.^
+^
+^
+^
+^
+
+papers <null> 14 280 280 -1 0 0 -415 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+treaty <null> 14 281 281 -1 0 0 -415 0 0 0 4294967296 0 100 10 0
+Some type of treaty has been left here.^
+^
+^
+^
+This treaty seems to describe a temporary peace between the Lich and Asmodeus.
+Without doubt, it is no longer in effect.
+^
+
+desk <null> 14 282 282 -1 0 0 -415 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+emerald gem 14 283 283 -1 0 0 -415 0 0 0 4294967296 0 300 4 0
+A large emerald has been left here!^
+^
+^
+^
+This emerald bears no relationship to any wizard who may exist by that name.
+^
+
+chest <null> 14 284 284 -1 0 0 -416 2 0 0 70428873719808 2 0 0 0
+A large chest is on the floor. It is open.^
+A large chest is on the floor.^
+A large chest is on the floor. It is locked.^
+^
+Maybe you should try look in chest?
+^
+
+crown <null> 14 285 285 -1 0 1 284 0 0 0 81064793292668928 0 250 4 0
+A platinum crown lies here.^
+^
+^
+^
+This finally crafted headdress was some artist's crowning achievement.
+^
+
+sceptre <null> 14 286 286 -1 0 1 284 0 0 0 0 0 250 1 0
+A gold sceptre has been place here.^
+^
+^
+^
+^
+
+robe regal 14 287 287 -1 0 1 284 0 0 0 576460752303423488 0 250 6 0
+A regal robe lies neatly folded on the ground.^
+^
+^
+^
+The robe has a faint stench of death, as if it had been worn by a corpse...
+^
+
+bowl <null> 14 288 288 -1 0 0 -417 0 0 0 17592186044416 0 100 6 0
+A golden bowl has been placed here.^
+A golden place sits on the dark altar.^
+^
+^
+The bowl has been stained with a dark liquid.
+^
+
+journal <null> 14 289 289 -1 0 0 -417 0 0 0 0 0 50 10 0
+A black journal sits on the ground here.^
+^
+^
+^
+This journal describes the dark elves' hatred of the good elves who had
+lived in the forest above.  In an attempt to destroy them, the dark elves
+found two evil forces who had warred for eternity.  By convincing them to
+come here, the dark elves made the destruction of the Elven Forest certain.
+In other words, you realize, the dark elves are as much to blame for the
+destruction that you have seen, as anyone!
+^
+
+altar <null> 14 290 290 -1 0 0 -417 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+statue <null> 14 291 291 -1 0 0 -417 0 0 0 4294967296 0 300 5 0
+A golden statue of a disfigured elf sits here.^
+^
+^
+^
+^
+
+mattress <null> 14 292 292 -1 0 0 -421 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+purse <null> 14 293 293 -1 0 0 -421 0 0 0 70373039144960 0 20 10 0
+A small purse has been left here.^
+^
+^
+^
+^
+
+coin <null> 14 294 294 -1 0 1 293 0 0 0 0 0 50 1 0
+A golden coin is here.^
+^
+^
+^
+This coin has the picture of some famous dark elf stamped on it.
+^
+
+shield black 14 295 295 -1 0 3 98 0 0 6 1161929253617401856 0 50 10 0
+A black shield has been carelessly left here.^
+^
+^
+^
+^
+
+trash <null> 14 296 296 -1 0 0 -426 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+coin <null> 14 297 297 -1 0 0 -426 0 0 0 4294967296 0 50 1 0
+A gleaming silver coin lies here.^
+^
+^
+^
+^
+
+altar <null> 14 298 298 -1 0 0 -427 0 0 0 4294967296 0 0 0 0
+^
+^
+^
+^
+This seems to be a sacrificial altar to some great fungoid god.
+^
+
+key <null> 14 299 299 -1 0 0 -428 0 0 0 26388279066624 0 0 1 0
+A key sits to the side of the desk.^
+^
+^
+^
+^
+
+elvensword <null> 14 300 300 -1 0 0 -366 0 30 0 140746078289920 0 0 0 0
+Dinthiar's elvensword sits here, but it is not for mortals!^
+^
+^
+^
+^
+
+box <null> 15 301 301 -1 0 0 -450 1 0 0 70385924046848 1 20 1 1
+There is an open box lying here.^
+A small box lies here. It is closed.^
+^
+^
+The box reads 'Trojan'.
+^
+
+condom <null> 15 302 302 -1 0 1 301 0 0 0 0 0 10 1 1
+There is a condom lying here.  How gross!^
+^
+^
+^
+This is a Trojan Ribbed:  the condom of champions.
+^
+
+nuprin food 15 303 303 -1 0 2 118 0 0 0 274877906944 0 10 1 1
+There is a bottle of Nuprin lying here.^
+^
+^
+^
+Little.... yellow.... different.
+^
+
+sign <null> 15 304 304 -1 0 0 -433 0 0 0 8589934592 0 0 0 0
+A crude sign of GIGANTIC PROPORTIONS has been tacked here.^
+^
+^
+^
+The sign reads as follows:
+Due to the overwhelming number of ANNOYING adventurers desecrating our beloved
+castle, we are hereby declaring war on this MUD.  We have moved our base of 
+operations to our war camp to facilitate the taking of further steps toward
+the utter destruction of our vile enemies.  THIS MEANS YOU!!!
+BE WARNED!  We WILL be ready for you, and the penis party WILL end!
+						Signed,
+						The Generals
+^
+
+banner <null> 15 305 305 -1 0 0 -433 0 0 0 8589934592 0 0 0 0
+A long banner is displayed on the wall here.^
+^
+^
+^
+It reads: 'Welcome to Hell'.
+^
+
+pamphlet <null> 15 306 306 -1 0 0 -443 0 0 0 0 0 10 1 0
+A small pamphlet lies here.^
+^
+^
+^
+The pamphlet is entitled: 'How to Pick and Train your Man'.
+^
+
+article <null> 15 307 307 -1 0 0 -450 0 0 0 0 0 10 1 0
+A clipped article lies here for all to read.^
+^
+^
+^
+The title reads: 'Rapist Killed by Angry Woman'.
+^
+
+leaflet <null> 15 308 308 -1 0 0 -456 0 0 0 0 0 10 1 0
+A thin leaflet lies here.^
+^
+^
+^
+This leaflet is a warning about AIDS and the evil men who carry it.
+^
+
+flyer <null> 15 309 309 -1 0 0 -437 0 0 0 0 0 10 1 0
+A small flyer lies here.^
+^
+^
+^
+The flyer gives tips on beating PMS.
+^
+
+ad <null> 15 310 310 -1 0 2 100 0 0 0 0 0 10 1 0
+A long informational ad lies here.^
+^
+^
+^
+The ad informs men on why it is so difficult to be a woman in today's world.
+^
+
+heatingpad pad 15 311 311 -1 0 0 -496 0 0 0 0 0 200 3 4
+A warm heating pad lies here.^
+^
+^
+^
+^
+
+flagstone stone 15 312 312 313 0 0 -497 1 0 0 146028888064 1 0 0 0
+The flagstone to the south has been moved, allowing access to the castle.^
+A huge flagstone blocks your way south.^
+^
+^
+It looks heavy, but you might be able to move it.
+^
+
+flagstone stone 15 313 313 312 0 0 -490 1 0 0 146028888064 1 0 0 0
+A large flagstone has been pushed aside, revealing a passage to the north.^
+A large flagstone looks a bit loose from the floor.^
+^
+^
+It looks kind of heavy, but maybe you can move it.
+^
+
+orb <null> 15 314 314 -1 0 0 -517 0 0 0 0 0 5000 2 10
+There is a smallish orb lying here.^
+^
+^
+^
+Although it is not all that impressive in size, it is made 
+of gold and diamond, and is definitely very valuable.  I guess it was worth 
+going through the maze afterall!
+^
+
+club <null> 16 315 315 -1 0 0 -532 0 4 0 1266637395197952 0 10 30 30
+A heavy wooden club has been dropped here.^
+^
+^
+^
+^
+
+earring <null> 16 316 316 -1 0 0 -532 0 0 0 4503599627370496 0 100 1 1
+A dented and tarnished platinum earring lies discarded at your feet.^
+^
+^
+^
+^
+
+venison <null> 16 317 317 -1 0 0 -532 0 0 0 274877906944 0 10 40 40
+A haunch of probably edible venison rests here.^
+^
+^
+^
+^
+
+pot <null> 16 318 318 -1 0 0 -532 0 0 0 1196268651020288 0 10 30 30
+An old metal pot has been dumped here.^
+^
+^
+^
+^
+
+key <null> 16 319 319 -1 0 0 -532 0 0 0 1134695999864832 0 10 2 1
+A bent metal key has been thrown here, although it seems usable.^
+^
+^
+^
+^
+
+brass <null> 16 320 320 -1 0 0 -532 0 0 0 0 0 10 1 1
+A glittering piece of old brass has been tossed away here.^
+^
+^
+^
+^
+
+torch <null> 16 321 321 -1 0 0 -532 1 0 0 1132496976609280 1 10 10 5
+A lit torch sizzles and sparkles on the ground, making a horrible smell.^
+A greasy animal fat torch has been dumped here.^
+^
+^
+^
+
+tree <null> 16 322 322 -1 0 0 -523 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+tree <null> 16 323 323 -1 0 0 -518 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+pipes <null> 16 324 324 -1 0 0 -527 0 0 0 0 0 100 2 1
+A set of small pipes have been left here.^
+^
+^
+^
+^
+
+window <null> 17 325 325 326 0 0 -537 1 0 0 25769803776 1 0 0 0
+The window is open, letting in a mild breeze.^
+The window is closed.^
+^
+^
+^
+
+window <null> 17 326 326 325 0 0 -534 1 0 0 25769803776 1 0 0 0
+The window is open giving free exit into a kitchen.^
+The window is slightly ajar.^
+^
+^
+^
+
+chimney <null> 17 327 327 -1 0 0 -537 0 0 0 8589934592 0 0 0 0
+Looking up inside the chimney you see blue sky, looking down you see nothing
+because it is dark down there in what must be a cellar.  Climbing down the
+chimney is only allowed if your name is Santa Claus.^
+^
+^
+^
+^
+
+chimney <null> 17 328 328 -1 0 0 -547 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The chimney is terribly dirty and black inside, but it provides an easy climb
+up into the kitchen above you if you open the grating that is sits halfway up
+inside the chimney
+^
+
+grating <null> 17 329 329 330 0 0 -537 1 0 0 8589934592 1 0 0 0
+^
+^
+^
+^
+The grating is set down in the middle of the chimney leading to the cellar,
+beyond your reach.
+^
+
+grating <null> 17 330 330 329 0 0 -547 1 0 0 25769803776 1 0 0 0
+^
+^
+^
+^
+The grating is made of sturdy steel bars covered covered with sticky pitch 
+and black ash.
+^
+
+shield <null> 17 331 331 -1 0 0 -539 0 0 10 1161946845803446272 1 0 10 10
+A dust covered shield is thrown into the corner.^
+A shield made of steel has been dropped here for some reason.^
+^
+^
+^
+
+trophycase case 17 332 332 -1 0 0 -538 0 0 0 70377334112256 0 0 50 0
+A trophycase which is nailed to the floor sits in the corner.^
+^
+^
+^
+^
+
+jacket armor 17 333 333 -1 0 1 332 0 0 13 297238125162266624 0 0 10 10
+A jacket made of interwoven Mithril rings is lying here.^
+^
+^
+^
+This jacket will surely protect you against most enemies whether they are
+nasty beasts or (wo)men.  It is made of thousands of small Mithril rings 
+woven together with treads of hardened steel.
+^
+
+key <null> 17 334 334 -1 0 0 -539 0 0 0 8796093022208 0 3 1 1
+A small key has been left here.^
+^
+^
+^
+^
+
+flames fire 17 335 335 -1 0 0 -547 0 0 0 41790031790080 1 0 0 0
+Through a small crack in the floor inside the chimney some gas leaks out, 
+and it burns with a small flame.^
+Some odorless gas leaks through a crack in the floor inside the chimney.^
+^
+^
+^
+
+rug <null> 17 336 336 -1 0 0 -538 1 0 0 17600775979008 1 0 0 0
+The heavy rug has been moved aside revealing a trapdoor.^
+^
+^
+^
+The oriental rug is very heavy and must have been quite expensive, but being
+very tattered and covered with muddy footsteps it isn't even worth offering
+to the Gods, they would probably lower your score if you do so.
+^
+
+trapdoor door 17 337 337 338 0 0 -546 3 0 0 60129542144 3 0 0 0
+The trapdoor is open.^
+The trapdoor is closed.^
+The trapdoor is closed and locked.^
+The trapdoor is closed and locked.^
+^
+
+trapdoor door 17 338 338 337 0 0 -538 3 0 0 60129542144 3 0 0 0
+The trapdoor leads down into darkness.^
+^
+^
+^
+^
+
+mailbox box 17 339 339 -1 0 0 -533 1 0 0 70385924046848 1 25 30 1
+A red painted mailbox sits here open.^
+A red painted mailbox sits here.  It is closed.^
+^
+^
+^
+
+leaflet <null> 17 340 340 -1 0 1 339 0 0 0 0 0 10 1 1
+A leaflet has been left here for some reason.^
+^
+^
+^
+The leaflet is written with zorkian letters and thus in zorkian language.
+You do recognize some letters but most of them are unknown. The leaflet is
+signed with a fancy signature in which you recognize the following
+letters:  Pie po t Fl t e d.
+^
+
+nest <null> 17 341 341 -1 0 0 -545 0 0 0 70377334112256 0 0 6 1
+^
+^
+^
+^
+^
+
+jewelegg egg 17 342 342 -1 0 1 341 0 0 0 17592186044416 0 500 5 15
+There is a large egg here encrusted with precious jewels and covered with
+fine gold inlay, and ornamented in lapis lazuli and mother-of-pearl.
+The egg appears extremely fragile.^
+^
+^
+^
+^
+
+torch <null> 17 343 343 -1 0 1 332 1 9 0 147334558121984 1 15 10 5
+A long torch has been left burning on the ground.^
+A long unlit torch is here.^
+^
+^
+^
+
+sandwich <null> 17 344 344 -1 0 0 -537 0 0 0 274877906944 0 30 10 0
+A hot pepper & ham sandwich has been left here.^
+^
+^
+^
+^
+
+sandwich <null> 17 345 345 -1 0 0 -537 0 0 0 274877906944 0 25 10 0
+A strong-smelling cheese-sandwich is here.^
+^
+^
+^
+^
+
+longsword sword 17 346 346 -1 0 0 -538 0 17 0 140737488355328 0 400 45 20
+A long well-balanced longsword used in many wars has been left here.^
+^
+^
+^
+^
+
+stiletto knife 17 347 347 -1 0 4 127 0 18 0 140737488355328 0 70 15 20
+An assassins stiletto has been forgotten here.^
+^
+^
+^
+You tremble and quiver as you think of what this stiletto has been used for.
+It has a long razor sharp blade which will cut through clothing and what's
+beneath with ease...
+^
+
+crystals crystal 17 348 348 -1 0 0 -551 0 0 0 17592186044416 1 100 10 20
+Some beautiful crystals reflecting light in different colors have been left
+on the bench.^
+Some beautiful crystals has been left here.^
+^
+^
+^
+
+cup <null> 17 349 349 -1 0 0 -552 0 0 0 17592186044416 1 200 5 20
+A small cup made of platinum is left on the ground.^
+A small cup made of platinum is partly hidden among the dust on the top shelf.^
+^
+^
+^
+
+door <null> 17 350 350 -1 0 0 -556 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The hinges are severely corroded due to the damp climate brought in by the
+presence of the dam.  Luckily the door is stuck in an open position.
+^
+
+door <null> 17 351 351 -1 0 0 -563 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The door is corroded stuck in an open position.
+^
+
+steeldoor door 17 352 352 353 0 0 -566 2 0 0 60129542144 2 0 0 0
+An open steeldoor leads south into a dark passage.^
+A sturdy steeldoor bars an exit to the south.^
+A sturdy steeldoor bars an exit to the south.^
+^
+^
+
+steeldoor door 17 353 353 352 0 0 -565 2 0 0 60129542144 2 0 0 0
+An open steeldoor leads north into a large passage.^
+A sturdy steeldoor bars an exit to the north.^
+A sturdy steeldoor bars an exit to the north.^
+^
+^
+
+oakdoor door 17 354 354 -1 0 0 -569 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+oakdoor door 17 355 355 -1 0 0 -572 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+door <null> 17 356 356 357 0 0 -574 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is closed.^
+^
+^
+
+door <null> 17 357 357 356 0 0 -571 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is closed.^
+^
+^
+
+button <null> 17 358 358 359 0 0 -576 1 0 0 77309411328 1 0 0 0
+^
+^
+^
+^
+The button is small and insignificant.
+^
+
+painting picture 17 359 359 358 0 0 -576 1 0 0 146028888064 1 0 0 0
+An old painting is moved slightly to one side revealing a button.^
+An old and surely valuable painting hangs on the wall.^
+^
+^
+This is a magnificent painting depicting the reverend Pierpont Flathead,
+known both for his economic skills and his great skill in baseball.
+Upon closer inspection you, due to your knowledge in art, discover that
+this is just a copy of the original painting.  The painting is attached
+to the wall by two rails on top and bottom of the frame.
+^
+
+window <null> 17 360 360 -1 0 0 -576 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The window is made of thick quartz through which bright light shines. As you
+move your hand in front of the window, the light increases in intensity and
+scans over your hand just as if it tries to identify something. This must be
+another project of the once famous Frobozz Magic Equipment Company.
+^
+
+vault door 17 361 361 362 0 0 -573 2 0 0 8589934592 2 0 0 0
+The whole northern wall is moved 3 feet westwards and the vault is open.^
+^
+^
+^
+^
+
+vault door 17 362 362 361 0 0 -576 2 0 0 8589934592 2 0 0 0
+The whole southern wall is moved 3 feet westwards and the vault is open.^
+^
+^
+^
+^
+
+painting picture 17 363 363 -1 0 0 -573 0 0 0 0 0 400 30 15
+An painting of Pierpont Flathead has been left carefully on the ground.^
+^
+^
+^
+This is a magnificent painting depicting the reverend Pierpont Flathead,
+known both for his economic skills and his great skill in baseball. Your
+trained eye in recognizing old and valuable art tells you immediately that
+this painting is an original.  It will certainly top you own private art-
+collection.
+^
+
+notes bills 17 364 364 -1 0 0 -573 0 0 0 0 0 300 5 1
+A heap of notes in zorkian currency is left here.^
+^
+^
+^
+Counting up the notes you come to about 10 000 zork-mids.  A small fortune !
+^
+
+chest steelchest 17 365 365 -1 0 0 -577 2 0 0 70428873719808 2 0 20 0
+Fastened to the floor is an open sturdy steelchest.^
+Fastened to the floor is a closed sturdy steelchest.^
+Fastened to the floor is a locked sturdy steelchest.^
+^
+^
+
+coins <null> 17 366 366 -1 0 1 365 0 0 0 0 0 100 5 5
+A stash of neatly stacked coins has been left here.^
+^
+^
+^
+You estimate that there are 40 gold coins each worth 50 zorkmids.
+^
+
+blackboard <null> 17 367 367 368 0 0 -578 1 0 0 8589934592 1 0 0 0
+The blackboard is pushed aside, giving passage to the south.^
+The blackboard bars your way to the north.^
+^
+^
+The blackboard, being made of black marble, is very heavy and is very 
+difficult to move from this crouched position you are in, but you may
+manage it if you try hard enough.
+^
+
+blackboard <null> 17 368 368 367 0 0 -577 1 0 0 146028888064 1 0 0 0
+The blackboard, being pushed aside, reveals a hole in the northern wall.^
+A heavy blackboard showing figures of the last financial investments of the
+bank is leaning against the northern wall.^
+^
+^
+The blackboard is made of one single piece of black marble, measuring about
+6 times 8 feet, and 2 inches in thickness.  It's surface has a smoothness that
+permits chalk being used for writing and drawing.  You do have an eye for art,
+but the numbers, financial formulas and curves showing income and expenses
+tell you nothing, so you leave the blackboard as it is.
+^
+
+hole <null> 17 369 369 -1 0 0 -577 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The hole is big enough to provide a crawl to the north.
+^
+
+hole <null> 17 370 370 -1 0 0 -578 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+hole <null> 17 371 371 -1 0 0 -582 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The hole being about 2 feet in diameter appears to be very smooth inside
+and putting your ear closer to it you think you can hear a strange sound
+coming up from far far away.
+^
+
+mjolnir hammer 18 372 372 -1 0 4 132 0 30 0 1266637395197952 0 1600 100 50
+Mjolnir, the sacred hammer of Thor, has been left here.^
+^
+^
+^
+^
+
+vase <null> 18 373 373 -1 0 0 -635 1 0 0 17592186044416 1 100 3 4
+There are shards of ice all over the floor.^
+A vase made of ice has been set on a pedestal.^
+^
+^
+The vase is made of a cloudy ice and is inscripted with images of great
+glaciers.  Turning the vase over, you see the inscription:
+		         Jiffy Script, Inc.
+                 'Converse with us, We talk better'.
+^
+
+ark <null> 18 374 374 -1 0 0 -585 1 0 0 70394513981440 1 100 40 20
+The Ark of the Covenant is open.^
+The Ark of the Covenant is here.^
+^
+^
+The ark is two and a half cubits long, one and a half cubits wide, one and a 
+half cubits high, and is made of shittim wood covered with pure gold, with a
+crown of gold around it.  A ring of gold is set on each corner, with two rings
+of shittim wood (overlaid with gold, of course) passing through them.
+^
+
+tablet <null> 18 375 375 -1 0 1 374 0 0 0 0 0 80 1 1
+Two stone tablets are here.^
+^
+^
+^
+Carved into the stones are ten commandments.  At the very bottom of each is 
+written:
+                           Jiffy Scripts, Inc.
+                   'Converse with us, We talk better'.
+^
+
+staff <null> 18 376 376 -1 0 0 -586 0 0 0 0 0 100 10 1
+The Staff of Moses rests against the wall.^
+The Staff of Moses rests against the wall.^
+^
+^
+You notice that the staff feels faintly like a snake.
+^
+
+headdress <null> 18 377 377 -1 0 0 -611 0 0 0 0 0 50 1 1
+A headdress has been left here.^
+^
+^
+^
+It appears to belong to a chieftain.
+^
+
+feather <null> 18 378 378 -1 0 0 -612 1 0 0 288247968337756160 1 80 1 1
+An eagle feather has been left here.^
+An eagle feather is drifting down from the sky.^
+^
+^
+^
+
+medicine bag 18 379 379 -1 0 0 -616 1 0 0 17592186044416 1 50 1 1
+A medicine bag has been dropped here.^
+A medicine bag hangs suspended from a tree.^
+^
+^
+^
+
+bow <null> 18 380 380 -1 0 0 -614 0 0 0 0 0 100 1 1
+A silver bow rests here.^
+^
+^
+^
+^
+
+arrow <null> 18 381 381 -1 0 0 -613 0 0 0 0 0 100 1 1
+A silver arrow sticks up out of the ground.^
+^
+^
+^
+^
+
+rainbow <null> 18 382 382 -1 0 0 -589 0 0 0 8589934592 0 0 0 0
+A rainbow wraps around the room.^
+^
+^
+^
+^
+
+watermelon <null> 18 383 383 -1 0 0 -588 1 0 0 17867063951360 1 50 1 1
+A watermelon lies before you.^
+A watermelon hangs temptingly from the Tree of Knowledge.^
+^
+^
+^
+
+staff <null> 18 384 384 -1 0 0 -593 0 0 0 549755813888 0 90 1 1
+A shepherd's staff leans against the wall.^
+^
+^
+^
+^
+
+pendant <null> 19 385 385 -1 0 0 -621 0 0 0 145241087982698496 0 50 1 1
+A crystal pendant has been dropped here.^
+^
+^
+^
+^
+
+fountain <null> 19 386 386 -1 0 0 -622 0 0 0 8589934592 0 0 0 0
+A small icy fountain burbles gently in the centre of the room.^
+^
+^
+^
+^
+
+hole <null> 19 387 387 388 0 0 -619 1 0 0 8589934592 1 0 0 0
+A hole has been dug through the snow.^
+^
+^
+^
+^
+
+hole <null> 19 388 388 387 0 0 -620 1 0 0 8589934592 1 0 0 0
+A hole has been dug through the snow.^
+^
+^
+^
+^
+
+cupboard door 19 389 389 390 0 0 -625 2 0 0 60129542144 2 0 0 0
+The cupboard is open.^
+The cupboard is closed.^
+The cupboard is locked.^
+^
+^
+
+cupboard door 19 390 390 389 0 0 -624 2 0 0 60129542144 2 0 0 0
+The cupboard is open.^
+The cupboard is closed.^
+The cupboard is locked.^
+^
+^
+
+chest <null> 19 391 391 -1 0 0 -625 1 0 0 70428873719808 2 0 0 0
+A huge iron bound chest lies open before you.^
+A huge iron bound chest lies before you.^
+A huge iron bound chest lies before you.  The chest is locked.^
+^
+^
+
+coronet <null> 19 392 392 -1 0 1 391 0 0 0 81064793292668928 0 300 3 3
+A jeweled coronet glitters before you.^
+^
+^
+^
+^
+
+pillowcase case 19 393 393 -1 0 0 -624 0 0 0 1196268651020288 0 10 50 1
+A soggy pillowcase has been dumped here.^
+^
+^
+^
+It must be a king-sized pillowcase, because it looks roomy from the inside.
+^
+
+key <null> 19 394 394 -1 0 1 393 0 0 0 1134695999864832 0 10 1 1
+An old rusty iron key lies here.^
+^
+^
+^
+^
+
+dagger icy 19 395 395 -1 0 0 -622 0 18 0 1266637395197952 0 100 2 2
+A strange, thin icy dagger lies at your feet.^
+^
+^
+^
+^
+
+throne <null> 19 396 396 397 0 0 -626 1 0 0 8589934592 1 0 0 0
+Slivers of ice twinkle in the light from the western exit.^
+The western exit is blocked by what appears to be the back of a throne.^
+^
+^
+^
+
+throne <null> 19 397 397 396 0 0 -623 1 0 0 8589934592 1 0 0 0
+Icy shards lie scattered here, around an opening leading eastwards.^
+A huge crystal throne of pure ice dominates the east wall.^
+^
+^
+The throne is fit for a king, but it looks very inviting to a weary traveler.
+^
+
+door <null> 19 398 398 399 0 0 -633 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 19 399 399 398 0 0 -632 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+bone <null> 20 400 400 -1 0 0 -636 0 3 0 72198331526283264 0 40 5 5
+A bleached bone lies at your feet.^
+^
+^
+^
+It's got some markings along it.  Maybe you should try reading the bone.
+^
+
+sulphur <null> 20 401 401 -1 0 0 -646 0 0 0 0 0 20 1 1
+A small pile of sulphur lies here.^
+^
+^
+^
+^
+
+spear <null> 20 402 402 -1 0 0 -643 0 6 0 1266637395197952 0 10 1 1
+A fire-hardened spear has been left here.^
+^
+^
+^
+^
+
+feather <null> 20 403 403 -1 0 0 -643 0 0 0 0 0 100 1 1
+A multi-colored feather has been left here.^
+^
+^
+^
+^
+
+clock <null> 21 404 404 -1 0 0 -808 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+This mammoth clock takes up the entire south wall and has its pendulum swinging
+tirelessly in front of it.  Although it has never stopped ticking its hands
+never seem to leave 8:46.
+^
+
+stick <null> 21 405 405 -1 0 0 -660 1 5 0 147334558121984 1 10 1 1
+A burning stick lies on the ground.^
+An old stick lies on the ground.^
+^
+^
+Looks like a stick.
+^
+
+gate door 21 406 406 407 0 0 -657 2 0 0 60129542144 2 0 0 0
+The gate is open.^
+The gate is closed.^
+The gate is locked.^
+^
+^
+
+gate door 21 407 407 406 0 0 -654 2 0 0 60129542144 2 0 0 0
+The gate is open.^
+The gate is closed.^
+The gate is locked.^
+^
+^
+
+flop <null> 21 408 408 409 0 0 -807 1 0 0 8589934592 0 0 0 0
+A path has been dug through a large pile of flop to the west.^
+There is a large, nasty pile of flop here blocking the way west.^
+^
+^
+^
+
+flop <null> 21 409 409 408 0 0 -651 1 0 0 8589934592 0 0 0 0
+A path has been dug through a large pile of flop to the east.^
+A large, nasty pile of flop blocks the way east.^
+^
+^
+^
+
+shrooms mushrooms 21 410 410 -1 0 0 -655 1 0 0 17867063951360 0 15 2 2
+Three fragrant mushrooms have been left on the ground here.^
+There are three nice looking mushrooms growing in a pile of flop here.^
+^
+^
+They look slightly magical.
+^
+
+line fishing 21 411 411 -1 0 0 -660 0 0 0 0 0 20 1 1
+There is a roll of fishing line here with a small hook on the end.^
+^
+^
+^
+^
+
+pond <null> 21 412 412 -1 0 0 -661 1 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You see many silvery fish flitting to and fro under the water.
+^
+
+fish <null> 21 413 413 -1 0 0 -661 0 0 0 279172874240 0 10 2 2
+A delicious looking fish has been left here.^
+^
+^
+^
+Looks like a fish.
+^
+
+can tin 21 414 414 -1 0 0 -664 1 0 0 0 0 10 3 2
+There is an old tin can lying on the ground here.^
+There is an old tin can lying on the ground here.^
+^
+^
+^
+
+sign <null> 21 415 415 -1 0 0 -665 0 0 0 8589934592 0 0 0 0
+There is a small sign hanging over the barn door^
+^
+^
+^
+The sign reads: Recycle tin, feed it to the goats.
+^
+
+helmet <null> 21 416 416 -1 0 0 -1 0 0 4 76561743421112320 0 120 5 5
+A shiny tin helmet has been dropped on the ground here.^
+^
+^
+^
+^
+
+key <null> 21 417 417 -1 0 0 -673 0 0 0 8800387989504 0 50 1 1
+A key has been dropped here.^
+^
+^
+^
+^
+
+bail hay 21 418 418 -1 0 0 -673 0 0 0 8589934592 0 0 0 0
+There is a bail of hay sitting by the wall.^
+^
+^
+^
+^
+
+shovel <null> 21 419 419 -1 0 0 -666 1 6 0 158329674399744 1 100 4 3
+Someone has left an old shovel here.^
+There is a shovel leaning against the wall here.^
+^
+^
+Looks like a shovel.
+^
+
+hole <null> 21 420 420 -1 0 0 -679 0 0 0 8589934592 0 0 30 0
+There is a hole in the ground here.^
+^
+^
+^
+Looks like a great place to plant some seeds.
+^
+
+beanstalk <null> 21 421 421 422 0 0 -712 1 0 0 8589934592 1 0 0 0
+^
+^
+^
+^
+^
+
+beanstalk <null> 21 422 422 421 0 0 -679 1 0 0 8589934592 1 0 0 0
+The base of a giant beanstalk is here, reaching to the clouds.^
+^
+^
+^
+^
+
+door <null> 21 423 423 424 0 0 -685 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 424 424 423 0 0 -658 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+pitchfork fork 21 425 425 -1 0 4 151 0 13 0 140737488355328 0 200 6 3
+There is a pitchfork lying here.^
+^
+^
+^
+Looks like this pitchfork has been used to impale more than hay!
+^
+
+toilet john 21 426 426 -1 0 0 -689 0 0 0 70377334112256 0 0 500 0
+^
+^
+^
+^
+Upon closer examination you find that the toilet hasn't been flushed.
+^
+
+door <null> 21 427 427 428 0 0 -688 0 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 428 428 427 0 0 -689 0 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 429 429 430 0 0 -692 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 430 430 429 0 0 -687 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 431 431 432 0 0 -681 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 432 432 431 0 0 -680 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+peas food 21 433 433 -1 0 0 -681 0 0 0 274877906944 0 22 2 2
+Some blackeyed peas are here waiting to be eaten.^
+^
+^
+^
+^
+
+okra food 21 434 434 -1 0 0 -681 0 0 0 274877906944 0 22 2 2
+Some fried okra is here.^
+^
+^
+^
+^
+
+mugwump <null> 21 435 435 -1 0 0 -699 0 0 0 8589934592 0 0 0 0
+There's a mugwump right in front of you oozing plenty of goo to keep you here
+forever if you want it.^
+^
+^
+^
+Looks like a mugwump.
+^
+
+coffee food 21 436 436 -1 0 0 -709 0 0 0 2251799813685248 0 22 2 2
+There is a fragrant cup of coffee sitting here.^
+^
+^
+^
+This looks like a great cup of coffee.
+^
+
+seeds pile 21 437 437 -1 0 0 -709 0 0 0 274877906944 0 22 2 2
+There are some seeds sitting here in a small pile.^
+^
+^
+^
+As you hold them, you feel these seeds vibrating with magical energy.
+^
+
+coin gold 21 438 438 -1 0 0 -723 0 0 0 0 0 900 15 15
+There is a gigantic gold coin lying here that you just might be able to lift.^
+^
+^
+^
+There is a head engraved on it that you don't recognize.
+^
+
+coins <null> 21 439 439 -1 0 0 -723 0 0 0 8589934592 0 0 0 0
+There are several huge coins here that have been tossed into the fountain.^
+^
+^
+^
+^
+
+hole <null> 21 440 440 -1 0 0 -729 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Around the edges of the hole, you see many large claw marks.
+^
+
+door <null> 21 441 441 442 0 0 -745 0 0 0 8589934592 0 0 0 0
+The door is open just enough for you to squeeze through.^
+^
+^
+^
+This is a really big door.  You couldn't shift it if you tried.
+^
+
+door <null> 21 442 442 441 0 0 -720 0 0 0 8589934592 0 0 0 0
+The door is open just enough for you to squeeze through.^
+^
+^
+^
+This is a really big door.  You couldn't shift it if you tried.
+^
+
+fireplace fire 21 443 443 -1 0 0 -746 0 0 0 35192962023424 0 0 0 0
+A huge fireplace is set in the north wall with a fire blazing fiercely in it.^
+^
+^
+^
+Looks hot in there!
+^
+
+book <null> 21 444 444 -1 0 0 -747 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You climb up on the book and begin to read...
+
+
+The book tells of a great hero of this giant race and how he was brutally fooled
+and murdered by one of an impish race of little people while he was heading down
+to their world on a mission of friendship and peace.  It goes on to say that,
+ever since this brutal murder, these giants have been at war with all of those
+of the same race as this evil villain:  Jack.
+^
+
+book <null> 21 445 445 -1 0 0 -686 1 0 0 17592186044416 1 220 5 3
+There is an old book lying here.^
+There is an old book lying open on the desk.^
+^
+^
+The book tells the heroic tale of Jack and the Beanstalk.
+^
+
+table <null> 21 446 446 -1 0 0 -756 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+steaknife knife 21 447 447 -1 0 0 -756 0 22 0 140741783322624 0 500 20 14
+There is a huge steaknife lying here.^
+^
+^
+^
+This steaknife is as large as a broadsword.  It would probably make a mighty
+fine weapon.
+^
+
+lever <null> 21 448 448 449 0 0 -801 1 0 0 146028888064 0 0 0 0
+A lever has been pulled revealing a hole in the north wall.^
+There is a lever here that looks like it might open a secret door.^
+^
+^
+^
+
+brick <null> 21 449 449 448 0 0 -761 1 0 0 146028888064 0 0 0 0
+A loose brick has been pushed aside revealing a hole leading south.^
+There is a loose brick in the south wall.^
+^
+^
+^
+
+plunger helper 21 450 450 -1 0 0 -761 0 8 0 140737488355328 0 100 10 5
+A huge toilet plunger is standing in the corner.^
+^
+^
+^
+Just think of what it would take to stop up a toilet big enough to need this!
+^
+
+throne <null> 21 451 451 -1 0 0 -769 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+If only you could haul this treasure off!
+^
+
+door <null> 21 452 452 453 0 0 -772 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 453 453 452 0 0 -771 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+emerald <null> 21 454 454 -1 0 0 -772 0 0 0 0 0 1000 6 5
+A giant emerald is lying here on the floor.^
+^
+^
+^
+Looks like an emerald.
+^
+
+necklace pearls 21 455 455 -1 0 0 -772 0 0 0 148618787703226368 0 500 7 4
+There is a giant pearl necklace here.^
+^
+^
+^
+You'd need a big neck to wear this comfortably.
+^
+
+coins <null> 21 456 456 -1 0 0 -772 0 0 0 0 0 600 7 9
+There are several large coins scattered about.^
+^
+^
+^
+Look like coins.
+^
+
+lever <null> 21 457 457 458 0 0 -806 1 0 0 146028888064 0 0 0 0
+A lever has been pulled revealing a hole in the south wall.^
+There is a lever here that looks like it might open a secret door.^
+^
+^
+^
+
+bookcase case 21 458 458 457 0 0 -773 1 0 0 146028888064 0 0 0 0
+The bookcase has been pushed aside leading to secret passage to the north.^
+There is a large bookcase against the north wall.^
+^
+^
+Looks like a bookcase.
+^
+
+giant <null> 21 459 459 -1 0 0 -774 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Looks bloody big from here.
+^
+
+hatch door 21 460 460 461 0 0 -780 2 0 0 60129542144 2 0 0 0
+The hatch is open.^
+The hatch is closed.^
+The hatch is locked.^
+^
+^
+
+hatch door 21 461 461 460 0 0 -779 2 0 0 60129542144 2 0 0 0
+The hatch is open.^
+The hatch is closed.^
+The hatch is locked.^
+^
+^
+
+window glass 21 462 462 -1 0 0 -781 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You get a birdseye view of the giants bedroom.
+^
+
+hole <null> 21 463 463 -1 0 0 -782 0 0 0 8589934592 0 0 0 0
+There is a small hole in the floor here.^
+^
+^
+^
+As you look at the hole, you find a small panel cut in the floor.
+^
+
+panel <null> 21 464 464 465 0 0 -783 1 0 0 8589934592 1 0 0 0
+There is an open panel in the floor.^
+^
+^
+^
+^
+
+panel <null> 21 465 465 464 0 0 -782 1 0 0 8589934592 1 0 0 0
+There is an open panel in the floor.^
+^
+^
+^
+^
+
+staff <null> 21 466 466 -1 0 4 168 0 15 0 140737488355328 0 300 7 4
+A strange twisted staff has been left here.^
+^
+^
+^
+This staff is old, and strong.  It looks as if it has been twisted and
+corrupted, though by the one who used it.  The bottom of the staff has been
+smoothed around the edges.
+^
+
+egg gold 21 467 467 -1 0 0 -783 0 0 0 0 0 2000 20 20
+The Goose's golden egg is here gleaming in the light.^
+^
+^
+^
+This is a big hunk of gold.
+^
+
+door <null> 21 468 468 469 0 0 -790 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 469 469 468 0 0 -786 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 470 470 471 0 0 -795 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 21 471 471 470 0 0 -791 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+brick <null> 21 472 472 473 0 0 -796 1 0 0 146028888064 0 0 0 0
+A loose brick has been pushed aside revealing a hole in the south wall.^
+There is a loose brick in the south wall.^
+^
+^
+Looks like a brick.
+^
+
+lever <null> 21 473 473 472 0 0 -797 1 0 0 146028888064 0 0 0 0
+A lever has been pulled revealing a hole in the north wall.^
+There is a lever here that looks like it might open a secret door.^
+^
+^
+^
+
+peephole hole 21 474 474 -1 0 0 -802 0 0 0 8589934592 0 0 0 0
+There's a peephole in the wall.^
+^
+^
+^
+Looking in this peephole offers you a great view of a giant making use of this
+castles' facilities.
+^
+
+lodestone rock 21 475 475 -1 0 0 -807 0 0 0 0 0 220 1 1
+A dull red rock is lying here.^
+^
+^
+^
+Upon closer examination it appears to be a lodestone.
+^
+
+ruby <null> 21 476 476 -1 0 0 -807 0 0 0 0 0 500 4 2
+A glistening ruby rests on the ground here.^
+^
+^
+^
+Looks like a ruby.
+^
+
+gems <null> 21 477 477 -1 0 0 -807 0 0 0 0 0 850 3 3
+You see tiny gems that seem to have popped out the ground itself.^
+^
+^
+^
+The gems seem to glow with an inner beauty that could only have been inspired by
+nature itself.
+^
+
+fireplace <null> 22 478 478 -1 0 0 -812 0 0 0 41790031790080 1 0 0 0
+A cheerful fire blazing in the fireplace makes the room feel quite toasty.^
+There is a cold draft coming from the stone cold fireplace.^
+^
+^
+The flue is open leading up into a large chimney.
+^
+
+door heavydoor 22 479 479 480 0 0 -811 2 0 0 60129542144 2 0 0 0
+The heavy door is open.^
+The heavy door is closed.^
+The heavy door is locked.^
+^
+^
+
+door <null> 22 480 480 479 0 0 -810 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 22 481 481 482 0 0 -812 1 0 0 60129542144 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+^
+
+door oakdoor 22 482 482 481 0 0 -811 1 0 0 60129542144 1 0 0 0
+The oak door is open.^
+The oak door is closed.^
+^
+^
+^
+
+door <null> 22 483 483 484 0 0 -829 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 22 484 484 483 0 0 -828 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+hole <null> 22 485 485 486 0 0 -821 1 0 0 8589934592 1 0 0 0
+A hole has been dug through the thick crusty snow.^
+^
+^
+^
+^
+
+hole <null> 22 486 486 485 0 0 -820 1 0 0 8589934592 1 0 0 0
+A hole has been dug through the snow leading down.^
+^
+^
+^
+^
+
+chain gold 22 487 487 -1 0 0 -809 0 0 0 146028888064 1 0 0 0
+A very valuable looking gold chain lies here half buried in the dirt.^
+^
+^
+^
+^
+
+skis <null> 22 488 488 -1 0 0 -813 1 0 0 -9223354444668731392 1 50 20 10
+A pair of wooden skis has been left here.^
+A pair of wooden skis stand in the corner, gathering dust.^
+^
+^
+^
+
+cuthbert sword 22 489 489 -1 0 0 -812 1 13 0 1266637395197952 1 200 20 10
+Cuthbert is lying here complaining about being left alone.^
+A magnificent-looking sword is displayed above the fireplace.^
+^
+^
+The sword is finely engraved with the words 'Cuthbert the Scared'.
+^
+
+lazyboy chair 22 490 490 -1 0 0 -812 1 0 0 70531952934912 1 0 0 0
+The lazyboy is reclining.^
+The lazyboy looks inviting.^
+^
+^
+^
+
+coins <null> 22 491 491 -1 0 1 490 0 0 0 0 0 60 3 3
+A few old coins are scattered about here.^
+^
+^
+^
+^
+
+suit armor 22 492 492 -1 0 0 -810 0 0 0 70377334112256 0 0 0 0
+A suit of armor bearing the royal seal is standing here beside the door.^
+^
+^
+^
+^
+
+key <null> 22 493 493 -1 0 1 492 0 0 0 1134695999864832 0 60 1 1
+A fancy-looking key has been left here.^
+^
+^
+^
+^
+
+pot <null> 22 494 494 -1 0 0 -814 0 0 0 70368744177664 0 160 5 5
+A splendid solid gold chamber pot is sitting here.^
+^
+^
+^
+^
+
+ledge <null> 22 495 495 -1 0 0 -815 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+egg <null> 22 496 496 -1 0 0 -815 0 0 0 4294967296 0 160 5 5
+A silver egg has been left here.^
+^
+^
+^
+^
+
+bread food 22 497 497 -1 0 0 -813 1 0 0 17867063951360 1 10 2 2
+Some stale bread has been left here.^
+The only thing left on the shelves is some stale bread.^
+^
+^
+^
+
+ball <null> 22 498 498 -1 0 0 -825 0 0 0 0 0 160 20 10
+Someone has left their bowling ball here.^
+^
+^
+^
+This is actually a very large black pearl with some holes drilled in it.
+^
+
+chest <null> 22 499 499 -1 0 0 -827 2 0 0 70428873719808 2 0 0 0
+The chest is open.^
+The chest is closed.^
+The chest is locked.^
+^
+^
+
+check <null> 22 500 500 -1 0 1 499 0 0 0 0 0 150 1 1
+There is a check lying here.^
+^
+^
+^
+It is made out to His Royal Highness for $50.
+^
+
+tapestry <null> 22 501 501 -1 0 0 -812 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Behind the tapestry you find a doorway.
+^
+
+casket <null> 23 502 502 -1 0 0 -865 0 0 0 1196320190627840 2 300 40 40
+A large open casket shines before you.^
+A large golden casket shines before you.^
+A large locked golden casket shines before you.^
+^
+^
+
+amethyst gem 23 503 503 -1 0 1 502 0 0 0 0 0 100 1 1
+A large, beautifully-polished amethyst has been put here.^
+^
+^
+^
+^
+
+mask <null> 23 504 504 -1 0 0 -864 1 0 4 46180038122405888 1 400 30 30
+A stunning horned gold mask has been placed here.^
+On the wall is a huge golden mask carved in the shape of a horned demon.^
+^
+^
+^
+
+horn <null> 23 505 505 -1 0 1 502 0 0 0 0 0 200 12 5
+An engraved silver horn has been carefully placed here.^
+^
+^
+^
+^
+
+rope ladder 28 506 506 507 0 0 -1083 0 0 0 12884901888 0 0 0 0
+A rope ladder leads down into the pit.^
+It looks like a perfectly average rope.^
+^
+^
+^
+
+rope ladder 24 507 507 506 0 0 -873 0 0 0 12884901888 2 0 0 0
+A rope ladder leads up out of the pit.^
+A rope leads up out of the pit.^
+^
+^
+The rope seems sturdy and reliable.
+^
+
+rope ladder 45 508 508 509 0 0 -1614 1 0 0 12884901888 1 0 0 0
+A rope ladder leads east across to the ledge.^
+A rope ladder hangs across the ledge to the east.^
+^
+^
+^
+
+rope ladder 24 509 509 508 0 0 -866 1 0 0 12884901888 1 0 0 0
+A rope ladder leads west across the steps.^
+A rope hangs west across the steps.^
+^
+^
+The rope seems sturdy and dependable.
+^
+
+tunnel rockfall 24 510 510 511 0 0 -872 1 0 0 8589934592 1 0 0 0
+^
+A huge rockfall to the west has sealed off the only exit to this chamber.^
+^
+^
+The rockfall is made up of little stones and earth.
+^
+
+tunnel rockfall 24 511 511 510 0 0 -871 1 0 0 8589934592 1 0 0 0
+^
+A large rockfall blocks the passage to the east.^
+^
+^
+The rockfall is made up of little stones and earth.
+^
+
+orb <null> 24 512 512 -1 0 0 -872 0 0 0 0 0 1000 5 10
+A large glittering platinum orb sparkles in the light, sending rainbows of
+glittering fire twinkling around you.^
+^
+^
+^
+The orb is round, large, and in incredibly good shape for having sat here so
+long.  There is no doubt in your mind that it is exceedingly valuable.
+^
+
+key <null> 25 513 513 -1 0 0 -877 0 0 0 1134695999864832 0 50 1 1
+Lying un-noticed in a corner is a small silver key.^
+^
+^
+^
+This is not a house key... it looks like it might open a cabinet or drawer.
+^
+
+door <null> 25 514 514 515 0 0 -879 1 0 0 25769803776 1 0 0 0
+There is an open door at the bottom of the stairs.^
+At the bottom of the stairs is a closed door.^
+^
+^
+^
+
+door <null> 25 515 515 514 0 0 -878 1 0 0 25769803776 1 0 0 0
+An open door leads to a dark staircase.^
+A closed door in the east wall catches your eye.^
+^
+^
+^
+
+door <null> 25 516 516 517 0 0 -882 1 0 0 25769803776 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+^
+
+door <null> 25 517 517 516 0 0 -881 1 0 0 25769803776 1 0 0 0
+An open door allows a breeze to come in off the porch.^
+The door is closed.^
+^
+^
+^
+
+apron <null> 25 518 518 -1 0 3 182 0 0 3 289356825814368256 0 100 1 1
+A small white apron lies here.^
+^
+^
+^
+It appears to be used for cleaning house.
+^
+
+armour armor 25 519 519 -1 0 0 -886 0 0 0 8589934592 0 0 0 0
+Standing in a corner is a very old suit of armour.^
+^
+^
+^
+^
+
+harp <null> 25 520 520 -1 0 0 -886 0 0 0 8589934592 0 0 0 0
+A large harp stands in the corner of the room.^
+^
+^
+^
+^
+
+picture <null> 25 521 521 -1 0 0 -889 0 0 0 8589934592 0 0 0 0
+One picture in particular catches your attention.^
+^
+^
+^
+The picture is of the four kings and queens of a land called 'Narnia'.
+^
+
+door <null> 25 522 522 523 0 0 -885 1 0 0 25769803776 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+^
+
+door <null> 25 523 523 522 0 0 -883 1 0 0 25769803776 1 0 0 0
+An open door leads east onto a peaceful balcony.^
+The door is closed.^
+^
+^
+^
+
+door <null> 25 524 524 525 0 0 -892 2 0 0 8589934592 2 0 0 0
+The door to the wardrobe has slammed shut behind you!^
+The door to the wardrobe has slammed shut behind you!^
+The door to the wardrobe has slammed shut behind you!^
+^
+^
+
+door <null> 25 525 525 524 0 0 -888 2 0 0 60129542144 2 0 0 0
+The wardrobe door is open.^
+The wardrobe door is closed.^
+The wardrobe door is locked.^
+^
+^
+
+coat <null> 25 526 526 -1 0 0 -892 1 0 2 577674613140488192 1 100 6 10
+An old coat that smells of mothballs lies here.^
+One of the coats catches your eye because it is particularly ugly.^
+^
+^
+The coat is very ugly, but rather warm with roomy pockets.
+^
+
+mothball <null> 25 527 527 -1 0 1 526 0 0 0 0 0 50 1 1
+A smelly old mothball is lying on the ground.^
+^
+^
+^
+^
+
+dam beaverdam 25 528 528 -1 0 0 -915 0 0 0 8589934592 0 0 0 0
+Where the two rivers join, there is a huge beaver dam.^
+^
+^
+^
+^
+
+faun <null> 25 529 529 -1 0 0 -941 0 0 0 8589934592 0 0 0 0
+You nearly bump into a stone statue of a little faun.^
+^
+^
+^
+You run your hands over the statue and your fingers tell you of its tremendous
+life-like detail.
+^
+
+turkishdelight <null> 25 530 530 -1 0 0 -912 0 0 0 274877906944 0 50 1 1
+A dish of magical turkish delight has been abandoned here.^
+^
+^
+^
+The turkish delight looks DELICIOUS!
+^
+
+horn <null> 25 531 531 -1 0 2 190 0 0 0 0 0 100 4 5
+Queen Susan's horn is lying here.^
+^
+^
+^
+The horn is made of ivory and was Susan's gift from Father Christmas.  Its tone
+is much richer than a bugle, and legend has it that when you blow it, some kind
+of help will come to you.
+^
+
+quiver <null> 25 532 532 -1 0 3 190 0 0 0 577586652210266112 0 10 3 4
+There is a quiver full of arrows lying here.^
+^
+^
+^
+The arrows seem somehow magical.
+^
+
+bow <null> 25 533 533 -1 0 2 190 0 10 0 1266637395197952 0 100 5 2
+There is a small bow lying in the grass.^
+^
+^
+^
+^
+
+cordial potion 25 534 534 -1 0 2 192 0 0 0 3377699720527872 0 200 1 2
+There is a small bottle of orangish liquid here.^
+^
+^
+^
+The potion is in a bottle made of diamond.  It is made of the juice of one of
+the fire-flowers that grows in the mountains of the sun.
+^
+
+dagger <null> 25 535 535 -1 0 2 192 0 5 0 1266637395197952 0 20 3 4
+A small dagger has been abandoned here.^
+^
+^
+^
+The dagger is small and is meant more for self-protection than for battle.
+^
+
+rhindon sword 25 536 536 -1 0 0 -889 0 10 0 1284229581242368 1 100 5 10
+There is an impressive sword hanging on the wall.^
+King Peter's mighty sword, Rhindon, lies here.^
+^
+^
+The hilt of the sword is ornate and made of gold.  It is truly a beautiful
+and well-balanced weapon.
+^
+
+shield <null> 25 537 537 -1 0 0 -1 0 0 15 1163055153524244480 0 500 5 10
+King Peter's shield lies here.^
+^
+^
+^
+The shield is silver in color and has a large red lion on the front.  It seems
+to be light yet incredibly sturdy, and will protect you well in battle.
+^
+
+dwarves <null> 25 538 538 -1 0 0 -931 0 0 0 8589934592 0 0 0 0
+Two dwarves were frozen in a conversation that would never be finished.^
+^
+^
+^
+^
+
+aslan <null> 25 539 539 -1 0 0 -920 0 0 0 8589934592 0 0 0 0
+Aslan lies upon the stone table.  He is shaven, muzzled, and tethered down.^
+^
+^
+^
+You can not tell whether or not he is alive.
+^
+
+squirrels <null> 25 540 540 -1 0 0 -928 0 0 0 8589934592 0 0 0 0
+Some squirrels were having their dinner when they were frozen by the Queen.^
+^
+^
+^
+^
+
+lion <null> 25 541 541 -1 0 0 -932 0 0 0 8589934592 0 0 0 0
+A noble lion has been turned to stone.^
+^
+^
+^
+^
+
+giant <null> 25 542 542 -1 0 0 -933 0 0 0 8589934592 0 0 0 0
+A tremendous stone giant towers over you.^
+^
+^
+^
+^
+
+rabbits <null> 25 543 543 -1 0 0 -934 0 0 0 8589934592 0 0 0 0
+Some rabbits were frolicking here until they were turned to stone.^
+^
+^
+^
+^
+
+dryads <null> 25 544 544 -1 0 0 -935 0 0 0 8589934592 0 0 0 0
+Two dryads have been frozen here forever.^
+^
+^
+^
+^
+
+fauns <null> 25 545 545 -1 0 0 -936 0 0 0 8589934592 0 0 0 0
+A circle of fauns was dancing when they were frozen.^
+^
+^
+^
+^
+
+inscription stone 26 546 546 -1 0 0 -999 0 0 0 8589934592 0 0 0 0
+An inscription has been carved into the stone at your feet.^
+^
+^
+^
+The inscription reads:
+   The Guardian Dragons will allow only those who pay proper homage to the gods
+to pass through the portal.  Those who try to force their passage will be 
+punished.
+^
+
+fountain <null> 26 547 547 -1 0 0 -1004 0 0 0 2251808403619840 0 0 0 0
+A large fountain bubbles in front of you, a clean scent rising from the water.^
+^
+^
+^
+The fountain seems immeasurably deep, and you think you can see trees far
+away at the bottom of it.
+^
+
+berries <null> 26 548 548 -1 0 0 -973 1 0 0 0 1 50 20 8
+A small group of berries has been dropped on the floor.^
+A small cluster of berries grows on a nearby bush.^
+^
+^
+The berries look very sweet and juicy.
+^
+
+branch stick 26 549 549 -1 0 0 -975 1 6 0 147334558121984 1 50 20 8
+A lit branch has been dropped here.^
+A stout branch has been dropped here.^
+^
+^
+^
+
+torch <null> 26 550 550 -1 0 0 -1003 1 0 0 6597069766656 1 50 20 8
+A torch made of dried reeds burns here.^
+A torch made of dried reeds rests in a wrought-iron sconce.^
+^
+^
+The torch looks as if it will burn for a good long time.
+^
+
+shard crystal 26 551 551 -1 0 0 -1018 1 15 0 0 1 300 50 29
+A sharp shard of crystal has been dropped here.^
+A shard of crystal from the shattered branches lies at your feet.^
+^
+^
+The shard refracts the light in a beautiful rainbow of color, and it looks 
+as if it would make a sturdy sword.
+^
+
+armor <null> 26 552 552 -1 0 0 -1029 1 0 10 297255717348311040 1 250 50 29
+A vest that appears to be made of living ivy has been dropped here.^
+A vest made of ivy hangs on a hook.^
+^
+^
+A fine example of Elven work, the armor is crafted out of living ivy that
+conforms itself to the wearer's body, ensuring a perfect fit.
+^
+
+armor <null> 26 553 553 -1 0 0 -1011 1 0 12 297255717348311040 1 250 50 29
+A suit of armor has been dropped here, withering the small weeds around it.^
+An armor suit of fire is against one wall, ice strands growing over it.^
+^
+^
+The fire seems to burn hot, but as you reach for it, it is cool to the touch.
+^
+
+sword <null> 26 554 554 -1 0 0 -1011 1 13 0 158329674399744 1 250 50 29
+A short and broad sword of ice has been dropped here.^
+A blade of ice is here, seeming to burst into flames.^
+^
+^
+The ice is neither cold nor warm, and the hilt of the sword seems to conform
+to your hand.
+^
+
+crystal sculpture 26 555 555 -1 0 0 -1015 1 0 0 17592186044416 1 600 10 10
+A delicate crystal sculpture lies here.^
+A crystal sculpture rests in the middle of the clearing, glowing internally.^
+^
+^
+The crystal has been sculpted into a dragon, and its eyes glow faintly red.
+As you turn the crystal it refracts the light into a thousand rainbows around
+you.  This sculpture must be highly revered by the druids.
+^
+
+stone <null> 26 556 556 -1 0 0 -1039 1 0 0 17592186044416 1 400 10 10
+A sparkling shiny stone has been dropped here.^
+A shiny stone sits on the edge of the pool, the waves gently rocking it.^
+^
+^
+The stone is very pretty, and sparkles in the sun.
+^
+
+heather <null> 28 557 557 -1 0 0 -1091 1 0 0 17592186044416 1 30 1 1
+Some rare white heather has been left here.^
+Some white heather is growing here.^
+^
+^
+This particular type of heather is white and extremely pretty.  It is also
+rather rare.
+^
+
+chalice <null> 28 558 558 -1 0 0 -1085 0 0 0 0 0 40 10 5
+A bloodstained chalice lies before you.^
+^
+^
+^
+^
+
+altar <null> 28 559 559 -1 0 0 -1085 1 0 0 8589934592 1 0 0 0
+A chalice rests upon the altar.^
+^
+^
+^
+The altar is blackened and pitted from the fires and blood of many sacrifices.
+The center of the altar simply bears the words: 'Acsthad of the Fiery Plains.'
+^
+
+rose flower 29 560 560 -1 0 0 -1097 1 0 0 17592186044416 1 80 1 1
+An extremely beautiful white desert rose has been left here.^
+A beautiful white desert rose peeks out of the flower mat.^
+^
+^
+Your beloved would like this flower...
+^
+
+skull <null> 29 561 561 -1 0 0 -1094 0 0 0 0 0 10 2 1
+An old bleached ox skull is lying on the ground.^
+^
+^
+^
+You should be glad it's not yours!
+^
+
+clover <null> 30 562 562 -1 0 0 -1100 0 0 3 289919775767789568 0 30 1 1
+A small green clover is wilting away here.^
+^
+^
+^
+Upon closer examination, you see that this is a four-leaf clover.  Perhaps you 
+should wear it for good luck.
+^
+
+pitchfork fork 30 563 563 -1 0 0 -1101 0 15 0 1829587348619264 0 600 10 10
+An old rusty pitchfork lies here.  Perhaps you should pick it up.^
+^
+^
+^
+It looks rather rusty, but it would make a fine weapon.
+^
+
+leaf <null> 30 564 564 -1 0 0 -1103 0 0 0 0 0 50 1 2
+An oak leaf lies on the ground here.^
+^
+^
+^
+The leaf is very beautiful and seems to shine with inner magic.
+^
+
+moss <null> 30 565 565 -1 0 0 -1104 0 0 0 0 0 50 1 1
+Growing on the tree is a bit of moss.^
+^
+^
+^
+The moss is fragile and looks like it could fall apart in your hands.
+^
+
+shield <null> 30 566 566 -1 0 0 -1112 0 0 15 1163618103477665792 0 200 10 5
+A small shield lies here.^
+^
+^
+^
+It's a small shield, but it would probably protect you in a battle.
+^
+
+stone rock 30 567 567 -1 0 2 220 0 0 0 0 0 40 2 2
+A perfectly smooth and flat rock lies here.^
+^
+^
+^
+This rock would be perfect for skipping on water!
+^
+
+diamond chip 30 568 568 -1 0 0 -1127 1 0 0 0 1 200 2 1
+A small diamond chip lies here.^
+A small diamond chip is a bit loose from the wall...^
+^
+^
+This little chip doesn't look too valuable, but it is light to carry.
+^
+
+root <null> 30 569 569 -1 0 0 -1128 0 0 0 0 0 70 4 2
+A small root lies loose here.^
+^
+^
+^
+It's just a twisted brown root.  What did you expect to see?
+^
+
+pot <null> 30 570 570 -1 0 2 211 0 0 0 1196268651020288 0 100 15 4
+A small pot lies on the ground here.^
+^
+^
+^
+This looks like a fair-sized pot.  You wish it were full of gold.
+^
+
+coins <null> 31 571 571 -1 0 0 -1138 1 0 0 17592186044416 1 100 1 1
+You find some coins littered over the ground here.^
+Resting on the grate are a few scattered coins.^
+^
+^
+^
+
+coins <null> 31 572 572 -1 0 0 -1144 1 0 0 0 1 200 1 1
+There are some coins scattered on the ground.^
+In the bottom of the rotted chest are two gold coins.^
+^
+^
+The coins are of a currency foreign to you.  You wonder how old they might be.
+^
+
+sheet metal 31 573 573 574 0 0 -1144 1 0 0 146028888064 1 0 0 0
+Light comes into the room through a hole in the outer wall.^
+The room is dark except for light showing through a few cracks in the wall.^
+^
+^
+^
+
+sheet metal 31 574 574 573 0 0 -1143 1 0 0 146028888064 1 0 0 0
+A piece of sheet metal is lying on the ground.^
+There is a piece of sheet metal attacked to the wall.^
+^
+^
+^
+
+candle <null> 32 575 575 -1 0 0 -1214 1 0 0 6597069766656 1 30 1 1
+There is a white candle here, burning with a cheery flame.^
+There is a white candle here.^
+^
+^
+The candle has been burned several times before.  Little rivulets of tallow
+have solidified along the sides.
+^
+
+fork <null> 32 576 576 -1 0 0 -1175 0 2 0 140737488355328 0 20 5 2
+You see a dull silver dinner fork lying here.^
+^
+^
+^
+On the back is stamped the strange runes 'Stainless Steel.'
+^
+
+carvings <null> 32 577 577 -1 0 0 -1192 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Carved into the bridge you read 'Cyric Loves Jenjer', and 'Greystreak is a'.
+The last part of the latter message has been crossed out.  Underneath that,
+you can read 'Rex was here.'  There is also a large carving which reads 
+'Bart Simpson is the one and only true God - Anubis'.  You ponder this for a 
+moment, as you try to figure out who this Bart person is.
+^
+
+azurite <null> 32 578 578 -1 0 0 -1176 0 0 0 4294967296 0 70 5 2
+An orange-red gem is here, sparkling in the sunlight.^
+^
+^
+^
+Your eyes are dazed by its multi-prismatic effect.
+^
+
+pendant <null> 32 579 579 -1 0 0 -1180 0 0 0 148618787703226368 0 150 2 2
+A yellow pendant lies here.^
+^
+^
+^
+A thin leather strap would allow you to wear it.  There is a lightning bolt
+etched into one of its many facets.
+^
+
+krystal <null> 32 580 580 -1 0 0 -1185 0 7 0 140737488355328 0 500 20 20
+There is a dark blue krystal here.^
+^
+^
+^
+The krystal is a deep, translucent blue.  A pure white cross has been branded
+into the handle.
+^
+
+cross <null> 32 581 581 -1 0 0 -1215 0 0 0 0 0 300 25 20
+There is a tarnished silver cross lying here.^
+^
+^
+^
+It looks like a cross.  (What did you expect?)
+^
+
+cheese <null> 32 582 582 -1 0 0 -1207 0 0 0 274877906944 0 35 6 0
+There is a moldy wheel of swiss cheese here.^
+^
+^
+^
+With some scraping, you can remove most of the mold and eat the cheese.  Some
+marks in one part indicate a rat or mouse has done so fairly recently.
+^
+
+coffin <null> 32 583 583 584 0 0 -1210 1 0 0 25769803776 1 0 0 0
+A coffin rests here, its lid open.^
+There is a coffin here.^
+^
+^
+A typical, run of the mill coffin.  A label on the top reads:
+               'Transylvania Air Mail'
+^
+
+body <null> 32 584 584 583 0 0 -1213 1 0 0 8589934592 1 0 0 0
+There is a decomposing body here.^
+^
+^
+^
+The body has apparently been here for quite some time.  The eyes and a good
+portion of the flesh have rotted away, and maggots and flies in large numbers
+reside upon it.
+^
+
+dagger <null> 32 585 585 -1 0 0 -1213 0 7 0 140737488355328 0 600 10 7
+There is a dagger lying here.^
+^
+^
+^
+The dagger is made of a high-quality metal.  However, its composition is beyond
+your limited knowledge.  On the handle is carved 'Hades,' apparently the name
+of the Guild which made it.
+^
+
+grate <null> 32 586 586 587 0 0 -1225 1 0 0 146028888064 1 0 0 0
+^
+A small, rusted iron grate bars any access to the east.^
+^
+^
+^
+
+grate <null> 32 587 587 586 0 0 -1224 1 0 0 146028888064 1 0 0 0
+A small, rusted iron grate lies to one side of a tunnel leading west.^
+A small, rusted iron grate is loosely embedded in the wall to your left.^
+^
+^
+About three feet square and rusty, it might be loose enough to move.
+^
+
+egg <null> 32 588 588 -1 0 0 -1230 1 0 0 26663156973568 1 100 9 4
+An unhatched, white eagle's egg lies here.^
+A small, white eagle's egg is resting in the nest.^
+^
+^
+The egg is cold to the touch and smells somewhat.  Perhaps it is rotten.
+^
+
+torch <null> 32 589 589 -1 0 0 -1234 1 0 0 6597069766656 1 10 5 2
+A fancy, wooden torch burns cheerfully on the ground.^
+A charred, oily, wooden torch is lying here.^
+^
+^
+It's made of wood, but it doesn't weigh as much as a duck.
+^
+
+fire <null> 32 590 590 -1 0 0 -1250 0 0 0 35192962023424 0 0 0 0
+There is a small fire burning cheerfully here.^
+^
+^
+^
+^
+
+arrow brown 32 591 591 -1 0 0 -1235 0 5 0 140737488355328 0 20 4 2
+A brown arrow lies here with a splintered shaft.^
+^
+^
+^
+^
+
+arrow purple 32 592 592 -1 0 0 -1235 0 5 0 140737488355328 0 20 4 2
+A small purple arrow is lying here with two feathers missing.^
+^
+^
+^
+^
+
+arrow mauve 32 593 593 -1 0 0 -1235 0 5 0 140737488355328 0 20 4 2
+A finely-crafted mauve arrow with a gold tip lies here.^
+^
+^
+^
+^
+
+hole <null> 32 594 594 595 0 0 -1239 1 0 0 8589934592 1 0 0 0
+^
+^
+^
+^
+^
+
+hole <null> 32 595 595 594 0 0 -1238 1 0 0 8589934592 1 0 0 0
+^
+^
+^
+^
+It's approximately big enough for an arrow to pass through.
+^
+
+potion <null> 32 596 596 -1 0 0 -1240 0 0 0 2251799813685248 0 60 4 0
+A small, green glass jar is here with a dark liquid in it.^
+^
+^
+^
+The jar appears half full.  Do you think it wise to drink it?
+^
+
+diary book 32 597 597 -1 0 0 -1241 0 0 0 0 0 80 6 5
+A leather-bound book is here.^
+^
+^
+^
+Dear Diary,
+   I've discovered an interesting new potion today, with some most delightful
+effects.  Faffner is getting rather obnoxious.  I must exercise caution.
+^
+
+bench <null> 32 598 598 599 0 0 -1256 1 0 0 146028888064 1 0 0 0
+^
+A large stone bench bars upward passage.^
+^
+^
+^
+
+bench <null> 32 599 599 598 0 0 -1255 1 0 0 146028888064 1 0 0 0
+A stone bench is off to one side of a passage leading down.^
+A stone bench provides a seat along the far wall.^
+^
+^
+The bench is cold to the touch and covered in a thin layer of green slime.
+^
+
+ring <null> 32 600 600 -1 0 0 -1252 0 0 0 2310381793213153280 0 100 1 1
+A small ring lies here, glowing with an inner magic.^
+^
+^
+^
+The ring is a tarnished silver, with a red garnet embedded in it.
+A small legend on the inside reads 'Duracell'.
+^
+
+coins <null> 32 601 601 -1 0 0 -1258 0 0 0 0 0 400 6 2
+A small pile of gold coins lies here for the taking.^
+^
+^
+^
+The coins gleam and shine brightly, with an archaic legend stamped in them.
+^
+
+ruby <null> 32 602 602 -1 0 0 -1258 0 0 0 0 0 700 3 2
+A ruby is lying here.^
+^
+^
+^
+The ruby sparkles and dazzles your eyes with a cheery red light.
+^
+
+emerald <null> 32 603 603 -1 0 0 -1258 0 0 0 0 0 600 3 2
+An emerald lies here.^
+^
+^
+^
+It's a small green emerald, which gives your hand a pale green glow.
+^
+
+mace <null> 32 604 604 -1 0 0 -1259 0 12 0 140737488355328 0 50 15 12
+A large mace has been discarded here.^
+^
+^
+^
+A wooden handle connected to a large ball would likely hurt if it hit someone.
+^
+
+shield <null> 32 605 605 -1 0 0 -1260 0 0 10 1166432853244772352 0 100 5 5
+A large metal shield has been left here.^
+^
+^
+^
+^
+
+napkin <null> 32 606 606 -1 0 0 -1261 0 0 0 148618787703226368 0 15 5 1
+A small red napkin has been thrown here.^
+^
+^
+^
+It appears to be made from a high-quality cloth, with a small 'H' embroidered 
+in one corner.
+^
+
+beans food 32 607 607 -1 0 0 -1262 0 0 0 274877906944 0 12 8 3
+A small plate of beans has been left here.^
+^
+^
+^
+They appear to be baked beans, and, although cold, seem edible.
+^
+
+firestone <null> 32 608 608 -1 0 0 -1263 0 0 0 0 0 60 4 3
+An amber firestone lies here, twinkling in the light.^
+^
+^
+^
+It's a small gem, with a vague image of an arrow visible in it, which 
+vanishes as you examine the stone.
+^
+
+claw <null> 32 609 609 -1 0 0 -1267 0 0 0 0 0 40 2 1
+A small lizard's claw is here.^
+^
+^
+^
+^
+
+menu <null> 32 610 610 -1 0 0 -1269 0 2 0 0 0 100 60 2
+A gilded leather menu sits on the elegant table.^
+^
+^
+^
+The menu itself is a work of art.  Contained within its gilded pages are
+descriptions of many dishes, all guaranteed to be more delicious than the one
+before or after.  Every dish imaginable is listed on this menu, wines from
+all over the realm as well as other beverages are found on the first few pages.
+In fact, everything seems to be included here except the prices.
+^
+
+water <null> 33 611 611 -1 0 0 -1464 0 0 0 0 0 0 0 0
+^
+^
+^
+^
+^
+
+spike <null> 33 612 612 -1 0 0 -1312 1 0 0 17596481011712 1 360 10 10
+A long silver spike lays here giving off blue sparks.^
+There is a silvery object laying in the ashes of the sapling.^
+^
+^
+^
+
+portal <null> 33 613 613 614 0 0 -1303 1 0 0 8589934592 1 0 0 0
+A strange portal has been opened in a tree here.^
+^
+^
+^
+^
+
+portal <null> 33 614 614 613 0 0 -1309 1 0 0 8589934592 1 0 0 0
+A strange portal leads south.^
+^
+^
+^
+^
+
+berries food 33 615 615 -1 0 0 -1309 0 0 0 274877906944 0 5 1 1
+Some edible looking berries are here.^
+^
+^
+^
+^
+
+stick branch 33 616 616 -1 0 0 -1307 0 8 0 142936511610880 0 80 10 5
+A smooth sturdy looking hickory stick wound with gold wire is here.^
+^
+^
+^
+^
+
+rock <null> 33 617 617 618 0 0 -1303 1 0 0 8589934592 1 0 0 0
+A huge rock stands beside a small depression.^
+A huge rock is here soaking up the sun.^
+^
+^
+^
+
+depression <null> 33 618 618 617 0 0 -1303 1 0 0 70377334112256 1 0 0 0
+There is a small depression here.^
+^
+^
+^
+^
+
+goldpot pot 33 619 619 -1 0 1 618 0 0 0 0 0 80 5 5
+There is a small pot of gold here.^
+^
+^
+^
+^
+
+quartz <null> 33 620 620 -1 0 1 618 0 0 0 0 0 20 1 1
+A small piece of quartz has been left here.^
+^
+^
+^
+It looks as though something with sharp teeth has been chewing on it.
+^
+
+skeleton key 33 621 621 -1 0 1 618 0 0 0 8796093022208 0 20 1 1
+A large skeleton key is lying here.^
+^
+^
+^
+^
+
+safe <null> 33 622 622 -1 0 0 -1314 2 0 0 70433168687104 2 0 0 0
+There is a wall safe here.^
+There is a wall safe here.^
+There is a wall safe here.^
+^
+^
+
+glove <null> 33 623 623 -1 0 1 622 0 0 1 2314850758224248832 0 60 5 2
+A heavy looking iron glove is lying here.^
+^
+^
+^
+The glove is well insulated on the inside.
+^
+
+picture <null> 33 624 624 -1 0 0 -1314 1 0 0 17592186044416 1 50 20 5
+A rather ugly looking painting of an old grue has been discarded here.^
+A painting of Grandpa Grue covers one wall.^
+^
+^
+^
+
+door <null> 33 625 625 626 0 0 -1314 1 0 0 77309411328 1 0 0 0
+The remains of a shattered wooden door lie here.^
+A wooden door bars any passage north.^
+^
+^
+The door appears to be stuck.
+^
+
+door <null> 33 626 626 625 0 0 -1313 1 0 0 77309411328 1 0 0 0
+The remains of a shattered wooden door lie here.^
+A wooden door bars any passage south.^
+^
+^
+The door appears to be stuck.
+^
+
+roots root 33 627 627 628 0 0 -1301 1 0 0 2207613190144 1 0 0 0
+There is a passage behind some burnt out roots.^
+Long, thick roots cover the entire western wall here.^
+^
+^
+There appears to be a passage behind the roots.
+^
+
+roots root 33 628 628 627 0 0 -1313 1 0 0 2207613190144 1 0 0 0
+Some roots have been burned away allowing passage east.^
+Long, thick roots cover the entire eastern wall here.^
+^
+^
+There appears to be a passage behind the roots.
+^
+
+mouth lion 33 629 629 630 0 0 -1308 1 0 0 8589934592 1 0 0 0
+A portal has been opened in the large oak tree.^
+Under the lions gaze, try as you might you can't pass them.^
+^
+^
+
+^
+
+mouth lion 33 630 630 629 0 0 -1277 1 0 0 8589934592 1 0 0 0
+A portal has been opened in the immense oak tree.^
+Under the lions gaze, try as you might you can't pass them.^
+^
+^
+
+^
+
+rapier sword 33 631 631 -1 0 4 257 0 15 0 140737488355328 0 150 10 8
+A small, fearfully sharp rapier lies here.^
+^
+^
+^
+^
+
+fan <null> 33 632 632 -1 0 0 -1285 0 0 0 0 0 50 3 1
+A lady's fan has been forgotten here.^
+^
+^
+^
+It has a faint scent of violets, and an inscription reading:
+"To my beloved Viola -- From her Cosimo."
+^
+
+whistle <null> 33 633 633 -1 0 0 -1295 0 0 0 4294967296 0 200 2 1
+A silver whistle has been dropped here.^
+^
+^
+^
+The whistle is shaped like a dog's head and bears the engraving:
+"Ottimo Massimo"
+^
+
+encyclopedia book 33 634 634 -1 0 0 -1293 0 0 0 0 0 800 100 60
+An encyclopedia in many volumes has been stacked here.^
+^
+^
+^
+This is an extremely rare and valuable first edition of Diderot's Encyclopedia.
+The covers are slightly stained and bear the streaks of snails, but you should
+still get a hefty price for it.
+^
+
+treatise book 33 635 635 -1 0 0 -1293 0 0 0 0 0 60 5 5
+A strange political treatise has been left here.^
+^
+^
+^
+It is a very fine work, which could have been a useful guide to any government,
+describing the imaginary Republic of Arborea.  It is entitled "A Project for
+the Constitution of an Ideal State in the Trees, with a Declaration of the
+Rights of Men, Women, Children, Domestic and Wild Animals, including Birds,
+Fishes, and Insects."
+^
+
+bust <null> 33 636 636 -1 0 0 -1286 1 0 0 17592186044416 1 500 30 30
+A bust of fine Italian marble has been placed here.^
+Precariously balanced on the banister is a bust of fine Italian marble.^
+^
+^
+It appears to be the bust of Cacciaguerra Piovasco the Crusader.
+^
+
+bust <null> 33 637 637 -1 0 0 -1286 0 0 0 12884901888 0 0 0 0
+On the floor near the staircase is a valuable bust, in smithereens.^
+^
+^
+^
+Some klutz has broken this once fine piece of sculpture.
+^
+
+toast food 33 638 638 -1 0 0 -1283 0 0 0 274877906944 0 10 2 2
+There is a slice of pate toast here.^
+^
+^
+^
+It is a really exquisite pate toast made of rats' livers.
+^
+
+tart food 33 639 639 -1 0 0 -1283 0 0 0 274877906944 0 10 2 2
+There is a dainty tart here.^
+^
+^
+^
+Grasshoppers' claws, crisp and sectioned, are laid on an open tart in a mosaic
+pattern.
+^
+
+cakes food 33 640 640 -1 0 0 -1283 0 0 0 274877906944 0 10 2 2
+There are several little cakes here.^
+^
+^
+^
+These are pigs' tails baked in little cakes and dusted with sugar.
+^
+
+soup food 33 641 641 -1 0 0 -1283 0 0 0 2251799813685248 0 10 2 2
+There is some pale green soup here, in a tiny china cup.^
+^
+^
+^
+It is a delicious smelling caterpillar consomme.  Something is glittering at
+the bottom of the cup.
+^
+
+cup <null> 33 642 642 -1 0 0 -1 0 0 0 4294967296 0 60 2 2
+A china cup from a doll's tea set has been discarded here.^
+^
+^
+^
+^
+
+diamond <null> 33 643 643 -1 0 0 -1 0 0 0 4294967296 0 300 4 2
+A small diamond glitters nearby.^
+^
+^
+^
+^
+
+window <null> 33 644 644 645 0 0 -1285 1 0 0 25769803776 1 0 0 0
+An open window to the north allows entrance to the mansion.^
+There is a closed window to the north.^
+^
+^
+^
+
+window <null> 33 645 645 644 0 0 -1284 1 0 0 25769803776 1 0 0 0
+Through the open window you can see the undulating leaves of an ilex.^
+Through the closed window you can see the undulating leaves of an ilex.^
+^
+^
+^
+
+hole <null> 33 646 646 647 0 0 -1296 1 0 0 8589934592 1 0 0 0
+Light shines down from a hole above you.^
+Someone has sealed the entrance with dirt and rocks.  You are trapped!^
+^
+^
+^
+
+foxhole hole 33 647 647 646 0 0 -1277 1 0 0 8589934592 1 0 0 0
+At the foot of the oak tree a foxhole leads down.^
+^
+^
+^
+^
+
+boarskin skin 33 648 648 -1 0 0 -1295 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+door <null> 34 649 649 650 0 0 -1319 1 0 0 8589934592 1 0 0 0
+A portion of the west wall is swung back, making a doorway.^
+^
+^
+^
+^
+
+stalactite <null> 34 650 650 649 0 0 -1318 1 0 0 146028888064 1 0 0 0
+A portion of the east wall is swung back, making a doorway.^
+^
+^
+^
+It clings to the ceiling, unlike a stalagmite.
+^
+
+cover <null> 34 651 651 652 0 0 -1321 1 0 0 146028888064 1 0 0 0
+^
+A metal cover blocks the top of the ladder.^
+^
+^
+It completely covers a hole in the ceiling, and appears very heavy.
+^
+
+cover <null> 34 652 652 651 0 0 -1319 1 0 0 146028888064 1 0 0 0
+A metal cover lies alongside a passage leading down.^
+A large metal plate lies on the floor.^
+^
+^
+It's about one meter in diameter, and appears very heavy.
+^
+
+chainmail <null> 34 653 653 -1 0 0 -1321 0 0 7 298364025069109248 0 70 5 20
+A black shirt of chainmail is spread on the floor.^
+^
+^
+^
+It appears well made.  The orcs must have contracted someone else to make it.
+^
+
+garbage <null> 34 654 654 -1 0 0 -1331 0 0 0 8589934592 1 0 0 0
+Piles of garbage lie in the middle of the room.^
+Garbage has been strewn all about the room.^
+^
+^
+^
+
+plate gold 34 655 655 -1 0 0 -1331 0 0 0 4294967296 0 600 20 20
+A gold plate lies on the floor here.^
+^
+^
+^
+It has an inscription on it which says, 'To Owin, with love.'
+Scratched over those words is the scrawl, 'Orks robb dwarvs! Ha!'
+^
+
+throne <null> 34 656 656 -1 0 0 -1342 0 0 0 8589934592 0 0 0 0
+The throne of the King Orc looms before you.^
+^
+^
+^
+It's quite an impressive affair:  gold leaf, patterns in bas-relief, cushions
+filled with down.  Upon close inspection you notice a switch hidden on the arm
+of the chair.
+^
+
+hole <null> 34 657 657 658 0 0 -1343 1 0 0 8589934592 1 0 0 0
+There is a hole in the south wall leading to another room.^
+^
+^
+^
+^
+
+switch <null> 34 658 658 657 0 0 -1342 1 0 0 146028888064 1 0 0 0
+There is a hole in the north wall.^
+^
+^
+^
+It's a small, carefully concealed switch; more proof that the orcs had help
+building this place.
+^
+
+block <null> 34 659 659 -1 0 0 -1346 0 0 0 0 0 700 50 50
+A huge block of gold has been left here.^
+^
+^
+^
+It's a hefty chunk of what appears to be solid gold.
+^
+
+collar <null> 35 660 660 -1 0 3 278 0 0 3 145241637738512384 0 70 2 1
+A nicely-decorated dog collar is lying here.^
+^
+^
+^
+^
+
+fryingpan pan 35 661 661 -1 0 4 276 0 13 0 1266637395197952 0 100 4 6
+A large frying pan has been dropped here.^
+^
+^
+^
+This is a strong iron frying pan.  You'd better not get hit with it.
+^
+
+sword <null> 35 662 662 -1 0 4 270 0 5 0 1266637395197952 0 200 4 5
+A sword has been left here.^
+^
+^
+^
+^
+
+shield <null> 35 663 663 -1 0 3 275 0 0 9 1163055153524244480 0 250 3 3
+A small round shield has been left here.^
+^
+^
+^
+^
+
+shield <null> 35 664 664 -1 0 3 274 0 0 9 1163055153524244480 0 250 3 3
+A small round shield has been left here.^
+^
+^
+^
+^
+
+armor bodyarmor 35 665 665 -1 0 3 274 0 0 10 298364025069109248 0 300 5 5
+A suit of bodyarmor has been left here.^
+^
+^
+^
+The bodyarmor is strong and sturdy with the emblem of the royal guard on it.
+^
+
+armor bodyarmor 35 666 666 -1 0 3 275 0 0 10 298364025069109248 0 300 5 5
+A suit of bodyarmor has been left here.^
+^
+^
+^
+The bodyarmor is strong and sturdy with the emblem of the royal guard on it.
+^
+
+sword <null> 35 667 667 -1 0 4 275 0 5 0 1266637395197952 0 200 3 3
+A guard's sword has been left here.^
+^
+^
+^
+^
+
+sword <null> 35 668 668 -1 0 4 274 0 5 0 1266637395197952 0 200 3 3
+A guard sword has been left here.^
+^
+^
+^
+^
+
+coral piece 36 669 669 -1 0 0 -1383 0 0 0 0 0 250 111 50
+A small, polished piece of coral lies here.^
+^
+^
+^
+It seems to have at one time been set in jewelry.
+^
+
+sabre sword 36 670 670 -1 0 4 285 0 16 0 140737488355328 0 600 40 20
+A large sabre has been left here.^
+^
+^
+^
+It appears to have a setting for a gem in the hilt, but the gem has been
+pried out.
+^
+
+ruby gem 36 671 671 -1 0 0 -1386 0 0 0 0 0 600 5 5
+A large ruby is lying on the floor.^
+^
+^
+^
+It looks suitable to put on the hilt of a sword.
+^
+
+coins platinum 36 672 672 -1 0 0 -1386 0 0 0 0 0 400 5 5
+Coins lay scattered across the floor.^
+^
+^
+^
+They are made of platinum and are very valuable.
+^
+
+boulder rock 36 673 673 674 0 0 -1386 1 0 0 8589934592 1 0 0 0
+Fragments from a boulder cover the floor.^
+A huge boulder block the doorway.^
+^
+^
+It is firmly wedged. Nothing would remove it!
+^
+
+boulder rock 36 674 674 673 0 0 -1385 1 0 0 8589934592 1 0 0 0
+Fragments from a boulder cover the floor.^
+A huge boulder block the doorway.^
+^
+^
+It is firmly wedged. Nothing short of blasting would remove it!
+^
+
+keychain foot 36 675 675 -1 0 0 -1382 0 0 0 0 0 50 1 1
+Hamlet's left foot lies in one corner.^
+^
+^
+^
+A cute, but fragrant hobbit's foot has been cast aside.  Someone has obviously
+used it for a keychain.
+^
+
+wall writing 36 676 676 -1 0 0 -1379 0 0 0 8589934592 0 0 0 0
+The stone wall appears to have some writing on it.^
+^
+^
+^
+The writing mentions that many talismen and amulets used to exist that allowed
+its wearer to breathe underwater.
+^
+
+berries blackberries 36 677 677 678 0 0 -1371 1 0 0 17867063951360 1 10 1 1
+Several small berries litter the ground here.^
+^
+^
+^
+They look like blackberries, but you're not sure.
+^
+
+bush plant 36 678 678 677 0 0 -1371 1 0 0 8589934592 1 0 0 0
+A small berry bush is here, picked clean.^
+A small berry bush is here, covered with ripe berries.^
+^
+^
+It looks like a blackberry bush.
+^
+
+keg gunpowder 36 679 679 -1 0 0 -1364 0 0 0 0 0 50 30 30
+A keg of gunpowder is sitting nearby.^
+^
+^
+^
+It looks powerful enough to destroy a large rock!
+^
+
+plank board 36 680 680 681 0 0 -1368 1 0 0 8589934592 1 0 0 0
+There is a plank leading east onto the pirate ship.^
+^
+^
+^
+
+^
+
+plank board 36 681 681 680 0 0 -1355 1 0 0 8589934592 1 0 0 0
+A plank extends west to the shore.^
+^
+^
+^
+
+^
+
+table <null> 36 682 682 -1 0 0 -1366 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+telescope scope 36 683 683 -1 0 0 -1356 0 0 0 0 0 100 15 5
+A small telescope is laying here.^
+^
+^
+^
+It is small, and made of brass.  Obviously it is used by sailors to sight
+land.
+^
+
+oranges food 36 684 684 -1 0 0 -1361 0 0 0 274877906944 0 10 1 1
+Some tasty looking oranges lie nearby.^
+^
+^
+^
+They look good enough to prevent scurvy!
+^
+
+lemon food 36 685 685 -1 0 0 -1361 0 0 0 274877906944 0 10 1 1
+Some sour lemons have been left here.^
+^
+^
+^
+They appear to be edible.
+^
+
+rope <null> 36 686 686 -1 0 0 -1355 0 0 0 8589934592 0 0 0 0
+A rope hangs down from the mast.^
+^
+^
+^
+^
+
+sail <null> 36 687 687 -1 0 0 -1355 0 0 0 8589934592 1 0 0 0
+A sail lies here, furled.^
+A sail is raised and billowing in the wind.^
+^
+^
+^
+
+ladder <null> 36 688 688 689 0 0 -1640 0 0 0 8589934592 1 0 0 0
+A rope ladder climbs up the side of a large pirate ship floating in the cove.^
+^
+^
+^
+^
+
+ladder <null> 36 689 689 688 0 0 -1355 0 0 0 8589934592 1 0 0 0
+A rope ladder is thrown over the side of the ship.^
+A rope ladder is here, curled up neatly.^
+^
+^
+^
+
+door <null> 36 690 690 691 0 0 -1360 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 36 691 691 690 0 0 -1359 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 36 692 692 693 0 0 -1364 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 36 693 693 692 0 0 -1362 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 36 694 694 695 0 0 -1366 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 36 695 695 694 0 0 -1365 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+map <null> 37 696 696 -1 0 0 -1387 0 0 0 8589934592 0 0 0 0
+There is a map of the powers building here.^
+^
+^
+^
+        28---7---29                            22: Conference Room
+             |                                 23: Storage Room
+        27---6---30
+             |
+24  25  26---5---31  32  33
+ |   |   |   |   |   |   |
+10---9---8---4---11--12--13
+ |   |   |   |   |   |   |
+23  22  21---3---16  17  18
+             |
+        20---2---15
+             |
+        19---1---14
+^
+
+chest <null> 37 697 697 -1 0 0 -1409 1 0 0 70394513981440 1 0 0 0
+The chest is open.^
+The chest is closed.^
+^
+^
+The chest is made of cedar wood and is stamped on the lid with:
+            'High quality staves enclosed.
+                  Handle with Care'.
+^
+
+staff up1staff 37 698 698 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #1's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up2staff 37 699 699 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #2's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up3staff 37 700 700 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #3's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up4staff 37 701 701 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #4's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up5staff 37 702 702 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #5's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up6staff 37 703 703 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #6's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up7staff 37 704 704 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #7's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up8staff 37 705 705 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #8's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up9staff 37 706 706 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #9's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up10staff 37 707 707 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #10's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up11staff 37 708 708 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #11's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up12staff 37 709 709 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #12's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up13staff 37 710 710 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #13's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up14staff 37 711 711 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #14's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up15staff 37 712 712 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #15's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up16staff 37 713 713 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #16's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up17staff 37 714 714 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #17's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+staff up18staff 37 715 715 -1 0 1 697 0 3 0 175921860444160 0 0 10 20
+Unknown Power #18's staff is lying here.^
+^
+^
+^
+This is evidently a very powerful piece of equipment.  The staff is made of a
+strong piece of beech wood and seems to glow gently from the power and energy
+that it holds within.
+^
+
+closet <null> 37 716 716 -1 0 0 -1409 1 0 0 70394513981440 1 0 0 0
+The door to the closet is open.^
+The door to the closet is closed.^
+^
+^
+The closet is large and has the word 'mawwiage' branded into it.
+^
+
+ring engring 37 717 717 -1 0 1 716 0 0 0 2310346608841064448 0 0 1 1
+A shining gold engagement ring is lying here.^
+^
+^
+^
+This ring is hand-crafted from the finest white gold available.  It reflects 
+the sunlight off of it as though it were a mirror.  The diamond held in the 
+center of the ring reflects and refracts the light in a way that seems to play
+with the very meaning of reality.  The very fibres of your inner being tingle 
+as you look at it.  The receiver of this ring must be one special lady!
+^
+
+ring manring 37 718 718 -1 0 1 716 0 0 0 2310381793213153280 0 200 1 1
+A shining gold man's wedding ring has been left here.^
+^
+^
+^
+The ring is made out of shining white gold.
+^
+
+ring womanring 37 719 719 -1 0 1 716 0 0 0 2310381793213153280 0 200 1 1
+A woman's wedding ring has been left here.^
+^
+^
+^
+The ring is made out of shining white gold.
+^
+
+weddingdress dress 37 720 720 -1 0 1 716 0 0 0 292733975779082240 0 0 6 20
+A beautiful white wedding gown has been left here.^
+^
+^
+^
+^
+
+tuxedo <null> 37 721 721 -1 0 1 716 0 0 0 292733975779082240 0 0 6 5
+A tuxedo has been left lying here.^
+^
+^
+^
+^
+
+flowers bouquet 37 722 722 -1 0 1 716 0 0 0 0 0 0 6 5
+A bride's bouquet has been left here.^
+^
+^
+^
+^
+
+book <null> 37 723 723 -1 0 0 -1408 0 0 0 8589934592 0 0 100 100
+A great leather-bound book is resting here on its stand.^
+^
+^
+^
+You notice that the book is locked not by a key but by some magical force that 
+only the gods can unleash.  Try as you might, you can not see what is written 
+in it.
+^
+
+table <null> 37 724 724 -1 0 0 -1408 0 0 0 8589934592 0 0 100 100
+^
+^
+^
+^
+The table is large, round and dark.  The surface is perfect and doesn't seem to 
+have so much as a single scratch in it.  It would appear to be for important 
+meetings.
+^
+
+wardrobe <null> 37 725 725 -1 0 0 -1409 1 0 0 70394513981440 1 0 0 0
+The wardrobe is open.^
+The wardrobe is closed.^
+^
+^
+A label on the door reads 'robes'.
+^
+
+robe up1robe 37 726 726 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #1's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up2robe 37 727 727 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #2's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up3robe 37 728 728 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #3's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up4robe 37 729 729 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #4's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up5robe 37 730 730 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #5's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up6robe 37 731 731 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #6's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up7robe 37 732 732 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #7's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up8robe 37 733 733 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #8's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up9robe 37 734 734 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #9's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up10robe 37 735 735 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #10's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up11robe 37 736 736 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #11's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up12robe 37 737 737 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #12's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up13robe 37 738 738 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #13's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up14robe 37 739 739 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #14's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up15robe 37 740 740 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #15's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up16robe 37 741 741 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #16's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up17robe 37 742 742 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #17's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+robe up18robe 37 743 743 -1 0 1 725 0 0 0 292733975779082240 0 0 6 5
+Unknown Power #18's robe is lying here.^
+^
+^
+^
+This would appear to be a robe for very special occasions.  It is long and 
+black and made of very rare material.
+^
+
+hammer <null> 38 744 744 -1 0 0 -1421 0 5 0 1266637395197952 0 10 2 5
+A large hammer has been left around here for some reason.^
+^
+^
+^
+The hammer is worn from years of use, and you wonder how many people have hit
+themselves on the fingers with this over the years, and also of course ponder
+how many peoples' fingers you could hit with it too!
+^
+
+rock <null> 38 745 745 -1 0 0 -1422 0 0 0 0 0 10 1 1
+A small rock has been dropped here.^
+^
+^
+^
+The rock appears to have some kind of gems tone imprisoned within it.  If only
+you could find a suitable tool to smash the rock with.
+^
+
+gem <null> 38 746 746 -1 0 0 -1422 0 0 0 4294967296 0 100 1 1
+A small, uncut gem lies before you.^
+^
+^
+^
+You could easily mistake this gem for a small stone, but it does shine.
+^
+
+pick weapon 38 747 747 -1 0 0 -1426 0 10 0 1266637395197952 0 10 6 4
+An old pick has been dumped here.^
+^
+^
+^
+This pick is of the heavy mining variety used for splitting rocks.
+^
+
+ale skin 38 748 748 -1 0 0 -1426 0 0 0 2251799813685248 0 10 10 5
+A skin of ale has been dropped here.^
+^
+^
+^
+How about getting loaded?  The ale looks good enough.
+^
+
+sandwich food 38 749 749 -1 0 0 -1426 0 0 0 274877906944 0 10 5 5
+A delicious-looking sandwich has been left here.^
+^
+^
+^
+It's a two-inch thick roast beast sandwich.
+^
+
+nugget <null> 38 750 750 -1 0 0 -1432 0 0 0 0 0 50 1 5
+A gold nugget twinkles before you.^
+^
+^
+^
+It's a small gold nugget, shaped like a small rock.
+^
+
+nugget <null> 38 751 751 -1 0 0 -1437 0 0 0 0 0 200 1 8
+A large gold nugget twinkles before you.^
+^
+^
+^
+It's a large gold nugget, shaped like a rock.
+^
+
+golddust dust 38 752 752 -1 0 0 -1425 0 0 0 0 0 150 10 5
+A small bag of gold dust lies in a crumpled heap at your feet.^
+^
+^
+^
+I wouldn't open the bag if I were you.  You might spill it!
+^
+
+invring <null> 39 753 753 -1 90000 0 -1452 0 0 0 0 0 0 0 0
+There is a glowing ring on an eerie pedestal here.^
+^
+^
+^
+^
+
+papers <null> 39 754 754 -1 0 0 -1442 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You feel badly for going through Rex's papers...
+^
+
+fridge <null> 39 755 755 -1 0 0 -1448 1 0 0 70394513981440 1 0 0 0
+The fridge is open.^
+The fridge is closed.^
+^
+^
+^
+
+cabinet <null> 39 756 756 -1 0 0 -1448 1 0 0 70394513981440 1 0 0 0
+The cabinet is open.^
+The cabinet is closed.^
+^
+^
+^
+
+doritos food 39 757 757 -1 0 1 756 0 0 0 274877906944 0 0 0 0
+There is a bag of Doritos lying here.^
+^
+^
+^
+The bag is a full one of Nacho Cheese flavor!
+^
+
+backpack pack 39 758 758 -1 0 0 -1447 0 0 0 576531121047601152 0 200 20 5
+There is an old leather backpack lying here.^
+^
+^
+^
+The backpack is made of old leather and it is dusty.  It is apparently the bag
+that Rex uses on digs.
+^
+
+door <null> 39 759 759 760 0 0 -1443 1 0 0 25769803776 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+^
+
+door <null> 39 760 760 759 0 0 -1442 1 0 0 25769803776 1 0 0 0
+The porch door is open.^
+The porch door is closed.^
+^
+^
+^
+
+door <null> 39 761 761 762 0 0 -1449 0 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 39 762 762 761 0 0 -1445 0 0 0 60129542144 2 0 0 0
+The bathroom door is open.^
+The bathroom door is closed.^
+The bathroom door is locked.^
+^
+^
+
+door <null> 39 763 763 764 0 0 -1450 0 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 39 764 764 763 0 0 -1445 0 0 0 60129542144 2 0 0 0
+The bedroom door is open.^
+The bedroom door is closed.^
+The bedroom door is locked.^
+^
+^
+
+door <null> 39 765 765 766 0 0 -1451 0 0 0 25769803776 1 0 0 0
+The door is open.^
+The door is closed.^
+^
+^
+^
+
+door <null> 39 766 766 765 0 0 -1450 0 0 0 25769803776 1 0 0 0
+The glass balcony door is open.^
+The glass balcony door is closed.^
+^
+^
+^
+
+excalibur sword 40 767 767 -1 0 0 -1460 1 20 0 1284229581242368 1 600 20 20
+Excalibur rests at your feet, its silvery blade gleaming in the light.^
+A hand holds the sword Excalibur up from the waves.^
+^
+^
+The sword is a true piece of craftsmanship.  Gripping it in your hand you
+feel an otherworldly sense of power.  The sounds of ancient battles echo
+in your mind as you finger its gleaming blade.  This sword will surely
+serve you well in battle.
+^
+
+hole portable 40 768 768 -1 0 0 -1464 1 0 0 1143492092887040 1 0 2 1
+A portable hole glistens darkly at your feet.^
+^
+^
+^
+Peering into the darkness you see the glint of treasure.
+^
+
+quiver <null> 41 769 769 -1 0 3 307 0 0 5 581035270430785536 0 100 10 5
+A very well-fashioned quiver lies here waiting for someone to pick it up.^
+^
+^
+^
+
+^
+
+stick branch 41 770 770 -1 0 0 -1469 1 5 0 147334558121984 1 5 5 2
+A lit stick is lying here on the ground.^
+There is a stick here on the ground.^
+^
+^
+
+^
+
+parry staff 41 771 771 -1 0 2 291 0 10 0 140737488355328 0 200 10 8
+Little John's parry staff sits here.^
+^
+^
+^
+It's a sturdy staff that could do some damage if used right.
+^
+
+beer keg 41 772 772 -1 0 0 -1473 0 0 0 8589934592 0 20 20 20
+A key of beer sits here waiting to be tapped.^
+^
+^
+^
+Too bad you don't have a tap.
+^
+
+point knife 41 773 773 -1 0 0 -1475 0 10 0 140737488355328 0 40 2 1
+A sharp point has been left here.^
+^
+^
+^
+It's a knife.  What did you expect, an exclamation point?
+^
+
+necklace <null> 41 774 774 -1 0 3 294 0 0 0 148618787703226368 0 300 1 1
+A beautiful necklace lies at your feet.^
+^
+^
+^
+
+^
+
+badge <null> 41 775 775 -1 0 3 295 0 0 5 292734525534896128 0 50 5 5
+The sheriff's badge is here, stained with blood.^
+^
+^
+^
+It reads: 'To serve and protect'.
+^
+
+sticker <null> 41 776 776 -1 0 0 -1482 0 10 0 140737488355328 0 30 25 15
+A pig-sticker is here, tempting you to pick it up.^
+^
+^
+^
+Pig-sticker huh?  Hmm... any 5-0 around?
+^
+
+paperclip clip 41 777 777 -1 0 0 -1495 0 0 0 0 0 20 1 1
+A paper clip can barely be seen in the grass.^
+^
+^
+^
+A paper clip in the middle of Sherwood Forest?
+^
+
+brush <null> 41 778 778 -1 0 0 -1499 0 0 0 70377334112256 0 0 0 0
+^
+^
+^
+^
+It's brush.  What did you expect to find, a sword or something?
+^
+
+ironwood sword 41 779 779 -1 0 1 778 0 26 0 140737488355328 0 500 50 25
+The infamous Ironwood Sword lies here, quivering and ready to kill.^
+^
+^
+^
+It's wood, yet it's iron?
+^
+
+boat <null> 42 780 780 -1 0 0 -1510 0 0 0 281474976710656 0 20 100 100
+There is a tiny rowing boat on the ground in front of you.^
+^
+^
+^
+^
+
+boat <null> 42 781 781 -1 0 0 -1524 0 0 0 281474976710656 0 20 100 100
+There is a tiny rowing boat on the ground in front of you.^
+^
+^
+^
+^
+
+boat <null> 42 782 782 -1 0 0 -1538 0 0 0 281474976710656 0 20 100 100
+There is a tiny rowing boat on the ground in front of you.^
+^
+^
+^
+^
+
+boat <null> 42 783 783 -1 0 0 -1543 0 0 0 281474976710656 0 20 100 100
+There is a tiny rowing boat on the ground in front of you.^
+^
+^
+^
+^
+
+panel door 43 784 784 785 0 0 -1558 1 0 0 146028888064 1 0 0 0
+A small wooden panel is open in the southern wall.^
+^
+^
+^
+^
+
+shelf wall 43 785 785 784 0 0 -1557 1 0 0 146028888064 1 0 0 0
+There is a passageway beneath the shelf.^
+A wooden shelf on the north wall looks as if it once held many ancient tomes.^
+^
+^
+The shelf seems to be on some kind of wooden sliders, maybe you could push it?
+^
+
+candle red 43 786 786 -1 0 0 -1558 1 0 0 6597069766656 1 20 1 1
+A red candle burns here, emitting a soft flickering flame.^
+There is a red candle here.^
+^
+^
+^
+
+candle blue 43 787 787 -1 0 0 -1558 1 0 0 6597069766656 1 20 1 1
+A blue candle burns here, emitting a soft flickering flame.^
+There is a blue candle here.^
+^
+^
+^
+
+candle green 43 788 788 -1 0 0 -1558 1 0 0 6597069766656 1 20 1 1
+A green candle burns here, emitting a soft flickering flame.^
+There is a green candle here.^
+^
+^
+^
+
+scroll <null> 43 789 789 -1 0 0 -1559 0 0 0 0 0 20 20 1
+A tattered scroll lies at your feet.^
+^
+^
+^
+The scroll reads:
+   'Read the words in the true light and be amazed as you take flight'.
+^
+
+runes writing 43 790 790 -1 0 0 -1559 0 0 0 8589934592 0 0 0 0
+Some mysterious runes are etched on the wall.^
+^
+^
+^
+The runes are worn and hard to read, but seem to allude to some kind of 
+mystical ball which radiated a 'true color' of some sort.
+^
+
+candlestick <null> 43 791 791 -1 0 0 -1561 2 0 0 140737488355328 2 100 20 20
+A hefty gold candlestick lies here, a candle flickering brightly within it.^
+A hefty gold candlestick lies here with a candle in it.^
+A hefty gold candlestick lies here.^
+^
+The candlestick is very ornate, with fancy scrollwork and small figurines of
+dragons and knights locked in mortal combat.
+^
+
+cauldron <null> 43 792 792 -1 0 0 -1560 0 0 0 8589934592 0 0 0 0
+A large cauldron bubbles away before you.^
+^
+^
+^
+It is the latest luxury model, with contoured edges, inlaid paneling, a timer,
+and even a simmer control!  It is dark black and big enough to cook a man in!
+^
+
+fire ashes 43 793 793 -1 0 0 -1560 1 0 0 41790031790080 1 0 0 0
+A large fire blazes away in one corner.^
+The ashes of a fire smolder in a corner.^
+^
+^
+^
+
+wand <null> 43 794 794 -1 0 0 -1562 0 10 0 140737488355328 0 100 2 2
+A short, slender wand lies here.^
+^
+^
+^
+It seems to be discharged.
+^
+
+ball <null> 43 795 795 -1 0 0 -1567 0 0 0 41790031790080 3 0 0 0
+A ball of light floats in the centre of the room.^
+The centre of the room is filled with an expanding ball of light.^
+The room is filled with an expanding ball of light.^
+^
+You attempt to examine the ball closer, but it's much too bright.  Your eyes
+start watering and you get a headache.
+^
+
+coins <null> 43 796 796 -1 0 0 -1567 0 0 0 0 0 200 10 10
+Some silver coins lie piled up in a heap on the floor.^
+^
+^
+^
+The coins are very tarnished, but seem to be silver.  They could be valuable.
+^
+
+staff <null> 43 797 797 -1 0 0 -1567 0 0 0 0 0 400 10 3
+A long runed staff lies here, etched with strange markings.^
+^
+^
+^
+You attempt to decipher the runes.  They seem to be some kind of protective
+spell, maybe against other magical items.
+^
+
+orb <null> 43 798 798 -1 0 0 -1567 0 0 0 0 0 50 2 6
+A small gold orb has been left here.^
+^
+^
+^
+The orb is golden, and probably dates from the times of the good king Pippin.
+^
+
+ring <null> 43 799 799 -1 0 3 309 0 0 0 2306968909120536576 0 100 1 1
+A small gold ring has been dropped here.^
+^
+^
+^
+It looks as if it will fit tightly on any sized finger.
+^
+
+sceptre <null> 43 800 800 -1 0 0 -1565 0 7 0 140737488355328 0 100 1 1
+A large silver sceptre has been placed here.^
+^
+^
+^
+The sceptre tapers to a narrow end, scarcely two inches in diameter, which
+seems scratched and worn away.  Otherwise, the silver finish is perfect.
+^
+
+door <null> 43 801 801 802 0 0 -1566 1 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+The door is made of solid marble and perfectly fits the doorway.  It is very
+smooth and appears to be unmarked in any way, except for a single, large red
+eye at its center, which appears to follow you around the room.
+^
+
+door <null> 43 802 802 801 0 0 -1567 1 0 0 60129542144 2 0 0 0
+The door to the north is open.^
+The door to the north is closed.^
+The door to the north is locked.^
+^
+The door is made of solid marble and perfectly fits the doorway.  It is very
+smooth and appears to be unmarked in any way, except for a single, large red
+eye at its center, which appears to follow you around the room.
+^
+
+book <null> 43 803 803 -1 0 0 -1557 1 0 0 0 1 30 2 2
+There is a large mystical-looking book here.^
+^
+^
+^
+The book details the preparation of a potion of magical strength recovery.
+
+Ingredients:
+     Bat's Wing
+     Toad's Foot
+     Lizard's Claw
+     Four Pints of Blood
+     Eagle's Egg
+
+Stir well and leave to simmer for at least 10 minutes.
+^
+
+hole <null> 43 804 804 -1 0 0 -1566 0 0 0 8589934592 1 0 0 0
+There is a small hole carved into the south wall.^
+^
+^
+^
+It's about 2 inches in diameter.
+^
+
+fountain <null> 43 805 805 -1 0 0 -1566 0 0 0 39591008534528 0 0 0 0
+^
+^
+^
+^
+You see a fountain of fire, not the sort to jump into on New Year's Day, 
+though it would seem very cosy to have in the living room.
+^
+
+potion <null> 43 806 806 -1 0 0 -1567 0 0 0 0 0 250 2 2
+A potion of restore strength lies here.^
+^
+^
+^
+The potion has a small label on it that reads: 'Restore Strength'.
+^
+
+crown <null> 43 807 807 -1 0 0 -1567 0 0 0 72057594037927936 0 400 12 10
+A beautiful gold crown lies here.^
+^
+^
+^
+The crown seems suitable for a king, since it is lavishly decorated with
+sparkling gems and has a silken lining.  Wouldn't you want to be one?
+^
+
+chute <null> 43 808 808 -1 0 0 -1565 0 0 0 8589934592 0 0 0 0
+There is a chute in the wall, too small to climb down.^
+^
+^
+^
+^
+
+chute <null> 43 809 809 -1 0 0 -1562 0 0 0 8589934592 0 0 0 0
+There is a chute in the wall, too small to climb up.^
+^
+^
+^
+^
+
+shield <null> 44 810 810 -1 0 0 -1569 0 0 10 1163055153524244480 0 50 10 6
+A small shield has been left here.^
+^
+^
+^
+The shield is small, but it should help you in a fight.
+^
+
+waybread food 44 811 811 -1 0 0 -1570 0 0 0 274877906944 0 50 1 1
+A loaf of waybread has been left here.^
+^
+^
+^
+Waybread is the traditional food of elves while traveling.  
+They call it lemba.  It is said to refresh the weary traveler greatly.
+^
+
+waybread food 44 812 812 -1 0 0 -1570 0 0 0 274877906944 0 50 1 1
+A loaf of waybread has been left here.^
+^
+^
+^
+Waybread is the traditional food of elves while traveling.  
+They call it lemba.  It is said to refresh the weary traveler greatly.
+^
+
+amulet <null> 44 813 813 -1 0 0 -1572 0 0 0 145241092277665792 0 70 1 1
+An unadorned gold amulet has been left here.^
+^
+^
+^
+The amulet is polished gold on a leather strap.
+^
+
+bedding bed 44 814 814 -1 0 0 -1572 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Although it's nice warm bedding, it's hardly the ideal thing in which to
+practice honeymoon tactics.
+^
+
+rope ladder 45 815 815 816 0 0 -1593 0 0 0 8589934592 1 0 1 1
+A rope ladder leads up the tree.^
+A coiled rope is lying here.^
+^
+^
+^
+
+ladder rope 44 816 816 815 0 0 -1569 0 0 0 8589934592 1 0 0 0
+A rope ladder leads down the tree.^
+A coiled rope is lying here.^
+^
+^
+The rope is long and heavy with knots tied in it.
+^
+
+knife <null> 45 817 817 -1 0 0 -1573 0 5 0 1266637395197952 0 20 8 8
+A short sharp knife has been left here, probably lobbed by some dwarf.^
+^
+^
+^
+This knife does not look as if it were meant for peeling fruit.
+^
+
+stick branch 45 818 818 -1 0 0 -1585 1 3 0 1273234464964608 1 1 8 1
+A burning branch lies here.^
+An old branch lies here.^
+^
+^
+You see a section of dead tree, what were you expecting to see?
+^
+
+rose flower 45 819 819 -1 0 0 -1593 1 0 0 288247968337756160 1 40 2 2
+A small but beautiful rose has been left here, wilting away.^
+A beautiful rose grows amongst the trees.^
+^
+^
+It has the words 'For Her' written on the stalk.
+^
+
+pitcher <null> 45 820 820 -1 0 0 -1582 0 0 0 0 0 10 2 2
+A small stone pitcher has been placed here.^
+^
+^
+^
+The pitcher has been carved out of a single piece of rock, probably granite.
+^
+
+spring <null> 45 821 821 -1 0 0 -1582 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+Its waters are clear and inviting.  A pity you never learned to swim.
+^
+
+loaf food 45 822 822 -1 0 0 -1605 0 0 0 279172874240 0 10 1 1
+A fairly stale, but edible loaf has been left here.^
+^
+^
+^
+The bread is somewhat stale, but still quite edible.
+^
+
+pie food 45 823 823 -1 0 0 -1605 0 0 0 279172874240 0 10 1 1
+A cold, but fairly fresh rabbit pie has been put here.^
+^
+^
+^
+The pie is fairly fresh, but it looks like it was somewhat hastily made.
+^
+
+bed <null> 45 824 824 -1 0 0 -1605 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+It seems to be a perfectly ordinary pile of bedding.
+^
+
+apple food 45 825 825 -1 0 0 -1587 1 0 0 17867063951360 1 40 1 1
+A large juicy apple lies temptingly before you.^
+A large apple hangs from a tree branch.^
+^
+^
+This is a big juicy red apple, not the type that would be poisoned at all.
+^
+
+lodestone rock 45 826 826 -1 0 0 -1599 0 0 0 0 0 100 5 5
+A dull red rock has been tossed aside.^
+^
+^
+^
+On closer examination, you identify this rock as a lodestone.
+^
+
+sack <null> 46 827 827 -1 0 0 -1621 0 0 0 1196268651020288 0 20 50 2
+A very large sack has been left here.^
+^
+^
+^
+^
+
+fire flames 46 828 828 -1 0 0 -1624 1 0 0 41790031790080 1 0 0 0
+There is a large fire pit here.^
+A huge fire burns in the center of the room.^
+^
+^
+
+^
+
+poker weapon 46 829 829 -1 0 0 -1624 0 5 0 1266637395197952 0 10 5 2
+A heavy iron poker has been left here.^
+^
+^
+^
+This poker looks a bit more dangerous than a card game, and it appears to be
+slightly bent from meeting various adventurers' heads with force!
+^
+
+gameboard <null> 46 830 830 -1 0 0 -1624 0 0 0 8589934592 0 0 0 0
+A gameboard has been left here.^
+^
+^
+^
+It's a monopoly board!
+^
+
+knife weapon 46 831 831 -1 0 0 -1620 0 4 0 1266637395197952 0 10 2 2
+A small filleting knife has been left here carelessly.^
+^
+^
+^
+^
+
+oar <null> 46 832 832 -1 0 0 -1642 0 5 0 1266637395197952 0 15 4 5
+A single oar from a boat lies here.^
+^
+^
+^
+^
+
+jug <null> 46 833 833 -1 0 0 -1626 0 0 0 1196268651020288 0 40 2 2
+A large toby jug has been left here, its face a hideous grin.^
+^
+^
+^
+This jug is shaped somewhat like a stout man with a cocked hat for the brim.
+^
+
+whiskey <null> 46 834 834 -1 0 1 833 0 0 0 3377699720527872 0 10 2 2
+You see a puddle of whiskey on the ground. Some fool must have spilled it here.^
+^
+^
+^
+It isn't the best in the world, but it looks like it will give you a buzz..
+^
+
+beer <null> 46 835 835 -1 0 0 -1659 1 0 0 3395291906572288 1 10 2 2
+Someone has thoughtlessly left a draught beer here.^
+There is a draught beer on the counter here.^
+^
+^
+Looks like cheap, run of the mill draught beer.
+^
+
+raft boat 46 836 836 -1 0 0 -1640 0 0 0 281474976710656 0 20 100 100
+A small wooden raft has been dumped here.^
+^
+^
+^
+^
+
+boat <null> 46 837 837 -1 0 0 -1629 0 0 0 1407374883553280 0 20 100 100
+A small rowing boat has been left here.^
+^
+^
+^
+^
+
+bed <null> 46 838 838 -1 0 0 -1626 0 0 0 8589934592 0 0 0 0
+The barman's bed lies here, it doesn't appear to have been slept in.^
+^
+^
+^
+^
+
+sheets <null> 46 839 839 -1 0 0 -1626 0 0 0 0 0 10 20 20
+Some sheets lie strewn on the floor.^
+^
+^
+^
+^
+
+map <null> 46 840 840 -1 0 0 -1637 0 0 0 0 0 100 1 1
+A worn and battered old treasure map lies torn and tattered before you.^
+^
+^
+^
+Nothing doing here... yet...
+^
+
+pebble stone 46 841 841 -1 0 0 -1640 0 0 0 0 0 10 1 1
+A bored pebble sits at your feet, philosophizing.^
+^
+^
+^
+^
+
+barrel <null> 46 842 842 -1 0 0 -1636 1 0 0 70394513981440 1 10 100 100
+An open wooden barrel stands before you.^
+A large wooden barrel squats in a corner.^
+^
+^
+^
+
+rat <null> 46 843 843 -1 0 1 842 0 0 0 0 0 1 1 1
+A dead rat lies rotting on the floor before you.^
+^
+^
+^
+^
+
+bell <null> 46 844 844 -1 0 0 -1626 0 0 0 0 0 120 30 40
+A huge brass bell has been placed here, its surface evidently well polished.^
+^
+^
+^
+^
+
+floorboards <null> 46 845 845 846 0 0 -1635 1 0 0 8589934592 1 0 0 0
+The floorboards above you have been lifted, to allow access to some room above.^
+^
+^
+^
+^
+
+floorboards <null> 46 846 846 845 0 0 -1636 1 0 0 8589934592 1 0 0 0
+One of the floorboards has been lifted, allowing access down under the cellar.^
+^
+^
+^
+^
+
+flag <null> 46 847 847 -1 0 0 -1634 0 0 0 0 0 50 10 2
+An old Jolly Roger flag has been left here, carefully folded.^
+^
+^
+^
+^
+
+silk <null> 46 848 848 -1 0 0 -1634 0 0 0 0 0 150 40 40
+A bale of valuable silk has been dropped here.^
+^
+^
+^
+^
+
+door <null> 46 849 849 850 0 0 -1658 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 46 850 850 849 0 0 -1657 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+batten <null> 46 851 851 -1 0 4 323 0 6 0 1266637395197952 0 50 5 5
+A small solid batten is here.^
+^
+^
+^
+^
+
+box <null> 46 852 852 -1 0 0 -1658 1 0 0 1196285830889472 1 30 25 2
+A safety deposit box has been left here.^
+A closed safety deposit box has been left here.^
+^
+^
+^
+
+coins <null> 46 853 853 -1 0 1 852 0 0 0 0 0 250 3 3
+A large pile of silver coins sits here.^
+^
+^
+^
+^
+
+money cash 46 854 854 -1 0 0 -1658 0 0 0 0 0 300 1 1
+A large bundle of money is here.^
+^
+^
+^
+
+^
+
+pen biro 46 855 855 -1 0 0 -1656 0 0 0 0 0 50 1 1
+A small gold biro is here.^
+^
+^
+^
+^
+
+desk <null> 46 856 856 -1 0 0 -1656 0 0 0 8589934592 0 0 0 0
+The manager's desk is here covered with papers.^
+^
+^
+^
+^
+
+armor <null> 46 857 857 -1 0 3 318 0 0 10 298364025069109248 0 100 15 10
+A suit of leather armor lies here.^
+^
+^
+^
+^
+
+bread food 46 858 858 -1 0 2 315 0 0 0 274877906944 0 10 2 2
+A freshly-baked loaf of bread is here.^
+^
+^
+^
+^
+
+donut food 46 859 859 -1 0 2 315 0 0 0 274877906944 0 15 2 2
+A freshly-baked donut covered in chocolate icing is here.^
+^
+^
+^
+^
+
+throne <null> 47 860 860 -1 0 0 -1678 1 0 0 17592186044416 1 500 200 200
+A huge golden throne is here, a masterpiece of regal style.^
+A huge throne is set against the western wall.^
+^
+^
+^
+
+greatsword sword 47 861 861 -1 0 4 331 0 25 0 1301821767286784 0 1200 100 100
+A huge flaming greatsword is lying here, burning fiercely.^
+^
+^
+^
+The greatsword is an immense, two-handled sword.  It glows with an eerie inner
+light.  The balance on it is very good, although it is a little on the heavy
+side.  This sword will surely prove worthy in battle.
+^
+
+staff <null> 47 862 862 -1 0 2 325 0 0 0 1161084278931456 0 200 10 20
+A golden staff shines before you with a hellish red light.^
+^
+^
+^
+The staff is long and covered with runes.
+^
+
+ball <null> 47 863 863 -1 0 0 -1670 0 0 0 0 0 200 5 5
+A golden ball has been placed here.^
+^
+^
+^
+The ball doesn't seem to have any magical abilities as far as you can tell,
+but it glitters nicely and looks to be a keeper.
+^
+
+door <null> 47 864 864 865 0 0 -1678 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+It's a door.....
+^
+
+door <null> 47 865 865 864 0 0 -1677 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+It's a door....
+^
+
+bag <null> 48 866 866 -1 0 2 333 0 0 0 70368744177664 0 20 25 20
+A small bag has been dumped in one corner.^
+^
+^
+^
+^
+
+ball <null> 48 867 867 -1 0 1 866 0 0 0 0 3 20 15 15
+A crystal ball has been placed here.^
+A crystal ball has been placed here, glowing a pale red.^
+A crystal ball has been placed here, glowing a pale blue.^
+A crystal ball has been placed here, glowing a pale green.^
+^
+
+garlic food 48 868 868 -1 0 0 -1679 0 0 0 274877906944 0 10 2 2
+Some garlic lies at your feet, its smell wafting upwards.^
+^
+^
+^
+The garlic seems quite fresh, since it still smells strongly. Because of this,
+it might be very good for exorcizing vampires.  What do you think the other
+players will think of you if you eat it?
+^
+
+robe black 48 869 869 -1 0 0 -1703 0 0 0 576460752303423488 0 10 6 1
+A black robe with two silver lightning bolts down the back has been put here.^
+^
+^
+^
+The robe has two silver lightning bolts inscribed on the back... do you think
+it belonged to Captain Marvel?
+^
+
+rations food 48 870 870 -1 0 0 -1681 0 0 0 274877906944 0 10 2 2
+Some rations have been left here, old but edible.^
+^
+^
+^
+^
+
+rations food 48 871 871 -1 0 0 -1681 0 0 0 274877906944 0 10 2 2
+Some old rations have been left here.^
+^
+^
+^
+^
+
+statue <null> 48 872 872 873 0 0 -1684 1 0 0 8589934592 1 0 0 0
+There is a hole in the roof above you.^
+There is a hole in the roof above you,but it is blocked by the statue's base.^
+^
+^
+^
+
+statue <null> 48 873 873 872 0 0 -1683 1 0 0 146028888064 1 0 0 0
+A huge stone statue of a sorcerer stands here, beside a hole leading down.^
+A huge stone statue of a sorcerer stands proudly against the north wall.^
+^
+^
+You see a large marble statue of a mighty sorcerer, though its features have
+been disfigured by passing adventurers.
+^
+
+robe scarlet 48 874 874 -1 0 0 -1703 0 0 0 576460752303423488 0 10 6 2
+A scarlet robe has been neatly folded and left here.^
+^
+^
+^
+^
+
+key <null> 48 875 875 -1 0 0 -1703 0 0 0 8800387989504 0 50 1 0
+A small silver key has been dropped here.^
+^
+^
+^
+^
+
+soap <null> 48 876 876 -1 0 0 -1688 0 0 0 0 0 20 1 1
+Some soap has been dropped here.^
+^
+^
+^
+Stamped in the soap are the strange runes "Neutrogena"
+^
+
+broom <null> 48 877 877 -1 0 0 -1688 0 8 0 140737488355328 0 20 25 2
+An old broom has been left here.^
+^
+^
+^
+It has a Mark IV Super-Demon engine, unfortunately out of order, and looks as
+if its been kick started once too often..
+^
+
+coffin <null> 48 878 878 -1 0 0 -1704 1 0 0 70394513981440 1 0 120 200
+An ornate coffin is set in the centre of the room.  The coffin is open.^
+An ornate coffin is set in the centre of the room.^
+^
+^
+The coffin has 'MIST' scratched onto the lid.
+^
+
+powerstone <null> 48 879 879 -1 0 1 878 0 0 0 0 0 100 1 1
+A magical powerstone has been put here by someone.^
+^
+^
+^
+^
+
+shield <null> 48 880 880 -1 0 0 -1709 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+^
+
+shield painted 48 881 881 -1 0 0 -1709 0 0 10 1161929257912369152 0 0 10 8
+A heavy painted shield has been dropped here.^
+^
+^
+^
+^
+
+shield wooden 48 882 882 -1 0 0 -1709 0 0 10 1161929257912369152 0 0 10 4
+A small wooden shield has been left here.^
+^
+^
+^
+^
+
+runes writing 48 883 883 -1 0 0 -1712 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+The runes are apparently part of an educational guide to spell casting and
+list several basic pieces of magic.  These are:
+
+                DEAFEN, DUMB, CRIPPLE, BLIND and CURE
+
+The runes also allude to a spell for summoning people, SUMMON, but
+note that several amulets and talismans can protect the victim from
+its effects.
+        A spell for finding the exact locations of players, objects
+and mobiles, WHERE, is also mentioned.
+^
+
+obsidian <null> 48 884 884 -1 0 0 -1714 0 0 0 0 0 100 1 1
+A large, gleaming piece of obsidian lies on the ground.^
+^
+^
+^
+^
+
+pumice <null> 48 885 885 -1 0 0 -1714 0 0 0 0 0 100 1 1
+A piece of pumice has been discarded here.^
+^
+^
+^
+^
+
+coins <null> 48 886 886 -1 0 0 -1708 0 0 0 0 0 150 1 1
+A few small platinum coins has been dropped here.^
+^
+^
+^
+^
+
+hat <null> 48 887 887 -1 0 0 -1737 0 0 0 72057594037927936 0 40 60 3
+A tall pointed hat of some form has been placed here.^
+^
+^
+^
+^
+
+powerstone <null> 48 888 888 -1 0 0 -1737 0 0 0 0 0 100 1 1
+A magical powerstone has been placed here.^
+^
+^
+^
+^
+
+pillar <null> 48 889 889 890 0 0 -1692 1 0 0 146028888064 1 0 0 0
+A huge stone pillar bridges the gap to the west.^
+^
+^
+^
+^
+
+pillar <null> 48 890 890 889 0 0 -1691 1 0 0 146028888064 1 0 0 0
+A huge stone pillar bridges the gap and allows you to go east.^
+A huge stone pillar lies fallen on the floor.^
+^
+^
+^
+
+door <null> 48 891 891 892 0 0 -1697 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 48 892 892 891 0 0 -1695 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+tripwire wire 48 893 893 -1 0 0 -1698 0 0 0 8589934592 0 0 0 0
+There is a tripwire stretched out across the passage.^
+^
+^
+^
+You see a highly coloured, multi dimensional trip wire, though it is obviously
+harmless to those that have seen it.
+^
+
+knife <null> 48 894 894 -1 0 0 -1699 0 3 0 140737488355328 0 20 1 1
+A small, curved surgeon's knife has been dropped here.^
+^
+^
+^
+^
+
+door <null> 48 895 895 896 0 0 -1702 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+door <null> 48 896 896 895 0 0 -1700 2 0 0 60129542144 2 0 0 0
+The door is open.^
+The door is closed.^
+The door is locked.^
+^
+^
+
+bar <null> 48 897 897 -1 0 0 -1702 0 0 0 8589934592 0 0 0 0
+An iron bar is set into the wall.^
+^
+^
+^
+^
+
+boulder <null> 48 898 898 -1 0 0 -1717 0 0 0 8589934592 0 0 0 0
+A huge boulder rests against one of the walls.^
+^
+^
+^
+^
+
+passage <null> 48 899 899 900 0 0 -1715 1 0 0 8589934592 1 0 0 0
+A secret passage leads westwards.^
+^
+^
+^
+^
+
+passage <null> 48 900 900 899 0 0 -1702 1 0 0 8589934592 1 0 0 0
+A secret passage leads eastwards.^
+^
+^
+^
+^
+
+hole <null> 48 901 901 902 0 0 -1718 1 0 0 8589934592 1 0 0 0
+A hole allows you to go west.^
+^
+^
+^
+How can you examine a hole, there's nothing there to examine!
+^
+
+hole <null> 48 902 902 901 0 0 -1717 1 0 0 8589934592 1 0 0 0
+A hole allows you to clamber eastwards.^
+^
+^
+^
+How can you examine a hole, there's nothing there to examine!
+^
+
+wand <null> 48 903 903 -1 0 0 -1697 0 0 0 0 0 100 15 4
+A long red wand has been placed here.^
+^
+^
+^
+It has a fiery bridge etched upon one side, apparently a fiery drawbridge
+half opened.
+^
+
+pit slime 48 904 904 -1 0 0 -1730 1 0 0 8589934592 1 0 0 0
+There is a pit in the floor.^
+There is a pit of slime in the floor.^
+^
+^
+^
+
+lever <null> 48 905 905 -1 0 0 -1731 0 0 0 8589934592 0 0 0 0
+A heavy iron lever is set into the south wall.^
+^
+^
+^
+^
+
+grille <null> 48 906 906 907 0 0 -1734 1 0 0 8589934592 1 0 0 0
+The grille is open.^
+The grille is closed.^
+^
+^
+^
+
+grille <null> 48 907 907 906 0 0 -1733 1 0 0 25769803776 1 0 0 0
+The grille is open.^
+The grille is closed.^
+^
+^
+^
+
+coins copper 48 908 908 -1 0 0 -1734 0 0 0 0 0 20 2 1
+A few copper coins lie scattered on the ground.^
+^
+^
+^
+^
+
+necklace <null> 48 909 909 -1 0 0 -1734 0 0 0 144115188075855872 0 200 5 1
+A beautiful necklace has been left here.^
+^
+^
+^
+^
+
+tube ivory 48 910 910 -1 0 0 -1728 0 0 0 0 0 50 5 1
+A long ivory scroll tube has been dropped here.^
+^
+^
+^
+^
+
+scroll <null> 48 911 911 -1 0 0 -1728 0 0 0 4294967296 0 100 12 1
+A battered papyrus scroll has been dropped here.^
+^
+^
+^
+^
+
+curtains <null> 48 912 912 913 0 0 -1735 1 0 0 25769803776 1 0 0 0
+To the south the passage leads into a curtained hall.^
+To the south the passage passes through some curtains.^
+^
+^
+They aren't the sort you'd expect to find a peeping Tom behind.
+^
+
+curtains <null> 48 913 913 912 0 0 -1732 1 0 0 25769803776 1 0 0 0
+A narrow passage leads north, through a gap in the curtains.^
+The curtains are closed.^
+^
+^
+These are made of the best quality velvet, but are so large and heavy that
+only immortals may carry them out of the chamber.
+^
+
+harp <null> 48 914 914 -1 0 0 -1736 0 0 0 0 0 300 70 20
+A beautiful golden harp has been placed here.^
+^
+^
+^
+^
+
+lever <null> 48 915 915 -1 0 0 -1726 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+This lever would seem to operate the drawbridge.
+^
+
+bridge drawbridge 48 916 916 917 0 0 -1726 1 0 0 8589934592 0 0 0 0
+A huge iron drawbridge crosses the lava to the west.^
+^
+^
+^
+It's just a bridge over troubled waters....
+^
+
+bridge drawbridge 48 917 917 916 0 0 -1724 1 0 0 8589934592 0 0 0 0
+A huge iron drawbridge crosses the lava to the east.^
+^
+^
+^
+It's just a bridge over VERY troubled waters!
+^
+
+fire flames 48 918 918 -1 0 0 -1739 0 0 0 39591008534528 0 0 0 0
+^
+^
+^
+^
+It looks a trifle hot for any mortal to handle.
+^
+
+orb <null> 48 919 919 -1 0 0 -1740 0 0 0 0 0 300 1 1
+A glowing white orb pulsates before you.^
+^
+^
+^
+^
+
+moonstone <null> 48 920 920 -1 0 0 -1740 0 0 0 0 0 200 10 3
+A huge moonstone lies in front of you.^
+^
+^
+^
+^
+
+rod <null> 48 921 921 -1 0 0 -1740 0 0 0 0 0 150 20 2
+A black rod marked with a red pentacle has been placed here.^
+^
+^
+^
+^
+
+robe worn 48 922 922 -1 0 0 -1703 0 0 0 576460752303423488 0 10 6 2
+A rather worn robe lies here tatty and fraying.^
+^
+^
+^
+^
+
+bookcase case 48 923 923 -1 0 0 -1706 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+You see shelves of books.  What else did you expect, a secret passage?
+^
+
+powerstone <null> 48 924 924 -1 0 0 -1706 0 0 0 0 0 100 1 1
+A magical powerstone has been placed here.^
+^
+^
+^
+^
+
+book <null> 48 925 925 -1 0 0 -1706 0 0 0 0 0 200 10 12
+A heavy iron bound book has been left here.^
+^
+^
+^
+The book details many arcane and powerful magic, mostly to cause
+ severe pain to other beings.  In a flowing hand is written:
+
+Fireball
+        A potent piece of magic much dependent upon the power of the caster
+        as to the damage it does, although sulphur enhances this.
+Missile
+        A similar magic, much popular amongst mages.  It is said that magical
+        talismans may be created to aid this spell.
+Shock
+        A spell of touch, which can pass through metal armors with great ease.
+        A decent caster never uses this as a party trick.
+        Lodestones help with its casting.
+Frost
+        A spell similar to a fireball in power. A direct hit will slow
+        your opponent down and make his aim less sure.  It is said that
+        wintergreen will enhance this spell.
+
+Any mage should beware that casting magic, though potent, will drain the
+strength of the caster.
+^
+
+well <null> 48 926 926 -1 0 0 -1707 0 0 0 8589934592 0 0 0 0
+^
+^
+^
+^
+
+^
+
+gem orange 48 927 927 -1 0 0 -1684 0 0 0 0 0 20 1 1
+A small orange gem has been dropped here.^
+^
+^
+^
+^
+
+effigy <null> 48 928 928 -1 0 0 -1684 0 0 0 0 0 75 20 30
+A small stone effigy has been left here.^
+^
+^
+^
+^
+
+statuette <null> 48 929 929 -1 0 0 -1684 0 0 0 0 0 75 10 15
+A small gold statuette stands here, glittering in the light.^
+^
+^
+^
+^
+
+disc <null> 49 930 930 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 931 931 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 932 932 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 933 933 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 934 934 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 935 935 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 936 936 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 937 937 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 938 938 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+
+disc <null> 49 939 939 -1 0 0 -1744 0 0 0 36292473651200 0 5000 5 5
+One of the ten valuable golden &+Ydiscs&* is lying here.^
+^
+^
+^
+The disc is made of pure gold and is very valuable.  You better pit this one!
+^
+

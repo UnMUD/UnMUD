@@ -3,7 +3,7 @@
 
 #define MBANNER "linux"
 #define SAFE_USERFILE
-#define CPP "//lib/cpp -P -traditional -I ../include %s"
+#define CPP "//usr/bin/cpp -P -traditional -I ../include %s"
 #undef HANDLER
 #undef EQ_BUG
 #undef NEED_STRFTIME

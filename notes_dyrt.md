@@ -52,6 +52,8 @@ Rodando o comando ```sudo make install-compat```
 Try '/usr/bin/install --help' for more information.
 ```
 
+Não solucionado
+
 ## Instação do Dyrt
 
 ```make depend``` funcionou corretamente
@@ -85,6 +87,35 @@ Regenerating World....
 sh: line 1: //lib/cpp: No such file or directory                               
 
 Zone not found: limbo in file ..//data/WORLD/limbo.zone.
+```
+
+Correção: Atualização da constante ```#define CPP "//usr/bin/cpp -P -traditional -I ../include %s"``` no arquivo ```/include/machine/linux.h```
+
+**3º erro:**
+```
+gcc -DDEBUG -g -O4 -I../include/ -DLINUX -DREBOOT   -c -o bootstrap.o bootstrap.c
+bootstrap.c: In function ‘bootstrap’:
+bootstrap.c:68:31: error: ‘sys_errlist’ undeclared (first use in this function)
+   68 |       mudlog ("bopen: %s.\n", sys_errlist[errno]);
+      |                               ^~~~~~~~~~~
+bootstrap.c:68:31: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [<builtin>: bootstrap.o] Error 1
+```
+
+Correção: Substituição do ```sys_errlist[errno]``` por ```strerror(errno)```. ```sys_errlist``` está depreciado
+
+> Dei um replace all em ```sys_errlist[errno]``` e substitui por ```strerror(errno)```
+
+**4º erro:**
+```
+main.c: In function ‘get_options’:
+main.c:634:15: error: invalid storage class for function ‘usage’
+  634 |   static void usage (void);
+      |               ^~~~~
+main.c: In function ‘main_loop’:
+main.c:767:15: error: invalid storage class for function ‘new_connection’
+  767 |   static void new_connection (int fd);
+      |               ^~~~~~~~~~~~~~
 ```
 
 Não solucionado

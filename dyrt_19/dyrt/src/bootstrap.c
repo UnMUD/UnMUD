@@ -65,7 +65,7 @@ bootstrap (void)
   if ((bootf = (FILE *) bopen (BOOTSTRAP)) == NULL)
     {
       mudlog ("bopen: Bootstrap failed for \"" BOOTSTRAP "\".\n");
-      mudlog ("bopen: %s.\n", sys_errlist[errno]);
+      mudlog ("bopen: %s.\n", strerror(errno));
       return -1;
     }
   

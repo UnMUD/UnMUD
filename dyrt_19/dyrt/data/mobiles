@@ -1,0 +1,2555 @@
+338
+Puff^
+0 0 1 -4 1500 32 0 10 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000
+Puff the Fractal Dragon is here with a faraway look in her eyes.^
+You examine Puff more closely.
+Puff is big, purple, and stupid-looking.  You can tell that she uses only
+a very small fraction of her brain.  As you look into her vacant eyes you
+sense that this is a creature that would never harm so much as a flea on
+purpose.  You can tell, however, that when provoked, she would make a
+strong adversary.
+^
+
+The Bard^
+1 1 4 -10 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An ageless bard sits on a stool by the fire.^
+He plays a mandolin and tells tales of times long past.
+^
+
+Death^
+2 2 5 -65 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x8000000000000
+The Death Knight stands ready to challenge you.^
+The figure before you is wearing a dark hooded robe.  In the darkness you 
+can not see his face.  You are glad of this, as you imagine there is not
+much to look at.
+^
+
+Lolth^
+3 3 5 -33 200 18 80 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Lolth, Demon Queen of the Spiders sits here waiting for her next victim.^
+^
+
+Jubilex^
+4 4 5 -51 250 15 30 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Jubilex the Faceless Lord is here.^
+^
+
+Daemon^
+5 5 5 -20 150 8 1 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Shadow Daemon is here skulking in the shadows.^
+^
+
+Chuck^
+6 6 5 -59 100 10 99 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Chuck Gnoll is here.^
+^
+
+Widow^
+7 7 5 -37 120 10 35 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Black Widow sits here spinning her web.^
+^
+
+Pink^
+8 8 5 -31 40 6 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a pink spider here.^
+^
+
+Green^
+9 9 5 -31 40 6 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a green spider here.^
+^
+
+Brown^
+10 10 5 -31 40 6 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a brown spider here.^
+^
+
+Blue^
+11 11 5 -31 40 6 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a blue spider here.^
+^
+
+White^
+12 12 5 -31 40 6 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a white spider here.^
+^
+
+Ooze^
+13 13 5 -52 80 8 25 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A gray ooze slithers across the ground here.^
+^
+
+Mush^
+14 14 5 -48 50 8 5 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The brown mush sits here bubbling.^
+^
+
+Mucus^
+15 15 5 -42 150 15 15 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The mucus monster is here spitting phlegm at you.^
+^
+
+Beebop^
+16 16 5 -92 120 12 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Beebop the Mutant Guard is standing here scratching his head.^
+^
+
+Rocksteady^
+17 17 5 -92 120 12 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Rocksteady the Mutant Guard is here slobbering on himself.^
+^
+
+Guxx^
+18 18 5 -76 750 25 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2100000000
+0x00000000:0x00000000
+The Grand Hoohah Guxx Unfufadoo is standing here testing his razor sharp claws.^
+^
+
+Braxx^
+19 19 5 -79 125 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Smilin' Braxx the Salesdemon is here selling souvenirs and used weapons.^
+^
+
+Qbert^
+20 20 5 -95 100 20 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+Qbert the Quasit is sitting at his desk going over the financial records.^
+^
+
+Orcus^
+21 21 5 -66 300 20 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Demon Lord Orcus is here sizing up your skull.^
+^
+
+Quetzalcoatl^
+22 22 6 -103 1000 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+^
+^
+
+Alligator^
+23 23 6 -111 100 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge alligator thinks you could do as dinner for him.^
+^
+
+Bloodyjaws^
+24 24 6 -111 100 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Another alligator stares hungrily at you blood in his jaws.^
+^
+
+The Mosquito^
+25 25 6 -115 60 10 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant mosquito is thinking no good about you.^
+^
+
+Bloodthirsty^
+26 26 6 -115 60 8 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A bloodthirsty mosquito thinks your blood would taste good.^
+^
+
+Hungry^
+27 27 6 -115 50 12 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A very hungry mosquito orders a bloody mary (a la you).^
+^
+
+Old^
+28 28 6 -115 60 8 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An old mosquito is considering attacking you.^
+^
+
+Tiny^
+29 29 6 -115 80 10 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A tiny mosquito before you looks even more energetic than the others.^
+^
+
+The Mummy^
+30 30 6 -119 150 12 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There's something rotten in the corner.^
+^
+
+The Monolith^
+31 31 6 -122 250 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge monolith stands before you black as the night.^
+^
+
+The Cockroach^
+32 32 6 -139 150 12 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant cockroach runs around the floor.^
+^
+
+Pacamac^
+33 33 6 -142 100 10 15 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000000
+Pacamac the town guardsman is blocking your way.^
+^
+
+Tenoc^
+34 34 6 -142 100 8 10 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000000
+Tenoc the younger guardsman looks at you curiously.^
+^
+
+The Rattlesnake^
+35 35 6 -151 150 15 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The rattlesnake is keeping horrifying noises before you.^
+^
+
+Anara^
+36 36 6 -144 100 10 0 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A female servant is cleaning the floor with a broom.^
+^
+
+Cuezcon^
+37 37 6 -142 120 10 25 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A male servant is carrying food to someone.^
+^
+
+The Emperor^
+38 38 6 -146 400 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Son of the Sun God is sitting here on his throne.^
+^
+
+Arantxa^
+39 39 6 -149 120 10 33 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x400000000
+Arantxa the Astronomer is radiating the light of ancient wisdom around her.^
+^
+
+Aczuma^
+40 40 6 -147 150 10 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x200000000
+Aczuma the Warlord is practising his spells.^
+^
+
+Mano^
+41 41 6 -150 120 10 25 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000800000000
+An evil glance of Mano the Priest nails your boots to the floor.^
+^
+
+Seamas^
+42 42 7 -179 70 10 0 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Seamas the Leprechaun eyes you cautiously, an evil grin upon his face.^
+^
+
+The Yeti^
+43 43 7 -163 80 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x14000000000
+A huge, furry yeti rears up threateningly in front of you!^
+^
+
+The Golem^
+44 44 8 -186 90 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x4000000000000
+A huge stone golem stands watchfully on guard.^
+^
+
+The Mouse^
+45 45 8 -194 20 6 5 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant black mouse runs around on the floor.^
+^
+
+The Shadow^
+46 46 9 -217 100 12 50 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000000
+A spooky black shadow slides across the wall.^
+The shadow is roughly human in shape.
+^
+
+The Ghost^
+47 47 9 -206 80 6 10 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000000
+A ghostly apparition hovers about you, preparing to strike.^
+^
+
+The Skeleton^
+48 48 9 -226 50 8 70 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000000
+A human skeleton stands upright before you.^
+You wonder whose closet this beauty has been hiding in.
+^
+
+The Defender^
+49 49 9 -243 200 15 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x2001000000000000
+An ancient knight stands here, readying himself for battle.^
+^
+
+The Seraph^
+50 50 9 -244 1500 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+An enormous six-winged seraph stands over you in solemn judgment.^
+^
+
+The Beggar^
+51 51 9 -228 1 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An aged and emaciated beggar sits cross-legged on a mat on the floor.^
+^
+
+Bomber^
+52 52 10 -252 50 8 10 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Bomber the Heavy-Fan Dwarf glares evilly at you.^
+^
+
+Owin^
+53 53 10 -255 50 8 11 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Owin the Broke Dwarf watches you suspiciously.^
+^
+
+Glowin^
+54 54 10 -262 50 8 12 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Glowin the Radioactive Dwarf looks menacingly at you.^
+^
+
+Smythe^
+55 55 10 -264 50 8 13 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Smythe the Upper Class Dwarven Smith stands here, worn by years at the forge.^
+^
+
+Dio^
+56 56 10 -276 50 8 14 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Dio the Singing Dwarf wanders around, singing arias.^
+^
+
+The Dragon^
+57 57 10 -270 500 32 1 5 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x400001000000000
+A huge fire-breathing dragon stares menacingly in your direction.^
+^
+
+The Haggis^
+58 58 10 -278 50 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large, vicious-looking haggis runs around squeaking.^
+^
+
+The Zombie^
+59 59 11 -284 20 10 2 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000000
+A rotting zombie stomps past.^
+^
+
+The Guard^
+60 60 12 -304 100 10 0 2 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000000
+There is a guard standing here looking down on you.^
+^
+
+The Man^
+61 61 12 -306 100 10 70 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A smelly old man is standing in front of you.^
+^
+
+Jeffery^
+62 62 12 -309 0 90 0 15 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Jeffery the gardener is here.^
+^
+
+Rudy^
+63 63 12 -310 120 20 0 0 2 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Rudy the Cook is here brandishing her knives at you.^
+^
+
+The Drunk^
+64 64 12 -311 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a drunk here.^
+^
+
+The Skeleton^
+65 65 12 -314 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a Skeleton warrior here.^
+^
+
+Nathan^
+66 66 12 -315 150 12 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Nathan the angry ogre is here.^
+^
+
+Huge^
+67 67 12 -317 200 10 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a huge guard standing here.^
+^
+
+Doom^
+68 68 12 -318 300 30 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+Doom, the town Lord is standing here laughing at you.^
+^
+
+The Shepherd^
+69 69 13 -354 80 10 21 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A wizened shepherd is here, herding his sheep.^
+^
+
+The Sheepdog^
+70 70 13 -353 60 10 31 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A lean and swift sheepdog is here, looking for sheep to round up.^
+^
+
+The Flock^
+71 71 13 -354 120 10 22 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A flock of sheep bleat contentedly here, nibbling at anything plant-like.^
+^
+
+Blackie^
+72 72 13 -352 40 10 27 0 2 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Blackie, the black sheep of the flock, roams alone here, looking dejected.^
+^
+
+The Dreamer^
+73 73 13 -351 99 10 23 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A man in a flowing robe stands here, gazing across the sea, daydreaming.^
+^
+
+The Trapper^
+74 74 13 -334 80 10 28 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A ragged and dirty trapper is here, sputtering something incomprehensible.^
+^
+
+Clammy^
+75 75 13 -339 80 10 28 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large oyster, as big as a man, sits under the water.^
+^
+
+Jaws^
+76 76 13 -350 110 10 16 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A big shark fin sticks out of the water, and it's no fake!^
+^
+
+Maya^
+77 77 13 -321 20 10 29 0 2 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Maya the Bee flits from flower to flower, looking terminally happy.^
+^
+
+The Swallowtail^
+78 78 13 -321 10 10 30 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A Zebra Swallowtail flies nearby, fluttering gracefully in the breeze.^
+^
+
+Manta^
+79 79 13 -345 70 10 31 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Flat against the sandy bottom of the shallow sea floor, a manta ray rests.^
+^
+
+Herman^
+80 80 13 -344 35 10 32 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Herman the Pelican waddles nearby, looking for a fish.^
+^
+
+The Bear^
+81 81 14 -369 70 8 100 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A grossly deformed black bear menaces you.^
+^
+
+Loonitherin^
+82 82 14 -372 90 10 36 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Loonitherin the Mad Elf gazes at you arrogantly.^
+^
+
+Rotty^
+83 83 14 -373 40 8 35 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Rotty the flying squirrel soars towards you, foaming at the mouth.^
+^
+
+Cerberus^
+84 84 14 -381 120 13 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000
+Cerberus growls at you, looking very hungry.^
+^
+
+Asmadeus^
+85 85 14 -388 100 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Asmadeus the Demon Artist growls at you.^
+^
+
+Asmodeus^
+86 86 14 -396 200 15 88 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Asmodeus prepares to kill you for daring to confront him!^
+^
+
+The Succubus^
+87 87 14 -398 90 8 100 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Succubus looks at you greedily.^
+^
+
+The Captain^
+88 88 14 -404 100 10 94 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Captain of the Guard looks at you suspiciously.^
+^
+
+The Jailor^
+89 89 14 -408 100 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Jailor advances menacingly towards you.^
+^
+
+The Prisoner^
+90 90 14 -410 30 6 5 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A prisoner cowers in one corner.^
+^
+
+The Gargoyle^
+91 91 14 -412 120 13 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large stone gargoyle leers at you.^
+^
+
+Guido^
+92 92 14 -413 80 10 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Guido the Guardsman flexes his muscles.^
+^
+
+Nunzio^
+93 93 14 -413 80 10 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Nunzio the Guardsman stares menacingly at you.^
+^
+
+The Lich^
+94 94 14 -416 200 15 66 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Lich is here, an evil grin on his boney face.^
+^
+
+The Priest^
+95 95 14 -417 100 8 92 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x200000000
+The Dark Elven Priest prepares to do you in.^
+^
+
+Keldar^
+96 96 14 -420 75 10 81 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Keldar the Dark Elf laughs at you.^
+^
+
+Gorden^
+97 97 14 -420 75 10 81 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Gorden the Dark Elf stands here, guarding the Dark Elven realms.^
+^
+
+Commander^
+98 98 14 -422 150 12 92 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Dark Elven Commander looks at you menacingly.^
+^
+
+Truffle^
+99 99 14 -427 250 25 3 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Truffle the Fungus Monster shuffles across the room.^
+^
+
+Femmie^
+100 100 15 -450 120 10 80 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A die-hard Femmenazi glares at you contemptuously.^
+You are looking at an Arnold Schwarzeneger with two X chromosomes.
+^
+
+The Pike^
+101 101 15 -459 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A pike swims sluggishly by.^
+The pick swims lazily... lazy... just like a man.
+^
+
+Curly^
+102 102 15 -460 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This pirahna bears a striking resemblance to Curly Stoodge.^
+But is that really surprising?  After all, he IS male.
+^
+
+The Goldfish^
+103 103 15 -461 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A goldfish glides gracefully by.^
+^
+
+Moe^
+104 104 15 -462 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This pirahna bears a striking resemblance to Moe Stoodge.^
+Moe is rather bland looking.  Nothing special here.
+^
+
+The Guppy^
+105 105 15 -463 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A guppy nibbles at your toe.^
+About the size of the average male... oh... nevermind.
+^
+
+Larry^
+106 106 15 -464 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This pirahna bears a striking resemblance to Larry Stoodge.^
+This particular fish is... uh... intellectually challenged.
+^
+
+The Seahorse^
+107 107 15 -465 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A seahorse bobs lazily by.^
+He looks rather at-ease despite his maleness; or perhaps because of it.
+^
+
+Tom^
+108 108 15 -466 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This vicious pirahna looks like a run-of-the-mill Tom.^
+^
+
+The Turtle^
+109 109 15 -467 50 10 40 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A snapping turtle tries to take a chunk out of you!^
+This turtle gets along fine with the Femmenazis... nothing gets through its
+thick armour.
+^
+
+Dick^
+110 110 15 -468 90 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This vicious pirahna looks like a run-of-the-mill Dick.^
+You sicko!  This is NOT what you think!
+^
+
+The Shrimp^
+111 111 15 -469 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A vicious-looking shrimp crawls by.^
+This shrimp has had JUST about enough abuse and is SICK and TIRED of being
+thought of as an easy mobile.
+^
+
+Harry^
+112 112 15 -470 90 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This vicious pirahna looks like a run-of-the-mill Harry.^
+^
+
+Sebastian^
+113 113 15 -471 55 10 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Sebastian looks around and mumbles 'weemon... I tell you...'.^
+The Femmenazis happen to think that Sebastian is the impossible one.
+^
+
+Batman^
+114 114 15 -472 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This pirahna bears a striking resemblance to the Caped Crusader.^
+Those years of parading around in tights have definitely unbalanced our 'hero'.
+^
+
+The Bottomfeeder^
+115 115 15 -473 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A slime-sucking bottomfeeder wiggles by.^
+Hm.... reminds me of a man.
+^
+
+Robin^
+116 116 15 -474 90 10 75 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+This pirahna resembles Robin: the sidekick of the Caped Crusader.^
+Not many people know that this particular sidekick is an Aussie.
+^
+
+The Jellyfish^
+117 117 15 -475 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A spineless wimp of a jellyfish swims by.^
+Spineless + wimp = Male
+^
+
+PMS^
+118 118 15 -486 200 10 95 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The evil PMS monster glares at you, clearly in a VERY bad mood.^
+This hulking, monstrous thing is too horrible to even describe.
+^
+
+Testo^
+119 119 15 -487 75 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A whipped and wimpy testosterone monster sulks in the corner.^
+This monster reeks of futile aggression and self-pity.
+^
+
+Ego^
+120 120 15 -488 200 15 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge hulking beast glares at you menacingly.^
+Frothing at the mouth, this creature looms huge in its own mistaken glory.
+^
+
+Estro^
+121 121 15 -489 200 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A flaky estrogen monster sobs at you from the corner.^
+This flighty bit of goods is never sure of her emotional state.
+^
+
+The Nag^
+122 122 15 -491 150 10 90 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A baggy old lady scowls at you.^
+The old nag waves at you with the sagging skin of her biceps.
+^
+
+Dave^
+123 123 15 -493 20 2 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A poor wimpy male prisoner sulks here, glaring at you viciously.^
+Hmm... kinda resembles Imzadi.
+^
+
+Piggy^
+124 124 15 -495 60 10 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A Male Chauvinist Pig sits here, a prisoner of the Femmenazis.^
+Hmm... kinda resembles Imzadi.
+^
+
+The Troll^
+125 125 16 -532 100 20 30 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A troll snarls at you as he prepares to do you in.^
+^
+
+The Cyclops^
+126 126 17 -548 150 11 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x4000000000000
+A giant man-eating cyclops looks down at you wondering
+ whether he should eat you or not.^
+^
+
+The Thief^
+127 127 17 -550 100 7 25 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000020000000000
+Someone looking like a thief leans casually against the wall.^
+^
+
+The Maintainer^
+128 128 17 -562 70 7 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A very old maintainer walks slowly around mumbling to
+ himself  'Why has my shift down here lasted for 70 years ?'^
+^
+
+Adventurer^
+129 129 17 -581 74 8 5 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An old adventurer is here, taking a rest.^
+^
+
+The Teller^
+130 130 17 -575 70 7 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An old grey-haired teller walks around searching for money.^
+^
+
+Peter^
+131 131 18 -583 500 8 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+Saint Peter observes you peacefully.^
+^
+
+Thor^
+132 132 18 -607 320 20 0 10 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000000000
+Thor stands here glaring at Agnes.^
+^
+
+Agnes^
+133 133 18 -607 150 15 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000000000
+Agnes laughs, prepared to meet all of Thor's needs.^
+^
+
+Odin^
+134 134 18 -607 350 22 0 10 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000000000000000
+Odin glares at you with his one eye.^
+^
+
+Valkyrie^
+135 135 18 -602 175 18 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Valkyrie glances around for a rabbit.^
+^
+
+Terrance^
+136 136 18 -605 140 14 1 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Terrance the ugly troll sits here preparing his dinner.^
+He looks hungry.
+^
+
+The Giant^
+137 137 18 -604 150 14 2 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant was relaxing here until you walked in.^
+^
+
+The Bear^
+138 138 18 -614 170 12 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Great Bear is here eating honey.^
+^
+
+The Bison^
+139 139 18 -611 130 12 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A bison grazes upon the land here.^
+^
+
+The Coyote^
+140 140 18 -616 80 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A small coyote threatens to nip your ankles.^
+Despite his nasty attitude, he is indeed a beautiful creature.
+^
+
+The Snake^
+141 141 18 -1 60 10 3 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A snake with very narrow slits for eyes swishes around on the ground.^
+^
+
+The Unicorn^
+142 142 19 -630 2000 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+A unicorn stands here, gazing quietly at its reflection.^
+The Unicorn is indeed a beautiful creature.  Are you sure you want to kill it?
+^
+
+The Gambler^
+143 143 19 -631 75 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A gambler dressed in rags and tatters is here.^
+The poor soul asks you for a loan.
+^
+
+The Guardian^
+144 144 19 -625 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x4000000000
+A guardian of pure ice stands, silent and still, observing you.^
+Only his eyes follow your movement around the room.
+^
+
+The Native^
+145 145 20 -640 40 10 0 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A native watches you warily from a safe distance.^
+He seems more curious than aggressive.
+^
+
+Rosebud^
+146 146 21 -654 120 13 10 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x2000000000000
+Rosebud the killer attack cow is here guarding the gate.^
+^
+
+Eugene^
+147 147 21 -662 50 10 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Eugene the duck is here quacking softly to himself^
+^
+
+The Goat^
+148 148 21 -670 100 15 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There's a goat here with it's belly rumbling^
+^
+
+The Sheep^
+149 149 21 -676 80 10 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A sheep is here bleating softly.^
+^
+
+Ruffles^
+150 150 21 -677 100 13 60 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Ruffles the sheepdog is here guarding his flock.^
+^
+
+The Farmer^
+151 151 21 -685 120 10 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Farmer Bob is here, and he wants you to stay away from his daughter.^
+^
+
+Belinda^
+152 152 21 -692 100 10 40 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The farmer's daughter Belinda is here with her boyfriend.^
+^
+
+Jack^
+153 153 21 -692 100 15 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Belinda's boyfriend Jack is here fondling his girlfriend^
+^
+
+The Mugwump^
+154 154 21 -699 250 17 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A tall, skinny, ugly, slimy mugwump is here sneering greedily at you.^
+^
+
+The Hedgehog^
+155 155 21 -700 60 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A viscious little hedgehog leaps out of the mist at you!^
+^
+
+Mary Jane^
+156 156 21 -706 120 13 20 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Mary Jane is here wondering where up is.^
+^
+
+Hector^
+157 157 21 -696 150 13 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Hector the happy-go-lucky hippie is wandering absent mindedly by^
+^
+
+Seargent Big Mac^
+158 158 21 -706 200 15 40 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Seargent Big Mac is here waiting to arrest you for eating one too many hamburgers.^
+^
+
+The Tree^
+159 159 21 -697 200 11 70 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x2000000000000
+A large tree is looming over you preparing to do you in^
+^
+
+The Fish^
+160 160 21 -723 120 13 70 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge fish is here making you finally realize what fish-food must feel like.^
+^
+
+The Gatekeeper^
+161 161 21 -717 200 15 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x2000000000000
+There is a giant gatekeeper here keeping you out.^
+^
+
+The Gopherr^
+162 162 21 -737 120 13 60 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant gopher is here busily scurrying around^
+^
+
+The People eater^
+163 163 21 -744 320 20 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The One-eyed-one-horned-flying-purple-people-eater is here
+and he's hungry!^
+^
+
+The Swedish Chef^
+164 164 21 -757 100 25 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Swedish Chef is here throwing things at you!  Bork Bork Bork!^
+^
+
+The Guest^
+165 165 21 -759 150 15 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a giant guest sitting in this giant room^
+^
+
+The Crier^
+166 166 21 -768 250 17 70 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The king's crier is here waiting to announce the guests of
+the king.  He knows that you are not a guest.^
+^
+
+The Sentry^
+167 167 21 -771 250 20 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000
+There is a giant sentry here.^
+^
+
+Jesse^
+168 168 21 -781 150 10 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Jesse, the man inside the giant, is here, and he isn't happy
+to see you.^
+^
+
+John^
+169 169 21 -787 125 12 90 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+John the guard is here, and he doesn't look happy to see
+you.^
+^
+
+Rob^
+170 170 21 -787 150 15 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Rob the guard is here, and he doesn't look happy to see you
+either.^
+^
+
+The Seargent^
+171 171 21 -791 300 20 90 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The seargent at arms is here keeping an eye on the prisoners^
+^
+
+The Prisoner^
+172 172 21 -795 100 15 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a prisoner sitting in here recovering from his torture.^
+^
+
+The Rat^
+173 173 21 -798 80 10 50 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is giant rat scurrying around here.^
+^
+
+The Goose^
+174 174 21 -783 100 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The goose that lays golden eggs is sitting here^
+^
+
+Blix^
+175 175 22 -821 80 10 0 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Blix the Goblin looks happy to see you.^
+^
+
+Crud^
+176 176 22 -824 120 10 10 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A Creeping Crud is slushing around, trying to get at you.^
+^
+
+The Knight^
+177 177 22 -812 200 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A Skeletal Knight is waiting here for someone to strangle.^
+According to him, your neck is just about the right size.
+^
+
+Skapti^
+178 178 22 -827 100 10 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Skapti the Tax Collector wrings his hands at the prospect of new taxes.^
+You sense a future land known as the United States, and the word 'politician'
+finds its way into your brain.  You have never heard the word before.
+^
+
+Flosi^
+179 179 22 -827 100 10 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Flosi the Tax Collector wrings his hands at the prospect of new taxes.^
+You sense a future land known as the United States, and the word 'politician'
+finds its way into your brain.  You have never heard the word before.
+^
+
+The Minotaur^
+180 180 23 -849 70 10 40 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x8000000000
+0x00000000:0x1000000000000000
+A minotaur snarls viciously at you.^
+The minotaur looks vicious, his huge bulk shaking with rage.
+^
+
+Ivy^
+181 181 25 -878 120 8 0 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Ivy skitters around the house, cleaning everything in sight.^
+Ivy seems to be a very gentle woman, but she is also in a rush to clean things.
+^
+
+Margaret^
+182 182 25 -877 120 8 0 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A female servant is here trying to clear off the table.^
+Margaret is a dark-haired, frail woman.
+^
+
+Betty^
+183 183 25 -876 130 10 0 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Betty is dusting the room from top to bottom.^
+Betty seems a little silly, but she's good help.
+^
+
+The Professor^
+184 184 25 -881 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Professor is sitting in the armchair, reading a book on quantum physics.^
+The Professor is a very wise man of fifty-two.  He is unmarried and has shaggy
+white hare and a beard to match.  You like him instantly, and when he looks
+at you, you notice a sort of knowing twinkle in his eyes.
+^
+
+Macready^
+185 185 25 -887 150 10 0 0 8 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Macready is here, glaring at you as she removes fingerprints from the glass.^
+Mrs. Macready is the Professor's housekeeper, and she does not like children.
+She has resigned herself to giving frequent tours of the old house to curious
+visitors.
+^
+
+The Moth^
+186 186 25 -893 100 8 80 0 8 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge angry-looking moth is upset that you barged in on its meal.^
+He looks much bigger and much more vicious than the average moth.
+^
+
+Fen^
+187 187 25 -943 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a wolf asleep on the castle stairs.^
+The wolf appears to be but a statue.
+^
+
+Fenris Ulf^
+188 188 25 -1 1800 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Fenris Ulf growls at you menacingly.^
+Fenris Ulf is a huge gray wolf and is the captain of the White Witch's secret
+police.
+^
+
+Peter^
+189 189 25 -962 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x8400000000
+0x00000000:0x00000000
+King Peter the Magnificent is here upon his throne.^
+Peter is the oldest of the kings and queens you see before you.  He looks to
+be very brave and adventurous.
+^
+
+Susan^
+190 190 25 -962 200 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x8400000000
+0x00000000:0x00000000
+Queen Susan the Gentle is here upon her throne.^
+Susan is a young, beautiful, black-haired woman.  She has an air of maturity
+and grace about her, but something about her seems uncomfortable in Narnia.
+^
+
+Edmund^
+191 191 25 -962 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x8400000000
+0x00000000:0x00000000
+King Edmund the Just is here upon his throne.^
+Edmund was once a traitor to Aslan in his younger days, but thanks to Peter's
+forgiving heart, he has had the chance to become a handsome and brave king.
+^
+
+Lucy^
+192 192 25 -962 200 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x8400000000
+0x00000000:0x00000000
+Queen Lucy the Valiant is here upon her throne.^
+Lucy is the youngest of the kings and queens you see before you, and one of
+Aslan's best friends.  She is fair-haired and seems to be a very happy and
+compassionate person.
+^
+
+The Dragon^
+193 193 26 -1004 9999 100 0 100 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A huge red dragon settles down and wraps itself around the fountain.  Although
+it looks very calm, you remember the old adage, 'Let Sleeping Dragons Lie'
+and decide that it is not a good idea to irritate it.^
+The dragon's scales glitter in the magical light, and it keeps one eye half
+open to gaze back at you.
+^
+
+The Elemental^
+194 194 26 -967 400 30 0 8 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+On the edge of your vision a graceful but immensely huge earth elemental
+slips among the trees.^
+The elemental is formed of rocks, earth, and living greenery.  Although it 
+is thin and graceful, beneath its features ripples immense strength.
+^
+
+The Druid^
+195 195 26 -1033 100 5 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A druid wanders the town, his face concealed by a deep cowl.^
+The druid's robes appear to made of soft cotton or a similar cloth.
+His face is hidden in the shadow of his cowl.
+^
+
+The Druid^
+196 196 26 -1033 100 5 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A druid wanders the town, his face concealed by a deep cowl.^
+The druid's robes appear to be made of soft cotton or a similar cloth.
+^
+
+Beauty^
+197 197 26 -1038 100 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A beautiful woman sits on the edge of the fountain, sunning herself.^
+The woman is exquisitely beautiful, and your heart yearns for her.
+However, she seems very cold and aloof.
+^
+
+The Critter^
+198 198 26 -988 180 25 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A creatures with glowing red eyes and snow-white fur snarls and leaps at you!^
+
+^
+
+The Beast^
+199 199 26 -1011 210 25 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x8000000000
+0x00000000:0x00000000
+An immense beast, a living combination of fire and ice, stands before you.^
+Huge and incredibly powerful in appearance, the beast rears up on its hind
+legs and roars at you.
+^
+
+The Car^
+200 200 27 -1041 70 10 0 0 10 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The sports car is driving here.  Make sure he doesn't run you over.^
+The car is silver and looks very fast.
+^
+
+The Steamship^
+201 201 27 -1072 80 15 5 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A silver steamship tries to run you off the board.^
+The steamship is large, but does not move very fast.
+^
+
+The Cannon^
+202 202 27 -1049 75 10 0 0 4 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A cannon is here and ready to fire at you.^
+The cannon has its head raised up and seems ready to fire.
+^
+
+The Thimble^
+203 203 27 -1046 65 10 0 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large silver thimble sits here waiting its turn.^
+The thimble seems a very non-threatening opponent.
+^
+
+The Hat^
+204 204 27 -1052 80 10 0 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A top hat is sitting here.^
+The hat seems to be patiently waiting his turn.
+^
+
+The Terrier^
+205 205 27 -1077 90 10 50 0 10 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A yippy little terrier growls at you.^
+You feel an overwhelming urge to punt the dog.
+^
+
+The Horse^
+206 206 27 -1057 95 10 0 0 10 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The horse is here, ready to trot all over you.^
+The horse seems quick, and you are afraid of being trampled.
+^
+
+The Boot^
+207 207 27 -1067 70 8 10 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An old boot would like to kick your butt.^
+The boot seems to mean business, surprisingly enough.
+^
+
+The Iron^
+208 208 27 -1062 90 12 10 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An iron is here, wanting to burn you.^
+The iron looks hot and seems to be advancing on you.
+^
+
+The Wheelbarrow^
+209 209 27 -1065 80 10 10 0 10 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+An old wheelbarrow is here trying to dump its load on you.^
+The wheelbarrow seems to be full of manure.
+^
+
+The Vulture^
+210 210 29 -1097 100 10 20 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A vulture is hovering above you, searching for prey.^
+The vulture is circling dangerously close to your head.
+^
+
+Mike^
+211 211 30 -1114 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x8000000000000
+Mike thinks he's doing a pretty good job at blocking your way west.^
+Mike is a jolly little fellow with red hair.  He is holding an empty pot.
+^
+
+Paddy^
+212 212 30 -1115 55 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Paddy looks at you curiously from behind a tree stump.^
+Paddy is a gruff little man.  He has a red beard and is dressed in green.
+^
+
+Stanley^
+213 213 30 -1116 60 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Stanley giggles at you as you pass him unaware.^
+Stanley, too, is short with red hair.
+^
+
+Tricia^
+214 214 30 -1117 65 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Tricia is sitting on a stone, gazing out over the water.^
+Tricia seems to be the pensive type.  With long, dark hair, she looks very
+beautiful as she daydreams.
+^
+
+Shanon^
+215 215 30 -1118 65 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Shanon giggles at you as you vainly watch your reflection in the pool.^
+Shanon is a very giggly child.
+^
+
+Colleen^
+216 216 30 -1119 65 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Colleen is here, quietly picking flowers.^
+Colleen seems to be preoccupied with her flowers.
+^
+
+Malcomb^
+217 217 30 -1120 65 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Malcomb is carrying a handful of clover to his girlfriend.^
+He seems to be proud of his clover bouquet.
+^
+
+Danny^
+218 218 30 -1121 70 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Danny wonders where he should hide his new pot of gold.^
+He is a clever-looking boy with red hair and freckles.
+^
+
+Erik^
+219 219 30 -1122 70 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Erik whistles happily as he darts from tree to tree.^
+Erik has light hair and a mischevious grin.
+^
+
+Molley^
+220 220 30 -1123 70 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Molley smiles happily as she skips stones.^
+Molley's raven hair catches the light in a very attractive way.
+^
+
+Tallie^
+221 221 30 -1124 75 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Tallie quickly darts behind a rock as you approach her.^
+Tallie seems young and very shy.
+^
+
+Millie^
+222 222 30 -1125 75 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+You caught Millie dancing happily in the grass.^
+Millie is singing to herself gleefully.
+^
+
+Samson^
+223 223 30 -1126 75 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Samson found a four-leaf clover and is running home to show it off.^
+Samson is very excited about his find!
+^
+
+Sally^
+224 224 30 -1127 80 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Sally is rushing home to fix dinner for her children.^
+She looks older than some of the others, but she does not seem to be taller.
+^
+
+Clyde^
+225 225 30 -1128 90 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Clyde rushes after his wife, Sally.^
+Clyde is eagerly anticipating Sally's specialty stew.
+^
+
+Scottie^
+226 226 30 -1129 100 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Scottie peers at you curiously from the shadows.^
+Scottie is old and worn by years of work.
+^
+
+The Locksmith^
+227 227 31 -1157 110 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The locksmith is hard at work behind the counter.^
+The Locksmith is a short, balding man with white hair.  He seems to be busy
+working on a project.
+^
+
+The Owner^
+228 228 31 -1158 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The owner of the store is sorting goods in the back of the store.^
+He looks like a miserly fellow, and apparently doesn't want to be disturbed.
+^
+
+The Weaponsmith^
+229 229 31 -1154 200 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The weaponsmith is forging a new sword for a customer.^
+The Weaponsmith is a burly man of middle age.
+^
+
+The Armorer^
+230 230 31 -1155 200 10 0 15 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The Armorer is pounding out a new shirt of mail.^
+He also seems to be wearing a shirt of his best mail.
+^
+
+The Bartender^
+231 231 31 -1149 200 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The bartender is serving drinks to his customers.^
+The Bartender is a no-nonsense kind of guy, and he doesn't seem to like you.
+^
+
+The Blacksmith^
+232 232 31 -1134 300 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+A burly and sweaty blacksmith is at work over the forge.^
+The man before you is burly and very sweaty.  He is covered in soot.
+^
+
+The Teller^
+233 233 31 -1136 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+The bank teller is adding up figures at his desk.^
+He seems very wise in the ways of money, but not much else.
+^
+
+The Sailor^
+234 234 31 -1141 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A well-built sailor is doing minor repairs on his ship.^
+The man before you is very tan and has great muscle tone.
+^
+
+The Crab^
+235 235 31 -1143 100 12 0 30 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A fiesty-looking crab is walking about on the sand.^
+He seems to be interested in taking a chunk out of your leg.
+^
+
+The Drunk^
+236 236 31 -1150 50 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A drunk is passed out on the steps to the bar.^
+He is either sleeping or passed out.  You aren't sure which.
+^
+
+Nimbus^
+237 237 32 -1184 2000 20 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A Nimbus hovers over you.^
+You are looking at one ominous-looking cloud!
+^
+
+The Boatman^
+238 238 32 -1199 100 8 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A haggard-looking boatman is here with a wild look in his eyes.^
+^
+
+The Gatekeeper^
+239 239 32 -1200 110 8 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large man stands before you in some sort of uniform.^
+A ring with many keys is hanging from his belt.
+^
+
+Bratty^
+240 240 32 -1203 90 8 1 0 5 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A girl is here with bright red hair in pony tails.^
+She has really thick glasses on and is polishing an apple.
+^
+
+The Bully^
+241 241 32 -1206 110 8 50 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A burly kid who looks like he should be finished with school is here.^
+You wish he were finished with life in general.
+^
+
+The Raccoon^
+242 242 32 -1212 70 8 2 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+There is a small brown raccoon here.^
+He is searching for some garbage to dig through.
+^
+
+The Protector^
+243 243 32 -1216 100 8 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Protector is here, guarding his lands.^
+^
+
+Wolfgang^
+244 244 32 -1226 115 8 5 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Wolfgang the Guard is marching about.^
+He is going about his normal business, keeping watch over the castle.
+^
+
+Gunther^
+245 245 32 -1231 120 8 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Gunther the Nibelung wanders about aimlessly.^
+^
+
+The Bookwyrm^
+246 246 32 -1249 70 8 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A bookwyrm is here, looking for some books to eat.^
+^
+
+Stefan^
+247 247 32 -1251 115 8 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Stefan the Nibelung roams about, pondering life.^
+^
+
+Kenin^
+248 248 32 -1255 125 8 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Kenin the Nibelung searches for his jailors.^
+^
+
+Faffner^
+249 249 32 -1258 250 15 98 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0xf00000000
+Faffner the Dracolich contemplates how to kill you.^
+^
+
+The MaitreD^
+250 250 32 -1268 150 8 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Maitre D' stares down his nose at you condescendingly.^
+^
+
+The Vampire^
+251 251 32 -1 200 8 70 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A man stands before you with dark brown hair.^
+He has unusually long, sharp teeth and a fixating gaze.  He is wearing a cape.
+^
+
+Sapling^
+252 252 33 -1312 100 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+  There is a small Sapling standing majestically here absorbing bolts of 
+lightning and casting a few of its own back at the sky.^
+^
+
+Ent^
+253 253 33 -1311 180 15 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+There is a large Tree Ent blocking the entrance.^
+^
+
+Dryad^
+254 254 33 -1303 70 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A very pretty Dryad is sitting on the rock sunning herself.^
+^
+
+Beetle^
+255 255 33 -1301 50 10 30 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A boring Beetle is crawling about here muttering to itself.^
+^
+
+Viola^
+256 256 33 -1289 200 13 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0xa000000000
+0x00000000:0x00000000
+A beautiful, ghostly little girl stands here with a disdainful air.^
+^
+
+Cosimo^
+257 257 33 -1293 80 20 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x2800000000000000
+A small boy in gaiters and tricorn brandishes his rapier at you.^
+^
+
+The Vixen^
+258 258 33 -1298 80 10 50 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+A sly and curvaceous vixen snarls at you from the corner.^
+^
+
+Ottimo^
+259 259 33 -1 40 10 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+A small dachshund is here, panting hard and sniffing about for a fox.^
+^
+
+The Watchman^
+260 260 34 -1319 100 13 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Watchman Orc growls at you.^
+^
+
+Andy^
+261 261 34 -1320 42 10 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Andy looks at you viciously.^
+^
+
+Mandy^
+262 262 34 -1320 42 10 97 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Mandy looks at you viciously.^
+^
+
+Randy^
+263 263 34 -1320 42 10 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Randy looks at you viciously.^
+^
+
+Sandy^
+264 264 34 -1320 42 10 97 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Sandy looks at you viciously.^
+^
+
+Brandy^
+265 265 34 -1320 42 10 97 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Brandy looks at you viciously.^
+^
+
+The Maggot^
+266 266 34 -1 135 10 98 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+A giant maggot slithers around, leaving a slimy trail behind him.^
+^
+
+The Usher^
+267 267 34 -1341 150 13 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Usher Orc, dressed in black livery, sneers down his nose at you.^
+^
+
+The King^
+268 268 34 -1342 225 20 97 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The King Orc glares at you with a look of royal intolerance.^
+^
+
+The Guard^
+269 269 35 -1347 200 10 0 1 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A novice guard stands here guarding the entrance to the house.^
+A fairly well-built guard.
+^
+
+The Captain^
+270 270 35 -1349 300 9 0 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Captain of the Guard is standing here.^
+Yep, he's a Captain alright.  He's starting to get a beer belly.
+^
+
+The Guard^
+271 271 35 -1351 320 12 20 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A guard is standing in the corner.^
+A fairly well-built guard.
+^
+
+The Guard^
+272 272 35 -1351 270 10 10 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A guard is standing here.^
+A fairly well-built guard.
+^
+
+The Guard^
+273 273 35 -1351 290 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large guard is standing here.^
+A fairly well-built guard.
+^
+
+The Guard^
+274 274 35 -1352 300 10 10 2 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0xe000000000000
+A guard is standing here.^
+A fairly well-built guard.
+^
+
+The Guard^
+275 275 35 -1352 300 10 10 2 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0xe000000000000
+A guard is standing here.^
+A fairly well-built guard.
+^
+
+The Cook^
+276 276 35 -1353 500 8 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The cook is standing between his pots and pans.^
+He looks confused as to what to serve for dinner.
+^
+
+The Guard^
+277 277 35 -1354 300 15 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large guard is standing here.^
+A fairly well-built guard.
+^
+
+The Dog^
+278 278 35 -1348 200 15 90 1 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A security dog is standing here.^
+He is a solidly-built German Shepherd.
+^
+
+The Shark^
+279 279 36 -1380 200 15 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A shark circles you warily, preparing to attack.^
+^
+
+The Mermaid^
+280 280 36 -1383 250 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x1000000000
+0x00000000:0x00000000
+A lovely mermaid is here, singing a beautiful song.^
+^
+
+The Headhunter^
+281 281 36 -1369 125 10 40 0 15 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A headhunter is wandering around, looking for heads.^
+^
+
+Hook^
+282 282 36 -1363 200 14 98 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Hook is here, brandishing his namesake menacingly.^
+^
+
+Gruel^
+283 283 36 -1361 150 12 56 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Gruel the cook is here, looking angry at being disturbed.^
+^
+
+Scurge^
+284 284 36 -1363 200 14 98 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Scurge is here, and he looks mean!^
+^
+
+Redbeard^
+285 285 36 -1366 265 18 98 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Redbeard the cutthroat pirate, scurge of the sea, is here.^
+^
+
+Patch^
+286 286 36 -1356 150 12 56 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Patch is here, trying to sight land.^
+^
+
+Pegleg^
+287 287 36 -1359 150 12 56 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Pegleg, the ship's steward, is taking inventory here.^
+^
+
+Scurvy^
+288 288 36 -1355 150 10 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A sailor with scurvy looks at you preparing to attack.^
+^
+
+Fritz^
+289 289 39 -1439 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+Fritz is curled up here on the back of the couch.^
+Fritz is Rex and Kender's cat.  He's about 4 months old, and when he's awake,
+he's a holy terror.  He's rather cute while he's asleep, though.
+^
+
+Sam^
+290 290 39 -1439 200 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x400000000
+0x00000000:0x00000000
+Sam has curled herself around Fritz.^
+Sam is Rex and Kender's cat.  She's about 4 months old, and when she's awake,
+she's a holy terror.  She's rather cute while she's asleep, though.
+^
+
+Little John^
+291 291 41 -1485 150 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Little John stands here practicing his dodge, parry, thrust and spin.^
+
+^
+
+Friar Tuck^
+292 292 41 -1473 150 8 20 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Friar Tuck sits here protecting his precious brew.^
+
+^
+
+Merryman Jim^
+293 293 41 -1476 170 10 40 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Jim is here on his watch.^
+
+^
+
+Maid Marian^
+294 294 41 -1478 150 10 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Maid Marian is here trying to catch a glimpse of your butt.^
+
+^
+
+The Sheriff^
+295 295 41 -1479 170 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The Sheriff is here, picking out the spot at which to bury you.^
+
+^
+
+Merryman Stacy^
+296 296 41 -1487 80 4 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Stacy is following Merryman Greg around as always.^
+
+^
+
+Merryman Greg^
+297 297 41 -1487 100 10 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Greg is telling Merryman Stacy about his new obsession.^
+
+^
+
+Merryman Chad^
+298 298 41 -1490 120 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Chad is sitting here, playing with his lucky boiling sticks.^
+
+^
+
+Merryman Tim^
+299 299 41 -1491 140 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Tim is here anxiously awaiting his weekly drive home.^
+
+^
+
+Merryman Jason^
+300 300 41 -1492 160 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Jason is here complaining about his newest ailment.^
+
+^
+
+Merryman Mike^
+301 301 41 -1493 180 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Mike is here mumbling about not being a farmer.^
+
+^
+
+Merryman Butch^
+302 302 41 -1494 100 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Butch is here, kickboxing and antagonizing Merryman Chris.^
+
+^
+
+Merryman Sil^
+303 303 41 -1495 100 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Sil is here awaiting Amy's next command.^
+
+^
+
+Merryman Lars^
+304 304 41 -1496 140 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Lars is here, puking after completing the Century Club.^
+
+^
+
+Merryman Dan^
+305 305 41 -1497 160 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Dan says 'You just better give it back!'^
+
+^
+
+Merryman Scott^
+306 306 41 -1498 100 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Merryman Scott is here, spitting in his little sister's mouth.^
+
+^
+
+Robin Hood^
+307 307 41 -1499 250 10 40 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+The famed Robin of Hood stands here, leading his merry men.^
+
+^
+
+The Wraith^
+308 308 43 -1563 60 10 50 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x8000400000000000
+The shadowy form of a wraith swirls around you.^
+What you feel is more of a presence than a being.
+^
+
+Shazareth^
+309 309 43 -1566 99 10 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x400000000
+Shazareth the Sorcerer stands here.^
+Shazareth holds magical secrets beyond your possible comprehension.
+^
+
+The Cat^
+310 310 43 -1566 20 10 0 0 3 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x80000000000000
+A cat stares at you from the shadows.^
+The cat is as black as midnight.
+^
+
+The Elf^
+311 311 44 -1569 60 10 5 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A tall, lean elf steps quietly amid the shadows.^
+This is no cutesy Santa's Workshop type elf.
+^
+
+The Piper^
+312 312 45 -1602 50 10 0 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x8000000000
+0x00000000:0x00000000
+The Piper stands here.^
+The Piper wears a traditional Scottish kilt, but seems to be missing his pipes.
+^
+
+The Chicken^
+313 313 45 -1591 50 10 0 0 3 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Chicken Licken is here, with a worried look on his face.^
+Chicken Licken says &+C'The sky is about to fall in.'&*
+^
+
+The Locksmith^
+314 314 46 -1653 90 8 95 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0xf000000000
+A crazy-looking man stands here looking at you.^
+^
+
+The Baker^
+315 315 46 -1654 50 8 0 2 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A tall, thin baker stands here.^
+^
+
+The Lady^
+316 316 46 -1654 80 8 0 0 2 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A lady stands here looking around for something.^
+^
+
+The Child^
+317 317 46 -1650 20 4 0 0 4 0 0
+0x100000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x1000100000000000
+A small child looks very lost.^
+^
+
+The Armorer^
+318 318 46 -1651 200 10 0 10 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000000000
+A bulky armorer stands before you.^
+^
+
+The Barman^
+319 319 46 -1659 80 8 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A barman is here serving drinks.^
+^
+
+The Drunk^
+320 320 46 -1659 30 5 20 0 4 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A drunk stumbles around in front of you.^
+^
+
+The Drunk^
+321 321 46 -1659 50 5 40 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A drunk stumbles around in front of you.^
+^
+
+The Teller^
+322 322 46 -1655 50 6 0 0 0 0 0
+0x100000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000000000
+A bank teller waits here patiently.^
+^
+
+The Guard^
+323 323 46 -1657 160 8 80 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1005000000000
+The bank's security guard stands here.^
+^
+
+The Manager^
+324 324 46 -1656 100 8 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x00000000
+A chubby bank manager stands here wearing a suit.^
+^
+
+The Beast^
+325 325 47 -1661 100 15 100 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A huge, fiery beast stands before you.^
+The Beast is twelve feet tall and ripples with muscle.
+^
+
+The Wolf^
+326 326 47 -1666 100 12 100 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A^
+The wolf is large and grey.  The way he foams at the mouth makes you concerned
+that he may be rabid.  He growls at you as if he is challenging you.
+^
+
+The Flame^
+327 327 47 -1662 200 10 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A giant flame flickers here, seemingly alive.^
+The flame dances and flickers against the walls in an incandescent haze of 
+heat.  Something about the way it moves makes you think it might be alive.
+^
+
+The Efreet^
+328 328 47 -1674 120 12 30 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A huge, flaming efreet glares ferociously at you.^
+You can not make out the efreet's face, as its whole body is a flaming mass of
+fire.  You feel sure, however, that it is not pleasant.
+^
+
+The Guard^
+329 329 47 -1676 50 10 30 0 1 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A strange-looking guard watches you cautiously.^
+The guard indeed looks strange.  His body shape and features are unlike those
+of any other being you have ever seen.
+^
+
+The Lavaman^
+330 330 47 -1668 40 12 30 0 2 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A lavaman snarls harshly as he sees you.^
+His entire form is made of dark lava which has flickers of heat in it.
+^
+
+The Djinni^
+331 331 47 -1678 130 10 60 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x2000000000
+0x00000000:0x1000000000
+A huge djinni glares at you and flexes his muscles.^
+The intimidating form of Acsthad of the Fiery Plains glares at you with an
+unmistakable intolerance.
+^
+
+The Giant^
+332 332 48 -1736 140 11 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A giant snores loudly in one corner.^
+^
+
+The Hermit^
+333 333 48 -1743 60 10 0 0 5 0 0
+0x00000000 0x00000000:0x00000000:0xa000000000
+0x00000000:0x40000200000000
+A hungry, unwashed hermit sits here.^
+^
+
+The Ghoul^
+334 334 48 -1704 40 10 30 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x8000000000000000
+An evil looking ghoul skulks in the shadows.^
+^
+
+The Figure^
+335 335 48 -1705 90 14 0 0 0 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x20000000000000
+A huge magical figure stands on guard.^
+^
+
+The Ogre^
+336 336 48 -1719 40 14 30 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+A large ogre wanders past, looking for heads to break.^
+^
+
+Riatha^
+337 337 48 -1739 50 15 31 0 5 0 0
+0x00000000 0x00000000:0x00000000:0x00000000
+0x00000000:0x00000000
+Riatha The Acolyte stands arrogantly before you.^
+^
+
