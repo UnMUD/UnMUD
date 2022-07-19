@@ -5,6 +5,8 @@
 #include "colors.h"
 #include "communicate.h"
 
+static void _wiz (int level, char *text);
+
 void deafcom (void)
 {
   int a;

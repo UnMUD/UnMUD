@@ -631,7 +631,7 @@ check_pid (void)
 static void 
 get_options (int argc, char **argv)
 {
-  static void usage (void);
+  // static void usage (void);
   
   char *s;
   int x;
@@ -764,7 +764,7 @@ Where:\n\
 static void 
 main_loop (int m_socket)
 {
-  static void new_connection (int fd);
+  // static void new_connection (int fd);
   
   int w = width;
   int v;
