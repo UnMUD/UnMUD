@@ -492,7 +492,10 @@ bootstrap.o: bootstrap.c /usr/include/stdc-predef.h /usr/include/malloc.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h ..//include/kernel.h \
+ /usr/include/bits/unistd_ext.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ..//include/kernel.h \
  ..//include/_VERSION_ /usr/include/sys/param.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed/syslimits.h \
@@ -2820,7 +2823,7 @@ mud.o: mud.c /usr/include/stdc-predef.h ..//include/kernel.h \
  ..//include/verbs.h ..//include/kernel.h ..//include/stdinc.h \
  ..//include/communicate.h ..//include/sflag.h ..//include/game.h \
  ..//include/main.h ..//include/hate.h ..//include/locations.h \
- ..//include/global.h
+ ..//include/mud.h ..//include/global.h
 objsys.o: objsys.c /usr/include/stdc-predef.h ..//include/kernel.h \
  ..//include/_VERSION_ /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \

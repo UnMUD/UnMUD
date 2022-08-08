@@ -50,7 +50,6 @@ FILE * bopen (char *file)
   char magic[10], *retcode;
   char command[1200];
   char line[1200];
-  extern int errno;
 /*
   extern char *sys_errlist[];
 */

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <errno.h>
 #include "kernel.h"
 #include "stdinc.h"
 #define get_newline(f) while (getc(f) != '\n')
@@ -11,7 +12,6 @@ extern int  boot_intermud(FILE *f, char *fname);
 /*
 extern char *sys_errlist[];
 */
-extern int errno;
 
 extern char *Pflags[];
 extern char *WizLevels[];

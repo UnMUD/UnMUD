@@ -2,6 +2,8 @@ Data 29/06/2022
 
 # Ações extras para execução do MUD
 
+* Necessário instalar tcsh para que os 
+
 ## Instalação GMDB
 
 Rodando o comando ```make install```
@@ -137,6 +139,87 @@ Correção: Adição de header para função wiz ```static void _wiz (int level,
 collect2: error: ld returned 1 exit status
 make: *** [Makefile:158: ..//bin/aberd] Error 1
 ```
+Correção: Remoção da linha ```extern int errno;``` dos arquivos ```bootstrap.c```, ```mail.c```, ```misc.c``` e ```uaf.c```, e inclusão do ```include <errno.h>``` no arquivo ```bootstrap.c```.
+
+**7º erro:**
+```
+gcc -o aberd -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT actions.o admin.o board.o bootstrap.o bprintf.o calendar.o change.o clone.o commands.o communicate.o condition.o fight.o flags.o frob.o game.o hate.o log.o magic.o mail.o main.o misc.o mobile.o move.o mud.o objsys.o parse.o party.o rooms.o s_socket.o sendsys.o sflag.o timing.o uaf.o utils.o wizard.o wizlist.o writer.o zones.o  -lgdbm -lcrypt
+/usr/bin/ld: admin.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: 		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: board.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: 		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: bootstrap.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: 	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: bprintf.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: calendar.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:    multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: change.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: clone.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: commands.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: communicate.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: condition.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: fight.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: flags.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: frob.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: game.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: hate.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: log.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: magic.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: mail.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: main.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: mobile.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: move.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: mud.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: objsys.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: parse.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: rooms.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: sendsys.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: sflag.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: timing.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/timing.c:56:		 		 multiple definition of `next_event'; mud.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/global.h:86: first defined here
+/usr/bin/ld: timing.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: uaf.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: utils.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: wizard.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: wizlist.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:	 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: writer.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: zones.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15:		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
+/usr/bin/ld: main.o: in function `main':
+/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/main.c:89: warning: the `getwd' function is dangerous and should not be used.
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:158: ..//bin/aberd] Error 1
+```
+
+Correção: Adição de ```include "mud.h"``` no arquivo ```mud.c```; adição d ```extern Boolean a_new_player``` no arquivo ```mud.h```; Adição d ```extern time_t next_event;``` no arquivo ```timing.c```
+
+**8º erro:**
+O jogo não quis rodar, então segui as instruções relacionadas aos ```verbs``` e rodei o comando ```./verbgen``` na pasta ```/src```.
+
+## Rodando o Dyrt
+
+O comando ```aberd &``` citado no ```README.FIRST.DAMMIT``` não foi encontrado. Rodar o executável ```aberd```, da pasta ```/src``` teve o seguinte _output_:
+
+```
+data_dir = "../data/".
+max_players = 40.
+port = 6715.
+Do not clear syslog file.
+Debugging is on.
+Kill other mud.
+Bootstrap... ID-table & ID-counter used 8192 bytes.
+Bootstrap... 'players' used 602880 bytes.
+Bootstrap... A:actions used 61780 bytes.
+Bootstrap... Z:zones used 7856 bytes.
+Bootstrap... L:locations used 923949 bytes.
+Bootstrap... C:mobiles used 192716 bytes.
+Bootstrap... E:levels used 0 bytes.
+Bootstrap... H:hours used 0 bytes.
+Bootstrap... I:intermud.conf used 0 bytes.
+Bootstrap... O:objects used 279263 bytes.
+Bootstrap... P:pflags used 0 bytes.
+Bootstrap... V:verbs used 3200 bytes.
+Bootstrap... W:wizlist ---->Can't open W file wizlist used 0 bytes.
+
+A total of 2071644 bytes used.
+Connected to port 6715 on lucas-tkp.
+Segmentation fault (core dumped)
+```
+
 
 > **Warnings** 
 > Dps d corrigir o erro 2

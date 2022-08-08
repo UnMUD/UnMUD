@@ -53,7 +53,7 @@ int wrap_point = -1;
  *  time.                                                               *
  ***********************************************************************/
 
-time_t next_event;		/* closing time if open, opening time if closed. */
+extern time_t next_event;		/* closing time if open, opening time if closed. */
 
 
 /* Return True if the time represented by a is later then that of b :

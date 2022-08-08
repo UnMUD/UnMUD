@@ -628,3 +628,13 @@ Sun Oct 10 23:52:34: FROB: Rex by Rex: Lev = 99999, Sco = 250000, Str = 540050
 Sun Oct 10 23:56:00: SHUTDOWN by Rex
 Sun Oct 10 23:56:06: EXIT:  Kender [lev 99999, scr 0, str 85/600044]
 Sun Oct 10 23:56:36: SHUTDOWN +CRASH by Rex
+cannot open file verbs (No such file or directory)Wed Dec 31 21:00:00: Abnormal termination of mud
+cannot open file wizlist (No such file or directory)Mon Aug  8 12:01:40: --------  SYSTEM RELOAD  --------
+Mon Aug  8 12:01:44: SIGNAL: SIGSEGV[11]
+cannot open file wizlist (No such file or directory)Mon Aug  8 12:06:03: --------  SYSTEM RELOAD  --------
+Mon Aug  8 12:06:07: SIGNAL: SIGSEGV[11]
+cannot open file verbs (No such file or directory)Wed Dec 31 21:00:00: Abnormal termination of mud
+cannot open file wizlist (No such file or directory)Mon Aug  8 12:07:57: --------  SYSTEM RELOAD  --------
+Mon Aug  8 12:08:01: SIGNAL: SIGSEGV[11]
+cannot open file wizlist (No such file or directory)Mon Aug  8 12:08:41: --------  SYSTEM RELOAD  --------
+Mon Aug  8 12:08:45: SIGNAL: SIGSEGV[11]

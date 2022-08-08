@@ -4,6 +4,7 @@
 #include "machines.h"
 #include "stdinc.h"
 #include "locations.h"
+#include "mud.h"
 #ifndef R_OK
 #define R_OK 4
 #endif

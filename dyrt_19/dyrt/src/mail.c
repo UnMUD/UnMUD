@@ -641,7 +641,6 @@ void delete_mail (void)
   struct stat s;
   register int t;
   int pid;
-  extern int errno;
 
   pid = getpid ();
 

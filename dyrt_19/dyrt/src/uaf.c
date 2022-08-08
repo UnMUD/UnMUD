@@ -11,7 +11,6 @@
 #include "machines.h"
 
 GDBM_FILE dbf;
-extern int errno;
 extern char *WizLevels[];
 
 void get_gender (char *gen);

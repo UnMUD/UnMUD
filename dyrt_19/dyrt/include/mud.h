@@ -12,7 +12,7 @@ void    setup_globals(int plx);
 Boolean is_host_banned(char *hostname);
 Boolean is_player_banned(char *name);
 Boolean privileged_user (char *name);
-Boolean a_new_player;
+extern Boolean a_new_player;
 void    new_player(void);
 void    get_command(char *cmd);
 void	gc (char *w);
