@@ -1,1 +1,0 @@
-#define JMP_QUITTING 1

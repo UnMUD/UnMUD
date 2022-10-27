@@ -1,2 +1,0 @@
-convert < ../data/uaf_rand > /tmp/uaf
-mv /tmp/uaf ../data/uaf_rand

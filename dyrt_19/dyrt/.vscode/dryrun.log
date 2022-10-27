@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt'
+make: Leaving directory '/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
