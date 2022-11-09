@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/sh -f
 # this is usually called from the Makefiles...
 # it deletes all the files not needed for distribution. Be prepared
 # to enter log comments if you are using RCS and have made any changes.
