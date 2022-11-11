@@ -1,0 +1,18 @@
+     ../src/bucket.c \
+     ../src/falloc.c \
+     ../src/findkey.c \
+     ../src/gdbmerrno.c \
+     ../src/gdbmstore.c \
+     ../src/recover.c \
+     ../src/update.c \
+     ../tools/datconv.c \
+     ../tools/gdbm_dump.c \
+     ../tools/gdbm_load.c \
+     ../tools/gdbmshell.c \
+     ../tools/gdbmtool.c \
+     ../tools/gram.y \
+     ../tools/input-file.c \
+     ../tools/lex.l \
+     ../tools/parseopt.c \
+     ../tools/util.c \
+     ../tools/var.c
