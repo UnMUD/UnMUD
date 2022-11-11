@@ -192,6 +192,8 @@ O jogo não quis rodar, então segui as instruções relacionadas aos ```verbs``
 
 ## Rodando o Dyrt
 
+### Erro 1
+
 O comando ```aberd &``` citado no ```README.FIRST.DAMMIT``` não foi encontrado. Rodar o executável ```aberd```, da pasta ```/src``` teve o seguinte _output_:
 
 ```
@@ -220,6 +222,39 @@ Connected to port 6715 on lucas-tkp.
 Segmentation fault (core dumped)
 ```
 
+**Segmentation Fault**: Inicialmente estava ocorrendo na função open_gdbm, chamada a partir da função init_userfile, chamada a partir da função xmain
+**Correção**: Atualização da biblioteca gdbm da versão 1.7.3 para versão 1.23
+
+### Erro 2
+
+```
+data_dir = "../data/".
+max_players = 40.
+port = 6715.
+Do not clear syslog file.
+Debugging is on.
+Kill other mud.
+Ok, Will kill other mud (PID = 73891)
+Bootstrap... ID-table & ID-counter used 8192 bytes.
+Bootstrap... 'players' used 602880 bytes.
+Bootstrap... A:actions used 61780 bytes.
+Bootstrap... Z:zones used 7856 bytes.
+Bootstrap... L:locations used 923949 bytes.
+Bootstrap... C:mobiles used 192716 bytes.
+Bootstrap... E:levels used 0 bytes.
+Bootstrap... H:hours used 0 bytes.
+Bootstrap... I:intermud.conf used 0 bytes.
+Bootstrap... O:objects used 279263 bytes.
+Bootstrap... P:pflags used 0 bytes.
+Bootstrap... V:verbs used 3200 bytes.
+Bootstrap... W:wizlist ---->Can't open W file wizlist used 0 bytes.
+
+A total of 2071644 bytes used.
+Connected to port 6715 on ubuntu-focal.
+Segmentation fault (core dumped)
+```
+
+**Segmentation fault**: Acontecendo na função main_loop, chamada a partir da função xmain
 
 > **Warnings** 
 > Dps d corrigir o erro 2

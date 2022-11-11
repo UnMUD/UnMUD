@@ -28,6 +28,7 @@
 #include "intermud.h"
 #endif
 
+#include "uaf.h"
 
 /* Char-by-char mode fixed by ErIC */
 
@@ -364,7 +365,6 @@ xmain (int fd)
   k = 10;
   bzero (&sin, sizeof (struct sockaddr_in));
   /***/
-  
   while ((s = main_socket = make_service (mud_port, my_hostname,
 					  sizeof (my_hostname),
 					  &my_hostent, &sin)) == -4
@@ -390,7 +390,7 @@ xmain (int fd)
 #endif
   
   connect_ok (my_hostname, mud_port);
-  
+
   FD_ZERO (&sockets_fds);
   FD_ZERO (&buffer_fds);
   FD_SET (s, &sockets_fds);
@@ -400,7 +400,9 @@ xmain (int fd)
   init_calendar ();
   update_calendar ();
   boot_reset ();
+  printf("main loop %d\n", s);
   main_loop (s);
+  printf("after main loop\n");
   
 #ifdef DYRTWHO
   setup_udp();
