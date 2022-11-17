@@ -254,7 +254,8 @@ Connected to port 6715 on ubuntu-focal.
 Segmentation fault (core dumped)
 ```
 
-**Segmentation fault**: Acontecendo na função main_loop, chamada a partir da função xmain
+**Segmentation fault**: Acontecendo na função main_loop, chamada a partir da função xmain.
+Após o debug foi definido q o segmentation fault está acontecendo na função consid_move, chamada a partir da função move_mobiles, do arquivo mobile.c, chamada a partir da função on_timer, do arquivo timing.c, que é chamada na função main_loop.
 
 > **Warnings** 
 > Dps d corrigir o erro 2

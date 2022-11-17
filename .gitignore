@@ -71,4 +71,6 @@ dyrt_19/dyrt/data/reset.list
 dyrt_19/dyrt/data/verbs
 dyrt_19/dyrt/data/zones
 dyrt_19/dyrt/data/LOGS/*
+dyrt_19/dyrt/data/pid.*
+dyrt_19/dyrt/data/syslog
 
