@@ -1,10 +1,9 @@
-#ifndef __FIGHT_H__ 
-#define __FIGHT_H__ 
-
+#ifndef __FIGHT_H__
+#define __FIGHT_H__
 
 int dambyitem(int pl, int it);
 void wieldcom(void);
-void hit_player(int attacker,int victim,int weapon);
+void hit_player(int attacker, int victim, int weapon);
 void killcom(void);
 void bloodrcv(int *array, int isme);
 void breakitem(int x);

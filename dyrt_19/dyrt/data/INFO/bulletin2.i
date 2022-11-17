@@ -1,4 +1,4 @@
-		       ----- Bulletin for Wizards -----
+			   ----- Bulletin for Wizards -----
 
 
 The uaf file has been restrored!  Except for the people who were logged

@@ -624,15 +624,13 @@
             -Elmo
     ================================================================================
                          Jouni Marttila       +358 21 374624
-                        Yo-kyl{ 11 B 25       jmarttila@finabo
-                   20540 Turku, FINLAND       jmarttila@linus.abo.fi
-     
-               - University: A modern school where football is taught. -
-               - A professor is one who talks in someone else's sleep. -
-    ================================================================================
-    
-    
-    
+                        Yo-kyl{
+11 B 25 jmarttila @finabo 20540 Turku, FINLAND jmarttila @linus.abo.fi
+
+                                               - University : A modern school where football is taught.-
+                                               -A professor is one who talks in someone else 's sleep. - ==
+                                           == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+
     
     
 

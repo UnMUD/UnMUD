@@ -26,28 +26,25 @@
    something in hash order, not in any sorted order.  DBF is the dbm file
    information pointer. */
 
-datum
-dbm_firstkey (DBM *dbm)
+datum dbm_firstkey(DBM *dbm)
 {
   datum ret_val;
 
   /* Free previous dynamic memory, do actual call, and save pointer to new
      memory. */
-  ret_val = gdbm_firstkey (dbm->file);
+  ret_val = gdbm_firstkey(dbm->file);
   if (dbm->_dbm_memory.dptr != NULL)
-    free (dbm->_dbm_memory.dptr);
+    free(dbm->_dbm_memory.dptr);
   dbm->_dbm_memory = ret_val;
-  __gdbm_error_to_ndbm (dbm);
+  __gdbm_error_to_ndbm(dbm);
   /* Return the new value. */
   return ret_val;
 }
 
-
 /* NDBM Continue visiting all keys.  The next key in the sequence is returned.
    DBF is the file information pointer. */
 
-datum
-dbm_nextkey (DBM *dbm)
+datum dbm_nextkey(DBM *dbm)
 {
   datum ret_val;
 
@@ -56,12 +53,11 @@ dbm_nextkey (DBM *dbm)
     return dbm->_dbm_memory;
 
   /* Call gdbm nextkey with the old value. After that, free the old value. */
-  ret_val = gdbm_nextkey (dbm->file, dbm->_dbm_memory);
+  ret_val = gdbm_nextkey(dbm->file, dbm->_dbm_memory);
   if (dbm->_dbm_memory.dptr != NULL)
-    free (dbm->_dbm_memory.dptr);
+    free(dbm->_dbm_memory.dptr);
   dbm->_dbm_memory = ret_val;
-  __gdbm_error_to_ndbm (dbm);
+  __gdbm_error_to_ndbm(dbm);
   /* Return the new value. */
   return ret_val;
 }
-

@@ -21,14 +21,14 @@
 #include <stdio.h>
 #include <stddef.h>
 #if HAVE_SYS_FILE_H
-# include <sys/file.h>
+#include <sys/file.h>
 #endif
 #include <sys/stat.h>
 #include <stdlib.h>
 #if HAVE_STRING_H
-# include <string.h>
+#include <string.h>
 #else
-# include <strings.h>
+#include <strings.h>
 #endif
 #include <unistd.h>
 #include <fcntl.h>
@@ -36,31 +36,29 @@
 #include <limits.h>
 
 #ifndef SEEK_SET
-# define SEEK_SET        0
+#define SEEK_SET 0
 #endif
 
 #ifndef O_CLOEXEC
-# define O_CLOEXEC 0
+#define O_CLOEXEC 0
 #endif
 
 /* Default block size.  Some systems do not have blocksize in their
    stat record. This code uses the BSD blocksize from stat. */
 
 #if HAVE_STRUCT_STAT_ST_BLKSIZE
-# define STATBLKSIZE(st) (st).st_blksize
+#define STATBLKSIZE(st) (st).st_blksize
 #else
-# define STATBLKSIZE(st) 1024
+#define STATBLKSIZE(st) 1024
 #endif
 
-#if ! HAVE_STRUCT_STAT_ST_MTIM
-# if HAVE_STRUCT_STAT_ST_MTIMESPEC
-#   define st_mtim st_mtimespec
-#   define HAVE_STRUCT_STAT_ST_MTIM 1
-# endif
+#if !HAVE_STRUCT_STAT_ST_MTIM
+#if HAVE_STRUCT_STAT_ST_MTIMESPEC
+#define st_mtim st_mtimespec
+#define HAVE_STRUCT_STAT_ST_MTIM 1
+#endif
 #endif
 
 #ifndef STDERR_FILENO
-# define STDERR_FILENO 2
+#define STDERR_FILENO 2
 #endif
-
-

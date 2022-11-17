@@ -26,34 +26,31 @@
    hash bucket to find the home position of the element by taking the value
    modulo the bucket hash table size. */
 
-int
-_gdbm_hash (datum key)
+int _gdbm_hash(datum key)
 {
-  unsigned int value;	/* Used to compute the hash value.  */
-  int   index;		/* Used to cycle through random values. */
+  unsigned int value; /* Used to compute the hash value.  */
+  int index;          /* Used to cycle through random values. */
 
   /* Set the initial value from key. */
   value = 0x238F13AFu * key.dsize;
   for (index = 0; index < key.dsize; index++)
-    value = (value + (((unsigned)key.dptr[index]) << ((unsigned) index * 5 % 24))) & 0x7FFFFFFF;
+    value = (value + (((unsigned)key.dptr[index]) << ((unsigned)index * 5 % 24))) & 0x7FFFFFFF;
 
-  value = (1103515243u * value + 12345) & 0x7FFFFFFF;  
+  value = (1103515243u * value + 12345) & 0x7FFFFFFF;
 
   /* Return the value. */
-  return((int) value);
+  return ((int)value);
 }
 
-int
-_gdbm_bucket_dir (GDBM_FILE dbf, int hash)
+int _gdbm_bucket_dir(GDBM_FILE dbf, int hash)
 {
   return hash >> (GDBM_HASH_BITS - dbf->header->dir_bits);
 }
 
-void
-_gdbm_hash_key (GDBM_FILE dbf, datum key, int *hash, int *bucket, int *offset)
+void _gdbm_hash_key(GDBM_FILE dbf, datum key, int *hash, int *bucket, int *offset)
 {
-  int hashval = _gdbm_hash (key);
+  int hashval = _gdbm_hash(key);
   *hash = hashval;
-  *bucket = _gdbm_bucket_dir (dbf, hashval);
+  *bucket = _gdbm_bucket_dir(dbf, hashval);
   *offset = hashval % dbf->header->bucket_elems;
 }

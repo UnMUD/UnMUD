@@ -12,4 +12,3 @@
 #undef NO_VARARGS
 
 #endif
-

@@ -25,30 +25,29 @@
    is updated to reflect the structure of the new database before returning
    from this procedure.  */
 
-int
-gdbm_delete (GDBM_FILE dbf, datum key)
+int gdbm_delete(GDBM_FILE dbf, datum key)
 {
-  int elem_loc;		/* The location in the current hash bucket. */
-  int last_loc;		/* Last location emptied by the delete.  */
-  int home;		/* Home position of an item. */
-  bucket_element elem;  /* The element to be deleted. */
-  off_t free_adr;       /* Temporary storage for address and size. */
-  int   free_size;
+  int elem_loc;        /* The location in the current hash bucket. */
+  int last_loc;        /* Last location emptied by the delete.  */
+  int home;            /* Home position of an item. */
+  bucket_element elem; /* The element to be deleted. */
+  off_t free_adr;      /* Temporary storage for address and size. */
+  int free_size;
 
-  GDBM_ASSERT_CONSISTENCY (dbf, -1);
+  GDBM_ASSERT_CONSISTENCY(dbf, -1);
 
   /* First check to make sure this guy is a writer. */
   if (dbf->read_write == GDBM_READER)
-    {
-      GDBM_SET_ERRNO (dbf, GDBM_READER_CANT_DELETE, FALSE);
-      return -1;
-    }
-  
+  {
+    GDBM_SET_ERRNO(dbf, GDBM_READER_CANT_DELETE, FALSE);
+    return -1;
+  }
+
   /* Initialize the gdbm_errno variable. */
-  gdbm_set_errno (dbf, GDBM_NO_ERROR, FALSE);
+  gdbm_set_errno(dbf, GDBM_NO_ERROR, FALSE);
 
   /* Find the item. */
-  elem_loc = _gdbm_findkey (dbf, key, NULL, NULL);
+  elem_loc = _gdbm_findkey(dbf, key, NULL, NULL);
   if (elem_loc == -1)
     return -1;
 
@@ -62,30 +61,27 @@ gdbm_delete (GDBM_FILE dbf, datum key)
   /* Move other elements to guarantee that they can be found. */
   last_loc = elem_loc;
   elem_loc = (elem_loc + 1) % dbf->header->bucket_elems;
-  while (elem_loc != last_loc
-	 && dbf->bucket->h_table[elem_loc].hash_value != -1)
+  while (elem_loc != last_loc && dbf->bucket->h_table[elem_loc].hash_value != -1)
+  {
+    home = dbf->bucket->h_table[elem_loc].hash_value % dbf->header->bucket_elems;
+    if ((last_loc < elem_loc && (home <= last_loc || home > elem_loc)) || (last_loc > elem_loc && home <= last_loc && home > elem_loc))
+
     {
-      home = dbf->bucket->h_table[elem_loc].hash_value
-	     % dbf->header->bucket_elems;
-      if ( (last_loc < elem_loc && (home <= last_loc || home > elem_loc))
-	  || (last_loc > elem_loc && home <= last_loc && home > elem_loc))
-	
-	{
-	  dbf->bucket->h_table[last_loc] = dbf->bucket->h_table[elem_loc];
-	  dbf->bucket->h_table[elem_loc].hash_value = -1;
-	  last_loc = elem_loc;
-	}
-      elem_loc = (elem_loc + 1) % dbf->header->bucket_elems;
+      dbf->bucket->h_table[last_loc] = dbf->bucket->h_table[elem_loc];
+      dbf->bucket->h_table[elem_loc].hash_value = -1;
+      last_loc = elem_loc;
     }
+    elem_loc = (elem_loc + 1) % dbf->header->bucket_elems;
+  }
 
   /* Free the file space. */
   free_adr = elem.data_pointer;
   free_size = elem.key_size + elem.data_size;
-  if (_gdbm_free (dbf, free_adr, free_size))
+  if (_gdbm_free(dbf, free_adr, free_size))
     return -1;
 
   /* Set the flags. */
-  _gdbm_current_bucket_changed (dbf);
+  _gdbm_current_bucket_changed(dbf);
 
   /* Invalidate data cache for the current bucket. */
   dbf->cache_mru->ca_data.hash_val = -1;
@@ -93,5 +89,5 @@ gdbm_delete (GDBM_FILE dbf, datum key)
   dbf->cache_mru->ca_data.elem_loc = -1;
 
   /* Do the writes. */
-  return _gdbm_end_update (dbf);
+  return _gdbm_end_update(dbf);
 }

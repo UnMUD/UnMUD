@@ -25,10 +25,9 @@
    The file on disk is updated to reflect the structure of the new
    database before returning from this procedure.  */
 
-int
-dbm_store (DBM *dbm, datum key, datum content, int flags)
+int dbm_store(DBM *dbm, datum key, datum content, int flags)
 {
-  int rc = gdbm_store (dbm->file, key, content, flags);
-  __gdbm_error_to_ndbm (dbm);
-  return rc;
+   int rc = gdbm_store(dbm->file, key, content, flags);
+   __gdbm_error_to_ndbm(dbm);
+   return rc;
 }

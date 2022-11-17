@@ -1,5 +1,5 @@
-#ifndef __STDINC_H__ 
-#define __STDINC_H__ 
+#ifndef __STDINC_H__
+#define __STDINC_H__
 
 #include "levels.h"
 #include <stdio.h>

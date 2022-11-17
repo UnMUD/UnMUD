@@ -51,4 +51,3 @@
 
 &+BOnce completed, answers or directions may not be given away to lesser
 &+Bexperienced adventurers, although subtle hints are allowed.
-

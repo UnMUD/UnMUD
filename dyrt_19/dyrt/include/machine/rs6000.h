@@ -13,4 +13,3 @@
 #define CPP "gcc -x c -E -P -traditional -I../include %s"
 
 #endif
-

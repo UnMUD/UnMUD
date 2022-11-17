@@ -24,17 +24,14 @@
 /* Start the visit of all keys in the database.  This produces something in
    hash order, not in any sorted order.  */
 
-datum
-firstkey (void)
+datum firstkey(void)
 {
-  return dbm_firstkey (_gdbm_file);
+   return dbm_firstkey(_gdbm_file);
 }
-
 
 /* Continue visiting all keys.  The next key following KEY is returned. */
 
-datum
-nextkey (datum key)
+datum nextkey(datum key)
 {
-  return dbm_nextkey (_gdbm_file);
+   return dbm_nextkey(_gdbm_file);
 }

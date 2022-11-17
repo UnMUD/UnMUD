@@ -1,11 +1,9 @@
-#ifndef __SENDSYS_H__ 
-#define __SENDSYS_H__ 
-
-
+#ifndef __SENDSYS_H__
+#define __SENDSYS_H__
 
 /* Special destinations for send message */
-#define DEST_ALL  (-32767)
-#define NOBODY    (-32766)    /* Value of x1 and x2 below if ignored */
+#define DEST_ALL (-32767)
+#define NOBODY (-32766) /* Value of x1 and x2 below if ignored */
 
 /* Mode word for send_msg */
 /*
@@ -28,29 +26,27 @@
  */
 
 /* Mode bits for send_msg */
-#define MODE_NEG	0x80000000
-#define MODE_COLOR      0x40000000
-#define MODE_NOBATTLE	0x800000
-#define MODE_NOSLAIN     0x400000 
-#define MODE_NOWIZ        0x200000
-#define MODE_OUTDOORS     0x100000
-#define MODE_NODEAF        0x80000
-#define MODE_NODUMB        0x40000
-#define MODE_NOCRIP        0x20000
-#define MODE_QUIET         0x10000
-#define MODE_NSFLAG         0x8000
-#define MODE_SFLAG          0x4000
-#define MODE_NPFLAG           0x80
-#define MODE_PFLAG            0x40
-#define MODE_FLAGS            0x3f
+#define MODE_NEG 0x80000000
+#define MODE_COLOR 0x40000000
+#define MODE_NOBATTLE 0x800000
+#define MODE_NOSLAIN 0x400000
+#define MODE_NOWIZ 0x200000
+#define MODE_OUTDOORS 0x100000
+#define MODE_NODEAF 0x80000
+#define MODE_NODUMB 0x40000
+#define MODE_NOCRIP 0x20000
+#define MODE_QUIET 0x10000
+#define MODE_NSFLAG 0x8000
+#define MODE_SFLAG 0x4000
+#define MODE_NPFLAG 0x80
+#define MODE_PFLAG 0x40
+#define MODE_FLAGS 0x3f
 
 #define MODE_P 0 /* Pflag bit number in bits 0..5  (6 bits) */
 #define MODE_S 8 /* Sflag bit number in bits 8..13 (6 bits) */
 
-#define MS(x) ((x)<<MODE_S)
-#define MP(x) ((x)<<MODE_P)
-
-
+#define MS(x) ((x) << MODE_S)
+#define MP(x) ((x) << MODE_P)
 
 void broad(char *mesg);
 
@@ -58,28 +54,28 @@ void sillycom(char *txt);
 void sillytp(int per, char *msg);
 
 void send_g_msg(int destination,
-		char *func(int plx, int arg, char *t),
-		int  arg,
-		char *text);
+				char *func(int plx, int arg, char *t),
+				int arg,
+				char *text);
 
 #ifdef VARGS
-void sendf(int destination,char *format,...);
+void sendf(int destination, char *format, ...);
 
 void gsendf(int destination,
-	    char *func(int plx, int arg, char *text),
-	    int arg,
-	    char *format,...);
+			char *func(int plx, int arg, char *text),
+			int arg,
+			char *format, ...);
 
 void send_msg(int destination,
-	      int mode,
-	      int min,
-	      int max,
-	      int x1,
-	      int x2,
-	      char *format,...);
+			  int mode,
+			  int min,
+			  int max,
+			  int x1,
+			  int x2,
+			  char *format, ...);
 #else
-void sendf();  /* sendf(destination,format,arg1,arg2,...); */
-void gsendf(); /* gsendf(destination,func,args,format,arg1,arg2,...); */
+void sendf();	 /* sendf(destination,format,arg1,arg2,...); */
+void gsendf();	 /* gsendf(destination,func,args,format,arg1,arg2,...); */
 void send_msg(); /* send_msg(destintaion,mode,min,max,x1,x2,format,arg1...); */
 #endif
 

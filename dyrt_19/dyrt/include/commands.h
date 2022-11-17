@@ -1,6 +1,5 @@
-#ifndef __COMMANDS_H__ 
-#define __COMMANDS_H__ 
-
+#ifndef __COMMANDS_H__
+#define __COMMANDS_H__
 
 void lookcom(void);
 void examcom(void);
@@ -33,7 +32,7 @@ void qdonecom(void);
 void comparecom();
 void tiecom(void);
 void treasurecom(void);
-void becom (char *passwd);
+void becom(char *passwd);
 void wavecom(void);
 void emptycom(void);
 void wishcom(void);
@@ -56,7 +55,7 @@ void helpcom(void);
 void help2(char *cont);
 void help3(char *cont);
 void help4(char *cont);
-int  showhelp(char *verb);
+int showhelp(char *verb);
 void questcom(void);
 void infocom(void);
 void globalcom(void);
@@ -66,13 +65,13 @@ Boolean disp_file(char *fname, FILE *f);
 void flowercom(void);
 void ticklecom(void);
 void petcom(void);
-void polymorph(int plx,int turns);
-int  find_pretender(int plx);
+void polymorph(int plx, int turns);
+int find_pretender(int plx);
 void aliascom(void);
 Boolean disp_file(char *fname, FILE *f);
 void bulletincom(void);
 
-#define RES_TEST  0x01  /* Perform check for pflag */
+#define RES_TEST 0x01 /* Perform check for pflag */
 
 void rosecom(void);
 void loadcom(void);
@@ -100,4 +99,4 @@ void eehandler();
 void wizlock(void);
 void pcls();
 
-#endif   /* Add nothing past this line... */
+#endif /* Add nothing past this line... */

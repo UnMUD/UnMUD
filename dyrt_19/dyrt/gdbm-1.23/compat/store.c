@@ -24,8 +24,7 @@
    disk is updated to reflect the structure of the new database before
    returning from this procedure.  */
 
-int
-store (datum key, datum content)
+int store(datum key, datum content)
 {
-  return dbm_store (_gdbm_file, key, content, DBM_REPLACE);
+   return dbm_store(_gdbm_file, key, content, DBM_REPLACE);
 }

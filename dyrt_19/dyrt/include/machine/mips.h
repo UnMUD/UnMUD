@@ -6,12 +6,11 @@
 
 #undef HANDLER
 #undef EQ_BUG
-#define NEED_STRFTIME  /* for the life of me I couldn't find strftime on this 
-                          machine.. tho the man page exists... */
+#define NEED_STRFTIME /* for the life of me I couldn't find strftime on this \
+                         machine.. tho the man page exists... */
 #undef NEED_RANDOM
 #define USE_XPP
 #undef NO_VARARGS
-#define S_ISFIFO(m)	(((m)&S_IFMT) == S_IFIFO)
+#define S_ISFIFO(m) (((m)&S_IFMT) == S_IFIFO)
 
 #endif
-

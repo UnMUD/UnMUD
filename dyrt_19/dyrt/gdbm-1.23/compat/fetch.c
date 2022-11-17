@@ -24,8 +24,7 @@
    The pointer in the structure that is  returned is a pointer to dynamically
    allocated memory block.  This DBM interface uses the NDBM interface. */
 
-datum
-fetch (datum key)
+datum fetch(datum key)
 {
-  return dbm_fetch (_gdbm_file, key);
+   return dbm_fetch(_gdbm_file, key);
 }

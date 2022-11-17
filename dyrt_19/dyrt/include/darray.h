@@ -21,19 +21,19 @@
 #ifndef __DARRAY_H__
 #define __DARRAY_H__
 
-typedef int (comFunc)(const void*, const void*);
+typedef int(comFunc)(const void *, const void *);
 
 #ifdef __DPRIVATE
-typedef struct __darray 
+typedef struct __darray
 {
-  void 		**dataBlock;
-  int		size,step,dirty;
-  comFunc	*sortFunc,*searchFunc; 
+  void **dataBlock;
+  int size, step, dirty;
+  comFunc *sortFunc, *searchFunc;
 } darray;
 
-typedef darray* pdarray;
+typedef darray *pdarray;
 #else
-typedef char* pdarray;
+typedef char *pdarray;
 #endif
 
 /*
@@ -41,20 +41,20 @@ typedef char* pdarray;
  */
 
 pdarray newArray(int size, int step, comFunc *sort, comFunc *search);
-void    delArray(pdarray array);
+void delArray(pdarray array);
 
-void*   arrayGet(pdarray array, int index);
-void*	arraySet(pdarray array, int index, void *newVal);
-void*	arrayAdd(pdarray array, void* info);
-void*   arrayRemove(pdarray array, void* info);
-void*	arrayFind(pdarray array, void* key);
-void*	arrayLFind(pdarray array, void* key);
-void*	arrayFindWith(pdarray array, void* key, comFunc *search);
-void*	arrayLFindWith(pdarray array, void* key, comFunc *search);
-void	arraySort(pdarray array );
-int	arrayGetSize(pdarray array);
-int	arraySetSize(pdarray array, int newSize);
-int	arrayGetStep(pdarray array);
-int	arraySetStep(pdarray array, int newStep);
+void *arrayGet(pdarray array, int index);
+void *arraySet(pdarray array, int index, void *newVal);
+void *arrayAdd(pdarray array, void *info);
+void *arrayRemove(pdarray array, void *info);
+void *arrayFind(pdarray array, void *key);
+void *arrayLFind(pdarray array, void *key);
+void *arrayFindWith(pdarray array, void *key, comFunc *search);
+void *arrayLFindWith(pdarray array, void *key, comFunc *search);
+void arraySort(pdarray array);
+int arrayGetSize(pdarray array);
+int arraySetSize(pdarray array, int newSize);
+int arrayGetStep(pdarray array);
+int arraySetStep(pdarray array, int newStep);
 
 #endif

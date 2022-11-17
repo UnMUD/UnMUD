@@ -24,33 +24,32 @@
 #include <unistd.h>
 #include "gdbm.h"
 
-int
-main (int argc, char **argv)
+int main(int argc, char **argv)
 {
   GDBM_FILE dbf;
   char dbname[] = "junk.gdbm";
-  
-  assert (argc == 1);
-  
-  dbf = gdbm_open (dbname, 0, GDBM_NEWDB, 0600, NULL);
-  if (!dbf)
-    {
-      fprintf (stderr, "gdbm_open: %s; %s\n", gdbm_strerror (gdbm_errno),
-	       strerror (errno));
-      return 1;
-    }
-  if (close (gdbm_fdesc (dbf)))
-    {
-      perror ("close");
-      return 77;
-    }
 
-  if (gdbm_close (dbf))
-    {
-      fprintf (stderr, "gdbm_close: %s; %s\n", gdbm_strerror (gdbm_errno),
-	       strerror (errno));
-      return 1;
-    }
-      
+  assert(argc == 1);
+
+  dbf = gdbm_open(dbname, 0, GDBM_NEWDB, 0600, NULL);
+  if (!dbf)
+  {
+    fprintf(stderr, "gdbm_open: %s; %s\n", gdbm_strerror(gdbm_errno),
+            strerror(errno));
+    return 1;
+  }
+  if (close(gdbm_fdesc(dbf)))
+  {
+    perror("close");
+    return 77;
+  }
+
+  if (gdbm_close(dbf))
+  {
+    fprintf(stderr, "gdbm_close: %s; %s\n", gdbm_strerror(gdbm_errno),
+            strerror(errno));
+    return 1;
+  }
+
   return 0;
 }

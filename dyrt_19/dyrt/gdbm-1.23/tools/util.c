@@ -18,114 +18,111 @@
 #include <pwd.h>
 
 char *
-mkfilename (const char *dir, const char *file, const char *suf)
+mkfilename(const char *dir, const char *file, const char *suf)
 {
   char *tmp;
-  size_t dirlen = strlen (dir);
-  size_t suflen = suf ? strlen (suf) : 0;
-  size_t fillen = strlen (file);
+  size_t dirlen = strlen(dir);
+  size_t suflen = suf ? strlen(suf) : 0;
+  size_t fillen = strlen(file);
   size_t len;
-  
-  while (dirlen > 0 && dir[dirlen-1] == '/')
+
+  while (dirlen > 0 && dir[dirlen - 1] == '/')
     dirlen--;
 
   len = dirlen + (dir[0] ? 1 : 0) + fillen + suflen;
-  tmp = emalloc (len + 1);
-  memcpy (tmp, dir, dirlen);
+  tmp = emalloc(len + 1);
+  memcpy(tmp, dir, dirlen);
   if (dir[0])
     tmp[dirlen++] = '/';
-  memcpy (tmp + dirlen, file, fillen);
+  memcpy(tmp + dirlen, file, fillen);
   if (suf)
-    memcpy (tmp + dirlen + fillen, suf, suflen);
+    memcpy(tmp + dirlen + fillen, suf, suflen);
   tmp[len] = 0;
   return tmp;
 }
 
 char *
-tildexpand (char *s)
+tildexpand(char *s)
 {
   if (s[0] == '~')
-    {
-      char *p = s + 1;
-      size_t len = strcspn (p, "/");
-      struct passwd *pw;
+  {
+    char *p = s + 1;
+    size_t len = strcspn(p, "/");
+    struct passwd *pw;
 
-      if (len == 0)
-	pw = getpwuid (getuid ());
-      else
-	{
-	  char *user = emalloc (len + 1);
-	  
-	  memcpy (user, p, len);
-	  user[len] = 0;
-	  pw = getpwnam (user);
-	  free (user);
-	}
-      if (pw)
-	return mkfilename (pw->pw_dir, p + len + 1, NULL);
+    if (len == 0)
+      pw = getpwuid(getuid());
+    else
+    {
+      char *user = emalloc(len + 1);
+
+      memcpy(user, p, len);
+      user[len] = 0;
+      pw = getpwnam(user);
+      free(user);
     }
-  return estrdup (s);
+    if (pw)
+      return mkfilename(pw->pw_dir, p + len + 1, NULL);
+  }
+  return estrdup(s);
 }
 
-int
-vgetyn (const char *prompt, va_list ap)
+int vgetyn(const char *prompt, va_list ap)
 {
   int state = 0;
   int c, resp;
   va_list aq;
-  
+
   do
+  {
+    switch (state)
     {
-      switch (state)
-	{
-	case 1:
-	  if (c == ' ' || c == '\t')
-	    continue;
-	  resp = c;
-	  state = 2;
-	  /* fall through */
-	case 2:
-	  if (c == '\n')
-	    {
-	      switch (resp)
-		{
-		case 'y':
-		case 'Y':
-		  return 1;
-		case 'n':
-		case 'N':
-		  return 0;
-		default:
-		  /* TRANSLATORS: Please, don't translate 'y' and 'n'. */
-		  fprintf (stdout, "%s\n", _("Please, reply 'y' or 'n'"));
-		}
-	      /* fall through */
-	    }
-	  else
-	    break;
-	  
-	case 0:
-	  va_copy (aq, ap);
-	  vfprintf (stdout, prompt, aq);
-	  va_end (aq);
-	  fprintf (stdout, " [y/n]?");
-	  fflush (stdout);
-	  state = 1;
-	  break;
-	}
-    } while ((c = getchar ()) != EOF);
-  exit (EXIT_USAGE);
+    case 1:
+      if (c == ' ' || c == '\t')
+        continue;
+      resp = c;
+      state = 2;
+      /* fall through */
+    case 2:
+      if (c == '\n')
+      {
+        switch (resp)
+        {
+        case 'y':
+        case 'Y':
+          return 1;
+        case 'n':
+        case 'N':
+          return 0;
+        default:
+          /* TRANSLATORS: Please, don't translate 'y' and 'n'. */
+          fprintf(stdout, "%s\n", _("Please, reply 'y' or 'n'"));
+        }
+        /* fall through */
+      }
+      else
+        break;
+
+    case 0:
+      va_copy(aq, ap);
+      vfprintf(stdout, prompt, aq);
+      va_end(aq);
+      fprintf(stdout, " [y/n]?");
+      fflush(stdout);
+      state = 1;
+      break;
+    }
+  } while ((c = getchar()) != EOF);
+  exit(EXIT_USAGE);
 }
-	
-int
-getyn (const char *prompt, ...)
+
+int getyn(const char *prompt, ...)
 {
   va_list ap;
   int rc;
-  
-  va_start (ap, prompt);
-  rc = vgetyn (prompt, ap);
-  va_end (ap);
+
+  va_start(ap, prompt);
+  rc = vgetyn(prompt, ap);
+  va_end(ap);
   return rc;
 }
-	

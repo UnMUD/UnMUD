@@ -1,6 +1,5 @@
-#ifndef __WIZARD_H__ 
-#define __WIZARD_H__ 
-
+#ifndef __WIZARD_H__
+#define __WIZARD_H__
 
 void rawcom(void);
 void deletecom(void);
@@ -20,7 +19,7 @@ void talklinecom(int vb);
 void newstylecom();
 void namerawcom();
 void warnzapcom();
-void puntzapcom ();
+void puntzapcom();
 void notalklinecom(int vb);
 void setcom(void);
 void saveset(void);
@@ -50,10 +49,5 @@ void awizcom(void);
 void demigodcom(void);
 void godcom(void);
 void showtty(void);
-
-
-
-
-
 
 #endif /* Add nothing past this line... */

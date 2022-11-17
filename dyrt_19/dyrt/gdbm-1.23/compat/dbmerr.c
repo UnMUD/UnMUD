@@ -19,14 +19,12 @@
 #include "ndbm.h"
 #include "gdbmdefs.h"
 
-int
-dbm_error (DBM *dbf)
+int dbm_error(DBM *dbf)
 {
   return dbf->_dbm_errno;
 }
 
-void
-dbm_clearerr (DBM *dbf)
+void dbm_clearerr(DBM *dbf)
 {
   dbf->_dbm_errno = 0;
 }

@@ -1,6 +1,5 @@
-#ifndef __CHANGE_H__ 
-#define __CHANGE_H__ 
-
+#ifndef __CHANGE_H__
+#define __CHANGE_H__
 
 void changecom(void);
 void change_title(void);

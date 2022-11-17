@@ -21,16 +21,15 @@
 /* usage:  fdop FD [FD...]
    Return: false if any of the FDs is open, true otherwise.
 */
-int
-main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-  int fd = dup (0);
-  
+  int fd = dup(0);
+
   while (--argc)
-    {
-      int n = atoi (*++argv);
-      if (n < fd)
-	return 1;
-    }
+  {
+    int n = atoi(*++argv);
+    if (n < fd)
+      return 1;
+  }
   return 0;
 }

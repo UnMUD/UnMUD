@@ -130,10 +130,15 @@ Put in a handy little function called get_yn.  For functions where you want
 to verify something (like crash, for example), you'd do it like this:
 void chrashcom(int yn)
 {
-  if(yn == YN_INIT) { get_yn(crashcom, "Are you sure you want to crash",
-			ASSUME_NO); return; }
-  if(yn == YN_NO) return;
-  <crash stuff here>
+	if (yn == YN_INIT)
+	{
+		get_yn(crashcom, "Are you sure you want to crash",
+			   ASSUME_NO);
+		return;
+	}
+	if (yn == YN_NO)
+		return;
+<crash stuff here>
 }
 (;
 

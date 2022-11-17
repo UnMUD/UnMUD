@@ -33,23 +33,22 @@ DBM *_gdbm_file;
    cause a return value of -1.  No errors cause the return value of 0.
    NOTE: file.dir will be linked to file.pag. */
 
-int
-dbminit (char *file)
+int dbminit(char *file)
 {
   if (_gdbm_file != NULL)
-    dbm_close (_gdbm_file);
+    dbm_close(_gdbm_file);
   /* Try to open the file as a writer.  DBM never created a file. */
-  _gdbm_file = dbm_open (file, O_RDWR, 0644);
+  _gdbm_file = dbm_open(file, O_RDWR, 0644);
   /* If it was not opened, try opening it as a reader. */
   if (_gdbm_file == NULL)
+  {
+    _gdbm_file = dbm_open(file, O_RDONLY, 0644);
+    /* Did we successfully open the file? */
+    if (_gdbm_file == NULL)
     {
-      _gdbm_file = dbm_open (file, O_RDONLY, 0644);
-      /* Did we successfully open the file? */
-      if (_gdbm_file == NULL)
-	{
-          gdbm_set_errno (NULL, GDBM_FILE_OPEN_ERROR, TRUE);
-	  return -1;
-	}
+      gdbm_set_errno(NULL, GDBM_FILE_OPEN_ERROR, TRUE);
+      return -1;
     }
+  }
   return 0;
 }

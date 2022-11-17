@@ -24,8 +24,7 @@
 /* Return the file number of the DBF file.  NDBM original wanted the .dir
    file number.  Since we have only one file number, we return it. */
 
-int
-dbm_dirfno (DBM *dbm)
+int dbm_dirfno(DBM *dbm)
 {
-  return dbm->dirfd;
+   return dbm->dirfd;
 }

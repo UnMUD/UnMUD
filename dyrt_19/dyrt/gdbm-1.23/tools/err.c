@@ -14,56 +14,51 @@
    You should have received a copy of the GNU General Public License
    along with GDBM. If not, see <http://www.gnu.org/licenses/>.   */
 
-# include "autoconf.h"
-# include "gdbm.h"
-# include "gdbmapp.h"
-# include <stdio.h>
-# include <errno.h>
-# include <string.h>
+#include "autoconf.h"
+#include "gdbm.h"
+#include "gdbmapp.h"
+#include <stdio.h>
+#include <errno.h>
+#include <string.h>
 
 static void
-prerror (const char *fmt, va_list ap, const char *diag, const char *sysdiag)
+prerror(const char *fmt, va_list ap, const char *diag, const char *sysdiag)
 {
-  fprintf (stderr, "%s: ", progname);
-  vfprintf (stderr, fmt, ap);
+  fprintf(stderr, "%s: ", progname);
+  vfprintf(stderr, fmt, ap);
   if (diag)
-    fprintf (stderr, ": %s", diag);
+    fprintf(stderr, ": %s", diag);
   if (sysdiag)
-    fprintf (stderr, ": %s", sysdiag);
-  fputc ('\n', stderr);
+    fprintf(stderr, ": %s", sysdiag);
+  fputc('\n', stderr);
 }
 
-void
-verror (const char *fmt, va_list ap)
+void verror(const char *fmt, va_list ap)
 {
-  prerror (fmt, ap, NULL, NULL);
+  prerror(fmt, ap, NULL, NULL);
 }
 
-void
-error (const char *fmt, ...)
+void error(const char *fmt, ...)
 {
   va_list ap;
-  va_start (ap, fmt);
-  verror (fmt, ap);
-  va_end (ap);
+  va_start(ap, fmt);
+  verror(fmt, ap);
+  va_end(ap);
 }
 
-void
-sys_perror (int code, const char *fmt, ...)
+void sys_perror(int code, const char *fmt, ...)
 {
   va_list ap;
-  va_start (ap, fmt);
-  prerror (fmt, ap, strerror (code), NULL);
-  va_end (ap);
+  va_start(ap, fmt);
+  prerror(fmt, ap, strerror(code), NULL);
+  va_end(ap);
 }
 
-void
-gdbm_perror (const char *fmt, ...)
+void gdbm_perror(const char *fmt, ...)
 {
   va_list ap;
-  va_start (ap, fmt);
-  prerror (fmt, ap, gdbm_strerror (gdbm_errno),
-	   gdbm_syserr[gdbm_errno] ? strerror (errno) : NULL);
-  va_end (ap);
+  va_start(ap, fmt);
+  prerror(fmt, ap, gdbm_strerror(gdbm_errno),
+          gdbm_syserr[gdbm_errno] ? strerror(errno) : NULL);
+  va_end(ap);
 }
-

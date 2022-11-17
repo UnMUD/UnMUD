@@ -2,7 +2,7 @@
  * Colors.h - this file contains information related to colors on the game
  */
 typedef enum
-    {
+{
     COLOR_NORMAL_BLACK,
     COLOR_NORMAL_RED,
     COLOR_NORMAL_GREEN,
@@ -40,14 +40,12 @@ typedef enum
     COLOR_BG_HIGH_WHITE,
 
     COLOR_NONE
-    }
-    color_code_type;
+} color_code_type;
 
 static char *color_strings[] =
     {
-    "&+l", "&+r", "&+g", "&+y", "&+b", "&+m", "&+c", "&+w",
-    "&+L", "&+R", "&+G", "&+Y", "&+B", "&+M", "&+C", "&+W",
-    "&-l", "&-r", "&-g", "&-y", "&-b", "&-m", "&-c", "&-w",
-    "&-L", "&-R", "&-G", "&-Y", "&-B", "&-M", "&-C", "&-W",
-    ""
-    };
+        "&+l", "&+r", "&+g", "&+y", "&+b", "&+m", "&+c", "&+w",
+        "&+L", "&+R", "&+G", "&+Y", "&+B", "&+M", "&+C", "&+W",
+        "&-l", "&-r", "&-g", "&-y", "&-b", "&-m", "&-c", "&-w",
+        "&-L", "&-R", "&-G", "&-Y", "&-B", "&-M", "&-C", "&-W",
+        ""};

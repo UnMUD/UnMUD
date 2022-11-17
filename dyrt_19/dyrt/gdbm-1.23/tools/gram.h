@@ -31,10 +31,10 @@
    version 2.2 of Bison.  */
 
 #ifndef YY_YY_GRAM_H_INCLUDED
-# define YY_YY_GRAM_H_INCLUDED
+#define YY_YY_GRAM_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
-# define YYDEBUG 1
+#define YYDEBUG 1
 #endif
 #if YYDEBUG
 extern int yydebug;
@@ -42,26 +42,26 @@ extern int yydebug;
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-  enum yytokentype
-  {
-    T_TYPE = 258,
-    T_OFF = 259,
-    T_PAD = 260,
-    T_DEF = 261,
-    T_SET = 262,
-    T_UNSET = 263,
-    T_BOGUS = 264,
-    T_CMD = 265,
-    T_SHELL = 266,
-    T_NUM = 267,
-    T_IDENT = 268,
-    T_WORD = 269
-  };
+#define YYTOKENTYPE
+enum yytokentype
+{
+  T_TYPE = 258,
+  T_OFF = 259,
+  T_PAD = 260,
+  T_DEF = 261,
+  T_SET = 262,
+  T_UNSET = 263,
+  T_BOGUS = 264,
+  T_CMD = 265,
+  T_SHELL = 266,
+  T_NUM = 267,
+  T_IDENT = 268,
+  T_WORD = 269
+};
 #endif
 
 /* Value type.  */
-#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+#if !defined YYSTYPE && !defined YYSTYPE_IS_DECLARED
 
 union YYSTYPE
 {
@@ -69,26 +69,35 @@ union YYSTYPE
 
   char *string;
   struct kvpair *kvpair;
-  struct { struct kvpair *head, *tail; } kvlist;
-  struct { struct slist *head, *tail; } slist;
+  struct
+  {
+    struct kvpair *head, *tail;
+  } kvlist;
+  struct
+  {
+    struct slist *head, *tail;
+  } slist;
   struct gdbmarg *arg;
   struct gdbmarglist arglist;
   int num;
   struct datadef *type;
   struct dsegm *dsegm;
-  struct { struct dsegm *head, *tail; } dsegmlist;
+  struct
+  {
+    struct dsegm *head, *tail;
+  } dsegmlist;
   struct command *cmd;
 
 #line 83 "gram.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;
-# define YYSTYPE_IS_TRIVIAL 1
-# define YYSTYPE_IS_DECLARED 1
+#define YYSTYPE_IS_TRIVIAL 1
+#define YYSTYPE_IS_DECLARED 1
 #endif
 
 /* Location type.  */
-#if ! defined YYLTYPE && ! defined YYLTYPE_IS_DECLARED
+#if !defined YYLTYPE && !defined YYLTYPE_IS_DECLARED
 typedef struct YYLTYPE YYLTYPE;
 struct YYLTYPE
 {
@@ -97,13 +106,12 @@ struct YYLTYPE
   int last_line;
   int last_column;
 };
-# define YYLTYPE_IS_DECLARED 1
-# define YYLTYPE_IS_TRIVIAL 1
+#define YYLTYPE_IS_DECLARED 1
+#define YYLTYPE_IS_TRIVIAL 1
 #endif
-
 
 extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
-int yyparse (void);
+int yyparse(void);
 
 #endif /* !YY_YY_GRAM_H_INCLUDED  */

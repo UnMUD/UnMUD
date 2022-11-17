@@ -23,11 +23,10 @@
 
 /* Remove the KEYed item and the KEY from the database DBF. */
 
-int
-dbm_delete (DBM *dbm, datum key)
+int dbm_delete(DBM *dbm, datum key)
 {
-  int rc = gdbm_delete (dbm->file, key);
+  int rc = gdbm_delete(dbm->file, key);
   if (rc)
-    __gdbm_error_to_ndbm (dbm);
+    __gdbm_error_to_ndbm(dbm);
   return rc;
 }

@@ -23,13 +23,12 @@
 /* It's unclear whether dbmclose() is *always* a void function in old
    C libraries.  We use int, here. */
 
-int
-dbmclose ()
+int dbmclose()
 {
   if (_gdbm_file != NULL)
-    {
-      dbm_close (_gdbm_file);
-      _gdbm_file = NULL;
-    }
+  {
+    dbm_close(_gdbm_file);
+    _gdbm_file = NULL;
+  }
   return (0);
 }

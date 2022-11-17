@@ -28,10 +28,9 @@
 
 #define PAGSUF ".pag"
 
-int
-main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-  const char *progname = canonical_progname (argv[0]);
+  const char *progname = canonical_progname(argv[0]);
   char *dbname;
   int line = 0;
   char buf[1024];
@@ -39,114 +38,114 @@ main (int argc, char **argv)
   datum data;
   int delim = '\t';
   int data_z = 0;
-  
-  while (--argc)
-    {
-      char *arg = *++argv;
 
-      if (strcmp (arg, "-h") == 0)
-	{
-	  printf ("usage: %s [-null] [-delim=CHR] DBFILE\n", progname);
-	  exit (0);
-	}
-      else if (strcmp (arg, "-null") == 0)
-	data_z = 1;
-      else if (strncmp (arg, "-delim=", 7) == 0)
-	delim = arg[7];
-      else if (strcmp (arg, "--") == 0)
-	{
-	  --argc;
-	  ++argv;
-	  break;
-	}
-      else if (arg[0] == '-')
-	{
-	  fprintf (stderr, "%s: unknown option %s\n", progname, arg);
-	  exit (1);
-	}
-      else
-	break;
+  while (--argc)
+  {
+    char *arg = *++argv;
+
+    if (strcmp(arg, "-h") == 0)
+    {
+      printf("usage: %s [-null] [-delim=CHR] DBFILE\n", progname);
+      exit(0);
     }
+    else if (strcmp(arg, "-null") == 0)
+      data_z = 1;
+    else if (strncmp(arg, "-delim=", 7) == 0)
+      delim = arg[7];
+    else if (strcmp(arg, "--") == 0)
+    {
+      --argc;
+      ++argv;
+      break;
+    }
+    else if (arg[0] == '-')
+    {
+      fprintf(stderr, "%s: unknown option %s\n", progname, arg);
+      exit(1);
+    }
+    else
+      break;
+  }
 
   if (argc != 1)
-    {
-      fprintf (stderr, "%s: wrong arguments\n", progname);
-      exit (1);
-    }
+  {
+    fprintf(stderr, "%s: wrong arguments\n", progname);
+    exit(1);
+  }
 
   /* Check if .pag file exists. Create it if it doesn't, as DBM
      cannot do it itself. */
-  
-  dbname = malloc (strlen (*argv) + sizeof (PAGSUF));
+
+  dbname = malloc(strlen(*argv) + sizeof(PAGSUF));
   if (!dbname)
-    abort ();
+    abort();
 
-  strcat (strcpy (dbname, *argv), PAGSUF);
+  strcat(strcpy(dbname, *argv), PAGSUF);
 
-  if (access (dbname, F_OK))
+  if (access(dbname, F_OK))
+  {
+    int fd = creat(dbname, 0644);
+    if (fd < 0)
     {
-      int fd = creat (dbname, 0644);
-      if (fd < 0)
-	{
-	  fprintf (stderr, "%s: ", progname);
-	  perror (dbname);
-	  exit (1);
-	}
-      close (fd);
+      fprintf(stderr, "%s: ", progname);
+      perror(dbname);
+      exit(1);
     }
-  free (dbname);
+    close(fd);
+  }
+  free(dbname);
 
-  if (dbminit (*argv))
+  if (dbminit(*argv))
+  {
+    fprintf(stderr, "dbminit failed\n");
+    exit(1);
+  }
+
+  while (fgets(buf, sizeof buf, stdin))
+  {
+    size_t i, j;
+    size_t len = strlen(buf);
+
+    if (buf[len - 1] != '\n')
     {
-      fprintf (stderr, "dbminit failed\n");
-      exit (1);
+      fprintf(stderr, "%s: %d: line too long\n",
+              progname, line);
+      continue;
     }
 
-  while (fgets (buf, sizeof buf, stdin))
+    buf[--len] = 0;
+
+    line++;
+
+    for (i = j = 0; i < len; i++)
     {
-      size_t i, j;
-      size_t len = strlen (buf);
-
-      if (buf[len - 1] != '\n')
-	{
-	  fprintf (stderr, "%s: %d: line too long\n",
-		   progname, line);
-	  continue;
-	}
-
-      buf[--len] = 0;
-      
-      line++;
-
-      for (i = j = 0; i < len; i++)
-	{
-	  if (buf[i] == '\\')
-	    i++;
-	  else if (buf[i] == delim)
-	    break;
-	  else
-	    buf[j++] = buf[i];
-	}
-
-      if (buf[i] != delim)
-	{
-	  fprintf (stderr, "%s: %d: malformed line\n",
-		   progname, line);
-	  continue;
-	}
-      buf[j] = 0;
-      
-      key.dptr = buf;
-      key.dsize = j + data_z;
-      data.dptr = buf + i + 1;
-      data.dsize = strlen (data.dptr) + data_z;
-      if (store (key, data) != 0)
-	{
-	  fprintf (stderr, "%s: %d: item not inserted\n",
-		   progname, line);
-	  exit (1);
-	}
+      if (buf[i] == '\\')
+        i++;
+      else if (buf[i] == delim)
+        break;
+      else
+        buf[j++] = buf[i];
     }
-  dbmclose ();
-  exit (0);
+
+    if (buf[i] != delim)
+    {
+      fprintf(stderr, "%s: %d: malformed line\n",
+              progname, line);
+      continue;
+    }
+    buf[j] = 0;
+
+    key.dptr = buf;
+    key.dsize = j + data_z;
+    data.dptr = buf + i + 1;
+    data.dsize = strlen(data.dptr) + data_z;
+    if (store(key, data) != 0)
+    {
+      fprintf(stderr, "%s: %d: item not inserted\n",
+              progname, line);
+      exit(1);
+    }
+  }
+  dbmclose();
+  exit(0);
 }

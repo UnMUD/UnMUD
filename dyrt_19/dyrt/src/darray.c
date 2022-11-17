@@ -3,69 +3,70 @@
 #include <stdio.h>
 #define __DPRIVATE
 #include "darray.h"
-#define MAX(a,b) ( (a) > (b) ? (a) : (b) )
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 /*
  * __resize
  *  This function will resize a dynamic array to the given
  *  size.  Note that data may be lost if the size is shrunk.
  */
-static void __resize( pdarray array, int newSize)
+static void __resize(pdarray array, int newSize)
 {
   void **pBlock;
 
-  int copySize = ( newSize < array->size ) ? newSize : array->size;
+  int copySize = (newSize < array->size) ? newSize : array->size;
   int index;
 
-  if( newSize > 0)
+  if (newSize > 0)
+  {
+    pBlock = (void **)malloc(sizeof(void *) * newSize);
+    memcpy(pBlock, array->dataBlock, sizeof(void *) * copySize);
+    if (newSize > array->size)
     {
-      pBlock = (void**)malloc( sizeof( void* ) * newSize );
-      memcpy( pBlock, array->dataBlock, sizeof( void* ) * copySize );
-      if( newSize > array->size )
-        {
-          for( index = array->size;
-               index < newSize;
-               index++) 
-            pBlock[ index ] = NULL;
-        }
+      for (index = array->size;
+           index < newSize;
+           index++)
+        pBlock[index] = NULL;
     }
-  else pBlock = NULL;
+  }
+  else
+    pBlock = NULL;
 
-  free( array->dataBlock );
+  free(array->dataBlock);
   array->dataBlock = pBlock;
-  array->size = newSize; 
+  array->size = newSize;
 }
 
 /*
  *
  * __compact
  *
- *  This function removes all NULL valued entries from 
+ *  This function removes all NULL valued entries from
  *  an array.  Used as a precussor to sorting, and to act
  *  as garbage collection.
  */
-static void __compact( pdarray array )
+static void __compact(pdarray array)
 {
   int index, count;
 
-  for( index = 0, count = 0; index < array->size; index++ )
-    if( array->dataBlock[ index ] != NULL ) count++;
+  for (index = 0, count = 0; index < array->size; index++)
+    if (array->dataBlock[index] != NULL)
+      count++;
 
-  if( count != array->size  && count > 0)
-    {
-      void **pBlock = (void**)malloc( sizeof( void* ) * count );
-      int newIndex;
+  if (count != array->size && count > 0)
+  {
+    void **pBlock = (void **)malloc(sizeof(void *) * count);
+    int newIndex;
 
-      for( newIndex = 0, index = 0; 
-           index < array->size && newIndex < count;
-           index++ )
-        if( array->dataBlock[ index ] != NULL ) 
-          pBlock[ newIndex++ ] = array->dataBlock[ index ];
-      free( array->dataBlock );
-      array->dataBlock = pBlock;
-      array->size = count;
-    }
-  
+    for (newIndex = 0, index = 0;
+         index < array->size && newIndex < count;
+         index++)
+      if (array->dataBlock[index] != NULL)
+        pBlock[newIndex++] = array->dataBlock[index];
+    free(array->dataBlock);
+    array->dataBlock = pBlock;
+    array->size = count;
+  }
 }
 
 /*
@@ -86,26 +87,26 @@ static void __compact( pdarray array )
  *   need to do typecasting.)
  *
  *  size is the initali size of the array
- * 
+ *
  *  step is the initial increment for automatically growing the array.
  *
  */
 pdarray newArray(int size, int step, comFunc *sort, comFunc *search)
 {
   int index;
-  darray *narray = (pdarray)malloc( sizeof(darray) );
+  darray *narray = (pdarray)malloc(sizeof(darray));
 
-  narray->dataBlock = (void**)malloc( sizeof(void*) * size );
+  narray->dataBlock = (void **)malloc(sizeof(void *) * size);
   narray->size = size;
   narray->step = step;
   narray->dirty = 0;
   narray->sortFunc = sort;
   narray->searchFunc = search;
 
-  for( index = 0; index < size; index++ )
-    {
-      narray->dataBlock[ index ] = NULL;
-    }
+  for (index = 0; index < size; index++)
+  {
+    narray->dataBlock[index] = NULL;
+  }
 
   return narray;
 }
@@ -118,12 +119,12 @@ pdarray newArray(int size, int step, comFunc *sort, comFunc *search)
  */
 void delArray(pdarray array)
 {
-  if( array ) 
-    {
-      if( array->dataBlock ) 
-	free( array->dataBlock );
-      free( array );
-    }
+  if (array)
+  {
+    if (array->dataBlock)
+      free(array->dataBlock);
+    free(array);
+  }
 }
 
 /*
@@ -133,14 +134,14 @@ void delArray(pdarray array)
  *  Gets an item out of a dynamic array at the given index.
  *  Useful for stepping through an array.
  */
-void* arrayGet(pdarray array, int index)
+void *arrayGet(pdarray array, int index)
 {
-  if( index < 0 || index >= array->size )
-    {
-      return NULL;
-    }
+  if (index < 0 || index >= array->size)
+  {
+    return NULL;
+  }
 
-  return array->dataBlock[ index ];
+  return array->dataBlock[index];
 }
 
 /*
@@ -149,15 +150,15 @@ void* arrayGet(pdarray array, int index)
  *
  *  Set's the value of a given index in the array.
  */
-void* arraySet(pdarray array, int index, void *newVal)
+void *arraySet(pdarray array, int index, void *newVal)
 {
-  if( index < 0 || index >= array->size )
-    {
-      return NULL;
-    }
+  if (index < 0 || index >= array->size)
+  {
+    return NULL;
+  }
 
   array->dirty = 1;
-  return array->dataBlock[ index ] = newVal;
+  return array->dataBlock[index] = newVal;
 }
 
 /*
@@ -166,31 +167,31 @@ void* arraySet(pdarray array, int index, void *newVal)
  *
  *  Adds a value to the arary, resizing the array if necessary.
  */
-void* arrayAdd(pdarray array, void* info)
+void *arrayAdd(pdarray array, void *info)
 {
-  int index,origSize;
+  int index, origSize;
 
   array->dirty = 1;
   origSize = array->size;
 
-  if( (array->size == 0 ) || array->dataBlock[ array->size - 1 ] != NULL ) 
-    {
-      __resize( array, array->size + array->step );
-      return array->dataBlock[ origSize ] = info;
-    }
+  if ((array->size == 0) || array->dataBlock[array->size - 1] != NULL)
+  {
+    __resize(array, array->size + array->step);
+    return array->dataBlock[origSize] = info;
+  }
 
-  for( index = MAX( 0, array->size - array->step );
+  for (index = MAX(0, array->size - array->step);
        index < array->size;
-       index++ )
+       index++)
+  {
+    if (array->dataBlock[index] == NULL)
     {
-      if( array->dataBlock[ index ] == NULL ) 
-      {
-        return array->dataBlock[ index ] = info; 
-      }
+      return array->dataBlock[index] = info;
     }
-  __resize( array, array->size + array->step );
-  fprintf(stderr,"DEBUG::::::RESIZE TWO\n");
-  return array->dataBlock[ origSize ] = info;
+  }
+  __resize(array, array->size + array->step);
+  fprintf(stderr, "DEBUG::::::RESIZE TWO\n");
+  return array->dataBlock[origSize] = info;
 }
 
 /*
@@ -200,19 +201,19 @@ void* arrayAdd(pdarray array, void* info)
  *  Remove's an item from the array.
  */
 
-void* arrayRemove(pdarray array, void* info)
+void *arrayRemove(pdarray array, void *info)
 {
   int index;
 
   array->dirty = 1;
-  
-  for( index = 0;
+
+  for (index = 0;
        index < array->size;
-       index++ )
-    {
-      if( array->dataBlock[ index ] == info )
-        return array->dataBlock[ index ] = NULL;
-    } 
+       index++)
+  {
+    if (array->dataBlock[index] == info)
+      return array->dataBlock[index] = NULL;
+  }
   return info;
 }
 
@@ -228,22 +229,22 @@ void* arrayRemove(pdarray array, void* info)
  *  Note: this variant on arrayLFind uses a user defined search function.
  */
 
-void* arrayLFindWith(pdarray array, void* key, comFunc *search)
+void *arrayLFindWith(pdarray array, void *key, comFunc *search)
 {
   int index;
 
-  if( array->size > 0 )
+  if (array->size > 0)
+  {
+    for (index = 0; index < array->size; index++)
     {
-      for( index = 0; index < array->size; index++ )
-        {
-          if( array->dataBlock[ index ] )
-            {
-              if( search( &key, &( array->dataBlock[ index ] ) ) )
-                continue;
-              return array->dataBlock[ index ];
-            }
-        }
+      if (array->dataBlock[index])
+      {
+        if (search(&key, &(array->dataBlock[index])))
+          continue;
+        return array->dataBlock[index];
+      }
     }
+  }
   return NULL;
 }
 
@@ -258,22 +259,22 @@ void* arrayLFindWith(pdarray array, void* key, comFunc *search)
  *  adding an item, sorting it, looking for something, etc... )
  */
 
-void* arrayLFind(pdarray array, void* key)
+void *arrayLFind(pdarray array, void *key)
 {
   int index;
 
-  if( array->size > 0 )
+  if (array->size > 0)
+  {
+    for (index = 0; index < array->size; index++)
     {
-      for( index = 0; index < array->size; index++ )
-        {
-          if( array->dataBlock[ index ] )
-            {
-              if( array->searchFunc( &key, &( array->dataBlock[ index ] ) ) )
-                continue;
-              return array->dataBlock[ index ];
-            }
-        }
+      if (array->dataBlock[index])
+      {
+        if (array->searchFunc(&key, &(array->dataBlock[index])))
+          continue;
+        return array->dataBlock[index];
+      }
     }
+  }
   return NULL;
 }
 
@@ -285,19 +286,20 @@ void* arrayLFind(pdarray array, void* key)
  *  based on the key using the given search function.
  */
 
-void* arrayFindWith(pdarray array, void* key, comFunc *search)
+void *arrayFindWith(pdarray array, void *key, comFunc *search)
 {
-  void** temp;
+  void **temp;
 
-  if( array->size == 0 ) return NULL;
-  if( array->dirty )
+  if (array->size == 0)
+    return NULL;
+  if (array->dirty)
     arraySort(array);
-  temp = (void**)bsearch( &key,
+  temp = (void **)bsearch(&key,
                           array->dataBlock,
                           array->size,
-                          sizeof( void* ),
-                          search );
-  if( temp != NULL )
+                          sizeof(void *),
+                          search);
+  if (temp != NULL)
     return *temp;
   return NULL;
 }
@@ -309,19 +311,20 @@ void* arrayFindWith(pdarray array, void* key, comFunc *search)
  *  Does a binary search on the array to find the given item
  *  based on the key.
  */
-void* arrayFind(pdarray array, void* key)
+void *arrayFind(pdarray array, void *key)
 {
-  void** temp;
+  void **temp;
 
-  if( array->size == 0 ) return NULL;
-  if( array->dirty )
+  if (array->size == 0)
+    return NULL;
+  if (array->dirty)
     arraySort(array);
-  temp = (void**)bsearch( &key,
+  temp = (void **)bsearch(&key,
                           array->dataBlock,
                           array->size,
-                          sizeof( void* ),
-                          array->searchFunc );
-  if( temp != NULL )
+                          sizeof(void *),
+                          array->searchFunc);
+  if (temp != NULL)
     return *temp;
   return NULL;
 }
@@ -333,13 +336,13 @@ void* arrayFind(pdarray array, void* key)
  *  Sorts the given array.
  *
  */
-void arraySort(pdarray array )
+void arraySort(pdarray array)
 {
   __compact(array);
-  if( array->size > 0 )
+  if (array->size > 0)
   {
-    qsort( array->dataBlock, array->size, sizeof( void* ), 
-           array->sortFunc );
+    qsort(array->dataBlock, array->size, sizeof(void *),
+          array->sortFunc);
   }
   array->dirty = 0;
 }
@@ -363,7 +366,7 @@ int arrayGetSize(pdarray array)
  */
 int arraySetSize(pdarray array, int newSize)
 {
-  __resize( array, newSize );
+  __resize(array, newSize);
   return array->size;
 }
 
@@ -387,5 +390,5 @@ int arrayGetStep(pdarray array)
 
 int arraySetStep(pdarray array, int newStep)
 {
-  return ( array->step = newStep ) ;
+  return (array->step = newStep);
 }

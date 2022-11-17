@@ -14,22 +14,21 @@
    You should have received a copy of the GNU General Public License
    along with GDBM. If not, see <http://www.gnu.org/licenses/>.   */
 
-# include "autoconf.h"
-# include "gdbm.h"
-# include "gdbmapp.h"
-# include <string.h>
+#include "autoconf.h"
+#include "gdbm.h"
+#include "gdbmapp.h"
+#include <string.h>
 
 const char *progname;
 
-void
-set_progname (const char *arg)
+void set_progname(const char *arg)
 {
-  const char *p = strrchr (arg, '/');
+  const char *p = strrchr(arg, '/');
   if (p)
     ++p;
   else
     p = arg;
-  if (strncmp (p, "lt-", 3) == 0)
+  if (strncmp(p, "lt-", 3) == 0)
     p += 3;
   progname = p;
 }

@@ -23,8 +23,7 @@
 
 /* Return the file number of the DBF file. */
 
-int
-gdbm_fdesc(GDBM_FILE dbf)
+int gdbm_fdesc(GDBM_FILE dbf)
 {
   return (dbf->desc);
 }

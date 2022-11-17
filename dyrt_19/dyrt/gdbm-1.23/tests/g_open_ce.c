@@ -22,45 +22,42 @@
 #include <gdbm.h>
 
 char *
-ntos (int n, char *buf, size_t size)
+ntos(int n, char *buf, size_t size)
 {
   char *p = buf + size;
   *--p = 0;
   do
-    {
-      int x = n % 10;
-      *--p = '0' + x;
-      n /= 10;
-    }
-  while (n);
+  {
+    int x = n % 10;
+    *--p = '0' + x;
+    n /= 10;
+  } while (n);
   return p;
 }
 
 #ifndef O_CLOEXEC
-# define O_CLOEXEC 0
+#define O_CLOEXEC 0
 #endif
 
-int
-main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   GDBM_FILE d;
   char fdbuf[80];
 
   if (argc != 2)
-    {
-      fprintf (stderr, "usage: %s PATH-TO-FDOP\n", argv[0]);
-      return 2;
-    }
+  {
+    fprintf(stderr, "usage: %s PATH-TO-FDOP\n", argv[0]);
+    return 2;
+  }
   if (!O_CLOEXEC)
     return 77;
-  d = gdbm_open ("file.db", 0, GDBM_NEWDB|GDBM_CLOEXEC, 0600, NULL);
+  d = gdbm_open("file.db", 0, GDBM_NEWDB | GDBM_CLOEXEC, 0600, NULL);
   if (!d)
-    {
-      fprintf (stderr, "gdbm_open: %s\n", gdbm_strerror (gdbm_errno));
-      return 3;
-    }
-  execl (argv[1], "fdop",
-	 ntos (gdbm_fdesc (d), fdbuf, sizeof (fdbuf)), NULL);
+  {
+    fprintf(stderr, "gdbm_open: %s\n", gdbm_strerror(gdbm_errno));
+    return 3;
+  }
+  execl(argv[1], "fdop",
+        ntos(gdbm_fdesc(d), fdbuf, sizeof(fdbuf)), NULL);
   return 127;
 }
-  

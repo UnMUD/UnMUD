@@ -21,76 +21,75 @@
 #include "dbm.h"
 #include "progname.h"
 
-int
-main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-  const char *progname = canonical_progname (argv[0]);
+  const char *progname = canonical_progname(argv[0]);
   char *dbname;
   datum key;
   int flags = 0;
   int data_z = 0;
   int rc = 0;
-  
-  while (--argc)
-    {
-      char *arg = *++argv;
 
-      if (strcmp (arg, "-h") == 0)
-	{
-	  printf ("usage: %s [-null] [-nolock] [-nommap] [-sync] DBFILE KEY [KEY...]\n",
-		  progname);
-	  exit (0);
-	}
-      else if (strcmp (arg, "-null") == 0)
-	data_z = 1;
-      else if (strcmp (arg, "-nolock") == 0)
-	flags |= GDBM_NOLOCK;
-      else if (strcmp (arg, "-nommap") == 0)
-	flags |= GDBM_NOMMAP;
-      else if (strcmp (arg, "-sync") == 0)
-	flags |= GDBM_SYNC;
-      else if (strcmp (arg, "--") == 0)
-	{
-	  --argc;
-	  ++argv;
-	  break;
-	}
-      else if (arg[0] == '-')
-	{
-	  fprintf (stderr, "%s: unknown option %s\n", progname, arg);
-	  exit (1);
-	}
-      else
-	break;
+  while (--argc)
+  {
+    char *arg = *++argv;
+
+    if (strcmp(arg, "-h") == 0)
+    {
+      printf("usage: %s [-null] [-nolock] [-nommap] [-sync] DBFILE KEY [KEY...]\n",
+             progname);
+      exit(0);
     }
+    else if (strcmp(arg, "-null") == 0)
+      data_z = 1;
+    else if (strcmp(arg, "-nolock") == 0)
+      flags |= GDBM_NOLOCK;
+    else if (strcmp(arg, "-nommap") == 0)
+      flags |= GDBM_NOMMAP;
+    else if (strcmp(arg, "-sync") == 0)
+      flags |= GDBM_SYNC;
+    else if (strcmp(arg, "--") == 0)
+    {
+      --argc;
+      ++argv;
+      break;
+    }
+    else if (arg[0] == '-')
+    {
+      fprintf(stderr, "%s: unknown option %s\n", progname, arg);
+      exit(1);
+    }
+    else
+      break;
+  }
 
   if (argc < 2)
-    {
-      fprintf (stderr, "%s: wrong arguments\n", progname);
-      exit (1);
-    }
+  {
+    fprintf(stderr, "%s: wrong arguments\n", progname);
+    exit(1);
+  }
   dbname = *argv;
-  
-  if (dbminit (dbname))
-    {
-      fprintf (stderr, "dbminit failed\n");
-      exit (1);
-    }
+
+  if (dbminit(dbname))
+  {
+    fprintf(stderr, "dbminit failed\n");
+    exit(1);
+  }
 
   while (--argc)
+  {
+    char *arg = *++argv;
+
+    key.dptr = arg;
+    key.dsize = strlen(arg) + !!data_z;
+
+    if (delete (key))
     {
-      char *arg = *++argv;
-
-      key.dptr = arg;
-      key.dsize = strlen (arg) + !!data_z;
-
-      if (delete(key))
-	{
-	  fprintf (stderr, "%s: cannot delete %s: %s\n",
-		   progname, arg, gdbm_strerror (gdbm_errno));
-	  rc = 2;
-	}
+      fprintf(stderr, "%s: cannot delete %s: %s\n",
+              progname, arg, gdbm_strerror(gdbm_errno));
+      rc = 2;
     }
-  dbmclose ();
-  exit (rc);
+  }
+  dbmclose();
+  exit(rc);
 }

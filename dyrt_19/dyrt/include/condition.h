@@ -1,6 +1,5 @@
-#ifndef __CONDITION_H__ 
-#define __CONDITION_H__ 
-
+#ifndef __CONDITION_H__
+#define __CONDITION_H__
 
 Boolean exec_match(int i, int ob, int pl);
 Boolean check_conditions(CONDITION cond_arr[]);

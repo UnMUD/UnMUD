@@ -24,47 +24,46 @@
 /* Close the dbm file and free all memory associated with the file DBF.
  */
 
-int
-gdbm_close (GDBM_FILE dbf)
+int gdbm_close(GDBM_FILE dbf)
 {
   int syserrno;
-  
-  gdbm_set_errno (dbf, GDBM_NO_ERROR, FALSE);
+
+  gdbm_set_errno(dbf, GDBM_NO_ERROR, FALSE);
 
   if (dbf->desc != -1)
-    {
-      /* Make sure the database is all on disk. */
-      if (dbf->read_write != GDBM_READER)
-	gdbm_file_sync (dbf);
+  {
+    /* Make sure the database is all on disk. */
+    if (dbf->read_write != GDBM_READER)
+      gdbm_file_sync(dbf);
 
-      _gdbmsync_done (dbf);
-      
-      /* Close the file and free all malloced memory. */
+    _gdbmsync_done(dbf);
+
+    /* Close the file and free all malloced memory. */
 #if HAVE_MMAP
-      _gdbm_mapped_unmap (dbf);
+    _gdbm_mapped_unmap(dbf);
 #endif
-      if (dbf->file_locking)
-	_gdbm_unlock_file (dbf);
+    if (dbf->file_locking)
+      _gdbm_unlock_file(dbf);
 
-      if (close (dbf->desc))
-	GDBM_SET_ERRNO (dbf, GDBM_FILE_CLOSE_ERROR, FALSE);
-    }
+    if (close(dbf->desc))
+      GDBM_SET_ERRNO(dbf, GDBM_FILE_CLOSE_ERROR, FALSE);
+  }
 
-  syserrno = gdbm_last_syserr (dbf);
-  
-  gdbm_clear_error (dbf);
-  
-  free (dbf->name);
-  free (dbf->dir);
+  syserrno = gdbm_last_syserr(dbf);
 
-  _gdbm_cache_free (dbf);
-  
-  free (dbf->header);
-  free (dbf);
+  gdbm_clear_error(dbf);
+
+  free(dbf->name);
+  free(dbf->dir);
+
+  _gdbm_cache_free(dbf);
+
+  free(dbf->header);
+  free(dbf);
   if (gdbm_errno)
-    {
-      errno = syserrno;
-      return -1;
-    }
+  {
+    errno = syserrno;
+    return -1;
+  }
   return 0;
 }

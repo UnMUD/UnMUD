@@ -20,7 +20,7 @@
 /* #undef HAVE_CFPREFERENCESCOPYAPPVALUE */
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
-   */
+ */
 #define HAVE_DCGETTEXT 1
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
@@ -154,7 +154,7 @@
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE
-# define _DARWIN_USE_64_BIT_INODE 1
+#define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */

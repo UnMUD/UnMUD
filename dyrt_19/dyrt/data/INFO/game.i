@@ -20,4 +20,4 @@ If you die in a battle you will become a ghost. Read &+bInfo Ghosts&+r for
 details and what to do!
 
 Type &+RHELP&* for a brief list of commands, type &+RHELP [command]&* for 
-detailed help on a specific command.  Enjoy! 
+detailed help on a specific command.  Enjoy!

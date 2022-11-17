@@ -17,37 +17,36 @@
 #include "gdbmtool.h"
 
 static ssize_t
-instream_null_read (instream_t istr, char *buf, size_t size)
+instream_null_read(instream_t istr, char *buf, size_t size)
 {
   return 0;
 }
 
 static void
-instream_null_close (instream_t istr)
+instream_null_close(instream_t istr)
 {
-  free (istr);
+  free(istr);
 }
 
 static int
-instream_null_eq (instream_t a, instream_t b)
+instream_null_eq(instream_t a, instream_t b)
 {
   return a == b;
 }
 
 instream_t
-instream_null_create (void)
+instream_null_create(void)
 {
   struct instream *istr;
 
-  istr = emalloc (sizeof *istr);
+  istr = emalloc(sizeof *istr);
   istr->in_name = "null";
   istr->in_inter = 0;
   istr->in_read = instream_null_read;
   istr->in_close = instream_null_close;
   istr->in_eq = instream_null_eq;
   istr->in_history_size = NULL;
-  istr->in_history_get = NULL;  
+  istr->in_history_get = NULL;
 
   return istr;
 }
-

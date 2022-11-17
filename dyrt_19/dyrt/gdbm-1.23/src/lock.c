@@ -24,27 +24,27 @@
 #include <errno.h>
 
 #if HAVE_FLOCK
-# ifndef LOCK_SH
-#  define LOCK_SH 1
-# endif
+#ifndef LOCK_SH
+#define LOCK_SH 1
+#endif
 
-# ifndef LOCK_EX
-#  define LOCK_EX 2
-# endif
+#ifndef LOCK_EX
+#define LOCK_EX 2
+#endif
 
-# ifndef LOCK_NB
-#  define LOCK_NB 4
-# endif
+#ifndef LOCK_NB
+#define LOCK_NB 4
+#endif
 
-# ifndef LOCK_UN
-#  define LOCK_UN 8
-# endif
+#ifndef LOCK_UN
+#define LOCK_UN 8
+#endif
 #endif
 
 #if defined(F_SETLK) && defined(F_RDLCK) && defined(F_WRLCK)
-# define HAVE_FCNTL_LOCK 1
+#define HAVE_FCNTL_LOCK 1
 #else
-# define HAVE_FCNTL_LOCK 0
+#define HAVE_FCNTL_LOCK 0
 #endif
 
 #if 0
@@ -55,46 +55,44 @@ gdbm_locked (GDBM_FILE dbf)
 }
 #endif
 
-void
-_gdbm_unlock_file (GDBM_FILE dbf)
+void _gdbm_unlock_file(GDBM_FILE dbf)
 {
 #if HAVE_FCNTL_LOCK
   struct flock fl;
 #endif
 
   switch (dbf->lock_type)
-    {
-      case LOCKING_FLOCK:
+  {
+  case LOCKING_FLOCK:
 #if HAVE_FLOCK
-	flock (dbf->desc, LOCK_UN);
+    flock(dbf->desc, LOCK_UN);
 #endif
-	break;
+    break;
 
-      case LOCKING_LOCKF:
+  case LOCKING_LOCKF:
 #if HAVE_LOCKF
-	lockf (dbf->desc, F_ULOCK, (off_t)0L);
+    lockf(dbf->desc, F_ULOCK, (off_t)0L);
 #endif
-	break;
+    break;
 
-      case LOCKING_FCNTL:
+  case LOCKING_FCNTL:
 #if HAVE_FCNTL_LOCK
-	fl.l_type = F_UNLCK;
-	fl.l_whence = SEEK_SET;
-	fl.l_start = fl.l_len = (off_t)0L;
-	fcntl (dbf->desc, F_SETLK, &fl);
+    fl.l_type = F_UNLCK;
+    fl.l_whence = SEEK_SET;
+    fl.l_start = fl.l_len = (off_t)0L;
+    fcntl(dbf->desc, F_SETLK, &fl);
 #endif
-	break;
+    break;
 
-      case LOCKING_NONE:
-        break;
-    }
+  case LOCKING_NONE:
+    break;
+  }
 
   dbf->lock_type = LOCKING_NONE;
 }
 
 /* Try each supported locking mechanism. */
-int
-_gdbm_lock_file (GDBM_FILE dbf)
+int _gdbm_lock_file(GDBM_FILE dbf)
 {
 #if HAVE_FCNTL_LOCK
   struct flock fl;
@@ -103,35 +101,35 @@ _gdbm_lock_file (GDBM_FILE dbf)
 
 #if HAVE_FLOCK
   if (dbf->read_write == GDBM_READER)
-    lock_val = flock (dbf->desc, LOCK_SH + LOCK_NB);
+    lock_val = flock(dbf->desc, LOCK_SH + LOCK_NB);
   else
-    lock_val = flock (dbf->desc, LOCK_EX + LOCK_NB);
+    lock_val = flock(dbf->desc, LOCK_EX + LOCK_NB);
 
   if ((lock_val == -1) && (errno == EWOULDBLOCK))
-    {
-      dbf->lock_type = LOCKING_NONE;
-      return lock_val;
-    }
+  {
+    dbf->lock_type = LOCKING_NONE;
+    return lock_val;
+  }
   else if (lock_val != -1)
-    {
-      dbf->lock_type = LOCKING_FLOCK;
-      return lock_val;
-    }
+  {
+    dbf->lock_type = LOCKING_FLOCK;
+    return lock_val;
+  }
 #endif
 
 #if HAVE_LOCKF
   /* Mask doesn't matter for lockf. */
-  lock_val = lockf (dbf->desc, F_LOCK, (off_t)0L);
+  lock_val = lockf(dbf->desc, F_LOCK, (off_t)0L);
   if ((lock_val == -1) && (errno == EDEADLK))
-    {
-      dbf->lock_type = LOCKING_NONE;
-      return lock_val;
-    }
+  {
+    dbf->lock_type = LOCKING_NONE;
+    return lock_val;
+  }
   else if (lock_val != -1)
-    {
-      dbf->lock_type = LOCKING_LOCKF;
-      return lock_val;
-    }
+  {
+    dbf->lock_type = LOCKING_LOCKF;
+    return lock_val;
+  }
 #endif
 
 #if HAVE_FCNTL_LOCK
@@ -142,7 +140,7 @@ _gdbm_lock_file (GDBM_FILE dbf)
     fl.l_type = F_WRLCK;
   fl.l_whence = SEEK_SET;
   fl.l_start = fl.l_len = (off_t)0L;
-  lock_val = fcntl (dbf->desc, F_SETLK, &fl);
+  lock_val = fcntl(dbf->desc, F_SETLK, &fl);
 
   if (lock_val != -1)
     dbf->lock_type = LOCKING_FCNTL;

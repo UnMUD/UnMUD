@@ -24,97 +24,93 @@
 /* This procedure writes the header back to the file described by DBF. */
 
 static int
-write_header (GDBM_FILE dbf)
+write_header(GDBM_FILE dbf)
 {
-  off_t file_pos;	/* Return value for lseek. */
+  off_t file_pos; /* Return value for lseek. */
   int rc;
 
-  file_pos = gdbm_file_seek (dbf, 0L, SEEK_SET);
+  file_pos = gdbm_file_seek(dbf, 0L, SEEK_SET);
   if (file_pos != 0)
-    {
-      GDBM_SET_ERRNO2 (dbf, GDBM_FILE_SEEK_ERROR, TRUE, GDBM_DEBUG_STORE);
-      _gdbm_fatal (dbf, _("lseek error"));
-      return -1;
-    }
+  {
+    GDBM_SET_ERRNO2(dbf, GDBM_FILE_SEEK_ERROR, TRUE, GDBM_DEBUG_STORE);
+    _gdbm_fatal(dbf, _("lseek error"));
+    return -1;
+  }
 
-  rc = _gdbm_full_write (dbf, dbf->header, dbf->header->block_size);
-  
+  rc = _gdbm_full_write(dbf, dbf->header, dbf->header->block_size);
+
   if (rc)
-    {
-      GDBM_DEBUG (GDBM_DEBUG_STORE|GDBM_DEBUG_ERR,
-		  "%s: error writing header: %s",
-		  dbf->name, gdbm_db_strerror (dbf));	        
-      return -1;
-    }
+  {
+    GDBM_DEBUG(GDBM_DEBUG_STORE | GDBM_DEBUG_ERR,
+               "%s: error writing header: %s",
+               dbf->name, gdbm_db_strerror(dbf));
+    return -1;
+  }
 
   /* Sync the file if fast_write is FALSE. */
   if (dbf->fast_write == FALSE)
-    gdbm_file_sync (dbf);
+    gdbm_file_sync(dbf);
 
   return 0;
 }
-
 
 /* After all changes have been made in memory, we now write them
    all to disk. */
-int
-_gdbm_end_update (GDBM_FILE dbf)
+int _gdbm_end_update(GDBM_FILE dbf)
 {
-  off_t file_pos;	/* Return value for lseek. */
+  off_t file_pos; /* Return value for lseek. */
   int rc;
-  
+
   /* Write the changed buckets if there are any. */
-  _gdbm_cache_flush (dbf);
-  
+  _gdbm_cache_flush(dbf);
+
   /* Write the directory. */
   if (dbf->directory_changed)
+  {
+    file_pos = gdbm_file_seek(dbf, dbf->header->dir, SEEK_SET);
+    if (file_pos != dbf->header->dir)
     {
-      file_pos = gdbm_file_seek (dbf, dbf->header->dir, SEEK_SET);
-      if (file_pos != dbf->header->dir)
-	{
-	  GDBM_SET_ERRNO2 (dbf, GDBM_FILE_SEEK_ERROR, TRUE, GDBM_DEBUG_STORE);
-	  _gdbm_fatal (dbf, _("lseek error"));
-	  return -1;
-	}
-
-      rc = _gdbm_full_write (dbf, dbf->dir, dbf->header->dir_size);
-      if (rc)
-	{
-	  GDBM_DEBUG (GDBM_DEBUG_STORE|GDBM_DEBUG_ERR,
-		      "%s: error writing directory: %s",
-		      dbf->name, gdbm_db_strerror (dbf));	  	  
-	  _gdbm_fatal (dbf, gdbm_db_strerror (dbf));
-	  return -1;
-	}
-
-      dbf->directory_changed = FALSE;
-      if (!dbf->header_changed && dbf->fast_write == FALSE)
-	gdbm_file_sync (dbf);
+      GDBM_SET_ERRNO2(dbf, GDBM_FILE_SEEK_ERROR, TRUE, GDBM_DEBUG_STORE);
+      _gdbm_fatal(dbf, _("lseek error"));
+      return -1;
     }
+
+    rc = _gdbm_full_write(dbf, dbf->dir, dbf->header->dir_size);
+    if (rc)
+    {
+      GDBM_DEBUG(GDBM_DEBUG_STORE | GDBM_DEBUG_ERR,
+                 "%s: error writing directory: %s",
+                 dbf->name, gdbm_db_strerror(dbf));
+      _gdbm_fatal(dbf, gdbm_db_strerror(dbf));
+      return -1;
+    }
+
+    dbf->directory_changed = FALSE;
+    if (!dbf->header_changed && dbf->fast_write == FALSE)
+      gdbm_file_sync(dbf);
+  }
 
   /* Final write of the header. */
   if (dbf->header_changed)
-    {
-      if (write_header (dbf))
-	return -1;
-      if (_gdbm_file_extend (dbf, dbf->header->next_block))
-	return -1;
-      dbf->header_changed = FALSE;
-    }
+  {
+    if (write_header(dbf))
+      return -1;
+    if (_gdbm_file_extend(dbf, dbf->header->next_block))
+      return -1;
+    dbf->header_changed = FALSE;
+  }
 
   return 0;
 }
-
 
 /* For backward compatibility, if the caller defined fatal_err function,
    call it upon fatal error and exit. */
 
-void
-_gdbm_fatal (GDBM_FILE dbf, const char *val)
+void _gdbm_fatal(GDBM_FILE dbf, const char *val)
 {
   if (dbf && dbf->fatal_err)
-    {
-      (*dbf->fatal_err) (val);
-      exit (1);
-    }
+  {
+    (*dbf->fatal_err)(val);
+    exit(1);
+  }
 }

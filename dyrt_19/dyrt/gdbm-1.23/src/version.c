@@ -22,20 +22,18 @@
 /* Keep a string with the version number in it.
    The DIST_DATE magic below is replaced by the actual date when
    making the distdir. */
-const char * gdbm_version = "GDBM version " PACKAGE_VERSION ". "
-"04/02/2022"
+const char *gdbm_version = "GDBM version " PACKAGE_VERSION ". "
+                           "04/02/2022"
 #if defined(__STDC__) && defined(__DATE__) && defined(__TIME__)
-		" (built " __DATE__ " " __TIME__ ")"
+                           " (built " __DATE__ " " __TIME__ ")"
 #endif
-;
+    ;
 int const gdbm_version_number[3] = {
-  GDBM_VERSION_MAJOR,
-  GDBM_VERSION_MINOR,
-  GDBM_VERSION_PATCH
-};
+    GDBM_VERSION_MAJOR,
+    GDBM_VERSION_MINOR,
+    GDBM_VERSION_PATCH};
 
-int
-gdbm_version_cmp (int const a[], int const b[])
+int gdbm_version_cmp(int const a[], int const b[])
 {
   if (a[0] > b[0])
     return 1;

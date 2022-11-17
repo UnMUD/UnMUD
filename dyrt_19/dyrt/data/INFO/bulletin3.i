@@ -1,4 +1,4 @@
-                 ----- Bulletin for Powers -----
+				 ----- Bulletin for Powers -----
 
 There are some new commands to make your lives easier!  These all pertain
 to frobinification.

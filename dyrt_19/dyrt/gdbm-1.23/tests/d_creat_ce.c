@@ -24,67 +24,63 @@
 #include <ndbm.h>
 
 char *
-ntos (int n, char *buf, size_t size)
+ntos(int n, char *buf, size_t size)
 {
   char *p = buf + size;
   *--p = 0;
   do
-    {
-      int x = n % 10;
-      *--p = '0' + x;
-      n /= 10;
-    }
-  while (n);
+  {
+    int x = n % 10;
+    *--p = '0' + x;
+    n /= 10;
+  } while (n);
   return p;
 }
 
 #ifndef O_CLOEXEC
-# define O_CLOEXEC 0
+#define O_CLOEXEC 0
 #endif
 
-int
-main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-   DBM *d;
-   char fdbuf[2][80];
-   int i;
-   int flags = O_RDONLY;
-   
-   if (argc < 2)
-     {
-       fprintf (stderr, "usage: %s PATH-TO-FDOP [-creat] [-write]\n", argv[0]);
-       return 2;
-     }
+  DBM *d;
+  char fdbuf[2][80];
+  int i;
+  int flags = O_RDONLY;
 
-   for (i = 2; i < argc; i++)
-     {
-       if (strcmp (argv[i], "-creat") == 0)
-	 flags = O_RDWR|O_CREAT;
-       else if (strcmp (argv[i], "-write") == 0)
-	 flags = O_RDWR;
-       else
-	 {
-	   fprintf (stderr, "%s: unknown option: %s\n",
-		    argv[0], argv[i]);
-	   return 2;
-	 }
-       
-     }
-   
-   if (!O_CLOEXEC)
-     return 77;
-   
-   d = dbm_open ("file", flags|O_CLOEXEC, 0600);
-   if (!d)
-     {
-       perror ("dbm_open");
-       return 3;
-     }
+  if (argc < 2)
+  {
+    fprintf(stderr, "usage: %s PATH-TO-FDOP [-creat] [-write]\n", argv[0]);
+    return 2;
+  }
 
-   execl (argv[1], "fdop",
-	  ntos (dbm_pagfno (d), fdbuf[0], sizeof (fdbuf[0])),
-	  ntos (dbm_dirfno (d), fdbuf[1], sizeof (fdbuf[1])),
-	  NULL);
-   return 127;
+  for (i = 2; i < argc; i++)
+  {
+    if (strcmp(argv[i], "-creat") == 0)
+      flags = O_RDWR | O_CREAT;
+    else if (strcmp(argv[i], "-write") == 0)
+      flags = O_RDWR;
+    else
+    {
+      fprintf(stderr, "%s: unknown option: %s\n",
+              argv[0], argv[i]);
+      return 2;
+    }
+  }
+
+  if (!O_CLOEXEC)
+    return 77;
+
+  d = dbm_open("file", flags | O_CLOEXEC, 0600);
+  if (!d)
+  {
+    perror("dbm_open");
+    return 3;
+  }
+
+  execl(argv[1], "fdop",
+        ntos(dbm_pagfno(d), fdbuf[0], sizeof(fdbuf[0])),
+        ntos(dbm_dirfno(d), fdbuf[1], sizeof(fdbuf[1])),
+        NULL);
+  return 127;
 }
-

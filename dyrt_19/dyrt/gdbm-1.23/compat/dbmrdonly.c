@@ -23,8 +23,7 @@
 
 /* not much of a routine, but should be a function for compatibility. */
 
-int
-dbm_rdonly (DBM *dbm)
+int dbm_rdonly(DBM *dbm)
 {
   return (dbm->file->read_write == GDBM_READER);
 }

@@ -25,18 +25,17 @@
    KEY. The pointer in the structure that is  returned is a pointer to
    dynamically allocated memory block.  */
 
-datum
-dbm_fetch (DBM *dbm, datum key)
+datum dbm_fetch(DBM *dbm, datum key)
 {
-  datum  ret_val;		/* The return value. */
+   datum ret_val; /* The return value. */
 
-  /* Free previous dynamic memory, do actual call, and save pointer to new
-     memory. */
-  ret_val = gdbm_fetch (dbm->file, key);
-  if (dbm->_dbm_fetch_val != NULL)
-    free (dbm->_dbm_fetch_val);
-  dbm->_dbm_fetch_val = ret_val.dptr;
-  __gdbm_error_to_ndbm (dbm);
-  /* Return the new value. */
-  return ret_val;
+   /* Free previous dynamic memory, do actual call, and save pointer to new
+      memory. */
+   ret_val = gdbm_fetch(dbm->file, key);
+   if (dbm->_dbm_fetch_val != NULL)
+      free(dbm->_dbm_fetch_val);
+   dbm->_dbm_fetch_val = ret_val.dptr;
+   __gdbm_error_to_ndbm(dbm);
+   /* Return the new value. */
+   return ret_val;
 }

@@ -24,8 +24,7 @@
 /* Return the file number of the DBF file.  NDBM original wanted the .pag
    file number.  Since we have only one file number, we return it. */
 
-int
-dbm_pagfno (DBM *dbm)
+int dbm_pagfno(DBM *dbm)
 {
-  return dbm->file->desc;
+   return dbm->file->desc;
 }

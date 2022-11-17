@@ -21,99 +21,97 @@
 #include "dbm.h"
 #include "progname.h"
 
-void
-print_key (FILE *fp, datum key, int delim)
+void print_key(FILE *fp, datum key, int delim)
 {
   size_t i;
-  
+
   for (i = 0; i < key.dsize && key.dptr[i]; i++)
-    {
-      if (key.dptr[i] == delim || key.dptr[i] == '\\')
-	fputc ('\\', fp);
-      fputc (key.dptr[i], fp);
-    }
+  {
+    if (key.dptr[i] == delim || key.dptr[i] == '\\')
+      fputc('\\', fp);
+    fputc(key.dptr[i], fp);
+  }
 }
 
-int
-main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-  const char *progname = canonical_progname (argv[0]);
+  const char *progname = canonical_progname(argv[0]);
   char *dbname;
   datum key;
   datum data;
   int data_z = 0;
   int delim = 0;
   int rc = 0;
-  
-  while (--argc)
-    {
-      char *arg = *++argv;
 
-      if (strcmp (arg, "-h") == 0)
-	{
-	  printf ("usage: %s [-null] [-delim=CHR] DBFILE KEY [KEY...]\n",
-		  progname);
-	  exit (0);
-	}
-      else if (strcmp (arg, "-null") == 0)
-	data_z = 1;
-      else if (strncmp (arg, "-delim=", 7) == 0)
-	delim = arg[7];
-      else if (strcmp (arg, "--") == 0)
-	{
-	  --argc;
-	  ++argv;
-	  break;
-	}
-      else if (arg[0] == '-')
-	{
-	  fprintf (stderr, "%s: unknown option %s\n", progname, arg);
-	  exit (1);
-	}
-      else
-	break;
+  while (--argc)
+  {
+    char *arg = *++argv;
+
+    if (strcmp(arg, "-h") == 0)
+    {
+      printf("usage: %s [-null] [-delim=CHR] DBFILE KEY [KEY...]\n",
+             progname);
+      exit(0);
     }
+    else if (strcmp(arg, "-null") == 0)
+      data_z = 1;
+    else if (strncmp(arg, "-delim=", 7) == 0)
+      delim = arg[7];
+    else if (strcmp(arg, "--") == 0)
+    {
+      --argc;
+      ++argv;
+      break;
+    }
+    else if (arg[0] == '-')
+    {
+      fprintf(stderr, "%s: unknown option %s\n", progname, arg);
+      exit(1);
+    }
+    else
+      break;
+  }
 
   if (argc < 2)
-    {
-      fprintf (stderr, "%s: wrong arguments\n", progname);
-      exit (1);
-    }
+  {
+    fprintf(stderr, "%s: wrong arguments\n", progname);
+    exit(1);
+  }
   dbname = *argv;
 
-  if (dbminit (dbname))
-    {
-      fprintf (stderr, "dbminit failed\n");
-      exit (1);
-    }
+  if (dbminit(dbname))
+  {
+    fprintf(stderr, "dbminit failed\n");
+    exit(1);
+  }
 
   while (--argc)
+  {
+    char *arg = *++argv;
+
+    key.dptr = arg;
+    key.dsize = strlen(arg) + !!data_z;
+
+    data = fetch(key);
+    if (data.dptr == NULL)
     {
-      char *arg = *++argv;
-
-      key.dptr = arg;
-      key.dsize = strlen (arg) + !!data_z;
-
-      data = fetch (key);
-      if (data.dptr == NULL)
-	{
-	  rc = 2;
-	  fprintf (stderr, "%s: ", progname);
-	  print_key (stderr, key, delim);
-	  fprintf (stderr, ": not found\n");
-	  continue;
-	}
-      if (delim)
-	{
-	  print_key (stdout, key, delim);
-	  fputc (delim, stdout);
-	}
-
-      fwrite (data.dptr, data.dsize - !!data_z, 1, stdout);
-      
-      fputc ('\n', stdout);
+      rc = 2;
+      fprintf(stderr, "%s: ", progname);
+      print_key(stderr, key, delim);
+      fprintf(stderr, ": not found\n");
+      continue;
+    }
+    if (delim)
+    {
+      print_key(stdout, key, delim);
+      fputc(delim, stdout);
     }
 
-  dbmclose ();
-  exit (rc);
+    fwrite(data.dptr, data.dsize - !!data_z, 1, stdout);
+
+    fputc('\n', stdout);
+  }
+
+  dbmclose();
+  exit(rc);
 }

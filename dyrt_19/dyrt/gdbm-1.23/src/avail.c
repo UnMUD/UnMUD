@@ -20,7 +20,7 @@
 #include "gdbmdefs.h"
 
 static int
-avail_comp (void const *a, void const *b)
+avail_comp(void const *a, void const *b)
 {
   avail_elem const *ava = a;
   avail_elem const *avb = b;
@@ -46,62 +46,52 @@ avail_comp (void const *a, void const *b)
    is essential for people to be able to use their existing databases.
 */
 static int
-gdbm_avail_table_valid_p (GDBM_FILE dbf, avail_elem *av, int count)
+gdbm_avail_table_valid_p(GDBM_FILE dbf, avail_elem *av, int count)
 {
   off_t prev = 0;
   int i;
   int needs_sorting = 0;
   avail_elem *p = av;
-  
+
   prev = 0;
   for (i = 0; i < count; i++, p++)
-    {
-      if (!(p->av_adr >= dbf->header->bucket_size
-	    && off_t_sum_ok (p->av_adr, p->av_size)
-	    && p->av_adr + p->av_size <= dbf->header->next_block))
-	return 0;
-      if (p->av_size < prev)
-	needs_sorting = 1;
-      prev = p->av_size;
-    }
+  {
+    if (!(p->av_adr >= dbf->header->bucket_size && off_t_sum_ok(p->av_adr, p->av_size) && p->av_adr + p->av_size <= dbf->header->next_block))
+      return 0;
+    if (p->av_size < prev)
+      needs_sorting = 1;
+    prev = p->av_size;
+  }
 
   if (needs_sorting && dbf->read_write)
-    {
-      GDBM_DEBUG (GDBM_DEBUG_ERR, "%s", "restoring sort order");
-      qsort (av, count, sizeof av[0], avail_comp);
-    }
-  
+  {
+    GDBM_DEBUG(GDBM_DEBUG_ERR, "%s", "restoring sort order");
+    qsort(av, count, sizeof av[0], avail_comp);
+  }
+
   return 1;
 }
 
-int
-gdbm_avail_block_validate (GDBM_FILE dbf, avail_block *avblk, size_t size)
+int gdbm_avail_block_validate(GDBM_FILE dbf, avail_block *avblk, size_t size)
 {
-  if (!(size > sizeof (avail_block)
-	&& (avblk->size > 1 && avblk->count >= 0 && avblk->count <= avblk->size)
-	&& ((size - sizeof (avail_block)) / sizeof (avail_elem) + 1) >= avblk->count
-	&& gdbm_avail_table_valid_p (dbf, avblk->av_table, avblk->count)))
-    {
-      GDBM_SET_ERRNO (dbf, GDBM_BAD_AVAIL, TRUE);
-      return -1;
-    }
+  if (!(size > sizeof(avail_block) && (avblk->size > 1 && avblk->count >= 0 && avblk->count <= avblk->size) && ((size - sizeof(avail_block)) / sizeof(avail_elem) + 1) >= avblk->count && gdbm_avail_table_valid_p(dbf, avblk->av_table, avblk->count)))
+  {
+    GDBM_SET_ERRNO(dbf, GDBM_BAD_AVAIL, TRUE);
+    return -1;
+  }
   return 0;
 }
 
-int
-gdbm_bucket_avail_table_validate (GDBM_FILE dbf, hash_bucket *bucket)
+int gdbm_bucket_avail_table_validate(GDBM_FILE dbf, hash_bucket *bucket)
 {
-  if (!(bucket->av_count >= 0
-	&& bucket->av_count <= BUCKET_AVAIL
-	&& gdbm_avail_table_valid_p (dbf, bucket->bucket_avail,
-				     bucket->av_count)))
-    {
-      GDBM_SET_ERRNO (dbf, GDBM_BAD_AVAIL, TRUE);
-      return -1;
-    }
+  if (!(bucket->av_count >= 0 && bucket->av_count <= BUCKET_AVAIL && gdbm_avail_table_valid_p(dbf, bucket->bucket_avail, bucket->av_count)))
+  {
+    GDBM_SET_ERRNO(dbf, GDBM_BAD_AVAIL, TRUE);
+    return -1;
+  }
   return 0;
 }
-
+
 struct off_map
 {
   off_t *map_base;
@@ -109,36 +99,39 @@ struct off_map
   size_t map_max;
 };
 
-#define OFF_MAP_INITIALIZER { NULL, 0, 0 }
+#define OFF_MAP_INITIALIZER \
+  {                         \
+    NULL, 0, 0              \
+  }
 
 static void
-off_map_free (struct off_map *map)
+off_map_free(struct off_map *map)
 {
-  free (map->map_base);
+  free(map->map_base);
 }
 
 static int
-off_map_expand (struct off_map *map)
+off_map_expand(struct off_map *map)
 {
   size_t n = map->map_max;
   void *p;
-  
-  if (!map->map_base)
-    {
-      if (!n)
-	n = 64;
-    }
-  else
-    {
-      if (SIZE_T_MAX / 3 * 2 / sizeof (map->map_base[0]) <= n)
-	{
-	  errno = ENOMEM;
-	  return -1;
-	}
-      n += (n + 1) / 2;
-    }
 
-  p = realloc (map->map_base, n * sizeof (map->map_base[0]));
+  if (!map->map_base)
+  {
+    if (!n)
+      n = 64;
+  }
+  else
+  {
+    if (SIZE_T_MAX / 3 * 2 / sizeof(map->map_base[0]) <= n)
+    {
+      errno = ENOMEM;
+      return -1;
+    }
+    n += (n + 1) / 2;
+  }
+
+  p = realloc(map->map_base, n * sizeof(map->map_base[0]));
   if (!p)
     return -1;
   map->map_base = p;
@@ -147,38 +140,38 @@ off_map_expand (struct off_map *map)
 }
 
 static int
-off_map_lookup (struct off_map *map, off_t n)
+off_map_lookup(struct off_map *map, off_t n)
 {
   ssize_t lo, hi, mid;
 
   if (map->map_size)
+  {
+    lo = 0;
+    hi = map->map_size - 1;
+    while (lo <= hi)
     {
-      lo = 0;
-      hi = map->map_size - 1;
-      while (lo <= hi)
-	{
-	  mid = (lo + hi) / 2;
-	  if (map->map_base[mid] > n)
-	    hi = mid - 1;
-	  else if (map->map_base[mid] < n)
-	    lo = mid + 1;
-	  else
-	    return GDBM_CANNOT_REPLACE;
-	}
+      mid = (lo + hi) / 2;
+      if (map->map_base[mid] > n)
+        hi = mid - 1;
+      else if (map->map_base[mid] < n)
+        lo = mid + 1;
+      else
+        return GDBM_CANNOT_REPLACE;
     }
+  }
   else
     hi = -1;
 
   if (map->map_size == map->map_max)
-    {
-      if (off_map_expand (map))
-	return GDBM_MALLOC_ERROR;
-    }
+  {
+    if (off_map_expand(map))
+      return GDBM_MALLOC_ERROR;
+  }
 
   hi++;
   if (map->map_size > hi)
-    memmove (map->map_base + hi + 1, map->map_base + hi,
-	     (map->map_size - hi) * sizeof (map->map_base[0]));
+    memmove(map->map_base + hi + 1, map->map_base + hi,
+            (map->map_size - hi) * sizeof(map->map_base[0]));
   map->map_base[hi] = n;
   map->map_size++;
   return GDBM_NO_ERROR;
@@ -203,75 +196,73 @@ off_map_lookup (struct off_map *map, off_t n)
  * The case (2) makes this function useful for detecting loops in the
  * avail stack.
  */
-int
-gdbm_avail_traverse (GDBM_FILE dbf,
-		     int (*cb) (avail_block *, off_t, void *), void *data)
+int gdbm_avail_traverse(GDBM_FILE dbf,
+                        int (*cb)(avail_block *, off_t, void *), void *data)
 {
   avail_block *blk;
   size_t size;
   off_t n;
   struct off_map map = OFF_MAP_INITIALIZER;
   int rc = 0;
-  
-  GDBM_ASSERT_CONSISTENCY (dbf, -1);
-  if (gdbm_avail_block_validate (dbf, dbf->avail, dbf->avail_size))
+
+  GDBM_ASSERT_CONSISTENCY(dbf, -1);
+  if (gdbm_avail_block_validate(dbf, dbf->avail, dbf->avail_size))
     return -1;
 
-  if (off_map_lookup (&map, GDBM_HEADER_AVAIL_OFFSET (dbf)))
-    {
-      GDBM_SET_ERRNO (dbf, GDBM_MALLOC_ERROR, FALSE);
-      return -1;
-    }
-      
-  size = ((((size_t)dbf->avail->size * sizeof (avail_elem)) >> 1)
-	  + sizeof (avail_block));
-  blk = malloc (size);
+  if (off_map_lookup(&map, GDBM_HEADER_AVAIL_OFFSET(dbf)))
+  {
+    GDBM_SET_ERRNO(dbf, GDBM_MALLOC_ERROR, FALSE);
+    return -1;
+  }
+
+  size = ((((size_t)dbf->avail->size * sizeof(avail_elem)) >> 1) + sizeof(avail_block));
+  blk = malloc(size);
   if (!blk)
+  {
+    GDBM_SET_ERRNO(dbf, GDBM_MALLOC_ERROR, FALSE);
+    off_map_free(&map);
+    return -1;
+  }
+
+  if (!(cb && cb(dbf->avail, 0, data)))
+  {
+    n = dbf->avail->next_block;
+    while (n)
     {
-      GDBM_SET_ERRNO (dbf, GDBM_MALLOC_ERROR, FALSE);
-      off_map_free (&map);
-      return -1;
-    }
+      rc = off_map_lookup(&map, n);
+      if (rc != GDBM_NO_ERROR)
+      {
+        if (rc == GDBM_CANNOT_REPLACE)
+          GDBM_SET_ERRNO(dbf, GDBM_BAD_AVAIL, TRUE);
+        else
+          GDBM_SET_ERRNO(dbf, rc, FALSE);
+        rc = -1;
+        break;
+      }
 
-  if (!(cb && cb (dbf->avail, 0, data)))
-    {  
-      n = dbf->avail->next_block;
-      while (n)
-	{
-	  rc = off_map_lookup (&map, n);
-	  if (rc != GDBM_NO_ERROR)
-	    {
-	      if (rc == GDBM_CANNOT_REPLACE)
-		GDBM_SET_ERRNO (dbf, GDBM_BAD_AVAIL, TRUE);
-	      else
-		GDBM_SET_ERRNO (dbf, rc, FALSE);
-	      rc = -1;
-	      break;
-	    }
-	  
-	  if (gdbm_file_seek (dbf, n, SEEK_SET) != n)
-	    {
-	      GDBM_SET_ERRNO (dbf, GDBM_FILE_SEEK_ERROR, FALSE);
-	      rc = -1;
-	      break;
-	    }
+      if (gdbm_file_seek(dbf, n, SEEK_SET) != n)
+      {
+        GDBM_SET_ERRNO(dbf, GDBM_FILE_SEEK_ERROR, FALSE);
+        rc = -1;
+        break;
+      }
 
-	  if (_gdbm_avail_block_read (dbf, blk, size))
-	    {
-	      rc = -1;
-	      break;
-	    }
-	  
-	  if (cb && cb (blk, n, data))
-	    break;
-	  
-	  n = blk->next_block;
-	}
+      if (_gdbm_avail_block_read(dbf, blk, size))
+      {
+        rc = -1;
+        break;
+      }
+
+      if (cb && cb(blk, n, data))
+        break;
+
+      n = blk->next_block;
     }
-  
-  free (blk);
-  off_map_free (&map);
-  
+  }
+
+  free(blk);
+  off_map_free(&map);
+
   return rc;
 }
 
@@ -283,13 +274,7 @@ gdbm_avail_traverse (GDBM_FILE dbf,
  *
  * On success, returns 0.  On error, sets GDBM errno and returns -1.
  */
-int
-gdbm_avail_verify (GDBM_FILE dbf)
+int gdbm_avail_verify(GDBM_FILE dbf)
 {
-  return gdbm_avail_traverse (dbf, NULL, NULL);
+  return gdbm_avail_traverse(dbf, NULL, NULL);
 }
-
-
-
-
-

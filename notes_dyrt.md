@@ -2,20 +2,22 @@ Data 29/06/2022
 
 # Ações extras para execução do MUD
 
-* Necessário instalar tcsh para que os 
+- Necessário instalar tcsh para que os
 
 ## Instalação GMDB
 
-Rodando o comando ```make install```
+Rodando o comando `make install`
 
-**1º erro:** 
+**1º erro:**
+
 ```/usr/bin/install -c -m 644 ./gdbm.3 /usr/local/man/man3/gdbm.3
 /usr/bin/install: cannot create regular file '/usr/local/man/man3/gdbm.3': No such file or directory
 ```
 
 Correção: Criação da pasta man3
 
-**2º erro:** 
+**2º erro:**
+
 ```
 /usr/bin/install -c -m 644 ./gdbm.info /usr/local/info/gdbm.info
 /usr/bin/install: cannot create regular file '/usr/local/info/gdbm.info': No such file or directory
@@ -23,9 +25,10 @@ Correção: Criação da pasta man3
 
 Correção: Criação da pasta info
 
-Rodando o comando ```make progs```
+Rodando o comando `make progs`
 
-**3º erro:** 
+**3º erro:**
+
 ```
 /usr/bin/ld: tndbm.o: in function 'main':
 tndbm.c:(.text+0x1b5): warning: the 'gets' function is dangerous and should not be used.
@@ -44,12 +47,13 @@ tndbm.c:(.text+0x1b5): warning: the 'gets' function is dangerous and should not 
 
 Não solucionado
 
-Rodando o comando ```sudo make install-compat```
+Rodando o comando `sudo make install-compat`
 
-**4º erro:** 
+**4º erro:**
+
 ```
 /usr/bin/install -c -m 644 ./dbm.h /usr/local/include/dbm.h
-/usr/bin/install -c -m 644 
+/usr/bin/install -c -m 644
 /usr/bin/install: missing file operand
 Try '/usr/bin/install --help' for more information.
 ```
@@ -58,11 +62,12 @@ Não solucionado
 
 ## Instação do Dyrt
 
-```make depend``` funcionou corretamente
+`make depend` funcionou corretamente
 
-Rodando o comando ```make```
+Rodando o comando `make`
 
 **1º erro:**
+
 ```
 generate.c: In function ‘make_verbs’:
 generate.c:104:18: error: ‘sys_errlist’ undeclared (first use in this function)
@@ -77,23 +82,25 @@ generate.c:2293:18: error: ‘sys_errlist’ undeclared (first use in this funct
       |                  ^~~~~~~~~~~
 ```
 
-Correção: Substituição do ```sys_errlist[errno]``` por ```strerror(errno)```. ```sys_errlist``` está depreciado
+Correção: Substituição do `sys_errlist[errno]` por `strerror(errno)`. `sys_errlist` está depreciado
 
-**2º erro:** 
+**2º erro:**
+
 ```
 gcc -o ..//bin/generate -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT generate.o -lgdbm -lcrypt
 Regenerating World....
 ..//bin/generate data ../
 (*) Generating dyrt userfiles...
 
-sh: line 1: //lib/cpp: No such file or directory                               
+sh: line 1: //lib/cpp: No such file or directory
 
 Zone not found: limbo in file ..//data/WORLD/limbo.zone.
 ```
 
-Correção: Atualização da constante ```#define CPP "//usr/bin/cpp -P -traditional -I ../include %s"``` no arquivo ```/include/machine/linux.h```
+Correção: Atualização da constante `#define CPP "//usr/bin/cpp -P -traditional -I ../include %s"` no arquivo `/include/machine/linux.h`
 
 **3º erro:**
+
 ```
 gcc -DDEBUG -g -O4 -I../include/ -DLINUX -DREBOOT   -c -o bootstrap.o bootstrap.c
 bootstrap.c: In function ‘bootstrap’:
@@ -104,11 +111,12 @@ bootstrap.c:68:31: note: each undeclared identifier is reported only once for ea
 make: *** [<builtin>: bootstrap.o] Error 1
 ```
 
-Correção: Substituição do ```sys_errlist[errno]``` por ```strerror(errno)```. ```sys_errlist``` está depreciado
+Correção: Substituição do `sys_errlist[errno]` por `strerror(errno)`. `sys_errlist` está depreciado
 
-> Dei um replace all em ```sys_errlist[errno]``` e substitui por ```strerror(errno)```
+> Dei um replace all em `sys_errlist[errno]` e substitui por `strerror(errno)`
 
 **4º erro:**
+
 ```
 main.c: In function ‘get_options’:
 main.c:634:15: error: invalid storage class for function ‘usage’
@@ -120,9 +128,10 @@ main.c:767:15: error: invalid storage class for function ‘new_connection’
       |               ^~~~~~~~~~~~~~
 ```
 
-Correção: Aparentemente as funções ```usage``` e ```new_connection``` já estão declaradas no header (linhas 40 e 45), então eu comentei a redeclaração que estava sendo feita dentro das funções (linhas 634 e 767)
+Correção: Aparentemente as funções `usage` e `new_connection` já estão declaradas no header (linhas 40 e 45), então eu comentei a redeclaração que estava sendo feita dentro das funções (linhas 634 e 767)
 
 **5º erro:**
+
 ```
 sflag.c:565:1: error: static declaration of ‘_wiz’ follows non-static declaration
 sflag.c:522:3: note: previous implicit declaration of ‘_wiz’ with type ‘void(int,  char *)’
@@ -130,18 +139,21 @@ sflag.c:522:3: note: previous implicit declaration of ‘_wiz’ with type ‘vo
       |   ^~~~
 ```
 
-Correção: Adição de header para função wiz ```static void _wiz (int level, char *text);``` no arquivo ```sflag.c```
+Correção: Adição de header para função wiz `static void _wiz (int level, char *text);` no arquivo `sflag.c`
 
 **6º erro:**
+
 ```
 /usr/bin/ld: errno: TLS definition in /usr/lib/libc.so.6 section .tbss mismatches non-TLS reference in bootstrap.o
 /usr/bin/ld: /usr/lib/libc.so.6: error adding symbols: bad value
 collect2: error: ld returned 1 exit status
 make: *** [Makefile:158: ..//bin/aberd] Error 1
 ```
-Correção: Remoção da linha ```extern int errno;``` dos arquivos ```bootstrap.c```, ```mail.c```, ```misc.c``` e ```uaf.c```, e inclusão do ```include <errno.h>``` no arquivo ```bootstrap.c```.
+
+Correção: Remoção da linha `extern int errno;` dos arquivos `bootstrap.c`, `mail.c`, `misc.c` e `uaf.c`, e inclusão do `include <errno.h>` no arquivo `bootstrap.c`.
 
 **7º erro:**
+
 ```
 gcc -o aberd -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT actions.o admin.o board.o bootstrap.o bprintf.o calendar.o change.o clone.o commands.o communicate.o condition.o fight.o flags.o frob.o game.o hate.o log.o magic.o mail.o main.o misc.o mobile.o move.o mud.o objsys.o parse.o party.o rooms.o s_socket.o sendsys.o sflag.o timing.o uaf.o utils.o wizard.o wizlist.o writer.o zones.o  -lgdbm -lcrypt
 /usr/bin/ld: admin.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: 		 multiple definition of `a_new_player'; actions.o:/home/iuri/Desktop/pibic/Pibic/dyrt_19/dyrt/src/..//include/mud.h:15: first defined here
@@ -185,16 +197,16 @@ collect2: error: ld returned 1 exit status
 make: *** [Makefile:158: ..//bin/aberd] Error 1
 ```
 
-Correção: Adição de ```include "mud.h"``` no arquivo ```mud.c```; adição d ```extern Boolean a_new_player``` no arquivo ```mud.h```; Adição d ```extern time_t next_event;``` no arquivo ```timing.c```
+Correção: Adição de `include "mud.h"` no arquivo `mud.c`; adição d `extern Boolean a_new_player` no arquivo `mud.h`; Adição d `extern time_t next_event;` no arquivo `timing.c`
 
 **8º erro:**
-O jogo não quis rodar, então segui as instruções relacionadas aos ```verbs``` e rodei o comando ```./verbgen``` na pasta ```/src```.
+O jogo não quis rodar, então segui as instruções relacionadas aos `verbs` e rodei o comando `./verbgen` na pasta `/src`.
 
 ## Rodando o Dyrt
 
 ### Erro 1
 
-O comando ```aberd &``` citado no ```README.FIRST.DAMMIT``` não foi encontrado. Rodar o executável ```aberd```, da pasta ```/src``` teve o seguinte _output_:
+O comando `aberd &` citado no `README.FIRST.DAMMIT` não foi encontrado. Rodar o executável `aberd`, da pasta `/src` teve o seguinte _output_:
 
 ```
 data_dir = "../data/".
@@ -257,31 +269,33 @@ Segmentation fault (core dumped)
 **Segmentation fault**: Acontecendo na função main_loop, chamada a partir da função xmain.
 Após o debug foi definido q o segmentation fault está acontecendo na função consid_move, chamada a partir da função move_mobiles, do arquivo mobile.c, chamada a partir da função on_timer, do arquivo timing.c, que é chamada na função main_loop.
 
-> **Warnings** 
+> **Warnings**
 > Dps d corrigir o erro 2
+>
 > ```
->gcc -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT   -c -o generate.o generate.c
->generate.c:26:13: warning: conflicting types for built-in function ‘log’; expected ‘double(double)’ [-Wbuiltin-declaration-mismatch]
+> gcc -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT   -c -o generate.o generate.c
+> generate.c:26:13: warning: conflicting types for built-in function ‘log’; expected ‘double(double)’ [-Wbuiltin-declaration-mismatch]
 >   26 | static void log (char t, XOBJ * O, XZON * Z, char *f,
 >      |             ^~~
->generate.c:21:1: note: ‘log’ is declared in header ‘<math.h>’
+> generate.c:21:1: note: ‘log’ is declared in header ‘<math.h>’
 >   20 | #include "generate.h"
 >  +++ |+#include <math.h>
->   21 | 
->generate.c: In function ‘read_loc’:
->generate.c:1350:29: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+>   21 |
+> generate.c: In function ‘read_loc’:
+> generate.c:1350:29: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
 > 1350 |               l->exits[k] = (XLOC *) get_int (F);
 >      |                             ^
->generate.c: In function ‘write_loc’:
->generate.c:2200:23: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+> generate.c: In function ‘write_loc’:
+> generate.c:2200:23: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
 > 2200 |                   y = (int) (L->exits[x]);
 >      |                       ^
->generate.c: In function ‘xmalloc’:
->generate.c:2482:61: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+> generate.c: In function ‘xmalloc’:
+> generate.c:2482:61: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
 > 2482 |       fprintf (stderr, "No room to allocate bytes. [%d]\n", (int)p);
 > ```
 >
 > Dps de corrigir o erro 4
+>
 > ```
 > gcc -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT   -c -o main.o main.c
 > main.c: In function ‘main’:
@@ -317,6 +331,7 @@ Após o debug foi definido q o segmentation fault está acontecendo na função 
 > ```
 >
 > Dps de corrigir o erro 5
+>
 > ```
 > gcc -DDEBUG -g -O4 -I..//include/ -DLINUX -DREBOOT   -c -o sflag.o sflag.c
 > sflag.c: In function ‘gossip_test’:

@@ -20,38 +20,36 @@
 #include "autoconf.h"
 #include "gdbmdefs.h"
 
-int
-gdbm_count (GDBM_FILE dbf, gdbm_count_t *pcount)
+int gdbm_count(GDBM_FILE dbf, gdbm_count_t *pcount)
 {
-  int nbuckets = GDBM_DIR_COUNT (dbf);
+  int nbuckets = GDBM_DIR_COUNT(dbf);
   gdbm_count_t count = 0;
   int i;
-  
-  /* Return immediately if the database needs recovery */	
-  GDBM_ASSERT_CONSISTENCY (dbf, -1);
-  
-  for (i = 0; i < nbuckets; i = _gdbm_next_bucket_dir (dbf, i))
-    {
-      if (_gdbm_get_bucket (dbf, i))
-	return -1;
-      count += dbf->bucket->count;
-    }
+
+  /* Return immediately if the database needs recovery */
+  GDBM_ASSERT_CONSISTENCY(dbf, -1);
+
+  for (i = 0; i < nbuckets; i = _gdbm_next_bucket_dir(dbf, i))
+  {
+    if (_gdbm_get_bucket(dbf, i))
+      return -1;
+    count += dbf->bucket->count;
+  }
   *pcount = count;
   return 0;
 }
 
-int
-gdbm_bucket_count (GDBM_FILE dbf, size_t *pcount)
+int gdbm_bucket_count(GDBM_FILE dbf, size_t *pcount)
 {
   int i;
   size_t count = 0;
-  
-  GDBM_ASSERT_CONSISTENCY (dbf, -1);
 
-  for (i = 0; i < GDBM_DIR_COUNT (dbf); i = _gdbm_next_bucket_dir (dbf, i))
-    {
-      ++count;
-    }
+  GDBM_ASSERT_CONSISTENCY(dbf, -1);
+
+  for (i = 0; i < GDBM_DIR_COUNT(dbf); i = _gdbm_next_bucket_dir(dbf, i))
+  {
+    ++count;
+  }
   *pcount = count;
   return 0;
 }
