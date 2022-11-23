@@ -112,8 +112,8 @@ static Boolean test_rcv(int player, /* Who to send to */
 
 /* Send general message.  */
 void send_g_msg(int destination,                       /* Where to send to */
-                char *func(int plx, int arg, char *t), /* Test function */
-                int arg,                               /* Argument to test */
+                char *func(int plx, void * arg, char *t), /* Test function */
+                void * arg,                               /* Argument to test */
                 char *text)                            /* Text to send */
 {
   char *t;
@@ -207,10 +207,9 @@ struct _send_msg_box
   int x2;
 };
 
-char *check_send_msg(int plx, int a, char *t)
+char *check_send_msg(int plx, void * arg, char *t)
 {
-  struct _send_msg_box *b = (struct _send_msg_box *)a;
-
+  struct _send_msg_box * b = (struct _send_msg_box *) arg;
   if (test_rcv(plx, b->mode, b->min, b->max, b->x1, b->x2))
     return t;
   return NULL;
@@ -246,7 +245,7 @@ void send_msg(int destination,   /* Where to send to */
   va_start(pvar, format);
   vsprintf(bf, bb, pvar);
   va_end(pvar);
-  send_g_msg(destination, check_send_msg, (int)&b, bf);
+  send_g_msg(destination, check_send_msg, &b, bf);
 }
 
 void sendf(int destination, char *format, ...)
@@ -257,12 +256,12 @@ void sendf(int destination, char *format, ...)
   va_start(pvar, format);
   vsprintf(b, format, pvar);
   va_end(pvar);
-  send_g_msg(destination, NULL, 0, b);
+  send_g_msg(destination, NULL, NULL, b);
 }
 
 void gsendf(int destination,
-            char *func(int plx, int arg, char *text),
-            int arg,
+            char *func(int plx, void * arg, char *text),
+            void * arg,
             char *format, ...)
 {
   char b[2048];
