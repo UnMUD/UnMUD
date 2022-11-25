@@ -400,9 +400,7 @@ xmain(int fd)
   init_calendar();
   update_calendar();
   boot_reset();
-  printf("main loop %d\n", s);
   main_loop(s);
-  printf("after main loop\n");
 
 #ifdef DYRTWHO
   setup_udp();

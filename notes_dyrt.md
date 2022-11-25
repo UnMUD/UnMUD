@@ -234,7 +234,7 @@ Connected to port 6715 on lucas-tkp.
 Segmentation fault (core dumped)
 ```
 
-**Segmentation Fault**: Inicialmente estava ocorrendo na função open_gdbm, chamada a partir da função init_userfile, chamada a partir da função xmain
+**Segmentation Fault**: Inicialmente estava ocorrendo na função open_gdbm, chamada a partir da função init_userfile, chamada a partir da função xmain. Debug por print.
 **Correção**: Atualização da biblioteca gdbm da versão 1.7.3 para versão 1.23
 
 ### Erro 2
@@ -269,7 +269,57 @@ Segmentation fault (core dumped)
 **Segmentation fault**: Acontecendo na função main_loop, chamada a partir da função xmain.
 Após o debug foi definido q o segmentation fault está acontecendo na função consid_move, chamada a partir da função move_mobiles, do arquivo mobile.c, chamada a partir da função on_timer, do arquivo timing.c, que é chamada na função main_loop.
 
-**Correção**: send_g_msg ; gsendf
+**Correção**: A princípio foi feito um debug utilizando o ```printf``` o que permitiu levou até a função ```consid_move```. A partir dessa função, o debug por print se tornou inviável, uma vez que ela era chamada dentro de um loop que iterava 338 vezes. Para contornar esse problema foi utilizado o GDB (GNU Project Debugger), que ao ser executado indicou que o erro estava acontecendo na função ```check_send_msg``` (```sendsys.c``` 210), devido a uma conversão de um valor negativo em ponteiro de ```struct _send_msg_box```.
+
+```
+char *check_send_msg(int plx, int a, char *t)
+{
+  struct _send_msg_box *b = (struct _send_msg_box *)a;
+
+  if (test_rcv(plx, b->mode, b->min, b->max, b->x1, b->x2))
+    return t;
+  return NULL;
+}
+```
+
+Fazendo um rastreamento da função foi visto que tanto a função quanto a variável tinham origem na função ```send_msg``` (```sendsys.c``` 220) que passava ambos valores como parâmetros da função ```send_g_msg```(```sendsys.c``` 114).
+
+```
+void send_msg(int destination,   /* Where to send to */
+              int mode,          /* Flags to control sending */
+              int min,           /* Minimum level of recipient */
+              int max,           /* Maximum level of recipient */
+              int x1,            /* Do not send to him */
+              int x2,            /* Nor to him */
+              char *format, ...) /* Format with args -> text to send */
+{
+  va_list pvar;
+  char bf[2048];
+  char bf2[2048];
+  struct _send_msg_box b;
+  char *bb;
+
+  b.mode = mode;
+  b.min = min;
+  b.max = max;
+  b.x1 = x1;
+  b.x2 = x2;
+  bb = format;
+  if ((mode & MODE_COLOR) != 0)
+  {
+    sprintf(bf2, "\001A\033[1;33m\003%s\001A\033[0m\003", format);
+    bb = bf2;
+  }
+  va_start(pvar, format);
+  vsprintf(bf, bb, pvar);
+  va_end(pvar);
+  send_g_msg(destination, check_send_msg, (int)&b, bf);
+}
+```
+
+Para corrigir o erro, foi retirada a conversão da área de memória para inteiro e feitas alterações nas funções ```send_g_msg```(```sendsys.c``` 114) e ```gsendf```(```sendsys.c``` 262), que recebiam entre seus argumentos ```char *func(int plx, int arg, char *text), int arg``` e passaram a receber ```char *func(int plx, void * arg, char *text), void * arg```. Dessa forma, a área de memória é passada por completo para outras funções, o que evitou o erro de _overflow_ que acontecia quando se tentava realizara conversão. 
+Todas funções que estavam relacionadas as funções alteradas também foram adaptadas.
+
 
 > ## Warnings
 > Dps d corrigir o erro 2
