@@ -34,7 +34,7 @@ class ConnectionManager
 {
 
     typedef std::list< Connection<protocol> > clist;
-    typedef std::list< Connection<protocol> >::iterator clistitr;
+    typedef typename std::list< Connection<protocol> >::iterator clistitr;
 
 public:
     // ------------------------------------------------------------------------

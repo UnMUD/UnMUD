@@ -8,6 +8,7 @@
 #define BASICLIBRANDOM_H
 
 #include <stdlib.h>
+#include <math.h>
 
 #include "BasicLibTypes.h"
 

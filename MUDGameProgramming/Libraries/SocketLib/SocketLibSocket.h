@@ -11,6 +11,7 @@
 // ========================================================================
 //  Include Files
 // ========================================================================
+#include <cstring>
 #include "BasicLib/BasicLib.h"
 #include "SocketLibTypes.h"
 #include "SocketLibErrors.h"
