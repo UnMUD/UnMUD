@@ -1,0 +1,23 @@
+[ID]             3435973837
+[NAME]           Mithrandir
+[PASS]           booga
+[RANK]           REGULAR
+[STATPOINTS]     0
+[EXPERIENCE]     0
+[LEVEL]          1
+[ROOM]           1
+[MONEY]          0
+[HITPOINTS]      10
+[NEXTATTACKTIME] 0
+[STRENGTH] 7
+[HEALTH] 7
+[AGILITY] 7
+[MAXHITPOINTS] 0
+[ACCURACY] 0
+[DODGING] 0
+[STRIKEDAMAGE] 0
+[DAMAGEABSORB] 0
+[HPREGEN] 0
+[INVENTORY]      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[WEAPON]         -1
+[ARMOR]          -1
