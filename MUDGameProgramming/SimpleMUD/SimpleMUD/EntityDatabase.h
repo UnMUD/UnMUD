@@ -31,11 +31,12 @@ class EntityDatabase
 public:
 
     typedef std::map<entityid, datatype> container;
+    typedef typename std::map<entityid, datatype>::iterator containeritr;
 
     // --------------------------------------------------------------------
     //  The inner iterator class, used to iterate through the database.
     // --------------------------------------------------------------------
-    class iterator : public container::iterator
+    class iterator : public containeritr
     {
     public:
 
@@ -44,9 +45,9 @@ public:
         // Have I mentioned that VC6 sucks yet?
         // --------------------------------------------------------------------
         iterator() {};  // default constructor
-        iterator( const container::iterator& p_itr ) // copy constructor
+        iterator( const containeritr& p_itr ) // copy constructor
         {
-            container::iterator& itr = *this; // also needed because VC6 sucks
+            containeritr& itr = *this; // also needed because VC6 sucks
             itr = p_itr;
         }
 
@@ -56,7 +57,7 @@ public:
         // --------------------------------------------------------------------
         inline datatype& operator*()
         {
-            container::iterator& itr = *this; // also needed because VC6 sucks
+            containeritr& itr = *this; // also needed because VC6 sucks
             return itr->second;
         }
 
@@ -66,7 +67,7 @@ public:
         // --------------------------------------------------------------------
         inline datatype* operator->()
         {
-            container::iterator& itr = *this; // also needed because VC6 sucks
+            containeritr& itr = *this; // also needed because VC6 sucks
             return &(itr->second);
         }
     };  // end iterator inner class
@@ -156,7 +157,7 @@ public:
 
         entityid openid = 0;
         entityid previous = 0;
-        std::map<entityid,datatype>::iterator itr = m_map.begin();
+        containeritr itr = m_map.begin();
 
         while( !openid )
         {
@@ -183,7 +184,7 @@ class EntityDatabaseVector
 public:
 
     // internal iterator
-    typedef std::vector<datatype>::iterator iterator;
+    typedef typename std::vector<datatype>::iterator iterator;
 
     inline static iterator begin()  { return m_vector.begin() + 1; }
     inline static iterator end()    { return m_vector.end(); }

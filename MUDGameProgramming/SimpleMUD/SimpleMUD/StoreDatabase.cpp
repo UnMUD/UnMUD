@@ -17,6 +17,7 @@ namespace SimpleMUD
 {
 
 // declare the static map of the Item database.
+template< class Store >
 std::map<entityid, Store> EntityDatabase<Store>::m_map;
 
 

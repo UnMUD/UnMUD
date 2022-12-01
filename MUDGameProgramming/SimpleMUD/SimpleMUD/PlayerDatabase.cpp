@@ -21,6 +21,7 @@ namespace SimpleMUD
 {
 
 // declare the static variables of the player database.
+template< class Player >
 std::map<entityid, Player> EntityDatabase<Player>::m_map;
 
 

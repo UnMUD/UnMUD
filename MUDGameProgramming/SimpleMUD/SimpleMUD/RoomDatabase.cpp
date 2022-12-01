@@ -22,6 +22,7 @@ namespace SimpleMUD
 {
 
 // declare the static vector of the room database.
+template< class Room >
 std::vector<Room> EntityDatabaseVector<Room>::m_vector;
 
 
