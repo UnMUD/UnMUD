@@ -20,18 +20,25 @@ namespace SimpleMUD
 class EnemyTemplateDatabase : public EntityDatabaseVector<EnemyTemplate>
 {
 public:
-    static void Load();
+    static EnemyTemplateDatabase& GetInstance();
+    void Load();
+
+private:
+    EnemyTemplateDatabase(){}
 };  // end class EnemyTemplateDatabase
 
 
 class EnemyDatabase : public EntityDatabase<Enemy>
 {
 public:
-    static void Create( entityid p_template, room p_room );
-    static void Delete( enemy p_enemy );
-    static void Load();
-    static void Save();
+    static EnemyDatabase& GetInstance();
+    void Create( entityid p_template, room p_room );
+    void Delete( enemy p_enemy );
+    void Load();
+    void Save();
 
+private:
+    EnemyDatabase(){}
 };  // end class EnemyDatabase
 
 

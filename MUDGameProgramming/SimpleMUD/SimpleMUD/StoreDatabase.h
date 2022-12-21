@@ -25,8 +25,11 @@ namespace SimpleMUD
 class StoreDatabase : public EntityDatabase<Store>
 {
 public:
-    static bool Load();
+    static StoreDatabase& GetInstance();
+    bool Load();
 
+private:
+    StoreDatabase(){}
 };  // end class StoreDatabase
 
 

@@ -20,10 +20,11 @@ using std::ofstream;
 namespace SimpleMUD
 {
 
-// declare the static variables of the player database.
-template< class Player >
-std::map<entityid, Player> EntityDatabase<Player>::m_map;
-
+PlayerDatabase& PlayerDatabase::GetInstance()
+{
+    static PlayerDatabase playerDatabase;
+    return playerDatabase;
+}
 
 void PlayerDatabase::LoadPlayer( string p_name )
 {

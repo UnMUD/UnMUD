@@ -26,10 +26,13 @@ namespace SimpleMUD
 class RoomDatabase : public EntityDatabaseVector<Room>
 {
 public:
+    static RoomDatabase& GetInstance();
+    void LoadTemplates();
+    void LoadData();
+    void SaveData();
 
-    static void LoadTemplates();
-    static void LoadData();
-    static void SaveData();
+private:
+    RoomDatabase(){}
 
 };  // end class RoomDatabase
 

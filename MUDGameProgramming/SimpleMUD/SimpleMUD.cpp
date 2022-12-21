@@ -33,10 +33,14 @@ int main()
         GameLoop gameloop;
 
         ListeningManager<Telnet, Logon> lm;
-        ConnectionManager<Telnet, Logon> cm( 128, 60, 65536 );
+
+        const int maxdatarate = 128, sentimeout = 60, maxbuffered = 65536;
+        ConnectionManager<Telnet, Logon> cm( maxdatarate, sentimeout, maxbuffered );
 
         lm.SetConnectionManager( &cm );
-        lm.AddPort( 5100 );
+
+        const SocketLib::port port = 5100;
+        lm.AddPort( port );
 
 
         while( Game::Running() )

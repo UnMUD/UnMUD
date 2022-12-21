@@ -47,8 +47,8 @@ public:
     void Handle( string p_data );
     void Enter();
     void Leave() {}
-    void Hungup() { PlayerDatabase::Logout( m_player ); }
-    void Flooded() { PlayerDatabase::Logout( m_player ); }
+    void Hungup() { PlayerDatabase::GetInstance().Logout( m_player ); }
+    void Flooded() { PlayerDatabase::GetInstance().Logout( m_player ); }
 
     // ------------------------------------------------------------------------
     //  This function prints out your statistics.

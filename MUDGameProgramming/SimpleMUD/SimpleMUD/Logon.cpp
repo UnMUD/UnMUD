@@ -42,8 +42,8 @@ void Logon::Handle( string p_data )
         }
         else
         {
-            PlayerDatabase::iterator itr = PlayerDatabase::findfull( p_data );
-            if( itr == PlayerDatabase::end() )
+            PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().findfull( p_data );
+            if( itr == PlayerDatabase::GetInstance().end() )
             {
                 // name does not exist
                 m_errors++;
@@ -73,7 +73,7 @@ void Logon::Handle( string p_data )
     if( m_state == NEWUSER )
     {
         // check if the name is taken:
-        if( PlayerDatabase::hasfull( p_data ) )
+        if( PlayerDatabase::GetInstance().hasfull( p_data ) )
         {
             m_errors++;
             m_connection->Protocol().SendString( *m_connection,
@@ -125,18 +125,18 @@ void Logon::Handle( string p_data )
         p.Password() = p_data;
 
         // make the player the administrator if he's the first to log in.
-        if( PlayerDatabase::size() == 0 )
+        if( PlayerDatabase::GetInstance().size() == 0 )
         {
             p.Rank() = ADMIN;
             p.ID() = 1;
         }
         else
         {
-            p.ID() = PlayerDatabase::LastID() + 1;
+            p.ID() = PlayerDatabase::GetInstance().LastID() + 1;
         }
 
         // add the player
-        PlayerDatabase::AddPlayer( p );
+        PlayerDatabase::GetInstance().AddPlayer( p );
 
         // enter the game as a newbie.
         GotoGame( true );
@@ -188,7 +188,7 @@ void Logon::Enter()
 // ------------------------------------------------------------------------
 void Logon::GotoGame( bool p_newbie )
 {
-    Player& p = *PlayerDatabase::findfull( m_name );
+    Player& p = *PlayerDatabase::GetInstance().findfull( m_name );
     
     // log off the user if he's already connected.            
     if( p.LoggedIn() )

@@ -25,39 +25,43 @@ class PlayerDatabase : public EntityDatabase<Player>
 {
 public:
 
-    static bool Load();
-    static bool Save();
-    static bool AddPlayer( Player& p_player );
+    static PlayerDatabase& GetInstance();
+
+    bool Load();
+    bool Save();
+    bool AddPlayer( Player& p_player );
 
 
     // helpers
-    static inline string PlayerFileName( const string& p_name );
-    static void LoadPlayer( string p_name );
-    static void SavePlayer( entityid p_player );
+    inline string PlayerFileName( const string& p_name );
+    void LoadPlayer( string p_name );
+    void SavePlayer( entityid p_player );
 
-
-    static entityid LastID()  
+    entityid LastID()  
     { 
         // since the ID's are sorted in ascending order within the map,
         // the highest ID will be the ID of the last item.
         return m_map.rbegin()->first;
     }
 
-    static iterator findactive( const std::string& p_name )
+    iterator findactive( const std::string& p_name )
     {
         return BasicLib::double_find_if( 
             begin(), end(), matchentityfull( p_name ),
             matchentity( p_name ), playeractive() );
     }
 
-    static iterator findloggedin( const std::string& p_name )
+    iterator findloggedin( const std::string& p_name )
     {
         return BasicLib::double_find_if( 
             begin(), end(), matchentityfull( p_name ),
             matchentity( p_name ), playerloggedin() );
     }
 
-    static void Logout( entityid p_player );
+    void Logout( entityid p_player );
+
+private:
+    PlayerDatabase(){}
 
 };  // end class PlayerDatabase
 

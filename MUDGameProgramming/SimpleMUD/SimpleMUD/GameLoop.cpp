@@ -96,31 +96,31 @@ void GameLoop::Loop()
 void GameLoop::LoadDatabases()
 {
     Load();
-    ItemDatabase::Load();
-    PlayerDatabase::Load();
-    RoomDatabase::LoadTemplates();
-    RoomDatabase::LoadData();
-    StoreDatabase::Load();
-    EnemyTemplateDatabase::Load();
-    EnemyDatabase::Load();
+    ItemDatabase::GetInstance().Load();
+    PlayerDatabase::GetInstance().Load();
+    RoomDatabase::GetInstance().LoadTemplates();
+    RoomDatabase::GetInstance().LoadData();
+    StoreDatabase::GetInstance().Load();
+    EnemyTemplateDatabase::GetInstance().Load();
+    EnemyDatabase::GetInstance().Load();
 }
 
 
 void GameLoop::SaveDatabases()
 {
     Save();
-    PlayerDatabase::Save();
-    RoomDatabase::SaveData();
-    EnemyDatabase::Save();
+    PlayerDatabase::GetInstance().Save();
+    RoomDatabase::GetInstance().SaveData();
+    EnemyDatabase::GetInstance().Save();
 }
 
 
 void GameLoop::PerformRound()
 {
-    EnemyDatabase::iterator itr = EnemyDatabase::begin();
+    EnemyDatabase::iterator itr = EnemyDatabase::GetInstance().begin();
     sint64 now = Game::GetTimer().GetMS();
 
-    while( itr != EnemyDatabase::end() )
+    while( itr != EnemyDatabase::GetInstance().end() )
     {
         if( now >= itr->NextAttackTime() && 
             itr->CurrentRoom()->Players().size() > 0 )
@@ -131,14 +131,14 @@ void GameLoop::PerformRound()
 
 void GameLoop::PerformRegen()
 {
-    RoomDatabase::iterator itr = RoomDatabase::begin();
+    RoomDatabase::iterator itr = RoomDatabase::GetInstance().begin();
     
-    while( itr != RoomDatabase::end() )
+    while( itr != RoomDatabase::GetInstance().end() )
     {
         if( itr->SpawnWhich() != 0 &&
             itr->Enemies().size() < itr->MaxEnemies() )
         {
-            EnemyDatabase::Create( itr->SpawnWhich(), itr->ID() );
+            EnemyDatabase::GetInstance().Create( itr->SpawnWhich(), itr->ID() );
             Game::SendRoom( red + bold + itr->SpawnWhich()->Name() + 
                             " enters the room!", itr->ID() );
         }
@@ -150,8 +150,8 @@ void GameLoop::PerformRegen()
 
 void GameLoop::PerformHeal()
 {
-    PlayerDatabase::iterator itr = PlayerDatabase::begin();
-    while( itr != PlayerDatabase::end() )
+    PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().begin();
+    while( itr != PlayerDatabase::GetInstance().end() )
     {
         if( itr->Active() )
         {

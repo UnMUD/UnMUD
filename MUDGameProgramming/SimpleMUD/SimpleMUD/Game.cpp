@@ -252,9 +252,9 @@ void Game::Handle( string p_data )
     {
         // find a player to kick
         PlayerDatabase::iterator itr = 
-            PlayerDatabase::findloggedin( ParseWord( p_data, 1 ) );
+            PlayerDatabase::GetInstance().findloggedin( ParseWord( p_data, 1 ) );
 
-        if( itr == PlayerDatabase::end() )
+        if( itr == PlayerDatabase::GetInstance().end() )
         {
             p.SendString( red + bold + "Player could not be found." );
             return;
@@ -287,9 +287,9 @@ void Game::Handle( string p_data )
     {
         string name = ParseWord( p_data, 1 );
 
-        PlayerDatabase::iterator itr = PlayerDatabase::find( name );
+        PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().find( name );
 
-        if( itr == PlayerDatabase::end() )
+        if( itr == PlayerDatabase::GetInstance().end() )
         {
             p.SendString( red + bold + "Error: Could not find user " +
                           name );
@@ -312,15 +312,15 @@ void Game::Handle( string p_data )
 
         if( db == "items" )
         {
-            ItemDatabase::Load();
+            ItemDatabase::GetInstance().Load();
             p.SendString( bold + cyan + "Item Database Reloaded!" );
         }
         else if( db == "player" )
         {
             string user = ParseWord( p_data, 2 );
-            PlayerDatabase::iterator itr = PlayerDatabase::findfull( user );
+            PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().findfull( user );
 
-            if( itr == PlayerDatabase::end() )
+            if( itr == PlayerDatabase::GetInstance().end() )
             {
                 p.SendString( bold + red + "Invalid Player Name" );
             }
@@ -328,7 +328,7 @@ void Game::Handle( string p_data )
             {
                 bool a = itr->Active();
                 if( a )     itr->Conn()->Handler()->Leave();
-                PlayerDatabase::LoadPlayer( itr->Name() );
+                PlayerDatabase::GetInstance().LoadPlayer( itr->Name() );
                 if( a )     itr->Conn()->Handler()->Enter();
 
                 p.SendString( bold + cyan + "Player " + 
@@ -337,17 +337,17 @@ void Game::Handle( string p_data )
         }
         else if( db == "rooms" )
         {
-            RoomDatabase::LoadTemplates();
+            RoomDatabase::GetInstance().LoadTemplates();
             p.SendString( bold + cyan + "Room Template Database Reloaded!" );
         }
         else if( db == "stores" )
         {
-            StoreDatabase::Load();
+            StoreDatabase::GetInstance().Load();
             p.SendString( bold + cyan + "Store Database Reloaded!" );
         }
         else if( db == "enemies" )
         {
-            EnemyTemplateDatabase::Load();
+            EnemyTemplateDatabase::GetInstance().Load();
             p.SendString( bold + cyan + "Enemy Database Reloaded!" );
         }
         else
@@ -410,7 +410,7 @@ void Game::Leave()
     // log out the player from the database if the connection has been closed
     if( m_connection->Closed() )
     {
-        PlayerDatabase::Logout( m_player );
+        PlayerDatabase::GetInstance().Logout( m_player );
     }
 }
 
@@ -449,8 +449,8 @@ void Game::Flooded()
 // ------------------------------------------------------------------------
 void Game::SendGlobal( const string& p_str )
 {
-    operate_on_if( PlayerDatabase::begin(),
-                   PlayerDatabase::end(),
+    operate_on_if( PlayerDatabase::GetInstance().begin(),
+                   PlayerDatabase::GetInstance().end(),
                    playersend( p_str ),
                    playerloggedin() );
 }
@@ -460,8 +460,8 @@ void Game::SendGlobal( const string& p_str )
 // ------------------------------------------------------------------------
 void Game::SendGame( const std::string& p_str )
 {
-    operate_on_if( PlayerDatabase::begin(),
-                   PlayerDatabase::end(),
+    operate_on_if( PlayerDatabase::GetInstance().begin(),
+                   PlayerDatabase::GetInstance().end(),
                    playersend( p_str ),
                    playeractive() );
 }
@@ -489,10 +489,10 @@ void Game::Announce( const string& p_announcement )
 void Game::Whisper( std::string p_str, std::string p_player )
 {
     // find the player
-    PlayerDatabase::iterator itr = PlayerDatabase::findactive( p_player );
+    PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().findactive( p_player );
     
     // if no match was found
-    if( itr == PlayerDatabase::end() )
+    if( itr == PlayerDatabase::GetInstance().end() )
     {
         m_player->SendString( red + bold + "Error, cannot find user." );
     }
@@ -556,16 +556,16 @@ string Game::WhoList( const string& p_who )
     if( p_who == "all" )
     {
         who = BasicLib::operate_on_if( 
-                        PlayerDatabase::begin(),
-                        PlayerDatabase::end(),
+                        PlayerDatabase::GetInstance().begin(),
+                        PlayerDatabase::GetInstance().end(),
                         wholist(),
                         always<Player>() );
     }
     else
     {
         who = BasicLib::operate_on_if( 
-                        PlayerDatabase::begin(),
-                        PlayerDatabase::end(),
+                        PlayerDatabase::GetInstance().begin(),
+                        PlayerDatabase::GetInstance().end(),
                         wholist(),
                         playerloggedin() );
     }
@@ -1020,7 +1020,7 @@ void Game::GotoTrain()
 
 string Game::StoreList( entityid p_store )
 {
-    Store& s = StoreDatabase::get( p_store );
+    Store& s = StoreDatabase::GetInstance().get( p_store );
 
     string output = white + bold + 
               "--------------------------------------------------------------------------------\r\n";
@@ -1045,7 +1045,7 @@ string Game::StoreList( entityid p_store )
 void Game::Buy( const string& p_item )
 {
     Player& p = *m_player;
-    Store& s = StoreDatabase::get( p.CurrentRoom()->Data() );
+    Store& s = StoreDatabase::GetInstance().get( p.CurrentRoom()->Data() );
 
     item i = s.find( p_item );
     if( i == 0 )
@@ -1077,7 +1077,7 @@ void Game::Buy( const string& p_item )
 void Game::Sell( const string& p_item )
 {
     Player& p = *m_player;
-    Store& s = StoreDatabase::get( p.CurrentRoom()->Data() );
+    Store& s = StoreDatabase::GetInstance().get( p.CurrentRoom()->Data() );
 
     int index = p.GetItemIndex( p_item );
     if( index == -1 )
@@ -1293,7 +1293,7 @@ void Game::EnemyKilled( enemy p_enemy, player p_player )
                     " experience." );
     
     // remove the enemy from the game
-    EnemyDatabase::Delete( p_enemy );
+    EnemyDatabase::GetInstance().Delete( p_enemy );
 }
 
 }   // end namespace SimpleMUD

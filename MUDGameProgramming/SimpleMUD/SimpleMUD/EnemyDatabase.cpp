@@ -22,13 +22,18 @@ namespace SimpleMUD
 {
 
 // declare the static vector of the enemy template database.
-template< class EnemyTemplate >
-std::vector<EnemyTemplate> EntityDatabaseVector<EnemyTemplate>::m_vector;
+// template< class EnemyTemplate >
+// std::vector<EnemyTemplate> EntityDatabaseVector<EnemyTemplate>::m_vector;
 
 // declare the static map of the enemy instance database.
-template< class Enemy >
-std::map<entityid, Enemy> EntityDatabase<Enemy>::m_map;
+// template< class Enemy >
+// std::map<entityid, Enemy> EntityDatabase<Enemy>::m_map;
 
+EnemyTemplateDatabase& EnemyTemplateDatabase::GetInstance()
+{
+    static EnemyTemplateDatabase enemyTemplateDatabase;
+    return enemyTemplateDatabase;
+}
 
 void EnemyTemplateDatabase::Load()
 {
@@ -50,6 +55,13 @@ void EnemyTemplateDatabase::Load()
         USERLOG.Log( "Loaded Enemy: " + m_vector[id].Name() );
     }
 }
+
+EnemyDatabase& EnemyDatabase::GetInstance()
+{
+    static EnemyDatabase enemyDatabase;
+    return enemyDatabase;
+}
+
 
 void EnemyDatabase::Create( entityid p_template, room p_room )
 {

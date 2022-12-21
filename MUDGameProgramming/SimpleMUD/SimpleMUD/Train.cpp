@@ -29,7 +29,7 @@ void Train::Handle( string p_data )
     if( p_data == "quit" )
     {
         // save the player to disk
-        PlayerDatabase::SavePlayer( p.ID() );
+        PlayerDatabase::GetInstance().SavePlayer( p.ID() );
 
         // go back to the previous handler
         p.Conn()->RemoveHandler();

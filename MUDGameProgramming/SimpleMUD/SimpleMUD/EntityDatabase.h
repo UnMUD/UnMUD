@@ -76,7 +76,7 @@ public:
     // --------------------------------------------------------------------
     //  returns an iterator pointing to the first item
     // --------------------------------------------------------------------
-    inline static iterator begin()
+    inline  iterator begin()
     {
         return iterator( m_map.begin() );
     }
@@ -85,7 +85,7 @@ public:
     //  returns the "invalid" iterator, the iterator that points one 
     //  past the end of the DB. Used for comparisons.
     // --------------------------------------------------------------------
-    inline static iterator end()
+    inline  iterator end()
     {
         return iterator( m_map.end() );
     }
@@ -93,7 +93,7 @@ public:
     // --------------------------------------------------------------------
     //  finds entity based in ID
     // --------------------------------------------------------------------
-    inline static iterator find( entityid p_id )
+    inline  iterator find( entityid p_id )
     {
         return iterator( m_map.find( p_id ) );
     }
@@ -101,7 +101,7 @@ public:
     // --------------------------------------------------------------------
     //  finds entity matching name exactly
     // --------------------------------------------------------------------
-    static iterator findfull( const std::string& p_name )
+     iterator findfull( const std::string& p_name )
     {
         return std::find_if( begin(), end(), matchentityfull( p_name ) );
     }
@@ -109,7 +109,7 @@ public:
     // --------------------------------------------------------------------
     //  finds entity matching name partially
     // --------------------------------------------------------------------
-    static iterator find( const std::string& p_name )
+     iterator find( const std::string& p_name )
     {
         return BasicLib::double_find_if( begin(), end(), 
             matchentityfull( p_name ),
@@ -119,7 +119,7 @@ public:
     // --------------------------------------------------------------------
     //  gets an item based on ID.
     // --------------------------------------------------------------------
-    inline static datatype& get( entityid p_id )
+    inline  datatype& get( entityid p_id )
     {
         iterator itr = find( p_id );
         if( itr == end() )
@@ -129,25 +129,25 @@ public:
     }
 
 
-    inline static bool has( entityid p_id )
+    inline  bool has( entityid p_id )
     {
         return ( m_map.find( p_id ) != m_map.end() );
     }
 
-    inline static bool hasfull( std::string p_name )
+    inline  bool hasfull( std::string p_name )
     {
         return findfull( p_name ) != end();
     }
 
-    inline static bool has( std::string p_name )
+    inline  bool has( std::string p_name )
     {
         return find( p_name ) != end();
     }
 
-    inline static int size() { return (int)m_map.size(); }
+    inline  int size() { return (int)m_map.size(); }
 
 
-    static entityid FindOpenID()
+     entityid FindOpenID()
     {
         if( m_map.size() == 0 )
             return 1;
@@ -172,7 +172,7 @@ public:
     }
 
 protected:
-    static std::map<entityid, datatype> m_map;
+    std::map<entityid, datatype> m_map;
 
 };  // end class EntityDatabase
 
@@ -186,14 +186,14 @@ public:
     // internal iterator
     typedef typename std::vector<datatype>::iterator iterator;
 
-    inline static iterator begin()  { return m_vector.begin() + 1; }
-    inline static iterator end()    { return m_vector.end(); }
-    inline static size_t size()     { return m_vector.size() - 1; }
+    inline  iterator begin()  { return m_vector.begin() + 1; }
+    inline  iterator end()    { return m_vector.end(); }
+    inline  size_t size()     { return m_vector.size() - 1; }
 
     // --------------------------------------------------------------------
     //  gets an enemy based on ID.
     // --------------------------------------------------------------------
-    inline static datatype& get( entityid p_id )
+    inline datatype& get( entityid p_id )
     {
         if( p_id >= m_vector.size() || p_id == 0 )
             throw std::exception();
@@ -202,7 +202,7 @@ public:
 
 
 protected:
-    static std::vector<datatype> m_vector;
+    std::vector<datatype> m_vector;
 
 };  // end class EntityDatabaseVector
 
