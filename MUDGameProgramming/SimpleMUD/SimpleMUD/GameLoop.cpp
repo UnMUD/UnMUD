@@ -150,15 +150,23 @@ void GameLoop::PerformRegen()
 
 void GameLoop::PerformHeal()
 {
-    PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().begin();
-    while( itr != PlayerDatabase::GetInstance().end() )
-    {
-        if( itr->Active() )
+    // PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().begin();
+    // while( itr != PlayerDatabase::GetInstance().end() )
+    // {
+    //     if( itr->Active() )
+    //     {
+    //         itr->AddHitpoints( itr->GetAttr( HPREGEN ) );
+    //         itr->PrintStatbar( true );
+    //     }
+    //     ++itr;
+    // }
+
+    for(auto& player : PlayerDatabase::GetInstance()){
+        if( player.Active() )
         {
-            itr->AddHitpoints( itr->GetAttr( HPREGEN ) );
-            itr->PrintStatbar( true );
+            player.AddHitpoints( player.GetAttr( HPREGEN ) );
+            player.PrintStatbar( true );
         }
-        ++itr;
     }
 }
 
