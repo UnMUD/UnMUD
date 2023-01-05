@@ -21,14 +21,6 @@ using std::ofstream;
 namespace SimpleMUD
 {
 
-// declare the static vector of the enemy template database.
-// template< class EnemyTemplate >
-// std::vector<EnemyTemplate> EntityDatabaseVector<EnemyTemplate>::m_vector;
-
-// declare the static map of the enemy instance database.
-// template< class Enemy >
-// std::map<entityid, Enemy> EntityDatabase<Enemy>::m_map;
-
 EnemyTemplateDatabase& EnemyTemplateDatabase::GetInstance()
 {
     static EnemyTemplateDatabase enemyTemplateDatabase;

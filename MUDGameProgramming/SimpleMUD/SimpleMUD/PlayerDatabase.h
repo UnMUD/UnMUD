@@ -26,6 +26,10 @@ class PlayerDatabase : public EntityDatabase<Player>
 public:
 
     static PlayerDatabase& GetInstance();
+    PlayerDatabase(PlayerDatabase const&) = delete;
+    PlayerDatabase(PlayerDatabase&&) = delete;
+    PlayerDatabase& operator=(PlayerDatabase const&) = delete;
+    PlayerDatabase& operator=(PlayerDatabase &&) = delete;
 
     bool Load();
     bool Save();

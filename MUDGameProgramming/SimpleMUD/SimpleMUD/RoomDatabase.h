@@ -27,6 +27,11 @@ class RoomDatabase : public EntityDatabaseVector<Room>
 {
 public:
     static RoomDatabase& GetInstance();
+    RoomDatabase(RoomDatabase const&) = delete;
+    RoomDatabase(RoomDatabase&&) = delete;
+    RoomDatabase& operator=(RoomDatabase const&) = delete;
+    RoomDatabase& operator=(RoomDatabase &&) = delete;
+
     void LoadTemplates();
     void LoadData();
     void SaveData();

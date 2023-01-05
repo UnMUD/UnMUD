@@ -16,10 +16,6 @@ using BasicLib::tostring;
 namespace SimpleMUD
 {
 
-// declare the static map of the Item database.
-// template< class Item >
-// std::map<entityid, Item> EntityDatabase<Item>::m_map;
-
 ItemDatabase& ItemDatabase::GetInstance()
 {
     static ItemDatabase itemDatabase;

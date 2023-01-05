@@ -27,6 +27,11 @@ class ItemDatabase : public EntityDatabase<Item>
 {
 public:
     static ItemDatabase& GetInstance();
+    ItemDatabase(ItemDatabase const&) = delete;
+    ItemDatabase(ItemDatabase&&) = delete;
+    ItemDatabase& operator=(ItemDatabase const&) = delete;
+    ItemDatabase& operator=(ItemDatabase &&) = delete;
+
     bool Load();
 
 private:

@@ -26,6 +26,11 @@ class StoreDatabase : public EntityDatabase<Store>
 {
 public:
     static StoreDatabase& GetInstance();
+    StoreDatabase(StoreDatabase const&) = delete;
+    StoreDatabase(StoreDatabase&&) = delete;
+    StoreDatabase& operator=(StoreDatabase const&) = delete;
+    StoreDatabase& operator=(StoreDatabase &&) = delete;
+
     bool Load();
 
 private:

@@ -21,6 +21,11 @@ class EnemyTemplateDatabase : public EntityDatabaseVector<EnemyTemplate>
 {
 public:
     static EnemyTemplateDatabase& GetInstance();
+    EnemyTemplateDatabase(EnemyTemplateDatabase const&) = delete;
+    EnemyTemplateDatabase(EnemyTemplateDatabase&&) = delete;
+    EnemyTemplateDatabase& operator=(EnemyTemplateDatabase const&) = delete;
+    EnemyTemplateDatabase& operator=(EnemyTemplateDatabase &&) = delete;
+
     void Load();
 
 private:
@@ -32,6 +37,11 @@ class EnemyDatabase : public EntityDatabase<Enemy>
 {
 public:
     static EnemyDatabase& GetInstance();
+    EnemyDatabase(EnemyDatabase const&) = delete;
+    EnemyDatabase(EnemyDatabase&&) = delete;
+    EnemyDatabase& operator=(EnemyDatabase const&) = delete;
+    EnemyDatabase& operator=(EnemyDatabase &&) = delete;
+
     void Create( entityid p_template, room p_room );
     void Delete( enemy p_enemy );
     void Load();
