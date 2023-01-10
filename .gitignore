@@ -83,4 +83,6 @@ MUDGameProgramming/SimpleEdit/*
 MUDGameProgramming/SimpleMUD/logs/*.log
 MUDGameProgramming/BetterMUD/*
 
-## Visual Studio Gene
+## Visual Studio
+.vscode/**
+**/.vscode/**

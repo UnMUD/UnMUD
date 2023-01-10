@@ -67,4 +67,9 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+      apt update
+      apt install build-essentials gcc-10-doc libstdc++-10-doc
+      apt install libmsgsl-dev
+  SHELL
 end

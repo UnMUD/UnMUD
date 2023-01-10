@@ -39,26 +39,16 @@ public:
     class iterator : public containeritr
     {
     public:
-
-        // --------------------------------------------------------------------
-        // NOTE: the constructors are needed as a result of VC6 sucking.
-        // Have I mentioned that VC6 sucks yet?
-        // --------------------------------------------------------------------
         iterator() {};  // default constructor
-        iterator( const containeritr& p_itr ) // copy constructor
-        {
-            containeritr& itr = *this; // also needed because VC6 sucks
-            itr = p_itr;
-        }
+        iterator( const containeritr& p_itr ) : containeritr( p_itr ){} // copy constructor
 
         // --------------------------------------------------------------------
         //  "dereferences" the iterator to return a reference to the
         //  object that it points to.
         // --------------------------------------------------------------------
-        inline datatype& operator*()
+        inline datatype& operator*() 
         {
-            containeritr& itr = *this; // also needed because VC6 sucks
-            return itr->second;
+            return static_cast<containeritr>(*this)->second;
         }
 
         // --------------------------------------------------------------------
@@ -67,8 +57,7 @@ public:
         // --------------------------------------------------------------------
         inline datatype* operator->()
         {
-            containeritr& itr = *this; // also needed because VC6 sucks
-            return &(itr->second);
+            return &(static_cast<containeritr>(*this)->second);
         }
     };  // end iterator inner class
 

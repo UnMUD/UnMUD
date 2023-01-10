@@ -92,7 +92,7 @@
 [TEMPLATEID]     10
 [HITPOINTS]      7
 [ROOM]           26
-[NEXTATTACKTIME] 627000
+[NEXTATTACKTIME] 1070000
 
 [ID]             18
 [TEMPLATEID]     10
@@ -408,7 +408,7 @@
 
 [ID]             70
 [TEMPLATEID]     12
-[HITPOINTS]      1
+[HITPOINTS]      10
 [ROOM]           32
 [NEXTATTACKTIME] 0
 
