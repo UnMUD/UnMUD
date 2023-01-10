@@ -70,15 +70,10 @@ void RoomDatabase::SaveData()
 {
     std::ofstream file( "maps/default.data" );
 
-    iterator itr = begin();
-    
-    while( itr != end() )
-    {
-        file << "[ROOMID] " << itr->ID() << "\n";
-        m_vector[itr->ID()].SaveData( file );
+    for(auto& room : GetInstance()){
+        file << "[ROOMID] " << room.ID() << "\n";
+        m_vector[room.ID()].SaveData( file );
         file << "\n";
-
-        ++itr;
     }
 }
 

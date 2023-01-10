@@ -1029,13 +1029,11 @@ string Game::StoreList( entityid p_store )
     output += " Item                           | Price\r\n";
     output += "--------------------------------------------------------------------------------\r\n";
 
-    Store::iterator itr = s.begin();
-    while( itr != s.end() )
-    {
-        output += " " + tostring( (*itr)->Name(), 31 ) + "| ";
-        output += tostring( (*itr)->Price() ) + "\r\n";
-        ++itr;
+    for(auto& itr : s){
+        output += " " + tostring( itr->Name(), 31 ) + "| ";
+        output += tostring( itr->Price() ) + "\r\n";
     }
+
     output += bold + 
               "--------------------------------------------------------------------------------\r\n";
 
@@ -1273,17 +1271,13 @@ void Game::EnemyKilled( enemy p_enemy, player p_player )
                 " drops to the ground.", e.CurrentRoom() );
     }
 
-    // drop all the items
-    std::list<loot>::iterator itr = e.LootList().begin();
-    while( itr != e.LootList().end() )
-    {
-        if( BasicLib::RandomInt( 0, 99 ) < itr->second )
+    for(auto& loot : e.LootList()){
+        if( BasicLib::RandomInt( 0, 99 ) < loot.second )
         {
-            e.CurrentRoom()->AddItem( itr->first );
-            SendRoom( cyan + (itr->first)->Name() + 
+            e.CurrentRoom()->AddItem( loot.first );
+            SendRoom( cyan + (loot.first)->Name() + 
                       " drops to the ground.", e.CurrentRoom() );
         }
-        ++itr;
     }
 
     // add experience to the player who killed it

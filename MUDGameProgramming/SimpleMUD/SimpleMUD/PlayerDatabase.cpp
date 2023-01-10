@@ -69,13 +69,10 @@ bool PlayerDatabase::Load()
 bool PlayerDatabase::Save()
 {
     ofstream file( "players/players.txt" );
-    iterator itr = begin();
 
-    while( itr != end() )
-    {
-        file << itr->Name() << "\n";
-        SavePlayer( itr->ID() );        
-        ++itr;
+    for(auto& player : GetInstance()){
+        file << player.Name() << "\n";
+        SavePlayer(player.ID());
     }
 
     return true;

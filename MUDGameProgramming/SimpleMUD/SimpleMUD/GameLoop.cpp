@@ -117,50 +117,31 @@ void GameLoop::SaveDatabases()
 
 void GameLoop::PerformRound()
 {
-    EnemyDatabase::iterator itr = EnemyDatabase::GetInstance().begin();
     sint64 now = Game::GetTimer().GetMS();
 
-    while( itr != EnemyDatabase::GetInstance().end() )
-    {
-        if( now >= itr->NextAttackTime() && 
-            itr->CurrentRoom()->Players().size() > 0 )
-            Game::EnemyAttack( itr->ID() );
-        ++itr;
+    for(auto& enemy : EnemyDatabase::GetInstance()){
+        if( now >= enemy.NextAttackTime() && 
+            enemy.CurrentRoom()->Players().size() > 0 )
+            Game::EnemyAttack( enemy.ID() );
     }
 }
 
 void GameLoop::PerformRegen()
 {
-    RoomDatabase::iterator itr = RoomDatabase::GetInstance().begin();
-    
-    while( itr != RoomDatabase::GetInstance().end() )
-    {
-        if( itr->SpawnWhich() != 0 &&
-            itr->Enemies().size() < itr->MaxEnemies() )
+    for(auto& room : RoomDatabase::GetInstance()){
+        if( room.SpawnWhich() != 0 &&
+            room.Enemies().size() < room.MaxEnemies() )
         {
-            EnemyDatabase::GetInstance().Create( itr->SpawnWhich(), itr->ID() );
-            Game::SendRoom( red + bold + itr->SpawnWhich()->Name() + 
-                            " enters the room!", itr->ID() );
+            EnemyDatabase::GetInstance().Create( room.SpawnWhich(), room.ID() );
+            Game::SendRoom( red + bold + room.SpawnWhich()->Name() + 
+                            " enters the room!", room.ID() );
         }
-
-        ++itr;
     }
 }
 
 
 void GameLoop::PerformHeal()
 {
-    // PlayerDatabase::iterator itr = PlayerDatabase::GetInstance().begin();
-    // while( itr != PlayerDatabase::GetInstance().end() )
-    // {
-    //     if( itr->Active() )
-    //     {
-    //         itr->AddHitpoints( itr->GetAttr( HPREGEN ) );
-    //         itr->PrintStatbar( true );
-    //     }
-    //     ++itr;
-    // }
-
     for(auto& player : PlayerDatabase::GetInstance()){
         if( player.Active() )
         {

@@ -145,12 +145,9 @@ void Room::LoadData( istream& p_stream )
 void Room::SaveData( ostream& p_stream )
 {
     p_stream << "[ITEMS] ";
-    
-    std::list<item>::iterator itr = m_items.begin();
-    while( itr != m_items.end() )
-    {
-        p_stream << *itr << " ";
-        ++itr;
+
+    for(auto& items : m_items){
+        p_stream << items << " ";
     }
 
     p_stream << "0\n";

@@ -97,12 +97,9 @@ void EnemyDatabase::Save()
 {
     ofstream file( "enemies/enemies.instances" );
 
-    iterator itr = begin();
-    while( itr != end() )
-    {
-        file << "[ID]             " << itr->ID() << "\n";
-        file << *itr << "\n";
-        ++itr;
+    for(auto& enemy : GetInstance()){
+        file << "[ID]             " << enemy.ID() << "\n";
+        file << enemy << "\n";
     }
 }
 
