@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-# Pibic
+# Pibic / TCC
 
 <!-- background image -->
 

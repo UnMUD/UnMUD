@@ -1,3 +1,3 @@
-# Pibic
+# Pibic / TCC
 
-Repo to save pibic files
+Repo to save pibic / TCC files
