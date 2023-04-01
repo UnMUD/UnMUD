@@ -30,4 +30,4 @@
 | RNF03  | Segurança na implantação do sistema | [Brainstorming](/Requirements/brainstorming.md) |
 | RNF04  | Interface prática e intuitiva para o jogo | [Introspecção](/Requirements/introspection.md) |
 | RNF05  | Experiência de jogo interessante | [Introspecção](/Requirements/introspection.md) |
-| RNF06  | Progresso bem ritmado (_well-paced_) | [Introspecção](/Requirements/introspection.md) |
+| RNF06  | Progresso de jogo bem ritmado (_well-paced_) | [Introspecção](/Requirements/introspection.md) |
