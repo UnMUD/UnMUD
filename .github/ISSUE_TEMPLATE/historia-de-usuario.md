@@ -28,7 +28,7 @@ Caso os critérios de aceitação já tenham sido claramente definidos pela equi
 - [ ] Critério de aceitação 2
 - [ ] Critério de aceitação 3
 
-<!-- Informações extras para preenchimentos dos campos da issue. Apagar todo texto a partir desse comentário antes de finalizar a criação da issue -->
+<!-- Informações extras para preenchimentos dos campos da issue
 
 ## Assignees
 
@@ -45,3 +45,5 @@ A issue deve ser atribuída ao Milestone (sprint) correspondente a sua execuçã
 ## Project
 
 A issue deve ser adicionada à pipeline correspondente no project do repositório, para o acompanhamento de seu progresso.
+
+-->
