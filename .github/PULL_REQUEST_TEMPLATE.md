@@ -14,6 +14,7 @@ assignees: ''
    [DOCS] Para documentação
    [CI] Para atualizar a configuração do CI
    [TEST] Para adicionar testes
+   USXX Para histórias de usuário
 -->
 
 Soluciona #número-da-issue 
