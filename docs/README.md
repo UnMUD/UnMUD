@@ -6,7 +6,7 @@ A monografia e o relatório de pesquisa resultantes desse projeto podem ser aces
 
 ![Imagem do Software em funcionamento]()
 
-Para [contribuir com o projeto](https://iurisevero.github.io/Pibic/) basta ler nossa documentação, mas caso seu interesse seja jogar #nome, basta seguir as instruções listadas na página de [Como Jogar](https://iurisevero.github.io/Pibic/).
+Para [contribuir com o projeto](/contributionGuide.md) basta ler nossa documentação, mas caso seu interesse seja jogar #nome, basta seguir as instruções listadas na página de [Como Jogar](https://iurisevero.github.io/Pibic/).
 
 É sempre bom também dar uma olhada nosso [Código de Conduta](https://iurisevero.github.io/Pibic/) antes de interagir com a comunidade!
 

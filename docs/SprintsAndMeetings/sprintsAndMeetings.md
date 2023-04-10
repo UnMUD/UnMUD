@@ -20,11 +20,11 @@ Dessa forma, eles ficarão organizados de acordo com a data, em ordem crescente.
 
 ## Modelos
 
-[Modelo de Abertura de Sprint](/docs/SprintsAndMeetings/sprintOpeningTemplate.md)
+[Modelo de Abertura de Sprint](/SprintsAndMeetings/sprintOpeningTemplate.md)
 
-[Modelo de Fechamento de Sprint](/docs/SprintsAndMeetings/sprintClosureTemplate.md)
+[Modelo de Fechamento de Sprint](/SprintsAndMeetings/sprintClosureTemplate.md)
 
-[Modelo de Reunião](/docs/SprintsAndMeetings/meetingTemplate.md)
+[Modelo de Reunião](/SprintsAndMeetings/meetingTemplate.md)
 
 ## Referências
-- iGado - Sprints e Reuniões, disponível em: <https://unbarqdsw.github.io/2020.1_G13_iGado/#/docs/SprintsAndMeetings/SprintsAndMeetings/>. Acesso em 06 de abril de 2023.
+* iGado - Sprints e Reuniões, disponível em: <https://unbarqdsw.github.io/2020.1_G13_iGado/#/docs/SprintsAndMeetings/SprintsAndMeetings/>. Acesso em 06 de abril de 2023.
