@@ -9,9 +9,9 @@ Este documento irá abordar o seguintes tópicos, para auxiliar aqueles que dese
 * Criando/Escolhendo uma Issue
 * Padrões adotados para contribuições
 * Criando um Pull Request
-* Como rodar o #nome localmente
-* Como rodar os testes de #nome
-* Como rodar o site do #nome localmente
+* Como rodar o UnMUD localmente
+* Como rodar os testes de UnMUD
+* Como rodar o site do UnMUD localmente
 
 ## Criando/Escolhendo uma Issue
 
@@ -31,7 +31,7 @@ O template "Report a security vulnerability" foi criado automaticamente pelo Git
 
 ### Escolhendo uma Issue
 
-Caso você queira colaborar, mas ainda não sabe como, dê uma olhada nas _issues_ já existentes! Elas estarão listadas na [aba de Issues](https://github.com/iurisevero/Pibic/issues) do GitHub e possuirão **Labels** que servem para classificar a _issue_ e facilitar a escolha por parte do contribuidor.
+Caso você queira colaborar, mas ainda não sabe como, dê uma olhada nas _issues_ já existentes! Elas estarão listadas na [aba de Issues](https://github.com/UnMUD/UnMUD/issues) do GitHub e possuirão **Labels** que servem para classificar a _issue_ e facilitar a escolha por parte do contribuidor.
 
 ![Labels de Issues](/Images/labels.png)
 
@@ -95,17 +95,17 @@ Co-authored-By: Iuri Severo <nobreiuri@gmail.com>
 
 ![Template de pull request](/Images/templatePR.png)
 
-## Como rodar o #nome localmente
+## Como rodar o UnMUD localmente
 
-Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o #nome. Para executá-lo basta executar o comando:
+Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o UnMUD. Para executá-lo basta executar o comando:
 
 ```
 $sudo docker-compose up
 ```
 
-A partir disso, deve ser possível entrar no #nome a partir da porta ####, utilizando a ferramenta `telnet`.
+A partir disso, deve ser possível entrar no UnMUD a partir da porta ####, utilizando a ferramenta `telnet`.
 
-## Como rodar os testes de #nome
+## Como rodar os testes de UnMUD
 
 Para rodar os testes, basta executar o comando:
 
@@ -113,7 +113,7 @@ Para rodar os testes, basta executar o comando:
 $sudo docker-compose up exec
 ```
 
-## Como subir o site do #nome localmente
+## Como subir o site do UnMUD localmente
 
 Caso as alterações realizadas sejam na documentação, é possível rodar o site de documentação localmente para ter uma pré-visualização dos arquivos alterados. Para isso, basta seguir os passos abaixo:
 
