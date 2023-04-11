@@ -51,3 +51,13 @@ Para análise estática de código foram utilizadas as ferramentas:
 E para realização de testes unitários foi utilizado o framework [Framework](), em conjunto com a ferramenta [Ferramenta]() para análise da cobertura de testes.
 
 A integração contínua e o deploy foram realizados com o auxílio do [GitHub Actions](https://github.com/features/actions).
+
+## Contribuidores
+
+Obrigado a todos que já contribuiram!
+
+<a href = "https://github.com/UnMUD/UnMUD/issues/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=UnMUD/UnMUD"/>
+</a>
+
+Feito com [contributors-img](https://contrib.rocks).
