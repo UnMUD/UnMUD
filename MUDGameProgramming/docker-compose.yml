@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  # db:
+  #   build:
+  #     context: ./setup/db/
+  #     dockerfile: Dockerfile-Postgres
+  #   ports:
+  #     - 5435:5432
+  #   networks:
+  #     - game-network
+  #   environment:
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=postgres
+
+  unmud:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    working_dir: /usr/src/UnMUD
+    volumes:
+      - type: bind
+        source: ./Libraries
+        target: /usr/src/UnMUD/Libraries
+      - type: bind
+        source: ./SimpleMUD
+        target: /usr/src/UnMUD/SimpleMUD
+    # networks:
+    #   - game-network
+    expose:
+      - '5100'
+    ports:
+      - '5100:5100'
+    restart: always
+    command: /bin/sh -c "./build.sh"
+    # depends_on:
+    #   - db
+
+# networks:
+#   game-network:
+#     driver: bridge
