@@ -42,6 +42,7 @@ Após escolher a _issue_ é hora de começar a contribuir! Antes de começar a m
 ### Política de Branchs
 
 **1.** A branch deverá possuir o padrão CamelCase x-NomeDaBranch, em que o 'x' é o número da issue;
+
 **2.** O nome deve ser escolhido com base na tarefa descrita na _issue_;
 
 **Exemplo:**
@@ -53,6 +54,7 @@ Após escolher a _issue_ é hora de começar a contribuir! Antes de começar a m
 ### Política de Commits
 
 **1.** Os commits devem ser escritos em português, no gerundio
+
 **2.** A issue deve ser citada no commit por questões de rastreabilidade, para isso, basta adicionar:
 ```
 #<numeroDaIssue> 
@@ -81,10 +83,10 @@ Co-authored-By: Iuri Severo <nobreiuri@gmail.com>
 
 ## Criando um Pull Request
 
-**1.** O Pull Request deve indicar em seu título o número e nome da issue ao qual se refere.
+**1.** O Pull Request deve indicar em seu título a tag referente a alteração feita e o nome da issue ao qual se refere.
 **Exemplo:**
 ```
-1 - Criar guia de contribuição
+US09 - Criar guia de contribuição
 ```
 
 **2.** O corpo de texto do Pull Request deve ser escrito de forma clara e objetiva, seguindo o template fornecido no GitHub
