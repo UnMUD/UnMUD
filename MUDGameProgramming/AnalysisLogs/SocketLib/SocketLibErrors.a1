@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1086599631">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="Libraries/SocketLib/SocketLibErrors.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+            <symbol>Exception</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;p_code&apos; to itself." verbose="Redundant assignment of &apos;p_code&apos; to itself." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+            <symbol>p_code</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;p_code&apos; is assigned a value that is never used." verbose="Variable &apos;p_code&apos; is assigned a value that is never used." cwe="563">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+            <symbol>p_code</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="GetError" lineNumber="20"/>
+    <functiondecl functionName="TranslateError" lineNumber="119"/>
+    <functiondecl functionName="ErrorCode" lineNumber="234"/>
+    <functiondecl functionName="PrintError" lineNumber="243"/>
+    <functiondecl functionName="GetError" lineNumber="20"/>
+    <functiondecl functionName="TranslateError" lineNumber="40"/>
+    <functiondecl functionName="ErrorCode" lineNumber="234"/>
+    <functiondecl functionName="PrintError" lineNumber="243"/>
+    <functioncall functionName="EAccessDenied"/>
+    <functioncall functionName="EAddressFamilyNotSupported"/>
+    <functioncall functionName="EAddressInUse"/>
+    <functioncall functionName="EAddressNotAvailable"/>
+    <functioncall functionName="EAddressRequired"/>
+    <functioncall functionName="EAlreadyConnected"/>
+    <functioncall functionName="EBadProtocolOption"/>
+    <functioncall functionName="EConnectionAborted"/>
+    <functioncall functionName="EConnectionClosed"/>
+    <functioncall functionName="EConnectionRefused"/>
+    <functioncall functionName="EConnectionReset"/>
+    <functioncall functionName="EDNSError"/>
+    <functioncall functionName="EDNSNotFound"/>
+    <functioncall functionName="EHostDown"/>
+    <functioncall functionName="EHostUnreachable"/>
+    <functioncall functionName="EInProgress"/>
+    <functioncall functionName="EInterrupted"/>
+    <functioncall functionName="EInvalidParameter"/>
+    <functioncall functionName="EInvalidSocket"/>
+    <functioncall functionName="EInvalidSocketType"/>
+    <functioncall functionName="EMessageTooLong"/>
+    <functioncall functionName="ENetworkDown"/>
+    <functioncall functionName="ENetworkReset"/>
+    <functioncall functionName="ENetworkUnreachable"/>
+    <functioncall functionName="ENoDNSData"/>
+    <functioncall functionName="ENoMemory"/>
+    <functioncall functionName="ENoSocketsAvailable"/>
+    <functioncall functionName="ENotAvailable"/>
+    <functioncall functionName="ENotConnected"/>
+    <functioncall functionName="EOperationNotSupported"/>
+    <functioncall functionName="EOperationWouldBlock"/>
+    <functioncall functionName="EProtocolFamilyNotSupported"/>
+    <functioncall functionName="EProtocolNotSupported"/>
+    <functioncall functionName="EProtocolNotSupportedBySocket"/>
+    <functioncall functionName="ESeriousError"/>
+    <functioncall functionName="EShutDown"/>
+    <functioncall functionName="ESocketLimitReached"/>
+    <functioncall functionName="ETimedOut"/>
+    <functioncall functionName="Exception"/>
+    <functioncall functionName="TranslateError"/>
+    <functioncall functionName="WSAGetLastError"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="h_errno"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="m_code"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_errno"/>
+    <functioncall functionName="p_error"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

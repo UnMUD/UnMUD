@@ -12,7 +12,7 @@ SIMPLEMUDDIR = ./SimpleMUD
 LIBS = -lpthread
 
 # flags
-CFLAGS = -I$(MUDLIBDIR)
+CFLAGS = -std=c++2a -I$(MUDLIBDIR)
 
 libs: $(wildcard *.cpp)
 	$(CXX) $(CFLAGS) $(SOCKETLIBDIR)/*.cpp -c;
@@ -27,4 +27,11 @@ main: $(wildcard *.cpp)
 	$(CXX) $(CFLAGS) *.cpp -c;
 
 link: $(wildcard *.cpp)
-	$(CXX) $(CFLAGS) *.o $(LIBS)
+	$(CXX) $(CFLAGS) *.o $(LIBS) -o UnMUD.out
+
+run:
+	./UnMUD.out
+
+clean:
+	rm -rf *.o
+	rm UnMUD.out
