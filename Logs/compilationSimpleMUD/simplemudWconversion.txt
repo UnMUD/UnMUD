@@ -1,0 +1,234 @@
+g++ -std=c++2a -Wconversion -I../Libraries *.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+g++ -std=c++2a -Wconversion -I../Libraries ./SimpleMUD/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/DatabasePointer.h:12,
+                 from ./SimpleMUD/DatabasePointer.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Enemy.h:14,
+                 from ./SimpleMUD/Enemy.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/EnemyDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ./SimpleMUD/EnemyDatabase.h:12,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In instantiation of 'SimpleMUD::entityid SimpleMUD::EntityDatabase<datatype>::FindOpenID() [with datatype = SimpleMUD::Enemy; SimpleMUD::entityid = unsigned int]':
+./SimpleMUD/EnemyDatabase.cpp:60:30:   required from here
+./SimpleMUD/EntityDatabase.h:145:33: warning: conversion from 'std::map<unsigned int, SimpleMUD::Enemy, std::less<unsigned int>, std::allocator<std::pair<const unsigned int, SimpleMUD::Enemy> > >::size_type' {aka 'long unsigned int'} to 'SimpleMUD::entityid' {aka 'unsigned int'} may change value [-Wconversion]
+  145 |             return m_map.size() + 1;
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+./SimpleMUD/Game.cpp: In member function 'bool SimpleMUD::Game::UseItem(const string&)':
+./SimpleMUD/Game.cpp:760:44: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+  760 |         p.AddHitpoints( BasicLib::RandomInt( itm.Min(), itm.Max() ) );
+      |                         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::EnemyAttack(SimpleMUD::enemy)':
+./SimpleMUD/Game.cpp:1118:37: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+ 1118 |         damage = BasicLib::RandomInt( 1, 3 );
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./SimpleMUD/Game.cpp:1123:37: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+ 1123 |         damage = BasicLib::RandomInt( e.Weapon()->Min(), e.Weapon()->Max() );
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::PlayerKilled(SimpleMUD::player)':
+./SimpleMUD/Game.cpp:1172:44: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+ 1172 |         while( p.GetItem( index = RandomInt( 0, PLAYERITEMS - 1 ) ) == 0 );
+      |                                   ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+./SimpleMUD/Game.cpp: In member function 'void SimpleMUD::Game::PlayerAttack(const string&)':
+./SimpleMUD/Game.cpp:1225:37: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+ 1225 |         damage = BasicLib::RandomInt( 1, 3 );
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./SimpleMUD/Game.cpp:1230:37: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'int' may change value [-Wconversion]
+ 1230 |         damage = BasicLib::RandomInt( p.Weapon()->Min(), p.Weapon()->Max() );
+      |                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]':
+../Libraries/BasicLib/BasicLibRandom.h:262:16:   required from 'BasicLib::sint32 BasicLib::random_int_range<generator>::operator()(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]'
+./SimpleMUD/Game.cpp:760:67:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:252:41: warning: conversion from 'BasicLib::sint32' {aka 'long int'} to 'double' may change value [-Wconversion]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                         ^~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'double BasicLib::random_percent<inclusive, generator>::operator()() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.h:252:39:   required from 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]'
+../Libraries/BasicLib/BasicLibRandom.h:262:16:   required from 'BasicLib::sint32 BasicLib::random_int_range<generator>::operator()(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]'
+./SimpleMUD/Game.cpp:760:67:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:82:30: warning: conversion from 'long unsigned int' to 'double' may change value [-Wconversion]
+   82 |         return m_generator() / m_max;
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/EntityDatabase.h:18,
+                 from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/ItemDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/PlayerDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Room.h:15,
+                 from ./SimpleMUD/Room.cpp:13:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/RoomDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Train.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~

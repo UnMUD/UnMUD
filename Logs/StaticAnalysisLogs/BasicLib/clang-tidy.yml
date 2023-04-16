@@ -1,0 +1,1534 @@
+---
+MainSourceFile:  '/usr/src/UnMUD/./Libraries/BasicLib/BasicLibFiles.cpp'
+Diagnostics:
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+      FileOffset:      110
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          110
+          Length:          10
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIB_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          130
+          Length:          10
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIB_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+      FileOffset:      174
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          183
+          Length:          17
+          ReplacementText: '"BasicLibFiles.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          210
+          Length:          19
+          ReplacementText: '"BasicLibFunctions.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          297
+          Length:          22
+          ReplacementText: '"BasicLibString.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLib.h'
+          Offset:          329
+          Length:          18
+          ReplacementText: '"BasicLibTime.h"'
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      183
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+          Offset:          195
+          Length:          14
+          ReplacementText: '<dirent.h>'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+          Offset:          222
+          Length:          11
+          ReplacementText: '<sys/types.h>'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      282
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+          Offset:          273
+          Length:          8
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+          Offset:          326
+          Length:          0
+          ReplacementText: ' -> filelist'
+  - DiagnosticName:  performance-unnecessary-value-param
+    DiagnosticMessage:
+      Message:         'the const qualified parameter ''p_directory'' is copied for each invocation; consider making it a reference'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      313
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+          Offset:          312
+          Length:          0
+          ReplacementText: '&'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+          Offset:          337
+          Length:          0
+          ReplacementText: '&'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      880
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      880
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      932
+      Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.cpp'
+      FileOffset:      932
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+      FileOffset:      115
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+          Offset:          115
+          Length:          15
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBFILES_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+          Offset:          140
+          Length:          15
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBFILES_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+      FileOffset:      187
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+          Offset:          196
+          Length:          9
+          ReplacementText: '<set>'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFiles.h'
+          Offset:          215
+          Length:          6
+          ReplacementText: '<string>'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFunctions.h'
+      FileOffset:      122
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFunctions.h'
+          Offset:          122
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBFUNCTIONS_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFunctions.h'
+          Offset:          151
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBFUNCTIONS_H
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''algorithm'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibFunctions.h'
+      FileOffset:      183
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+      FileOffset:      149
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+          Offset:          149
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBLOGGER_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+          Offset:          175
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBLOGGER_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+      FileOffset:      368
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+          Offset:          377
+          Length:          9
+          ReplacementText: '"BasicLibTime.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+          Offset:          416
+          Length:          17
+          ReplacementText: '<string>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibLogger.h'
+      FileOffset:      377
+      Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      293
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''Random'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      300
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      383
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      314
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomPercent'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      339
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      1319
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      355
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomPercentExclusive'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      380
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      1319
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      405
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomRange'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      428
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      3846
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      428
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      3860
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      442
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomRangeExclusive'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      465
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      3846
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      465
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      3860
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      488
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomInt'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      499
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      5259
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      499
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      5291
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      511
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomNormal'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      525
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      2296
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      525
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      2333
+        Replacements:    []
+  - DiagnosticName:  fuchsia-statically-constructed-objects
+    DiagnosticMessage:
+      Message:         'static objects are disallowed; if possible, use a constexpr constructor instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      540
+      Replacements:    []
+  - DiagnosticName:  cert-err58-cpp
+    DiagnosticMessage:
+      Message:         'initialization of ''RandomIntNormal'' with static storage duration may throw an exception that cannot be caught'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      556
+      Replacements:    []
+    Notes:
+      - Message:         possibly throwing constructor declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      6679
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.cpp'
+      FileOffset:      556
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+        FileOffset:      6713
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+      FileOffset:      134
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+          Offset:          134
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBRANDOM_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+          Offset:          160
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBRANDOM_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+      FileOffset:      180
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+          Offset:          189
+          Length:          11
+          ReplacementText: '<cmath>'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+          Offset:          210
+          Length:          8
+          ReplacementText: '<stdlib.h>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''cmath'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibRandom.h'
+      FileOffset:      210
+      Replacements:    []
+  - DiagnosticName:  hicpp-deprecated-headers
+    DiagnosticMessage:
+      Message:         'inclusion of deprecated C++ header ''stdlib.h''; consider using ''cstdlib'' instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      224
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-deprecated-headers
+    DiagnosticMessage:
+      Message:         'inclusion of deprecated C++ header ''stdlib.h''; consider using ''cstdlib'' instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      224
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      273
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          261
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          313
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  modernize-loop-convert
+    DiagnosticMessage:
+      Message:         use range-based for loop instead
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      357
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          360
+          Length:          37
+          ReplacementText: '(char & i : str)'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          414
+          Length:          6
+          ReplacementText: i
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          432
+          Length:          6
+          ReplacementText: i
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      484
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          472
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          524
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  modernize-loop-convert
+    DiagnosticMessage:
+      Message:         use range-based for loop instead
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      568
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          571
+          Length:          37
+          ReplacementText: '(char & i : str)'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          625
+          Length:          6
+          ReplacementText: i
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          643
+          Length:          6
+          ReplacementText: i
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      699
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          687
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          821
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      891
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      82312
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1152
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1140
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1197
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''wsf'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1210
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1213
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''wsb'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1224
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1227
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1265
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      94215
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1318
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      97502
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1521
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1509
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          1574
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      1593
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      94215
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      2241
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          2229
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+          Offset:          2295
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.cpp'
+      FileOffset:      2314
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      94215
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+      FileOffset:      171
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+          Offset:          171
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBSTRING_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+          Offset:          197
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBSTRING_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+      FileOffset:      217
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+          Offset:          226
+          Length:          9
+          ReplacementText: '"BasicLibTypes.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+          Offset:          265
+          Length:          18
+          ReplacementText: '<string>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+      FileOffset:      226
+      Replacements:    []
+  - DiagnosticName:  hicpp-deprecated-headers
+    DiagnosticMessage:
+      Message:         'inclusion of deprecated C++ header ''time.h''; consider using ''ctime'' instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      348
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-deprecated-headers
+    DiagnosticMessage:
+      Message:         'inclusion of deprecated C++ header ''time.h''; consider using ''ctime'' instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      348
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1630
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          1623
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          1641
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'uninitialized record type: ''t'''
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1836
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          1852
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'uninitialized record type: ''t'''
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1836
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          1852
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''s'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1874
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          1875
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1958
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      1958
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2090
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2090
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2176
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2176
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2280
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2273
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2290
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2328
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2328
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2355
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2348
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2365
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '60000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2403
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '60000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2403
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2431
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2424
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2441
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '3600000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2479
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '3600000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2479
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2718
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2706
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          2729
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2746
+      Replacements:    []
+  - DiagnosticName:  hicpp-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2746
+      Replacements:    []
+  - DiagnosticName:  modernize-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2746
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '9 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2755
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '9 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2755
+      Replacements:    []
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2847
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2847
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2954
+      Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2954
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '9 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2959
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '9 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2959
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2997
+      Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2997
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      2997
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3221
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3209
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3232
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3249
+      Replacements:    []
+  - DiagnosticName:  hicpp-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3249
+      Replacements:    []
+  - DiagnosticName:  modernize-avoid-c-arrays
+    DiagnosticMessage:
+      Message:         'do not declare C-style arrays, use std::array<> instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3249
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '11 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3258
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '11 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3258
+      Replacements:    []
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3351
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3351
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3458
+      Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3458
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '11 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3463
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '11 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3463
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3502
+      Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3502
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3502
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3760
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3746
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3767
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  readability-make-member-function-const
+    DiagnosticMessage:
+      Message:         'method ''GetMS'' can be made const'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      3760
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3767
+          Length:          0
+          ReplacementText: ' const'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.h'
+          Offset:          1402
+          Length:          0
+          ReplacementText: ' const'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4010
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          3996
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4016
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4050
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4050
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4084
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4070
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4090
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '60000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4124
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '60000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4124
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4159
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4145
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4165
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '3600000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4199
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '3600000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4199
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4236
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4222
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4242
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '86400000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4276
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '86400000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4276
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4318
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4304
+          Length:          6
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4324
+          Length:          0
+          ReplacementText: ' -> sint64'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '365 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4357
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '365 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4357
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4395
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4376
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4406
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '365 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4497
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '365 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4497
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '24 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4531
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '24 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4531
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '60 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4564
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '60 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4564
+      Replacements:    []
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4590
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4590
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4648
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4590
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4590
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4648
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4590
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4590
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4648
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4611
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+        FileOffset:      3524
+        Replacements:    []
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4669
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4669
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4726
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4669
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4669
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4726
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4669
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4669
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4726
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4690
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+        FileOffset:      3524
+        Replacements:    []
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4747
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4747
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4805
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4747
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4747
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4805
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4747
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4747
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+          Offset:          4805
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4768
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+        FileOffset:      3524
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.cpp'
+      FileOffset:      4832
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibString.h'
+        FileOffset:      3524
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.h'
+      FileOffset:      136
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.h'
+          Offset:          136
+          Length:          14
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBTIME_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTime.h'
+          Offset:          160
+          Length:          14
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBTIME_H
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+      FileOffset:      116
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+          Offset:          116
+          Length:          15
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBTYPES_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+          Offset:          141
+          Length:          15
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_BASICLIB_BASICLIBTYPES_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+      FileOffset:      158
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+          Offset:          167
+          Length:          11
+          ReplacementText: '<fstream>'
+        - FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+          Offset:          188
+          Length:          10
+          ReplacementText: '<iostream>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''iostream'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/BasicLib/BasicLibTypes.h'
+      FileOffset:      167
+      Replacements:    []
+...

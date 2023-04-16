@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4064477873">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="Libraries/SocketLib/SocketLibSystem.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+            <symbol>Exception</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="58" column="47"/>
+            <symbol>p_address</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="140" column="41"/>
+            <symbol>p_address</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="Libraries/SocketLib/SocketLibErrors.h:92:11" call-funcname="GetError" call-argnr="1" file="Libraries/SocketLib/SocketLibSystem.cpp" line="87" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="Libraries/SocketLib/SocketLibErrors.h:92:11" call-funcname="GetError" call-argnr="1" file="Libraries/SocketLib/SocketLibSystem.cpp" line="129" col="38" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="Libraries/SocketLib/SocketLibErrors.h:92:11" call-funcname="GetError" call-argnr="1" file="Libraries/SocketLib/SocketLibSystem.cpp" line="87" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="Libraries/SocketLib/SocketLibErrors.h:92:11" call-funcname="GetError" call-argnr="1" file="Libraries/SocketLib/SocketLibSystem.cpp" line="129" col="38" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="GetIPAddress" lineNumber="58"/>
+    <functiondecl functionName="GetIPString" lineNumber="103"/>
+    <functiondecl functionName="GetHostNameString" lineNumber="120"/>
+    <functiondecl functionName="IsIPAddress" lineNumber="140"/>
+    <functiondecl functionName="GetIPAddress" lineNumber="58"/>
+    <functiondecl functionName="GetIPString" lineNumber="103"/>
+    <functiondecl functionName="GetHostNameString" lineNumber="120"/>
+    <functiondecl functionName="IsIPAddress" lineNumber="140"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="EAccessDenied"/>
+    <functioncall functionName="EAddressFamilyNotSupported"/>
+    <functioncall functionName="EAddressInUse"/>
+    <functioncall functionName="EAddressNotAvailable"/>
+    <functioncall functionName="EAddressRequired"/>
+    <functioncall functionName="EAlreadyConnected"/>
+    <functioncall functionName="EBadProtocolOption"/>
+    <functioncall functionName="EConnectionAborted"/>
+    <functioncall functionName="EConnectionClosed"/>
+    <functioncall functionName="EConnectionRefused"/>
+    <functioncall functionName="EConnectionReset"/>
+    <functioncall functionName="EDNSError"/>
+    <functioncall functionName="EDNSNotFound"/>
+    <functioncall functionName="EHostDown"/>
+    <functioncall functionName="EHostUnreachable"/>
+    <functioncall functionName="EInProgress"/>
+    <functioncall functionName="EInterrupted"/>
+    <functioncall functionName="EInvalidParameter"/>
+    <functioncall functionName="EInvalidSocket"/>
+    <functioncall functionName="EInvalidSocketType"/>
+    <functioncall functionName="EMessageTooLong"/>
+    <functioncall functionName="ENetworkDown"/>
+    <functioncall functionName="ENetworkReset"/>
+    <functioncall functionName="ENetworkUnreachable"/>
+    <functioncall functionName="ENoDNSData"/>
+    <functioncall functionName="ENoMemory"/>
+    <functioncall functionName="ENoSocketsAvailable"/>
+    <functioncall functionName="ENotAvailable"/>
+    <functioncall functionName="ENotConnected"/>
+    <functioncall functionName="EOperationNotSupported"/>
+    <functioncall functionName="EOperationWouldBlock"/>
+    <functioncall functionName="EProtocolFamilyNotSupported"/>
+    <functioncall functionName="EProtocolNotSupported"/>
+    <functioncall functionName="EProtocolNotSupportedBySocket"/>
+    <functioncall functionName="ESeriousError"/>
+    <functioncall functionName="EShutDown"/>
+    <functioncall functionName="ESocketLimitReached"/>
+    <functioncall functionName="ETimedOut"/>
+    <functioncall functionName="Exception"/>
+    <functioncall functionName="GetError"/>
+    <functioncall functionName="IsIPAddress"/>
+    <functioncall functionName="MAKEWORD"/>
+    <functioncall functionName="WSACleanup"/>
+    <functioncall functionName="WSAStartup"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gethostbyaddr"/>
+    <functioncall functionName="gethostbyname"/>
+    <functioncall functionName="h_addr"/>
+    <functioncall functionName="h_name"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inet_addr"/>
+    <functioncall functionName="inet_ntoa"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="m_WSAData"/>
+    <functioncall functionName="p_address"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

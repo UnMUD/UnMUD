@@ -1,0 +1,21 @@
+g++ -std=c++2a -Wall -I../Libraries *.cpp -c;
+In file included from SimpleMUD.cpp:18:
+SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:91:27: warning: catching polymorphic type 'class SocketLib::Exception' by value [-Wcatch-value=]
+   91 |         catch( SocketLib::Exception )
+      |                           ^~~~~~~~~
+g++ -std=c++2a -Wall -I../Libraries ./SimpleMUD/*.cpp -c;
+In file included from ./SimpleMUD/Game.cpp:8:
+./SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:91:27: warning: catching polymorphic type 'class SocketLib::Exception' by value [-Wcatch-value=]
+   91 |         catch( SocketLib::Exception )
+      |                           ^~~~~~~~~
+./SimpleMUD/GameLoop.cpp: In member function 'void SimpleMUD::GameLoop::PerformRegen()':
+./SimpleMUD/GameLoop.cpp:133:35: warning: comparison of integer expressions of different signedness: 'std::__cxx11::list<SimpleMUD::enemy>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  133 |             room.Enemies().size() < room.MaxEnemies() )
+      |             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Logon.cpp:8:
+./SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:91:27: warning: catching polymorphic type 'class SocketLib::Exception' by value [-Wcatch-value=]
+   91 |         catch( SocketLib::Exception )
+      |                           ^~~~~~~~~

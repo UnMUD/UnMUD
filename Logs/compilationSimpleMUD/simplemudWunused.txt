@@ -1,0 +1,2 @@
+g++ -std=c++2a -Wunused -I../Libraries *.cpp -c;
+g++ -std=c++2a -Wunused -I../Libraries ./SimpleMUD/*.cpp -c;

@@ -1,0 +1,6 @@
+g++ -std=c++2a -Wextra -I../Libraries *.cpp -c;
+g++ -std=c++2a -Wextra -I../Libraries ./SimpleMUD/*.cpp -c;
+./SimpleMUD/GameLoop.cpp: In member function 'void SimpleMUD::GameLoop::PerformRegen()':
+./SimpleMUD/GameLoop.cpp:133:35: warning: comparison of integer expressions of different signedness: 'std::__cxx11::list<SimpleMUD::enemy>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  133 |             room.Enemies().size() < room.MaxEnemies() )
+      |             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,2 @@
+g++ -std=c++2a -Wnon-virtual-dtor -I../Libraries *.cpp -c;
+g++ -std=c++2a -Wnon-virtual-dtor -I../Libraries ./SimpleMUD/*.cpp -c;

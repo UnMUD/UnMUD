@@ -1,0 +1,1123 @@
+g++ -std=c++2a -Weffc++ -I../Libraries *.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from SimpleMUD/ItemDatabase.h:16,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()':
+SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:12:
+SimpleMUD/ItemDatabase.h: In constructor 'SimpleMUD::ItemDatabase::ItemDatabase()':
+SimpleMUD/ItemDatabase.h:38:19: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()' first required here
+   38 |     ItemDatabase(){}
+      |                   ^
+In file included from SimpleMUD/PlayerDatabase.h:19,
+                 from SimpleMUD.cpp:13:
+SimpleMUD/Player.h: At global scope:
+SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:13:
+SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()':
+SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:14:
+SimpleMUD/RoomDatabase.h: In constructor 'SimpleMUD::RoomDatabase::RoomDatabase()':
+SimpleMUD/RoomDatabase.h:40:19: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()' first required here
+   40 |     RoomDatabase(){}
+      |                   ^
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()':
+SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:15:
+SimpleMUD/StoreDatabase.h: In constructor 'SimpleMUD::StoreDatabase::StoreDatabase()':
+SimpleMUD/StoreDatabase.h:37:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()' first required here
+   37 |     StoreDatabase(){}
+      |                    ^
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()':
+SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:16:
+SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyTemplateDatabase::EnemyTemplateDatabase()':
+SimpleMUD/EnemyDatabase.h:32:28: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()' first required here
+   32 |     EnemyTemplateDatabase(){}
+      |                            ^
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()':
+SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from SimpleMUD.cpp:16:
+SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyDatabase::EnemyDatabase()':
+SimpleMUD/EnemyDatabase.h:51:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()' first required here
+   51 |     EnemyDatabase(){}
+      |                    ^
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+SimpleMUD/Logon.h:33:30:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from SimpleMUD.cpp:18:
+SimpleMUD/Logon.h: In constructor 'SimpleMUD::Logon::Logon(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_state' should be initialized in the member initialization list [-Weffc++]
+   47 |     Logon( Connection<Telnet>& p_conn )
+      |     ^~~~~
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_errors' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_name' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_pass' should be initialized in the member initialization list [-Weffc++]
+In file included from SimpleMUD.cpp:19:
+SimpleMUD/Game.h: In constructor 'SimpleMUD::Game::Game(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_lastcommand' should be initialized in the member initialization list [-Weffc++]
+   42 |     Game( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~
+In file included from SimpleMUD.cpp:20:
+SimpleMUD/GameLoop.h: In constructor 'SimpleMUD::GameLoop::GameLoop()':
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_savedatabases' should be initialized in the member initialization list [-Weffc++]
+   29 |     GameLoop()      { LoadDatabases(); }
+      |     ^~~~~~~~
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextround' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextregen' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextheal' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/SocketLib.h:14,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ListeningManager.h: In instantiation of 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>':
+SimpleMUD.cpp:35:41:   required from here
+../Libraries/SocketLib/ListeningManager.h:43:7: warning: 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>' has pointer data members [-Weffc++]
+   43 | class ListeningManager
+      |       ^~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ListeningManager.h:43:7: warning:   but does not override 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h:43:7: warning:   or 'operator=(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h: In instantiation of 'SocketLib::ListeningManager<protocol, defaulthandler>::ListeningManager() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]':
+SimpleMUD.cpp:35:41:   required from here
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_sockets' should be initialized in the member initialization list [-Weffc++]
+  101 | ListeningManager<protocol, defaulthandler>::ListeningManager()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_set' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_manager' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In instantiation of 'SocketLib::ConnectionManager<protocol, defaulthandler>::ConnectionManager(int, int, int) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]':
+SimpleMUD.cpp:38:83:   required from here
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_connections' should be initialized in the member initialization list [-Weffc++]
+  144 | ConnectionManager<protocol, defaulthandler>::
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_maxdatarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_sendtimeout' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_maxbuffered' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_set' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In instantiation of 'SocketLib::Connection<protocol>::Connection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:177:26:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::NewConnection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ListeningManager.h:188:21:   required from 'void SocketLib::ListeningManager<protocol, defaulthandler>::Listen() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:48:23:   required from here
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_protocol' should be initialized in the member initialization list [-Weffc++]
+  245 | Connection<protocol>::Connection( DataSocket& p_socket )
+      | ^~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_handlerstack' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_sendbuffer' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_datarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastdatarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastReceiveTime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastSendTime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_creationtime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_checksendtime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_closed' should be initialized in the member initialization list [-Weffc++]
+g++ -std=c++2a -Weffc++ -I../Libraries ./SimpleMUD/*.cpp -c;
+In file included from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/ItemDatabase.h: In constructor 'SimpleMUD::ItemDatabase::ItemDatabase()':
+./SimpleMUD/ItemDatabase.h:38:19: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()' first required here
+   38 |     ItemDatabase(){}
+      |                   ^
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/DatabasePointer.cpp:10:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/DatabasePointer.cpp:11:
+./SimpleMUD/RoomDatabase.h: In constructor 'SimpleMUD::RoomDatabase::RoomDatabase()':
+./SimpleMUD/RoomDatabase.h:40:19: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()' first required here
+   40 |     RoomDatabase(){}
+      |                   ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/DatabasePointer.cpp:12:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyTemplateDatabase::EnemyTemplateDatabase()':
+./SimpleMUD/EnemyDatabase.h:32:28: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()' first required here
+   32 |     EnemyTemplateDatabase(){}
+      |                            ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/DatabasePointer.cpp:12:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyDatabase::EnemyDatabase()':
+./SimpleMUD/EnemyDatabase.h:51:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()' first required here
+   51 |     EnemyDatabase(){}
+      |                    ^
+In file included from ./SimpleMUD/Enemy.h:16,
+                 from ./SimpleMUD/Enemy.cpp:8:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/Enemy.cpp:9:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Enemy.cpp: In constructor 'SimpleMUD::EnemyTemplate::EnemyTemplate()':
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_hitpoints' should be initialized in the member initialization list [-Weffc++]
+   18 | EnemyTemplate::EnemyTemplate()
+      | ^~~~~~~~~~~~~
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_accuracy' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_dodging' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_strikedamage' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_damageabsorb' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_experience' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_weapon' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_moneymin' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_moneymax' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:18:1: warning: 'SimpleMUD::EnemyTemplate::m_loot' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp: In constructor 'SimpleMUD::Enemy::Enemy()':
+./SimpleMUD/Enemy.cpp:63:1: warning: 'SimpleMUD::Enemy::m_template' should be initialized in the member initialization list [-Weffc++]
+   63 | Enemy::Enemy()
+      | ^~~~~
+./SimpleMUD/Enemy.cpp:63:1: warning: 'SimpleMUD::Enemy::m_hitpoints' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:63:1: warning: 'SimpleMUD::Enemy::m_room' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Enemy.cpp:63:1: warning: 'SimpleMUD::Enemy::m_nextattacktime' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Enemy.h:16,
+                 from ./SimpleMUD/EnemyDatabase.h:13,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/EnemyDatabase.h:12,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyTemplateDatabase::EnemyTemplateDatabase()':
+./SimpleMUD/EnemyDatabase.h:32:28: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()' first required here
+   32 |     EnemyTemplateDatabase(){}
+      |                            ^
+In file included from ./SimpleMUD/EnemyDatabase.h:12,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyDatabase::EnemyDatabase()':
+./SimpleMUD/EnemyDatabase.h:51:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()' first required here
+   51 |     EnemyDatabase(){}
+      |                    ^
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+./SimpleMUD/Logon.h:33:30:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from ./SimpleMUD/Game.cpp:8:
+./SimpleMUD/Logon.h: In constructor 'SimpleMUD::Logon::Logon(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_state' should be initialized in the member initialization list [-Weffc++]
+   47 |     Logon( Connection<Telnet>& p_conn )
+      |     ^~~~~
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_errors' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_name' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_pass' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Player.h:19,
+                 from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/Game.h: In constructor 'SimpleMUD::Game::Game(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+./SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_lastcommand' should be initialized in the member initialization list [-Weffc++]
+   42 |     Game( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~
+In file included from ./SimpleMUD/Game.cpp:10:
+./SimpleMUD/Train.h: In constructor 'SimpleMUD::Train::Train(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+./SimpleMUD/Train.h:37:5: warning: 'SimpleMUD::Train::m_player' should be initialized in the member initialization list [-Weffc++]
+   37 |     Train( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~~
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.cpp:11:
+./SimpleMUD/ItemDatabase.h: In constructor 'SimpleMUD::ItemDatabase::ItemDatabase()':
+./SimpleMUD/ItemDatabase.h:38:19: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()' first required here
+   38 |     ItemDatabase(){}
+      |                   ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.cpp:13:
+./SimpleMUD/RoomDatabase.h: In constructor 'SimpleMUD::RoomDatabase::RoomDatabase()':
+./SimpleMUD/RoomDatabase.h:40:19: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()' first required here
+   40 |     RoomDatabase(){}
+      |                   ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.cpp:14:
+./SimpleMUD/StoreDatabase.h: In constructor 'SimpleMUD::StoreDatabase::StoreDatabase()':
+./SimpleMUD/StoreDatabase.h:37:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()' first required here
+   37 |     StoreDatabase(){}
+      |                    ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.cpp:15:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyTemplateDatabase::EnemyTemplateDatabase()':
+./SimpleMUD/EnemyDatabase.h:32:28: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()' first required here
+   32 |     EnemyTemplateDatabase(){}
+      |                            ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.cpp:15:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyDatabase::EnemyDatabase()':
+./SimpleMUD/EnemyDatabase.h:51:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()' first required here
+   51 |     EnemyDatabase(){}
+      |                    ^
+./SimpleMUD/Game.cpp: In constructor 'SimpleMUD::wholist::wholist()':
+./SimpleMUD/Game.cpp:512:8: warning: 'SimpleMUD::wholist::str' should be initialized in the member initialization list [-Weffc++]
+  512 | struct wholist
+      |        ^~~~~~~
+./SimpleMUD/Game.cpp: In static member function 'static std::string SimpleMUD::Game::WhoList(const string&)':
+./SimpleMUD/Game.cpp:555:13: note: synthesized method 'SimpleMUD::wholist::wholist()' first required here
+  555 |     wholist who;
+      |             ^~~
+In file included from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/ItemDatabase.h: In constructor 'SimpleMUD::ItemDatabase::ItemDatabase()':
+./SimpleMUD/ItemDatabase.h:38:19: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()' first required here
+   38 |     ItemDatabase(){}
+      |                   ^
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:15,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/RoomDatabase.h: In constructor 'SimpleMUD::RoomDatabase::RoomDatabase()':
+./SimpleMUD/RoomDatabase.h:40:19: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()' first required here
+   40 |     RoomDatabase(){}
+      |                   ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:16,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/StoreDatabase.h: In constructor 'SimpleMUD::StoreDatabase::StoreDatabase()':
+./SimpleMUD/StoreDatabase.h:37:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()' first required here
+   37 |     StoreDatabase(){}
+      |                    ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:17,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyTemplateDatabase::EnemyTemplateDatabase()':
+./SimpleMUD/EnemyDatabase.h:32:28: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::EnemyTemplate>::EntityDatabaseVector()' first required here
+   32 |     EnemyTemplateDatabase(){}
+      |                            ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/GameLoop.h:17,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EnemyDatabase.h: In constructor 'SimpleMUD::EnemyDatabase::EnemyDatabase()':
+./SimpleMUD/EnemyDatabase.h:51:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Enemy>::EntityDatabase()' first required here
+   51 |     EnemyDatabase(){}
+      |                    ^
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+./SimpleMUD/Game.h:28:29:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from ./SimpleMUD/GameLoop.h:18,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/Game.h: In constructor 'SimpleMUD::Game::Game(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+./SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_lastcommand' should be initialized in the member initialization list [-Weffc++]
+   42 |     Game( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~
+In file included from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/GameLoop.h: In constructor 'SimpleMUD::GameLoop::GameLoop()':
+./SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_savedatabases' should be initialized in the member initialization list [-Weffc++]
+   29 |     GameLoop()      { LoadDatabases(); }
+      |     ^~~~~~~~
+./SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextround' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextregen' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextheal' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/ItemDatabase.cpp:11:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/ItemDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/ItemDatabase.cpp:11:
+./SimpleMUD/ItemDatabase.h: In constructor 'SimpleMUD::ItemDatabase::ItemDatabase()':
+./SimpleMUD/ItemDatabase.h:38:19: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Item>::EntityDatabase()' first required here
+   38 |     ItemDatabase(){}
+      |                   ^
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+./SimpleMUD/Logon.h:33:30:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from ./SimpleMUD/Logon.cpp:8:
+./SimpleMUD/Logon.h: In constructor 'SimpleMUD::Logon::Logon(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_state' should be initialized in the member initialization list [-Weffc++]
+   47 |     Logon( Connection<Telnet>& p_conn )
+      |     ^~~~~
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_errors' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_name' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_pass' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Player.h:19,
+                 from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/Game.h: In constructor 'SimpleMUD::Game::Game(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+./SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_lastcommand' should be initialized in the member initialization list [-Weffc++]
+   42 |     Game( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/Player.h:19,
+                 from ./SimpleMUD/Player.cpp:14:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Player.cpp:14:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.cpp: In constructor 'SimpleMUD::Player::Player()':
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_pass' should be initialized in the member initialization list [-Weffc++]
+   22 | Player::Player()
+      | ^~~~~~
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_rank' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_statpoints' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_experience' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_level' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_room' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_money' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_hitpoints' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_baseattributes' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_attributes' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_nextattacktime' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_items' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_weapon' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_armor' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_connection' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_loggedin' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_active' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Player.cpp:22:1: warning: 'SimpleMUD::Player::m_newbie' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/Player.h:19,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ./SimpleMUD/Room.h:19,
+                 from ./SimpleMUD/Room.cpp:13:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp: In constructor 'SimpleMUD::Room::Room()':
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_type' should be initialized in the member initialization list [-Weffc++]
+   24 | Room::Room()
+      | ^~~~
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_data' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_description' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_spawnwhich' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_maxenemies' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_items' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_money' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_players' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Room.cpp:24:1: warning: 'SimpleMUD::Room::m_enemies' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Room.h:19,
+                 from ./SimpleMUD/RoomDatabase.h:19,
+                 from ./SimpleMUD/RoomDatabase.cpp:12:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/RoomDatabase.h:18,
+                 from ./SimpleMUD/RoomDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()':
+./SimpleMUD/EntityDatabase.h:171:7: warning: 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::m_vector' should be initialized in the member initialization list [-Weffc++]
+  171 | class EntityDatabaseVector
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ./SimpleMUD/RoomDatabase.cpp:12:
+./SimpleMUD/RoomDatabase.h: In constructor 'SimpleMUD::RoomDatabase::RoomDatabase()':
+./SimpleMUD/RoomDatabase.h:40:19: note: synthesized method 'SimpleMUD::EntityDatabaseVector<SimpleMUD::Room>::EntityDatabaseVector()' first required here
+   40 |     RoomDatabase(){}
+      |                   ^
+In file included from ./SimpleMUD/SimpleMUDLogs.h:12,
+                 from ./SimpleMUD/SimpleMUDLogs.cpp:9:
+../Libraries/BasicLib/BasicLibLogger.h: In instantiation of 'BasicLib::Logger<decorator>::Logger(const string&, const string&, bool, bool) [with decorator = BasicLib::TextDecorator; std::string = std::__cxx11::basic_string<char>]':
+./SimpleMUD/SimpleMUDLogs.cpp:16:66:   required from here
+../Libraries/BasicLib/BasicLibLogger.h:73:1: warning: 'BasicLib::Logger<BasicLib::TextDecorator>::m_logfile' should be initialized in the member initialization list [-Weffc++]
+   73 | Logger<decorator>::Logger( const std::string& p_filename,
+      | ^~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibLogger.h:73:1: warning: 'BasicLib::Logger<BasicLib::TextDecorator>::m_timestamp' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibLogger.h:73:1: warning: 'BasicLib::Logger<BasicLib::TextDecorator>::m_datestamp' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/Store.h:19,
+                 from ./SimpleMUD/StoreDatabase.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/StoreDatabase.h:15,
+                 from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/StoreDatabase.h: In constructor 'SimpleMUD::StoreDatabase::StoreDatabase()':
+./SimpleMUD/StoreDatabase.h:37:20: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Store>::EntityDatabase()' first required here
+   37 |     StoreDatabase(){}
+      |                    ^
+In file included from ./SimpleMUD/StoreDatabase.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/Store.h: In instantiation of 'std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {const unsigned int&}; long unsigned int ..._Indexes1 = {0}; _Args2 = {}; long unsigned int ..._Indexes2 = {}; _T1 = const unsigned int; _T2 = SimpleMUD::Store]':
+/usr/include/c++/9/tuple:1663:63:   required from 'std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {const unsigned int&}; _Args2 = {}; _T1 = const unsigned int; _T2 = SimpleMUD::Store]'
+/usr/include/c++/9/ext/new_allocator.h:146:4:   required from 'void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::pair<const unsigned int, SimpleMUD::Store>; _Args = {const std::piecewise_construct_t&, std::tuple<const unsigned int&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const unsigned int, SimpleMUD::Store> >]'
+/usr/include/c++/9/bits/alloc_traits.h:483:4:   required from 'static void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = std::pair<const unsigned int, SimpleMUD::Store>; _Args = {const std::piecewise_construct_t&, std::tuple<const unsigned int&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const unsigned int, SimpleMUD::Store> >; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<std::_Rb_tree_node<std::pair<const unsigned int, SimpleMUD::Store> > >]'
+/usr/include/c++/9/bits/stl_tree.h:614:32:   required from 'void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_construct_node(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<const unsigned int&>, std::tuple<>}; _Key = unsigned int; _Val = std::pair<const unsigned int, SimpleMUD::Store>; _KeyOfValue = std::_Select1st<std::pair<const unsigned int, SimpleMUD::Store> >; _Compare = std::less<unsigned int>; _Alloc = std::allocator<std::pair<const unsigned int, SimpleMUD::Store> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const unsigned int, SimpleMUD::Store> >*]'
+/usr/include/c++/9/bits/stl_tree.h:631:4:   required from 'std::_Rb_tree_node<_Val>* std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<const unsigned int&>, std::tuple<>}; _Key = unsigned int; _Val = std::pair<const unsigned int, SimpleMUD::Store>; _KeyOfValue = std::_Select1st<std::pair<const unsigned int, SimpleMUD::Store> >; _Compare = std::less<unsigned int>; _Alloc = std::allocator<std::pair<const unsigned int, SimpleMUD::Store> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type = std::_Rb_tree_node<std::pair<const unsigned int, SimpleMUD::Store> >*]'
+/usr/include/c++/9/bits/stl_tree.h:2460:13:   required from 'std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<const unsigned int&>, std::tuple<>}; _Key = unsigned int; _Val = std::pair<const unsigned int, SimpleMUD::Store>; _KeyOfValue = std::_Select1st<std::pair<const unsigned int, SimpleMUD::Store> >; _Compare = std::less<unsigned int>; _Alloc = std::allocator<std::pair<const unsigned int, SimpleMUD::Store> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const unsigned int, SimpleMUD::Store> >; std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const unsigned int, SimpleMUD::Store> >]'
+/usr/include/c++/9/bits/stl_map.h:499:8:   required from 'std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](const key_type&) [with _Key = unsigned int; _Tp = SimpleMUD::Store; _Compare = std::less<unsigned int>; _Alloc = std::allocator<std::pair<const unsigned int, SimpleMUD::Store> >; std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type = SimpleMUD::Store; std::map<_Key, _Tp, _Compare, _Alloc>::key_type = unsigned int]'
+./SimpleMUD/StoreDatabase.cpp:35:17:   required from here
+./SimpleMUD/Store.h:32:7: warning: 'SimpleMUD::Store::m_items' should be initialized in the member initialization list [-Weffc++]
+   32 | class Store : public Entity
+      |       ^~~~~
+In file included from /usr/include/c++/9/functional:54,
+                 from /usr/include/c++/9/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/9/algorithm:71,
+                 from ../Libraries/BasicLib/BasicLibFunctions.h:10,
+                 from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:9:
+/usr/include/c++/9/tuple:1674:70: note: synthesized method 'SimpleMUD::Store::Store()' first required here
+ 1674 |         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
+      |                                                                      ^
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ./SimpleMUD/Player.h:19,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+./SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/Player.h: At global scope:
+./SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+./SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+./SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/EntityDatabase.h: In constructor 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()':
+./SimpleMUD/EntityDatabase.h:29:7: warning: 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::m_map' should be initialized in the member initialization list [-Weffc++]
+   29 | class EntityDatabase
+      |       ^~~~~~~~~~~~~~
+In file included from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/PlayerDatabase.h: In constructor 'SimpleMUD::PlayerDatabase::PlayerDatabase()':
+./SimpleMUD/PlayerDatabase.h:68:21: note: synthesized method 'SimpleMUD::EntityDatabase<SimpleMUD::Player>::EntityDatabase()' first required here
+   68 |     PlayerDatabase(){}
+      |                     ^
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+./SimpleMUD/Train.h:23:30:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/Train.h: In constructor 'SimpleMUD::Train::Train(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+./SimpleMUD/Train.h:37:5: warning: 'SimpleMUD::Train::m_player' should be initialized in the member initialization list [-Weffc++]
+   37 |     Train( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~~

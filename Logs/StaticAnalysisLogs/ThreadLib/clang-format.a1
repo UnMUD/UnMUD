@@ -1,0 +1,1101 @@
+Libraries/ThreadLib/ThreadLibFunctions.cpp:6:45: warning: code should be clang-formatted [-Wclang-format-violations]
+// the other synchronization object headers.
+                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:11:20: warning: code should be clang-formatted [-Wclang-format-violations]
+namespace ThreadLib
+                   ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:12:2: warning: code should be clang-formatted [-Wclang-format-violations]
+{
+ ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:14:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:15:59: warning: code should be clang-formatted [-Wclang-format-violations]
+    //  This is the handle-map global, only used in Win32.
+                                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:16:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:17:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32
+                ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:18:18: warning: code should be clang-formatted [-Wclang-format-violations]
+        std::map< DWORD, HANDLE > g_handlemap;
+                 ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:18:32: warning: code should be clang-formatted [-Wclang-format-violations]
+        std::map< DWORD, HANDLE > g_handlemap;
+                               ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:18:47: warning: code should be clang-formatted [-Wclang-format-violations]
+        std::map< DWORD, HANDLE > g_handlemap;
+                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:19:11: warning: code should be clang-formatted [-Wclang-format-violations]
+    #endif
+          ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:22:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:23:75: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This is a "dummy" thread function that will be used to
+                                                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:24:74: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              transparently translate function pointers to whatever
+                                                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:25:63: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              system the user is currently compiling on.
+                                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:26:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:27:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32
+                ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:28:31: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data )
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:28:36: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data )
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:28:37: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data )
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:28:44: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data )
+                                           ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:28:46: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data )
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:29:10: warning: code should be clang-formatted [-Wclang-format-violations]
+    #else
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:13: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+            ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:24: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+                       ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:29: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:30: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+                             ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:37: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:30:39: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data )
+                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:31:11: warning: code should be clang-formatted [-Wclang-format-violations]
+    #endif
+          ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:32:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:33:38: warning: code should be clang-formatted [-Wclang-format-violations]
+            // convert the dummy data
+                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:34:22: warning: code should be clang-formatted [-Wclang-format-violations]
+            DummyData* data = (DummyData*)p_data;
+                     ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:34:23: warning: code should be clang-formatted [-Wclang-format-violations]
+            DummyData* data = (DummyData*)p_data;
+                      ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:34:41: warning: code should be clang-formatted [-Wclang-format-violations]
+            DummyData* data = (DummyData*)p_data;
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:34:50: warning: code should be clang-formatted [-Wclang-format-violations]
+            DummyData* data = (DummyData*)p_data;
+                                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:36:52: warning: code should be clang-formatted [-Wclang-format-violations]
+            // run the function with the given data
+                                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:37:26: warning: code should be clang-formatted [-Wclang-format-violations]
+            data->m_func( data->m_data );
+                         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:37:39: warning: code should be clang-formatted [-Wclang-format-violations]
+            data->m_func( data->m_data );
+                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:37:42: warning: code should be clang-formatted [-Wclang-format-violations]
+            data->m_func( data->m_data );
+                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:39:35: warning: code should be clang-formatted [-Wclang-format-violations]
+            // now delete the data
+                                  ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:40:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            delete data;
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:42:29: warning: code should be clang-formatted [-Wclang-format-violations]
+            // and return 0.
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:43:22: warning: code should be clang-formatted [-Wclang-format-violations]
+            return 0;
+                     ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:44:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.cpp:47:2: warning: code should be clang-formatted [-Wclang-format-violations]
+}   // end namespace ThreadLib
+ ^
+Libraries/ThreadLib/ThreadException.h:16:13: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+            ^
+Libraries/ThreadLib/ThreadException.h:16:51: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+                                                  ^
+Libraries/ThreadLib/ThreadException.h:18:6: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+     ^
+Libraries/ThreadLib/ThreadException.h:18:37: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+                                    ^
+Libraries/ThreadLib/ThreadException.h:20:7: warning: code should be clang-formatted [-Wclang-format-violations]
+#endif
+      ^
+Libraries/ThreadLib/ThreadException.h:23:20: warning: code should be clang-formatted [-Wclang-format-violations]
+namespace ThreadLib
+                   ^
+Libraries/ThreadLib/ThreadException.h:24:2: warning: code should be clang-formatted [-Wclang-format-violations]
+{
+ ^
+Libraries/ThreadLib/ThreadException.h:26:15: warning: code should be clang-formatted [-Wclang-format-violations]
+    enum Error
+              ^
+Libraries/ThreadLib/ThreadException.h:27:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadException.h:28:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        Unspecified,                // unspecified error
+                    ^
+Libraries/ThreadLib/ThreadException.h:28:57: warning: code should be clang-formatted [-Wclang-format-violations]
+        Unspecified,                // unspecified error
+                                                        ^
+Libraries/ThreadLib/ThreadException.h:29:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        InitFailure,                // thread library not initialized
+                    ^
+Libraries/ThreadLib/ThreadException.h:29:70: warning: code should be clang-formatted [-Wclang-format-violations]
+        InitFailure,                // thread library not initialized
+                                                                     ^
+Libraries/ThreadLib/ThreadException.h:30:24: warning: code should be clang-formatted [-Wclang-format-violations]
+        CreationFailure             // thread cannot be created
+                       ^
+Libraries/ThreadLib/ThreadException.h:30:64: warning: code should be clang-formatted [-Wclang-format-violations]
+        CreationFailure             // thread cannot be created
+                                                               ^
+Libraries/ThreadLib/ThreadException.h:31:7: warning: code should be clang-formatted [-Wclang-format-violations]
+    };
+      ^
+Libraries/ThreadLib/ThreadException.h:34:44: warning: code should be clang-formatted [-Wclang-format-violations]
+    class Exception : public std::exception
+                                           ^
+Libraries/ThreadLib/ThreadException.h:35:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadException.h:36:12: warning: code should be clang-formatted [-Wclang-format-violations]
+    public:
+           ^
+Libraries/ThreadLib/ThreadException.h:37:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadException.h:38:79: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: set the error code of the exception, with a default of 
+                                                                              ^
+Libraries/ThreadLib/ThreadException.h:39:37: warning: code should be clang-formatted [-Wclang-format-violations]
+        //              Unspecified.
+                                    ^
+Libraries/ThreadLib/ThreadException.h:40:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadException.h:41:19: warning: code should be clang-formatted [-Wclang-format-violations]
+        Exception( Error p_error = Unspecified )
+                  ^
+Libraries/ThreadLib/ThreadException.h:41:47: warning: code should be clang-formatted [-Wclang-format-violations]
+        Exception( Error p_error = Unspecified )
+                                              ^
+Libraries/ThreadLib/ThreadException.h:41:49: warning: code should be clang-formatted [-Wclang-format-violations]
+        Exception( Error p_error = Unspecified )
+                                                ^
+Libraries/ThreadLib/ThreadException.h:42:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadException.h:43:31: warning: code should be clang-formatted [-Wclang-format-violations]
+            m_error = p_error;
+                              ^
+Libraries/ThreadLib/ThreadException.h:44:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadException.h:46:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadException.h:47:61: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: Gets the error code of the exception
+                                                            ^
+Libraries/ThreadLib/ThreadException.h:48:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadException.h:49:31: warning: code should be clang-formatted [-Wclang-format-violations]
+        Error GetError() const
+                              ^
+Libraries/ThreadLib/ThreadException.h:50:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadException.h:51:28: warning: code should be clang-formatted [-Wclang-format-violations]
+            return m_error;
+                           ^
+Libraries/ThreadLib/ThreadException.h:52:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadException.h:54:15: warning: code should be clang-formatted [-Wclang-format-violations]
+    protected:
+              ^
+Libraries/ThreadLib/ThreadException.h:55:23: warning: code should be clang-formatted [-Wclang-format-violations]
+        Error m_error;
+                      ^
+Libraries/ThreadLib/ThreadException.h:57:2: warning: code should be clang-formatted [-Wclang-format-violations]
+}
+ ^
+Libraries/ThreadLib/ThreadLib.h:12:1: warning: code should be clang-formatted [-Wclang-format-violations]
+#include "ThreadLibFunctions.h"
+^
+Libraries/ThreadLib/ThreadLibFunctions.h:13:13: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:13:51: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+                                                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:16:6: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:16:37: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:17:25: warning: code should be clang-formatted [-Wclang-format-violations]
+    #include <pthread.h>
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:23:20: warning: code should be clang-formatted [-Wclang-format-violations]
+namespace ThreadLib
+                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:24:2: warning: code should be clang-formatted [-Wclang-format-violations]
+{
+ ^
+Libraries/ThreadLib/ThreadLibFunctions.h:26:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:27:78: warning: code should be clang-formatted [-Wclang-format-violations]
+    // define the standard thread function format, which takes a void* as its
+                                                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:28:38: warning: code should be clang-formatted [-Wclang-format-violations]
+    // parameter, and returns nothing
+                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:29:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:30:36: warning: code should be clang-formatted [-Wclang-format-violations]
+    typedef void (*ThreadFunc)(void*);
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:30:39: warning: code should be clang-formatted [-Wclang-format-violations]
+    typedef void (*ThreadFunc)(void*);
+                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:32:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:33:71: warning: code should be clang-formatted [-Wclang-format-violations]
+    //  Define the standard ThreadID datatype, depending on the system
+                                                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:34:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:35:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32                // windows95 and above
+                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:35:55: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32                // windows95 and above
+                                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:36:32: warning: code should be clang-formatted [-Wclang-format-violations]
+        typedef DWORD ThreadID;
+                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:37:25: warning: code should be clang-formatted [-Wclang-format-violations]
+        extern std::map< DWORD, HANDLE > g_handlemap;
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:37:39: warning: code should be clang-formatted [-Wclang-format-violations]
+        extern std::map< DWORD, HANDLE > g_handlemap;
+                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:37:54: warning: code should be clang-formatted [-Wclang-format-violations]
+        extern std::map< DWORD, HANDLE > g_handlemap;
+                                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:38:10: warning: code should be clang-formatted [-Wclang-format-violations]
+    #else                       // linux
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:38:41: warning: code should be clang-formatted [-Wclang-format-violations]
+    #else                       // linux
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:39:36: warning: code should be clang-formatted [-Wclang-format-violations]
+        typedef pthread_t ThreadID;
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:40:11: warning: code should be clang-formatted [-Wclang-format-violations]
+    #endif
+          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:43:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:44:65: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This is a "dummy" class that will be used to
+                                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:45:74: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              transparently translate function pointers to whatever
+                                                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:46:78: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              system the user is currently compiling on. It is meant to
+                                                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:47:58: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              be passed into the DummyRun function.
+                                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:48:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:49:20: warning: code should be clang-formatted [-Wclang-format-violations]
+    class DummyData
+                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:50:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:51:12: warning: code should be clang-formatted [-Wclang-format-violations]
+    public:
+           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:52:27: warning: code should be clang-formatted [-Wclang-format-violations]
+        ThreadFunc m_func;
+                          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:53:13: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* m_data;
+            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:53:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* m_data;
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:53:22: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* m_data;
+                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:54:7: warning: code should be clang-formatted [-Wclang-format-violations]
+    };
+      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:56:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:57:75: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This is a "dummy" thread function that will be used to
+                                                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:58:74: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              transparently translate function pointers to whatever
+                                                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:59:63: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              system the user is currently compiling on.
+                                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:60:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:61:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32
+                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:62:31: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data );
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:62:36: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data );
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:62:37: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data );
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:62:44: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data );
+                                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:62:47: warning: code should be clang-formatted [-Wclang-format-violations]
+        DWORD WINAPI DummyRun( void* p_data );
+                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:63:10: warning: code should be clang-formatted [-Wclang-format-violations]
+    #else
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:13: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:24: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:29: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:30: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:37: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:64:40: warning: code should be clang-formatted [-Wclang-format-violations]
+        void* DummyRun( void* p_data );
+                                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:65:11: warning: code should be clang-formatted [-Wclang-format-violations]
+    #endif
+          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:68:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:69:57: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: Creates a thread and returns its ID.
+                                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:70:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:71:28: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID Create( ThreadFunc p_func, void* p_param )
+                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:71:52: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID Create( ThreadFunc p_func, void* p_param )
+                                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:71:53: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID Create( ThreadFunc p_func, void* p_param )
+                                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:71:61: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID Create( ThreadFunc p_func, void* p_param )
+                                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:71:63: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID Create( ThreadFunc p_func, void* p_param )
+                                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:72:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:73:20: warning: code should be clang-formatted [-Wclang-format-violations]
+        ThreadID t;
+                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:74:41: warning: code should be clang-formatted [-Wclang-format-violations]
+        // create a new dummy data block
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:75:18: warning: code should be clang-formatted [-Wclang-format-violations]
+        DummyData* data = new DummyData;
+                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:75:19: warning: code should be clang-formatted [-Wclang-format-violations]
+        DummyData* data = new DummyData;
+                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:75:41: warning: code should be clang-formatted [-Wclang-format-violations]
+        DummyData* data = new DummyData;
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:76:31: warning: code should be clang-formatted [-Wclang-format-violations]
+        data->m_func = p_func;
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:77:32: warning: code should be clang-formatted [-Wclang-format-violations]
+        data->m_data = p_param;
+                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:79:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32    // create a Win32 thread
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:79:49: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32    // create a Win32 thread
+                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:80:22: warning: code should be clang-formatted [-Wclang-format-violations]
+            HANDLE h;
+                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:81:30: warning: code should be clang-formatted [-Wclang-format-violations]
+            h = CreateThread( NULL, 0, DummyRun, data, 0, &t );
+                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:81:61: warning: code should be clang-formatted [-Wclang-format-violations]
+            h = CreateThread( NULL, 0, DummyRun, data, 0, &t );
+                                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:81:64: warning: code should be clang-formatted [-Wclang-format-violations]
+            h = CreateThread( NULL, 0, DummyRun, data, 0, &t );
+                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:82:15: warning: code should be clang-formatted [-Wclang-format-violations]
+            if( h != 0 )
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:82:16: warning: code should be clang-formatted [-Wclang-format-violations]
+            if( h != 0 )
+               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:82:23: warning: code should be clang-formatted [-Wclang-format-violations]
+            if( h != 0 )
+                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:82:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            if( h != 0 )
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:83:14: warning: code should be clang-formatted [-Wclang-format-violations]
+            {
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:84:56: warning: code should be clang-formatted [-Wclang-format-violations]
+                // insert the handle into the handlemap
+                                                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:85:36: warning: code should be clang-formatted [-Wclang-format-violations]
+                g_handlemap[t] = h;
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:86:14: warning: code should be clang-formatted [-Wclang-format-violations]
+            }
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:87:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else           // create a linux thread
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:87:49: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else           // create a linux thread
+                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:88:28: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_create( &t, 0, DummyRun, data );
+                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:88:50: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_create( &t, 0, DummyRun, data );
+                                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:88:53: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_create( &t, 0, DummyRun, data );
+                                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:89:15: warning: code should be clang-formatted [-Wclang-format-violations]
+        #endif
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:91:11: warning: code should be clang-formatted [-Wclang-format-violations]
+        if( t == 0 )
+          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:91:12: warning: code should be clang-formatted [-Wclang-format-violations]
+        if( t == 0 )
+           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:91:19: warning: code should be clang-formatted [-Wclang-format-violations]
+        if( t == 0 )
+                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:91:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        if( t == 0 )
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:92:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:93:37: warning: code should be clang-formatted [-Wclang-format-violations]
+            // delete the data first
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:94:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            delete data;
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:96:30: warning: code should be clang-formatted [-Wclang-format-violations]
+            // throw an error
+                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:97:29: warning: code should be clang-formatted [-Wclang-format-violations]
+            throw Exception( CreationFailure );
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:97:45: warning: code should be clang-formatted [-Wclang-format-violations]
+            throw Exception( CreationFailure );
+                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:97:48: warning: code should be clang-formatted [-Wclang-format-violations]
+            throw Exception( CreationFailure );
+                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:98:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:99:18: warning: code should be clang-formatted [-Wclang-format-violations]
+        return t;
+                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:100:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    }
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:102:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:103:53: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: Get the ID of the current thread
+                                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:104:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:105:28: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline ThreadID GetID()
+                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:106:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:107:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:108:41: warning: code should be clang-formatted [-Wclang-format-violations]
+            return GetCurrentThreadId();
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:109:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:110:35: warning: code should be clang-formatted [-Wclang-format-violations]
+            return pthread_self();
+                                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:111:15: warning: code should be clang-formatted [-Wclang-format-violations]
+        #endif
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:112:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    }
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:115:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:116:71: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This waits for a thread to finish executing before 
+                                                                      ^
+Libraries/ThreadLib/ThreadLibFunctions.h:117:31: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              returning.
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:118:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:119:31: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void WaitForFinish( ThreadID p_thread )
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:119:49: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void WaitForFinish( ThreadID p_thread )
+                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:119:51: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void WaitForFinish( ThreadID p_thread )
+                                                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:120:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:121:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:122:68: warning: code should be clang-formatted [-Wclang-format-violations]
+            // look up the handle and wait for the thread to finish
+                                                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:123:33: warning: code should be clang-formatted [-Wclang-format-violations]
+            WaitForSingleObject( g_handlemap[p_thread], INFINITE );
+                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:123:65: warning: code should be clang-formatted [-Wclang-format-violations]
+            WaitForSingleObject( g_handlemap[p_thread], INFINITE );
+                                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:123:68: warning: code should be clang-formatted [-Wclang-format-violations]
+            WaitForSingleObject( g_handlemap[p_thread], INFINITE );
+                                                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:125:46: warning: code should be clang-formatted [-Wclang-format-violations]
+            // close the handle of the thread
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:126:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:126:47: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:126:50: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:128:46: warning: code should be clang-formatted [-Wclang-format-violations]
+            // remove the handle from the map
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:129:31: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:129:40: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:129:43: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:130:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:131:77: warning: code should be clang-formatted [-Wclang-format-violations]
+            // "join" the thread. This essentially transfers control over to
+                                                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:132:54: warning: code should be clang-formatted [-Wclang-format-violations]
+            // the thread and waits for it to finish.
+                                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:133:26: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_join( p_thread, NULL );
+                         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:133:41: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_join( p_thread, NULL );
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:133:44: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_join( p_thread, NULL );
+                                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:134:15: warning: code should be clang-formatted [-Wclang-format-violations]
+        #endif
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:135:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    }
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:138:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:139:78: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This forcefully terminates a thread. Don't do this unless
+                                                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:140:49: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              it is absolutely neccessary.
+                                                ^
+Libraries/ThreadLib/ThreadLibFunctions.h:141:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:142:22: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void Kill( ThreadID& p_thread )
+                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:142:31: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void Kill( ThreadID& p_thread )
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:142:32: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void Kill( ThreadID& p_thread )
+                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:142:41: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void Kill( ThreadID& p_thread )
+                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:142:43: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void Kill( ThreadID& p_thread )
+                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:143:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:144:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:145:36: warning: code should be clang-formatted [-Wclang-format-violations]
+            // terminate the thread
+                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:146:29: warning: code should be clang-formatted [-Wclang-format-violations]
+            TerminateThread( g_handlemap[p_thread], 0 );
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:146:54: warning: code should be clang-formatted [-Wclang-format-violations]
+            TerminateThread( g_handlemap[p_thread], 0 );
+                                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:146:57: warning: code should be clang-formatted [-Wclang-format-violations]
+            TerminateThread( g_handlemap[p_thread], 0 );
+                                                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:148:46: warning: code should be clang-formatted [-Wclang-format-violations]
+            // close the handle of the thread
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:149:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                        ^
+Libraries/ThreadLib/ThreadLibFunctions.h:149:47: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:149:50: warning: code should be clang-formatted [-Wclang-format-violations]
+            CloseHandle( g_handlemap[p_thread] );
+                                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:151:46: warning: code should be clang-formatted [-Wclang-format-violations]
+            // remove the handle from the map
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:152:31: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:152:40: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:152:43: warning: code should be clang-formatted [-Wclang-format-violations]
+            g_handlemap.erase( p_thread );
+                                          ^
+Libraries/ThreadLib/ThreadLibFunctions.h:153:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:154:34: warning: code should be clang-formatted [-Wclang-format-violations]
+            // cancel the thread.
+                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:155:28: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_cancel( p_thread );
+                           ^
+Libraries/ThreadLib/ThreadLibFunctions.h:155:37: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_cancel( p_thread );
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:155:40: warning: code should be clang-formatted [-Wclang-format-violations]
+            pthread_cancel( p_thread );
+                                       ^
+Libraries/ThreadLib/ThreadLibFunctions.h:156:15: warning: code should be clang-formatted [-Wclang-format-violations]
+        #endif
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:157:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    }
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:160:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:161:78: warning: code should be clang-formatted [-Wclang-format-violations]
+    // Description: This yields the thread to the operating system, and gives
+                                                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:162:46: warning: code should be clang-formatted [-Wclang-format-violations]
+    //              up its current timeslice.
+                                             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:163:80: warning: code should be clang-formatted [-Wclang-format-violations]
+    // ========================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibFunctions.h:164:29: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void YieldThread( int p_milliseconds = 1 )
+                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:164:52: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void YieldThread( int p_milliseconds = 1 )
+                                                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:164:54: warning: code should be clang-formatted [-Wclang-format-violations]
+    inline void YieldThread( int p_milliseconds = 1 )
+                                                     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:165:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:166:21: warning: code should be clang-formatted [-Wclang-format-violations]
+        #ifdef WIN32
+                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:167:19: warning: code should be clang-formatted [-Wclang-format-violations]
+            Sleep( p_milliseconds );
+                  ^
+Libraries/ThreadLib/ThreadLibFunctions.h:167:34: warning: code should be clang-formatted [-Wclang-format-violations]
+            Sleep( p_milliseconds );
+                                 ^
+Libraries/ThreadLib/ThreadLibFunctions.h:167:37: warning: code should be clang-formatted [-Wclang-format-violations]
+            Sleep( p_milliseconds );
+                                    ^
+Libraries/ThreadLib/ThreadLibFunctions.h:168:14: warning: code should be clang-formatted [-Wclang-format-violations]
+        #else
+             ^
+Libraries/ThreadLib/ThreadLibFunctions.h:169:20: warning: code should be clang-formatted [-Wclang-format-violations]
+            usleep( p_milliseconds * 1000 );
+                   ^
+Libraries/ThreadLib/ThreadLibFunctions.h:169:42: warning: code should be clang-formatted [-Wclang-format-violations]
+            usleep( p_milliseconds * 1000 );
+                                         ^
+Libraries/ThreadLib/ThreadLibFunctions.h:169:45: warning: code should be clang-formatted [-Wclang-format-violations]
+            usleep( p_milliseconds * 1000 );
+                                            ^
+Libraries/ThreadLib/ThreadLibFunctions.h:170:15: warning: code should be clang-formatted [-Wclang-format-violations]
+        #endif
+              ^
+Libraries/ThreadLib/ThreadLibFunctions.h:171:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    }
+     ^
+Libraries/ThreadLib/ThreadLibFunctions.h:176:2: warning: code should be clang-formatted [-Wclang-format-violations]
+}   // end namespace ThreadLib
+ ^
+Libraries/ThreadLib/ThreadLibFunctions.h:176:31: warning: code should be clang-formatted [-Wclang-format-violations]
+}   // end namespace ThreadLib
+                              ^
+Libraries/ThreadLib/ThreadLibMutex.h:12:13: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+            ^
+Libraries/ThreadLib/ThreadLibMutex.h:12:51: warning: code should be clang-formatted [-Wclang-format-violations]
+#ifdef WIN32                // windows95 and above
+                                                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:14:6: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+     ^
+Libraries/ThreadLib/ThreadLibMutex.h:14:37: warning: code should be clang-formatted [-Wclang-format-violations]
+#else                       // linux
+                                    ^
+Libraries/ThreadLib/ThreadLibMutex.h:20:20: warning: code should be clang-formatted [-Wclang-format-violations]
+namespace ThreadLib
+                   ^
+Libraries/ThreadLib/ThreadLibMutex.h:21:2: warning: code should be clang-formatted [-Wclang-format-violations]
+{
+ ^
+Libraries/ThreadLib/ThreadLibMutex.h:23:16: warning: code should be clang-formatted [-Wclang-format-violations]
+    class Mutex
+               ^
+Libraries/ThreadLib/ThreadLibMutex.h:24:6: warning: code should be clang-formatted [-Wclang-format-violations]
+    {
+     ^
+Libraries/ThreadLib/ThreadLibMutex.h:25:12: warning: code should be clang-formatted [-Wclang-format-violations]
+    public:
+           ^
+Libraries/ThreadLib/ThreadLibMutex.h:26:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:27:52: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: Initialize the mutex object
+                                                   ^
+Libraries/ThreadLib/ThreadLibMutex.h:28:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:29:16: warning: code should be clang-formatted [-Wclang-format-violations]
+        Mutex()
+               ^
+Libraries/ThreadLib/ThreadLibMutex.h:30:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:31:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            #ifdef WIN32
+                        ^
+Libraries/ThreadLib/ThreadLibMutex.h:32:65: warning: code should be clang-formatted [-Wclang-format-violations]
+                // use critical sections in windows; much faster
+                                                                ^
+Libraries/ThreadLib/ThreadLibMutex.h:33:43: warning: code should be clang-formatted [-Wclang-format-violations]
+                InitializeCriticalSection( &m_mutex );
+                                          ^
+Libraries/ThreadLib/ThreadLibMutex.h:33:52: warning: code should be clang-formatted [-Wclang-format-violations]
+                InitializeCriticalSection( &m_mutex );
+                                                   ^
+Libraries/ThreadLib/ThreadLibMutex.h:33:55: warning: code should be clang-formatted [-Wclang-format-violations]
+                InitializeCriticalSection( &m_mutex );
+                                                      ^
+Libraries/ThreadLib/ThreadLibMutex.h:34:18: warning: code should be clang-formatted [-Wclang-format-violations]
+            #else
+                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:35:36: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_init( &m_mutex, 0 );
+                                   ^
+Libraries/ThreadLib/ThreadLibMutex.h:35:48: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_init( &m_mutex, 0 );
+                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:35:51: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_init( &m_mutex, 0 );
+                                                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:36:19: warning: code should be clang-formatted [-Wclang-format-violations]
+            #endif
+                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:37:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:39:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:40:49: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: Destroy the mutex object
+                                                ^
+Libraries/ThreadLib/ThreadLibMutex.h:41:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:42:17: warning: code should be clang-formatted [-Wclang-format-violations]
+        ~Mutex()
+                ^
+Libraries/ThreadLib/ThreadLibMutex.h:43:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:44:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            #ifdef WIN32
+                        ^
+Libraries/ThreadLib/ThreadLibMutex.h:45:39: warning: code should be clang-formatted [-Wclang-format-violations]
+                DeleteCriticalSection( &m_mutex );
+                                      ^
+Libraries/ThreadLib/ThreadLibMutex.h:45:48: warning: code should be clang-formatted [-Wclang-format-violations]
+                DeleteCriticalSection( &m_mutex );
+                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:45:51: warning: code should be clang-formatted [-Wclang-format-violations]
+                DeleteCriticalSection( &m_mutex );
+                                                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:46:18: warning: code should be clang-formatted [-Wclang-format-violations]
+            #else
+                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:47:39: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_destroy( &m_mutex );
+                                      ^
+Libraries/ThreadLib/ThreadLibMutex.h:47:48: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_destroy( &m_mutex );
+                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:47:51: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_destroy( &m_mutex );
+                                                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:48:19: warning: code should be clang-formatted [-Wclang-format-violations]
+            #endif
+                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:49:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:51:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:52:60: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: Wait for a lock, then hold the lock
+                                                           ^
+Libraries/ThreadLib/ThreadLibMutex.h:53:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:54:27: warning: code should be clang-formatted [-Wclang-format-violations]
+        inline void Lock()
+                          ^
+Libraries/ThreadLib/ThreadLibMutex.h:55:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:56:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            #ifdef WIN32
+                        ^
+Libraries/ThreadLib/ThreadLibMutex.h:57:38: warning: code should be clang-formatted [-Wclang-format-violations]
+                EnterCriticalSection( &m_mutex );
+                                     ^
+Libraries/ThreadLib/ThreadLibMutex.h:57:47: warning: code should be clang-formatted [-Wclang-format-violations]
+                EnterCriticalSection( &m_mutex );
+                                              ^
+Libraries/ThreadLib/ThreadLibMutex.h:57:50: warning: code should be clang-formatted [-Wclang-format-violations]
+                EnterCriticalSection( &m_mutex );
+                                                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:58:18: warning: code should be clang-formatted [-Wclang-format-violations]
+            #else
+                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:59:36: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_lock( &m_mutex );
+                                   ^
+Libraries/ThreadLib/ThreadLibMutex.h:59:45: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_lock( &m_mutex );
+                                            ^
+Libraries/ThreadLib/ThreadLibMutex.h:59:48: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_lock( &m_mutex );
+                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:60:19: warning: code should be clang-formatted [-Wclang-format-violations]
+            #endif
+                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:61:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:63:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:64:41: warning: code should be clang-formatted [-Wclang-format-violations]
+        // Description: release the lock
+                                        ^
+Libraries/ThreadLib/ThreadLibMutex.h:65:80: warning: code should be clang-formatted [-Wclang-format-violations]
+        // ====================================================================
+                                                                               ^
+Libraries/ThreadLib/ThreadLibMutex.h:66:29: warning: code should be clang-formatted [-Wclang-format-violations]
+        inline void Unlock()
+                            ^
+Libraries/ThreadLib/ThreadLibMutex.h:67:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        {
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:68:25: warning: code should be clang-formatted [-Wclang-format-violations]
+            #ifdef WIN32
+                        ^
+Libraries/ThreadLib/ThreadLibMutex.h:69:38: warning: code should be clang-formatted [-Wclang-format-violations]
+                LeaveCriticalSection( &m_mutex );
+                                     ^
+Libraries/ThreadLib/ThreadLibMutex.h:69:47: warning: code should be clang-formatted [-Wclang-format-violations]
+                LeaveCriticalSection( &m_mutex );
+                                              ^
+Libraries/ThreadLib/ThreadLibMutex.h:69:50: warning: code should be clang-formatted [-Wclang-format-violations]
+                LeaveCriticalSection( &m_mutex );
+                                                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:70:18: warning: code should be clang-formatted [-Wclang-format-violations]
+            #else
+                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:71:38: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_unlock( &m_mutex );
+                                     ^
+Libraries/ThreadLib/ThreadLibMutex.h:71:47: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_unlock( &m_mutex );
+                                              ^
+Libraries/ThreadLib/ThreadLibMutex.h:71:50: warning: code should be clang-formatted [-Wclang-format-violations]
+                pthread_mutex_unlock( &m_mutex );
+                                                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:72:19: warning: code should be clang-formatted [-Wclang-format-violations]
+            #endif
+                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:73:10: warning: code should be clang-formatted [-Wclang-format-violations]
+        }
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:75:15: warning: code should be clang-formatted [-Wclang-format-violations]
+    protected:
+              ^
+Libraries/ThreadLib/ThreadLibMutex.h:76:35: warning: code should be clang-formatted [-Wclang-format-violations]
+    // define the base mutex types
+                                  ^
+Libraries/ThreadLib/ThreadLibMutex.h:77:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    #ifdef WIN32
+                ^
+Libraries/ThreadLib/ThreadLibMutex.h:78:34: warning: code should be clang-formatted [-Wclang-format-violations]
+        CRITICAL_SECTION m_mutex;
+                                 ^
+Libraries/ThreadLib/ThreadLibMutex.h:79:10: warning: code should be clang-formatted [-Wclang-format-violations]
+    #else
+         ^
+Libraries/ThreadLib/ThreadLibMutex.h:80:33: warning: code should be clang-formatted [-Wclang-format-violations]
+        pthread_mutex_t m_mutex;
+                                ^
+Libraries/ThreadLib/ThreadLibMutex.h:81:11: warning: code should be clang-formatted [-Wclang-format-violations]
+    #endif
+          ^
+Libraries/ThreadLib/ThreadLibMutex.h:83:7: warning: code should be clang-formatted [-Wclang-format-violations]
+    };  // end class Mutex
+      ^
+Libraries/ThreadLib/ThreadLibMutex.h:83:27: warning: code should be clang-formatted [-Wclang-format-violations]
+    };  // end class Mutex
+                          ^
+Libraries/ThreadLib/ThreadLibMutex.h:86:2: warning: code should be clang-formatted [-Wclang-format-violations]
+}   // end namespace ThreadLib
+ ^

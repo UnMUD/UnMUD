@@ -1,0 +1,130 @@
+g++ -std=c++2a -Wsign-conversion -I../Libraries *.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In instantiation of 'void SocketLib::Connection<protocol>::SendBuffer() [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:322:13:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Send() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ConnectionManager.h:100:9:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Manage() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:49:23:   required from here
+../Libraries/SocketLib/Connection.h:301:32: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  301 |         m_sendbuffer.erase( 0, sent );
+      |                                ^~~~
+g++ -std=c++2a -Wsign-conversion -I../Libraries ./SimpleMUD/*.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+./SimpleMUD/Game.cpp: In member function 'virtual void SimpleMUD::Game::Handle(std::string)':
+./SimpleMUD/Game.cpp:213:55: warning: conversion to 'SimpleMUD::entityid' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  213 |         p.SendString( StoreList( p.CurrentRoom()->Data() ) );
+      |                                  ~~~~~~~~~~~~~~~~~~~~~^~
+./SimpleMUD/Game.cpp: In member function 'void SimpleMUD::Game::Buy(const string&)':
+./SimpleMUD/Game.cpp:1046:71: warning: conversion to 'SimpleMUD::entityid' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1046 |     Store& s = StoreDatabase::GetInstance().get( p.CurrentRoom()->Data() );
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~^~
+./SimpleMUD/Game.cpp: In member function 'void SimpleMUD::Game::Sell(const string&)':
+./SimpleMUD/Game.cpp:1078:71: warning: conversion to 'SimpleMUD::entityid' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1078 |     Store& s = StoreDatabase::GetInstance().get( p.CurrentRoom()->Data() );
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~^~
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::EnemyAttack(SimpleMUD::enemy)':
+./SimpleMUD/Game.cpp:1109:68: warning: conversion to 'BasicLib::sint32' {aka 'long int'} from 'std::__cxx11::list<SimpleMUD::player>::size_type' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1109 |     std::advance( itr, BasicLib::RandomInt( 0, r->Players().size() - 1 ) );
+      |                                                ~~~~~~~~~~~~~~~~~~~~^~~
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::EnemyKilled(SimpleMUD::enemy, SimpleMUD::player)':
+./SimpleMUD/Game.cpp:1266:46: warning: conversion to 'BasicLib::sint32' {aka 'long int'} from 'SimpleMUD::money' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1266 |     money m = BasicLib::RandomInt( e.MoneyMin(), e.MoneyMax() );
+      |                                    ~~~~~~~~~~^~
+./SimpleMUD/Game.cpp:1266:60: warning: conversion to 'BasicLib::sint32' {aka 'long int'} from 'SimpleMUD::money' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1266 |     money m = BasicLib::RandomInt( e.MoneyMin(), e.MoneyMax() );
+      |                                                  ~~~~~~~~~~^~
+./SimpleMUD/Game.cpp:1266:34: warning: conversion to 'SimpleMUD::money' {aka 'long unsigned int'} from 'BasicLib::sint32' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+ 1266 |     money m = BasicLib::RandomInt( e.MoneyMin(), e.MoneyMax() );
+      |               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
