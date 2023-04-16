@@ -1,0 +1,3 @@
+g++ -std=c++2a -Wnon-virtual-dtor -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+g++ -std=c++2a -Wnon-virtual-dtor -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+g++ -std=c++2a -Wnon-virtual-dtor -I../Libraries ../Libraries/BasicLib/*.cpp -c;

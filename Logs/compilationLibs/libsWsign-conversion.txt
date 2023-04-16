@@ -1,0 +1,79 @@
+g++ -std=c++2a -Wsign-conversion -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Send(const char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:177:39: warning: conversion to 'size_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  177 |         err = send( m_sock, p_buffer, p_size, 0 );
+      |                                       ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Receive(char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:212:39: warning: conversion to 'size_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  212 |         err = recv( m_sock, p_buffer, p_size, 0 );
+      |                                       ^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+../Libraries/SocketLib/Telnet.cpp: In member function 'void SocketLib::Telnet::Translate(SocketLib::Connection<SocketLib::Telnet>&, char*, int)':
+../Libraries/SocketLib/Telnet.cpp:49:61: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |                 p_conn.Handler()->Handle( string( m_buffer, m_buffersize ) );
+      |                                                             ^~~~~~~~~~~~
+In file included from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Connection.h: In instantiation of 'void SocketLib::Connection<protocol>::BufferData(const char*, int) [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/Telnet.cpp:64:62:   required from here
+../Libraries/SocketLib/Connection.h:288:36: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  288 |     m_sendbuffer.append( p_buffer, p_size );
+      |                                    ^~~~~~
+g++ -std=c++2a -Wsign-conversion -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+g++ -std=c++2a -Wsign-conversion -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::TrimWhitespace(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:73:29: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |     return p_string.substr( wsf, wsb - wsf + 1 );
+      |                             ^~~
+../Libraries/BasicLib/BasicLibString.cpp:73:44: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |     return p_string.substr( wsf, wsb - wsf + 1 );
+      |                                  ~~~~~~~~~~^~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::ParseWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:88:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   88 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:89:55: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   89 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |                                                       ^~~
+../Libraries/BasicLib/BasicLibString.cpp:93:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   93 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:101:29: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |     return p_string.substr( wss, wse - wss );
+      |                             ^~~
+../Libraries/BasicLib/BasicLibString.cpp:101:38: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |     return p_string.substr( wss, wse - wss );
+      |                                  ~~~~^~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::RemoveWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:115:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  115 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:116:55: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  116 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |                                                       ^~~
+../Libraries/BasicLib/BasicLibString.cpp:120:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  120 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:123:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  123 |     wse = p_string.find_first_not_of( WHITESPACE, wse );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:132:16: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |     str.erase( wss, wse - wss );
+      |                ^~~
+../Libraries/BasicLib/BasicLibString.cpp:132:25: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |     str.erase( wss, wse - wss );
+      |                     ~~~~^~~~~

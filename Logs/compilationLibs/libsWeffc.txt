@@ -1,0 +1,125 @@
+g++ -std=c++2a -Weffc++ -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+../Libraries/SocketLib/SocketLibErrors.cpp: In constructor 'SocketLib::Exception::Exception(SocketLib::Error)':
+../Libraries/SocketLib/SocketLibErrors.cpp:220:5: warning: 'SocketLib::Exception::m_code' should be initialized in the member initialization list [-Weffc++]
+  220 |     Exception::Exception( Error p_code )
+      |     ^~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::Socket::Socket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:76:5: warning: 'SocketLib::Socket::m_localinfo' should be initialized in the member initialization list [-Weffc++]
+   76 |     Socket::Socket( sock p_socket )
+      |     ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:76:5: warning: 'SocketLib::Socket::m_isblocking' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::DataSocket::DataSocket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:95:5: warning: 'SocketLib::DataSocket::m_remoteinfo' should be initialized in the member initialization list [-Weffc++]
+   95 |     DataSocket::DataSocket( sock p_socket )
+      |     ^~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::ListeningSocket::ListeningSocket()':
+../Libraries/SocketLib/SocketLibSocket.cpp:247:5: warning: 'SocketLib::ListeningSocket::m_listening' should be initialized in the member initialization list [-Weffc++]
+  247 |     ListeningSocket::ListeningSocket()
+      |     ^~~~~~~~~~~~~~~
+../Libraries/SocketLib/SocketSet.cpp: In constructor 'SocketLib::SocketSet::SocketSet()':
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_set' should be initialized in the member initialization list [-Weffc++]
+   16 | SocketSet::SocketSet()
+      | ^~~~~~~~~
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_activityset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_socketdescs' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ../Libraries/SocketLib/Telnet.h:15,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+../Libraries/SocketLib/Telnet.cpp:49:33:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+g++ -std=c++2a -Weffc++ -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+g++ -std=c++2a -Weffc++ -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLibRandom.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:16:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+   60 |     random_percent() { init(); }
+      |     ^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<true>::m_max' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:17:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<false>::m_generator' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<false>::m_max' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_range<inclusive, generator>::random_range(double, double) [with bool inclusive = true; generator = BasicLib::random_percent<true>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:18:24:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  166 |     random_range( double a = 0, double b = 1 )
+      |     ^~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_range<inclusive, generator>::random_range(double, double) [with bool inclusive = false; generator = BasicLib::random_percent<false>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:19:24:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_generator' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_int_range<generator>::random_int_range(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]':
+../Libraries/BasicLib/BasicLibRandom.cpp:20:12:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  227 |     random_int_range( sint32 a = 0, sint32 b = 1 )
+      |     ^~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::normal_generator<inclusive, generator>::normal_generator(double, double) [with bool inclusive = true; generator = BasicLib::random_percent<true>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:21:15:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  101 |     normal_generator( double p_mean = 0, double p_sigma = 1 )
+      |     ^~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_mean' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_sigma' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho1' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho2' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_valid' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::simulated_binomial<N, generator>::simulated_binomial(BasicLib::sint32, BasicLib::sint32) [with long int N = 4; generator = BasicLib::random_int_range<>; BasicLib::sint32 = long int]':
+../Libraries/BasicLib/BasicLibRandom.cpp:22:17:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  281 |     simulated_binomial( sint32 a = 0, sint32 b = 1 )
+      |     ^~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibTime.cpp: In constructor 'BasicLib::Timer::Timer()':
+../Libraries/BasicLib/BasicLibTime.cpp:135:5: warning: 'BasicLib::Timer::m_inittime' should be initialized in the member initialization list [-Weffc++]
+  135 |     Timer::Timer()
+      |     ^~~~~
+../Libraries/BasicLib/BasicLibTime.cpp:135:5: warning: 'BasicLib::Timer::m_starttime' should be initialized in the member initialization list [-Weffc++]

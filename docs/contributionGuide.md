@@ -137,8 +137,18 @@ docker-compose exec unmud bash Scripts/static_test.sh
 Para realizar a verificação do lint execute:
 
 ```
-docker-compose exec unmud bash Scripts/lint.sh 
+docker-compose exec unmud bash Scripts/lint.sh
 ```
+
+O resultado das análises será exibido no terminal e também ficará salvo na pasta `AnalysisLogs`.
+
+Para formatar os arquivos, basta executar:
+
+```
+docker-compose exec unmud bash Scripts/format.sh
+```
+
+A formatação é realizada pela ferramenta [clang-format](https://clang.llvm.org/docs/ClangFormat.html) e possui uma [extensão disponível para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format).
 
 ### Como rodar os testes de UnMUD
 

@@ -1,0 +1,109 @@
+g++ -std=c++2a -Wconversion -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'void SocketLib::DataSocket::Connect(SocketLib::ipaddress, SocketLib::port)':
+../Libraries/SocketLib/SocketLibSocket.cpp:140:40: warning: conversion from 'SocketLib::ipaddress' {aka 'long unsigned int'} to 'in_addr_t' {aka 'unsigned int'} may change value [-Wconversion]
+  140 |         m_remoteinfo.sin_addr.s_addr = p_addr;
+      |                                        ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Send(const char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:177:19: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  177 |         err = send( m_sock, p_buffer, p_size, 0 );
+      |               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Receive(char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:212:19: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  212 |         err = recv( m_sock, p_buffer, p_size, 0 );
+      |               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketSet.h:12,
+                 from ../Libraries/SocketLib/SocketSet.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/Connection.h:15,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+g++ -std=c++2a -Wconversion -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+g++ -std=c++2a -Wconversion -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLibRandom.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'void BasicLib::random_percent<inclusive, generator>::init() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.h:60:24:   required from 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]'
+../Libraries/BasicLib/BasicLibRandom.cpp:16:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:66:15: warning: conversion from 'long unsigned int' to 'double' may change value [-Wconversion]
+   66 |         m_max = m_generator.maximum();
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'void BasicLib::random_percent<inclusive, generator>::init() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.h:60:24:   required from 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]'
+../Libraries/BasicLib/BasicLibRandom.cpp:17:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:66:15: warning: conversion from 'long unsigned int' to 'double' may change value [-Wconversion]
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::UpperCase(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:20:25: warning: conversion from 'int' to '__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type' {aka 'char'} may change value [-Wconversion]
+   20 |         str[i] = toupper( str[i] );
+      |                  ~~~~~~~^~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::LowerCase(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:31:25: warning: conversion from 'int' to '__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type' {aka 'char'} may change value [-Wconversion]
+   31 |         str[i] = tolower( str[i] );
+      |                  ~~~~~~~^~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::TrimWhitespace(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:64:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   64 |     wsf = p_string.find_first_not_of( WHITESPACE );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:65:36: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   65 |     wsb = p_string.find_last_not_of( WHITESPACE );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::ParseWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:79:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   79 |     int wss = p_string.find_first_not_of( WHITESPACE );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:88:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   88 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:89:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   89 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:93:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   93 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::RemoveWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:106:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  106 |     int wss = p_string.find_first_not_of( WHITESPACE );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:115:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  115 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:116:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  116 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:120:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  120 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:123:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  123 |     wse = p_string.find_first_not_of( WHITESPACE, wse );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,1042 @@
+g++ -std=c++2a -Wold-style-cast -I../Libraries *.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from SimpleMUD/Item.h:16,
+                 from SimpleMUD/ItemDatabase.h:16,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from SimpleMUD/PlayerDatabase.h:19,
+                 from SimpleMUD.cpp:13:
+SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from SimpleMUD.cpp:18:
+SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:89:59: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   89 |             p_connection.Send( msg.c_str(), (int)msg.size() );
+      |                                                           ^
+      |                                             ---------------
+      |                                             static_cast<int> (msg.size())
+g++ -std=c++2a -Wold-style-cast -I../Libraries ./SimpleMUD/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/DatabasePointer.h:12,
+                 from ./SimpleMUD/DatabasePointer.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/DatabasePointer.h:12,
+                 from ./SimpleMUD/DatabasePointer.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/DatabasePointer.cpp:9:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/DatabasePointer.cpp:10:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/Enemy.h:14,
+                 from ./SimpleMUD/Enemy.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Enemy.h:14,
+                 from ./SimpleMUD/Enemy.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/Enemy.h:16,
+                 from ./SimpleMUD/Enemy.cpp:8:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Enemy.cpp:9:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/Enemy.cpp:9:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/EnemyDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/EnemyDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/EnemyDatabase.h:12,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/Enemy.h:16,
+                 from ./SimpleMUD/EnemyDatabase.h:13,
+                 from ./SimpleMUD/EnemyDatabase.cpp:12:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Game.cpp:8:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/Game.cpp:8:
+./SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:89:59: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   89 |             p_connection.Send( msg.c_str(), (int)msg.size() );
+      |                                                           ^
+      |                                             ---------------
+      |                                             static_cast<int> (msg.size())
+In file included from ./SimpleMUD/Player.h:18,
+                 from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Game.cpp:9:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::PlayerKilled(SimpleMUD::player)':
+./SimpleMUD/Game.cpp:1191:58: warning: use of old-style cast to 'int' [-Wold-style-cast]
+ 1191 |     p.SetHitpoints( (int)(p.GetAttr( MAXHITPOINTS ) * 0.7) );
+      |                                                          ^
+      |                     -----
+      |                     static_cast<int> (                    )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/EntityDatabase.h:18,
+                 from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Entity.h:14,
+                 from ./SimpleMUD/EntityDatabase.h:18,
+                 from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/GameLoop.h:13,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/GameLoop.h:14,
+                 from ./SimpleMUD/GameLoop.cpp:10:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/ItemDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/ItemDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/ItemDatabase.h:15,
+                 from ./SimpleMUD/ItemDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/ItemDatabase.h:16,
+                 from ./SimpleMUD/ItemDatabase.cpp:11:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Logon.h:11,
+                 from ./SimpleMUD/Logon.cpp:8:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/Logon.cpp:8:
+./SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+./SimpleMUD/Logon.h:89:59: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   89 |             p_connection.Send( msg.c_str(), (int)msg.size() );
+      |                                                           ^
+      |                                             ---------------
+      |                                             static_cast<int> (msg.size())
+In file included from ./SimpleMUD/Player.h:18,
+                 from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ./SimpleMUD/Game.h:12,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Game.h:14,
+                 from ./SimpleMUD/Logon.cpp:9:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/Player.cpp:14:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/Player.h:18,
+                 from ./SimpleMUD/Player.cpp:14:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ./SimpleMUD/Player.cpp:14:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+./SimpleMUD/Player.cpp: In member function 'void SimpleMUD::Player::RecalculateStats()':
+./SimpleMUD/Player.cpp:81:59: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   81 |         10 + ( (int)(m_level * ( GetAttr( HEALTH ) / 1.5 )) );
+      |                                                           ^
+      |                -----
+      |                static_cast<int> (                          )
+./SimpleMUD/Player.cpp: In member function 'int SimpleMUD::Player::GetItemIndex(const string&)':
+./SimpleMUD/Player.cpp:235:33: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  235 |     return (int)(i - m_inventory);
+      |                                 ^
+      |            -----
+      |            static_cast<int> (    )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/PlayerDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/PlayerDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Player.h:14,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/Player.h:18,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/PlayerDatabase.cpp:11:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/Room.h:15,
+                 from ./SimpleMUD/Room.cpp:13:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Room.h:15,
+                 from ./SimpleMUD/Room.cpp:13:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/Room.h:18,
+                 from ./SimpleMUD/Room.cpp:13:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+./SimpleMUD/Room.cpp: In member function 'void SimpleMUD::Room::RemovePlayer(SimpleMUD::player)':
+./SimpleMUD/Room.cpp:48:43: warning: use of old-style cast to 'SimpleMUD::entityid' {aka 'unsigned int'} [-Wold-style-cast]
+   48 |                                 (entityid)p_player ) );
+      |                                           ^~~~~~~~
+      |                                 ------------------
+      |                                 static_cast<entityid> (p_player)
+./SimpleMUD/Room.cpp: In member function 'void SimpleMUD::Room::RemoveItem(SimpleMUD::item)':
+./SimpleMUD/Room.cpp:81:41: warning: use of old-style cast to 'SimpleMUD::entityid' {aka 'unsigned int'} [-Wold-style-cast]
+   81 |                               (entityid)p_item ) );
+      |                                         ^~~~~~
+      |                               ----------------
+      |                               static_cast<entityid> (p_item)
+./SimpleMUD/Room.cpp: In member function 'void SimpleMUD::Room::RemoveEnemy(SimpleMUD::enemy)':
+./SimpleMUD/Room.cpp:110:43: warning: use of old-style cast to 'SimpleMUD::entityid' {aka 'unsigned int'} [-Wold-style-cast]
+  110 |                                 (entityid)p_enemy ) );
+      |                                           ^~~~~~~
+      |                                 -----------------
+      |                                 static_cast<entityid> (p_enemy)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/RoomDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/RoomDatabase.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/RoomDatabase.h:18,
+                 from ./SimpleMUD/RoomDatabase.cpp:12:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Room.h:18,
+                 from ./SimpleMUD/RoomDatabase.h:19,
+                 from ./SimpleMUD/RoomDatabase.cpp:12:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/StoreDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ./SimpleMUD/StoreDatabase.h:15,
+                 from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Item.h:16,
+                 from ./SimpleMUD/Store.h:19,
+                 from ./SimpleMUD/StoreDatabase.h:16,
+                 from ./SimpleMUD/StoreDatabase.cpp:11:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ./SimpleMUD/Train.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ./SimpleMUD/Train.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from ./SimpleMUD/Train.h:12,
+                 from ./SimpleMUD/Train.cpp:9:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ./SimpleMUD/PlayerDatabase.h:17,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/EntityDatabase.h: In member function 'int SimpleMUD::EntityDatabase<datatype>::size()':
+./SimpleMUD/EntityDatabase.h:136:49: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  136 |     inline  int size() { return (int)m_map.size(); }
+      |                                                 ^
+In file included from ./SimpleMUD/Player.h:18,
+                 from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+./SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+./SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+./SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+./SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from ./SimpleMUD/PlayerDatabase.h:19,
+                 from ./SimpleMUD/Train.h:13,
+                 from ./SimpleMUD/Train.cpp:9:
+./SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+./SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )

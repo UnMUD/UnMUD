@@ -1,0 +1,11 @@
+g++ -std=c++2a -Wshadow -I../Libraries *.cpp -c;
+g++ -std=c++2a -Wshadow -I../Libraries ./SimpleMUD/*.cpp -c;
+./SimpleMUD/Game.cpp: In static member function 'static void SimpleMUD::Game::EnemyKilled(SimpleMUD::enemy, SimpleMUD::player)':
+./SimpleMUD/Game.cpp:1274:15: warning: declaration of 'loot' shadows a global declaration [-Wshadow]
+ 1274 |     for(auto& loot : e.LootList()){
+      |               ^~~~
+In file included from ./SimpleMUD/EnemyDatabase.h:13,
+                 from ./SimpleMUD/Game.cpp:15:
+./SimpleMUD/Enemy.h:27:32: note: shadowed declaration is here
+   27 | typedef std::pair< item, int > loot;
+      |                                ^~~~

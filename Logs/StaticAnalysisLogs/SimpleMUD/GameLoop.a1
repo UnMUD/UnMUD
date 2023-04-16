@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2333564615">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Load" lineNumber="26"/>
+    <functiondecl functionName="Save" lineNumber="56"/>
+    <functiondecl functionName="Loop" lineNumber="68"/>
+    <functiondecl functionName="LoadDatabases" lineNumber="96"/>
+    <functiondecl functionName="SaveDatabases" lineNumber="109"/>
+    <functiondecl functionName="PerformRound" lineNumber="118"/>
+    <functiondecl functionName="PerformRegen" lineNumber="129"/>
+    <functiondecl functionName="PerformHeal" lineNumber="143"/>
+    <functioncall functionName="ADMIN"/>
+    <functioncall functionName="ARMOR"/>
+    <functioncall functionName="ATTRIBUTESTRINGS"/>
+    <functioncall functionName="Active"/>
+    <functioncall functionName="AddHitpoints"/>
+    <functioncall functionName="Attribute"/>
+    <functioncall functionName="CompName"/>
+    <functioncall functionName="Create"/>
+    <functioncall functionName="CurrentRoom"/>
+    <functioncall functionName="DBSAVETIME"/>
+    <functioncall functionName="DIRECTIONSTRINGS"/>
+    <functioncall functionName="Direction"/>
+    <functioncall functionName="EAST"/>
+    <functioncall functionName="Enemies"/>
+    <functioncall functionName="EnemyAttack"/>
+    <functioncall functionName="EnemyDatabase"/>
+    <functioncall functionName="EnemyTemplateDatabase"/>
+    <functioncall functionName="EnumToStr &lt; Attribute &gt;"/>
+    <functioncall functionName="EnumToStr &lt; Direction &gt;"/>
+    <functioncall functionName="EnumToStr &lt; ItemType &gt;"/>
+    <functioncall functionName="EnumToStr &lt; PlayerRank &gt;"/>
+    <functioncall functionName="EnumToStr &lt; RoomType &gt;"/>
+    <functioncall functionName="GOD"/>
+    <functioncall functionName="GetAttr"/>
+    <functioncall functionName="GetAttributeString"/>
+    <functioncall functionName="GetInstance"/>
+    <functioncall functionName="GetItemType"/>
+    <functioncall functionName="GetMS"/>
+    <functioncall functionName="GetTimer"/>
+    <functioncall functionName="HEALING"/>
+    <functioncall functionName="HEALTIME"/>
+    <functioncall functionName="HPREGEN"/>
+    <functioncall functionName="ID"/>
+    <functioncall functionName="ITEMSTRINGS"/>
+    <functioncall functionName="ItemDatabase"/>
+    <functioncall functionName="ItemType"/>
+    <functioncall functionName="Load"/>
+    <functioncall functionName="LoadData"/>
+    <functioncall functionName="LoadDatabases"/>
+    <functioncall functionName="LoadTemplates"/>
+    <functioncall functionName="LoggedIn"/>
+    <functioncall functionName="LowerCase"/>
+    <functioncall functionName="Match"/>
+    <functioncall functionName="MatchFull"/>
+    <functioncall functionName="MaxEnemies"/>
+    <functioncall functionName="NORTH"/>
+    <functioncall functionName="NUMATTRIBUTES"/>
+    <functioncall functionName="NUMDIRECTIONS"/>
+    <functioncall functionName="NUMITEMTYPES"/>
+    <functioncall functionName="NUMPLAYERRANKTYPES"/>
+    <functioncall functionName="NUMROOMTYPES"/>
+    <functioncall functionName="Name"/>
+    <functioncall functionName="NextAttackTime"/>
+    <functioncall functionName="PLAINROOM"/>
+    <functioncall functionName="PLAYERITEMS"/>
+    <functioncall functionName="PLAYERRANKSTRINGS"/>
+    <functioncall functionName="PerformHeal"/>
+    <functioncall functionName="PerformRegen"/>
+    <functioncall functionName="PerformRound"/>
+    <functioncall functionName="PlayerDatabase"/>
+    <functioncall functionName="PlayerRank"/>
+    <functioncall functionName="Players"/>
+    <functioncall functionName="PrintStatbar"/>
+    <functioncall functionName="REGENTIME"/>
+    <functioncall functionName="REGULAR"/>
+    <functioncall functionName="ROOMTYPESTRINGS"/>
+    <functioncall functionName="ROUNDTIME"/>
+    <functioncall functionName="Reset"/>
+    <functioncall functionName="RoomDatabase"/>
+    <functioncall functionName="RoomType"/>
+    <functioncall functionName="Running"/>
+    <functioncall functionName="SOUTH"/>
+    <functioncall functionName="STORE"/>
+    <functioncall functionName="Save"/>
+    <functioncall functionName="SaveData"/>
+    <functioncall functionName="SaveDatabases"/>
+    <functioncall functionName="SendRoom"/>
+    <functioncall functionName="SendString"/>
+    <functioncall functionName="SpawnWhich"/>
+    <functioncall functionName="StoreDatabase"/>
+    <functioncall functionName="StrToEnum &lt; Attribute , NUMATTRIBUTES &gt;"/>
+    <functioncall functionName="StrToEnum &lt; Direction , NUMDIRECTIONS &gt;"/>
+    <functioncall functionName="StrToEnum &lt; ItemType , NUMITEMTYPES &gt;"/>
+    <functioncall functionName="StrToEnum &lt; PlayerRank , NUMPLAYERRANKTYPES &gt;"/>
+    <functioncall functionName="StrToEnum &lt; RoomType , NUMROOMTYPES &gt;"/>
+    <functioncall functionName="TRAININGROOM"/>
+    <functioncall functionName="UpperCase"/>
+    <functioncall functionName="WEAPON"/>
+    <functioncall functionName="WEST"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="delete"/>
+    <functioncall functionName="double_find_if"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="extract"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getline"/>
+    <functioncall functionName="good"/>
+    <functioncall functionName="handler"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="m_armor"/>
+    <functioncall functionName="m_attributes"/>
+    <functioncall functionName="m_id"/>
+    <functioncall functionName="m_max"/>
+    <functioncall functionName="m_min"/>
+    <functioncall functionName="m_msg"/>
+    <functioncall functionName="m_name"/>
+    <functioncall functionName="m_nextheal"/>
+    <functioncall functionName="m_nextregen"/>
+    <functioncall functionName="m_nextround"/>
+    <functioncall functionName="m_player"/>
+    <functioncall functionName="m_price"/>
+    <functioncall functionName="m_savedatabases"/>
+    <functioncall functionName="m_speed"/>
+    <functioncall functionName="m_str"/>
+    <functioncall functionName="m_weapon"/>
+    <functioncall functionName="matchentity"/>
+    <functioncall functionName="matchentityfull"/>
+    <functioncall functionName="minutes"/>
+    <functioncall functionName="operatorEnemy*"/>
+    <functioncall functionName="operatorEnemyTemplate*"/>
+    <functioncall functionName="operatorItem*"/>
+    <functioncall functionName="operatorPlayer*"/>
+    <functioncall functionName="operatorRoom*"/>
+    <functioncall functionName="operatorint"/>
+    <functioncall functionName="p_att"/>
+    <functioncall functionName="p_attr"/>
+    <functioncall functionName="p_conn"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_enum"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_item"/>
+    <functioncall functionName="p_msg"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_player"/>
+    <functioncall functionName="p_str"/>
+    <functioncall functionName="p_stream"/>
+    <functioncall functionName="playeractive"/>
+    <functioncall functionName="playerloggedin"/>
+    <functioncall functionName="playersend"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rbegin"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="search"/>
+    <functioncall functionName="seconds"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

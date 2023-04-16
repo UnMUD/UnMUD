@@ -1,0 +1,191 @@
+g++ -std=c++2a -Wold-style-cast -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::Socket::Socket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:82:60: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+   82 |             getsockname( p_socket, (sockaddr*)(&m_localinfo), &s );
+      |                                                            ^
+      |                                    -------------------------
+      |                                    reinterpret_cast<sockaddr*> ((&m_localinfo))
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::DataSocket::DataSocket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:102:61: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  102 |             getpeername( p_socket, (sockaddr*)(&m_remoteinfo), &s );
+      |                                                             ^
+      |                                    --------------------------
+      |                                    reinterpret_cast<sockaddr*> ((&m_remoteinfo))
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'void SocketLib::DataSocket::Connect(SocketLib::ipaddress, SocketLib::port)':
+../Libraries/SocketLib/SocketLibSocket.cpp:145:64: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  145 |         err = connect( m_sock, (struct sockaddr*)(&m_remoteinfo), s );
+      |                                                                ^
+      |                                -
+      |                                reinterpret_cast<-
+      |                                                 > (             )
+../Libraries/SocketLib/SocketLibSocket.cpp:154:67: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  154 |         err = getsockname( m_sock, (struct sockaddr*)(&m_localinfo), &s );
+      |                                                                   ^
+      |                                    -
+      |                                    reinterpret_cast<-
+      |                                                     > (            )
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'void SocketLib::ListeningSocket::Listen(SocketLib::port)':
+../Libraries/SocketLib/SocketLibSocket.cpp:279:41: warning: use of old-style cast to 'char*' [-Wold-style-cast]
+  279 |                           (char*)(&reuse), sizeof( reuse ) );
+      |                                         ^
+      |                           ---------------
+      |                           reinterpret_cast<char*> ((&reuse))
+../Libraries/SocketLib/SocketLibSocket.cpp:292:48: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  292 |         err = bind( m_sock, (struct sockaddr*)&m_localinfo,
+      |                                                ^~~~~~~~~~~
+      |                             -
+      |                             reinterpret_cast<-
+      |                                              > (          )
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'SocketLib::DataSocket SocketLib::ListeningSocket::Accept()':
+../Libraries/SocketLib/SocketLibSocket.cpp:325:48: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  325 |         s = accept( m_sock, (struct sockaddr*)&socketaddress, &size );
+      |                                                ^~~~~~~~~~~~~
+      |                             -
+      |                             reinterpret_cast<-
+      |                                              > (            )
+../Libraries/SocketLib/SocketLibSystem.cpp: In function 'std::string SocketLib::GetIPString(SocketLib::ipaddress)':
+../Libraries/SocketLib/SocketLibSystem.cpp:107:45: warning: use of old-style cast to 'struct in_addr*' [-Wold-style-cast]
+  107 |         char* str = inet_ntoa( *((in_addr*)&p_address) );
+      |                                             ^~~~~~~~~
+      |                                  --------------------
+      |                                  reinterpret_cast<in_addr*> (&p_address)
+../Libraries/SocketLib/SocketLibSystem.cpp: In function 'std::string SocketLib::GetHostNameString(SocketLib::ipaddress)':
+../Libraries/SocketLib/SocketLibSystem.cpp:123:55: warning: use of old-style cast to 'char*' [-Wold-style-cast]
+  123 |         struct hostent* host = gethostbyaddr( (char*)&p_address, 4, AF_INET );
+      |                                                       ^~~~~~~~~
+      |                                               -----------------
+      |                                               reinterpret_cast<char*> (&p_address)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketSet.h:12,
+                 from ../Libraries/SocketLib/SocketSet.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketSet.h:12,
+                 from ../Libraries/SocketLib/SocketSet.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/Connection.h:15,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/Connection.h:15,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+../Libraries/SocketLib/Telnet.cpp: In member function 'void SocketLib::Telnet::SendString(SocketLib::Connection<SocketLib::Telnet>&, std::string)':
+../Libraries/SocketLib/Telnet.cpp:64:60: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   64 |     p_conn.BufferData( p_string.data(), (int)p_string.size() );
+      |                                                            ^
+      |                                         -----
+      |                                         static_cast<int> (  )
+g++ -std=c++2a -Wold-style-cast -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+../Libraries/ThreadLib/ThreadLibFunctions.cpp: In function 'void* ThreadLib::DummyRun(void*)':
+../Libraries/ThreadLib/ThreadLibFunctions.cpp:34:43: warning: use of old-style cast to 'class ThreadLib::DummyData*' [-Wold-style-cast]
+   34 |             DummyData* data = (DummyData*)p_data;
+      |                                           ^~~~~~
+      |                               ------------------
+      |                               static_cast<DummyData*> (p_data)
+g++ -std=c++2a -Wold-style-cast -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLibRandom.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
