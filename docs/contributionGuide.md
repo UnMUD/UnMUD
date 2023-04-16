@@ -102,17 +102,50 @@ US09 - Criar guia de contribuição
 Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o UnMUD. Para executá-lo basta executar o comando:
 
 ```
-$sudo docker-compose up
+docker-compose up
 ```
 
-A partir disso, deve ser possível entrar no UnMUD a partir da porta ####, utilizando a ferramenta `telnet`.
+Após o container ser levantado, é possível acessá-lo com o comando:
 
-## Como rodar os testes de UnMUD
+```
+docker-compose exec -it unmud /bin/bash
+
+```
+
+Dentro do container é possível realizar qualquer operação desejada, no entanto, algumas funções foram previamente definidas para que sejam realizadas com maior facilidade.
+
+Para compilar o código do MUD basta executar:
+
+```
+docker-compose exec unmud bash Scripts/compile.sh 
+```
+
+Para executar o MUD basta executar:
+
+```
+docker-compose exec unmud bash Scripts/run.sh 
+```
+
+Após isso, deve ser possível entrar no UnMUD a partir da porta 5100 utilizando a ferramenta `telnet`.
+
+Para realizar a análise estática do código execute:
+
+```
+docker-compose exec unmud bash Scripts/static_test.sh 
+```
+
+Para realizar a verificação do lint execute:
+
+```
+docker-compose exec unmud bash Scripts/lint.sh 
+```
+
+### Como rodar os testes de UnMUD
 
 Para rodar os testes, basta executar o comando:
 
 ```
-$sudo docker-compose up exec
+docker-compose up exec
 ```
 
 ## Como subir o site do UnMUD localmente

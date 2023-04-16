@@ -1,0 +1,2304 @@
+---
+MainSourceFile:  '/usr/src/UnMUD/./Libraries/SocketLib/SocketLibErrors.cpp'
+Diagnostics:
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''iostream'' file not found'
+      FilePath:        './Libraries/BasicLib/BasicLibTypes.h'
+      FileOffset:      167
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+      FileOffset:      409
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          409
+          Length:          12
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTION_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          431
+          Length:          12
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTION_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+      FileOffset:      447
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          456
+          Length:          8
+          ReplacementText: '"BasicLib/BasicLib.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          474
+          Length:          22
+          ReplacementText: '"ConnectionManager.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          506
+          Length:          19
+          ReplacementText: '"SocketLibSocket.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          535
+          Length:          22
+          ReplacementText: '"SocketLibTypes.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+          Offset:          567
+          Length:          20
+          ReplacementText: '<stack>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''stack'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Connection.h'
+      FileOffset:      456
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionHandler.h'
+      FileOffset:      201
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionHandler.h'
+          Offset:          201
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTIONHANDLER_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionHandler.h'
+          Offset:          230
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTIONHANDLER_H
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+      FileOffset:      123
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          123
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTIONMANAGER_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          152
+          Length:          19
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_CONNECTIONMANAGER_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+      FileOffset:      175
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          184
+          Length:          7
+          ReplacementText: '"ThreadLib/ThreadLib.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          201
+          Length:          11
+          ReplacementText: '"Connection.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          222
+          Length:          24
+          ReplacementText: '"SocketLibErrors.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          285
+          Length:          20
+          ReplacementText: '"SocketSet.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          315
+          Length:          14
+          ReplacementText: '<iostream>'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+          Offset:          339
+          Length:          15
+          ReplacementText: '<list>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''list'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ConnectionManager.h'
+      FileOffset:      184
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+      FileOffset:      195
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          195
+          Length:          18
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_LISTENINGMANAGER_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          223
+          Length:          18
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_LISTENINGMANAGER_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+      FileOffset:      449
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          458
+          Length:          20
+          ReplacementText: '"ConnectionManager.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          488
+          Length:          14
+          ReplacementText: '"SocketLibErrors.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          512
+          Length:          20
+          ReplacementText: '"SocketLibSocket.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/ListeningManager.h'
+          Offset:          542
+          Length:          22
+          ReplacementText: '"SocketSet.h"'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+      FileOffset:      113
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          113
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIB_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          134
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIB_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+      FileOffset:      178
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          187
+          Length:          20
+          ReplacementText: '"Connection.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          217
+          Length:          20
+          ReplacementText: '"ConnectionHandler.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          247
+          Length:          15
+          ReplacementText: '"ConnectionManager.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          303
+          Length:          22
+          ReplacementText: '"SocketLibErrors.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          335
+          Length:          22
+          ReplacementText: '"SocketLibSocket.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLib.h'
+          Offset:          367
+          Length:          20
+          ReplacementText: '"SocketLibSystem.h"'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      522
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          516
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          546
+          Length:          0
+          ReplacementText: ' -> Error'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      685
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          674
+          Length:          15
+          ReplacementText: p_errno
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      691
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          691
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          763
+          Length:          0
+          ReplacementText: '} '
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      691
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          691
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          763
+          Length:          0
+          ReplacementText: '} '
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      691
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          691
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          763
+          Length:          0
+          ReplacementText: '} '
+  - DiagnosticName:  readability-else-after-return
+    DiagnosticMessage:
+      Message:         'do not use ''else'' after ''return'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      763
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          763
+          Length:          63
+          ReplacementText: '
+
+                return TranslateError( h_errno, p_errno )'
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      767
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          767
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          827
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      767
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          767
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          827
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      767
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          767
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          827
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      4026
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          4020
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          4069
+          Length:          0
+          ReplacementText: ' -> Error'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      4450
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          4439
+          Length:          15
+          ReplacementText: p_errno
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      8349
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          8332
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          8360
+          Length:          0
+          ReplacementText: ' -> Error'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      8672
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          8649
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+          Offset:          8684
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      8785
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      8883
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      8974
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9054
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9142
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9231
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9329
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9423
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9520
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9622
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9727
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9816
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9903
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      9981
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10072
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10167
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10284
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10377
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10496
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10580
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10656
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10742
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10824
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10899
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      10971
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11046
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11118
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11206
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11294
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11378
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11460
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11552
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11627
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11721
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.cpp'
+      FileOffset:      11816
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+      FileOffset:      151
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+          Offset:          151
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBERRORS_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+          Offset:          178
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBERRORS_H
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''exception'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+      FileOffset:      410
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''err'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1179
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          1182
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1498
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          1483
+          Length:          20
+          ReplacementText: '!p_blockmode'
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a binary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1538
+      Replacements:    []
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a binary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1624
+      Replacements:    []
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a unary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1633
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-vararg
+    DiagnosticMessage:
+      Message:         do not call c-style vararg functions
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1680
+      Replacements:    []
+  - DiagnosticName:  hicpp-vararg
+    DiagnosticMessage:
+      Message:         do not call c-style vararg functions
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1680
+      Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      1798
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_localinfo'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2333
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          3578
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_localinfo'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2333
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          3578
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2523
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2523
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          2523
+          Length:          11
+          ReplacementText: 'reinterpret_cast<sockaddr*>'
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_remoteinfo'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2918
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          7270
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_remoteinfo'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      2918
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          7270
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      3144
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      3144
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          3144
+          Length:          11
+          ReplacementText: 'reinterpret_cast<sockaddr*>'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''err'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      3691
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          3694
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      3776
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          3761
+          Length:          19
+          ReplacementText: m_connected
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4222
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4500
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4500
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4641
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4641
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          4641
+          Length:          18
+          ReplacementText: 'reinterpret_cast<struct sockaddr*>'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4747
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4910
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      4910
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          4910
+          Length:          18
+          ReplacementText: 'reinterpret_cast<struct sockaddr*>'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      5015
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      5355
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          5339
+          Length:          3
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          5395
+          Length:          0
+          ReplacementText: ' -> int'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''err'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      5416
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          5419
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      5504
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          5489
+          Length:          20
+          ReplacementText: '!m_connected'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      5731
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      6523
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          6507
+          Length:          3
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          6560
+          Length:          0
+          ReplacementText: ' -> int'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''err'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      6581
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          6584
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      6669
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          6654
+          Length:          20
+          ReplacementText: '!m_connected'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      7003
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  readability-simplify-boolean-expr
+    DiagnosticMessage:
+      Message:         redundant boolean literal supplied to boolean operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      7407
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          7392
+          Length:          19
+          ReplacementText: m_connected
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      7859
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+        FileOffset:      2349
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''err'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      8351
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          8354
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      8722
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      8993
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      8993
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          8993
+          Length:          7
+          ReplacementText: 'reinterpret_cast<char*>'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9094
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9366
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9366
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9430
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9430
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          9430
+          Length:          18
+          ReplacementText: 'reinterpret_cast<struct sockaddr*>('
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          9460
+          Length:          0
+          ReplacementText: ')'
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9568
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9847
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9847
+      Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      9918
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10394
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10366
+          Length:          10
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10402
+          Length:          0
+          ReplacementText: ' -> DataSocket'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''s'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10424
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10425
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'uninitialized record type: ''socketaddress'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10436
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10468
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'uninitialized record type: ''socketaddress'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10436
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10468
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  android-cloexec-accept
+    DiagnosticMessage:
+      Message:         'prefer accept4() to accept() because accept4() allows SOCK_CLOEXEC'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10575
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10575
+          Length:          57
+          ReplacementText: 'accept4(m_sock, (struct sockaddr*)&socketaddress, &size, SOCK_CLOEXEC)'
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10591
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10591
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10698
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibErrors.h'
+        FileOffset:      2699
+        Replacements:    []
+  - DiagnosticName:  modernize-return-braced-init-list
+    DiagnosticMessage:
+      Message:         'avoid repeating the return type from the declaration; use a braced initializer list instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+      FileOffset:      10786
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10786
+          Length:          11
+          ReplacementText: '{'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.cpp'
+          Offset:          10800
+          Length:          1
+          ReplacementText: '}'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+      FileOffset:      180
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          180
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBSOCKET_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          207
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBSOCKET_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+      FileOffset:      401
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          410
+          Length:          10
+          ReplacementText: '"BasicLib/BasicLib.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          430
+          Length:          22
+          ReplacementText: '"SocketLibErrors.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+          Offset:          491
+          Length:          20
+          ReplacementText: '<cstring>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''cstring'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSocket.h'
+      FileOffset:      410
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      2105
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          2095
+          Length:          9
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          2148
+          Length:          0
+          ReplacementText: ' -> ipaddress'
+  - DiagnosticName:  performance-unnecessary-value-param
+    DiagnosticMessage:
+      Message:         'the const qualified parameter ''p_address'' is copied for each invocation; consider making it a reference'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      2137
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          2136
+          Length:          0
+          ReplacementText: '&'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          902
+          Length:          0
+          ReplacementText: '&'
+  - DiagnosticName:  readability-else-after-return
+    DiagnosticMessage:
+      Message:         'do not use ''else'' after ''return'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      2793
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          2793
+          Length:          4
+          ReplacementText: ''
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          2807
+          Length:          659
+          ReplacementText: '
+
+            // the address isn''t an IP address, so we need to look it up using
+
+            // DNS. 
+
+            struct hostent* host = gethostbyname( p_address.c_str() );
+
+
+
+            // if there was an error, throw an exception.
+
+            if( host == 0 )
+
+            {
+
+                // get the error from h_errno.
+
+                throw Exception( GetError( false ) );
+
+            }
+
+
+
+            // now perform some really wierd casting tricks to get the value.
+
+            // h_addr is a char*, so cast it into an ipaddress*, and 
+
+            // dereference it to get the value.
+
+            return *((ipaddress*)host->h_addr);
+
+       '
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3069
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3069
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3429
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3429
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-pointer-arithmetic
+    DiagnosticMessage:
+      Message:         do not use pointer arithmetic
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3441
+      Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      3797
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          3785
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          3831
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4001
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4001
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4001
+          Length:          10
+          ReplacementText: 'reinterpret_cast<in_addr*>('
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4021
+          Length:          0
+          ReplacementText: ')'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4046
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4046
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4081
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4145
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4520
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4508
+          Length:          11
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4560
+          Length:          0
+          ReplacementText: ' -> std::string'
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4646
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use reinterpret_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4646
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4646
+          Length:          7
+          ReplacementText: 'reinterpret_cast<char*>('
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          4663
+          Length:          0
+          ReplacementText: ')'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4757
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4757
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      4896
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16757
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5294
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5289
+          Length:          4
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5336
+          Length:          0
+          ReplacementText: ' -> bool'
+  - DiagnosticName:  performance-unnecessary-value-param
+    DiagnosticMessage:
+      Message:         'the const qualified parameter ''p_address'' is copied for each invocation; consider making it a reference'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5325
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5324
+          Length:          0
+          ReplacementText: '&'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          2061
+          Length:          0
+          ReplacementText: '&'
+  - DiagnosticName:  modernize-loop-convert
+    DiagnosticMessage:
+      Message:         use range-based for loop instead
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5559
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5562
+          Length:          45
+          ReplacementText: '(char p_addres : p_address)'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5638
+          Length:          12
+          ReplacementText: p_addres
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5660
+          Length:          12
+          ReplacementText: p_addres
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5702
+          Length:          12
+          ReplacementText: p_addres
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5723
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5723
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5754
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  hicpp-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5723
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5723
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5754
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5723
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5723
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5754
+          Length:          0
+          ReplacementText: '
+
+}'
+  - DiagnosticName:  google-readability-namespace-comments
+    DiagnosticMessage:
+      Message:         'namespace ''SocketLib'' not terminated with a closing comment'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5804
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5805
+          Length:          0
+          ReplacementText: '  // namespace SocketLib'
+    Notes:
+      - Message:         'namespace ''SocketLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+        FileOffset:      425
+        Replacements:    []
+  - DiagnosticName:  llvm-namespace-comment
+    DiagnosticMessage:
+      Message:         'namespace ''SocketLib'' not terminated with a closing comment'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+      FileOffset:      5804
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+          Offset:          5805
+          Length:          0
+          ReplacementText: ' // namespace SocketLib'
+    Notes:
+      - Message:         'namespace ''SocketLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.cpp'
+        FileOffset:      425
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+      FileOffset:      174
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          174
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBSYSTEM_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          201
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBSYSTEM_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+      FileOffset:      397
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          406
+          Length:          9
+          ReplacementText: '"SocketLibTypes.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+          Offset:          425
+          Length:          19
+          ReplacementText: '<string>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibSystem.h'
+      FileOffset:      406
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+      FileOffset:      124
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          124
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBTYPES_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          150
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETLIBTYPES_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+      FileOffset:      869
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          878
+          Length:          42
+          ReplacementText: '<arpa/inet.h>      // contains all inet_* functions'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          934
+          Length:          40
+          ReplacementText: '<errno.h>          // contains the error functions'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          988
+          Length:          48
+          ReplacementText: '<fcntl.h>          // file control'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          1050
+          Length:          52
+          ReplacementText: '<netdb.h>          // for DNS - gethostbyname()'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          1116
+          Length:          51
+          ReplacementText: '<netinet/in.h>     // IPv4 and IPv6 stuff'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          1181
+          Length:          35
+          ReplacementText: '<unistd.h>         // for gethostname()'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         'unknown type name ''namespace'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+      FileOffset:      1231
+      Replacements:    []
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         'expected '';'' after top level declarator'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+      FileOffset:      1250
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketLibTypes.h'
+          Offset:          1250
+          Length:          0
+          ReplacementText: ';'
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      256
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+          Offset:          265
+          Length:          12
+          ReplacementText: '"SocketSet.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+          Offset:          287
+          Length:          14
+          ReplacementText: '<algorithm>'
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_set, m_activityset'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      332
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          1559
+          Length:          0
+          ReplacementText: '{}'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          1672
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_set, m_activityset'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      332
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          1559
+          Length:          0
+          ReplacementText: '{}'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          1672
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-no-assembler
+    DiagnosticMessage:
+      Message:         do not use inline assembler in safety-critical code
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      363
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2800
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1158
+        Replacements:    []
+  - DiagnosticName:  readability-isolate-declaration
+    DiagnosticMessage:
+      Message:         multiple declarations in a single statement reduces readability
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      363
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2800
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1124
+        Replacements:    []
+  - DiagnosticName:  hicpp-no-assembler
+    DiagnosticMessage:
+      Message:         do not use inline assembler in safety-critical code
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      387
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2800
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1158
+        Replacements:    []
+  - DiagnosticName:  readability-isolate-declaration
+    DiagnosticMessage:
+      Message:         multiple declarations in a single statement reduces readability
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      387
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2800
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_ZERO'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1124
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-constant-array-index
+    DiagnosticMessage:
+      Message:         'do not use array subscript when the index is not an integer constant expression; use gsl::at() instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      517
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_SET'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2651
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_SET'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1880
+        Replacements:    []
+      - Message:         'expanded from macro ''__FDS_BITS'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2136
+        Replacements:    []
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a binary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      517
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_SET'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2651
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_SET'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1880
+        Replacements:    []
+      - Message:         'expanded from macro ''__FDS_BITS'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2136
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-constant-array-index
+    DiagnosticMessage:
+      Message:         'do not use array subscript when the index is not an integer constant expression; use gsl::at() instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      819
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2700
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1968
+        Replacements:    []
+      - Message:         'expanded from macro ''__FDS_BITS'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2136
+        Replacements:    []
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a binary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      819
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2700
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      1968
+        Replacements:    []
+      - Message:         'expanded from macro ''__FDS_BITS'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2136
+        Replacements:    []
+  - DiagnosticName:  hicpp-signed-bitwise
+    DiagnosticMessage:
+      Message:         use of a signed integer operand with a unary bitwise operator
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      819
+      Replacements:    []
+    Notes:
+      - Message:         'expanded from macro ''FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/sys/select.h'
+        FileOffset:      2700
+        Replacements:    []
+      - Message:         'expanded from macro ''__FD_CLR'''
+        FilePath:        '/usr/include/x86_64-linux-gnu/bits/select.h'
+        FileOffset:      2002
+        Replacements:    []
+  - DiagnosticName:  google-readability-namespace-comments
+    DiagnosticMessage:
+      Message:         'namespace ''SocketLib'' ends with a comment that refers to a wrong namespace ''SocketSet'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      997
+      Replacements:    []
+    Notes:
+      - Message:         'namespace ''SocketLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+        FileOffset:      316
+        Replacements:    []
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  llvm-namespace-comment
+    DiagnosticMessage:
+      Message:         'namespace ''SocketLib'' ends with a comment that refers to a wrong namespace ''SocketSet'''
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+      FileOffset:      997
+      Replacements:    []
+    Notes:
+      - Message:         'namespace ''SocketLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.cpp'
+        FileOffset:      316
+        Replacements:    []
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+      FileOffset:      256
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          256
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETSET_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          277
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_SOCKETSET_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+      FileOffset:      326
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          335
+          Length:          19
+          ReplacementText: '"SocketLibSocket.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/SocketSet.h'
+          Offset:          364
+          Length:          20
+          ReplacementText: '"SocketLibTypes.h"'
+  - DiagnosticName:  readability-non-const-parameter
+    DiagnosticMessage:
+      Message:         'pointer parameter ''p_buffer'' can be pointer to const'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      643
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          2055
+          Length:          0
+          ReplacementText: 'const '
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+          Offset:          637
+          Length:          0
+          ReplacementText: 'const '
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-pointer-arithmetic
+    DiagnosticMessage:
+      Message:         do not use pointer arithmetic
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      836
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '32 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      867
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '32 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      867
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '127 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      878
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '127 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      878
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-constant-array-index
+    DiagnosticMessage:
+      Message:         'do not use array subscript when the index is not an integer constant expression; use gsl::at() instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      937
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1073
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '8 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1073
+      Replacements:    []
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1581
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1581
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-calls
+    DiagnosticMessage:
+      Message:         calling a function that uses a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1643
+      Replacements:    []
+    Notes:
+      - Message:         default parameter was declared here
+        FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/9/../../../../include/c++/9/bits/basic_string.h'
+        FileOffset:      16195
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-bounds-array-to-pointer-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1651
+      Replacements:    []
+  - DiagnosticName:  hicpp-no-array-decay
+    DiagnosticMessage:
+      Message:         'do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      1651
+      Replacements:    []
+  - DiagnosticName:  readability-convert-member-functions-to-static
+    DiagnosticMessage:
+      Message:         'method ''SendString'' can be made static'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      2016
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          2360
+          Length:          0
+          ReplacementText: 'static '
+  - DiagnosticName:  performance-unnecessary-value-param
+    DiagnosticMessage:
+      Message:         'the parameter ''p_string'' is copied for each invocation but only used as a const reference; consider making it a const reference'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      2063
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          2405
+          Length:          0
+          ReplacementText: 'const '
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          2416
+          Length:          0
+          ReplacementText: '&'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+          Offset:          2056
+          Length:          0
+          ReplacementText: 'const '
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+          Offset:          2062
+          Length:          0
+          ReplacementText: '&'
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use static_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+      FileOffset:      2165
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+          Offset:          2165
+          Length:          5
+          ReplacementText: 'static_cast<int>('
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.cpp'
+          Offset:          2185
+          Length:          0
+          ReplacementText: ')'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+      FileOffset:      244
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          244
+          Length:          8
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_TELNET_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          262
+          Length:          8
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_SOCKETLIB_TELNET_H
+  - DiagnosticName:  llvm-include-order
+    DiagnosticMessage:
+      Message:         '#includes are not sorted properly'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+      FileOffset:      274
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          283
+          Length:          9
+          ReplacementText: '"SocketLibTypes.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          302
+          Length:          19
+          ReplacementText: '"Connection.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          331
+          Length:          15
+          ReplacementText: '"ConnectionHandler.h"'
+        - FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+          Offset:          356
+          Length:          22
+          ReplacementText: '<string>'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/SocketLib/Telnet.h'
+      FileOffset:      283
+      Replacements:    []
+...

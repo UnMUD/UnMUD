@@ -20,11 +20,8 @@ services:
     working_dir: /usr/src/UnMUD
     volumes:
       - type: bind
-        source: ./Libraries
-        target: /usr/src/UnMUD/Libraries
-      - type: bind
-        source: ./SimpleMUD
-        target: /usr/src/UnMUD/SimpleMUD
+        source: .
+        target: /usr/src/UnMUD
     # networks:
     #   - game-network
     expose:
@@ -32,7 +29,8 @@ services:
     ports:
       - '5100:5100'
     restart: always
-    command: /bin/sh -c "./build.sh"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     # depends_on:
     #   - db
 
