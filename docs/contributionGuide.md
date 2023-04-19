@@ -99,7 +99,7 @@ US09 - Criar guia de contribuição
 
 ## Como rodar o UnMUD localmente
 
-Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o UnMUD. Para executá-lo basta executar o comando:
+Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o UnMUD. Para executá-lo basta entrar na pasta `MUDGameProgramming` e executar o comando:
 
 ```
 docker-compose up
@@ -152,10 +152,30 @@ A formatação é realizada pela ferramenta [clang-format](https://clang.llvm.or
 
 ### Como rodar os testes de UnMUD
 
-Para rodar os testes, basta executar o comando:
+Para rodar os testes é necessário compilar as bibliotecas e o jogo. Após isso basta executar o comando:
 
 ```
-docker-compose up exec
+docker-compose up exec unmud bash Scripts/tests.sh
+```
+
+Esse scripts irá realizar a compilação, execução e análise de cobertura dos testes, gerando um arquivo na pasta `AnalysisLogs/GCOVR`, com o nome `ano-mês-dia-hora-segundo-coverage.txt`.
+
+Caso o desejado seja apenas compilar os testes ou executá-los, é necessário realizar a execução do Makefile que está dentro da pasta `SimpleMUD`. Após entrar na pasta é possível compilar os testes com o comando:
+
+```
+make tests
+```
+
+E executá-los com o comando:
+
+```
+make run_tests
+```
+
+Para ver a cobertura dos testes basta rodar o comando a seguir, ainda na pasta `SimpleMUD`:
+
+```
+gcovr
 ```
 
 ## Como subir o site do UnMUD localmente

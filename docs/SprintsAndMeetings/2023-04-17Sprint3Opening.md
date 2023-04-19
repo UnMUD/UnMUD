@@ -38,6 +38,8 @@ Para regular a data de início e fim da sprint, a sprint 3 terá 1 dia a menos
 
 ## Notas pós reunião
 
-O prof. Edson sugeriu o uso da ferramenta Padoc para conversão de texto Markdown para Latex; 
+O prof. Edson sugeriu o uso da ferramenta Padoc para conversão de texto Markdown para Latex;
+
 Reunião de quinta com o prof. Edson foi remarcada para terça, 18 de abril, devido ao feriado;
+
 Reunião de sexta com o prof. Maurício foi remarcada para quarta, 19 de abril, devido ao feriado.
