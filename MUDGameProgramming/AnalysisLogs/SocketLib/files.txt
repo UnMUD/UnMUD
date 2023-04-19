@@ -1,5 +1,0 @@
-SocketLibErrors.a1::Libraries/SocketLib/SocketLibErrors.cpp
-SocketLibSocket.a1::Libraries/SocketLib/SocketLibSocket.cpp
-SocketLibSystem.a1::Libraries/SocketLib/SocketLibSystem.cpp
-SocketSet.a1::Libraries/SocketLib/SocketSet.cpp
-Telnet.a1::Libraries/SocketLib/Telnet.cpp

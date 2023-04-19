@@ -7,10 +7,10 @@ else
     exit
 fi
 
-if make simplemud ; then
-    echo "SimpleMUD compiled"
+if make unmud ; then
+    echo "UnMUD compiled"
 else
-    echo "Error $? compiling SimpleMUD..."
+    echo "Error $? compiling UnMUD..."
     exit
 fi
 
