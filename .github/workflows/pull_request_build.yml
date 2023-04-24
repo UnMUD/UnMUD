@@ -38,11 +38,11 @@ jobs:
       - name: install dependences
         run: |
           export DEBIAN_FRONTEND=noninteractive
-          apt update
-          apt install -y build-essential gcc-10-doc libstdc++-10-doc
-          apt install -y libmsgsl-dev
-          apt install -y cppcheck clang clang-tidy
-          apt install -y libgtest-dev gcovr
+          sudo apt update
+          sudo apt install -y build-essential gcc-10-doc libstdc++-10-doc
+          sudo apt install -y libmsgsl-dev
+          sudo apt install -y cppcheck clang clang-tidy
+          sudo apt install -y libgtest-dev gcovr
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper
