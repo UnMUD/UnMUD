@@ -76,5 +76,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           sonar-scanner \
+            --define sonar.organization=unmud \
+            --define sonar.projectKey=UnMUD_UnMUD \
+            --define sonar.projectName=UnMUD \
             --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" \
             --define sonar.coverageReportPaths="${{ env.COVERAGE_OUT_DIR }}"
