@@ -12,8 +12,8 @@ else
 fi
 
 if make run_tests ; then
-    gcovr &> $COVERAGEDIR/coverage.txt
-    cp $COVERAGEDIR/coverage.txt $COVERAGEDIR/$DATE-coverage.txt
+    gcovr --fail-under-line 80 -r ../ -e ../Tests/*.cpp -e ../Tests/*.h  \
+    --html $COVERAGEDIR/$DATE-coverage.html --sonarqube $COVERAGEDIR/coverage.xml
 else
     errorNum=$?
     echo "Error $errorNum running tests"

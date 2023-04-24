@@ -30,7 +30,7 @@ jobs:
         working-directory: ./MUDGameProgramming
     env:
       BUILD_WRAPPER_OUT_DIR: AnalysisLogs/ # Directory where build-wrapper output will be placed
-      COVERAGE_OUT_DIR: AnalysisLogs/coverage.xml # Directory where coverage output will be placed
+      COVERAGE_OUT_DIR: AnalysisLogs/GCOVR/coverage.xml # Directory where coverage output will be placed
     steps:
       - uses: actions/checkout@v3
         with:
@@ -53,17 +53,22 @@ jobs:
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} \
             make clean libs unmud link tests
       - name: Run tests and collect coverage into one XML report
+        if: ${{ always() }}
         run: |
-          cd SimpleMUD
-          make run_tests
-          gcovr --sonarqube > ${{ env.COVERAGE_OUT_DIR }}
+          ./Scripts/tests.sh
       - name: Run CPPCheck
+        if: ${{ always() }}
         run: |
-          ./Scripts/static_test.sh -l
+          ./Scripts/static_test.sh -b
+          ./Scripts/static_test.sh -s
+          ./Scripts/static_test.sh -t
           ./Scripts/static_test.sh -m
       - name: Run clang-tidy
+        if: ${{ always() }}      
         run: |
-          ./Scripts/lint.sh -l
+          ./Scripts/lint.sh -b
+          ./Scripts/lint.sh -s
+          ./Scripts/lint.sh -t
           ./Scripts/lint.sh -m
       - name: Run sonar-scanner
         env:
