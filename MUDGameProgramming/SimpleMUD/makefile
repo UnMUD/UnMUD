@@ -47,10 +47,10 @@ tests: $(wildcard *.cpp)
 	$(TESTSLIBS) $(LIBS) -o $(TESTSBINFILE) --coverage
 
 run_tests:
-	rm *.gcda
+	rm -f *.gcda
 	./$(TESTSBINFILE)
 
 clean:
-	rm -rf *.o
-	rm $(UNMUDBINFILE)
-	rm $(TESTSBINFILE)
+	rm -f *.o *.gcda *.gcno
+	rm -f $(UNMUDBINFILE)
+	rm -f $(TESTSBINFILE)
