@@ -29,8 +29,8 @@ jobs:
       run:
         working-directory: ./MUDGameProgramming
     env:
-      BUILD_WRAPPER_OUT_DIR: ./MUDGameProgramming/AnalysisLogs/ # Directory where build-wrapper output will be placed
-      COVERAGE_OUT_DIR: ./MUDGameProgramming/AnalysisLogs/coverage.xml # Directory where coverage output will be placed
+      BUILD_WRAPPER_OUT_DIR: AnalysisLogs/ # Directory where build-wrapper output will be placed
+      COVERAGE_OUT_DIR: AnalysisLogs/coverage.xml # Directory where coverage output will be placed
     steps:
       - uses: actions/checkout@v3
         with:
@@ -47,6 +47,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper
         run: |
+          ls
           echo ${{ env.BUILD_WRAPPER_OUT_DIR }}
           cd SimpleMUD
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} \
