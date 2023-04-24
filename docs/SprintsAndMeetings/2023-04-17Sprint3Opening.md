@@ -15,8 +15,6 @@
 
 ## Notas pré reunião
 
-Foram realizadas duas reuniões para o fechamento de sprint, uma com cada professor orientador.
-
 Para regular a data de início e fim da sprint, a sprint 3 terá 1 dia a menos
 
 ## Planning
