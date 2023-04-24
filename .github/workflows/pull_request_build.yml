@@ -48,12 +48,13 @@ jobs:
       - name: Run build-wrapper
         run: |
           ls
-          echo ${{ env.BUILD_WRAPPER_OUT_DIR }}
+          echo "BuildWrapper out: ${{ env.BUILD_WRAPPER_OUT_DIR }}"
           cd SimpleMUD
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} \
+          build-wrapper-linux-x86-64 --out-dir ../${{ env.BUILD_WRAPPER_OUT_DIR }} \
             make clean libs unmud link tests
           ls
-          ls AnalysisLogs
+          echo "Listing Analysis logs"
+          ls ../AnalysisLogs
       # - name: Run tests and collect coverage into one XML report
       #   continue-on-error: true # Remove in future
       #   run: |
