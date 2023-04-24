@@ -8,8 +8,8 @@ jobs:
     permissions:
       pull-requests: read
     outputs:
-      MUD: ${{ steps.changes.outputs.MUD }}
-      # docs: ${{ steps.changes.outputs.docs }}
+      MUD: ${{ steps.check_files_changes.outputs.MUD }}
+      # docs: ${{ steps.check_files_changes.outputs.docs }}
     steps:
     - uses: dorny/paths-filter@v2
       id: check_files_changes
@@ -23,7 +23,7 @@ jobs:
   build:
     name: Build and analyze
     needs: check_files_changes
-    if: ${{ needs.changes.outputs.MUD == 'true' }}
+    if: ${{ needs.check_files_changes.outputs.MUD == 'true' }}
     runs-on: ubuntu-latest
     defaults:
       run:
