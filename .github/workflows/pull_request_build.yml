@@ -89,5 +89,5 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: 'MUDGameProgramming/AnalysisLogs/'
+          directory: 'AnalysisLogs/'
           message: 'Commit automatico dos logs das analises'
