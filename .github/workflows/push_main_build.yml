@@ -12,6 +12,7 @@ jobs:
       MUD: ${{ steps.check_files_changes.outputs.MUD }}
       # docs: ${{ steps.check_files_changes.outputs.docs }}
     steps:
+    - uses: actions/checkout@v3
     - uses: dorny/paths-filter@v2
       id: check_files_changes
       with:
