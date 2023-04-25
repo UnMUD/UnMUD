@@ -83,6 +83,8 @@ jobs:
         run: |
           touch AnalysisLogs/arquivo.txt
           echo "Um texto aqui" > AnalysisLogs/arquivo.txt
+          touch arquivo2.txt
+          echo "Um texto que não é pra ser adicionado" > arquivo2.txt
       - name: Push reports to repo # Add on pr to test
         uses: actions-js/push@master
         with:
