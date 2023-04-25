@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+Checking Libraries/SocketLib/SocketLibErrors.cpp ...
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;p_code&apos; to itself." verbose="Redundant assignment of &apos;p_code&apos; to itself." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;p_code&apos; is assigned a value that is never used." verbose="Variable &apos;p_code&apos; is assigned a value that is never used." cwe="563">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+        </error>
+1/5 files checked 36% done
+Checking Libraries/SocketLib/SocketLibSocket.cpp ...
+2/5 files checked 71% done
+Checking Libraries/SocketLib/SocketLibSystem.cpp ...
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="58" column="47"/>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="140" column="41"/>
+        </error>
+3/5 files checked 89% done
+Checking Libraries/SocketLib/SocketSet.cpp ...
+4/5 files checked 93% done
+Checking Libraries/SocketLib/Telnet.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Telnet::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Telnet::m_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/SocketLib/Telnet.h" line="74" column="12"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/SocketLib/Connection.h" line="239" column="23"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/SocketLib/Connection.h" line="245" column="23"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Connection &lt; Telnet &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Connection &lt; Telnet &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/SocketLib/Connection.h" line="37" column="5"/>
+        </error>
+5/5 files checked 100% done
+        <error id="unusedFunction" severity="style" msg="The function &apos;Accept&apos; is never used." verbose="The function &apos;Accept&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSocket.cpp" line="318" column="0"/>
+            <symbol>Accept</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Connect&apos; is never used." verbose="The function &apos;Connect&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSocket.cpp" line="114" column="0"/>
+            <symbol>Connect</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ErrorCode&apos; is never used." verbose="The function &apos;ErrorCode&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="234" column="0"/>
+            <symbol>ErrorCode</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetHostNameString&apos; is never used." verbose="The function &apos;GetHostNameString&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="120" column="0"/>
+            <symbol>GetHostNameString</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetIPAddress&apos; is never used." verbose="The function &apos;GetIPAddress&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="58" column="0"/>
+            <symbol>GetIPAddress</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetIPString&apos; is never used." verbose="The function &apos;GetIPString&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="103" column="0"/>
+            <symbol>GetIPString</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Listen&apos; is never used." verbose="The function &apos;Listen&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibSocket.cpp" line="258" column="0"/>
+            <symbol>Listen</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;PrintError&apos; is never used." verbose="The function &apos;PrintError&apos; is never used." cwe="561">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="243" column="0"/>
+            <symbol>PrintError</symbol>
+        </error>
+    </errors>
+</results>

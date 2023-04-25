@@ -7,12 +7,14 @@ THREADLIBDIR=$MUDLIBDIR/$THREADLIB
 BASICLIBDIR=$MUDLIBDIR/$BASICLIB
 SIMPLEMUD=SimpleMUD
 
-if [ "$1" == "-l" ]; then
+if [ "$1" == "-s" ]; then
     clang-format --style=llvm -i $SOCKETLIBDIR/*.cpp $SOCKETLIBDIR/*.h
+if [ "$1" == "-t" ]; then
     clang-format --style=llvm -i $THREADLIBDIR/*.cpp $THREADLIBDIR/*.h
+if [ "$1" == "-b" ]; then
     clang-format --style=llvm -i $BASICLIBDIR/*.cpp $BASICLIBDIR/*.h
 elif [ "$1" == "-m" ]; then
     clang-format --style=llvm -i $SIMPLEMUD/*.cpp $SIMPLEMUD/*.h $SIMPLEMUD/**/*.cpp $SIMPLEMUD/**/*.h
 else
-    echo "Use the flag -l to test Libraries or -m to test the MUD"
+    echo "Use the flag -m to test the MUD, -b to test the BasicLib, -s to test the SocketLib or -t to test the ThreadLib"
 fi

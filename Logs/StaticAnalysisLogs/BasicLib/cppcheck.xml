@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+Checking Libraries/BasicLib/BasicLibFiles.cpp ...
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_directory&apos; should be passed by const reference." verbose="Parameter &apos;p_directory&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibFiles.cpp" line="19" column="45"/>
+        </error>
+1/4 files checked 10% done
+Checking Libraries/BasicLib/BasicLibRandom.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho1&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho1&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="101" column="5"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho2&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho2&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="101" column="5"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="101" column="5"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho1&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho1&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="106" column="5"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho2&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho2&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="106" column="5"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho&apos; is not initialized in the constructor." verbose="Member variable &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;::m_rho&apos; is not initialized in the constructor." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="106" column="5"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simulated_binomial&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simulated_binomial&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="286" column="5"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_range &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_range &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="171" column="5"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_range &lt; false , random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_range &lt; false , random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="171" column="5"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="106" column="5"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p_generator&apos; can be declared with const" verbose="Parameter &apos;p_generator&apos; can be declared with const" cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="286" column="36"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p_generator&apos; can be declared with const" verbose="Parameter &apos;p_generator&apos; can be declared with const" cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="171" column="30"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p_generator&apos; can be declared with const" verbose="Parameter &apos;p_generator&apos; can be declared with const" cwe="398">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="106" column="34"/>
+        </error>
+2/4 files checked 17% done
+Checking Libraries/BasicLib/BasicLibString.cpp ...
+3/4 files checked 49% done
+Checking Libraries/BasicLib/BasicLibTime.cpp ...
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_starttime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_starttime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="137" column="9"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_inittime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_inittime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="138" column="9"/>
+        </error>
+4/4 files checked 100% done
+        <error id="unusedFunction" severity="style" msg="The function &apos;DateStamp&apos; is never used." verbose="The function &apos;DateStamp&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="120" column="0"/>
+            <symbol>DateStamp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetFileList&apos; is never used." verbose="The function &apos;GetFileList&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibFiles.cpp" line="19" column="0"/>
+            <symbol>GetFileList</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetS&apos; is never used." verbose="The function &apos;GetS&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="155" column="0"/>
+            <symbol>GetS</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetString&apos; is never used." verbose="The function &apos;GetString&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="180" column="0"/>
+            <symbol>GetString</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeH&apos; is never used." verbose="The function &apos;GetTimeH&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="93" column="0"/>
+            <symbol>GetTimeH</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeM&apos; is never used." verbose="The function &apos;GetTimeM&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="88" column="0"/>
+            <symbol>GetTimeM</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeS&apos; is never used." verbose="The function &apos;GetTimeS&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="83" column="0"/>
+            <symbol>GetTimeS</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;LowerCase&apos; is never used." verbose="The function &apos;LowerCase&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="25" column="0"/>
+            <symbol>LowerCase</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ParseWord&apos; is never used." verbose="The function &apos;ParseWord&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="77" column="0"/>
+            <symbol>ParseWord</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;RemoveWord&apos; is never used." verbose="The function &apos;RemoveWord&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="104" column="0"/>
+            <symbol>RemoveWord</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Reset&apos; is never used." verbose="The function &apos;Reset&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="142" column="0"/>
+            <symbol>Reset</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;SearchAndReplace&apos; is never used." verbose="The function &apos;SearchAndReplace&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="38" column="0"/>
+            <symbol>SearchAndReplace</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;TimeStamp&apos; is never used." verbose="The function &apos;TimeStamp&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="102" column="0"/>
+            <symbol>TimeStamp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;TrimWhitespace&apos; is never used." verbose="The function &apos;TrimWhitespace&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="58" column="0"/>
+            <symbol>TrimWhitespace</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;UpperCase&apos; is never used." verbose="The function &apos;UpperCase&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="14" column="0"/>
+            <symbol>UpperCase</symbol>
+        </error>
+    </errors>
+</results>

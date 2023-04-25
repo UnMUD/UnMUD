@@ -3,22 +3,25 @@ cd SimpleMUD
 if make libs ; then
     echo "Libs compiled"
 else
-    echo "Error $? compiling Libs..."
-    exit
+    errorNum=$?
+    echo "Error $errorNum compiling Libs..."
+    exit $errorNum
 fi
 
 if make unmud ; then
     echo "UnMUD compiled"
 else
-    echo "Error $? compiling UnMUD..."
-    exit
+    errorNum=$?
+    echo "Error $errorNum compiling UnMUD..."
+    exit $errorNum
 fi
 
 if make link ; then
     echo "Objects linked, binary file created"
 else
-    echo "Error $? linking objects..."
-    exit
+    errorNum=$?
+    echo "Error $errorNum linking objects..."
+    exit $errorNum
 fi
 
 exit

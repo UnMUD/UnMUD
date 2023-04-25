@@ -1,0 +1,90 @@
+name: Pull Request Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  check_files_changes:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      MUD: ${{ steps.check_files_changes.outputs.MUD }}
+      # docs: ${{ steps.check_files_changes.outputs.docs }}
+    steps:
+    - uses: dorny/paths-filter@v2
+      id: check_files_changes
+      with:
+        filters: |
+          MUD:
+            - 'MUDGameProgramming/**'
+          # docs:
+          #   - 'docs/**'
+
+  build:
+    name: Build and analyze
+    needs: check_files_changes
+    if: ${{ needs.check_files_changes.outputs.MUD == 'true' }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./MUDGameProgramming
+    env:
+      BUILD_WRAPPER_OUT_DIR: AnalysisLogs/ # Directory where build-wrapper output will be placed
+      COVERAGE_OUT_DIR: AnalysisLogs/GCOVR/coverage.xml # Directory where coverage output will be placed
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: install dependences
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          sudo apt update
+          sudo apt install -y build-essential gcc-10-doc libstdc++-10-doc
+          sudo apt install -y libmsgsl-dev
+          sudo apt install -y cppcheck clang clang-tidy
+          sudo apt install -y libgtest-dev gcovr
+      - name: Install sonar-scanner and build-wrapper
+        uses: SonarSource/sonarcloud-github-c-cpp@v1
+      - name: Run build-wrapper
+        run: |
+          cd SimpleMUD
+          build-wrapper-linux-x86-64 --out-dir ../${{ env.BUILD_WRAPPER_OUT_DIR }} \
+            make clean libs unmud link tests
+      - name: Run tests and collect coverage into one XML report
+        continue-on-error: true # Remove in future
+        run: |
+          ./Scripts/tests.sh
+      - name: Run CPPCheck
+        continue-on-error: true # Remove in future
+        run: |
+          ./Scripts/static_test.sh -b
+          ./Scripts/static_test.sh -s
+          ./Scripts/static_test.sh -t
+          ./Scripts/static_test.sh -m
+      - name: Run clang-tidy
+        continue-on-error: true # Remove in future
+        run: |
+          ./Scripts/lint.sh -b
+          ./Scripts/lint.sh -s
+          ./Scripts/lint.sh -t
+          ./Scripts/lint.sh -m
+      - name: Run sonar-scanner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            --define sonar.organization=unmud \
+            --define sonar.projectKey=UnMUD_UnMUD \
+            --define sonar.projectName=UnMUD \
+            --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" \
+            --define sonar.coverageReportPaths="${{ env.COVERAGE_OUT_DIR }}"
+      - name: Push reports to repo
+        run: |
+          git config --global user.name 'Iuri Severo'
+          git config --global user.email 'iurisevero@users.noreply.github.com'
+          git add AnalysisLogs/
+          git restore --staged Analysis/build-wrapper*
+          git commit -m "Commit automatico dos logs das analises"
+          git push origin HEAD:main

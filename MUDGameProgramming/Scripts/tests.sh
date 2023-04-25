@@ -6,14 +6,16 @@ cd SimpleMUD
 if make tests ; then
     echo "Tests compiled"
 else
-    echo "Error $? compiling Tests..."
-    exit
+    errorNum=$?
+    echo "Error $errorNum compiling Tests..."
+    exit $errorNum
 fi
 
 if make run_tests ; then
-    gcovr &> $COVERAGEDIR/coverage.txt
-    cp $COVERAGEDIR/coverage.txt $COVERAGEDIR/$DATE-coverage.txt
+    gcovr --fail-under-line 80 -r ../ -e ../Tests/*.cpp -e ../Tests/*.h  \
+    --html $COVERAGEDIR/$DATE-coverage.html --sonarqube $COVERAGEDIR/coverage.xml
 else
-    echo "Error $? running tests"
-    exit
+    errorNum=$?
+    echo "Error $errorNum running tests"
+    exit $errorNum
 fi
