@@ -56,19 +56,37 @@ jobs:
         continue-on-error: true # Remove in future
         run: |
           ./Scripts/tests.sh
-      - name: Run CPPCheck
+      - name: Run CPPCheck on BasicLib
         continue-on-error: true # Remove in future
         run: |
           ./Scripts/static_test.sh -b
+      - name: Run CPPCheck on SocketLib
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/static_test.sh -s
+      - name: Run CPPCheck on ThreadLib
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/static_test.sh -t
+      - name: Run CPPCheck on MUD
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/static_test.sh -m
-      - name: Run clang-tidy
+      - name: Run clang-tidy on BasicLib
         continue-on-error: true # Remove in future
         run: |
           ./Scripts/lint.sh -b
+      - name: Run clang-tidy on SocketLib
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/lint.sh -s
+      - name: Run clang-tidy on ThreadLib
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/lint.sh -t
+      - name: Run clang-tidy on MUD
+        continue-on-error: true # Remove in future
+        run: |
           ./Scripts/lint.sh -m
       - name: Run sonar-scanner
         env:
@@ -86,6 +104,6 @@ jobs:
           git config --global user.name 'Iuri Severo'
           git config --global user.email 'iurisevero@users.noreply.github.com'
           git add AnalysisLogs/
-          git restore --staged Analysis/build-wrapper*
+          git restore --staged AnalysisLogs/build-wrapper*
           git commit -m "Commit automatico dos logs das analises"
           git push origin HEAD:main
