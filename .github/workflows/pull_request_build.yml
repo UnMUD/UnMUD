@@ -34,7 +34,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref_name }}
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       # - name: install dependences
       #   run: |
@@ -90,4 +89,4 @@ jobs:
         run: |
           git add AnalysisLogs/
           git commit -m "Commit automatico dos logs das analises"
-          git push
+          git push origin HEAD:main
