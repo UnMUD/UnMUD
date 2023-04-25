@@ -86,8 +86,8 @@ jobs:
           touch arquivo2.txt
           echo "Um texto que não é pra ser adicionado" > arquivo2.txt
       - name: Push reports to repo # Add on pr to test
-        uses: actions-js/push@master
+        uses: EndBug/add-and-commit@v9
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: 'AnalysisLogs/'
+          add: 'MUDGameProgramming/AnalysisLogs/'
+          remove: '**/**/build-wrapper*'
           message: 'Commit automatico dos logs das analises'
