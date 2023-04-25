@@ -87,6 +87,8 @@ jobs:
           echo "Um texto que não é pra ser adicionado" > arquivo2.txt
       - name: Push reports to repo # Add on pr to test
         run: |
+          git config --global user.name 'Iuri Severo'
+          git config --global user.email 'iurisevero@users.noreply.github.com'
           git add AnalysisLogs/
           git commit -m "Commit automatico dos logs das analises"
           git push origin HEAD:main
