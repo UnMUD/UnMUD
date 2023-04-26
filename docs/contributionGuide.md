@@ -158,9 +158,9 @@ Para rodar os testes é necessário compilar as bibliotecas e o jogo. Após isso
 docker-compose up exec unmud bash Scripts/tests.sh
 ```
 
-Esse scripts irá realizar a compilação, execução e análise de cobertura dos testes, gerando um arquivo na pasta `AnalysisLogs/GCOVR`, com o nome `ano-mês-dia-hora-segundo-coverage.txt`.
+Esse scripts irá realizar a compilação, execução e análise de cobertura dos testes, gerando um arquivo na pasta `AnalysisLogs/GCOVR`, com o nome `ano-mês-dia-hora-segundo-coverage.html`.
 
-Caso o desejado seja apenas compilar os testes ou executá-los, é necessário realizar a execução do Makefile que está dentro da pasta `SimpleMUD`. Após entrar na pasta é possível compilar os testes com o comando:
+Caso o desejado seja apenas compilar os testes ou executá-los, é necessário realizar a execução do Makefile que está dentro da pasta `SimpleMUD`, realizando esse acesso por dentro do container. Após entrar na pasta é possível compilar os testes com o comando:
 
 ```
 make tests
