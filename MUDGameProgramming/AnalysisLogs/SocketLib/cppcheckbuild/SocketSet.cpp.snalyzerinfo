@@ -1,0 +1,12 @@
+GetSock
+GetLocalPort call:[ntohs] noreturn:[ntohs]
+GetLocalAddress
+GetRemoteAddress
+GetRemotePort call:[ntohs] noreturn:[ntohs]
+IsConnected
+IsListening
+Poll call:[select] noreturn:[select]
+HasActivity call:[FD_ISSET,GetSock]
+SocketSet call:[FD_ZERO] noreturn:[FD_ZERO]
+AddSocket call:[FD_SET,GetSock] noreturn:[FD_SET]
+RemoveSocket call:[FD_CLR,GetSock] noreturn:[FD_CLR]

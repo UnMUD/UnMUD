@@ -1,0 +1,62 @@
+simulated_binomial < 4 , random_int_range < > > call:[init] noreturn:[init]
+simulated_binomial < 4 , random_int_range < > > call:[init] noreturn:[init]
+init
+seed call:[seed] noreturn:[seed]
+minimum
+maximum
+generate call:[m_generator] noreturn:[m_generator]
+operator() call:[generate] noreturn:[generate]
+operator() call:[generate] noreturn:[generate]
+random_int_range < random_percent < false > > call:[init] noreturn:[init]
+random_int_range < random_percent < false > > call:[init] noreturn:[init]
+init
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum,return]
+maximum call:[maximum,return]
+generate call:[m_generator,return]
+operator() call:[generate] noreturn:[generate]
+operator() call:[generate] noreturn:[generate]
+random_range < true , random_percent < true > > call:[init] noreturn:[init]
+random_range < true , random_percent < true > > call:[init] noreturn:[init]
+init
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum]
+maximum call:[maximum]
+generate call:[m_generator]
+operator() call:[generate] noreturn:[generate]
+operator() call:[generate] noreturn:[generate]
+random_range < false , random_percent < false > > call:[init] noreturn:[init]
+random_range < false , random_percent < false > > call:[init] noreturn:[init]
+init
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum]
+maximum call:[maximum]
+generate call:[m_generator]
+operator() call:[generate] noreturn:[generate]
+operator() call:[generate] noreturn:[generate]
+normal_generator < true , random_percent < true > > call:[init] noreturn:[init]
+normal_generator < true , random_percent < true > > call:[init] noreturn:[init]
+init
+mean
+sigma
+reset
+operator() call:[cos,log,m_generator,sin,sqrt]
+random_percent < true , linear_congruency < uint32 , 2147483648u , 1103515245 , 12345 > > call:[init] noreturn:[init]
+random_percent < true , linear_congruency < uint32 , 2147483648u , 1103515245 , 12345 > > call:[init] noreturn:[init]
+init call:[maximum]
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum]
+maximum call:[maximum]
+operator() call:[m_generator]
+random_percent < false , linear_congruency < uint32 , 2147483648u , 1103515245 , 12345 > > call:[init] noreturn:[init]
+random_percent < false , linear_congruency < uint32 , 2147483648u , 1103515245 , 12345 > > call:[init] noreturn:[init]
+init call:[maximum]
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum]
+maximum call:[maximum]
+operator() call:[m_generator]
+linear_congruency < uint32 , 2147483648u , 1103515245 , 12345 >
+seed
+minimum
+maximum
+operator()

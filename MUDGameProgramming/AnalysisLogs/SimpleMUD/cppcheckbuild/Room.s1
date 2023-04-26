@@ -1,0 +1,95 @@
+Entity
+Name
+CompName call:[LowerCase] noreturn:[LowerCase]
+MatchFull call:[CompName,LowerCase] noreturn:[LowerCase]
+Match call:[CompName,LowerCase,find,size] noreturn:[find]
+ID
+matchentityfull
+operator() call:[MatchFull] noreturn:[MatchFull]
+operator() call:[MatchFull] noreturn:[MatchFull]
+matchentity
+operator() call:[Match] noreturn:[Match]
+operator() call:[Match] noreturn:[Match]
+GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
+GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
+AttributeSet
+operator[]
+operator<< call:[GetAttributeString]
+operator>>
+GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
+GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
+GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
+GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
+GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
+GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
+OppositeDirection call:[return]
+GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
+GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
+Item
+Type
+GetAttr
+Min
+Max
+Speed
+Price
+operator>> call:[GetItemType,getline]
+player
+operator=
+operatorint
+operator<<
+operator>>
+item
+operator=
+operatorint
+operator<<
+operator>>
+room
+operator=
+operatorint
+operator<<
+operator>>
+enemy
+operator=
+operatorint
+operator<<
+operator>>
+enemytemplate
+operator=
+operatorint
+operator<<
+operator>>
+Type
+Data
+Description
+Adjacent
+SpawnWhich
+MaxEnemies
+Items
+Money
+Enemies
+Players
+HitPoints
+CurrentRoom
+NextAttackTime
+Room
+AddPlayer call:[push_back] noreturn:[push_back]
+RemovePlayer call:[begin,end,erase,find] noreturn:[erase]
+FindItem call:[begin,double_find_if,end,matchentity,matchentityfull]
+AddItem call:[pop_front,push_back,size] noreturn:[pop_front,push_back]
+RemoveItem call:[begin,end,erase,find] noreturn:[erase]
+FindEnemy call:[begin,double_find_if,end,matchentity,matchentityfull]
+AddEnemy call:[push_back] noreturn:[push_back]
+RemoveEnemy call:[begin,end,erase,find] noreturn:[erase]
+LoadTemplate call:[GetRoomType,getline]
+LoadData call:[clear,extract,push_back] noreturn:[push_back]
+SaveData
+EnumToStr < Attribute >
+EnumToStr < ItemType >
+EnumToStr < PlayerRank >
+EnumToStr < RoomType >
+EnumToStr < Direction >
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]

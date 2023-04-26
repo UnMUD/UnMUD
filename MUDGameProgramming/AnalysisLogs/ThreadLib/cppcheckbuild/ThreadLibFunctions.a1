@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2000930655">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398" file0="Libraries/ThreadLib/ThreadLibFunctions.cpp">
+            <location file="Libraries/ThreadLib/ThreadLibFunctions.cpp" line="34" column="31"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/ThreadLib/ThreadLibFunctions.h:142:17" my-argnr="1" my-argname="p_thread" file="Libraries/ThreadLib/ThreadLibFunctions.h" line="146" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="DummyRun" lineNumber="30"/>
+    <functiondecl functionName="DummyRun" lineNumber="28"/>
+    <functioncall functionName="CloseHandle"/>
+    <functioncall functionName="CreateThread"/>
+    <functioncall functionName="CreationFailure"/>
+    <functioncall functionName="DWORD"/>
+    <functioncall functionName="DeleteCriticalSection"/>
+    <functioncall functionName="DummyRun"/>
+    <functioncall functionName="EnterCriticalSection"/>
+    <functioncall functionName="Exception"/>
+    <functioncall functionName="GetCurrentThreadId"/>
+    <functioncall functionName="HANDLE"/>
+    <functioncall functionName="INFINITE"/>
+    <functioncall functionName="InitFailure"/>
+    <functioncall functionName="InitializeCriticalSection"/>
+    <functioncall functionName="LeaveCriticalSection"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Sleep"/>
+    <functioncall functionName="TerminateThread"/>
+    <functioncall functionName="Unspecified"/>
+    <functioncall functionName="WaitForSingleObject"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="m_data"/>
+    <functioncall functionName="m_func"/>
+    <functioncall functionName="m_mutex"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_error"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_milliseconds"/>
+    <functioncall functionName="p_param"/>
+    <functioncall functionName="p_thread"/>
+    <functioncall functionName="pthread_cancel"/>
+    <functioncall functionName="pthread_create"/>
+    <functioncall functionName="pthread_join"/>
+    <functioncall functionName="pthread_mutex_destroy"/>
+    <functioncall functionName="pthread_mutex_init"/>
+    <functioncall functionName="pthread_mutex_lock"/>
+    <functioncall functionName="pthread_mutex_unlock"/>
+    <functioncall functionName="pthread_self"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="usleep"/>
+    <functioncall functionName="void"/>
+  </FileInfo>
+</analyzerinfo>

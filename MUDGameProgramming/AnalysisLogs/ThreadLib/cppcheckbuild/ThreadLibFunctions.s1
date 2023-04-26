@@ -1,0 +1,12 @@
+Exception
+GetError
+Create call:[Exception,pthread_create] noreturn:[Exception]
+GetID call:[pthread_self] noreturn:[pthread_self]
+WaitForFinish call:[pthread_join] noreturn:[pthread_join]
+Kill call:[pthread_cancel] noreturn:[pthread_cancel]
+YieldThread call:[usleep] noreturn:[usleep]
+Mutex call:[pthread_mutex_init] noreturn:[pthread_mutex_init]
+Mutex call:[pthread_mutex_destroy] noreturn:[pthread_mutex_destroy]
+Lock call:[pthread_mutex_lock] noreturn:[pthread_mutex_lock]
+Unlock call:[pthread_mutex_unlock] noreturn:[pthread_mutex_unlock]
+DummyRun call:[m_func]

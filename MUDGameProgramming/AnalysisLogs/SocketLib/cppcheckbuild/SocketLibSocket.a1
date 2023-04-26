@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3710903047">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketLibSocket.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+            <symbol>Exception</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Close" lineNumber="17"/>
+    <functiondecl functionName="SetBlocking" lineNumber="37"/>
+    <functiondecl functionName="Connect" lineNumber="114"/>
+    <functiondecl functionName="Send" lineNumber="166"/>
+    <functiondecl functionName="Receive" lineNumber="201"/>
+    <functiondecl functionName="Close" lineNumber="230"/>
+    <functiondecl functionName="Listen" lineNumber="258"/>
+    <functiondecl functionName="Accept" lineNumber="318"/>
+    <functiondecl functionName="Close" lineNumber="340"/>
+    <functiondecl functionName="Close" lineNumber="17"/>
+    <functiondecl functionName="SetBlocking" lineNumber="37"/>
+    <functiondecl functionName="Connect" lineNumber="114"/>
+    <functiondecl functionName="Send" lineNumber="166"/>
+    <functiondecl functionName="Receive" lineNumber="201"/>
+    <functiondecl functionName="Close" lineNumber="230"/>
+    <functiondecl functionName="Listen" lineNumber="258"/>
+    <functiondecl functionName="Accept" lineNumber="318"/>
+    <functiondecl functionName="Close" lineNumber="340"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="Close"/>
+    <functioncall functionName="DataSocket"/>
+    <functioncall functionName="EAccessDenied"/>
+    <functioncall functionName="EAddressFamilyNotSupported"/>
+    <functioncall functionName="EAddressInUse"/>
+    <functioncall functionName="EAddressNotAvailable"/>
+    <functioncall functionName="EAddressRequired"/>
+    <functioncall functionName="EAlreadyConnected"/>
+    <functioncall functionName="EBadProtocolOption"/>
+    <functioncall functionName="EConnectionAborted"/>
+    <functioncall functionName="EConnectionClosed"/>
+    <functioncall functionName="EConnectionRefused"/>
+    <functioncall functionName="EConnectionReset"/>
+    <functioncall functionName="EDNSError"/>
+    <functioncall functionName="EDNSNotFound"/>
+    <functioncall functionName="EHostDown"/>
+    <functioncall functionName="EHostUnreachable"/>
+    <functioncall functionName="EInProgress"/>
+    <functioncall functionName="EInterrupted"/>
+    <functioncall functionName="EInvalidParameter"/>
+    <functioncall functionName="EInvalidSocket"/>
+    <functioncall functionName="EInvalidSocketType"/>
+    <functioncall functionName="EMessageTooLong"/>
+    <functioncall functionName="ENetworkDown"/>
+    <functioncall functionName="ENetworkReset"/>
+    <functioncall functionName="ENetworkUnreachable"/>
+    <functioncall functionName="ENoDNSData"/>
+    <functioncall functionName="ENoMemory"/>
+    <functioncall functionName="ENoSocketsAvailable"/>
+    <functioncall functionName="ENotAvailable"/>
+    <functioncall functionName="ENotConnected"/>
+    <functioncall functionName="EOperationNotSupported"/>
+    <functioncall functionName="EOperationWouldBlock"/>
+    <functioncall functionName="EProtocolFamilyNotSupported"/>
+    <functioncall functionName="EProtocolNotSupported"/>
+    <functioncall functionName="EProtocolNotSupportedBySocket"/>
+    <functioncall functionName="ESeriousError"/>
+    <functioncall functionName="EShutDown"/>
+    <functioncall functionName="ESocketLimitReached"/>
+    <functioncall functionName="ETimedOut"/>
+    <functioncall functionName="Exception"/>
+    <functioncall functionName="FIONBIO"/>
+    <functioncall functionName="F_GETFL"/>
+    <functioncall functionName="F_SETFL"/>
+    <functioncall functionName="GetError"/>
+    <functioncall functionName="INADDR_ANY"/>
+    <functioncall functionName="IPPROTO_TCP"/>
+    <functioncall functionName="ListeningSocket"/>
+    <functioncall functionName="SOCK_STREAM"/>
+    <functioncall functionName="SOL_SOCKET"/>
+    <functioncall functionName="SO_REUSEADDR"/>
+    <functioncall functionName="Socket"/>
+    <functioncall functionName="accept"/>
+    <functioncall functionName="bind"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="closesocket"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fcntl"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="getpeername"/>
+    <functioncall functionName="getsockname"/>
+    <functioncall functionName="htonl"/>
+    <functioncall functionName="htons"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ioctlsocket"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="m_connected"/>
+    <functioncall functionName="m_localinfo"/>
+    <functioncall functionName="m_remoteinfo"/>
+    <functioncall functionName="m_sock"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="ntohs"/>
+    <functioncall functionName="p_addr"/>
+    <functioncall functionName="p_blockmode"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_socket"/>
+    <functioncall functionName="recv"/>
+    <functioncall functionName="reuse"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s_addr"/>
+    <functioncall functionName="send"/>
+    <functioncall functionName="setsockopt"/>
+    <functioncall functionName="shutdown"/>
+    <functioncall functionName="sin_port"/>
+    <functioncall functionName="sin_zero"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="socket"/>
+    <functioncall functionName="socketaddress"/>
+    <functioncall functionName="throw"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

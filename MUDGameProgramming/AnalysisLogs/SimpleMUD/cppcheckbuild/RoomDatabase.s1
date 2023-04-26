@@ -1,0 +1,104 @@
+Entity
+Name
+CompName call:[LowerCase] noreturn:[LowerCase]
+MatchFull call:[CompName,LowerCase] noreturn:[LowerCase]
+Match call:[CompName,LowerCase,find,size] noreturn:[find]
+ID
+matchentityfull
+operator() call:[MatchFull] noreturn:[MatchFull]
+operator() call:[MatchFull] noreturn:[MatchFull]
+matchentity
+operator() call:[Match] noreturn:[Match]
+operator() call:[Match] noreturn:[Match]
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[return,size] noreturn:[size]
+FindOpenID call:[begin,rend,size]
+GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
+GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
+AttributeSet
+operator[]
+operator<< call:[GetAttributeString]
+operator>>
+GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
+GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
+GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
+GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
+GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
+GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
+OppositeDirection call:[return]
+GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
+GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
+Item
+Type
+GetAttr
+Min
+Max
+Speed
+Price
+operator>> call:[GetItemType,getline]
+player
+operator=
+operatorint
+operator<<
+operator>>
+item
+operator=
+operatorint
+operator<<
+operator>>
+room
+operator=
+operatorint
+operator<<
+operator>>
+enemy
+operator=
+operatorint
+operator<<
+operator>>
+enemytemplate
+operator=
+operatorint
+operator<<
+operator>>
+Type
+Data
+Description
+Adjacent
+SpawnWhich
+MaxEnemies
+Items
+Money
+Enemies
+Players
+RoomDatabase
+GetInstance
+LoadTemplates call:[ID,LoadTemplate,file,good,resize,size] noreturn:[resize]
+LoadData call:[LoadData,file,good]
+SaveData call:[GetInstance,ID,SaveData,file]
+EnumToStr < Attribute >
+EnumToStr < ItemType >
+EnumToStr < PlayerRank >
+EnumToStr < RoomType >
+EnumToStr < Direction >
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
+begin call:[begin]
+end call:[end] noreturn:[end]
+size call:[size]
+get call:[exception,size] noreturn:[exception]

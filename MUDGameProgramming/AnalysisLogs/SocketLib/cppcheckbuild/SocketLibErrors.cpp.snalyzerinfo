@@ -1,0 +1,5 @@
+GetError call:[TranslateError,WSAGetLastError]
+TranslateError
+Exception
+ErrorCode
+PrintError

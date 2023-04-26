@@ -1,0 +1,45 @@
+GetSock
+GetLocalPort call:[ntohs] noreturn:[ntohs]
+GetLocalAddress
+GetRemoteAddress
+GetRemotePort call:[ntohs] noreturn:[ntohs]
+IsConnected
+IsListening
+Poll call:[select] noreturn:[select]
+HasActivity call:[FD_ISSET,GetSock]
+AvailableConnections call:[size] noreturn:[size]
+TotalConnections call:[return,size] noreturn:[size]
+Manage call:[CloseConnections,Listen,Send] noreturn:[CloseConnections]
+ConnectionManager
+ConnectionManager call:[CloseSocket,begin,end] noreturn:[CloseSocket]
+NewConnection call:[AddHandler,AddSocket,AvailableConnections,CloseSocket,NoRoom,SetBlocking,conn,defaulthandler,push_back,rbegin] noreturn:[AddHandler,CloseSocket]
+Listen call:[Close,Flooded,GetCurrentDataRate,Handler,HasActivity,Hungup,Poll,Receive,TotalConnections,begin,end] noreturn:[Close,Poll]
+Send call:[Close,GetBufferedBytes,GetLastSendTime,Handler,Hungup,SendBuffer,begin,end] noreturn:[Close]
+CloseConnections call:[Close,Closed,begin,end] noreturn:[Close]
+ConnectionHandler
+ConnectionHandler
+Telnet
+Buffered
+Translate call:[Handle,Handler,string] noreturn:[Handle]
+SendString call:[BufferData,data,size] noreturn:[BufferData]
+GetLastReceiveTime
+Close
+CloseSocket call:[ClearHandlers,Close] noreturn:[ClearHandlers]
+GetDataRate
+GetCurrentDataRate
+GetBufferedBytes call:[return,size] noreturn:[size]
+GetCreationTime
+Protocol
+Closed
+SwitchHandler call:[Enter,Handler,Leave,pop,push] noreturn:[Enter,pop]
+AddHandler call:[Enter,Handler,Leave,push] noreturn:[Enter,Leave]
+RemoveHandler call:[Enter,Handler,Leave,pop] noreturn:[Enter]
+Handler call:[size,top] noreturn:[top]
+ClearHandlers call:[Handler,Leave,pop] noreturn:[Leave,pop]
+Connection < Telnet > call:[Initialize] noreturn:[Initialize]
+Connection < Telnet > call:[Initialize] noreturn:[Initialize]
+Initialize call:[GetTimeMS]
+GetLastSendTime call:[GetTimeS]
+BufferData call:[append] noreturn:[append]
+SendBuffer call:[GetTimeS,Send,data,erase,size] noreturn:[GetTimeS]
+Receive call:[GetTimeS,Receive,Translate] noreturn:[Translate]

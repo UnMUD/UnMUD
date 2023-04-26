@@ -1,0 +1,10 @@
+insert
+extract
+tostring call:[insert,size,str,string] noreturn:[str,string]
+totype call:[extract,str]
+UpperCase call:[size,toupper] noreturn:[toupper]
+LowerCase call:[size,tolower] noreturn:[tolower]
+SearchAndReplace call:[find,replace,size,str] noreturn:[find]
+TrimWhitespace call:[find_first_not_of,find_last_not_of,substr] noreturn:[substr]
+ParseWord call:[find_first_not_of,find_first_of,substr] noreturn:[find_first_not_of,substr]
+RemoveWord call:[erase,find_first_not_of,find_first_of] noreturn:[find_first_not_of]

@@ -1,0 +1,19 @@
+GetSock
+GetLocalPort call:[ntohs] noreturn:[ntohs]
+GetLocalAddress
+GetRemoteAddress
+GetRemotePort call:[ntohs] noreturn:[ntohs]
+IsConnected
+IsListening
+Close call:[closesocket]
+SetBlocking call:[Exception,GetError,ioctlsocket,throw] noreturn:[throw]
+Socket call:[getsockname,sizeof] noreturn:[getsockname]
+DataSocket call:[getpeername,sizeof]
+Connect call:[Exception,GetError,connect,getsockname,htons,memset,sizeof,socket] noreturn:[Exception]
+Send call:[Exception,GetError,send] noreturn:[Exception]
+Receive call:[Exception,GetError,recv] noreturn:[Exception]
+Close call:[Close,shutdown] noreturn:[shutdown]
+ListeningSocket
+Listen call:[Exception,GetError,bind,htonl,htons,listen,memset,setsockopt,sizeof,socket] noreturn:[Exception]
+Accept call:[DataSocket,Exception,GetError,accept,sizeof] noreturn:[DataSocket,Exception]
+Close call:[Close]

@@ -1,0 +1,238 @@
+Logon
+Leave
+Hungup call:[GetIPString,GetRemoteAddress,Log] noreturn:[Log]
+Flooded call:[GetIPString,GetRemoteAddress,Log] noreturn:[Log]
+NoRoom call:[Send,c_str,size] noreturn:[Send]
+Entity
+Name
+CompName call:[LowerCase] noreturn:[LowerCase]
+MatchFull call:[CompName,LowerCase] noreturn:[LowerCase]
+Match call:[CompName,LowerCase,find,size] noreturn:[find]
+ID
+matchentityfull
+operator() call:[MatchFull] noreturn:[MatchFull]
+operator() call:[MatchFull] noreturn:[MatchFull]
+matchentity
+operator() call:[Match] noreturn:[Match]
+operator() call:[Match] noreturn:[Match]
+GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
+GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
+AttributeSet
+operator[]
+operator<< call:[GetAttributeString]
+operator>>
+GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
+GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
+GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
+GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
+GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
+GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
+OppositeDirection call:[return]
+GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
+GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
+Item
+Type
+GetAttr
+Min
+Max
+Speed
+Price
+operator>> call:[GetItemType,getline]
+player
+operator=
+operatorint
+operator<<
+operator>>
+item
+operator=
+operatorint
+operator<<
+operator>>
+room
+operator=
+operatorint
+operator<<
+operator>>
+enemy
+operator=
+operatorint
+operator<<
+operator>>
+enemytemplate
+operator=
+operatorint
+operator<<
+operator>>
+Level
+HitPoints
+StatPoints
+Experience
+CurrentRoom
+Money
+NextAttackTime
+GetItem
+Items
+MaxItems
+Password
+Rank
+Conn
+LoggedIn
+Active
+Newbie
+NeedForLevel call:[pow,return]
+GetAttr
+GetBaseAttr
+Weapon
+Armor
+operator() call:[Active] noreturn:[Active]
+operator() call:[Active] noreturn:[Active]
+operator() call:[LoggedIn] noreturn:[LoggedIn]
+operator() call:[LoggedIn] noreturn:[LoggedIn]
+playersend
+operator() call:[SendString] noreturn:[SendString]
+operator() call:[SendString] noreturn:[SendString]
+Type
+Data
+Description
+Adjacent
+SpawnWhich
+MaxEnemies
+Items
+Money
+Enemies
+Players
+LastID call:[rbegin]
+findactive call:[begin,double_find_if,end,matchentity,matchentityfull,playeractive] noreturn:[double_find_if]
+findloggedin call:[begin,double_find_if,end,matchentity,matchentityfull,playerloggedin] noreturn:[double_find_if]
+PlayerDatabase
+PlayerFileName call:[string] noreturn:[string]
+Game
+GetTimer
+Running
+Train
+Leave
+Hungup call:[GetInstance,Logout] noreturn:[Logout]
+Flooded call:[GetInstance,Logout] noreturn:[Logout]
+ItemDatabase
+RoomDatabase
+find call:[begin,double_find_if,end,matchentity,matchentityfull]
+begin call:[begin] noreturn:[begin]
+end call:[end] noreturn:[end]
+size call:[size] noreturn:[size]
+has call:[begin,end,find] noreturn:[end]
+operator>> call:[Name,clear,extract,getline,push_back] noreturn:[push_back]
+StoreDatabase
+HitPoints
+CurrentRoom
+NextAttackTime
+EnemyTemplateDatabase
+EnemyDatabase
+Handle call:[Active,Announce,Buy,Close,Conn,CurrentRoom,Data,DateStamp,DropItem,Enter,GetInstance,GetItem,GetRank,GetRankString,GetString,GotoTrain,Handler,Leave,Level,Load,LoadPlayer,LoadTemplates,LogoutMessage,LowerCase,Move,Name,ParseWord,PlayerAttack,PrintExperience,PrintHelp,PrintInventory,PrintRoom,PrintStats,Rank,RemoveItem,RemoveWord,Running,Sell,SendGame,SendRoom,SendString,StoreList,TimeStamp,Train,Type,UseItem,Whisper,WhoList,end,find,findfull,findloggedin,tostring] noreturn:[Enter,Leave,SendRoom,SendString]
+Enter call:[Active,AddPlayer,CurrentRoom,GetIPString,GetRemoteAddress,GotoTrain,ID,Log,LoggedIn,Name,Newbie,PrintRoom,SendGame,SendString] noreturn:[GotoTrain,SendString]
+Leave call:[Active,Closed,CurrentRoom,GetIPString,GetInstance,GetRemoteAddress,Log,Logout,Name,RemovePlayer] noreturn:[Logout]
+Hungup call:[GetIPString,GetRemoteAddress,Log,LogoutMessage,Name] noreturn:[LogoutMessage]
+Flooded call:[GetIPString,GetRemoteAddress,Log,LogoutMessage,Name] noreturn:[LogoutMessage]
+SendGlobal call:[GetInstance,begin,end,operate_on_if,playerloggedin,playersend] noreturn:[operate_on_if]
+SendGame call:[GetInstance,begin,end,operate_on_if,playeractive,playersend] noreturn:[operate_on_if]
+LogoutMessage call:[SendGame] noreturn:[SendGame]
+Announce call:[SendGlobal] noreturn:[SendGlobal]
+Whisper call:[GetInstance,Name,SendString,end,findactive] noreturn:[SendString]
+operator() call:[Active,GetRankString,Level,LoggedIn,Name,Rank,tostring]
+WhoList call:[GetInstance,begin,end,operate_on_if,playerloggedin,wholist] noreturn:[operate_on_if]
+PrintHelp
+PrintStats call:[GetAttr,GetRankString,HitPoints,Name,PrintExperience,Rank,StatPoints,percent,tostring]
+PrintExperience call:[Experience,Level,NeedForLevel,percent,tostring]
+PrintInventory call:[Armor,GetItem,Money,Name,Weapon,erase,size,tostring] noreturn:[Name]
+UseItem call:[AddBonuses,AddHitpoints,CurrentRoom,DropItem,GetItem,GetItemIndex,ID,Max,Min,Name,RandomInt,SendRoom,SendString,Type,UseArmor,UseWeapon]
+RemoveItem call:[Armor,CurrentRoom,LowerCase,Name,RemoveArmor,RemoveWeapon,SendRoom,SendString,Weapon]
+PrintRoom call:[Adjacent,Description,Enemies,Items,Money,Name,Players,begin,end,erase,size,tostring]
+SendRoom call:[Players,begin,end,for_each,playersend] noreturn:[for_each]
+Move call:[AddPlayer,Adjacent,CurrentRoom,ID,Name,OppositeDirection,PrintRoom,RemovePlayer,SendRoom,SendString] noreturn:[SendString]
+GetItem call:[CurrentRoom,FindItem,Money,Name,PickUpItem,RemoveItem,SendRoom,SendString,erase,tostring] noreturn:[SendRoom,SendString]
+DropItem call:[AddItem,CurrentRoom,DropItem,GetItem,GetItemIndex,Money,Name,SendRoom,SendString,erase,tostring] noreturn:[DropItem,SendRoom,SendString]
+GotoTrain call:[Active,AddHandler,Conn,ID,LogoutMessage,Name,Train] noreturn:[LogoutMessage]
+StoreList call:[GetInstance,Name,Price,get,tostring]
+Buy call:[CurrentRoom,Data,GetInstance,Money,Name,PickUpItem,Price,SendRoom,SendString,find,get] noreturn:[SendRoom]
+Sell call:[CurrentRoom,Data,DropItem,GetInstance,GetItem,GetItemIndex,Money,Name,Price,SendRoom,SendString,get,has] noreturn:[SendRoom]
+EnemyAttack call:[Accuracy,AddHitpoints,CurrentRoom,GetAttr,GetMS,GetTimer,HitPoints,ID,Max,Min,Name,NextAttackTime,PlayerKilled,Players,RandomInt,SendRoom,Speed,StrikeDamage,Weapon,advance,begin,seconds,size,tostring] noreturn:[PlayerKilled,seconds]
+PlayerKilled call:[AddItem,AddPlayer,CurrentRoom,DropItem,Experience,GetAttr,GetItem,Items,Money,Name,RandomInt,RemovePlayer,SendRoom,SendString,SetHitpoints,tostring] noreturn:[SendRoom]
+PlayerAttack call:[CurrentRoom,DamageAbsorb,Dodging,EnemyKilled,FindEnemy,GetAttr,GetMS,GetTimer,HitPoints,ID,Max,Min,Name,NextAttackTime,RandomInt,SendRoom,SendString,Speed,Weapon,seconds,tostring] noreturn:[EnemyKilled,seconds]
+EnemyKilled call:[AddItem,CurrentRoom,Delete,Experience,GetInstance,LootList,Money,MoneyMax,MoneyMin,Name,RandomInt,SendRoom,SendString,tostring] noreturn:[Delete,SendRoom]
+begin call:[begin]
+end call:[end] noreturn:[end]
+size call:[size]
+get call:[exception,size] noreturn:[exception]
+begin call:[begin]
+end call:[end] noreturn:[end]
+size call:[size]
+get call:[exception,size] noreturn:[exception]
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[return,size] noreturn:[size]
+FindOpenID call:[begin,rend,size]
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[return,size] noreturn:[size]
+FindOpenID call:[begin,rend,size]
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[return,size] noreturn:[size]
+FindOpenID call:[begin,rend,size]
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[return,size] noreturn:[size]
+FindOpenID call:[begin,rend,size]
+EnumToStr < Attribute >
+EnumToStr < ItemType >
+EnumToStr < PlayerRank >
+EnumToStr < RoomType >
+EnumToStr < Direction >
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]

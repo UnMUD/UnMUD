@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3696966185">
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:27:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="16" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:28:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="27" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="43" col="22" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="53" col="58" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="53" col="63" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:14" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="55" col="54" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:151:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="154" col="18" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:39:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="64" col="11" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="79" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:41:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="106" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:27:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="16" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:28:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="27" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="43" col="22" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="53" col="58" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="53" col="63" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:14" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="55" col="54" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:64:17" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="67" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:71:17" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="74" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:78:20" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="81" col="13" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:117:20" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="120" col="13" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:151:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="154" col="18" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:39:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="64" col="11" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="79" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:41:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="106" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:27:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="16" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:28:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="27" col="23" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="43" col="22" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="53" col="58" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:53:13" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="53" col="63" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:14" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="55" col="54" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:64:17" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="67" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:71:17" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="74" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:78:20" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="81" col="13" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:117:20" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="120" col="13" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:151:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="154" col="18" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:39:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="64" col="11" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="79" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:41:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="106" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="UpperCase" lineNumber="14"/>
+    <functiondecl functionName="LowerCase" lineNumber="25"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
+    <functiondecl functionName="ParseWord" lineNumber="77"/>
+    <functiondecl functionName="RemoveWord" lineNumber="104"/>
+    <functiondecl functionName="UpperCase" lineNumber="14"/>
+    <functiondecl functionName="LowerCase" lineNumber="25"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
+    <functiondecl functionName="ParseWord" lineNumber="77"/>
+    <functiondecl functionName="RemoveWord" lineNumber="104"/>
+    <functiondecl functionName="UpperCase" lineNumber="14"/>
+    <functiondecl functionName="LowerCase" lineNumber="25"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
+    <functiondecl functionName="ParseWord" lineNumber="77"/>
+    <functiondecl functionName="RemoveWord" lineNumber="104"/>
+    <functioncall functionName="WHITESPACE"/>
+    <functioncall functionName="_atoi64"/>
+    <functioncall functionName="_i64toa"/>
+    <functioncall functionName="_ui64toa"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="digits"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="extract"/>
+    <functioncall functionName="extract &lt; uint64 &gt;"/>
+    <functioncall functionName="failbit"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_first_not_of"/>
+    <functioncall functionName="find_first_of"/>
+    <functioncall functionName="find_last_not_of"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert &lt; uint64 &gt;"/>
+    <functioncall functionName="isdigit"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_replace"/>
+    <functioncall functionName="p_search"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_target"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="peek"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="setstate"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skipws"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tolower"/>
+    <functioncall functionName="toupper"/>
+    <functioncall functionName="typename"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wse"/>
+    <functioncall functionName="wsf"/>
+    <functioncall functionName="wss"/>
+  </FileInfo>
+</analyzerinfo>

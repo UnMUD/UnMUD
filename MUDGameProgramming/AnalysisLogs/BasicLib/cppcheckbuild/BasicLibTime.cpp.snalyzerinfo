@@ -1,0 +1,25 @@
+seconds
+minutes
+hours
+days
+weeks
+years
+insert
+extract
+tostring call:[insert,size,str,string] noreturn:[str,string]
+totype call:[extract,str]
+GetTimeMS call:[gettimeofday]
+GetTimeS call:[GetTimeMS]
+GetTimeM call:[GetTimeMS]
+GetTimeH call:[GetTimeMS]
+TimeStamp call:[localtime,strftime,time]
+DateStamp call:[localtime,strftime,time]
+Timer
+Reset call:[GetTimeMS] noreturn:[GetTimeMS]
+GetMS call:[GetTimeMS,return]
+GetS call:[GetMS]
+GetM call:[GetMS]
+GetH call:[GetMS]
+GetD call:[GetMS]
+GetY call:[GetD]
+GetString call:[GetD,GetH,GetM,GetY,tostring]

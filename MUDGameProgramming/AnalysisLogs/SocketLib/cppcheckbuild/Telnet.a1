@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3574193761">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Telnet::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Telnet::m_buffer&apos; is not initialized in the constructor." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Telnet.h" line="74" column="12"/>
+            <symbol>Telnet::m_buffer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Connection.h" line="239" column="23"/>
+            <symbol>Connection &lt; Telnet &gt;::m_buffer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;Connection &lt; Telnet &gt;::m_buffer&apos; is not initialized in the constructor." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Connection.h" line="245" column="23"/>
+            <symbol>Connection &lt; Telnet &gt;::m_buffer</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+            <symbol>Exception</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Connection &lt; Telnet &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Connection &lt; Telnet &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Connection.h" line="37" column="5"/>
+            <symbol>Connection &lt; Telnet &gt;</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_string&apos; should be passed by const reference." verbose="Parameter &apos;p_string&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Telnet.cpp" line="61" column="61"/>
+            <symbol>p_string</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p_buffer&apos; can be declared with const" verbose="Parameter &apos;p_buffer&apos; can be declared with const" cwe="398" file0="Libraries/SocketLib/Telnet.cpp">
+            <location file="Libraries/SocketLib/Telnet.cpp" line="20" column="59" info="Parameter &apos;p_buffer&apos; can be declared with const"/>
+            <symbol>p_buffer</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:47:21" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.h" line="49" col="30" value="0"/>
+    <unsafe-usage my-id="Libraries/SocketLib/Telnet.h:69:10" my-argnr="1" my-argname="p_conn" file="Libraries/SocketLib/Telnet.cpp" line="64" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:47:21" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.h" line="49" col="30" value="0"/>
+    <unsafe-usage my-id="Libraries/SocketLib/Telnet.h:69:10" my-argnr="1" my-argname="p_conn" file="Libraries/SocketLib/Telnet.cpp" line="64" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Translate" lineNumber="20"/>
+    <functiondecl functionName="SendString" lineNumber="61"/>
+    <functiondecl functionName="Translate" lineNumber="20"/>
+    <functiondecl functionName="SendString" lineNumber="61"/>
+    <functioncall functionName="AddHandler"/>
+    <functioncall functionName="AddSocket"/>
+    <functioncall functionName="AvailableConnections"/>
+    <functioncall functionName="BUFFERSIZE"/>
+    <functioncall functionName="BufferData"/>
+    <functioncall functionName="ClearHandlers"/>
+    <functioncall functionName="Close"/>
+    <functioncall functionName="CloseConnections"/>
+    <functioncall functionName="CloseSocket"/>
+    <functioncall functionName="Closed"/>
+    <functioncall functionName="Connection"/>
+    <functioncall functionName="Connection &lt; Telnet &gt;"/>
+    <functioncall functionName="DataSocket"/>
+    <functioncall functionName="EAccessDenied"/>
+    <functioncall functionName="EAddressFamilyNotSupported"/>
+    <functioncall functionName="EAddressInUse"/>
+    <functioncall functionName="EAddressNotAvailable"/>
+    <functioncall functionName="EAddressRequired"/>
+    <functioncall functionName="EAlreadyConnected"/>
+    <functioncall functionName="EBadProtocolOption"/>
+    <functioncall functionName="EConnectionAborted"/>
+    <functioncall functionName="EConnectionClosed"/>
+    <functioncall functionName="EConnectionRefused"/>
+    <functioncall functionName="EConnectionReset"/>
+    <functioncall functionName="EDNSError"/>
+    <functioncall functionName="EDNSNotFound"/>
+    <functioncall functionName="EHostDown"/>
+    <functioncall functionName="EHostUnreachable"/>
+    <functioncall functionName="EInProgress"/>
+    <functioncall functionName="EInterrupted"/>
+    <functioncall functionName="EInvalidParameter"/>
+    <functioncall functionName="EInvalidSocket"/>
+    <functioncall functionName="EInvalidSocketType"/>
+    <functioncall functionName="EMessageTooLong"/>
+    <functioncall functionName="ENetworkDown"/>
+    <functioncall functionName="ENetworkReset"/>
+    <functioncall functionName="ENetworkUnreachable"/>
+    <functioncall functionName="ENoDNSData"/>
+    <functioncall functionName="ENoMemory"/>
+    <functioncall functionName="ENoSocketsAvailable"/>
+    <functioncall functionName="ENotAvailable"/>
+    <functioncall functionName="ENotConnected"/>
+    <functioncall functionName="EOperationNotSupported"/>
+    <functioncall functionName="EOperationWouldBlock"/>
+    <functioncall functionName="EProtocolFamilyNotSupported"/>
+    <functioncall functionName="EProtocolNotSupported"/>
+    <functioncall functionName="EProtocolNotSupportedBySocket"/>
+    <functioncall functionName="ESeriousError"/>
+    <functioncall functionName="EShutDown"/>
+    <functioncall functionName="ESocketLimitReached"/>
+    <functioncall functionName="ETimedOut"/>
+    <functioncall functionName="Enter"/>
+    <functioncall functionName="FD_ISSET"/>
+    <functioncall functionName="FD_SETSIZE"/>
+    <functioncall functionName="Flooded"/>
+    <functioncall functionName="GetBufferedBytes"/>
+    <functioncall functionName="GetCurrentDataRate"/>
+    <functioncall functionName="GetLastSendTime"/>
+    <functioncall functionName="GetSock"/>
+    <functioncall functionName="GetTimeMS"/>
+    <functioncall functionName="GetTimeS"/>
+    <functioncall functionName="Handle"/>
+    <functioncall functionName="Handler"/>
+    <functioncall functionName="HasActivity"/>
+    <functioncall functionName="Hungup"/>
+    <functioncall functionName="Initialize"/>
+    <functioncall functionName="Leave"/>
+    <functioncall functionName="Listen"/>
+    <functioncall functionName="NoRoom"/>
+    <functioncall functionName="Poll"/>
+    <functioncall functionName="Receive"/>
+    <functioncall functionName="RemoveSocket"/>
+    <functioncall functionName="Send"/>
+    <functioncall functionName="SendBuffer"/>
+    <functioncall functionName="SetBlocking"/>
+    <functioncall functionName="TIMECHUNK"/>
+    <functioncall functionName="Telnet"/>
+    <functioncall functionName="TotalConnections"/>
+    <functioncall functionName="Translate"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="catch"/>
+    <functioncall functionName="conn"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="defaulthandler"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="handler"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="m_activityset"/>
+    <functioncall functionName="m_buffer"/>
+    <functioncall functionName="m_buffersize"/>
+    <functioncall functionName="m_checksendtime"/>
+    <functioncall functionName="m_connection"/>
+    <functioncall functionName="m_lastSendTime"/>
+    <functioncall functionName="m_set"/>
+    <functioncall functionName="ntohs"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_conn"/>
+    <functioncall functionName="p_handler"/>
+    <functioncall functionName="p_itr"/>
+    <functioncall functionName="p_maxbuffered"/>
+    <functioncall functionName="p_maxdatarate"/>
+    <functioncall functionName="p_sentimeout"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_socket"/>
+    <functioncall functionName="pop"/>
+    <functioncall functionName="protocol"/>
+    <functioncall functionName="push"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rbegin"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s_addr"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="sent"/>
+    <functioncall functionName="sin_port"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="socks"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="top"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="typename"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

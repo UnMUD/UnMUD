@@ -1,0 +1,4 @@
+GetIPAddress call:[Exception,GetError,IsIPAddress,c_str,gethostbyname,inet_addr] noreturn:[Exception]
+GetIPString call:[inet_ntoa,string] noreturn:[string]
+GetHostNameString call:[Exception,GetError,gethostbyaddr,string] noreturn:[Exception,string]
+IsIPAddress call:[length]

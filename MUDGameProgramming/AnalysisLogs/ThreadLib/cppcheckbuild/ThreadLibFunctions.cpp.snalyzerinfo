@@ -1,0 +1,12 @@
+Exception
+GetError
+Create call:[CreateThread,Exception] noreturn:[Exception]
+GetID call:[GetCurrentThreadId] noreturn:[GetCurrentThreadId]
+WaitForFinish call:[CloseHandle,WaitForSingleObject,erase] noreturn:[erase]
+Kill call:[CloseHandle,TerminateThread,erase] noreturn:[erase]
+YieldThread call:[Sleep] noreturn:[Sleep]
+Mutex call:[InitializeCriticalSection] noreturn:[InitializeCriticalSection]
+Mutex call:[DeleteCriticalSection] noreturn:[DeleteCriticalSection]
+Lock call:[EnterCriticalSection] noreturn:[EnterCriticalSection]
+Unlock call:[LeaveCriticalSection] noreturn:[LeaveCriticalSection]
+DummyRun call:[m_func]
