@@ -23,7 +23,7 @@ Foram realizadas duas reuniões para o fechamento de sprint, uma com cada profes
 
 | Duração |   Início   |     Fim    |
 | ------- | ---------- | ---------- |
-| 6 dias  | 11/04/2023 | 17/04/2023 |
+| 6 dias  | 17/04/2023 | 22/04/2023 |
 
 ### Sprint Backlog
 

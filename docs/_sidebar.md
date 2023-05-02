@@ -15,3 +15,7 @@
     * [Abertura Sprint 2](SprintsAndMeetings/2023-04-11Sprint2Opening.md)
     * [Fechamento Sprint 2](SprintsAndMeetings/2023-04-17Sprint2Closure.md)
     * [Abertura Sprint 3](SprintsAndMeetings/2023-04-17Sprint3Opening.md)
+    * [Fechamento Sprint 3](SprintsAndMeetings/2023-04-22Sprint3Closure.md)
+    * [Abertura Sprint 4](SprintsAndMeetings/2023-04-22Sprint4Opening.md)
+    * [Fechamento Sprint 4](SprintsAndMeetings/2023-04-28Sprint4Closure.md)
+    * [Abertura Sprint 5](SprintsAndMeetings/2023-04-28Sprint5Opening.md)
