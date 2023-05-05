@@ -1,9 +1,10 @@
-# Plano de Melhorias
+# Planejamento de Melhorias
 
 |  **Data**  | **Versão** | **Descrição** | **Autor(es)** |
 | ---------- | ---------- | ------------- | ------------- |
 | 03/05/2023 |    0.1     | Criação do documento de plano de melhorias | [Iuri Severo](https://github.com/iurisevero/) |
 | 04/05/2023 |    0.2     | Finalizando sistema de classificação | [Iuri Severo](https://github.com/iurisevero/) |
+| 05/05/2023 |    1.0     | Classificação dos erros; Adição da contagem de erros; Detalhamento da realização das melhorias | [Iuri Severo](https://github.com/iurisevero/) |
 
 ## Introdução
 
