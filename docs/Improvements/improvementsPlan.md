@@ -63,81 +63,83 @@ Por fim, os erros serão divididos em níveis, com base nos valores atribuídos 
 
 | Identificação | Fonte | Classificação | Conhecimento (1 - 5) | Tempo (min) | Complexidade (1 - 5) | Nível |
 | ------------- | ----- | ------------- | -------------------- | ----------- | -------------------- | ----- |
-| A has not been declared | gcc | error | | | | |
-| A was not declared in this scope | gcc | error | | | | |
-| dependent-name A is parsed as a non-type, but instantiation yields a type | gcc | error | | | | |
-| invalid storage class for function | gcc | error | | | | |
-| multiple definition of | gcc | error | | | | |
-| need ‘typename’ before A because B is a dependent scope | gcc | error | | | | |
-| no matching function for call to A | gcc | error | | | | |
-| No such file or directory | bash | error | | | | |
-| Segmentation fault (core dumped) | gcc | error | | | | |
-| specializing member A requires ‘template<>’ syntax | gcc | error | | | | |
-| static declaration of A follows non-static declaration | gcc | error | | | | |
-| ‘sys_errlist’ undeclared | gcc | error | | | | |
-| there are no arguments to ‘log’ that depend on a template parameter, so a declaration of ‘log’ must be available | gcc | error | | | | |
-| TLS definition in A section .tbss mismatches non-TLS reference in B | gcc | error | | | | |
-| variable or field A declared void | gcc | error | | | | |
-| catching polymorphic type | gcc | warning | | | | |
-| conversion from A to B may change value | gcc | warning | | | | |
-| comparison of integer expressions of different signedness | gcc | warning | | | | |
-| conversion to B from A may change the sign of the result | gcc | warning | | | | |
-| declaration of A shadows a global declaration | gcc | warning | | | | |
-| has pointer data members A but does not override B or C | gcc | warning | | | | |
-| should be initialized in the member initialization list | gcc | warning | | | | |
-| unused parameter | gcc | warning | | | | |
-| use of old-style cast | gcc | warning | | | | |
-| constParameter | cppcheck | warning | | | | |
-| cstyleCast | cppcheck | warning | | | | |
-| noExplicitConstructor | cppcheck | warning | | | | |
-| passedByValue | cppcheck | warning | | | | |
-| selfAssignment | cppcheck | warning | | | | |
-| uninitMemberVar | cppcheck | warning | | | | |
-| unreadVariable | cppcheck | warning | | | | |
-| unusedFunction | cppcheck | warning | | | | |
-| useInitializationList | cppcheck | warning | | | | |
-| android-cloexec-accept | clang-tidy | warning | | | |
-| array-to-pointer-decay | clang-tidy | warning | | | |
-| avoid-c-arrays | clang-tidy | warning | | | |
-| avoid-c-arrays | clang-tidy | warning | | | |
-| bounds-constant-array-index | clang-tidy | warning | | | |
-| bounds-pointer-arithmetic | clang-tidy | warning | | | |
-| braces-around-statements | clang-tidy | warning | | | |
-| bugprone-macro-parentheses | clang-tidy | warning | | | |
-| build-using-namespace | clang-tidy | warning | | | |
-| casting | clang-tidy | warning | | | |
-| cert-err58-cpp | clang-tidy | warning | | | |
-| container-size-empty | clang-tidy | warning | | | |
-| convert-member-functions-to-static | clang-tidy | warning | | | |
-| default-arguments-calls | clang-tidy | warning | | | |
-| deprecated-headers | clang-tidy | warning | | | |
-| else-after-return | clang-tidy | warning | | | |
-| header-guard | clang-tidy | warning | | | |
-| implicit-bool-conversion | clang-tidy | warning | | | |
-| include-order | clang-tidy | warning | | | |
-| init-variables | clang-tidy | warning | | | |
-| isolate-declaration | clang-tidy | warning | | | |
-| loop-convert | clang-tidy | warning | | | |
-| macro-usage | clang-tidy | warning | | | |
-| magic-numbers | clang-tidy | warning | | | |
-| make-member-function-const | clang-tidy | warning | | | |
-| member-init | clang-tidy | warning | | | |
-| namespace-comments | clang-tidy | warning | | | |
-| no-assembler | clang-tidy | warning | | | |
-| non-const-parameter | clang-tidy | warning | | | |
-| non-private-member-variables-in-classes | clang-tidy | warning | | | |
-| overloaded-operator | clang-tidy | warning | | | |
-| owning-memory | clang-tidy | warning | | | |
-| performance-unnecessary-value-param | clang-tidy | warning | | | |
-| return-braced-init-list | clang-tidy | warning | | | |
-| runtime-references | clang-tidy | warning | | | |
-| signed-bitwise | clang-tidy | warning | | | |
-| simplify-boolean-expr | clang-tidy | warning | | | |
-| statically-constructed-objects | clang-tidy | warning | | | |
-| type-cstyle-cast | clang-tidy | warning | | | |
-| unused-using-decls | clang-tidy | warning | | | |
-| use-auto | clang-tidy | warning | | | |
-| use-emplace | clang-tidy | warning | | | |
-| use-nullptr | clang-tidy | warning | | | |
-| use-trailing-return-type | clang-tidy | warning | | | |
-| vararg | clang-tidy | warning | | | |
+| Undefined error | - | error | 1 | 90 < x < 180 | 4 | B |
+| A has not been declared | gcc | error | 4 | 30 < x < 90 | 3 | F |
+| A was not declared in this scope | gcc | error | 4 | 30 < x < 90 | 2 | G |
+| dependent-name A is parsed as a non-type, but instantiation yields a type | gcc | error | 3 | 30 < x < 90 | 3 | E |
+| invalid storage class for function | gcc | error | 3 | 30 < x < 90 | 3 | E |
+| multiple definition of | gcc | error | 5 | x < 30 | 3 | G |
+| need ‘typename’ before A because B is a dependent scope | gcc | error | 3 | 30 < x < 90 | 4 | D |
+| no matching function for call to A | gcc | error | 2 | 30 < x < 90 | 3 | D |
+| No such file or directory | bash | error | 5 | x < 30 | 2 | H |
+| Segmentation fault (core dumped) | gcc | error | 2 | 90 < x < 180 | 4 | B |
+| specializing member A requires ‘template<>’ syntax | gcc | error | 2 | 30 < x < 90 | 3 | D |
+| static declaration of A follows non-static declaration | gcc | error | 4 | x < 30 | 3 | G |
+| ‘sys_errlist’ undeclared | gcc | error | 5 | x < 30 | 2 | H |
+| there are no arguments to A that depend on a template parameter, so a declaration of A must be available | gcc | error | 5 | x < 30 | 2 | H |
+| errno: TLS definition in A section .tbss mismatches non-TLS reference in B | gcc | error | 3 | x < 30 | 3 | F |
+| variable or field A declared void | gcc | error | 3 | 30 < x < 90 | 3 | E |
+| catching polymorphic type | gcc | warning | 3 | x < 30 | 3 | F |
+| conversion from A to B may change value | gcc | warning | 4 | x < 30 | 2 | H |
+| comparison of integer expressions of different signedness | gcc | warning | 4 | x < 30 | 1 | H |
+| conversion to B from A may change the sign of the result | gcc | warning | 4 | x < 30 | 2 | H |
+| declaration of A shadows a global declaration | gcc | warning | 4 | x < 30 | 3 | G |
+| has pointer data members A but does not override B or C | gcc | warning | 3 | 30 < x < 90 | 2 | F |
+| should be initialized in the member initialization list | gcc | warning | 5 | x < 30 | 1 | H |
+| unused parameter | gcc | warning | 5 | x < 30 | 3 | G |
+| use of old-style cast | gcc | warning | 4 | x < 30 | 2 | H |
+| constParameter | cppcheck | warning | 5 | x < 30 | 1 | H |
+| cstyleCast | cppcheck | warning | 4 | x < 30 | 3 | G |
+| noExplicitConstructor | cppcheck | warning | 3 | x < 30 | 2 | G |
+| passedByValue | cppcheck | warning | 4 | x < 30 | 2 | H |
+| selfAssignment | cppcheck | warning | 3 | x < 30 | 2 | G |
+| uninitMemberVar | cppcheck | warning | 5 | x < 30 | 1 | H |
+| unreadVariable | cppcheck | warning | 5 | x < 30 | 3 | G |
+| unusedFunction | cppcheck | warning | 5 | 30 < x < 90 | 3 | F |
+| useInitializationList | cppcheck | warning | 5 | x < 30 | 1 | H |
+
+| android-cloexec-accept | clang-tidy | warning | 4 | x < 30 | 1 | H |
+| array-to-pointer-decay | clang-tidy | warning | 3 | x < 30 | 1 | G |
+| avoid-c-arrays | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| bounds-constant-array-index | clang-tidy | warning | 3 | x < 30 | 2 | G |
+| bounds-pointer-arithmetic | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| braces-around-statements | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| bugprone-macro-parentheses | clang-tidy | warning | 4 | x < 30 | 1 | H |
+| build-using-namespace | clang-tidy | warning | 3 | x < 30 | 1 | G |
+| casting | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| cert-err58-cpp | clang-tidy | warning | 3 | x < 30 | 3 | F |
+| container-size-empty | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| convert-member-functions-to-static | clang-tidy | warning | 4 | x < 30 | 3 | G |
+| default-arguments-calls | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| deprecated-headers | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| else-after-return | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| header-guard | clang-tidy | warning | 3 | x < 30 | 2 | G |
+| implicit-bool-conversion | clang-tidy | warning | 5 | x < 30 | 2 | H |
+| include-order | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| init-variables | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| isolate-declaration | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| loop-convert | clang-tidy | warning | 5 | x < 30 | 2 | H |
+| macro-usage | clang-tidy | warning | 3 | x < 30 | 3 | F |
+| magic-numbers | clang-tidy | warning | 5 | x < 30 | 2 | H |
+| make-member-function-const | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| member-init | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| namespace-comments | clang-tidy | warning | 4 | x < 30 | 1 | H |
+| no-assembler | clang-tidy | warning | 3 | x < 30 | 3 | F |
+| non-const-parameter | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| non-private-member-variables-in-classes | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| overloaded-operator | clang-tidy | warning | 5 | 30 < x < 90 | 3 | F |
+| owning-memory | clang-tidy | warning | 3 | 30 < x < 90 | 3 | E |
+| performance-unnecessary-value-param | clang-tidy | warning | 4 | x < 30 | 3 | G |
+| return-braced-init-list | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| runtime-references | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| signed-bitwise | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| simplify-boolean-expr | clang-tidy | warning | 5 | x < 30 | 3 | G |
+| statically-constructed-objects | clang-tidy | warning | 4 | 30 < x < 90 | 3 | F |
+| type-cstyle-cast | clang-tidy | warning | 4 | x < 30 | 3 | G |
+| unused-using-decls | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| use-auto | clang-tidy | warning | 5 | x < 30 | 1 | H |
+| use-emplace | clang-tidy | warning | 5 | x < 30 | 2 | H |
+| use-nullptr | clang-tidy | warning | 5 | x < 30 | 2 | H |
+| use-trailing-return-type | clang-tidy | warning | 4 | x < 30 | 2 | H |
+| vararg | clang-tidy | warning | 3 | x < 30 | 2 | G |
+
