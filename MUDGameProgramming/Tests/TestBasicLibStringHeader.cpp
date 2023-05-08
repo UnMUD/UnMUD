@@ -25,7 +25,7 @@ public:
     }
 };
 
-TEST(StreamTest, TestInsert) {
+TEST(BasicLibStringHeader, Insert) {
     std::stringstream ss;
     
     int intValue = 10;
@@ -55,7 +55,7 @@ TEST(StreamTest, TestInsert) {
     EXPECT_EQ(ss.str(), "103.1415acustom");
 }
 
-TEST(StreamTest, TestExtract) {
+TEST(BasicLibStringHeader, Extract) {
     std::stringstream ss;
     ss << 10;
     int intValue;
@@ -88,4 +88,30 @@ TEST(StreamTest, TestExtract) {
     ss << "custom";
     float value = 0;
     ASSERT_THROW(BasicLib::extract(ss, value), std::exception);
+}
+
+TEST(BasicLibStringHeader, ToString) {
+    EXPECT_EQ(BasicLib::tostring(10, 2), "10");
+    EXPECT_EQ(BasicLib::tostring(10.2f, 4), "10.2");
+    EXPECT_EQ(BasicLib::tostring('a', 1), "a");
+
+    CustomObj customValue("custom");
+    EXPECT_EQ(BasicLib::tostring(customValue, 6), "custom");
+    EXPECT_EQ(BasicLib::tostring(10, 5), "10   ");
+    EXPECT_EQ(BasicLib::tostring(10, 0), "10");
+}
+
+TEST(BasicLibStringHeader, ToStringWithNegativeWidth) {
+    EXPECT_EQ(BasicLib::tostring(10, -1), "10");
+}
+
+TEST(BasicLibStringHeader, ToType) {
+    EXPECT_EQ(BasicLib::totype<int>("10"), 10);
+    EXPECT_EQ(BasicLib::totype<float>("10.2"), 10.2f);
+    EXPECT_EQ(BasicLib::totype<char>("a"), 'a');
+    CustomObj customValue("custom");
+    EXPECT_EQ(BasicLib::totype<CustomObj>("custom"), customValue);
+    EXPECT_EQ(BasicLib::totype<std::string>(""), "");
+    EXPECT_EQ(BasicLib::totype<int>("  10"), 10);
+    EXPECT_EQ(BasicLib::totype<int>("10  "), 10);
 }

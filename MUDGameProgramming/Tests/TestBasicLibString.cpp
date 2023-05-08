@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 
+#include "Tests.h"
 #include "BasicLib/BasicLibString.h"
 
 TEST(BasicLibString, UpperCase)
@@ -24,7 +25,9 @@ TEST(BasicLibString, SearchAndReplace)
 {
     EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "world", "hello"), "Hello hello");
     EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "w0rld", "hello"), "Hello world");
-    // EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "", "hello"), "Hello world"); // breaking tests
+    ASSERT_DURATION_LE(1, {
+        EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "", "hello"), "Hello world"); // breaking tests
+    });
     EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "world", ""), "Hello ");
     EXPECT_EQ(BasicLib::SearchAndReplace("Hello w@rld!", "w@rld!", "world"), "Hello world");
     EXPECT_EQ(BasicLib::SearchAndReplace("Hello world", "world", "w@rld!"), "Hello w@rld!");

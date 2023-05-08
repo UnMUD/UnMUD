@@ -333,7 +333,7 @@ template< typename type >
 inline std::string tostring( const type& p_type, size_t p_width = 0 )
 ```
 
-**Descrição:** Recebe uma variável do tipo type e uma largura máxima de caracteres (p_width) e retorna uma string com tamanho maior ou igual ao determinado
+**Descrição:** Recebe uma variável do tipo type e uma largura mínima de caracteres (p_width) e retorna uma string com tamanho maior ou igual ao determinado
 
 **Sugestão de teste:**
 * Conversão de um número inteiro
