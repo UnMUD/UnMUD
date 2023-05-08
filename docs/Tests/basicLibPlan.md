@@ -202,6 +202,8 @@ void Log( const std::string& p_entry );
 
 ### BasicLib/BasicLibRandom.h
 
+### BasicLib/BasicLibString.cpp
+
 #### Função UpperCase
 ```cpp
 std::string UpperCase( const std::string& p_string )
@@ -213,8 +215,6 @@ std::string UpperCase( const std::string& p_string )
 * String vazia
 * String simples
 * String com caracteres especiais
-
-### BasicLib/BasicLibString.cpp
 
 #### Função LowerCase
 ```cpp

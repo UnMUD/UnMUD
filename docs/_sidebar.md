@@ -9,6 +9,7 @@
     * [Backlog do Produto](/Requirements/productBacklog.md)
 * [Roadmap](roadmap.md)
 * [Planejamento de Testes](/Tests/testsPlan.md)
+* [Planejamento de Melhorias](/Improvements/improvementsPlan.md)
 * [Reuniões e Sprints](/SprintsAndMeetings/sprintsAndMeetings.md)
     * [Abertura Sprint 1](SprintsAndMeetings/2023-04-04Sprint1Opening.md)
     * [Fechamento Sprint 1](SprintsAndMeetings/2023-04-11Sprint1Closure.md)
@@ -19,3 +20,6 @@
     * [Abertura Sprint 4](SprintsAndMeetings/2023-04-22Sprint4Opening.md)
     * [Fechamento Sprint 4](SprintsAndMeetings/2023-04-28Sprint4Closure.md)
     * [Abertura Sprint 5](SprintsAndMeetings/2023-04-28Sprint5Opening.md)
+    * [Fechamento Sprint 5](SprintsAndMeetings/2023-05-05Sprint5Closure.md)
+    * [Abertura Sprint 6](SprintsAndMeetings/2023-05-05Sprint6Opening.md)
+
