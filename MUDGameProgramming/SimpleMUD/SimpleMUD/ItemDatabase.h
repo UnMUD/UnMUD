@@ -2,44 +2,39 @@
 // Ron Penton
 // (C)2003
 // ItemDatabase.h - The class that stores all of the items within the MUD
-// 
-// 
+//
+//
 
 #ifndef SIMPLEMUDITEMDATABASE_H
 #define SIMPLEMUDITEMDATABASE_H
 
-
-#include <string>
 #include <map>
+#include <string>
 
+#include "DatabasePointer.h"
 #include "EntityDatabase.h"
 #include "Item.h"
-#include "DatabasePointer.h"
 
-namespace SimpleMUD
-{
-
+namespace SimpleMUD {
 
 // --------------------------------------------------------------------
 //  A database for items
 // --------------------------------------------------------------------
-class ItemDatabase : public EntityDatabase<Item>
-{
+class ItemDatabase : public EntityDatabase<Item> {
 public:
-    static ItemDatabase& GetInstance();
-    ItemDatabase(ItemDatabase const&) = delete;
-    ItemDatabase(ItemDatabase&&) = delete;
-    ItemDatabase& operator=(ItemDatabase const&) = delete;
-    ItemDatabase& operator=(ItemDatabase &&) = delete;
+  static ItemDatabase &GetInstance();
+  ItemDatabase(ItemDatabase const &) = delete;
+  ItemDatabase(ItemDatabase &&) = delete;
+  ItemDatabase &operator=(ItemDatabase const &) = delete;
+  ItemDatabase &operator=(ItemDatabase &&) = delete;
 
-    bool Load();
+  bool Load();
 
 private:
-    ItemDatabase(){}
+  ItemDatabase() {}
 
-};  // end class ItemDatabase
+}; // end class ItemDatabase
 
-
-}   // end namespace SimpleMUD
+} // end namespace SimpleMUD
 
 #endif
