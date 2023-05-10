@@ -48,7 +48,7 @@ bool Player::Train() {
 }
 
 void Player::RecalculateStats() {
-  m_attributes[MAXHITPOINTS] = 10 + ((int)(m_level * (GetAttr(HEALTH) / 1.5)));
+  m_attributes[MAXHITPOINTS] = 10 + (static_cast<int>(m_level * (GetAttr(HEALTH) / 1.5)));
 
   m_attributes[HPREGEN] = (GetAttr(HEALTH) / 5) + m_level;
 
@@ -174,7 +174,7 @@ int Player::GetItemIndex(const std::string &p_name) {
 
   if (i == m_inventory + MaxItems())
     return -1;
-  return (int)(i - m_inventory);
+  return static_cast<int>(i - m_inventory);
 }
 
 // ------------------------------------------------------------------------

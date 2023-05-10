@@ -150,7 +150,7 @@ istream &operator>>(istream &p_stream, Player &p);
 
 inline int Player::NeedForLevel(int p_level) {
   // see Chapter 7 for explanation of formula
-  return (int)(100 * (pow(1.4, p_level - 1) - 1));
+  return static_cast<int>(100 * (pow(1.4, p_level - 1) - 1));
 }
 
 inline int Player::GetAttr(int p_attr) {

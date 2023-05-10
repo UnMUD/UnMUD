@@ -1033,7 +1033,7 @@ void Game::PlayerKilled(player p_player) {
   p.CurrentRoom()->AddPlayer(p_player);
 
   // set the hitpoints to 70%
-  p.SetHitpoints((int)(p.GetAttr(MAXHITPOINTS) * 0.7));
+  p.SetHitpoints(static_cast<int>(p.GetAttr(MAXHITPOINTS) * 0.7));
   p.SendString(white + bold + "You have died, but have been ressurected in " +
                p.CurrentRoom()->Name());
   p.SendString(red + bold + "You have lost " + tostring(exp) + " experience!");

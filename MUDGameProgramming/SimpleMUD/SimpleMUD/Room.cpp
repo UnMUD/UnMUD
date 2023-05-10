@@ -30,7 +30,7 @@ void Room::AddPlayer(player p_player) { m_players.push_back(p_player); }
 
 void Room::RemovePlayer(player p_player) {
   m_players.erase(
-      std::find(m_players.begin(), m_players.end(), (entityid)p_player));
+      std::find(m_players.begin(), m_players.end(), static_cast<entityid>(p_player)));
 }
 
 item Room::FindItem(const string &p_item) {
@@ -54,7 +54,7 @@ void Room::AddItem(item p_item) {
 }
 
 void Room::RemoveItem(item p_item) {
-  m_items.erase(std::find(m_items.begin(), m_items.end(), (entityid)p_item));
+  m_items.erase(std::find(m_items.begin(), m_items.end(), static_cast<entityid>(p_item)));
 }
 
 enemy Room::FindEnemy(const string &p_enemy) {
@@ -72,7 +72,7 @@ void Room::AddEnemy(enemy p_enemy) { m_enemies.push_back(p_enemy); }
 
 void Room::RemoveEnemy(enemy p_enemy) {
   m_enemies.erase(
-      std::find(m_enemies.begin(), m_enemies.end(), (entityid)p_enemy));
+      std::find(m_enemies.begin(), m_enemies.end(), static_cast<entityid>(p_enemy)));
 }
 
 void Room::LoadTemplate(istream &p_stream) {

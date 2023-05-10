@@ -101,7 +101,7 @@ public:
 
   inline bool has(std::string p_name) { return find(p_name) != end(); }
 
-  inline int size() { return (int)m_map.size(); }
+  inline int size() { return static_cast<int>(m_map.size()); }
 
   entityid FindOpenID() {
     if (m_map.size() == 0)

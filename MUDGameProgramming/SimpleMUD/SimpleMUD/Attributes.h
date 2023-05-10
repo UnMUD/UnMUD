@@ -31,10 +31,10 @@ inline enumeration StrToEnum(string p_str, const string *strs) {
 
   for (int i = 0; i < size; i++) {
     if (strs[i] == p_str)
-      return (enumeration)(i);
+      return static_cast<enumeration>(i);
   }
 
-  return (enumeration)(0);
+  return static_cast<enumeration>(0);
 }
 
 // ----------------------------------------------------------------------------
@@ -99,7 +99,7 @@ protected:
 
 inline ostream &operator<<(ostream &p_stream, const AttributeSet &a) {
   for (int i = 0; i < NUMATTRIBUTES; i++) {
-    p_stream << "[" << GetAttributeString((Attribute)i) << "] "
+    p_stream << "[" << GetAttributeString(static_cast<Attribute>(i)) << "] "
              << a.m_attributes[i] << "\n";
   }
 
