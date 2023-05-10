@@ -51,7 +51,7 @@ void Telnet::Translate(Connection<Telnet> &p_conn, char *p_buffer, int p_size) {
 // ------------------------------------------------------------------------
 void Telnet::SendString(Connection<Telnet> &p_conn, string p_string) {
   // just buffer the data on the connection
-  p_conn.BufferData(p_string.data(), (int)p_string.size());
+  p_conn.BufferData(p_string.data(), static_cast<int>(p_string.size()));
 }
 
 } // end namespace SocketLib

@@ -159,14 +159,14 @@ struct random_int_range {
   template <typename type> void seed(type p_seed) { m_generator.seed(p_seed); }
 
   sint32 minimum() {
-    return (sint32)(m_generator.minimum() * m_range) + m_offset;
+    return static_cast<sint32>(m_generator.minimum() * m_range) + m_offset;
   }
   sint32 maximum() {
-    return (sint32)(m_generator.maximum() * m_range) + m_offset;
+    return static_cast<sint32>(m_generator.maximum() * m_range) + m_offset;
   }
 
   sint32 generate(sint32 p_range, sint32 p_offset) {
-    return (sint32)(m_generator() * p_range) + p_offset;
+    return static_cast<sint32>(m_generator() * p_range) + p_offset;
   }
 
   sint32 operator()() { return generate(m_range, m_offset); }

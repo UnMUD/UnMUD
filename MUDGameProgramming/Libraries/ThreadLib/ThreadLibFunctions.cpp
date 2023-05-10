@@ -28,7 +28,7 @@ void *DummyRun(void *p_data)
 #endif
 {
   // convert the dummy data
-  DummyData *data = (DummyData *)p_data;
+  DummyData *data = static_cast<DummyData *>(p_data);
 
   // run the function with the given data
   data->m_func(data->m_data);

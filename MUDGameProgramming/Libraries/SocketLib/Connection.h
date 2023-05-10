@@ -96,7 +96,7 @@ public:
   // ------------------------------------------------------------------------
   // Gets the amount of bytes within the sending buffer.
   // ------------------------------------------------------------------------
-  inline int GetBufferedBytes() const { return (int)m_sendbuffer.size(); }
+  inline int GetBufferedBytes() const { return static_cast<int>(m_sendbuffer.size()); }
 
   inline BasicLib::sint64 GetCreationTime() const { return m_creationtime; }
 
@@ -234,7 +234,7 @@ void Connection<protocol>::BufferData(const char *p_buffer, int p_size) {
 template <class protocol> void Connection<protocol>::SendBuffer() {
   if (m_sendbuffer.size() > 0) {
     // send the data, and erase as much as was sent from the buffer.
-    int sent = Send(m_sendbuffer.data(), (int)m_sendbuffer.size());
+    int sent = Send(m_sendbuffer.data(), static_cast<int>(m_sendbuffer.size()));
     m_sendbuffer.erase(0, sent);
 
     if (sent > 0) {

@@ -51,13 +51,13 @@ public:
   //  This returns the number of connections that can be added to the manager
   // ------------------------------------------------------------------------
   inline int AvailableConnections() const {
-    return MAX - (int)m_connections.size();
+    return MAX - static_cast<int>(m_connections.size());
   }
 
   // ------------------------------------------------------------------------
   //  This returns the number of connections within the manager
   // ------------------------------------------------------------------------
-  inline int TotalConnections() const { return (int)m_connections.size(); }
+  inline int TotalConnections() const { return static_cast<int>(m_connections.size()); }
 
   // ------------------------------------------------------------------------
   //  Goes through all the connections in the close-queue, and closes them.

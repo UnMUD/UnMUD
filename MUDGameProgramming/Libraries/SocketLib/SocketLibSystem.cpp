@@ -90,7 +90,7 @@ ipaddress GetIPAddress(const std::string p_address) {
 std::string GetIPString(ipaddress p_address) {
   // return a new string containing the address.
   // (god that is some ugly casting going on... stupid language)
-  char *str = inet_ntoa(*((in_addr *)&p_address));
+  char *str = inet_ntoa(*(reinterpret_cast<in_addr *>(&p_address)));
   if (str == 0) {
     return std::string("Invalid IP Address");
   }
@@ -104,7 +104,7 @@ std::string GetIPString(ipaddress p_address) {
 // ========================================================================
 std::string GetHostNameString(ipaddress p_address) {
   // get the host info.
-  struct hostent *host = gethostbyaddr((char *)&p_address, 4, AF_INET);
+  struct hostent *host = gethostbyaddr(reinterpret_cast<char *>(&p_address), 4, AF_INET);
 
   // if there was an error, throw an exception.
   if (host == 0) {
