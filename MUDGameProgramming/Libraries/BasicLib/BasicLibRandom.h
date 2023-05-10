@@ -41,8 +41,8 @@ typedef linear_congruency<uint32, 2147483648u, 1103515245, 12345> random;
 //  configurable.
 // ----------------------------------------------------------------------------
 template <bool inclusive, typename generator = random> struct random_percent {
-  random_percent() { init(); }
-  random_percent(generator &p_generator) : m_generator(p_generator) { init(); }
+  random_percent() : m_generator(), m_max() { init(); }
+  random_percent(generator &p_generator) : m_generator(p_generator), m_max() { init(); }
 
   void init() {
     m_max = m_generator.maximum();
@@ -71,21 +71,14 @@ typedef random_percent<false> random_percent_exclusive;
 template <bool inclusive, typename generator = random_percent<inclusive>>
 struct normal_generator {
 
-  normal_generator(double p_mean = 0, double p_sigma = 1) {
-    init(p_mean, p_sigma);
-  }
+  normal_generator(double p_mean = 0, double p_sigma = 1) 
+      : m_generator(), m_mean(p_mean), m_sigma(p_sigma), 
+        m_rho1(), m_rho2(), m_rho(), m_valid(false) {}
 
   normal_generator(generator &p_generator, double p_mean = 0,
                    double p_sigma = 1)
-      : m_generator(p_generator) {
-    init(p_mean, p_sigma);
-  }
-
-  void init(double p_mean, double p_sigma) {
-    m_mean = p_mean;
-    m_sigma = p_sigma;
-    m_valid = false;
-  }
+      : m_generator(p_generator), m_mean(p_mean), m_sigma(p_sigma), 
+        m_rho1(), m_rho2(), m_rho(), m_valid(false) {}
 
   double mean() { return m_mean; }
   double sigma() { return m_sigma; }
@@ -122,17 +115,11 @@ typedef normal_generator<true> random_normal;
 // ----------------------------------------------------------------------------
 template <bool inclusive, typename generator = random_percent<inclusive>>
 struct random_range {
-  random_range(double a = 0, double b = 1) { init(a, b); }
+  random_range(double a = 0, double b = 1) 
+      : m_generator(), m_range(b - a), m_offset(a) {}
 
   random_range(generator &p_generator, double a = 0, double b = 1)
-      : m_generator(p_generator) {
-    init(a, b);
-  }
-
-  void init(double a, double b) {
-    m_range = b - a;
-    m_offset = a;
-  }
+      : m_generator(p_generator), m_range(b - a), m_offset(a) {}
 
   template <typename type> void seed(type p_seed) { m_generator.seed(p_seed); }
 
@@ -161,17 +148,11 @@ typedef random_range<false> random_range_exclusive;
 // ----------------------------------------------------------------------------
 template <typename generator = random_percent_exclusive>
 struct random_int_range {
-  random_int_range(sint32 a = 0, sint32 b = 1) { init(a, b); }
+  random_int_range(sint32 a = 0, sint32 b = 1)
+      : m_generator(), m_range(b - a + 1), m_offset(a) {}
 
   random_int_range(generator &p_generator, sint32 a = 0, sint32 b = 1)
-      : m_generator(p_generator) {
-    init(a, b);
-  }
-
-  void init(sint32 a, sint32 b) {
-    m_range = b - a + 1;
-    m_offset = a;
-  }
+      : m_generator(p_generator), m_range(b - a + 1), m_offset(a) {}
 
   template <typename type> void seed(type p_seed) { m_generator.seed(p_seed); }
 
@@ -203,17 +184,11 @@ typedef random_int_range<> random_int;
 // ----------------------------------------------------------------------------
 template <sint32 N = 4, typename generator = random_int>
 struct simulated_binomial {
-  simulated_binomial(sint32 a = 0, sint32 b = 1) { init(a, b); }
+  simulated_binomial(sint32 a = 0, sint32 b = 1)
+      : m_generator(), m_range(b - a), m_offset(a) {}
 
   simulated_binomial(generator &p_generator, sint32 a = 0, sint32 b = 1)
-      : m_generator(p_generator) {
-    init(a, b);
-  }
-
-  void init(sint32 a, sint32 b) {
-    m_range = b - a;
-    m_offset = a;
-  }
+      : m_generator(p_generator), m_range(b - a), m_offset(a) {}
 
   template <typename type> void seed(type p_seed) { m_generator.seed(p_seed); }
 

@@ -106,10 +106,7 @@ std::string DateStamp() {
   return str;
 }
 
-Timer::Timer() {
-  m_starttime = 0;
-  m_inittime = 0;
-}
+Timer::Timer() : m_starttime(0), m_inittime(0) {}
 
 void Timer::Reset(sint64 p_timepassed) {
   m_starttime = p_timepassed;

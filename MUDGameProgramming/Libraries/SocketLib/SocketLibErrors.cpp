@@ -202,9 +202,7 @@ Error TranslateError(int p_error, bool p_errno) {
 // Purpose:     To initialize the socket exception with a specific
 //              error code.
 // ====================================================================
-Exception::Exception(Error p_code) {
-  m_code = p_code;
-
+Exception::Exception(Error p_code) : m_code(p_code) {
   if (p_code == ENotAvailable) {
     p_code = p_code;
   }

@@ -64,21 +64,23 @@ void Socket::SetBlocking(bool p_blockmode) {
 //              implementations of this class instead, such as
 //              ListeningSocket and DataSocket.
 // ====================================================================
-Socket::Socket(sock p_socket) : m_sock(p_socket) {
+Socket::Socket(sock p_socket) 
+    : m_sock(p_socket), m_isblocking(true), m_localinfo()
+{
+  // the socket is blocking by default
   if (p_socket != -1) {
     socklen_t s = sizeof(m_localinfo);
     getsockname(p_socket, (sockaddr *)(&m_localinfo), &s);
   }
-
-  // the socket is blocking by default
-  m_isblocking = true;
 }
 
 // ====================================================================
 // Function:    DataSocket
 // Purpose:     Constructs the data socket with optional values
 // ====================================================================
-DataSocket::DataSocket(sock p_socket) : Socket(p_socket), m_connected(false) {
+DataSocket::DataSocket(sock p_socket) 
+    : Socket(p_socket), m_connected(false), m_remoteinfo()
+{
   if (p_socket != -1) {
     socklen_t s = sizeof(m_remoteinfo);
     getpeername(p_socket, (sockaddr *)(&m_remoteinfo), &s);
@@ -209,7 +211,7 @@ void DataSocket::Close() {
 // Function:    ListeningSocket
 // Purpose:     Constructor. Constructs the socket with initial values
 // ====================================================================
-ListeningSocket::ListeningSocket() { m_listening = false; }
+ListeningSocket::ListeningSocket() : m_listening(false) {}
 
 // ====================================================================
 // Function:    Listen

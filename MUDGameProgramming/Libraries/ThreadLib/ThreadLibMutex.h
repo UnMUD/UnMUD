@@ -24,7 +24,7 @@ public:
   // ====================================================================
   // Description: Initialize the mutex object
   // ====================================================================
-  Mutex() {
+  Mutex() : m_mutex() {
 #ifdef WIN32
     // use critical sections in windows; much faster
     InitializeCriticalSection(&m_mutex);

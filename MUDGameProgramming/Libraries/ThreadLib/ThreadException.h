@@ -33,7 +33,7 @@ public:
   // Description: set the error code of the exception, with a default of
   //              Unspecified.
   // ====================================================================
-  Exception(Error p_error = Unspecified) { m_error = p_error; }
+  Exception(Error p_error = Unspecified) : m_error(p_error) {}
 
   // ====================================================================
   // Description: Gets the error code of the exception

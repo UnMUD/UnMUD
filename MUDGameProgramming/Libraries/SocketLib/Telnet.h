@@ -67,7 +67,7 @@ public:
   // ------------------------------------------------------------------------
   //  Constructs the telnet policy.
   // ------------------------------------------------------------------------
-  inline Telnet() { m_buffersize = 0; }
+  inline Telnet() : m_buffersize(0) {}
 
   inline int Buffered() { return m_buffersize; }
 
