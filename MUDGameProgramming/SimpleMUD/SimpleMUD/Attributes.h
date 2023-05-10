@@ -8,6 +8,8 @@
 #ifndef ATTRIBUTES_H
 #define ATTRIBUTES_H
 
+#include "BasicLib/BasicLib.h"
+
 using std::istream;
 using std::ostream;
 using std::string;
