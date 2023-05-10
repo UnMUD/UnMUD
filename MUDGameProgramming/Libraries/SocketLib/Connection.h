@@ -32,10 +32,6 @@ public:
   Connection();
   Connection(DataSocket &p_socket);
 
-protected:
-  void Initialize();
-
-public:
   // ------------------------------------------------------------------------
   // This gets the amount of time that has passed, in seconds, since the
   // last time data was successfully sent, if there is data still queued,
@@ -196,22 +192,18 @@ protected:
 // Constructors. One constructs a normal connection, and the other accepts
 // a DataSocket to use as a "template" for the connection
 // ------------------------------------------------------------------------
-template <class protocol> Connection<protocol>::Connection() { Initialize(); }
+template <class protocol>
+Connection<protocol>::Connection()
+    : m_datarate(0), m_lastdatarate(0), m_lastReceiveTime(0), m_lastSendTime(0),
+      m_checksendtime(false), m_creationtime(BasicLib::GetTimeMS()),
+      m_closed(false), m_buffer() {}
 
 template <class protocol>
-Connection<protocol>::Connection(DataSocket &p_socket) : DataSocket(p_socket) {
-  Initialize();
-}
-
-template <class protocol> void Connection<protocol>::Initialize() {
-  m_datarate = 0;
-  m_lastdatarate = 0;
-  m_lastReceiveTime = 0;
-  m_lastSendTime = 0;
-  m_checksendtime = false;
-  m_creationtime = BasicLib::GetTimeMS();
-  m_closed = false;
-}
+Connection<protocol>::Connection(DataSocket &p_socket)
+    : DataSocket(p_socket), m_datarate(0), m_lastdatarate(0),
+      m_lastReceiveTime(0), m_lastSendTime(0), m_checksendtime(false),
+      m_creationtime(BasicLib::GetTimeMS()), m_closed(false), m_buffer(),
+      m_protocol(), m_handlerstack(), m_sendbuffer() {}
 
 // ------------------------------------------------------------------------
 // This gets the amount of time that has passed, in seconds, since the

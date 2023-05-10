@@ -36,7 +36,7 @@ public:
   //  Telnet::handler to thandler in order to call the base constructor.
   // ------------------------------------------------------------------------
   Game(Connection<Telnet> &p_conn, player p_player)
-      : thandler(p_conn), m_player(p_player) {}
+      : thandler(p_conn), m_player(p_player), m_lastcommand() {}
 
   // ------------------------------------------------------------------------
   //  Handler Functions

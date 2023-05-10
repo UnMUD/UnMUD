@@ -38,10 +38,9 @@ public:
   //  connections. A flaw in MSVC6 neccessitated the typedeffing of
   //  Telnet::handler to thandler in order to call the base constructor.
   // ------------------------------------------------------------------------
-  Logon(Connection<Telnet> &p_conn) : thandler(p_conn) {
-    m_state = NEWCONNECTION;
-    m_errors = 0;
-  }
+  Logon(Connection<Telnet> &p_conn)
+      : thandler(p_conn), m_state(NEWCONNECTION), m_errors(0), m_name(),
+        m_pass() {}
 
   // ------------------------------------------------------------------------
   //  Handler Functions

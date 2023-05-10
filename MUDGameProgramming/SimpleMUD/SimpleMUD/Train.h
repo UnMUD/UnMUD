@@ -31,9 +31,8 @@ public:
   //  connections. A flaw in MSVC6 neccessitated the typedeffing of
   //  Telnet::handler to thandler in order to call the base constructor.
   // ------------------------------------------------------------------------
-  Train(Connection<Telnet> &p_conn, player p_player) : thandler(p_conn) {
-    m_player = p_player;
-  }
+  Train(Connection<Telnet> &p_conn, player p_player)
+      : thandler(p_conn), m_player(p_player) {}
 
   // ------------------------------------------------------------------------
   //  standard handler commands

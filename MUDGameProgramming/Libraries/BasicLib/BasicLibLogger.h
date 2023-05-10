@@ -51,7 +51,8 @@ typedef Logger<TextDecorator> TextLog;
 template <class decorator>
 Logger<decorator>::Logger(const std::string &p_filename,
                           const std::string &p_logtitle, bool p_timestamp,
-                          bool p_datestamp) {
+                          bool p_datestamp)
+    : m_logfile(), m_timestamp(), m_datestamp() {
   // now the tricky part... testing to see if a file is open or not.
   // stupid C++. You need to open a file in read mode, and if it doesn't
   // open correctly, you know that it doesn't exist.

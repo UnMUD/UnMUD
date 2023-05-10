@@ -42,7 +42,9 @@ typedef linear_congruency<uint32, 2147483648u, 1103515245, 12345> random;
 // ----------------------------------------------------------------------------
 template <bool inclusive, typename generator = random> struct random_percent {
   random_percent() : m_generator(), m_max() { init(); }
-  random_percent(generator &p_generator) : m_generator(p_generator), m_max() { init(); }
+  random_percent(generator &p_generator) : m_generator(p_generator), m_max() {
+    init();
+  }
 
   void init() {
     m_max = m_generator.maximum();
@@ -71,14 +73,14 @@ typedef random_percent<false> random_percent_exclusive;
 template <bool inclusive, typename generator = random_percent<inclusive>>
 struct normal_generator {
 
-  normal_generator(double p_mean = 0, double p_sigma = 1) 
-      : m_generator(), m_mean(p_mean), m_sigma(p_sigma), 
-        m_rho1(), m_rho2(), m_rho(), m_valid(false) {}
+  normal_generator(double p_mean = 0, double p_sigma = 1)
+      : m_generator(), m_mean(p_mean), m_sigma(p_sigma), m_rho1(), m_rho2(),
+        m_rho(), m_valid(false) {}
 
   normal_generator(generator &p_generator, double p_mean = 0,
                    double p_sigma = 1)
-      : m_generator(p_generator), m_mean(p_mean), m_sigma(p_sigma), 
-        m_rho1(), m_rho2(), m_rho(), m_valid(false) {}
+      : m_generator(p_generator), m_mean(p_mean), m_sigma(p_sigma), m_rho1(),
+        m_rho2(), m_rho(), m_valid(false) {}
 
   double mean() { return m_mean; }
   double sigma() { return m_sigma; }
@@ -115,7 +117,7 @@ typedef normal_generator<true> random_normal;
 // ----------------------------------------------------------------------------
 template <bool inclusive, typename generator = random_percent<inclusive>>
 struct random_range {
-  random_range(double a = 0, double b = 1) 
+  random_range(double a = 0, double b = 1)
       : m_generator(), m_range(b - a), m_offset(a) {}
 
   random_range(generator &p_generator, double a = 0, double b = 1)

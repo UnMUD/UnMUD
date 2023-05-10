@@ -27,10 +27,7 @@ public:
   // --------------------------------------------------------------------
   //  Constructor
   // --------------------------------------------------------------------
-  inline Entity() {
-    m_name = "UNDEFINED";
-    m_id = 0;
-  }
+  inline Entity() : m_name("UNDEFINED"), m_id(0) {}
 
   // --------------------------------------------------------------------
   //  Retrieves a reference to the name, which is modifiable.

@@ -12,17 +12,10 @@
 
 namespace SimpleMUD {
 
-EnemyTemplate::EnemyTemplate() {
-  m_hitpoints = 0;
-  m_accuracy = 0;
-  m_dodging = 0;
-  m_strikedamage = 0;
-  m_damageabsorb = 0;
-  m_experience = 0;
-  m_weapon = 0;
-  m_moneymin = 0;
-  m_moneymax = 0;
-}
+EnemyTemplate::EnemyTemplate()
+    : m_hitpoints(0), m_accuracy(0), m_dodging(0), m_strikedamage(0),
+      m_damageabsorb(0), m_experience(0), m_weapon(0), m_moneymin(0),
+      m_moneymax(0), m_loot() {}
 
 // --------------------------------------------------------------------
 //  reads an enemy template from a stream
@@ -53,12 +46,8 @@ istream &operator>>(istream &p_stream, EnemyTemplate &t) {
   return p_stream;
 }
 
-Enemy::Enemy() {
-  m_template = 0;
-  m_hitpoints = 0;
-  m_room = 0;
-  m_nextattacktime = 0;
-}
+Enemy::Enemy()
+    : m_template(0), m_hitpoints(0), m_room(0), m_nextattacktime(0) {}
 
 void Enemy::LoadTemplate(enemytemplate p_template) {
   m_template = p_template;

@@ -31,6 +31,8 @@ class Store : public Entity {
 public:
   typedef std::list<item>::iterator iterator;
 
+  Store() : m_items() {}
+
   item find(const string &p_item) {
     iterator itr = BasicLib::double_find_if(
         begin(), end(), matchentityfull(p_item), matchentity(p_item));

@@ -10,9 +10,10 @@
 
 namespace SocketLib {
 
-SocketSet::SocketSet() : m_set(), m_activityset(),
+SocketSet::SocketSet()
+    : m_set(), m_activityset(),
 #ifndef WIN32
-  m_socketdescs()
+      m_socketdescs()
 #endif
 {
   FD_ZERO(&m_set);

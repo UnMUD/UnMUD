@@ -26,12 +26,9 @@ typedef unsigned long int money;
 // --------------------------------------------------------------------
 class Item : public Entity {
 public:
-  Item() {
-    m_type = WEAPON;
-    m_min = 0;
-    m_max = 0;
-    m_speed = 0;
-  }
+  Item()
+      : m_type(WEAPON), m_min(0), m_max(0), m_speed(0), m_price(),
+        m_attributes() {}
 
   inline ItemType &Type() { return m_type; }
 

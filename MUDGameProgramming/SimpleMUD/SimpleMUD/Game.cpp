@@ -420,6 +420,8 @@ void Game::Whisper(std::string p_str, std::string p_player) {
 struct wholist {
   string str;
 
+  wholist() : str() {}
+
   void operator()(Player &p) {
     str += " " + tostring(p.Name(), 17) + "| ";
     str += tostring(p.Level(), 10) + "| ";

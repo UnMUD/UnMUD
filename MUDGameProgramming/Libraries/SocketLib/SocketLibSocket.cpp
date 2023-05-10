@@ -64,9 +64,8 @@ void Socket::SetBlocking(bool p_blockmode) {
 //              implementations of this class instead, such as
 //              ListeningSocket and DataSocket.
 // ====================================================================
-Socket::Socket(sock p_socket) 
-    : m_sock(p_socket), m_isblocking(true), m_localinfo()
-{
+Socket::Socket(sock p_socket)
+    : m_sock(p_socket), m_isblocking(true), m_localinfo() {
   // the socket is blocking by default
   if (p_socket != -1) {
     socklen_t s = sizeof(m_localinfo);
@@ -78,9 +77,8 @@ Socket::Socket(sock p_socket)
 // Function:    DataSocket
 // Purpose:     Constructs the data socket with optional values
 // ====================================================================
-DataSocket::DataSocket(sock p_socket) 
-    : Socket(p_socket), m_connected(false), m_remoteinfo()
-{
+DataSocket::DataSocket(sock p_socket)
+    : Socket(p_socket), m_connected(false), m_remoteinfo() {
   if (p_socket != -1) {
     socklen_t s = sizeof(m_remoteinfo);
     getpeername(p_socket, (sockaddr *)(&m_remoteinfo), &s);

@@ -24,7 +24,9 @@ namespace SimpleMUD {
 
 class GameLoop {
 public:
-  GameLoop() { LoadDatabases(); }
+  GameLoop() : m_savedatabases(), m_nextround(), m_nextregen(), m_nextheal() {
+    LoadDatabases();
+  }
   ~GameLoop() { SaveDatabases(); }
 
   void LoadDatabases(); // load all databases

@@ -26,6 +26,7 @@ public:
   typedef std::map<entityid, datatype> container;
   typedef typename std::map<entityid, datatype>::iterator containeritr;
 
+  EntityDatabase() : m_map() {}
   // --------------------------------------------------------------------
   //  The inner iterator class, used to iterate through the database.
   // --------------------------------------------------------------------
@@ -134,6 +135,7 @@ public:
   // internal iterator
   typedef typename std::vector<datatype>::iterator iterator;
 
+  EntityDatabaseVector() : m_vector() {}
   inline iterator begin() { return m_vector.begin() + 1; }
   inline iterator end() { return m_vector.end(); }
   inline size_t size() { return m_vector.size() - 1; }

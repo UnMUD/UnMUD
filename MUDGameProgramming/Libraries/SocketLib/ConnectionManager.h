@@ -119,11 +119,9 @@ protected:
 // ------------------------------------------------------------------------
 template <typename protocol, typename defaulthandler>
 ConnectionManager<protocol, defaulthandler>::ConnectionManager(
-    int p_maxdatarate, int p_sentimeout, int p_maxbuffered) {
-  m_maxdatarate = p_maxdatarate;
-  m_sendtimeout = p_sentimeout;
-  m_maxbuffered = p_maxbuffered;
-}
+    int p_maxdatarate, int p_sentimeout, int p_maxbuffered)
+    : m_maxdatarate(p_maxdatarate), m_sendtimeout(p_sentimeout),
+      m_maxbuffered(p_maxbuffered), m_connections(), m_set() {}
 
 // ------------------------------------------------------------------------
 //  Destructs the manager, closing every connection contained within.

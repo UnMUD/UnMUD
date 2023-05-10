@@ -81,9 +81,8 @@ protected:
 // Description: construct the manager
 // ====================================================================
 template <typename protocol, typename defaulthandler>
-ListeningManager<protocol, defaulthandler>::ListeningManager() {
-  m_manager = 0;
-}
+ListeningManager<protocol, defaulthandler>::ListeningManager()
+    : m_sockets(), m_set(), m_manager(0) {}
 
 // ====================================================================
 // Description: The destructor should close all of the listening socks

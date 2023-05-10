@@ -18,18 +18,12 @@ using std::ostream;
 
 namespace SimpleMUD {
 
-Room::Room() {
-  m_type = PLAINROOM;
-  m_data = 0;
-
-  m_description = "UNDEFINED";
+Room::Room()
+    : m_type(PLAINROOM), m_data(0), m_description("UNDEFINED"), m_spawnwhich(0),
+      m_maxenemies(0), m_money(0), m_items(), m_players(), m_enemies() {
 
   for (int d = 0; d < NUMDIRECTIONS; d++)
     m_rooms[d] = 0;
-
-  m_spawnwhich = 0;
-  m_maxenemies = 0;
-  m_money = 0;
 }
 
 void Room::AddPlayer(player p_player) { m_players.push_back(p_player); }

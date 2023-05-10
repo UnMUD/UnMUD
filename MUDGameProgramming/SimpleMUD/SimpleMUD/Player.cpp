@@ -16,31 +16,15 @@
 
 namespace SimpleMUD {
 
-Player::Player() {
-  m_pass = "UNDEFINED";
-  m_rank = REGULAR;
-
-  m_connection = 0;
-  m_loggedin = false;
-  m_active = false;
-  m_newbie = true;
-
-  m_experience = 0;
-  m_level = 1;
-  m_room = 1;
-  m_money = 0;
-
-  m_nextattacktime = 0;
+Player::Player()
+    : m_pass("UNDEFINED"), m_rank(REGULAR), m_connection(0), m_loggedin(false),
+      m_active(false), m_newbie(true), m_experience(0), m_level(1), m_room(1),
+      m_money(0), m_nextattacktime(0), m_items(0), m_weapon(-1), m_armor(-1),
+      m_statpoints(18), m_attributes(), m_baseattributes(), m_hitpoints() {
 
   m_baseattributes[STRENGTH] = 1;
   m_baseattributes[HEALTH] = 1;
   m_baseattributes[AGILITY] = 1;
-
-  m_items = 0;
-  m_weapon = -1;
-  m_armor = -1;
-
-  m_statpoints = 18;
 
   RecalculateStats();
   m_hitpoints = GetAttr(MAXHITPOINTS);
