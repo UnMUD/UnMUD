@@ -662,7 +662,7 @@ bool Game::UseItem(const std::string &p_item) {
 
   case HEALING:
     p.AddBonuses(itm.ID());
-    p.AddHitpoints(BasicLib::RandomInt(itm.Min(), itm.Max()));
+    p.AddHitpoints(static_cast<int>(BasicLib::RandomInt(itm.Min(), itm.Max())));
     p.DropItem(i);
     SendRoom(green + bold + p.Name() + " uses a " + itm.Name(),
              p.CurrentRoom());
@@ -966,10 +966,11 @@ void Game::EnemyAttack(enemy p_enemy) {
 
   int damage;
   if (e.Weapon() == 0) {
-    damage = BasicLib::RandomInt(1, 3);
+    damage = static_cast<int>(BasicLib::RandomInt(1, 3));
     e.NextAttackTime() = now + seconds(1);
   } else {
-    damage = BasicLib::RandomInt(e.Weapon()->Min(), e.Weapon()->Max());
+    damage = static_cast<int>(
+        BasicLib::RandomInt(e.Weapon()->Min(), e.Weapon()->Max()));
     e.NextAttackTime() = now + seconds(e.Weapon()->Speed());
   }
 
@@ -1014,7 +1015,8 @@ void Game::PlayerKilled(player p_player) {
     int index = -1;
 
     // loop through random numbers until you hit a valid item.
-    while (p.GetItem(index = RandomInt(0, PLAYERITEMS - 1)) == 0)
+    while (p.GetItem(index = static_cast<int>(RandomInt(0, PLAYERITEMS - 1))) ==
+           0)
       ;
     item i = p.GetItem(index);
     p.CurrentRoom()->AddItem(i);
@@ -1061,10 +1063,11 @@ void Game::PlayerAttack(const string &p_enemy) {
 
   int damage;
   if (p.Weapon() == 0) {
-    damage = BasicLib::RandomInt(1, 3);
+    damage = static_cast<int>(BasicLib::RandomInt(1, 3));
     p.NextAttackTime() = now + seconds(1);
   } else {
-    damage = BasicLib::RandomInt(p.Weapon()->Min(), p.Weapon()->Max());
+    damage = static_cast<int>(
+        BasicLib::RandomInt(p.Weapon()->Min(), p.Weapon()->Max()));
     p.NextAttackTime() = now + seconds(p.Weapon()->Speed());
   }
 

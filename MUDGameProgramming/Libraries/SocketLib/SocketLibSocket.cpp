@@ -127,7 +127,8 @@ void DataSocket::Connect(ipaddress p_addr, port p_port) {
   m_connected = true;
 
   // to get the local port, you need to do a little more work
-  err = getsockname(m_sock, reinterpret_cast<struct sockaddr *>(&m_localinfo), &s);
+  err = getsockname(m_sock, reinterpret_cast<struct sockaddr *>(&m_localinfo),
+                    &s);
   if (err != 0) {
     throw Exception(GetError());
   }
@@ -234,8 +235,8 @@ void ListeningSocket::Listen(port p_port) {
   // set the SO_REUSEADDR option on the socket, so that it doesn't
   // hog the port after it closes.
   int reuse = 1;
-  err = setsockopt(m_sock, SOL_SOCKET, SO_REUSEADDR, reinterpret_cast<char *>(&reuse),
-                   sizeof(reuse));
+  err = setsockopt(m_sock, SOL_SOCKET, SO_REUSEADDR,
+                   reinterpret_cast<char *>(&reuse), sizeof(reuse));
   if (err != 0) {
     throw Exception(GetError());
   }
@@ -247,7 +248,8 @@ void ListeningSocket::Listen(port p_port) {
   memset(&(m_localinfo.sin_zero), 0, 8);
 
   // bind the socket
-  err = bind(m_sock, reinterpret_cast<struct sockaddr *>(&m_localinfo), sizeof(struct sockaddr));
+  err = bind(m_sock, reinterpret_cast<struct sockaddr *>(&m_localinfo),
+             sizeof(struct sockaddr));
   if (err == -1) {
     throw Exception(GetError());
   }
@@ -275,7 +277,8 @@ DataSocket ListeningSocket::Accept() {
 
   // try to accept a connection
   socklen_t size = sizeof(struct sockaddr);
-  s = accept(m_sock, reinterpret_cast<struct sockaddr *>(&socketaddress), &size);
+  s = accept(m_sock, reinterpret_cast<struct sockaddr *>(&socketaddress),
+             &size);
   if (s == -1) {
     throw Exception(GetError());
   }

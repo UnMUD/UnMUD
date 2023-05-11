@@ -96,7 +96,9 @@ public:
   // ------------------------------------------------------------------------
   // Gets the amount of bytes within the sending buffer.
   // ------------------------------------------------------------------------
-  inline int GetBufferedBytes() const { return static_cast<int>(m_sendbuffer.size()); }
+  inline int GetBufferedBytes() const {
+    return static_cast<int>(m_sendbuffer.size());
+  }
 
   inline BasicLib::sint64 GetCreationTime() const { return m_creationtime; }
 

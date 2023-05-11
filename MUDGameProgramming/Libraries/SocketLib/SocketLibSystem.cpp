@@ -104,7 +104,8 @@ std::string GetIPString(ipaddress p_address) {
 // ========================================================================
 std::string GetHostNameString(ipaddress p_address) {
   // get the host info.
-  struct hostent *host = gethostbyaddr(reinterpret_cast<char *>(&p_address), 4, AF_INET);
+  struct hostent *host =
+      gethostbyaddr(reinterpret_cast<char *>(&p_address), 4, AF_INET);
 
   // if there was an error, throw an exception.
   if (host == 0) {

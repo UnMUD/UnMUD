@@ -60,7 +60,7 @@ template <bool inclusive, typename generator = random> struct random_percent {
   double minimum() { return m_generator.minimum() / m_max; }
   double maximum() { return m_generator.maximum() / m_max; }
 
-  double operator()() { return m_generator() / m_max; }
+  double operator()() { return static_cast<double>(m_generator()) / m_max; }
 
 protected:
   generator m_generator;
@@ -166,7 +166,8 @@ struct random_int_range {
   }
 
   sint32 generate(sint32 p_range, sint32 p_offset) {
-    return static_cast<sint32>(m_generator() * p_range) + p_offset;
+    return static_cast<sint32>(m_generator() * static_cast<double>(p_range)) +
+           p_offset;
   }
 
   sint32 operator()() { return generate(m_range, m_offset); }
