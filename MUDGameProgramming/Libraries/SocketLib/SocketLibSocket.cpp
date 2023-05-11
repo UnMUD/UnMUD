@@ -114,7 +114,7 @@ void DataSocket::Connect(ipaddress p_addr, port p_port) {
   // set up the socket address structure
   m_remoteinfo.sin_family = AF_INET;
   m_remoteinfo.sin_port = htons(p_port);
-  m_remoteinfo.sin_addr.s_addr = p_addr;
+  m_remoteinfo.sin_addr.s_addr = static_cast<in_addr_t>(p_addr);
   memset(&(m_remoteinfo.sin_zero), 0, 8);
 
   // now the socket is created, so connect it.
@@ -147,7 +147,7 @@ int DataSocket::Send(const char *p_buffer, int p_size) {
   }
 
   // attempt to send the data
-  err = send(m_sock, p_buffer, p_size, 0);
+  err = static_cast<int>(send(m_sock, p_buffer, p_size, 0));
   if (err == -1) {
     Error e = GetError();
     if (e != EOperationWouldBlock) {
@@ -178,7 +178,7 @@ int DataSocket::Receive(char *p_buffer, int p_size) {
   }
 
   // attempt to recieve the data
-  err = recv(m_sock, p_buffer, p_size, 0);
+  err = static_cast<int>(recv(m_sock, p_buffer, p_size, 0));
   if (err == 0) {
     throw Exception(EConnectionClosed);
   }

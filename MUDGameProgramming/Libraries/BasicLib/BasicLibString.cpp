@@ -13,7 +13,7 @@ std::string UpperCase(const std::string &p_string) {
   std::string str = p_string;
 
   for (size_t i = 0; i < str.size(); i++) {
-    str[i] = toupper(str[i]);
+    str[i] = static_cast<char>(toupper(str[i]));
   }
   return str;
 }
@@ -22,7 +22,7 @@ std::string LowerCase(const std::string &p_string) {
   std::string str = p_string;
 
   for (size_t i = 0; i < str.size(); i++) {
-    str[i] = tolower(str[i]);
+    str[i] = static_cast<char>(tolower(str[i]));
   }
   return str;
 }
@@ -43,8 +43,8 @@ std::string SearchAndReplace(const std::string &p_target,
 }
 
 std::string TrimWhitespace(const std::string &p_string) {
-  int wsf;
-  int wsb;
+  size_t wsf;
+  size_t wsb;
 
   // trim the front
   wsf = p_string.find_first_not_of(WHITESPACE);
@@ -59,7 +59,7 @@ std::string TrimWhitespace(const std::string &p_string) {
 }
 
 std::string ParseWord(const std::string &p_string, int p_index) {
-  int wss = p_string.find_first_not_of(WHITESPACE);
+  size_t wss = p_string.find_first_not_of(WHITESPACE);
 
   while (p_index > 0) {
     p_index--;
@@ -72,7 +72,7 @@ std::string ParseWord(const std::string &p_string, int p_index) {
   }
 
   // find the end of the word
-  int wse = p_string.find_first_of(WHITESPACE, wss);
+  size_t wse = p_string.find_first_of(WHITESPACE, wss);
 
   if (wss == std::string::npos) {
     wss = 0;
@@ -83,7 +83,7 @@ std::string ParseWord(const std::string &p_string, int p_index) {
 }
 
 std::string RemoveWord(const std::string &p_string, int p_index) {
-  int wss = p_string.find_first_not_of(WHITESPACE);
+  size_t wss = p_string.find_first_not_of(WHITESPACE);
 
   while (p_index > 0) {
     p_index--;
@@ -96,7 +96,7 @@ std::string RemoveWord(const std::string &p_string, int p_index) {
   }
 
   // find the end of the word
-  int wse = p_string.find_first_of(WHITESPACE, wss);
+  size_t wse = p_string.find_first_of(WHITESPACE, wss);
 
   // find the beginning of the next word
   wse = p_string.find_first_not_of(WHITESPACE, wse);

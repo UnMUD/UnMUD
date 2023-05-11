@@ -47,7 +47,7 @@ template <bool inclusive, typename generator = random> struct random_percent {
   }
 
   void init() {
-    m_max = m_generator.maximum();
+    m_max = static_cast<double>(m_generator.maximum());
 
     // if 1.0 is exclusive, then the max should be incremented, so that
     // 1.0 is never generated.
