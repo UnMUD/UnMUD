@@ -69,12 +69,12 @@ public:
   // ------------------------------------------------------------------------
   inline Telnet() : m_buffersize(0) {}
 
-  inline int Buffered() { return m_buffersize; }
+  inline size_t Buffered() { return m_buffersize; }
 
 protected:
   // This is the buffer that will contain all the processed telnet data
   char m_buffer[BUFFERSIZE];
-  int m_buffersize;
+  size_t m_buffersize;
 };
 
 } // end namespace SocketLib

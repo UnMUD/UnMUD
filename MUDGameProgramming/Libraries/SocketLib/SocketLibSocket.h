@@ -126,14 +126,14 @@ public:
   // Purpose:     Attempts to send data, and returns the number of
   //              of bytes sent
   // ====================================================================
-  int Send(const char *p_buffer, int p_size);
+  int Send(const char *p_buffer, size_t p_size);
 
   // ====================================================================
   // Function:    Receive
   // Purpose:     Attempts to receive data from a socket, and returns the
   //              amount of data received.
   // ====================================================================
-  int Receive(char *p_buffer, int p_size);
+  int Receive(char *p_buffer, size_t p_size);
 
   // ====================================================================
   // Function:    Close

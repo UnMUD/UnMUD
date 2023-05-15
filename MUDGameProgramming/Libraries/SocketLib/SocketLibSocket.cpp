@@ -139,7 +139,7 @@ void DataSocket::Connect(ipaddress p_addr, port p_port) {
 // Purpose:     Attempts to send data, and returns the number of
 //              of bytes sent
 // ====================================================================
-int DataSocket::Send(const char *p_buffer, int p_size) {
+int DataSocket::Send(const char *p_buffer, size_t p_size) {
   int err;
 
   // make sure the socket is connected first.
@@ -170,7 +170,7 @@ int DataSocket::Send(const char *p_buffer, int p_size) {
 // Purpose:     Attempts to recieve data from a socket, and returns the
 //              amount of data received.
 // ====================================================================
-int DataSocket::Receive(char *p_buffer, int p_size) {
+int DataSocket::Receive(char *p_buffer, size_t p_size) {
   int err;
 
   // make sure the socket is connected first.

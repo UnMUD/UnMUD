@@ -51,8 +51,7 @@ std::string TrimWhitespace(const std::string &p_string) {
   wsb = p_string.find_last_not_of(WHITESPACE);
 
   if (wsf == std::string::npos) {
-    wsf = 0;
-    wsb = -1;
+    return p_string.substr(0, 0);
   }
 
   return p_string.substr(wsf, wsb - wsf + 1);

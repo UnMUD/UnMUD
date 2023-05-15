@@ -148,7 +148,7 @@ inline void Kill(ThreadID &p_thread) {
 // Description: This yields the thread to the operating system, and gives
 //              up its current timeslice.
 // ========================================================================
-inline void YieldThread(int p_milliseconds = 1) {
+inline void YieldThread(useconds_t p_milliseconds = 1) {
 #ifdef WIN32
   Sleep(p_milliseconds);
 #else

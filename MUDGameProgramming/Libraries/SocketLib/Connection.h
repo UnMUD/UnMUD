@@ -19,7 +19,7 @@
 namespace SocketLib {
 
 // This is the default buffer size of the connection class
-const static int BUFFERSIZE = 1024;
+const static size_t BUFFERSIZE = 1024;
 const static int TIMECHUNK = 16;
 
 template <class protocol> class Connection : public DataSocket {
@@ -68,7 +68,7 @@ public:
   // ------------------------------------------------------------------------
   // This puts data into the sending queue.
   // ------------------------------------------------------------------------
-  void BufferData(const char *p_buffer, int p_size);
+  void BufferData(const char *p_buffer, size_t p_size);
 
   // ------------------------------------------------------------------------
   // This sends the contents of the send buffer
@@ -226,7 +226,7 @@ BasicLib::sint64 Connection<protocol>::GetLastSendTime() const {
 // This puts data into the sending queue.
 // ------------------------------------------------------------------------
 template <class protocol>
-void Connection<protocol>::BufferData(const char *p_buffer, int p_size) {
+void Connection<protocol>::BufferData(const char *p_buffer, size_t p_size) {
   m_sendbuffer.append(p_buffer, p_size);
 }
 
