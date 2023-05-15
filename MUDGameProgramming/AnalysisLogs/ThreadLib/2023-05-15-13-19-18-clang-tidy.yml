@@ -1,0 +1,501 @@
+---
+MainSourceFile:  '/usr/src/UnMUD/./Libraries/ThreadLib/ThreadLibFunctions.cpp'
+Diagnostics:
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         'invalid argument ''-std=c++2a'' not allowed with ''C'''
+      FilePath:        ''
+      FileOffset:      0
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      219
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          219
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADEXCEPTION_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          246
+          Length:          17
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADEXCEPTION_H
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''exception'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      276
+      Replacements:    []
+  - DiagnosticName:  google-explicit-constructor
+    DiagnosticMessage:
+      Message:         single-argument constructors must be marked explicit to avoid unintentional implicit conversions
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1263
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1263
+          Length:          0
+          ReplacementText: 'explicit '
+  - DiagnosticName:  hicpp-explicit-conversions
+    DiagnosticMessage:
+      Message:         single-argument constructors must be marked explicit to avoid unintentional implicit conversions
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1263
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1263
+          Length:          0
+          ReplacementText: 'explicit '
+  - DiagnosticName:  fuchsia-default-arguments-declarations
+    DiagnosticMessage:
+      Message:         declaring a parameter with a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1274
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1287
+          Length:          14
+          ReplacementText: ''
+  - DiagnosticName:  modernize-use-nodiscard
+    DiagnosticMessage:
+      Message:         'function ''GetError'' should be marked [[nodiscard]]'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1593
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1593
+          Length:          0
+          ReplacementText: '[[nodiscard]] '
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1599
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1593
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1615
+          Length:          0
+          ReplacementText: ' -> Error'
+  - DiagnosticName:  cppcoreguidelines-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_error'' has protected visibility'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1700
+      Replacements:    []
+  - DiagnosticName:  misc-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_error'' has protected visibility'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1700
+      Replacements:    []
+  - DiagnosticName:  google-readability-namespace-comments
+    DiagnosticMessage:
+      Message:         'namespace ''ThreadLib'' not terminated with a closing comment'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1718
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1719
+          Length:          0
+          ReplacementText: '  // namespace ThreadLib'
+    Notes:
+      - Message:         'namespace ''ThreadLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+        FileOffset:      664
+        Replacements:    []
+  - DiagnosticName:  llvm-namespace-comment
+    DiagnosticMessage:
+      Message:         'namespace ''ThreadLib'' not terminated with a closing comment'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1718
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1719
+          Length:          0
+          ReplacementText: ' // namespace ThreadLib'
+    Notes:
+      - Message:         'namespace ''ThreadLib'' starts here'
+        FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+        FileOffset:      664
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLib.h'
+      FileOffset:      111
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLib.h'
+          Offset:          111
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIB_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLib.h'
+          Offset:          132
+          Length:          11
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIB_H
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1059
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1053
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1083
+          Length:          0
+          ReplacementText: ' -> void*'
+  - DiagnosticName:  hicpp-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with a cast to avoid duplicating the type name
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1159
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with a cast to avoid duplicating the type name
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1159
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-cstyle-cast
+    DiagnosticMessage:
+      Message:         do not use C-style cast to convert between unrelated types
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1177
+      Replacements:    []
+  - DiagnosticName:  google-readability-casting
+    DiagnosticMessage:
+      Message:         'C-style casts are discouraged; use static_cast'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1177
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1177
+          Length:          12
+          ReplacementText: 'static_cast<DummyData*>('
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1195
+          Length:          0
+          ReplacementText: ')'
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'deleting a pointer through a type that is not marked ''gsl::owner<>''; consider using a smart pointer instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1346
+      Replacements:    []
+    Notes:
+      - Message:         variable declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+        FileOffset:      1159
+        Replacements:    []
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1411
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1411
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      155
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          155
+          Length:          20
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIBFUNCTIONS_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          185
+          Length:          20
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIBFUNCTIONS_H
+  - DiagnosticName:  modernize-use-using
+    DiagnosticMessage:
+      Message:         'use ''using'' instead of ''typedef'''
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      1423
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          1423
+          Length:          26
+          ReplacementText: 'using ThreadID = pthread_t'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2479
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2473
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2503
+          Length:          0
+          ReplacementText: ' -> void*'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2762
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2753
+          Length:          8
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2804
+          Length:          0
+          ReplacementText: ' -> ThreadID'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''t'' is not initialized'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2830
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2831
+          Length:          0
+          ReplacementText: ' = 0'
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'initializing non-owner ''ThreadLib::DummyData *'' with a newly created ''gsl::owner<>'''
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2884
+      Replacements:    []
+  - DiagnosticName:  hicpp-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with new to avoid duplicating the type name
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2884
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with new to avoid duplicating the type name
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2884
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3355
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3355
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'deleting a pointer through a type that is not marked ''gsl::owner<>''; consider using a smart pointer instead'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3478
+      Replacements:    []
+    Notes:
+      - Message:         variable declared here
+        FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+        FileOffset:      2884
+        Replacements:    []
+  - DiagnosticName:  hicpp-exception-baseclass
+    DiagnosticMessage:
+      Message:         'throwing an exception whose type ''ThreadLib::Exception'' is not derived from ''std::exception'''
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3543
+      Replacements:    []
+    Notes:
+      - Message:         type defined here
+        FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadException.h'
+        FileOffset:      913
+        Replacements:    []
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3849
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          3840
+          Length:          8
+          ReplacementText: auto
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          3856
+          Length:          0
+          ReplacementText: ' -> ThreadID'
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      4862
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          4862
+          Length:          4
+          ReplacementText: nullptr
+  - DiagnosticName:  google-runtime-references
+    DiagnosticMessage:
+      Message:         'non-const reference parameter ''p_thread'', make it const or use a pointer'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      5221
+      Replacements:    []
+  - DiagnosticName:  fuchsia-default-arguments-declarations
+    DiagnosticMessage:
+      Message:         declaring a parameter with a default argument is disallowed
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      5978
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          5996
+          Length:          4
+          ReplacementText: ''
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      6122
+      Replacements:    []
+  - DiagnosticName:  readability-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      6122
+      Replacements:    []
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      115
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          115
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIBMUTEX_H
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          141
+          Length:          16
+          ReplacementText: _USR_SRC_UNMUD_LIBRARIES_THREADLIB_THREADLIBMUTEX_H
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      531
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-special-member-functions
+    DiagnosticMessage:
+      Message:         'class ''Mutex'' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      579
+      Replacements:    []
+  - DiagnosticName:  hicpp-special-member-functions
+    DiagnosticMessage:
+      Message:         'class ''Mutex'' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      579
+      Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-pro-type-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_mutex'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      829
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          2536
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-member-init
+    DiagnosticMessage:
+      Message:         'constructor does not initialize these fields: m_mutex'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      829
+      Replacements:
+        - FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          2536
+          Length:          0
+          ReplacementText: '{}'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      1062
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      1062
+      Replacements:    []
+    Notes:
+      - Message:         this fix will not be applied because it overlaps with another fix
+        FilePath:        ''
+        FileOffset:      0
+        Replacements:    []
+  - DiagnosticName:  cppcoreguidelines-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_mutex'' has protected visibility'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      2529
+      Replacements:    []
+  - DiagnosticName:  misc-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_mutex'' has protected visibility'
+      FilePath:        '/usr/src/UnMUD/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      2529
+      Replacements:    []
+...

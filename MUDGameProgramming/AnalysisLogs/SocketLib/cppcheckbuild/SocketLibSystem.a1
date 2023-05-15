@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="3802220914">
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketLibSystem.cpp">
-            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+<analyzerinfo checksum="4064477873">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="Libraries/SocketLib/SocketLibSystem.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
             <symbol>Exception</symbol>
         </error>
-        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="Libraries/SocketLib/SocketLibSystem.cpp">
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
             <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="58" column="47"/>
             <symbol>p_address</symbol>
         </error>
-        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="Libraries/SocketLib/SocketLibSystem.cpp">
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_address&apos; should be passed by const reference." verbose="Parameter &apos;p_address&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
             <location file="Libraries/SocketLib/SocketLibSystem.cpp" line="140" column="41"/>
             <symbol>p_address</symbol>
         </error>

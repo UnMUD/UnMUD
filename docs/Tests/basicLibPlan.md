@@ -60,7 +60,6 @@ inline iterator double_find_if( iterator begin,
 * Elemento qualificado que não deve ser encontrado
 * Elemento não qualificado que não deve ser encontrado
 * Iteradores de início e fim inválidos
-* Qualificador esperando um tipo de elemento diferente do enviado
 
 #### Função operate_on_if
 ```cpp
@@ -76,8 +75,6 @@ inline function operate_on_if( iterator begin,
 **Sugestão de teste:**
 * Coleção sem elementos qualificados e função func válida
 * Coleção com todos elementos qualificados e função func válida
-* Função func inválida, retornando um elemento diferente do tipo da coleção
-* Qualificador esperando um tipo de elemento diferente do enviado
 
 #### Função percent
 ```cpp
@@ -85,7 +82,7 @@ template< typename type >
 inline int percent( const type& first, const type& second ) 
 ```
 
-**Descrição:** Retorna a porcetagem do segundo valor em relação ao primeiro
+**Descrição:** Retorna a porcetagem do primeiro valor em relação ao segundo
 
 **Sugestão de teste:**
 * Ambos valores positivos
@@ -333,7 +330,7 @@ template< typename type >
 inline std::string tostring( const type& p_type, size_t p_width = 0 )
 ```
 
-**Descrição:** Recebe uma variável do tipo type e uma largura máxima de caracteres (p_width) e retorna uma string com tamanho maior ou igual ao determinado
+**Descrição:** Recebe uma variável do tipo type e uma largura mínima de caracteres (p_width) e retorna uma string com tamanho maior ou igual ao determinado
 
 **Sugestão de teste:**
 * Conversão de um número inteiro

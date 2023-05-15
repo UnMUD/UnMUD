@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="3710903047">
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketLibSocket.cpp">
-            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+<analyzerinfo checksum="1523722305">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="Libraries/SocketLib/SocketLibSocket.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
             <symbol>Exception</symbol>
         </error>
   <FileInfo check="CheckUnusedFunctions">
