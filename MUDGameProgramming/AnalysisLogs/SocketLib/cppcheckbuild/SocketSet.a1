@@ -1,19 +1,9 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="3102325890">
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketSet.cpp">
-            <location file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+<analyzerinfo checksum="13248486">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="Libraries/SocketLib/SocketSet.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
             <symbol>Exception</symbol>
         </error>
-  <FileInfo check="Uninitialized variables">
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:47:21" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.h" line="49" col="30" value="0"/>
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:26:14" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.cpp" line="25" col="13" value="0"/>
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:27:14" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.cpp" line="37" col="13" value="0"/>
-  </FileInfo>
-  <FileInfo check="Uninitialized variables">
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:47:21" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.h" line="49" col="30" value="0"/>
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:26:14" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.cpp" line="25" col="13" value="0"/>
-    <unsafe-usage my-id="Libraries/SocketLib/SocketSet.h:27:14" my-argnr="1" my-argname="p_sock" file="Libraries/SocketLib/SocketSet.cpp" line="37" col="13" value="0"/>
-  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="AddSocket" lineNumber="22"/>
     <functiondecl functionName="RemoveSocket" lineNumber="35"/>
@@ -67,7 +57,6 @@
     <functioncall functionName="erase"/>
     <functioncall functionName="if"/>
     <functioncall functionName="insert"/>
-    <functioncall functionName="int"/>
     <functioncall functionName="m_activityset"/>
     <functioncall functionName="m_set"/>
     <functioncall functionName="ntohs"/>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+Checking SimpleMUD/SimpleMUD.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD.cpp" file="SimpleMUD/SimpleMUD/Logon.h" line="47" column="5"/>
+            <symbol>Logon</symbol>
+        </error>
+1/15 files checked 1% done
+Checking SimpleMUD/SimpleMUD/DatabasePointer.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/DatabasePointer.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/DatabasePointer.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/DatabasePointer.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/DatabasePointer.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/DatabasePointer.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+2/15 files checked 4% done
+Checking SimpleMUD/SimpleMUD/Enemy.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_weapon&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_weapon&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="26" column="5"/>
+            <symbol>m_weapon</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_template&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_template&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="65" column="5"/>
+            <symbol>m_template</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_room&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_room&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="67" column="5"/>
+            <symbol>m_room</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_nextattacktime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_nextattacktime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="68" column="5"/>
+            <symbol>m_nextattacktime</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+3/15 files checked 8% done
+Checking SimpleMUD/SimpleMUD/EnemyDatabase.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+4/15 files checked 11% done
+Checking SimpleMUD/SimpleMUD/Game.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_player&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_player&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Train.h" line="40" column="9"/>
+            <symbol>m_player</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Logon.h" line="47" column="5"/>
+            <symbol>Logon</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Game.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+5/15 files checked 59% done
+Checking SimpleMUD/SimpleMUD/GameLoop.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/GameLoop.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+6/15 files checked 63% done
+Checking SimpleMUD/SimpleMUD/ItemDatabase.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/ItemDatabase.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/ItemDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/ItemDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/ItemDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+7/15 files checked 64% done
+Checking SimpleMUD/SimpleMUD/Logon.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Logon.h" line="47" column="5"/>
+            <symbol>Logon</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Logon.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+8/15 files checked 73% done
+Checking SimpleMUD/SimpleMUD/Player.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Player.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Player.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_pass&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_pass&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="24" column="5"/>
+            <symbol>m_pass</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_room&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_room&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="34" column="5"/>
+            <symbol>m_room</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_nextattacktime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_nextattacktime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="37" column="5"/>
+            <symbol>m_nextattacktime</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Player.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Player.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Player.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+9/15 files checked 84% done
+Checking SimpleMUD/SimpleMUD/PlayerDatabase.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+10/15 files checked 88% done
+Checking SimpleMUD/SimpleMUD/Room.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Room.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Room.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_description&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_description&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Room.cpp" line="29" column="5"/>
+            <symbol>m_description</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Room.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Room.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+11/15 files checked 92% done
+Checking SimpleMUD/SimpleMUD/RoomDatabase.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+12/15 files checked 94% done
+Checking SimpleMUD/SimpleMUD/SimpleMUDLogs.cpp ...
+13/15 files checked 95% done
+Checking SimpleMUD/SimpleMUD/StoreDatabase.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/StoreDatabase.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/StoreDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/StoreDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/StoreDatabase.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+14/15 files checked 96% done
+Checking SimpleMUD/SimpleMUD/Train.cpp ...
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
+            <symbol>Item::m_price</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
+            <symbol>m_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_player&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_player&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Train.h" line="40" column="9"/>
+            <symbol>m_player</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="SimpleMUD/SimpleMUD/Train.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+            <symbol>playersend</symbol>
+        </error>
+15/15 files checked 100% done
+        <error id="unusedFunction" severity="style" msg="The function &apos;Flooded&apos; is never used." verbose="The function &apos;Flooded&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Game.cpp" line="436" column="0"/>
+            <symbol>Flooded</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Handle&apos; is never used." verbose="The function &apos;Handle&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Train.cpp" line="21" column="0"/>
+            <symbol>Handle</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;SetBaseAttr&apos; is never used." verbose="The function &apos;SetBaseAttr&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="113" column="0"/>
+            <symbol>SetBaseAttr</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>
