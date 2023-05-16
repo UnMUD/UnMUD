@@ -139,8 +139,8 @@ void DataSocket::Connect(ipaddress p_addr, port p_port) {
 // Purpose:     Attempts to send data, and returns the number of
 //              of bytes sent
 // ====================================================================
-int DataSocket::Send(const char *p_buffer, size_t p_size) {
-  int err;
+ssize_t DataSocket::Send(const char *p_buffer, size_t p_size) {
+  ssize_t err;
 
   // make sure the socket is connected first.
   if (m_connected == false) {
@@ -148,7 +148,7 @@ int DataSocket::Send(const char *p_buffer, size_t p_size) {
   }
 
   // attempt to send the data
-  err = static_cast<int>(send(m_sock, p_buffer, p_size, 0));
+  err = send(m_sock, p_buffer, p_size, 0);
   if (err == -1) {
     Error e = GetError();
     if (e != EOperationWouldBlock) {
@@ -170,8 +170,8 @@ int DataSocket::Send(const char *p_buffer, size_t p_size) {
 // Purpose:     Attempts to recieve data from a socket, and returns the
 //              amount of data received.
 // ====================================================================
-int DataSocket::Receive(char *p_buffer, size_t p_size) {
-  int err;
+ssize_t DataSocket::Receive(char *p_buffer, size_t p_size) {
+  ssize_t err;
 
   // make sure the socket is connected first.
   if (m_connected == false) {
@@ -179,7 +179,7 @@ int DataSocket::Receive(char *p_buffer, size_t p_size) {
   }
 
   // attempt to recieve the data
-  err = static_cast<int>(recv(m_sock, p_buffer, p_size, 0));
+  err = recv(m_sock, p_buffer, p_size, 0);
   if (err == 0) {
     throw Exception(EConnectionClosed);
   }

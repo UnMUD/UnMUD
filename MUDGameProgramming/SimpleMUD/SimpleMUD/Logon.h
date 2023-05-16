@@ -70,7 +70,7 @@ public:
   static void NoRoom(Connection<Telnet> &p_connection) {
     static string msg = "Sorry, there is no more room on this server.\r\n";
     try {
-      p_connection.Send(msg.c_str(), static_cast<int>(msg.size()));
+      p_connection.Send(msg.c_str(), msg.size());
     } catch (SocketLib::Exception) {
       // do nothing here; probably an exploiter if sending that data
       // causes an exception.

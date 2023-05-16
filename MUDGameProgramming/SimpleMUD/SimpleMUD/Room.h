@@ -32,7 +32,7 @@ public:
   Room();
 
   inline RoomType &Type() { return m_type; }
-  inline int &Data() { return m_data; }
+  inline entityid &Data() { return m_data; }
   inline string &Description() { return m_description; }
   inline entityid &Adjacent(int p_dir) { return m_rooms[p_dir]; }
 
@@ -65,7 +65,7 @@ protected:
   //  template information
   // -----------------------------------------
   RoomType m_type;
-  int m_data; // auxilliary data defined by room type
+  entityid m_data; // auxilliary data defined by room type
   string m_description;
   entityid m_rooms[NUMDIRECTIONS];
 
