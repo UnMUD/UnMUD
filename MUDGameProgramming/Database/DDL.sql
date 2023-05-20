@@ -82,13 +82,13 @@ CREATE TABLE Map(
     name TEXT,
     description TEXT,
     type MAPTYPE,
-    maxEnemies INTEGER,
-    enemyId INTEGER,
     storeId INTEGER,
+    enemyId INTEGER,
+    maxEnemies INTEGER,
 
     CONSTRAINT Map_PK PRIMARY KEY(id),
-    CONSTRAINT Loot_Enemy_FK FOREIGN KEY(enemyId) REFERENCES Enemy(id),
-    CONSTRAINT Loot_Store_FK FOREIGN KEY(storeId) REFERENCES Store(id)
+    CONSTRAINT Map_Enemy_FK FOREIGN KEY(enemyId) REFERENCES Enemy(id),
+    CONSTRAINT Map_Store_FK FOREIGN KEY(storeId) REFERENCES Store(id)
 );
 
 CREATE TABLE Conecta(
