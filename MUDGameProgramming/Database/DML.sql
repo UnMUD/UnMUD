@@ -283,4 +283,9 @@ INSERT INTO EnemyInstance VALUES
     (62, 9, 20, 21, 0), (63, 12, 10, 30, 0), (64, 12, 10, 32, 0), (65, 8, 30, 34, 0), (66, 2, 15, 42, 0),
     (67, 6, 4, 44, 0), (68, 12, 10, 32, 0), (69, 2, 15, 42, 0), (70, 12, 10, 32, 0);
 
-SELECT setval(pg_get_serial_sequence('EnemyInstance', 'id'), 71, false) FROM EnemyInstance;    
+SELECT setval(pg_get_serial_sequence('EnemyInstance', 'id'), 71, false) FROM EnemyInstance;
+
+INSERT INTO Player VALUES
+    (3435973837, 'Mithrandir', 'booga', 'REGULAR', 0, 0, 1, 1, 0, 10, 0, ROW(7, 7, 7, 0, 0, 0, 0, 0, 0), NULL, NULL),
+    (3435973838, 'iuriell', '123456789', 'REGULAR', 0, 15, 1, 4, 5, 9, 97578016, ROW(6, 6, 9, 0, 0, 0, 0, 0, 0), NULL, NULL);
+

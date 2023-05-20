@@ -21,7 +21,7 @@ CREATE TYPE ATTRIBUTE AS (
 
 
 CREATE TABLE Item(
-    id SERIAL,
+    id BIGSERIAL,
     name TEXT,
     type ITEMTYPE,
     min INTEGER,
@@ -35,15 +35,15 @@ CREATE TABLE Item(
 
 
 CREATE TABLE Store(
-    id SERIAL,
+    id BIGSERIAL,
     name TEXT,
 
     CONSTRAINT Store_PK PRIMARY KEY(id)
 );
 
 CREATE TABLE StoreVendeItem(
-    storeId INTEGER,
-    itemId INTEGER,
+    storeId BIGINT,
+    itemId BIGINT,
 
     CONSTRAINT StoreVendeItem_Item_FK FOREIGN KEY(itemId) REFERENCES Item(id),
     CONSTRAINT StoreVendeItem_Store_FK FOREIGN KEY(storeId) REFERENCES Store(id)
@@ -51,7 +51,7 @@ CREATE TABLE StoreVendeItem(
 
 
 CREATE TABLE Enemy(
-    id SERIAL,
+    id BIGSERIAL,
     name TEXT,
     hitPoints INTEGER,
     accuracy INTEGER,
@@ -59,7 +59,7 @@ CREATE TABLE Enemy(
     strikeDamage INTEGER,
     damageAbsorb INTEGER,
     experience INTEGER,
-    weaponId INTEGER,
+    weaponId BIGINT,
     moneyMin UBIGINT,
     moneyMax UBIGINT,
 
@@ -68,8 +68,8 @@ CREATE TABLE Enemy(
 );
 
 CREATE TABLE Loot(
-    enemyId INTEGER,
-    itemId INTEGER,
+    enemyId BIGINT,
+    itemId BIGINT,
     itemQuantity INTEGER,
 
     CONSTRAINT Loot_Enemy_FK FOREIGN KEY(enemyId) REFERENCES Enemy(id),
@@ -78,12 +78,12 @@ CREATE TABLE Loot(
 
 
 CREATE TABLE Map(
-    id SERIAL,
+    id BIGSERIAL,
     name TEXT,
     description TEXT,
     type MAPTYPE,
-    storeId INTEGER,
-    enemyId INTEGER,
+    storeId BIGINT,
+    enemyId BIGINT,
     maxEnemies INTEGER,
 
     CONSTRAINT Map_PK PRIMARY KEY(id),
@@ -93,8 +93,8 @@ CREATE TABLE Map(
 
 CREATE TABLE Conecta(
     directionEnum DIRECTIONS,
-    connectedFrom INTEGER,
-    connectedTo INTEGER,
+    connectedFrom BIGINT,
+    connectedTo BIGINT,
 
     CONSTRAINT Conecta_MapFrom_FK FOREIGN KEY(connectedFrom) REFERENCES Map(id),
     CONSTRAINT Conecta_MapTo_FK FOREIGN KEY(connectedTo) REFERENCES Map(id)
@@ -102,15 +102,15 @@ CREATE TABLE Conecta(
 
 
 CREATE TABLE MapVolatile(
-    id INTEGER NOT NULL UNIQUE,
+    id BIGINT NOT NULL UNIQUE,
     money UBIGINT,
 
     CONSTRAINT MapVolatile_Map_FK FOREIGN KEY(id) REFERENCES Map(id)
 );
 
 CREATE TABLE MapVolatileGuardaItem(
-    itemId INTEGER,
-    mapVolatileId INTEGER,
+    itemId BIGINT,
+    mapVolatileId BIGINT,
 
     CONSTRAINT MapVolatileGuardaItem_Item_FK FOREIGN KEY(itemId) REFERENCES Item(id),
     CONSTRAINT MapVolatileGuardaItem_MapVolatile_FK FOREIGN KEY(mapVolatileId) REFERENCES MapVolatile(id)    
@@ -118,10 +118,10 @@ CREATE TABLE MapVolatileGuardaItem(
 
 
 CREATE TABLE EnemyInstance(
-    id SERIAL,
-    templateId INTEGER,
+    id BIGSERIAL,
+    templateId BIGINT,
     hitPoints INTEGER,
-    mapId INTEGER,
+    mapId BIGINT,
     nextAttackTime BIGINT,
 
     CONSTRAINT EnemyInstance_PK PRIMARY KEY(id),
@@ -131,20 +131,20 @@ CREATE TABLE EnemyInstance(
 
 
 CREATE TABLE Player(
-    id SERIAL,
+    id BIGINT,
     name TEXT,
     pass TEXT,
     rank PLAYERRANK,
     statPoints INTEGER,
     experience INTEGER,
     level INTEGER,
+    mapId INTEGER,
     money UBIGINT,
     hitPoints INTEGER,
     nextAttackTime BIGINT,
-    weaponId INTEGER,
-    armorId INTEGER,
-    mapId INTEGER,
     attributes ATTRIBUTE,
+    weaponId BIGINT,
+    armorId BIGINT,
 
     CONSTRAINT Player_PK PRIMARY KEY(id),
     CONSTRAINT Player_Weapon_FK FOREIGN KEY(weaponId) REFERENCES Item(id),
@@ -153,8 +153,8 @@ CREATE TABLE Player(
 );
 
 CREATE TABLE Inventory(
-    playerId INTEGER,
-    itemId INTEGER,
+    playerId BIGINT,
+    itemId BIGINT,
 
     CONSTRAINT Inventory_Player_FK FOREIGN KEY(playerId) REFERENCES Player(id),
     CONSTRAINT Inventory_Item_FK FOREIGN KEY(itemId) REFERENCES Item(id)
