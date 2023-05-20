@@ -1,17 +1,20 @@
 version: '3.7'
 
 services:
-  # db:
-  #   build:
-  #     context: ./setup/db/
-  #     dockerfile: Dockerfile-Postgres
-  #   ports:
-  #     - 5435:5432
-  #   networks:
-  #     - game-network
-  #   environment:
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
+  db:
+    build:
+      context: ./Database
+      dockerfile: Dockerfile.PostgreSQL
+    ports:
+      - 5435:5432
+    networks:
+      - mud-network
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=unmud
+    volumes:
+      - db_data:/var/lib/postgresql/data
 
   unmud:
     build:
@@ -22,8 +25,8 @@ services:
       - type: bind
         source: .
         target: /usr/src/UnMUD
-    # networks:
-    #   - game-network
+    networks:
+      - mud-network
     expose:
       - '5100'
     ports:
@@ -31,9 +34,12 @@ services:
     restart: always
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    # depends_on:
-    #   - db
+    depends_on:
+      - db
 
-# networks:
-#   game-network:
-#     driver: bridge
+volumes:
+  db_data:
+
+networks:
+  mud-network:
+    driver: bridge

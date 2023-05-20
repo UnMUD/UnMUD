@@ -377,7 +377,7 @@
 
 [ID]            23
 [NAME]          Captain Jack's Special 40oz Rum (OBSOLETE, PLEASE DROP IN TOWN SQUARE)
-[TYPE]          Healing
+[TYPE]          HEALING
 [MIN]           -10
 [MAX]           -2
 [SPEED]         0
