@@ -2,7 +2,10 @@
 
 CREATE DOMAIN UBIGINT AS BIGINT NOT NULL CHECK(VALUE >= 0) DEFAULT 0;
 
-CREATE TYPE DIRECTIONS AS ENUM ('north', 'east', 'south', 'west');
+CREATE TYPE DIRECTIONS AS ENUM ('NORTH', 'EAST', 'SOUTH', 'WEST');
+CREATE TYPE MAPTYPE AS ENUM ('PLAINROOM', 'TRAININGROOM', 'STORE');
+CREATE TYPE ITEMTYPE AS ENUM ('HEALING', 'WEAPON', 'ARMOR');
+CREATE TYPE PLAYERRANK AS ENUM ('REGULAR', 'GOD', 'ADMIN');
 
 CREATE TYPE ATTRIBUTE AS (
     strength INTEGER,
@@ -20,11 +23,11 @@ CREATE TYPE ATTRIBUTE AS (
 CREATE TABLE Item(
     id SERIAL,
     name TEXT,
-    price UBIGINT,
-    type VARCHAR(7),
+    type ITEMTYPE,
     min INTEGER,
     max INTEGER,
     speed INTEGER,
+    price UBIGINT,
     attributes ATTRIBUTE,
 
     CONSTRAINT Item_PK PRIMARY KEY(id)
@@ -77,7 +80,7 @@ CREATE TABLE Map(
     id SERIAL,
     name TEXT,
     description TEXT,
-    type VARCHAR(12),
+    type MAPTYPE,
     maxEnemies INTEGER,
     enemyId INTEGER,
     storeId INTEGER,
@@ -130,7 +133,7 @@ CREATE TABLE Player(
     id SERIAL,
     name TEXT,
     pass TEXT,
-    rank VARCHAR(7),
+    rank PLAYERRANK,
     statPoints INTEGER,
     experience INTEGER,
     level INTEGER,
