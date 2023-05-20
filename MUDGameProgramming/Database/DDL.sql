@@ -42,8 +42,8 @@ CREATE TABLE Store(
 );
 
 CREATE TABLE StoreVendeItem(
-    itemId INTEGER,
     storeId INTEGER,
+    itemId INTEGER,
 
     CONSTRAINT StoreVendeItem_Item_FK FOREIGN KEY(itemId) REFERENCES Item(id),
     CONSTRAINT StoreVendeItem_Store_FK FOREIGN KEY(storeId) REFERENCES Store(id)

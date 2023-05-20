@@ -75,3 +75,26 @@ INSERT INTO ITEM VALUES
     (72, 'Golden Rapier', 'WEAPON', 7, 20, 1, 5000, ROW(0, 0, 0, 0, 65, 0, 0, 0, 0));
 
 SELECT setval(pg_get_serial_sequence('ITEM', 'id'), 73 , false) FROM ITEM;
+
+INSERT INTO STORE VALUES
+    (1, 'Bobs Weapon Shop'),
+    (2, 'Samuels Armorsmith'),
+    (3, 'The Insane Alchemist''s Workshop'),
+    (4, 'The Little Shop of Freaky Stuff'),
+    (5, 'Sea Shanty');
+
+SELECT setval(pg_get_serial_sequence('STORE', 'id'), 6 , false) FROM STORE;
+
+INSERT INTO StoreVendeItem VALUES
+    -- LOJA 1
+    (1, 40), (1, 41), (1, 42), (1, 43), (1, 44), (1, 58), (1, 59), (1, 60), 
+    (1, 61), (1, 62), (1, 63), (1, 64), (1, 65), (1, 66), (1, 67),  (1, 68),
+    -- LOJA 2
+    (2, 57), (2, 45), (2, 46), (2, 47), (2, 48), (2, 49), (2, 50), (2, 51), 
+    (2, 52), (2, 53), (2, 54), (2, 55), (2, 56),
+    -- LOJA 3
+    (3, 35), (3, 36), (3, 37), (3, 38), (3, 39),
+    -- LOJA 4
+    (4, 1 ),
+    -- LOJA 5
+    (5, 69), (5, 70), (5, 71), (5, 72);
