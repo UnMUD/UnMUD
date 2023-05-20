@@ -119,10 +119,10 @@ CREATE TABLE MapVolatileGuardaItem(
 
 CREATE TABLE EnemyInstance(
     id SERIAL,
-    hitPoints INTEGER,
-    nextAttackTime BIGINT,
     templateId INTEGER,
+    hitPoints INTEGER,
     mapId INTEGER,
+    nextAttackTime BIGINT,
 
     CONSTRAINT EnemyInstance_PK PRIMARY KEY(id),
     CONSTRAINT EnemyInstance_Enemy_FK FOREIGN KEY(templateId) REFERENCES Enemy(id),

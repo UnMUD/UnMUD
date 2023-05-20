@@ -74,7 +74,7 @@ INSERT INTO Item VALUES
     (71, 'Cutlass', 'WEAPON', 20, 45, 3, 1700, ROW(0, 0, 0, 0, 60, 0, 0, 0, 0)),
     (72, 'Golden Rapier', 'WEAPON', 7, 20, 1, 5000, ROW(0, 0, 0, 0, 65, 0, 0, 0, 0));
 
-SELECT setval(pg_get_serial_sequence('Item', 'id'), 73 , false) FROM Item;
+SELECT setval(pg_get_serial_sequence('Item', 'id'), 73, false) FROM Item;
 
 INSERT INTO Store VALUES
     (1, 'Bobs Weapon Shop'),
@@ -83,7 +83,7 @@ INSERT INTO Store VALUES
     (4, 'The Little Shop of Freaky Stuff'),
     (5, 'Sea Shanty');
 
-SELECT setval(pg_get_serial_sequence('Store', 'id'), 6 , false) FROM Store;
+SELECT setval(pg_get_serial_sequence('Store', 'id'), 6, false) FROM Store;
 
 INSERT INTO StoreVendeItem VALUES
     -- LOJA 1
@@ -121,7 +121,7 @@ INSERT INTO Enemy VALUES
     (19, 'Captain Jack', 200, 200, 50, 10, 10, 200, 34, 0, 200),
     (20, 'Backstreet Boy', 150, 125, 100, 2, 3, 150, 58, 0, 40);
 
-SELECT setval(pg_get_serial_sequence('Enemy', 'id'), 6 , false) FROM Enemy;
+SELECT setval(pg_get_serial_sequence('Enemy', 'id'), 6, false) FROM Enemy;
 
 INSERT INTO Loot VALUES
     (1, 40, 3), (1, 35, 2),
@@ -198,7 +198,7 @@ INSERT INTO Map VALUES
     (56, 'Sea Shanty', 'You''re in a little sea shanty, where an old man with a glass eye and a hook for an arm stands, gazing off at something in the ocean. He acknowledges your presense by saying \x1B[0m"Arrr maytee, the sea''s be good this morn. I''ve many a thing ye may need to fight off them dern rogue shipmen on thee docks, just have a looksee at my \x1B[1m\x1B[33mlist\x1B[0m here."', 'STORE', 5, NULL, 0),
     (57, 'Hell', 'You''re in hell. You should have turned away when you had the chance, but no, you didn''t. And now you''re going to die. Have fun being dead.', 'PLAINROOM', NULL, 20, 1);
 
-SELECT setval(pg_get_serial_sequence('Map', 'id'), 58 , false) FROM Map;
+SELECT setval(pg_get_serial_sequence('Map', 'id'), 58, false) FROM Map;
 
 INSERT INTO Conecta VALUES
     ('NORTH', 1, 2), ('EAST', 1, 25), ('SOUTH', 1, 4), ('WEST', 1, 5),
@@ -266,4 +266,21 @@ INSERT INTO MapVolatile VALUES
     (31, 0), (32, 0), (33, 0), (34, 0), (35, 0), (36, 0), (37, 0), (38, 0), (39, 0), (40, 0),
     (41, 0), (42, 0), (43, 0), (44, 0), (45, 0), (46, 0), (47, 0), (48, 0), (49, 0), (50, 0),
     (51, 0), (52, 0), (53, 0), (54, 0), (55, 0), (56, 0), (57, 0);
-    
+
+INSERT INTO EnemyInstance VALUES
+    (2, 2, 15, 6, 0), (3, 1, 6, 7, 0), (4, 3, 15, 8, 0), (5, 4, 30, 9, 0), (6, 5, 50, 10, 0),
+    (7, 6, 4, 12, 0), (8, 6, 4, 13, 0), (9, 6, 4, 14, 0), (10, 7, 100, 15, 0), (11, 8, 30, 16, 0),
+    (12, 5, 50, 19, 0), (13, 4, 30, 20, 0), (14, 9, 20, 21, 0), (15, 9, 20, 22, 0), (16, 9, 20, 23, 0),
+    (17, 10, 7, 26, 0), (18, 10, 10, 27, 0), (19, 11, 15, 28, 0), (20, 12, 10, 29, 0), (21, 12, 10, 30, 0),
+    (22, 12, 10, 31, 0), (23, 12, 10, 32, 0), (24, 13, 175, 33, 0), (25, 8, 30, 34, 0), (26, 14, 120, 37, 0),
+    (27, 20, 150, 39, 0), (28, 15, 100, 40, 0), (29, 11, 15, 41, 0), (30, 2, 15, 42, 0), (31, 6, 4, 44, 0),
+    (32, 6, 4, 45, 0), (33, 16, 50, 46, 0), (34, 16, 50, 47, 0), (35, 9, 20, 50, 0), (36, 9, 20, 51, 0),
+    (37, 17, 50, 52, 0), (38, 17, 50, 53, 0), (39, 18, 100, 54, 0), (40, 19, 200, 55, 0), (41, 20, 150, 57, 0),
+    (42, 1, 6, 7, 0), (43, 6, 4, 13, 0), (44, 6, 4, 14, 0), (45, 5, 50, 19, 0), (46, 4, 30, 20, 0),
+    (47, 9, 20, 21, 0), (48, 9, 20, 22, 0), (49, 12, 10, 30, 0), (50, 12, 10, 31, 0), (51, 12, 10, 32, 0),
+    (52, 8, 30, 34, 0), (53, 11, 15, 41, 0), (54, 2, 15, 42, 0), (55, 6, 4, 44, 0), (56, 9, 20, 51, 0),
+    (57, 17, 50, 53, 0), (58, 1, 6, 7, 0), (59, 6, 4, 13, 0), (60, 6, 4, 14, 0), (61, 4, 30, 20, 0),
+    (62, 9, 20, 21, 0), (63, 12, 10, 30, 0), (64, 12, 10, 32, 0), (65, 8, 30, 34, 0), (66, 2, 15, 42, 0),
+    (67, 6, 4, 44, 0), (68, 12, 10, 32, 0), (69, 2, 15, 42, 0), (70, 12, 10, 32, 0);
+
+SELECT setval(pg_get_serial_sequence('EnemyInstance', 'id'), 71, false) FROM EnemyInstance;    
