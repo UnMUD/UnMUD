@@ -10,4 +10,5 @@ COPY . /Database
 # run create.sql on init
 ADD DDL.sql /docker-entrypoint-initdb.d
 ADD DML.sql /docker-entrypoint-initdb.d
+ADD PROCEDURES.sql /docker-entrypoint-initdb.d
 # ADD Procedures.sql /docker-entrypoint-initdb.d
