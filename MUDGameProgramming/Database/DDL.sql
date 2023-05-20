@@ -52,27 +52,28 @@ CREATE TABLE StoreVendeItem(
 
 CREATE TABLE Enemy(
     id SERIAL,
+    name TEXT,
     hitPoints INTEGER,
     accuracy INTEGER,
     dodging INTEGER,
     strikeDamage INTEGER,
     damageAbsorb INTEGER,
     experience INTEGER,
+    weaponId INTEGER,
     moneyMin UBIGINT,
     moneyMax UBIGINT,
-    weaponId INTEGER,
 
     CONSTRAINT Enemy_PK PRIMARY KEY(id),
     CONSTRAINT Enemy_Item_FK FOREIGN KEY(weaponId) REFERENCES Item(id)
 );
 
 CREATE TABLE Loot(
-    itemQuantity INTEGER,
     enemyId INTEGER,
-    storeId INTEGER,
+    itemId INTEGER,
+    itemQuantity INTEGER,
 
     CONSTRAINT Loot_Enemy_FK FOREIGN KEY(enemyId) REFERENCES Enemy(id),
-    CONSTRAINT Loot_Store_FK FOREIGN KEY(storeId) REFERENCES Store(id)
+    CONSTRAINT Loot_Item_FK FOREIGN KEY(itemId) REFERENCES Item(id)
 );
 
 

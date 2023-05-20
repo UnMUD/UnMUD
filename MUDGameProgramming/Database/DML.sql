@@ -1,6 +1,6 @@
 \c unmud;
 
-INSERT INTO ITEM VALUES 
+INSERT INTO Item VALUES 
     (1, 'LIES!!!@~', 'HEALING', 0, 0, 0, 1, ROW(0, 0, 0, 0, 0, 0, 0, 0, 0)),
     (2, 'Short Sword (OBSOLETE, PLEASE DROP IN TOWN SQUARE)', 'WEAPON', 4, 9, 3, 40, ROW(0, 0, 0, 0, 5, 0, 0, 0, 0)),
     (3, 'Leather Armor (OBSOLETE, PLEASE DROP IN TOWN SQUARE)', 'ARMOR', 0, 0, 0, 20, ROW(0, 0, 0, 0, 0, 10, 0, 2, 0)),
@@ -74,16 +74,16 @@ INSERT INTO ITEM VALUES
     (71, 'Cutlass', 'WEAPON', 20, 45, 3, 1700, ROW(0, 0, 0, 0, 60, 0, 0, 0, 0)),
     (72, 'Golden Rapier', 'WEAPON', 7, 20, 1, 5000, ROW(0, 0, 0, 0, 65, 0, 0, 0, 0));
 
-SELECT setval(pg_get_serial_sequence('ITEM', 'id'), 73 , false) FROM ITEM;
+SELECT setval(pg_get_serial_sequence('Item', 'id'), 73 , false) FROM Item;
 
-INSERT INTO STORE VALUES
+INSERT INTO Store VALUES
     (1, 'Bobs Weapon Shop'),
     (2, 'Samuels Armorsmith'),
     (3, 'The Insane Alchemist''s Workshop'),
     (4, 'The Little Shop of Freaky Stuff'),
     (5, 'Sea Shanty');
 
-SELECT setval(pg_get_serial_sequence('STORE', 'id'), 6 , false) FROM STORE;
+SELECT setval(pg_get_serial_sequence('Store', 'id'), 6 , false) FROM Store;
 
 INSERT INTO StoreVendeItem VALUES
     -- LOJA 1
@@ -98,3 +98,43 @@ INSERT INTO StoreVendeItem VALUES
     (4, 1 ),
     -- LOJA 5
     (5, 69), (5, 70), (5, 71), (5, 72);
+
+INSERT INTO Enemy VALUES
+    (1, 'Rabid Monkey', 6, 40, -30, 0, 0, 4, 40, 0, 2),
+    (2, 'Thug', 15, 70, -10, 0, 0, 10, 41, 0, 4),
+    (3, 'Gangmember', 15, 80, -20, 0, 0, 13, 42, 0, 5),
+    (4, 'Tentacle Monster', 30, 100, -10, 4, 1, 20, 7, 0, 0),
+    (5, 'Abomination', 50, 110, 10, 6, 2, 50, 7, 0, 0),
+    (6, 'Evil Squirrel', 4, 110, 10, -2, 0, 3, NULL, 0, 0),
+    (7, 'Monkey Trainer', 100, 100, 15, 5, 2, 70, 59, 0, 10),
+    (8, 'Bandit', 30, 70, 30, 0, 1, 30, 44, 2, 15),
+    (9, 'Mutant', 20, 90, 10, 2, 0, 15, 28, 0, 1),
+    (10, 'Vagrant', 10, 80, 0, 1, 0, 9, 40, 0, 1),
+    (11, 'Thief', 15, 110, 10, 1, 0, 14, 42, 3, 15),
+    (12, 'Rock Lobster', 10, 90, 10, 2, 0, 8, 26, 0, 0),
+    (13, 'Bikini Whale', 175, 160, -20, 0, 5, 150, 27, 0, 0),
+    (14, 'Gang Leader', 120, 180, 30, 4, 2, 110, 63, 0, 20),
+    (15, 'Ruffian', 100, 140, 40, 2, 3, 80, 43, 0, 10),
+    (16, 'Robber', 50, 140, 40, 2, 3, 35, 42, 5, 15),
+    (17, 'Corsair', 50, 180, 10, 5, 2, 65, 32, 0, 20),
+    (18, 'Pirate', 100, 120, 0, 0, 8, 95, 33, 10, 40),
+    (19, 'Captain Jack', 200, 200, 50, 10, 10, 200, 34, 0, 200),
+    (20, 'Backstreet Boy', 150, 125, 100, 2, 3, 150, 58, 0, 40);
+
+SELECT setval(pg_get_serial_sequence('Enemy', 'id'), 6 , false) FROM Enemy;
+
+INSERT INTO Loot VALUES
+    (1, 40, 3), (1, 35, 2),
+    (2, 41, 1), (2, 35, 2),
+    (3, 42, 1), (3, 57, 2),
+    (7, 59, 1), (7, 57, 1),
+    (8, 44, 1),
+    (10, 40, 1),
+    (11, 42, 1), (11, 41, 1),
+    (14, 63, 1),
+    (15, 43, 1), (15, 35, 1),
+    (16, 42, 2), (16, 57, 5),
+    (17, 69, 1),
+    (18, 70, 1),
+    (19, 71, 1),
+    (20, 58, 1);
