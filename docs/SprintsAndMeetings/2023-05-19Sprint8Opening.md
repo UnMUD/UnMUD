@@ -1,10 +1,10 @@
-# Abertura Sprint 6
+# Abertura Sprint 8
 
 |  **Data**  | **Versão** | **Descrição** | **Autor(es)** |
 | ---------- | ---------- | ------------- | ------------- |
-| 08/05/2023 |  1.0   | Criação do documento de abertura da Sprint 6 | [Iuri Severo](https://github.com/iurisevero) |
+| 22/05/2023 |  1.0   | Criação do documento de abertura da Sprint 8 | [Iuri Severo](https://github.com/iurisevero) |
 
-**Data**: 12 de Maio de 2023
+**Data**: 19 de Maio de 2023
 
 **Redigida por**: Iuri Severo
 
@@ -19,12 +19,14 @@
 
 | Duração |   Início   |     Fim    |
 | ------- | ---------- | ---------- |
-| 7 dias  | 12/05/2023 | 19/05/2023 |
+| 7 dias  | 19/05/2023 | 26/05/2023 |
 
 ### Sprint Backlog
 
 | Descrição da Tarefa | Responsável(eis) | Estimativa de tempo (dias) | Débito Técnico |
 | ------------------- | ---------------- | -------------------------- | -------------- |
-| US48 | Iuri Severo | 14 | 0 |
-| US55 | Iuri Severo | 2 | 0 |
-| US56 | Iuri Severo | 3 | 0 |
+| US57 | Iuri Severo | 3 | 0 |
+| US25 | Iuri Severo | 1 | 0 |
+| US26 | Iuri Severo | 1 | 0 |
+| US27 | Iuri Severo | 1 | 0 |
+| US28 | Iuri Severo | 2 | 0 |
