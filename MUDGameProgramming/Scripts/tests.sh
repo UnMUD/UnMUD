@@ -11,11 +11,12 @@ else
     exit $errorNum
 fi
 
-if make run_tests ; then
-    gcovr --fail-under-line 80 -r ../ -e ../Tests/*.cpp -e ../Tests/*.h  \
+make run_tests
+
+testsRet=$?
+
+gcovr --fail-under-line 80 -r ../ -e ../Tests/  \
     --html $COVERAGEDIR/$DATE-coverage.html --sonarqube $COVERAGEDIR/coverage.xml
-else
-    errorNum=$?
-    echo "Error $errorNum running tests"
-    exit $errorNum
-fi
+
+echo "Running tests finished with return $testsRet"
+exit $errorNum
