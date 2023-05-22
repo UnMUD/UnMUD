@@ -26,7 +26,7 @@ sint64 GetTimeH();
 std::string TimeStamp();
 
 // ============================================================
-// This prints a datestamp in YYYY:MM:DD format
+// This prints a datestamp in YYYY.MM.DD format
 // ============================================================
 std::string DateStamp();
 

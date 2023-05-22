@@ -8,6 +8,8 @@
 #ifndef ATTRIBUTES_H
 #define ATTRIBUTES_H
 
+#include <array>
+
 #include "BasicLib/BasicLib.h"
 
 using std::istream;
@@ -80,27 +82,12 @@ inline string GetAttributeString(Attribute p_enum) {
   return EnumToStr<Attribute>(p_enum, ATTRIBUTESTRINGS);
 }
 
-class AttributeSet {
-public:
-  AttributeSet() {
-    for (int i = 0; i < NUMATTRIBUTES; i++) {
-      m_attributes[i] = 0;
-    }
-  }
-
-  int &operator[](int p_attr) { return m_attributes[p_attr]; }
-
-  friend ostream &operator<<(ostream &p_stream, const AttributeSet &a);
-  friend istream &operator>>(istream &p_stream, AttributeSet &a);
-
-protected:
-  int m_attributes[NUMATTRIBUTES];
-};
+using AttributeSet = std::array<int, NUMATTRIBUTES>;
 
 inline ostream &operator<<(ostream &p_stream, const AttributeSet &a) {
   for (int i = 0; i < NUMATTRIBUTES; i++) {
     p_stream << "[" << GetAttributeString(static_cast<Attribute>(i)) << "] "
-             << a.m_attributes[i] << "\n";
+             << a[i] << "\n";
   }
 
   return p_stream;
@@ -110,7 +97,7 @@ inline istream &operator>>(istream &p_stream, AttributeSet &a) {
   std::string temp;
 
   for (int i = 0; i < NUMATTRIBUTES; i++) {
-    p_stream >> temp >> a.m_attributes[i];
+    p_stream >> temp >> a[i];
   }
 
   return p_stream;

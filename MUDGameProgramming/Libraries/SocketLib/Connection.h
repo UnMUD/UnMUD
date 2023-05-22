@@ -236,9 +236,8 @@ void Connection<protocol>::BufferData(const char *p_buffer, size_t p_size) {
 template <class protocol> void Connection<protocol>::SendBuffer() {
   if (m_sendbuffer.size() > 0) {
     // send the data, and erase as much as was sent from the buffer.
-    size_t sent = static_cast<size_t>(
-      Send(m_sendbuffer.data(), m_sendbuffer.size())
-    );
+    size_t sent =
+        static_cast<size_t>(Send(m_sendbuffer.data(), m_sendbuffer.size()));
     m_sendbuffer.erase(0, sent);
 
     if (sent > 0) {

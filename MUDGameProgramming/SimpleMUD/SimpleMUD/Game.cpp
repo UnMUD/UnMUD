@@ -959,8 +959,7 @@ void Game::EnemyAttack(enemy p_enemy) {
   std::list<player>::iterator itr = r->Players().begin();
 
   std::advance(itr, BasicLib::RandomInt(
-    0, static_cast<sint32>(r->Players().size()) - 1)
-  );
+                        0, static_cast<sint32>(r->Players().size()) - 1));
 
   Player &p = **itr;
 
@@ -1101,12 +1100,8 @@ void Game::EnemyKilled(enemy p_enemy, player p_player) {
   SendRoom(cyan + bold + e.Name() + " has died!", e.CurrentRoom());
 
   // drop the money
-  money m = static_cast<money>(
-    BasicLib::RandomInt(
-      static_cast<sint32>(e.MoneyMin()), 
-      static_cast<sint32>(e.MoneyMax())
-    )
-  );
+  money m = static_cast<money>(BasicLib::RandomInt(
+      static_cast<sint32>(e.MoneyMin()), static_cast<sint32>(e.MoneyMax())));
   if (m > 0) {
     e.CurrentRoom()->Money() += m;
     SendRoom(cyan + "$" + tostring(m) + " drops to the ground.",
