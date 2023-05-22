@@ -37,8 +37,6 @@ operator<<
 operator>>
 GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
-AttributeSet
-operator[]
 operator<< call:[GetAttributeString]
 operator>>
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
@@ -77,7 +75,7 @@ Conn
 LoggedIn
 Active
 Newbie
-NeedForLevel call:[pow,return]
+NeedForLevel call:[pow]
 GetAttr
 GetBaseAttr
 Weapon
@@ -110,8 +108,8 @@ EnumToStr < ItemType >
 EnumToStr < PlayerRank >
 EnumToStr < RoomType >
 EnumToStr < Direction >
-StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
-StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
-StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
-StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
-StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase]

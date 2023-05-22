@@ -1,29 +1,83 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="805689697">
+<analyzerinfo checksum="919044701">
+        <error id="uselessCallsSubstr" severity="performance" msg="Ineffective call of function &apos;substr&apos; because it returns an empty string." verbose="Ineffective call of function &apos;substr&apos; because it returns an empty string." cwe="398" file0="Libraries/BasicLib/BasicLibString.cpp">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="54" column="12"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:20:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="13" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:21:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="22" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:23:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="33" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:29:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="50" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:30:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="61" col="16" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="85" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:20:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="13" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:21:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="22" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:23:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="33" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:50:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="52" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="57" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:60:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="62" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:91:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="93" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:29:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="50" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:30:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="61" col="16" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="85" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:20:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="13" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:21:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="22" col="21" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:23:13" my-argnr="1" my-argname="p_target" file="Libraries/BasicLib/BasicLibString.cpp" line="33" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:50:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="52" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="57" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:60:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="62" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:91:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="93" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:29:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="50" col="9" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:30:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="61" col="16" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:31:13" my-argnr="1" my-argname="p_string" file="Libraries/BasicLib/BasicLibString.cpp" line="85" col="16" value="0"/>
+  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="UpperCase" lineNumber="14"/>
-    <functiondecl functionName="LowerCase" lineNumber="25"/>
-    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
-    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
-    <functiondecl functionName="ParseWord" lineNumber="77"/>
-    <functiondecl functionName="RemoveWord" lineNumber="104"/>
-    <functiondecl functionName="UpperCase" lineNumber="14"/>
-    <functiondecl functionName="LowerCase" lineNumber="25"/>
-    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
-    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
-    <functiondecl functionName="ParseWord" lineNumber="77"/>
-    <functiondecl functionName="RemoveWord" lineNumber="104"/>
-    <functiondecl functionName="UpperCase" lineNumber="14"/>
-    <functiondecl functionName="LowerCase" lineNumber="25"/>
-    <functiondecl functionName="SearchAndReplace" lineNumber="38"/>
-    <functiondecl functionName="TrimWhitespace" lineNumber="58"/>
-    <functiondecl functionName="ParseWord" lineNumber="77"/>
-    <functiondecl functionName="RemoveWord" lineNumber="104"/>
+    <functiondecl functionName="UpperCase" lineNumber="12"/>
+    <functiondecl functionName="LowerCase" lineNumber="21"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="30"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="45"/>
+    <functiondecl functionName="ParseWord" lineNumber="60"/>
+    <functiondecl functionName="RemoveWord" lineNumber="84"/>
+    <functiondecl functionName="UpperCase" lineNumber="12"/>
+    <functiondecl functionName="LowerCase" lineNumber="21"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="30"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="45"/>
+    <functiondecl functionName="ParseWord" lineNumber="60"/>
+    <functiondecl functionName="RemoveWord" lineNumber="84"/>
+    <functiondecl functionName="UpperCase" lineNumber="12"/>
+    <functiondecl functionName="LowerCase" lineNumber="21"/>
+    <functiondecl functionName="SearchAndReplace" lineNumber="30"/>
+    <functiondecl functionName="TrimWhitespace" lineNumber="45"/>
+    <functiondecl functionName="ParseWord" lineNumber="60"/>
+    <functiondecl functionName="RemoveWord" lineNumber="84"/>
     <functioncall functionName="WHITESPACE"/>
     <functioncall functionName="_atoi64"/>
     <functioncall functionName="_i64toa"/>
     <functioncall functionName="_ui64toa"/>
     <functioncall functionName="c_str"/>
+    <functioncall functionName="char"/>
     <functioncall functionName="digits"/>
     <functioncall functionName="erase"/>
     <functioncall functionName="extract"/>
@@ -52,12 +106,14 @@
     <functioncall functionName="setstate"/>
     <functioncall functionName="size"/>
     <functioncall functionName="skipws"/>
+    <functioncall functionName="static_cast"/>
     <functioncall functionName="str"/>
     <functioncall functionName="string"/>
     <functioncall functionName="substr"/>
     <functioncall functionName="t"/>
     <functioncall functionName="tolower"/>
     <functioncall functionName="toupper"/>
+    <functioncall functionName="typename"/>
     <functioncall functionName="while"/>
     <functioncall functionName="wse"/>
     <functioncall functionName="wsf"/>

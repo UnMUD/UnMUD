@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="1086599631">
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
-            <location file0="Libraries/SocketLib/SocketLibErrors.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+<analyzerinfo checksum="2677398668">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketLibErrors.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.h" line="96" column="3"/>
             <symbol>Exception</symbol>
         </error>
-        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;p_code&apos; to itself." verbose="Redundant assignment of &apos;p_code&apos; to itself." cwe="398">
-            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;p_code&apos; to itself." verbose="Redundant assignment of &apos;p_code&apos; to itself." cwe="398" file0="Libraries/SocketLib/SocketLibErrors.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="207" column="12"/>
             <symbol>p_code</symbol>
         </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;p_code&apos; is assigned a value that is never used." verbose="Variable &apos;p_code&apos; is assigned a value that is never used." cwe="563">
-            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="226" column="20"/>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;p_code&apos; is assigned a value that is never used." verbose="Variable &apos;p_code&apos; is assigned a value that is never used." cwe="563" file0="Libraries/SocketLib/SocketLibErrors.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.cpp" line="207" column="12"/>
             <symbol>p_code</symbol>
         </error>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="GetError" lineNumber="20"/>
-    <functiondecl functionName="TranslateError" lineNumber="119"/>
-    <functiondecl functionName="ErrorCode" lineNumber="234"/>
-    <functiondecl functionName="PrintError" lineNumber="243"/>
-    <functiondecl functionName="GetError" lineNumber="20"/>
-    <functiondecl functionName="TranslateError" lineNumber="40"/>
-    <functiondecl functionName="ErrorCode" lineNumber="234"/>
-    <functiondecl functionName="PrintError" lineNumber="243"/>
+    <functiondecl functionName="GetError" lineNumber="15"/>
+    <functiondecl functionName="TranslateError" lineNumber="110"/>
+    <functiondecl functionName="ErrorCode" lineNumber="215"/>
+    <functiondecl functionName="PrintError" lineNumber="221"/>
+    <functiondecl functionName="GetError" lineNumber="15"/>
+    <functiondecl functionName="TranslateError" lineNumber="33"/>
+    <functiondecl functionName="ErrorCode" lineNumber="215"/>
+    <functiondecl functionName="PrintError" lineNumber="221"/>
     <functioncall functionName="EAccessDenied"/>
     <functioncall functionName="EAddressFamilyNotSupported"/>
     <functioncall functionName="EAddressInUse"/>

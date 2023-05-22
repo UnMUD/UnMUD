@@ -1,3 +1,16 @@
+GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
+GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
+operator<< call:[GetAttributeString]
+operator>>
+GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
+GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
+GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
+GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
+GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
+GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
+OppositeDirection call:[return]
+GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
+GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
 Entity
 Name
 CompName call:[LowerCase] noreturn:[LowerCase]
@@ -10,21 +23,6 @@ operator() call:[MatchFull] noreturn:[MatchFull]
 matchentity
 operator() call:[Match] noreturn:[Match]
 operator() call:[Match] noreturn:[Match]
-GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
-GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
-AttributeSet
-operator[]
-operator<< call:[GetAttributeString]
-operator>>
-GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
-GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
-GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
-GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
-GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
-GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
-OppositeDirection call:[return]
-GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
-GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
 Item
 Type
 GetAttr
@@ -74,7 +72,7 @@ Conn
 LoggedIn
 Active
 Newbie
-NeedForLevel call:[pow,return]
+NeedForLevel call:[pow]
 GetAttr
 GetBaseAttr
 Weapon
@@ -102,7 +100,7 @@ RemoveWeapon call:[RecalculateStats] noreturn:[RecalculateStats]
 RemoveArmor call:[RecalculateStats] noreturn:[RecalculateStats]
 UseWeapon call:[RecalculateStats,RemoveWeapon] noreturn:[RecalculateStats]
 UseArmor call:[RecalculateStats,RemoveArmor] noreturn:[RecalculateStats]
-GetItemIndex call:[MaxItems,double_find_if,matchentity,matchentityfull,return]
+GetItemIndex call:[MaxItems,double_find_if,matchentity,matchentityfull]
 SendString call:[Active,Conn,Log,Name,PrintStatbar,Protocol,SendString] noreturn:[PrintStatbar]
 PrintStatbar call:[Buffered,Conn,GetAttr,HitPoints,Protocol,SendString,tostring] noreturn:[SendString]
 operator<< call:[GetRankString,MaxItems,insert]
@@ -112,8 +110,8 @@ EnumToStr < ItemType >
 EnumToStr < PlayerRank >
 EnumToStr < RoomType >
 EnumToStr < Direction >
-StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
-StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
-StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
-StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
-StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase]

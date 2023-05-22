@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+Checking Libraries/BasicLib/BasicLibFiles.cpp ...
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_directory&apos; should be passed by const reference." verbose="Parameter &apos;p_directory&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="Libraries/BasicLib/BasicLibFiles.cpp">
+            <location file="Libraries/BasicLib/BasicLibFiles.cpp" line="17" column="40"/>
+            <symbol>p_directory</symbol>
+        </error>
+Checking Libraries/BasicLib/BasicLibFiles.cpp: WIN32...
+Checking Libraries/BasicLib/BasicLibFiles.cpp: __GNUC__...
+1/4 files checked 10% done
+Checking Libraries/BasicLib/BasicLibRandom.cpp ...
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simulated_binomial &lt; 4 , random_int_range &lt; &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simulated_binomial &lt; 4 , random_int_range &lt; &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="193" column="3"/>
+            <symbol>simulated_binomial &lt; 4 , random_int_range &lt; &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_int_range &lt; random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_int_range &lt; random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="156" column="3"/>
+            <symbol>random_int_range &lt; random_percent &lt; false &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_range &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_range &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="123" column="3"/>
+            <symbol>random_range &lt; true , random_percent &lt; true &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_range &lt; false , random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_range &lt; false , random_percent &lt; false &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="123" column="3"/>
+            <symbol>random_range &lt; false , random_percent &lt; false &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;normal_generator &lt; true , random_percent &lt; true &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="80" column="3"/>
+            <symbol>normal_generator &lt; true , random_percent &lt; true &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_percent &lt; true , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_percent &lt; true , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="45" column="3"/>
+            <symbol>random_percent &lt; true , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;random_percent &lt; false , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;random_percent &lt; false , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/BasicLib/BasicLibRandom.cpp">
+            <location file="Libraries/BasicLib/BasicLibRandom.h" line="45" column="3"/>
+            <symbol>random_percent &lt; false , linear_congruency &lt; uint32 , 2147483648u , 1103515245 , 12345 &gt; &gt;</symbol>
+        </error>
+Checking Libraries/BasicLib/BasicLibRandom.cpp: WIN32...
+Checking Libraries/BasicLib/BasicLibRandom.cpp: __GNUC__...
+2/4 files checked 17% done
+Checking Libraries/BasicLib/BasicLibString.cpp ...
+        <error id="uselessCallsSubstr" severity="performance" msg="Ineffective call of function &apos;substr&apos; because it returns an empty string." verbose="Ineffective call of function &apos;substr&apos; because it returns an empty string." cwe="398" file0="Libraries/BasicLib/BasicLibString.cpp">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="54" column="12"/>
+        </error>
+Checking Libraries/BasicLib/BasicLibString.cpp: CRAPPYCOMPILER...
+Checking Libraries/BasicLib/BasicLibString.cpp: WIN32...
+Checking Libraries/BasicLib/BasicLibString.cpp: __GNUC__...
+3/4 files checked 52% done
+Checking Libraries/BasicLib/BasicLibTime.cpp ...
+Checking Libraries/BasicLib/BasicLibTime.cpp: CRAPPYCOMPILER...
+Checking Libraries/BasicLib/BasicLibTime.cpp: WIN32...
+Checking Libraries/BasicLib/BasicLibTime.cpp: __GNUC__...
+4/4 files checked 100% done
+        <error id="unusedFunction" severity="style" msg="The function &apos;DateStamp&apos; is never used." verbose="The function &apos;DateStamp&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="96" column="0"/>
+            <symbol>DateStamp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetFileList&apos; is never used." verbose="The function &apos;GetFileList&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibFiles.cpp" line="17" column="0"/>
+            <symbol>GetFileList</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetS&apos; is never used." verbose="The function &apos;GetS&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="122" column="0"/>
+            <symbol>GetS</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetString&apos; is never used." verbose="The function &apos;GetString&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="132" column="0"/>
+            <symbol>GetString</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeH&apos; is never used." verbose="The function &apos;GetTimeH&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="75" column="0"/>
+            <symbol>GetTimeH</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeM&apos; is never used." verbose="The function &apos;GetTimeM&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="73" column="0"/>
+            <symbol>GetTimeM</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;GetTimeS&apos; is never used." verbose="The function &apos;GetTimeS&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="71" column="0"/>
+            <symbol>GetTimeS</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;LowerCase&apos; is never used." verbose="The function &apos;LowerCase&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="21" column="0"/>
+            <symbol>LowerCase</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;ParseWord&apos; is never used." verbose="The function &apos;ParseWord&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="60" column="0"/>
+            <symbol>ParseWord</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;RemoveWord&apos; is never used." verbose="The function &apos;RemoveWord&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="84" column="0"/>
+            <symbol>RemoveWord</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Reset&apos; is never used." verbose="The function &apos;Reset&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="111" column="0"/>
+            <symbol>Reset</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;SearchAndReplace&apos; is never used." verbose="The function &apos;SearchAndReplace&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="30" column="0"/>
+            <symbol>SearchAndReplace</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;TimeStamp&apos; is never used." verbose="The function &apos;TimeStamp&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="80" column="0"/>
+            <symbol>TimeStamp</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;TrimWhitespace&apos; is never used." verbose="The function &apos;TrimWhitespace&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="45" column="0"/>
+            <symbol>TrimWhitespace</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;UpperCase&apos; is never used." verbose="The function &apos;UpperCase&apos; is never used." cwe="561">
+            <location file="Libraries/BasicLib/BasicLibString.cpp" line="12" column="0"/>
+            <symbol>UpperCase</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

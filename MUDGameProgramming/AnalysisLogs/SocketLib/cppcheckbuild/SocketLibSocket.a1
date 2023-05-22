@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="1523722305">
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
-            <location file0="Libraries/SocketLib/SocketLibSocket.cpp" file="Libraries/SocketLib/SocketLibErrors.h" line="109" column="9"/>
+<analyzerinfo checksum="474650468">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Exception&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="Libraries/SocketLib/SocketLibSocket.cpp">
+            <location file="Libraries/SocketLib/SocketLibErrors.h" line="96" column="3"/>
             <symbol>Exception</symbol>
         </error>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="Close" lineNumber="17"/>
-    <functiondecl functionName="SetBlocking" lineNumber="37"/>
-    <functiondecl functionName="Connect" lineNumber="114"/>
-    <functiondecl functionName="Send" lineNumber="166"/>
-    <functiondecl functionName="Receive" lineNumber="201"/>
-    <functiondecl functionName="Close" lineNumber="230"/>
-    <functiondecl functionName="Listen" lineNumber="258"/>
-    <functiondecl functionName="Accept" lineNumber="318"/>
-    <functiondecl functionName="Close" lineNumber="340"/>
-    <functiondecl functionName="Close" lineNumber="17"/>
-    <functiondecl functionName="SetBlocking" lineNumber="37"/>
-    <functiondecl functionName="Connect" lineNumber="114"/>
-    <functiondecl functionName="Send" lineNumber="166"/>
-    <functiondecl functionName="Receive" lineNumber="201"/>
-    <functiondecl functionName="Close" lineNumber="230"/>
-    <functiondecl functionName="Listen" lineNumber="258"/>
-    <functiondecl functionName="Accept" lineNumber="318"/>
-    <functiondecl functionName="Close" lineNumber="340"/>
+    <functiondecl functionName="Close" lineNumber="15"/>
+    <functiondecl functionName="SetBlocking" lineNumber="34"/>
+    <functiondecl functionName="Connect" lineNumber="95"/>
+    <functiondecl functionName="Send" lineNumber="142"/>
+    <functiondecl functionName="Receive" lineNumber="173"/>
+    <functiondecl functionName="Close" lineNumber="198"/>
+    <functiondecl functionName="Listen" lineNumber="221"/>
+    <functiondecl functionName="Accept" lineNumber="274"/>
+    <functiondecl functionName="Close" lineNumber="294"/>
+    <functiondecl functionName="Close" lineNumber="15"/>
+    <functiondecl functionName="SetBlocking" lineNumber="34"/>
+    <functiondecl functionName="Connect" lineNumber="95"/>
+    <functiondecl functionName="Send" lineNumber="142"/>
+    <functiondecl functionName="Receive" lineNumber="173"/>
+    <functiondecl functionName="Close" lineNumber="198"/>
+    <functiondecl functionName="Listen" lineNumber="221"/>
+    <functiondecl functionName="Accept" lineNumber="274"/>
+    <functiondecl functionName="Close" lineNumber="294"/>
     <functioncall functionName="AF_INET"/>
     <functioncall functionName="Close"/>
     <functioncall functionName="DataSocket"/>
@@ -78,6 +78,7 @@
     <functioncall functionName="Socket"/>
     <functioncall functionName="accept"/>
     <functioncall functionName="bind"/>
+    <functioncall functionName="char"/>
     <functioncall functionName="close"/>
     <functioncall functionName="closesocket"/>
     <functioncall functionName="connect"/>
@@ -90,9 +91,12 @@
     <functioncall functionName="htonl"/>
     <functioncall functionName="htons"/>
     <functioncall functionName="if"/>
+    <functioncall functionName="in_addr_t"/>
     <functioncall functionName="ioctlsocket"/>
     <functioncall functionName="listen"/>
     <functioncall functionName="m_connected"/>
+    <functioncall functionName="m_isblocking"/>
+    <functioncall functionName="m_listening"/>
     <functioncall functionName="m_localinfo"/>
     <functioncall functionName="m_remoteinfo"/>
     <functioncall functionName="m_sock"/>
@@ -106,6 +110,7 @@
     <functioncall functionName="p_size"/>
     <functioncall functionName="p_socket"/>
     <functioncall functionName="recv"/>
+    <functioncall functionName="reinterpret_cast"/>
     <functioncall functionName="reuse"/>
     <functioncall functionName="s"/>
     <functioncall functionName="s_addr"/>
@@ -116,8 +121,11 @@
     <functioncall functionName="sin_zero"/>
     <functioncall functionName="size"/>
     <functioncall functionName="sizeof"/>
+    <functioncall functionName="sockaddr"/>
     <functioncall functionName="socket"/>
     <functioncall functionName="socketaddress"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="struct"/>
     <functioncall functionName="throw"/>
     <functioncall functionName="true"/>
   </FileInfo>

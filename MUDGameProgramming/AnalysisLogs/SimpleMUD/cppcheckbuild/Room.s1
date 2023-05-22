@@ -10,29 +10,6 @@ operator() call:[MatchFull] noreturn:[MatchFull]
 matchentity
 operator() call:[Match] noreturn:[Match]
 operator() call:[Match] noreturn:[Match]
-GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
-GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
-AttributeSet
-operator[]
-operator<< call:[GetAttributeString]
-operator>>
-GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
-GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
-GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
-GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
-GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
-GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
-OppositeDirection call:[return]
-GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
-GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
-Item
-Type
-GetAttr
-Min
-Max
-Speed
-Price
-operator>> call:[GetItemType,getline]
 player
 operator=
 operatorint
@@ -58,6 +35,30 @@ operator=
 operatorint
 operator<<
 operator>>
+GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
+GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
+operator<< call:[GetAttributeString]
+operator>>
+GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
+GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
+GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
+GetRankString call:[EnumToStr < PlayerRank >] noreturn:[EnumToStr < PlayerRank >]
+GetRoomType call:[StrToEnum < RoomType , NUMROOMTYPES >] noreturn:[StrToEnum < RoomType , NUMROOMTYPES >]
+GetRoomTypeString call:[EnumToStr < RoomType >] noreturn:[EnumToStr < RoomType >]
+OppositeDirection call:[return]
+GetDirection call:[StrToEnum < Direction , NUMDIRECTIONS >] noreturn:[StrToEnum < Direction , NUMDIRECTIONS >]
+GetDirectionString call:[EnumToStr < Direction >] noreturn:[EnumToStr < Direction >]
+Item
+Type
+GetAttr
+Min
+Max
+Speed
+Price
+operator>> call:[GetItemType,getline]
+HitPoints
+CurrentRoom
+NextAttackTime
 Type
 Data
 Description
@@ -68,9 +69,6 @@ Items
 Money
 Enemies
 Players
-HitPoints
-CurrentRoom
-NextAttackTime
 Room
 AddPlayer call:[push_back] noreturn:[push_back]
 RemovePlayer call:[begin,end,erase,find] noreturn:[erase]
@@ -88,8 +86,8 @@ EnumToStr < ItemType >
 EnumToStr < PlayerRank >
 EnumToStr < RoomType >
 EnumToStr < Direction >
-StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
-StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
-StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
-StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
-StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase]

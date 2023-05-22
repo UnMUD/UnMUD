@@ -1,70 +1,94 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="351330970">
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_starttime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_starttime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="137" column="9"/>
-            <symbol>m_starttime</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_inittime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_inittime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="Libraries/BasicLib/BasicLibTime.cpp" line="138" column="9"/>
-            <symbol>m_inittime</symbol>
-        </error>
+<analyzerinfo checksum="4282736040">
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:50:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="52" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="57" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:60:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="62" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:91:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="93" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:50:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="52" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:55:25" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="57" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:60:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="62" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:91:28" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="93" col="7" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="38" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:37:38" my-argnr="2" my-argname="t" file="Libraries/BasicLib/BasicLibString.h" line="38" col="8" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:40:39" my-argnr="1" my-argname="s" file="Libraries/BasicLib/BasicLibString.h" line="41" col="3" value="0"/>
+    <unsafe-usage my-id="Libraries/BasicLib/BasicLibString.h:119:20" my-argnr="1" my-argname="p_type" file="Libraries/BasicLib/BasicLibString.h" line="121" col="15" value="0"/>
+  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="GetTimeMS" lineNumber="57"/>
-    <functiondecl functionName="GetTimeS" lineNumber="83"/>
-    <functiondecl functionName="GetTimeM" lineNumber="88"/>
-    <functiondecl functionName="GetTimeH" lineNumber="93"/>
-    <functiondecl functionName="TimeStamp" lineNumber="102"/>
-    <functiondecl functionName="DateStamp" lineNumber="120"/>
-    <functiondecl functionName="Reset" lineNumber="142"/>
-    <functiondecl functionName="GetMS" lineNumber="148"/>
-    <functiondecl functionName="GetS" lineNumber="155"/>
-    <functiondecl functionName="GetM" lineNumber="160"/>
-    <functiondecl functionName="GetH" lineNumber="165"/>
-    <functiondecl functionName="GetD" lineNumber="170"/>
-    <functiondecl functionName="GetY" lineNumber="175"/>
-    <functiondecl functionName="GetString" lineNumber="180"/>
-    <functiondecl functionName="GetTimeMS" lineNumber="57"/>
-    <functiondecl functionName="GetTimeS" lineNumber="83"/>
-    <functiondecl functionName="GetTimeM" lineNumber="88"/>
-    <functiondecl functionName="GetTimeH" lineNumber="93"/>
-    <functiondecl functionName="TimeStamp" lineNumber="102"/>
-    <functiondecl functionName="DateStamp" lineNumber="120"/>
-    <functiondecl functionName="Reset" lineNumber="142"/>
-    <functiondecl functionName="GetMS" lineNumber="148"/>
-    <functiondecl functionName="GetS" lineNumber="155"/>
-    <functiondecl functionName="GetM" lineNumber="160"/>
-    <functiondecl functionName="GetH" lineNumber="165"/>
-    <functiondecl functionName="GetD" lineNumber="170"/>
-    <functiondecl functionName="GetY" lineNumber="175"/>
-    <functiondecl functionName="GetString" lineNumber="180"/>
-    <functiondecl functionName="GetTimeMS" lineNumber="57"/>
-    <functiondecl functionName="GetTimeS" lineNumber="83"/>
-    <functiondecl functionName="GetTimeM" lineNumber="88"/>
-    <functiondecl functionName="GetTimeH" lineNumber="93"/>
-    <functiondecl functionName="TimeStamp" lineNumber="102"/>
-    <functiondecl functionName="DateStamp" lineNumber="120"/>
-    <functiondecl functionName="Reset" lineNumber="142"/>
-    <functiondecl functionName="GetMS" lineNumber="148"/>
-    <functiondecl functionName="GetS" lineNumber="155"/>
-    <functiondecl functionName="GetM" lineNumber="160"/>
-    <functiondecl functionName="GetH" lineNumber="165"/>
-    <functiondecl functionName="GetD" lineNumber="170"/>
-    <functiondecl functionName="GetY" lineNumber="175"/>
-    <functiondecl functionName="GetString" lineNumber="180"/>
-    <functiondecl functionName="GetTimeMS" lineNumber="57"/>
-    <functiondecl functionName="GetTimeS" lineNumber="83"/>
-    <functiondecl functionName="GetTimeM" lineNumber="88"/>
-    <functiondecl functionName="GetTimeH" lineNumber="93"/>
-    <functiondecl functionName="TimeStamp" lineNumber="102"/>
-    <functiondecl functionName="DateStamp" lineNumber="120"/>
-    <functiondecl functionName="Reset" lineNumber="142"/>
-    <functiondecl functionName="GetMS" lineNumber="148"/>
-    <functiondecl functionName="GetS" lineNumber="155"/>
-    <functiondecl functionName="GetM" lineNumber="160"/>
-    <functiondecl functionName="GetH" lineNumber="165"/>
-    <functiondecl functionName="GetD" lineNumber="170"/>
-    <functiondecl functionName="GetY" lineNumber="175"/>
-    <functiondecl functionName="GetString" lineNumber="180"/>
+    <functiondecl functionName="GetTimeMS" lineNumber="47"/>
+    <functiondecl functionName="GetTimeS" lineNumber="71"/>
+    <functiondecl functionName="GetTimeM" lineNumber="73"/>
+    <functiondecl functionName="GetTimeH" lineNumber="75"/>
+    <functiondecl functionName="TimeStamp" lineNumber="80"/>
+    <functiondecl functionName="DateStamp" lineNumber="96"/>
+    <functiondecl functionName="Reset" lineNumber="111"/>
+    <functiondecl functionName="GetMS" lineNumber="116"/>
+    <functiondecl functionName="GetS" lineNumber="122"/>
+    <functiondecl functionName="GetM" lineNumber="124"/>
+    <functiondecl functionName="GetH" lineNumber="126"/>
+    <functiondecl functionName="GetD" lineNumber="128"/>
+    <functiondecl functionName="GetY" lineNumber="130"/>
+    <functiondecl functionName="GetString" lineNumber="132"/>
+    <functiondecl functionName="GetTimeMS" lineNumber="47"/>
+    <functiondecl functionName="GetTimeS" lineNumber="71"/>
+    <functiondecl functionName="GetTimeM" lineNumber="73"/>
+    <functiondecl functionName="GetTimeH" lineNumber="75"/>
+    <functiondecl functionName="TimeStamp" lineNumber="80"/>
+    <functiondecl functionName="DateStamp" lineNumber="96"/>
+    <functiondecl functionName="Reset" lineNumber="111"/>
+    <functiondecl functionName="GetMS" lineNumber="116"/>
+    <functiondecl functionName="GetS" lineNumber="122"/>
+    <functiondecl functionName="GetM" lineNumber="124"/>
+    <functiondecl functionName="GetH" lineNumber="126"/>
+    <functiondecl functionName="GetD" lineNumber="128"/>
+    <functiondecl functionName="GetY" lineNumber="130"/>
+    <functiondecl functionName="GetString" lineNumber="132"/>
+    <functiondecl functionName="GetTimeMS" lineNumber="47"/>
+    <functiondecl functionName="GetTimeS" lineNumber="71"/>
+    <functiondecl functionName="GetTimeM" lineNumber="73"/>
+    <functiondecl functionName="GetTimeH" lineNumber="75"/>
+    <functiondecl functionName="TimeStamp" lineNumber="80"/>
+    <functiondecl functionName="DateStamp" lineNumber="96"/>
+    <functiondecl functionName="Reset" lineNumber="111"/>
+    <functiondecl functionName="GetMS" lineNumber="116"/>
+    <functiondecl functionName="GetS" lineNumber="122"/>
+    <functiondecl functionName="GetM" lineNumber="124"/>
+    <functiondecl functionName="GetH" lineNumber="126"/>
+    <functiondecl functionName="GetD" lineNumber="128"/>
+    <functiondecl functionName="GetY" lineNumber="130"/>
+    <functiondecl functionName="GetString" lineNumber="132"/>
+    <functiondecl functionName="GetTimeMS" lineNumber="47"/>
+    <functiondecl functionName="GetTimeS" lineNumber="71"/>
+    <functiondecl functionName="GetTimeM" lineNumber="73"/>
+    <functiondecl functionName="GetTimeH" lineNumber="75"/>
+    <functiondecl functionName="TimeStamp" lineNumber="80"/>
+    <functiondecl functionName="DateStamp" lineNumber="96"/>
+    <functiondecl functionName="Reset" lineNumber="111"/>
+    <functiondecl functionName="GetMS" lineNumber="116"/>
+    <functiondecl functionName="GetS" lineNumber="122"/>
+    <functiondecl functionName="GetM" lineNumber="124"/>
+    <functiondecl functionName="GetH" lineNumber="126"/>
+    <functiondecl functionName="GetD" lineNumber="128"/>
+    <functiondecl functionName="GetY" lineNumber="130"/>
+    <functiondecl functionName="GetString" lineNumber="132"/>
     <functioncall functionName="GetD"/>
     <functioncall functionName="GetH"/>
     <functioncall functionName="GetM"/>
@@ -113,6 +137,7 @@
     <functioncall functionName="time"/>
     <functioncall functionName="tostring"/>
     <functioncall functionName="tv_sec"/>
+    <functioncall functionName="typename"/>
     <functioncall functionName="while"/>
     <functioncall functionName="y"/>
   </FileInfo>

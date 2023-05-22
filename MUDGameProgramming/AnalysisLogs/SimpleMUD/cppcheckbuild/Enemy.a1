@@ -1,67 +1,93 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="2679729656">
-        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." verbose="Member variable &apos;Item::m_price&apos; is not initialized in the constructor." cwe="398">
-            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Item.h" line="32" column="5"/>
-            <symbol>Item::m_price</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="38" column="9"/>
-            <symbol>m_name</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_weapon&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_weapon&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="26" column="5"/>
-            <symbol>m_weapon</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_template&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_template&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="65" column="5"/>
-            <symbol>m_template</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_room&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_room&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="67" column="5"/>
-            <symbol>m_room</symbol>
-        </error>
-        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_nextattacktime&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_nextattacktime&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
-            <location file="SimpleMUD/SimpleMUD/Enemy.cpp" line="68" column="5"/>
-            <symbol>m_nextattacktime</symbol>
-        </error>
-        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
-            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="120" column="5"/>
+<analyzerinfo checksum="3117317021">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Entity.h" line="99" column="3"/>
             <symbol>matchentityfull</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
-            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Entity.h" line="140" column="5"/>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Entity.h" line="112" column="3"/>
             <symbol>matchentity</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
-            <location file0="SimpleMUD/SimpleMUD/Enemy.cpp" file="SimpleMUD/SimpleMUD/Player.h" line="254" column="5"/>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Player.h" line="216" column="3"/>
             <symbol>playersend</symbol>
         </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="78" column="38"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="120" column="36"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="142" column="34"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="164" column="36"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Enemy.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="188" column="38"/>
+            <symbol>p_str</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; Attribute , NUMATTRIBUTES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="79" col="45" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="82" col="30" call-argexpr="p_enum" call-argvaluetype="0" call-argvalue="0">
+  <path file="SimpleMUD/SimpleMUD/Attributes.h" line="89" col="65" info="Calling function &apos;GetAttributeString&apos;, 1st argument &apos;static_cast&lt;Attribute&gt;(i)&apos; value is 0"/>
+</function-call><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="82" col="30" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:81:15" call-funcname="GetAttributeString" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="89" col="42" call-argexpr="static_cast&lt;Attribute&gt;(i)" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; ItemType , NUMITEMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="121" col="43" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; ItemType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="124" col="29" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; PlayerRank , NUMPLAYERRANKTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="143" col="51" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; PlayerRank &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="146" col="31" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; RoomType , NUMROOMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="165" col="43" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; RoomType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="168" col="29" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; Direction , NUMDIRECTIONS &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="189" col="45" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Direction &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="192" col="30" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
   <FileInfo check="Null pointer">
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
   </FileInfo>
   <FileInfo check="Uninitialized variables">
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:0" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="12" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Entity.h:57:15" my-argnr="1" my-argname="p_str" file="SimpleMUD/SimpleMUD/Entity.h" line="59" col="9" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Entity.h:102:8" my-argnr="1" my-argname="p_entity" file="SimpleMUD/SimpleMUD/Entity.h" line="102" col="52" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Entity.h:115:8" my-argnr="1" my-argname="p_entity" file="SimpleMUD/SimpleMUD/Entity.h" line="115" col="52" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:56:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="56" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:56:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="56" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:56:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="56" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:57:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="57" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:57:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="57" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:57:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="57" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:58:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="58" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:58:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="58" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:58:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="58" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:59:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="59" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:59:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="59" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:59:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="59" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:64:17" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Item.h" line="67" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:192:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="192" col="53" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:203:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="203" col="53" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:219:8" my-argnr="1" my-argname="p" file="SimpleMUD/SimpleMUD/Player.h" line="219" col="32" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Enemy.h:77:10" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Enemy.cpp" line="26" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Enemy.h:78:10" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Enemy.cpp" line="72" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Enemy.h:78:10" my-argnr="2" my-argname="t" file="SimpleMUD/SimpleMUD/Enemy.cpp" line="72" col="38" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Enemy.h:79:10" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Enemy.cpp" line="88" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
   </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="LoadTemplate" lineNumber="71"/>
-    <functiondecl functionName="Name" lineNumber="78"/>
-    <functiondecl functionName="Accuracy" lineNumber="79"/>
-    <functiondecl functionName="Dodging" lineNumber="80"/>
-    <functiondecl functionName="StrikeDamage" lineNumber="81"/>
-    <functiondecl functionName="DamageAbsorb" lineNumber="82"/>
-    <functiondecl functionName="Experience" lineNumber="83"/>
-    <functiondecl functionName="Weapon" lineNumber="84"/>
-    <functiondecl functionName="MoneyMin" lineNumber="85"/>
-    <functiondecl functionName="MoneyMax" lineNumber="86"/>
-    <functiondecl functionName="LootList" lineNumber="87"/>
+    <functiondecl functionName="LoadTemplate" lineNumber="52"/>
+    <functiondecl functionName="Name" lineNumber="57"/>
+    <functiondecl functionName="Accuracy" lineNumber="58"/>
+    <functiondecl functionName="Dodging" lineNumber="59"/>
+    <functiondecl functionName="StrikeDamage" lineNumber="60"/>
+    <functiondecl functionName="DamageAbsorb" lineNumber="61"/>
+    <functiondecl functionName="Experience" lineNumber="62"/>
+    <functiondecl functionName="Weapon" lineNumber="63"/>
+    <functiondecl functionName="MoneyMin" lineNumber="64"/>
+    <functiondecl functionName="MoneyMax" lineNumber="65"/>
+    <functiondecl functionName="LootList" lineNumber="66"/>
     <functioncall functionName="ADMIN"/>
     <functioncall functionName="ARMOR"/>
     <functioncall functionName="ATTRIBUTESTRINGS"/>
@@ -111,6 +137,7 @@
     <functioncall functionName="StrToEnum &lt; PlayerRank , NUMPLAYERRANKTYPES &gt;"/>
     <functioncall functionName="StrToEnum &lt; RoomType , NUMROOMTYPES &gt;"/>
     <functioncall functionName="TRAININGROOM"/>
+    <functioncall functionName="Telnet"/>
     <functioncall functionName="UpperCase"/>
     <functioncall functionName="WEAPON"/>
     <functioncall functionName="WEST"/>
@@ -126,6 +153,7 @@
     <functioncall functionName="if"/>
     <functioncall functionName="insert"/>
     <functioncall functionName="int"/>
+    <functioncall functionName="item"/>
     <functioncall functionName="m_accuracy"/>
     <functioncall functionName="m_armor"/>
     <functioncall functionName="m_attributes"/>
@@ -148,6 +176,7 @@
     <functioncall functionName="m_str"/>
     <functioncall functionName="m_strikedamage"/>
     <functioncall functionName="m_template"/>
+    <functioncall functionName="m_type"/>
     <functioncall functionName="m_weapon"/>
     <functioncall functionName="matchentity"/>
     <functioncall functionName="matchentityfull"/>
@@ -173,6 +202,7 @@
     <functioncall functionName="return"/>
     <functioncall functionName="search"/>
     <functioncall functionName="size"/>
+    <functioncall functionName="static_cast"/>
     <functioncall functionName="temp"/>
     <functioncall functionName="while"/>
   </FileInfo>

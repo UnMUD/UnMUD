@@ -37,8 +37,6 @@ operator<<
 operator>>
 GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
-AttributeSet
-operator[]
 operator<< call:[GetAttributeString]
 operator>>
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
@@ -80,20 +78,12 @@ Create call:[AddEnemy,CurrentRoom,FindOpenID,ID,LoadTemplate] noreturn:[AddEnemy
 Delete call:[CurrentRoom,RemoveEnemy,erase] noreturn:[erase]
 Load call:[AddEnemy,CurrentRoom,ID,file,good] noreturn:[AddEnemy]
 Save call:[GetInstance,ID,file]
-EnumToStr < Attribute >
-EnumToStr < ItemType >
-EnumToStr < PlayerRank >
-EnumToStr < RoomType >
-EnumToStr < Direction >
-StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
-StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
-StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
-StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
-StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
+EntityDatabaseVector < EnemyTemplate >
 begin call:[begin]
 end call:[end] noreturn:[end]
 size call:[size]
 get call:[exception,size] noreturn:[exception]
+EntityDatabase < Enemy >
 iterator
 iterator
 operator*
@@ -107,5 +97,15 @@ get call:[end,exception,find] noreturn:[exception]
 has call:[end,find,return] noreturn:[return]
 hasfull call:[end,findfull] noreturn:[end]
 has call:[end,find] noreturn:[end]
-size call:[return,size] noreturn:[size]
+size call:[size]
 FindOpenID call:[begin,rend,size]
+EnumToStr < Attribute >
+EnumToStr < ItemType >
+EnumToStr < PlayerRank >
+EnumToStr < RoomType >
+EnumToStr < Direction >
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase]

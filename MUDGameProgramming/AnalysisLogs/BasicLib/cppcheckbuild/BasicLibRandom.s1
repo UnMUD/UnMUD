@@ -1,42 +1,37 @@
-simulated_binomial < 4 , random_int_range < > > call:[init] noreturn:[init]
-simulated_binomial < 4 , random_int_range < > > call:[init] noreturn:[init]
-init
+simulated_binomial < 4 , random_int_range < > >
+simulated_binomial < 4 , random_int_range < > >
 seed call:[seed] noreturn:[seed]
 minimum
 maximum
 generate call:[m_generator] noreturn:[m_generator]
 operator() call:[generate] noreturn:[generate]
 operator() call:[generate] noreturn:[generate]
-random_int_range < random_percent < false > > call:[init] noreturn:[init]
-random_int_range < random_percent < false > > call:[init] noreturn:[init]
-init
-seed call:[seed] noreturn:[seed]
-minimum call:[minimum,return]
-maximum call:[maximum,return]
-generate call:[m_generator,return]
-operator() call:[generate] noreturn:[generate]
-operator() call:[generate] noreturn:[generate]
-random_range < true , random_percent < true > > call:[init] noreturn:[init]
-random_range < true , random_percent < true > > call:[init] noreturn:[init]
-init
+random_int_range < random_percent < false > >
+random_int_range < random_percent < false > >
 seed call:[seed] noreturn:[seed]
 minimum call:[minimum]
 maximum call:[maximum]
 generate call:[m_generator]
 operator() call:[generate] noreturn:[generate]
 operator() call:[generate] noreturn:[generate]
-random_range < false , random_percent < false > > call:[init] noreturn:[init]
-random_range < false , random_percent < false > > call:[init] noreturn:[init]
-init
+random_range < true , random_percent < true > >
+random_range < true , random_percent < true > >
 seed call:[seed] noreturn:[seed]
 minimum call:[minimum]
 maximum call:[maximum]
 generate call:[m_generator]
 operator() call:[generate] noreturn:[generate]
 operator() call:[generate] noreturn:[generate]
-normal_generator < true , random_percent < true > > call:[init] noreturn:[init]
-normal_generator < true , random_percent < true > > call:[init] noreturn:[init]
-init
+random_range < false , random_percent < false > >
+random_range < false , random_percent < false > >
+seed call:[seed] noreturn:[seed]
+minimum call:[minimum]
+maximum call:[maximum]
+generate call:[m_generator]
+operator() call:[generate] noreturn:[generate]
+operator() call:[generate] noreturn:[generate]
+normal_generator < true , random_percent < true > >
+normal_generator < true , random_percent < true > >
 mean
 sigma
 reset

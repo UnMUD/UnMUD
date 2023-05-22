@@ -37,8 +37,6 @@ operator<<
 operator>>
 GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum < Attribute , NUMATTRIBUTES >]
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
-AttributeSet
-operator[]
 operator<< call:[GetAttributeString]
 operator>>
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
@@ -58,6 +56,11 @@ Max
 Speed
 Price
 operator>> call:[GetItemType,getline]
+HitPoints
+CurrentRoom
+NextAttackTime
+EnemyTemplateDatabase
+EnemyDatabase
 ItemDatabase
 Level
 HitPoints
@@ -75,7 +78,7 @@ Conn
 LoggedIn
 Active
 Newbie
-NeedForLevel call:[pow,return]
+NeedForLevel call:[pow]
 GetAttr
 GetBaseAttr
 Weapon
@@ -103,11 +106,6 @@ Money
 Enemies
 Players
 RoomDatabase
-HitPoints
-CurrentRoom
-NextAttackTime
-EnemyTemplateDatabase
-EnemyDatabase
 operator* call:[GetInstance,get] noreturn:[get]
 operator. call:[GetInstance,get]
 operatorPlayer* call:[GetInstance,get]
@@ -123,66 +121,71 @@ operatorEnemy* call:[GetInstance,get]
 operator* call:[GetInstance,get] noreturn:[get]
 operator. call:[GetInstance,get]
 operatorEnemyTemplate* call:[GetInstance,get]
+EntityDatabaseVector < EnemyTemplate >
+begin call:[begin]
+end call:[end] noreturn:[end]
+size call:[size]
+get call:[exception,size] noreturn:[exception]
+EntityDatabaseVector < Room >
+begin call:[begin]
+end call:[end] noreturn:[end]
+size call:[size]
+get call:[exception,size] noreturn:[exception]
+EntityDatabase < Enemy >
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[size]
+FindOpenID call:[begin,rend,size]
+EntityDatabase < Item >
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[size]
+FindOpenID call:[begin,rend,size]
+EntityDatabase < Player >
+iterator
+iterator
+operator*
+operator.
+begin call:[begin,iterator] noreturn:[iterator]
+end call:[end,iterator] noreturn:[iterator]
+find call:[find,iterator] noreturn:[iterator]
+findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
+find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
+get call:[end,exception,find] noreturn:[exception]
+has call:[end,find,return] noreturn:[return]
+hasfull call:[end,findfull] noreturn:[end]
+has call:[end,find] noreturn:[end]
+size call:[size]
+FindOpenID call:[begin,rend,size]
 EnumToStr < Attribute >
 EnumToStr < ItemType >
 EnumToStr < PlayerRank >
 EnumToStr < RoomType >
 EnumToStr < Direction >
-StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase,return]
-StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase,return]
-StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase,return]
-StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase,return]
-StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase,return]
-begin call:[begin]
-end call:[end] noreturn:[end]
-size call:[size]
-get call:[exception,size] noreturn:[exception]
-begin call:[begin]
-end call:[end] noreturn:[end]
-size call:[size]
-get call:[exception,size] noreturn:[exception]
-iterator
-iterator
-operator*
-operator.
-begin call:[begin,iterator] noreturn:[iterator]
-end call:[end,iterator] noreturn:[iterator]
-find call:[find,iterator] noreturn:[iterator]
-findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
-find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
-get call:[end,exception,find] noreturn:[exception]
-has call:[end,find,return] noreturn:[return]
-hasfull call:[end,findfull] noreturn:[end]
-has call:[end,find] noreturn:[end]
-size call:[return,size] noreturn:[size]
-FindOpenID call:[begin,rend,size]
-iterator
-iterator
-operator*
-operator.
-begin call:[begin,iterator] noreturn:[iterator]
-end call:[end,iterator] noreturn:[iterator]
-find call:[find,iterator] noreturn:[iterator]
-findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
-find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
-get call:[end,exception,find] noreturn:[exception]
-has call:[end,find,return] noreturn:[return]
-hasfull call:[end,findfull] noreturn:[end]
-has call:[end,find] noreturn:[end]
-size call:[return,size] noreturn:[size]
-FindOpenID call:[begin,rend,size]
-iterator
-iterator
-operator*
-operator.
-begin call:[begin,iterator] noreturn:[iterator]
-end call:[end,iterator] noreturn:[iterator]
-find call:[find,iterator] noreturn:[iterator]
-findfull call:[begin,end,find_if,matchentityfull] noreturn:[find_if]
-find call:[begin,double_find_if,end,matchentity,matchentityfull] noreturn:[double_find_if]
-get call:[end,exception,find] noreturn:[exception]
-has call:[end,find,return] noreturn:[return]
-hasfull call:[end,findfull] noreturn:[end]
-has call:[end,find] noreturn:[end]
-size call:[return,size] noreturn:[size]
-FindOpenID call:[begin,rend,size]
+StrToEnum < Attribute , NUMATTRIBUTES > call:[UpperCase]
+StrToEnum < ItemType , NUMITEMTYPES > call:[UpperCase]
+StrToEnum < PlayerRank , NUMPLAYERRANKTYPES > call:[UpperCase]
+StrToEnum < RoomType , NUMROOMTYPES > call:[UpperCase]
+StrToEnum < Direction , NUMDIRECTIONS > call:[UpperCase]

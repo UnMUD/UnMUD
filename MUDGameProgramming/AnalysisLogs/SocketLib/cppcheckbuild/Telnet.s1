@@ -7,8 +7,8 @@ IsConnected
 IsListening
 Poll call:[rbegin,select,size] noreturn:[select]
 HasActivity call:[FD_ISSET,GetSock]
-AvailableConnections call:[size] noreturn:[size]
-TotalConnections call:[return,size] noreturn:[size]
+AvailableConnections call:[size]
+TotalConnections call:[size]
 Manage call:[CloseConnections,Listen,Send] noreturn:[CloseConnections]
 ConnectionManager
 ConnectionManager call:[CloseSocket,begin,end] noreturn:[CloseSocket]
@@ -27,7 +27,7 @@ Close
 CloseSocket call:[ClearHandlers,Close] noreturn:[ClearHandlers]
 GetDataRate
 GetCurrentDataRate
-GetBufferedBytes call:[return,size] noreturn:[size]
+GetBufferedBytes call:[size]
 GetCreationTime
 Protocol
 Closed
@@ -36,9 +36,8 @@ AddHandler call:[Enter,Handler,Leave,push] noreturn:[Enter,Leave]
 RemoveHandler call:[Enter,Handler,Leave,pop] noreturn:[Enter]
 Handler call:[size,top] noreturn:[top]
 ClearHandlers call:[Handler,Leave,pop] noreturn:[Leave,pop]
-Connection < Telnet > call:[Initialize] noreturn:[Initialize]
-Connection < Telnet > call:[Initialize] noreturn:[Initialize]
-Initialize call:[GetTimeMS]
+Connection < Telnet >
+Connection < Telnet >
 GetLastSendTime call:[GetTimeS]
 BufferData call:[append] noreturn:[append]
 SendBuffer call:[GetTimeS,Send,data,erase,size] noreturn:[GetTimeS]
