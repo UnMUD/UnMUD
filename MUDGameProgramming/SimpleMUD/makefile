@@ -7,6 +7,7 @@ SOCKETLIBDIR = $(MUDLIBDIR)/SocketLib
 THREADLIBDIR = $(MUDLIBDIR)/ThreadLib
 BASICLIBDIR  = $(MUDLIBDIR)/BasicLib
 TESTSDIR = ../Tests
+TESTFILEPREFIX = Test
 TESTSMAINFILE = Tests
 TESTSBINFILE = TestsUnMUD.out
 UNMUDDIR = ./SimpleMUD
@@ -18,7 +19,10 @@ LIBS = -lpthread
 TESTSLIBS = -lgtest
 
 # flags
-CFLAGS = -std=c++2a -I$(MUDLIBDIR)
+CFLAGS = -std=c++2a -I$(MUDLIBDIR) # \
+		-Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast \
+		-Wcast-align -Wunused -Woverloaded-virtual -Wconversion \
+		-Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic
 
 libs: $(wildcard *.cpp)
 	$(CXX) $(CFLAGS) $(SOCKETLIBDIR)/*.cpp -c --coverage;
@@ -34,7 +38,8 @@ main: $(wildcard *.cpp)
 
 link: $(wildcard *.cpp)
 	$(CXX) $(CFLAGS) \
-	$$(find . -maxdepth 1 -name '*.o' ! -name '$(TESTSMAINFILE).o' -exec basename {} \;) \
+	$$(find . -maxdepth 1 -name '*.o' ! -name '$(TESTSMAINFILE).o' \
+	! -name '$(TESTFILEPREFIX)*' -exec basename {} \;) \
 	$(LIBS) -o $(UNMUDBINFILE) --coverage
 
 run:

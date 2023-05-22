@@ -9,8 +9,8 @@
 // ============================================================================
 //  Include Files for the threading libraries
 // ============================================================================
-#include "ThreadLibFunctions.h"
 #include "ThreadException.h"
+#include "ThreadLibFunctions.h"
 #include "ThreadLibMutex.h"
 
 #endif

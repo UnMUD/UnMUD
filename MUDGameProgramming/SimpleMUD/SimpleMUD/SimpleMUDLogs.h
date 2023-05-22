@@ -3,8 +3,8 @@
 // (C)2003
 // SimpleMUDLogs.h - This file contains all of the various logs used
 //                   in SimpleMUD
-// 
-// 
+//
+//
 
 #ifndef SIMPLEMUDLOGS_H
 #define SIMPLEMUDLOGS_H
@@ -13,13 +13,11 @@
 
 using namespace BasicLib;
 
-namespace SimpleMUD
-{
+namespace SimpleMUD {
 
-    extern TextLog ERRORLOG;
-    extern TextLog USERLOG;
+extern TextLog ERRORLOG;
+extern TextLog USERLOG;
 
-
-}   // end namespace SimpleMUD
+} // end namespace SimpleMUD
 
 #endif

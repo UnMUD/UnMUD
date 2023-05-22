@@ -5,43 +5,39 @@
 // This holds all of the main threading functions and structures, and includes
 // the other synchronization object headers.
 
-
 #include "ThreadLib.h"
 
-namespace ThreadLib
+namespace ThreadLib {
+
+// ========================================================================
+//  This is the handle-map global, only used in Win32.
+// ========================================================================
+#ifdef WIN32
+std::map<DWORD, HANDLE> g_handlemap;
+#endif
+
+// ========================================================================
+// Description: This is a "dummy" thread function that will be used to
+//              transparently translate function pointers to whatever
+//              system the user is currently compiling on.
+// ========================================================================
+#ifdef WIN32
+DWORD WINAPI DummyRun(void *p_data)
+#else
+void *DummyRun(void *p_data)
+#endif
 {
+  // convert the dummy data
+  DummyData *data = static_cast<DummyData *>(p_data);
 
-    // ========================================================================
-    //  This is the handle-map global, only used in Win32.
-    // ========================================================================
-    #ifdef WIN32
-        std::map< DWORD, HANDLE > g_handlemap;
-    #endif
+  // run the function with the given data
+  data->m_func(data->m_data);
 
+  // now delete the data
+  delete data;
 
-    // ========================================================================
-    // Description: This is a "dummy" thread function that will be used to
-    //              transparently translate function pointers to whatever
-    //              system the user is currently compiling on.
-    // ========================================================================
-    #ifdef WIN32
-        DWORD WINAPI DummyRun( void* p_data )
-    #else
-        void* DummyRun( void* p_data )
-    #endif
-        {
-            // convert the dummy data
-            DummyData* data = (DummyData*)p_data;
+  // and return 0.
+  return 0;
+}
 
-            // run the function with the given data
-            data->m_func( data->m_data );
-
-            // now delete the data
-            delete data;
-
-            // and return 0.
-            return 0;
-        }
-
-
-}   // end namespace ThreadLib
+} // end namespace ThreadLib

@@ -13,47 +13,36 @@
 // ============================================================================
 //  Include Files for the threading libraries
 // ============================================================================
-#ifdef WIN32                // windows95 and above
-    #include <windows.h>
-#else                       // linux
-    #include <pthread.h>
+#ifdef WIN32 // windows95 and above
+#include <windows.h>
+#else // linux
+#include <pthread.h>
 #endif
 
+namespace ThreadLib {
 
-namespace ThreadLib
-{
+enum Error {
+  Unspecified,    // unspecified error
+  InitFailure,    // thread library not initialized
+  CreationFailure // thread cannot be created
+};
 
-    enum Error
-    {
-        Unspecified,                // unspecified error
-        InitFailure,                // thread library not initialized
-        CreationFailure             // thread cannot be created
-    };
+class Exception : public std::exception {
+public:
+  // ====================================================================
+  // Description: set the error code of the exception, with a default of
+  //              Unspecified.
+  // ====================================================================
+  Exception(Error p_error = Unspecified) : m_error(p_error) {}
 
+  // ====================================================================
+  // Description: Gets the error code of the exception
+  // ====================================================================
+  Error GetError() const { return m_error; }
 
-    class Exception : public std::exception
-    {
-    public:
-        // ====================================================================
-        // Description: set the error code of the exception, with a default of 
-        //              Unspecified.
-        // ====================================================================
-        Exception( Error p_error = Unspecified )
-        {
-            m_error = p_error;
-        }
-
-        // ====================================================================
-        // Description: Gets the error code of the exception
-        // ====================================================================
-        Error GetError() const
-        {
-            return m_error;
-        }
-
-    protected:
-        Error m_error;
-    };
-}
+protected:
+  Error m_error;
+};
+} // namespace ThreadLib
 
 #endif

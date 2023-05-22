@@ -2,156 +2,143 @@
 // Ron Penton
 // (C)2003
 // GameLoop.cpp - This class performs the game loop in SimpleMUD
-// 
-// 
+//
+//
 
-
-#include "BasicLib/BasicLibTypes.h"
 #include "GameLoop.h"
+#include "BasicLib/BasicLibTypes.h"
 #include <fstream>
 #include <string>
 
 using namespace BasicLib;
 using namespace SocketLib;
 
-namespace SimpleMUD
-{
+namespace SimpleMUD {
 
-sint64 DBSAVETIME = minutes( 15 );
-sint64 ROUNDTIME  = seconds( 1 );
-sint64 REGENTIME  = minutes( 2 );
-sint64 HEALTIME   = minutes( 1 );
+sint64 DBSAVETIME = minutes(15);
+sint64 ROUNDTIME = seconds(1);
+sint64 REGENTIME = minutes(2);
+sint64 HEALTIME = minutes(1);
 
+void GameLoop::Load() {
+  std::ifstream file("game.data");
+  file >> std::ws;
 
-void GameLoop::Load()
-{
-    std::ifstream file( "game.data" );
-    file >> std::ws;
+  if (file.good()) {
+    std::string temp;
+    sint64 time;
+    file >> temp;
+    extract(file, time);
+    Game::GetTimer().Reset(time);
 
-    if( file.good() )
-    {
-        std::string temp;
-        sint64 time;
-        file >> temp;   extract( file, time );
-        Game::GetTimer().Reset( time );
+    file >> temp;
+    extract(file, m_savedatabases);
+    file >> temp;
+    extract(file, m_nextround);
+    file >> temp;
+    extract(file, m_nextregen);
+    file >> temp;
+    extract(file, m_nextheal);
+  } else {
+    Game::GetTimer().Reset();
+    m_savedatabases = DBSAVETIME;
+    m_nextround = ROUNDTIME;
+    m_nextregen = REGENTIME;
+    m_nextheal = HEALTIME;
+  }
 
-        file >> temp;   extract( file, m_savedatabases );
-        file >> temp;   extract( file, m_nextround );
-        file >> temp;   extract( file, m_nextregen );
-        file >> temp;   extract( file, m_nextheal );
-    }
-    else
-    {
-        Game::GetTimer().Reset();
-        m_savedatabases = DBSAVETIME;
-        m_nextround = ROUNDTIME;
-        m_nextregen = REGENTIME;
-        m_nextheal = HEALTIME;
-    }
-
-    Game::Running() = true;
+  Game::Running() = true;
 }
 
+void GameLoop::Save() {
+  std::ofstream file("game.data");
 
-void GameLoop::Save()
-{
-    std::ofstream file( "game.data" );
-
-    // save the game time
-    file << "[GAMETIME]      "; insert( file, Game::GetTimer().GetMS() ); file << "\n";
-    file << "[SAVEDATABASES] "; insert( file, m_savedatabases );          file << "\n";
-    file << "[NEXTROUND]     "; insert( file, m_nextround );              file << "\n";
-    file << "[NEXTREGEN]     "; insert( file, m_nextregen );              file << "\n";
-    file << "[NEXTHEAL]      "; insert( file, m_nextheal );               file << "\n";
+  // save the game time
+  file << "[GAMETIME]      ";
+  insert(file, Game::GetTimer().GetMS());
+  file << "\n";
+  file << "[SAVEDATABASES] ";
+  insert(file, m_savedatabases);
+  file << "\n";
+  file << "[NEXTROUND]     ";
+  insert(file, m_nextround);
+  file << "\n";
+  file << "[NEXTREGEN]     ";
+  insert(file, m_nextregen);
+  file << "\n";
+  file << "[NEXTHEAL]      ";
+  insert(file, m_nextheal);
+  file << "\n";
 }
 
-void GameLoop::Loop()
-{
-    if( Game::GetTimer().GetMS() >= m_nextround )
-    {
-        PerformRound();
-        m_nextround += ROUNDTIME;
-    }
+void GameLoop::Loop() {
+  if (Game::GetTimer().GetMS() >= m_nextround) {
+    PerformRound();
+    m_nextround += ROUNDTIME;
+  }
 
-    if( Game::GetTimer().GetMS() >= m_nextregen )
-    {
-        PerformRegen();
-        m_nextregen += REGENTIME;
-    }
+  if (Game::GetTimer().GetMS() >= m_nextregen) {
+    PerformRegen();
+    m_nextregen += REGENTIME;
+  }
 
-    if( Game::GetTimer().GetMS() >= m_nextheal )
-    {
-        PerformHeal();
-        m_nextheal += HEALTIME;
-    }
+  if (Game::GetTimer().GetMS() >= m_nextheal) {
+    PerformHeal();
+    m_nextheal += HEALTIME;
+  }
 
-    if( Game::GetTimer().GetMS() >= m_savedatabases )
-    {
-        SaveDatabases();
-        m_savedatabases += DBSAVETIME;
-    }
+  if (Game::GetTimer().GetMS() >= m_savedatabases) {
+    SaveDatabases();
+    m_savedatabases += DBSAVETIME;
+  }
 }
 
-
-void GameLoop::LoadDatabases()
-{
-    Load();
-    ItemDatabase::GetInstance().Load();
-    PlayerDatabase::GetInstance().Load();
-    RoomDatabase::GetInstance().LoadTemplates();
-    RoomDatabase::GetInstance().LoadData();
-    StoreDatabase::GetInstance().Load();
-    EnemyTemplateDatabase::GetInstance().Load();
-    EnemyDatabase::GetInstance().Load();
+void GameLoop::LoadDatabases() {
+  Load();
+  ItemDatabase::GetInstance().Load();
+  PlayerDatabase::GetInstance().Load();
+  RoomDatabase::GetInstance().LoadTemplates();
+  RoomDatabase::GetInstance().LoadData();
+  StoreDatabase::GetInstance().Load();
+  EnemyTemplateDatabase::GetInstance().Load();
+  EnemyDatabase::GetInstance().Load();
 }
 
-
-void GameLoop::SaveDatabases()
-{
-    Save();
-    PlayerDatabase::GetInstance().Save();
-    RoomDatabase::GetInstance().SaveData();
-    EnemyDatabase::GetInstance().Save();
+void GameLoop::SaveDatabases() {
+  Save();
+  PlayerDatabase::GetInstance().Save();
+  RoomDatabase::GetInstance().SaveData();
+  EnemyDatabase::GetInstance().Save();
 }
 
+void GameLoop::PerformRound() {
+  sint64 now = Game::GetTimer().GetMS();
 
-void GameLoop::PerformRound()
-{
-    sint64 now = Game::GetTimer().GetMS();
+  for (auto &enemy : EnemyDatabase::GetInstance()) {
+    if (now >= enemy.NextAttackTime() &&
+        enemy.CurrentRoom()->Players().size() > 0)
+      Game::EnemyAttack(enemy.ID());
+  }
+}
 
-    for(auto& enemy : EnemyDatabase::GetInstance()){
-        if( now >= enemy.NextAttackTime() && 
-            enemy.CurrentRoom()->Players().size() > 0 )
-            Game::EnemyAttack( enemy.ID() );
+void GameLoop::PerformRegen() {
+  for (auto &room : RoomDatabase::GetInstance()) {
+    if (room.SpawnWhich() != 0 && room.Enemies().size() < room.MaxEnemies()) {
+      EnemyDatabase::GetInstance().Create(room.SpawnWhich(), room.ID());
+      Game::SendRoom(red + bold + room.SpawnWhich()->Name() +
+                         " enters the room!",
+                     room.ID());
     }
+  }
 }
 
-void GameLoop::PerformRegen()
-{
-    for(auto& room : RoomDatabase::GetInstance()){
-        if( room.SpawnWhich() != 0 &&
-            room.Enemies().size() < room.MaxEnemies() )
-        {
-            EnemyDatabase::GetInstance().Create( room.SpawnWhich(), room.ID() );
-            Game::SendRoom( red + bold + room.SpawnWhich()->Name() + 
-                            " enters the room!", room.ID() );
-        }
+void GameLoop::PerformHeal() {
+  for (auto &player : PlayerDatabase::GetInstance()) {
+    if (player.Active()) {
+      player.AddHitpoints(player.GetAttr(HPREGEN));
+      player.PrintStatbar(true);
     }
+  }
 }
 
-
-void GameLoop::PerformHeal()
-{
-    for(auto& player : PlayerDatabase::GetInstance()){
-        if( player.Active() )
-        {
-            player.AddHitpoints( player.GetAttr( HPREGEN ) );
-            player.PrintStatbar( true );
-        }
-    }
-}
-
-
-
-}   // end namespace SimpleMUD
-
+} // end namespace SimpleMUD
