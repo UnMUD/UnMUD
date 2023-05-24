@@ -71,8 +71,8 @@ void EnemyTemplateDatabase::Load() {
       std::string subQuery = "SELECT itemId, itemQuantity "
                             "FROM Loot "
                             "WHERE enemyId = " + 
-                            std::string(row["id"].c_str()) + " "
-                            "ORDER BY itemId;";
+                            std::string(row["id"].c_str());
+
       pqxx::result subQueryResult( nonTransactionConnection.exec( subQuery ));
       ParseRow(row, subQueryResult, m_vector[id]);
       USERLOG.Log("Loaded Enemy: " + m_vector[id].Name());
