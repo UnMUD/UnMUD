@@ -15,7 +15,7 @@ UNMUDMAINFILE = SimpleMUD
 UNMUDBINFILE = UnMUD.out
 
 # libraries
-LIBS = -lpthread
+LIBS = -lpthread -lpqxx
 TESTSLIBS = -lgtest
 
 # flags
