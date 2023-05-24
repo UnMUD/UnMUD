@@ -46,6 +46,29 @@ istream &operator>>(istream &p_stream, EnemyTemplate &t) {
   return p_stream;
 }
 
+void ParseRow(const pqxx::const_result_iterator::reference &row, 
+              const pqxx::result &lootResult,
+              EnemyTemplate &t) {
+  row["name"] >> t.m_name;
+  row["hitPoints"] >> t.m_hitpoints;
+  row["accuracy"] >> t.m_accuracy;
+  row["dodging"] >> t.m_dodging;
+  row["strikeDamage"] >> t.m_strikedamage;
+  row["damageAbsorb"] >> t.m_damageabsorb;
+  row["experience"] >> t.m_experience;
+  (row["weaponId"].is_null()? 0 : row["weaponId"].as<entityid>()) >> t.m_weapon;
+  row["moneyMin"] >> t.m_moneymin;
+  row["moneyMax"] >> t.m_moneymax;
+
+  t.m_loot.clear();
+  for (auto const lootRow : lootResult) {
+    t.m_loot.emplace_back(
+      lootRow["itemId"].as<entityid>(), 
+      lootRow["itemQuantity"].as<int>()
+    );
+  }
+}
+
 Enemy::Enemy()
     : m_template(0), m_hitpoints(0), m_room(0), m_nextattacktime(0) {}
 

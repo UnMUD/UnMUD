@@ -51,10 +51,10 @@ bool ItemDatabase::Load() {
       ParseRow(row, m_map[id]);
       USERLOG.Log("Loaded Item: " + m_map[id].Name());
     }
-    std::cout << "Operation done successfully" << std::endl;
+    USERLOG.Log("ItemDatabase::Load done successfully");
     dbConnection.disconnect ();
   } catch (const std::exception &e) {
-    std::cerr << e.what() << std::endl;
+    ERRORLOG.Log("ItemDatabase::Load" + std::string(e.what()));
     return false;
   }
   return true;
