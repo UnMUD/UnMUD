@@ -67,7 +67,7 @@ public:
 
   friend ostream &operator<<(ostream &p_stream, const Enemy &t);
   friend istream &operator>>(istream &p_stream, Enemy &t);
-  // friend void ParseRow(const pqxx::const_result_iterator::reference row, Enemy &t);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &t);
 
 protected:
   enemytemplate m_template;

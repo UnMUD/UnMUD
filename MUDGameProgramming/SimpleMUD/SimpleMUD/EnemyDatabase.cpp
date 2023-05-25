@@ -27,22 +27,7 @@ EnemyTemplateDatabase &EnemyTemplateDatabase::GetInstance() {
 }
 
 void EnemyTemplateDatabase::Load() {
-  // ifstream file("enemies/enemies.templates");
   entityid id;
-  // std::string temp;
-
-  // while (file.good()) {
-  //   // read in the ID
-  //   file >> temp >> id;
-
-  //   // make sure there's enough room for the enemy
-  //   if (m_vector.size() <= id)
-  //     m_vector.resize(id + 1);
-
-  //   m_vector[id].ID() = id;
-  //   file >> m_vector[id] >> std::ws;
-  //   USERLOG.Log("Loaded Enemy: " + m_vector[id].Name());
-  // }
 
   try {
     pqxx::connection dbConnection;
@@ -108,17 +93,41 @@ void EnemyDatabase::Delete(enemy p_enemy) {
 }
 
 void EnemyDatabase::Load() {
-  ifstream file("enemies/enemies.instances");
   entityid id;
-  std::string temp;
 
-  file >> std::ws; // eat the whitespace
-  while (file.good()) {
-    file >> temp >> id;
-    m_map[id].ID() = id;
-    file >> m_map[id] >> std::ws;
-    m_map[id].CurrentRoom()->AddEnemy(id);
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("EnemyDatabase::Load opened database successfully: " + std::string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("EnemyDatabase::Load can't open database\n");
+        return;
+    }
+
+    /* Create SQL statement */
+    std::string sql = "SELECT * from EnemyInstance";
+
+    /* Create a non-transactional object. */
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+    
+    /* Execute SQL query */
+    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+
+    /* List down all the records */
+    for (auto const row : queryResult) {
+      id = row["id"].as<entityid>();
+      m_map[id].ID() = id;
+      ParseRow(row, m_map[id]);
+      m_map[id].CurrentRoom()->AddEnemy(id);
+      USERLOG.Log("Loaded Enemy Instance: " + m_map[id].Name());
+    }
+    USERLOG.Log("EnemyDatabase::Load done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("EnemyDatabase::Load " + std::string(e.what()));
+    return;
   }
+  return;
 }
 
 void EnemyDatabase::Save() {

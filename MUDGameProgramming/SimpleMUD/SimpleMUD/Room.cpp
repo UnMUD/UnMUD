@@ -99,8 +99,9 @@ void Room::LoadTemplate(const pqxx::const_result_iterator::reference &row,
 ) {
   row["name"] >> m_name;
   row["description"] >> m_description;
+  m_description = BasicLib::SearchAndReplace(m_description, "\\x1B", "\x1B");
   m_type = GetRoomType(row["type"].as<std::string>());
-  (row["storeId"].is_null()? 0 : row["storeId"].as<entityid>()) >> m_data;
+  m_data = (row["storeId"].is_null()? 0 : row["storeId"].as<entityid>());
 
   for (int d = 0; d < NUMDIRECTIONS; d++)
     m_rooms[d] = 0;
@@ -111,7 +112,7 @@ void Room::LoadTemplate(const pqxx::const_result_iterator::reference &row,
     )] = connection["connectedTo"].as<entityid>();
   }
   
-  (row["enemyId"].is_null()? 0 : row["enemyId"].as<entityid>()) >> m_spawnwhich;
+  m_spawnwhich = (row["enemyId"].is_null()? 0 : row["enemyId"].as<entityid>());
   row["maxEnemies"] >> m_maxenemies;
 }
 

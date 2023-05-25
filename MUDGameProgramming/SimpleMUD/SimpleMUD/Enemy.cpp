@@ -56,7 +56,7 @@ void ParseRow(const pqxx::const_result_iterator::reference &row,
   row["strikeDamage"] >> t.m_strikedamage;
   row["damageAbsorb"] >> t.m_damageabsorb;
   row["experience"] >> t.m_experience;
-  (row["weaponId"].is_null()? 0 : row["weaponId"].as<entityid>()) >> t.m_weapon;
+  t.m_weapon = (row["weaponId"].is_null()? 0 : row["weaponId"].as<entityid>());
   row["moneyMin"] >> t.m_moneymin;
   row["moneyMax"] >> t.m_moneymax;
 
@@ -115,6 +115,14 @@ istream &operator>>(istream &p_stream, Enemy &t) {
   extract(p_stream, t.m_nextattacktime);
 
   return p_stream;
+}
+
+void ParseRow(const pqxx::const_result_iterator::reference &row, 
+              Enemy &e) {
+  e.m_template = row["templateId"].as<entityid>();
+  row["hitPoints"] >> e.m_hitpoints;
+  e.m_room = row["mapId"].as<entityid>();
+  row["nextAttackTime"] >> e.m_nextattacktime;
 }
 
 } // end namespace SimpleMUD
