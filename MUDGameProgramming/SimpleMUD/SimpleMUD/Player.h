@@ -12,6 +12,7 @@
 #include "SocketLib/SocketLib.h"
 #include <math.h>
 #include <string>
+#include <pqxx/pqxx>
 
 #include "Attributes.h"
 #include "DatabasePointer.h"
@@ -104,6 +105,7 @@ public:
   // ------------------------------------------------------------------------
   friend ostream &operator<<(ostream &p_stream, const Player &p);
   friend istream &operator>>(istream &p_stream, Player &p);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p);
 
 protected:
   // -----------------------------------------
@@ -147,6 +149,7 @@ protected:
 
 ostream &operator<<(ostream &p_stream, const Player &p);
 istream &operator>>(istream &p_stream, Player &p);
+void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p);
 
 inline int Player::NeedForLevel(int p_level) {
   // see Chapter 7 for explanation of formula

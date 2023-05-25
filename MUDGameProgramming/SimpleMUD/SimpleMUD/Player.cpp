@@ -295,4 +295,37 @@ istream &operator>>(istream &p_stream, Player &p) {
   return p_stream;
 }
 
+void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p) {
+  row["name"] >> p.m_name;
+  row["pass"] >> p.m_pass;
+  p.m_rank = GetRank(row["rank"].as<std::string>());
+  row["statPoints"] >> p.m_statpoints;
+  row["experience"] >> p.m_experience;
+  row["level"] >> p.m_level;
+  p.m_room = row["mapId"].as<entityid>();
+  row["money"] >> p.m_money;
+  row["hitPoints"] >> p.m_hitpoints;
+  row["nextAttackTime"] >> p.m_nextattacktime;
+
+  ParseRow(row, p.m_baseattributes);
+
+  auto arr = row["itemIds"].as_array();
+  std::pair<pqxx::array_parser::juncture, string> elem;
+  int i = -1;
+  do {
+    i++;
+    elem = arr.get_next();
+    if (elem.first == pqxx::array_parser::juncture::string_value){
+      p.m_inventory[i] = totype<entityid>(elem.second);
+    }
+  } while (elem.first != pqxx::array_parser::juncture::done && 
+    i < p.MaxItems()
+  );
+
+  p.m_weapon = (row["weaponId"].is_null()? -1 : row["weaponId"].as<entityid>());
+  p.m_weapon = (row["armorId"].is_null()? -1 : row["armorId"].as<entityid>());
+
+  p.RecalculateStats();
+}
+
 } // end namespace SimpleMUD

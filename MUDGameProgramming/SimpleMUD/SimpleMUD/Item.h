@@ -42,7 +42,7 @@ public:
   inline money &Price() { return m_price; }
 
   friend istream &operator>>(istream &p_stream, Item &i);
-  friend void ParseRow(const pqxx::const_result_iterator::reference row, Item &i);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Item &i);
 
 protected:
   // -----------------------------------------
@@ -91,7 +91,7 @@ inline istream &operator>>(istream &p_stream, Item &i) {
 // --------------------------------------------------------------------
 //  Extracts an item in pqxx::const_result_iterator::reference form from a pqxx::result
 // --------------------------------------------------------------------
-inline void ParseRow(const pqxx::const_result_iterator::reference row, Item &i) {
+inline void ParseRow(const pqxx::const_result_iterator::reference &row, Item &i) {
   row["name"] >> i.m_name;
   i.m_type = GetItemType(row["type"].as<std::string>());
   row["min"] >> i.m_min;
@@ -99,15 +99,7 @@ inline void ParseRow(const pqxx::const_result_iterator::reference row, Item &i) 
   row["speed"] >> i.m_speed;
   row["price"] >> i.m_price;
 
-  row["strength"] >> i.m_attributes[STRENGTH];
-  row["health"] >> i.m_attributes[HEALTH];
-  row["agility"] >> i.m_attributes[AGILITY];
-  row["maxhitpoints"] >> i.m_attributes[MAXHITPOINTS];
-  row["accuracy"] >> i.m_attributes[ACCURACY];
-  row["dodging"] >> i.m_attributes[DODGING];
-  row["strikedamage"] >> i.m_attributes[STRIKEDAMAGE];
-  row["damageabsorb"] >> i.m_attributes[DAMAGEABSORB];
-  row["hpregen"] >> i.m_attributes[HPREGEN];
+  ParseRow(row, i.m_attributes);
 }
 
 } // end namespace SimpleMUD

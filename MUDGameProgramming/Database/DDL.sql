@@ -132,13 +132,13 @@ CREATE TABLE EnemyInstance(
 
 CREATE TABLE Player(
     id BIGINT,
-    name TEXT,
+    name TEXT UNIQUE NOT NULL,
     pass TEXT,
     rank PLAYERRANK,
     statPoints INTEGER,
     experience INTEGER,
     level INTEGER,
-    mapId INTEGER,
+    mapId BIGINT NOT NULL,
     money UBIGINT,
     hitPoints INTEGER,
     nextAttackTime BIGINT,

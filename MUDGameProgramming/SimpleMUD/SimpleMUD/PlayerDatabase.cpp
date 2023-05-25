@@ -9,6 +9,7 @@
 #include "BasicLib/BasicLib.h"
 #include "SimpleMUDLogs.h"
 #include <fstream>
+#include <pqxx/pqxx>
 
 using BasicLib::LowerCase;
 using BasicLib::tostring;
@@ -25,13 +26,41 @@ PlayerDatabase &PlayerDatabase::GetInstance() {
 
 void PlayerDatabase::LoadPlayer(string p_name) {
   entityid id;
-  string temp;
-  p_name = PlayerFileName(p_name); // create the proper filename
-  ifstream file(p_name.c_str());   // open the file
-  file >> temp >> id;              // load the ID
-  m_map[id].ID() = id;
-  file >> m_map[id] >> std::ws; // load the player from the file
-  USERLOG.Log("Loaded Player: " + m_map[id].Name());
+
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("PlayerDatabase::LoadPlayer opened database successfully: " + std::string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("PlayerDatabase::LoadPlayer can't open database\n");
+        return;
+    }
+
+    /* Create SQL statement */
+    std::string sql = "SELECT p.*, (p.attributes).*, ARRAY_AGG(i.itemId) AS itemIds "
+                      "FROM Player p "
+                      "LEFT JOIN Inventory i ON p.id = i.playerid "
+                      "WHERE p.name = " + p_name + " "
+                      "GROUP BY p.id;";
+
+    /* Create a non-transactional object. */
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+    
+    /* Execute SQL query */
+    pqxx::row queryResult( nonTransactionConnection.exec1( sql ));
+
+    id = queryResult["id"].as<entityid>();
+    m_map[id].ID() = id;
+    ParseRow(queryResult, m_map[id]);
+    USERLOG.Log("Loaded Player: " + m_map[id].Name());
+
+    USERLOG.Log("PlayerDatabase::LoadPlayer done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("PlayerDatabase::LoadPlayer " + std::string(e.what()));
+    return;
+  }
+  return;
 }
 
 void PlayerDatabase::SavePlayer(entityid p_player) {
@@ -47,13 +76,42 @@ void PlayerDatabase::SavePlayer(entityid p_player) {
 }
 
 bool PlayerDatabase::Load() {
-  ifstream file("players/players.txt");
-  string name;
+  entityid id;
 
-  while (file.good()) // while there are players
-  {
-    file >> name >> std::ws; // load in the player name
-    LoadPlayer(name);        // call the LoadPlayer helper function
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("PlayerDatabase::Load opened database successfully: " + std::string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("PlayerDatabase::Load can't open database\n");
+        return false;
+    }
+
+    /* Create SQL statement */
+    std::string sql = "SELECT p.*, (p.attributes).*, ARRAY_AGG(i.itemId) AS itemIds "
+                      "FROM Player p "
+                      "LEFT JOIN Inventory i ON p.id = i.playerid "
+                      "GROUP BY p.id;";
+
+
+    /* Create a non-transactional object. */
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+    
+    /* Execute SQL query */
+    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+
+    /* List down all the records */
+    for (auto const row : queryResult) {
+      id = row["id"].as<entityid>();
+      m_map[id].ID() = id;
+      ParseRow(row, m_map[id]);
+      USERLOG.Log("Loaded Player: " + m_map[id].Name());
+    }
+    USERLOG.Log("PlayerDatabase::Load done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("PlayerDatabase::Load " + std::string(e.what()));
+    return false;
   }
   return true;
 }
