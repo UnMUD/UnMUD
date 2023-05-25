@@ -43,6 +43,7 @@ bool ItemDatabase::Load() {
     
     /* Execute SQL query */
     pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
 
     /* List down all the records */
     for (auto const row : queryResult) {
@@ -54,7 +55,7 @@ bool ItemDatabase::Load() {
     USERLOG.Log("ItemDatabase::Load done successfully");
     dbConnection.disconnect ();
   } catch (const std::exception &e) {
-    ERRORLOG.Log("ItemDatabase::Load" + std::string(e.what()));
+    ERRORLOG.Log("ItemDatabase::Load " + std::string(e.what()));
     return false;
   }
   return true;

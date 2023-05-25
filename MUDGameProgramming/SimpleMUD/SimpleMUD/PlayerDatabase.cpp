@@ -48,6 +48,7 @@ void PlayerDatabase::LoadPlayer(string p_name) {
     
     /* Execute SQL query */
     pqxx::row queryResult( nonTransactionConnection.exec1( sql ));
+    nonTransactionConnection.commit();
 
     id = queryResult["id"].as<entityid>();
     m_map[id].ID() = id;
@@ -99,6 +100,7 @@ bool PlayerDatabase::Load() {
     
     /* Execute SQL query */
     pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
 
     /* List down all the records */
     for (auto const row : queryResult) {

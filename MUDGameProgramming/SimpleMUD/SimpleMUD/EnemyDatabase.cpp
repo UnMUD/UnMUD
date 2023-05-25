@@ -62,10 +62,11 @@ void EnemyTemplateDatabase::Load() {
       ParseRow(row, subQueryResult, m_vector[id]);
       USERLOG.Log("Loaded Enemy: " + m_vector[id].Name());
     }
+    nonTransactionConnection.commit();
     USERLOG.Log("EnemyTemplateDatabase::Load done successfully");
     dbConnection.disconnect ();
   } catch (const std::exception &e) {
-    ERRORLOG.Log("EnemyTemplateDatabase::Load" + std::string(e.what()));
+    ERRORLOG.Log("EnemyTemplateDatabase::Load " + std::string(e.what()));
     return;
   }
   return;
@@ -112,6 +113,7 @@ void EnemyDatabase::Load() {
     
     /* Execute SQL query */
     pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
 
     /* List down all the records */
     for (auto const row : queryResult) {

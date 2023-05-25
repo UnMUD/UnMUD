@@ -56,14 +56,15 @@ void RoomDatabase::LoadTemplates() {
                              "WHERE connectedFrom = " + 
                              std::string(row["id"].c_str());
       pqxx::result subQueryResult( nonTransactionConnection.exec( subQuery ));
-      
+
       m_vector[id].LoadTemplate(row, subQueryResult);
       USERLOG.Log("Loaded Room: " + m_vector[id].Name());
     }
+    nonTransactionConnection.commit();
     USERLOG.Log("RoomDatabase::LoadTemplates done successfully");
     dbConnection.disconnect ();
   } catch (const std::exception &e) {
-    ERRORLOG.Log("RoomDatabase::LoadTemplates" + std::string(e.what()));
+    ERRORLOG.Log("RoomDatabase::LoadTemplates " + std::string(e.what()));
     return;
   }
   return;
@@ -92,6 +93,7 @@ void RoomDatabase::LoadData() {
     
     /* Execute SQL query */
     pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
     m_vector.resize(queryResult.size() + 1);
 
     /* List down all the records */
@@ -104,7 +106,7 @@ void RoomDatabase::LoadData() {
     USERLOG.Log("RoomDatabase::LoadData done successfully");
     dbConnection.disconnect ();
   } catch (const std::exception &e) {
-    ERRORLOG.Log("RoomDatabase::LoadData" + std::string(e.what()));
+    ERRORLOG.Log("RoomDatabase::LoadData " + std::string(e.what()));
     return;
   }
   return;
