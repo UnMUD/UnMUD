@@ -6,7 +6,7 @@ CREATE OR REPLACE FUNCTION checkWeaponType()
 BEGIN
   IF NEW.weaponId IS NOT NULL THEN
     IF EXISTS (SELECT 1 FROM Item WHERE id = NEW.weaponId AND type != 'WEAPON') THEN
-      RAISE EXCEPTION 'Invalid weapon type';
+      RAISE EXCEPTION 'Invalid weapon type for item with ID %', NEW.weaponId;
     END IF;
   END IF;
 
@@ -32,7 +32,7 @@ CREATE OR REPLACE FUNCTION checkArmorType()
 BEGIN
   IF NEW.armorId IS NOT NULL THEN
     IF EXISTS (SELECT 1 FROM Item WHERE id = NEW.armorId AND type != 'ARMOR') THEN
-      RAISE EXCEPTION 'Invalid armor type';
+      RAISE EXCEPTION 'Invalid weapon type for item with ID %', NEW.armorId;
     END IF;
   END IF;
 

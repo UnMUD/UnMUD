@@ -133,12 +133,113 @@ void EnemyDatabase::Load() {
 }
 
 void EnemyDatabase::Save() {
-  ofstream file("enemies/enemies.instances");
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("EnemyDatabase::Save opened database successfully: " + string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("EnemyDatabase::Save can't open database\n");
+        return;
+    }
 
-  for (auto &enemy : GetInstance()) {
-    file << "[ID]             " << enemy.ID() << "\n";
-    file << enemy << "\n";
+    for (auto &enemy : GetInstance()) {
+      string sql = fmt::format("SELECT EXISTS("
+                          "SELECT 1 FROM EnemyInstance "
+                          "WHERE id = {})",
+                          BasicLib::tostring(enemy.ID())
+                        );
+      
+      pqxx::nontransaction nonTransactionConnection(dbConnection);
+      pqxx::row queryRow( nonTransactionConnection.exec1( sql ));
+      nonTransactionConnection.commit();
+
+      pqxx::work transactionConnection(dbConnection);
+      if(!queryRow["exists"].as<bool>()){
+        sql = fmt::format(
+          "INSERT INTO EnemyInstance VALUES ( "
+          "({}, 1, 0, 0, 0)"
+          ")",
+          BasicLib::tostring(enemy.ID())
+        );
+        transactionConnection.exec( sql );
+      }
+
+      sql = fmt::format(
+        "UPDATE EnemyInstance "
+        "SET {} "
+        "WHERE id = {}",
+        DumpSQL(enemy), BasicLib::tostring(enemy.ID())
+      );
+
+      transactionConnection.exec( sql );
+      transactionConnection.commit();
+    }
+
+    RemoveDeadEnemies();
+    USERLOG.Log("EnemyDatabase::Save done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("EnemyDatabase::Save " + string(e.what()));
+    return;
   }
+  return;
+}
+
+void EnemyDatabase::RemoveDeadEnemies() {
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("EnemyDatabase::RemoveDeadEnemies opened database successfully: " + string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("EnemyDatabase::RemoveDeadEnemies can't open database\n");
+        return;
+    }
+
+    string sql = "SELECT id FROM EnemyInstance";
+      
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
+
+    std::set<entityid> databaseEnemies;
+    std::set<entityid> inGameEnemies;
+    
+    for(auto row : queryResult) {
+      databaseEnemies.insert(row["id"].as<entityid>());
+    }
+
+    for (auto &enemy : GetInstance()) {
+      inGameEnemies.insert(enemy.ID());
+    }
+
+    string databaseEnemiesNotInGame = "(";
+    for (entityid enemyId : databaseEnemies) {
+      if (inGameEnemies.find(enemyId) == inGameEnemies.end()) {
+        databaseEnemiesNotInGame += BasicLib::tostring(enemyId) + ",";
+      }
+    }
+
+    pqxx::work transactionConnection(dbConnection);
+
+    if(databaseEnemiesNotInGame.size() > 1) {
+      databaseEnemiesNotInGame.pop_back();
+      databaseEnemiesNotInGame.push_back(')');
+      sql = fmt::format(
+        "DELETE FROM EnemyInstance "
+        "WHERE id IN {}",
+        databaseEnemiesNotInGame
+      );
+      transactionConnection.exec( sql );
+    }
+    transactionConnection.commit();
+
+    USERLOG.Log("EnemyDatabase::RemoveDeadEnemies done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("EnemyDatabase::RemoveDeadEnemies " + string(e.what()));
+    return;
+  }
+  return;
 }
 
 } // end namespace SimpleMUD

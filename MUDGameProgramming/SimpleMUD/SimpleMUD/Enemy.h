@@ -65,9 +65,10 @@ public:
   money MoneyMax();
   list<loot> &LootList();
 
-  friend ostream &operator<<(ostream &p_stream, const Enemy &t);
-  friend istream &operator>>(istream &p_stream, Enemy &t);
-  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &t);
+  friend ostream &operator<<(ostream &p_stream, const Enemy &e);
+  friend istream &operator>>(istream &p_stream, Enemy &e);
+  friend std::string DumpSQL(Enemy &e);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &e);
 
 protected:
   enemytemplate m_template;
@@ -77,9 +78,11 @@ protected:
 
 }; // end class Enemy
 
-istream &operator>>(istream &p_stream, EnemyTemplate &t);
-ostream &operator<<(ostream &p_stream, const Enemy &t);
-istream &operator>>(istream &p_stream, Enemy &t);
+istream &operator>>(istream &p_stream, EnemyTemplate &e);
+ostream &operator<<(ostream &p_stream, const Enemy &e);
+istream &operator>>(istream &p_stream, Enemy &e);
+std::string DumpSQL(Enemy &e);
+void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &e);
 
 } // end namespace SimpleMUD
 

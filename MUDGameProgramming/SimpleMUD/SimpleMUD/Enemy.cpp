@@ -9,6 +9,7 @@
 #include "BasicLib/BasicLib.h"
 #include "Item.h"
 #include "Player.h"
+#include <fmt/core.h>
 
 namespace SimpleMUD {
 
@@ -91,12 +92,12 @@ list<loot> &Enemy::LootList() { return m_template->m_loot; }
 // --------------------------------------------------------------------
 //  writes an enemy instance to a stream
 // --------------------------------------------------------------------
-ostream &operator<<(ostream &p_stream, const Enemy &t) {
-  p_stream << "[TEMPLATEID]     " << t.m_template << "\n";
-  p_stream << "[HITPOINTS]      " << t.m_hitpoints << "\n";
-  p_stream << "[ROOM]           " << t.m_room << "\n";
+ostream &operator<<(ostream &p_stream, const Enemy &e) {
+  p_stream << "[TEMPLATEID]     " << e.m_template << "\n";
+  p_stream << "[HITPOINTS]      " << e.m_hitpoints << "\n";
+  p_stream << "[ROOM]           " << e.m_room << "\n";
   p_stream << "[NEXTATTACKTIME] ";
-  insert(p_stream, t.m_nextattacktime);
+  insert(p_stream, e.m_nextattacktime);
   p_stream << "\n";
 
   return p_stream;
@@ -105,16 +106,26 @@ ostream &operator<<(ostream &p_stream, const Enemy &t) {
 // --------------------------------------------------------------------
 //  reads an enemy instance from a stream
 // --------------------------------------------------------------------
-istream &operator>>(istream &p_stream, Enemy &t) {
+istream &operator>>(istream &p_stream, Enemy &e) {
   std::string temp;
 
-  p_stream >> temp >> t.m_template;
-  p_stream >> temp >> t.m_hitpoints;
-  p_stream >> temp >> t.m_room;
+  p_stream >> temp >> e.m_template;
+  p_stream >> temp >> e.m_hitpoints;
+  p_stream >> temp >> e.m_room;
   p_stream >> temp;
-  extract(p_stream, t.m_nextattacktime);
+  extract(p_stream, e.m_nextattacktime);
 
   return p_stream;
+}
+
+std::string DumpSQL(Enemy &e) {
+  std::string dump = fmt::format(
+    "templateId = {}, hitPoints = {}, "
+    "mapId = {}, nextAttackTime = {}",
+    BasicLib::tostring(e.m_template), e.m_hitpoints,
+    BasicLib::tostring(e.m_room), e.m_nextattacktime
+  );
+  return dump;
 }
 
 void ParseRow(const pqxx::const_result_iterator::reference &row, 
