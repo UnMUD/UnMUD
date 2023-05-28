@@ -105,7 +105,6 @@ void PlayerDatabase::SavePlayer(entityid p_player) {
       "WHERE id = {}",
       DumpSQL(itr->second), BasicLib::tostring(p_player)
     );
-
     transactionConnection.exec( sql );
     transactionConnection.commit();
 

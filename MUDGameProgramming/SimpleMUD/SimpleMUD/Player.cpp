@@ -306,9 +306,9 @@ std::string DumpSQL(Player &p) {
     p.m_name, p.m_pass, GetRankString(p.m_rank), p.m_statpoints,
     p.m_experience, p.m_level, BasicLib::tostring(p.m_room), 100,
     p.m_hitpoints, p.m_nextattacktime,
-    DumpSQL(p.m_attributes),
-    (p.m_weapon == -1? "NULL" : BasicLib::tostring(p.m_weapon)), 
-    (p.m_armor == -1? "NULL" : BasicLib::tostring(p.m_armor))
+    DumpSQL(p.m_baseattributes),
+    (p.m_weapon == -1? "NULL" : BasicLib::tostring(p.GetItem(p.m_weapon))), 
+    (p.m_armor == -1? "NULL" : BasicLib::tostring(p.GetItem(p.m_armor)))
   );
 
   return dump;
@@ -341,8 +341,29 @@ void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p) {
     i < p.MaxItems()
   );
 
-  p.m_weapon = (row["weaponId"].is_null()? -1 : row["weaponId"].as<entityid>());
-  p.m_weapon = (row["armorId"].is_null()? -1 : row["armorId"].as<entityid>());
+  if(!row["weaponId"].is_null()){
+    entityid weaponId = row["weaponId"].as<entityid>();
+    for(int i=0; i < p.MaxItems(); ++i){
+      if(weaponId == p.m_inventory[i].m_id){
+        p.m_weapon = i;
+        break;
+      }
+    }
+  } else {
+    p.m_weapon = -1;
+  }
+
+  if(!row["armorId"].is_null()){
+    entityid armorId = row["armorId"].as<entityid>();
+    for(int i=0; i < PLAYERITEMS; ++i){
+      if(armorId == p.m_inventory[i].m_id){
+        p.m_armor = i;
+        break;
+      }
+    }
+  } else {
+    p.m_armor = -1;
+  }
 
   p.RecalculateStats();
 }
