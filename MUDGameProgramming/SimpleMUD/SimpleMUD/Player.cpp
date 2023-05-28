@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <fmt/core.h>
 
 #include "Item.h"
 #include "Player.h"
@@ -293,6 +294,24 @@ istream &operator>>(istream &p_stream, Player &p) {
   p.RecalculateStats();
 
   return p_stream;
+}
+
+std::string DumpSQL(Player &p) {
+  std::string dump = fmt::format(
+    "name = '{}', pass = '{}', rank = '{}', statPoints = {}, "
+    "experience = {}, level = {}, mapId = {}, money = {}, "
+    "hitPoints = {}, nextAttackTime = {}, "
+    "{}, "
+    "weaponId = {}, armorId = {} ",
+    p.m_name, p.m_pass, GetRankString(p.m_rank), p.m_statpoints,
+    p.m_experience, p.m_level, BasicLib::tostring(p.m_room), 100,
+    p.m_hitpoints, p.m_nextattacktime,
+    DumpSQL(p.m_attributes),
+    (p.m_weapon == -1? "NULL" : BasicLib::tostring(p.m_weapon)), 
+    (p.m_armor == -1? "NULL" : BasicLib::tostring(p.m_armor))
+  );
+
+  return dump;
 }
 
 void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p) {

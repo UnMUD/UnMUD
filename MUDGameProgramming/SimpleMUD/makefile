@@ -15,11 +15,11 @@ UNMUDMAINFILE = SimpleMUD
 UNMUDBINFILE = UnMUD.out
 
 # libraries
-LIBS = -lpthread -lpqxx
+LIBS = -lpthread -lpqxx -lfmt
 TESTSLIBS = -lgtest
 
 # flags
-CFLAGS = -std=c++2a -I$(MUDLIBDIR) # \
+CFLAGS = -g -std=c++2a -I$(MUDLIBDIR) # \
 		-Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast \
 		-Wcast-align -Wunused -Woverloaded-virtual -Wconversion \
 		-Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic
@@ -43,6 +43,7 @@ link: $(wildcard *.cpp)
 	$(LIBS) -o $(UNMUDBINFILE) --coverage
 
 run:
+	rm -f *.gcda
 	./$(UNMUDBINFILE)
 
 tests: $(wildcard *.cpp)
