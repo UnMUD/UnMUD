@@ -31,6 +31,7 @@ public:
   void LoadTemplates();
   void LoadData();
   void SaveData();
+  void SaveDataItems(entityid &p_room);
 
 private:
   RoomDatabase() {}

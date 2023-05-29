@@ -113,13 +113,116 @@ void RoomDatabase::LoadData() {
 }
 
 void RoomDatabase::SaveData() {
-  std::ofstream file("maps/default.data");
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("RoomDatabase::SaveData opened database successfully: " + std::string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("RoomDatabase::SaveData can't open database\n");
+        return;
+    }
 
-  for (auto &room : GetInstance()) {
-    file << "[ROOMID] " << room.ID() << "\n";
-    m_vector[room.ID()].SaveData(file);
-    file << "\n";
+    for (auto &room : GetInstance()) {
+      pqxx::work transactionConnection(dbConnection);
+      string sql = fmt::format(
+        "UPDATE MapVolatile "
+        "SET money = {} "
+        "WHERE id = {}",
+        m_vector[room.ID()].Money(), BasicLib::tostring(room.ID())
+      );
+      transactionConnection.exec( sql );
+      transactionConnection.commit();
+      SaveDataItems(room.ID());
+    }
+
+    USERLOG.Log("RoomDatabase::SaveData done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("RoomDatabase::SaveData " + std::string(e.what()));
+    return;
   }
+  return;
+}
+
+void RoomDatabase::SaveDataItems(entityid &p_room) {
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+        USERLOG.Log("RoomDatabase::SaveDataItems opened database successfully: " + string(dbConnection.dbname()));
+    } else {
+        ERRORLOG.Log("RoomDatabase::SaveDataItems can't open database\n");
+        return;
+    }
+    string sql = fmt::format(
+                        "SELECT itemId "
+                        "FROM MapVolatileGuardaItem "
+                        "WHERE mapVolatileId = {}",
+                        BasicLib::tostring(p_room)
+                      );
+    
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    nonTransactionConnection.commit();
+
+    std::set<entityid> databaseItems;
+    std::set<entityid> inGameItems;
+    
+    for(auto row : queryResult) {
+      databaseItems.insert(row["itemId"].as<entityid>());
+    }
+
+    for(auto item : m_vector[p_room].Items()) {
+      inGameItems.insert(item.m_id);
+    }
+
+    pqxx::work transactionConnection(dbConnection);
+
+    string databaseItemsNotInGame = "(";
+    for (entityid itemId : databaseItems) {
+      if (inGameItems.find(itemId) == inGameItems.end()) {
+        databaseItemsNotInGame += BasicLib::tostring(itemId) + ",";
+      }
+    }
+
+    if(databaseItemsNotInGame.size() > 1) {
+      databaseItemsNotInGame.pop_back();
+      databaseItemsNotInGame.push_back(')');
+      sql = fmt::format(
+        "DELETE FROM MapVolatileGuardaItem "
+        "WHERE mapVolatileId = {} "
+        "AND itemId IN {}",
+        p_room, databaseItemsNotInGame
+      );
+      transactionConnection.exec( sql );
+    }
+
+    string inGameItemsNotInDatabase = "";
+    for (entityid itemId : inGameItems) {
+      if (databaseItems.find(itemId) == databaseItems.end()) {
+        inGameItemsNotInDatabase += fmt::format(
+          "({}, {}),", itemId, p_room
+        );
+      }
+    }
+
+    if(!inGameItemsNotInDatabase.empty()){
+      inGameItemsNotInDatabase.pop_back();
+      sql = fmt::format(
+        "INSERT INTO MapVolatileGuardaItem "
+        "VALUES {}",
+        inGameItemsNotInDatabase
+      );
+      transactionConnection.exec( sql );
+    }
+
+    transactionConnection.commit();
+    USERLOG.Log("RoomDatabase::SaveDataItems done successfully");
+    dbConnection.disconnect ();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("RoomDatabase::SaveDataItems " + string(e.what()));
+    return;
+  }
+  return;
 }
 
 } // end namespace SimpleMUD
