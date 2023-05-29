@@ -2,6 +2,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -30,7 +32,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 player
 operator=
 operatorint
@@ -105,6 +108,8 @@ SendString call:[Active,Conn,Log,Name,PrintStatbar,Protocol,SendString] noreturn
 PrintStatbar call:[Buffered,Conn,GetAttr,HitPoints,Protocol,SendString,tostring] noreturn:[SendString]
 operator<< call:[GetRankString,MaxItems,insert]
 operator>> call:[GetRank,MaxItems,RecalculateStats,extract,getline]
+DumpSQL call:[DumpSQL,GetItem,GetRankString,format,tostring]
+ParseRow call:[GetRank,MaxItems,ParseRow,RecalculateStats,as_array,get_next,is_null,while] noreturn:[RecalculateStats]
 EnumToStr < Attribute >
 EnumToStr < ItemType >
 EnumToStr < PlayerRank >

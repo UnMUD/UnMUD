@@ -39,6 +39,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -55,7 +57,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 HitPoints
 CurrentRoom
 NextAttackTime
@@ -72,12 +75,13 @@ Money
 Enemies
 Players
 GetInstance
-Load call:[ID,Log,Name,file,good,resize,size] noreturn:[Log,resize]
+Load call:[ID,Log,Name,ParseRow,c_str,commit,dbname,disconnect,exec,is_open,nonTransactionConnection,queryResult,resize,size,string,subQueryResult,what] noreturn:[Log,disconnect]
 GetInstance
 Create call:[AddEnemy,CurrentRoom,FindOpenID,ID,LoadTemplate] noreturn:[AddEnemy]
 Delete call:[CurrentRoom,RemoveEnemy,erase] noreturn:[erase]
-Load call:[AddEnemy,CurrentRoom,ID,file,good] noreturn:[AddEnemy]
-Save call:[GetInstance,ID,file]
+Load call:[AddEnemy,CurrentRoom,ID,Log,Name,ParseRow,commit,dbname,disconnect,exec,is_open,nonTransactionConnection,queryResult,string,what] noreturn:[Log,disconnect]
+Save call:[DumpSQL,GetInstance,ID,Log,RemoveDeadEnemies,commit,dbname,disconnect,exec,exec1,format,is_open,nonTransactionConnection,queryRow,string,tostring,transactionConnection,what] noreturn:[Log,commit,disconnect,exec]
+RemoveDeadEnemies call:[GetInstance,ID,Log,commit,dbname,disconnect,end,exec,find,format,insert,is_open,nonTransactionConnection,pop_back,push_back,queryResult,size,string,tostring,transactionConnection,what] noreturn:[Log,disconnect,exec,insert]
 EntityDatabaseVector < EnemyTemplate >
 begin call:[begin]
 end call:[end] noreturn:[end]

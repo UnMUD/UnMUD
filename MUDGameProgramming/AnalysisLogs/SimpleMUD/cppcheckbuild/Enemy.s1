@@ -39,6 +39,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -55,7 +57,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 HitPoints
 CurrentRoom
 NextAttackTime
@@ -89,6 +92,7 @@ operator() call:[SendString] noreturn:[SendString]
 operator() call:[SendString] noreturn:[SendString]
 EnemyTemplate
 operator>> call:[clear,extract,getline,push_back] noreturn:[push_back]
+ParseRow call:[clear,emplace_back,is_null] noreturn:[emplace_back]
 Enemy
 LoadTemplate
 Name call:[Name] noreturn:[Name]
@@ -103,6 +107,8 @@ MoneyMax
 LootList
 operator<< call:[insert]
 operator>> call:[extract]
+DumpSQL call:[format,tostring]
+ParseRow
 EnumToStr < Attribute >
 EnumToStr < ItemType >
 EnumToStr < PlayerRank >

@@ -44,6 +44,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -60,7 +62,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 Level
 HitPoints
 StatPoints
@@ -95,11 +98,12 @@ findloggedin call:[begin,double_find_if,end,matchentity,matchentityfull,playerlo
 PlayerDatabase
 PlayerFileName call:[string] noreturn:[string]
 GetInstance
-LoadPlayer call:[ID,Log,Name,PlayerFileName,c_str,file] noreturn:[Log]
-SavePlayer call:[Name,PlayerFileName,c_str,end,file,find]
-Load call:[LoadPlayer,file,good] noreturn:[LoadPlayer]
-Save call:[GetInstance,ID,Name,SavePlayer,file] noreturn:[SavePlayer]
-AddPlayer call:[ID,Name,SavePlayer,file,has,hasfull]
+LoadPlayer call:[ID,Log,Name,ParseRow,commit,dbname,disconnect,exec1,format,is_open,nonTransactionConnection,queryResult,string,what] noreturn:[Log,disconnect]
+SavePlayer call:[DumpSQL,Log,SavePlayerInventory,commit,dbname,disconnect,end,exec,exec1,find,format,is_open,nonTransactionConnection,queryRow,string,tostring,transactionConnection,what] noreturn:[Log,disconnect,exec]
+SavePlayerInventory call:[GetItem,Log,commit,dbname,disconnect,empty,end,exec,find,format,insert,is_open,nonTransactionConnection,pop_back,push_back,queryResult,size,string,tostring,transactionConnection,what] noreturn:[Log,disconnect,exec,format,insert]
+Load call:[ID,Log,Name,ParseRow,commit,dbname,disconnect,exec,is_open,nonTransactionConnection,queryResult,string,what] noreturn:[Log,disconnect]
+Save call:[GetInstance,ID,SavePlayer] noreturn:[SavePlayer]
+AddPlayer call:[ID,Name,SavePlayer,has,hasfull]
 Logout call:[Active,Conn,GetIPString,GetRemoteAddress,Log,LoggedIn,Name,SavePlayer,get] noreturn:[SavePlayer]
 EnumToStr < Attribute >
 EnumToStr < ItemType >

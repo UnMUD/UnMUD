@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="1684567532">
+<analyzerinfo checksum="2350898255">
         <error id="noExplicitConstructor" severity="style" msg="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
             <location file="SimpleMUD/SimpleMUD/Logon.h" line="41" column="3"/>
             <symbol>Logon</symbol>
@@ -13,7 +13,7 @@
             <symbol>matchentity</symbol>
         </error>
         <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Player.h" line="216" column="3"/>
+            <location file="SimpleMUD/SimpleMUD/Player.h" line="222" column="3"/>
             <symbol>playersend</symbol>
         </error>
         <error id="noExplicitConstructor" severity="style" msg="Class &apos;iterator&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;iterator&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
@@ -21,23 +21,23 @@
             <symbol>iterator</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="78" column="38"/>
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="80" column="38"/>
             <symbol>p_str</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="120" column="36"/>
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="148" column="36"/>
             <symbol>p_str</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="142" column="34"/>
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="170" column="34"/>
             <symbol>p_str</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="164" column="36"/>
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="192" column="36"/>
             <symbol>p_str</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
-            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="188" column="38"/>
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="216" column="38"/>
             <symbol>p_str</symbol>
         </error>
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_name&apos; should be passed by const reference." verbose="Parameter &apos;p_name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Logon.cpp">
@@ -53,17 +53,20 @@
             <symbol>m_map.rend()</symbol>
         </error>
   <FileInfo check="ctu">
-<function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; Attribute , NUMATTRIBUTES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="79" col="45" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="82" col="30" call-argexpr="p_enum" call-argvaluetype="0" call-argvalue="0">
-  <path file="SimpleMUD/SimpleMUD/Attributes.h" line="89" col="65" info="Calling function &apos;GetAttributeString&apos;, 1st argument &apos;static_cast&lt;Attribute&gt;(i)&apos; value is 0"/>
-</function-call><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="82" col="30" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:81:15" call-funcname="GetAttributeString" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="89" col="42" call-argexpr="static_cast&lt;Attribute&gt;(i)" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; ItemType , NUMITEMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="121" col="43" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; ItemType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="124" col="29" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; PlayerRank , NUMPLAYERRANKTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="143" col="51" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; PlayerRank &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="146" col="31" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; RoomType , NUMROOMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="165" col="43" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; RoomType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="168" col="29" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:31:20" call-funcname="StrToEnum &lt; Direction , NUMDIRECTIONS &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="189" col="45" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" call-funcname="EnumToStr &lt; Direction &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="192" col="30" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+<function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:33:20" call-funcname="StrToEnum &lt; Attribute , NUMATTRIBUTES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="81" col="45" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="84" col="30" call-argexpr="p_enum" call-argvaluetype="0" call-argvalue="0">
+  <path file="SimpleMUD/SimpleMUD/Attributes.h" line="91" col="65" info="Calling function &apos;GetAttributeString&apos;, 1st argument &apos;static_cast&lt;Attribute&gt;(i)&apos; value is 0"/>
+</function-call><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; Attribute &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="84" col="30" call-argexpr="ATTRIBUTESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:83:15" call-funcname="GetAttributeString" call-argnr="1" file="SimpleMUD/SimpleMUD/Attributes.h" line="91" col="42" call-argexpr="static_cast&lt;Attribute&gt;(i)" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:33:20" call-funcname="StrToEnum &lt; ItemType , NUMITEMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="149" col="43" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; ItemType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="152" col="29" call-argexpr="ITEMSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:33:20" call-funcname="StrToEnum &lt; PlayerRank , NUMPLAYERRANKTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="171" col="51" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; PlayerRank &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="174" col="31" call-argexpr="PLAYERRANKSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:33:20" call-funcname="StrToEnum &lt; RoomType , NUMROOMTYPES &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="193" col="43" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; RoomType &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="196" col="29" call-argexpr="ROOMTYPESTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:33:20" call-funcname="StrToEnum &lt; Direction , NUMDIRECTIONS &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="217" col="45" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" call-funcname="EnumToStr &lt; Direction &gt;" call-argnr="2" file="SimpleMUD/SimpleMUD/Attributes.h" line="220" col="30" call-argexpr="DIRECTIONSTRINGS" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
   <FileInfo check="Null pointer">
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/PlayerDatabase.h:45:12" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/PlayerDatabase.h" line="46" col="69" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/PlayerDatabase.h:50:12" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/PlayerDatabase.h" line="51" col="69" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:108:20" my-argnr="1" my-argname="a" file="SimpleMUD/SimpleMUD/Attributes.h" line="116" col="7" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:121:13" my-argnr="2" my-argname="a" file="SimpleMUD/SimpleMUD/Attributes.h" line="123" col="22" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:95:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="97" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/PlayerDatabase.h:46:12" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/PlayerDatabase.h" line="47" col="69" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/PlayerDatabase.h:51:12" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/PlayerDatabase.h" line="52" col="69" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
   </FileInfo>
   <FileInfo check="Uninitialized variables">
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Logon.h:70:15" my-argnr="1" my-argname="p_connection" file="SimpleMUD/SimpleMUD/Logon.h" line="73" col="7" value="0"/>
@@ -85,23 +88,27 @@
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:64:17" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Item.h" line="67" col="3" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:192:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="192" col="53" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:203:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="203" col="53" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:219:8" my-argnr="1" my-argname="p" file="SimpleMUD/SimpleMUD/Player.h" line="219" col="32" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:67:17" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Item.h" line="71" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:67:17" my-argnr="2" my-argname="i" file="SimpleMUD/SimpleMUD/Item.h" line="72" col="32" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:95:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="97" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:198:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="198" col="53" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:209:15" my-argnr="1" my-argname="p_player" file="SimpleMUD/SimpleMUD/Player.h" line="209" col="53" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Player.h:225:8" my-argnr="1" my-argname="p" file="SimpleMUD/SimpleMUD/Player.h" line="225" col="32" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Logon.h:83:15" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/Logon.cpp" line="188" col="7" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:48:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="49" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
   </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="Handle" lineNumber="21"/>
     <functiondecl functionName="Enter" lineNumber="149"/>
     <functiondecl functionName="GotoGame" lineNumber="162"/>
     <functiondecl functionName="AcceptibleName" lineNumber="184"/>
+    <functioncall functionName="ACCURACY"/>
     <functioncall functionName="ADMIN"/>
+    <functioncall functionName="AGILITY"/>
     <functioncall functionName="ARMOR"/>
     <functioncall functionName="ATTRIBUTESTRINGS"/>
     <functioncall functionName="AcceptibleName"/>
@@ -112,7 +119,9 @@
     <functioncall functionName="Close"/>
     <functioncall functionName="CompName"/>
     <functioncall functionName="Conn"/>
+    <functioncall functionName="DAMAGEABSORB"/>
     <functioncall functionName="DIRECTIONSTRINGS"/>
+    <functioncall functionName="DODGING"/>
     <functioncall functionName="Direction"/>
     <functioncall functionName="EAST"/>
     <functioncall functionName="ENTERNEWPASS"/>
@@ -132,6 +141,8 @@
     <functioncall functionName="GetRemoteAddress"/>
     <functioncall functionName="GotoGame"/>
     <functioncall functionName="HEALING"/>
+    <functioncall functionName="HEALTH"/>
+    <functioncall functionName="HPREGEN"/>
     <functioncall functionName="Handler"/>
     <functioncall functionName="Hungup"/>
     <functioncall functionName="ID"/>
@@ -141,6 +152,7 @@
     <functioncall functionName="Log"/>
     <functioncall functionName="LoggedIn"/>
     <functioncall functionName="LowerCase"/>
+    <functioncall functionName="MAXHITPOINTS"/>
     <functioncall functionName="Match"/>
     <functioncall functionName="MatchFull"/>
     <functioncall functionName="NEWCONNECTION"/>
@@ -156,6 +168,7 @@
     <functioncall functionName="PLAINROOM"/>
     <functioncall functionName="PLAYERITEMS"/>
     <functioncall functionName="PLAYERRANKSTRINGS"/>
+    <functioncall functionName="ParseRow"/>
     <functioncall functionName="Password"/>
     <functioncall functionName="Player"/>
     <functioncall functionName="PlayerDatabase"/>
@@ -167,6 +180,8 @@
     <functioncall functionName="RoomType"/>
     <functioncall functionName="SOUTH"/>
     <functioncall functionName="STORE"/>
+    <functioncall functionName="STRENGTH"/>
+    <functioncall functionName="STRIKEDAMAGE"/>
     <functioncall functionName="Send"/>
     <functioncall functionName="SendString"/>
     <functioncall functionName="StrToEnum &lt; Attribute , NUMATTRIBUTES &gt;"/>
@@ -181,6 +196,7 @@
     <functioncall functionName="WEAPON"/>
     <functioncall functionName="WEST"/>
     <functioncall functionName="WHITESPACE"/>
+    <functioncall functionName="as"/>
     <functioncall functionName="begin"/>
     <functioncall functionName="c_str"/>
     <functioncall functionName="catch"/>
@@ -197,6 +213,7 @@
     <functioncall functionName="findfull"/>
     <functioncall functionName="first"/>
     <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
     <functioncall functionName="getline"/>
     <functioncall functionName="handler"/>
     <functioncall functionName="hasfull"/>
@@ -263,6 +280,7 @@
     <functioncall functionName="rend"/>
     <functioncall functionName="reset"/>
     <functioncall functionName="return"/>
+    <functioncall functionName="row"/>
     <functioncall functionName="search"/>
     <functioncall functionName="second"/>
     <functioncall functionName="size"/>

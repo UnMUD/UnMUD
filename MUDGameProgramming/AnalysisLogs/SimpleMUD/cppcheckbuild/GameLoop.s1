@@ -39,6 +39,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -55,7 +57,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 HitPoints
 CurrentRoom
 NextAttackTime
@@ -116,6 +119,7 @@ end call:[end] noreturn:[end]
 size call:[size] noreturn:[size]
 has call:[begin,end,find] noreturn:[end]
 operator>> call:[Name,clear,extract,getline,push_back] noreturn:[push_back]
+ParseRow call:[as_array,get_next,push_back,while] noreturn:[push_back,while]
 StoreDatabase
 GameLoop call:[LoadDatabases] noreturn:[LoadDatabases]
 GameLoop call:[SaveDatabases] noreturn:[SaveDatabases]

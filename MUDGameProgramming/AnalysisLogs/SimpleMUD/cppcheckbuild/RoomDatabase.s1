@@ -55,6 +55,8 @@ GetAttribute call:[StrToEnum < Attribute , NUMATTRIBUTES >] noreturn:[StrToEnum 
 GetAttributeString call:[EnumToStr < Attribute >] noreturn:[EnumToStr < Attribute >]
 operator<< call:[GetAttributeString]
 operator>>
+DumpSQL call:[format]
+ParseRow
 GetItemType call:[StrToEnum < ItemType , NUMITEMTYPES >] noreturn:[StrToEnum < ItemType , NUMITEMTYPES >]
 GetItemTypeString call:[EnumToStr < ItemType >] noreturn:[EnumToStr < ItemType >]
 GetRank call:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >] noreturn:[StrToEnum < PlayerRank , NUMPLAYERRANKTYPES >]
@@ -71,7 +73,8 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,getline]
+operator>> call:[GetItemType,ID,getline]
+ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 Type
 Data
 Description
@@ -84,9 +87,10 @@ Enemies
 Players
 RoomDatabase
 GetInstance
-LoadTemplates call:[ID,LoadTemplate,file,good,resize,size] noreturn:[resize]
-LoadData call:[LoadData,file,good]
-SaveData call:[GetInstance,ID,SaveData,file]
+LoadTemplates call:[ID,LoadTemplate,Log,Name,c_str,commit,dbname,disconnect,exec,is_open,nonTransactionConnection,queryResult,resize,size,string,subQueryResult,what] noreturn:[Log,disconnect]
+LoadData call:[ID,LoadData,Log,Name,commit,dbname,disconnect,exec,is_open,nonTransactionConnection,queryResult,resize,size,string,what] noreturn:[Log,disconnect]
+SaveData call:[GetInstance,ID,Log,Money,SaveDataItems,commit,dbname,disconnect,exec,format,is_open,string,tostring,transactionConnection,what] noreturn:[Log,SaveDataItems,disconnect]
+SaveDataItems call:[Items,Log,commit,dbname,disconnect,empty,end,exec,find,format,insert,is_open,nonTransactionConnection,pop_back,push_back,queryResult,size,string,tostring,transactionConnection,what] noreturn:[Log,disconnect,exec,format,insert]
 EnumToStr < Attribute >
 EnumToStr < ItemType >
 EnumToStr < PlayerRank >
