@@ -9,8 +9,8 @@
 #define ATTRIBUTES_H
 
 #include <array>
-#include <pqxx/pqxx>
 #include <fmt/core.h>
+#include <pqxx/pqxx>
 
 #include "BasicLib/BasicLib.h"
 
@@ -107,17 +107,19 @@ inline istream &operator>>(istream &p_stream, AttributeSet &a) {
 
 inline std::string DumpSQL(AttributeSet &a) {
   std::string dump = fmt::format(
-    "attributes.strength = {}, attributes.health = {}, attributes.agility = {}, "
-    "attributes.maxhitpoints = {}, attributes.accuracy = {}, attributes.dodging = {}, "
-    "attributes.strikedamage = {}, attributes.damageabsorb = {}, attributes.hpregen = {}",
-    a[STRENGTH], a[HEALTH], a[AGILITY],
-    a[MAXHITPOINTS], a[ACCURACY], a[DODGING], 
-    a[STRIKEDAMAGE], a[DAMAGEABSORB], a[HPREGEN]
-  );
+      "attributes.strength = {}, attributes.health = {}, attributes.agility = "
+      "{}, "
+      "attributes.maxhitpoints = {}, attributes.accuracy = {}, "
+      "attributes.dodging = {}, "
+      "attributes.strikedamage = {}, attributes.damageabsorb = {}, "
+      "attributes.hpregen = {}",
+      a[STRENGTH], a[HEALTH], a[AGILITY], a[MAXHITPOINTS], a[ACCURACY],
+      a[DODGING], a[STRIKEDAMAGE], a[DAMAGEABSORB], a[HPREGEN]);
   return dump;
 }
 
-inline void ParseRow(const pqxx::const_result_iterator::reference row, AttributeSet &a) {
+inline void ParseRow(const pqxx::const_result_iterator::reference row,
+                     AttributeSet &a) {
   row["strength"] >> a[STRENGTH];
   row["health"] >> a[HEALTH];
   row["agility"] >> a[AGILITY];

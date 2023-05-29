@@ -47,9 +47,8 @@ istream &operator>>(istream &p_stream, EnemyTemplate &t) {
   return p_stream;
 }
 
-void ParseRow(const pqxx::const_result_iterator::reference &row, 
-              const pqxx::result &lootResult,
-              EnemyTemplate &t) {
+void ParseRow(const pqxx::const_result_iterator::reference &row,
+              const pqxx::result &lootResult, EnemyTemplate &t) {
   row["name"] >> t.m_name;
   row["hitPoints"] >> t.m_hitpoints;
   row["accuracy"] >> t.m_accuracy;
@@ -57,16 +56,14 @@ void ParseRow(const pqxx::const_result_iterator::reference &row,
   row["strikeDamage"] >> t.m_strikedamage;
   row["damageAbsorb"] >> t.m_damageabsorb;
   row["experience"] >> t.m_experience;
-  t.m_weapon = (row["weaponId"].is_null()? 0 : row["weaponId"].as<entityid>());
+  t.m_weapon = (row["weaponId"].is_null() ? 0 : row["weaponId"].as<entityid>());
   row["moneyMin"] >> t.m_moneymin;
   row["moneyMax"] >> t.m_moneymax;
 
   t.m_loot.clear();
   for (auto const lootRow : lootResult) {
-    t.m_loot.emplace_back(
-      lootRow["itemId"].as<entityid>(), 
-      lootRow["itemQuantity"].as<int>()
-    );
+    t.m_loot.emplace_back(lootRow["itemId"].as<entityid>(),
+                          lootRow["itemQuantity"].as<int>());
   }
 }
 
@@ -119,17 +116,15 @@ istream &operator>>(istream &p_stream, Enemy &e) {
 }
 
 std::string DumpSQL(Enemy &e) {
-  std::string dump = fmt::format(
-    "templateId = {}, hitPoints = {}, "
-    "mapId = {}, nextAttackTime = {}",
-    BasicLib::tostring(e.m_template), e.m_hitpoints,
-    BasicLib::tostring(e.m_room), e.m_nextattacktime
-  );
+  std::string dump =
+      fmt::format("templateId = {}, hitPoints = {}, "
+                  "mapId = {}, nextAttackTime = {}",
+                  BasicLib::tostring(e.m_template), e.m_hitpoints,
+                  BasicLib::tostring(e.m_room), e.m_nextattacktime);
   return dump;
 }
 
-void ParseRow(const pqxx::const_result_iterator::reference &row, 
-              Enemy &e) {
+void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &e) {
   e.m_template = row["templateId"].as<entityid>();
   row["hitPoints"] >> e.m_hitpoints;
   e.m_room = row["mapId"].as<entityid>();

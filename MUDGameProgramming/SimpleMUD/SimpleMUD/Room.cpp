@@ -95,24 +95,22 @@ void Room::LoadTemplate(istream &p_stream) {
 }
 
 void Room::LoadTemplate(const pqxx::const_result_iterator::reference &row,
-                        const pqxx::result &connectionsResult
-) {
+                        const pqxx::result &connectionsResult) {
   row["name"] >> m_name;
   row["description"] >> m_description;
   m_description = BasicLib::SearchAndReplace(m_description, "\\x1B", "\x1B");
   m_type = GetRoomType(row["type"].as<std::string>());
-  m_data = (row["storeId"].is_null()? 0 : row["storeId"].as<entityid>());
+  m_data = (row["storeId"].is_null() ? 0 : row["storeId"].as<entityid>());
 
   for (int d = 0; d < NUMDIRECTIONS; d++)
     m_rooms[d] = 0;
 
-  for(auto connection : connectionsResult){
-    m_rooms[GetDirection(
-      connection["directionEnum"].as<std::string>()
-    )] = connection["connectedTo"].as<entityid>();
+  for (auto connection : connectionsResult) {
+    m_rooms[GetDirection(connection["directionEnum"].as<std::string>())] =
+        connection["connectedTo"].as<entityid>();
   }
-  
-  m_spawnwhich = (row["enemyId"].is_null()? 0 : row["enemyId"].as<entityid>());
+
+  m_spawnwhich = (row["enemyId"].is_null() ? 0 : row["enemyId"].as<entityid>());
   row["maxEnemies"] >> m_maxenemies;
 }
 
@@ -138,7 +136,7 @@ void Room::LoadData(const pqxx::const_result_iterator::reference &row) {
   std::pair<pqxx::array_parser::juncture, string> elem;
   do {
     elem = arr.get_next();
-    if (elem.first == pqxx::array_parser::juncture::string_value){
+    if (elem.first == pqxx::array_parser::juncture::string_value) {
       m_items.push_back(BasicLib::totype<entityid>(elem.second));
     }
   } while (elem.first != pqxx::array_parser::juncture::done);

@@ -12,8 +12,8 @@
 #include "BasicLib/BasicLib.h"
 #include "Entity.h"
 #include <iostream>
-#include <string>
 #include <pqxx/pqxx>
+#include <string>
 
 using std::istream;
 using std::ostream;
@@ -31,7 +31,6 @@ public:
       : m_type(WEAPON), m_min(0), m_max(0), m_speed(0), m_price(),
         m_attributes() {}
 
-  
   inline ItemType &Type() { return m_type; }
 
   inline int &GetAttr(int p_att) { return m_attributes[p_att]; }
@@ -42,7 +41,8 @@ public:
   inline money &Price() { return m_price; }
 
   friend istream &operator>>(istream &p_stream, Item &i);
-  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Item &i);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row,
+                       Item &i);
 
 protected:
   // -----------------------------------------
@@ -89,9 +89,11 @@ inline istream &operator>>(istream &p_stream, Item &i) {
 }
 
 // --------------------------------------------------------------------
-//  Extracts an item in pqxx::const_result_iterator::reference form from a pqxx::result
+//  Extracts an item in pqxx::const_result_iterator::reference form from a
+//  pqxx::result
 // --------------------------------------------------------------------
-inline void ParseRow(const pqxx::const_result_iterator::reference &row, Item &i) {
+inline void ParseRow(const pqxx::const_result_iterator::reference &row,
+                     Item &i) {
   row["name"] >> i.m_name;
   i.m_type = GetItemType(row["type"].as<std::string>());
   row["min"] >> i.m_min;

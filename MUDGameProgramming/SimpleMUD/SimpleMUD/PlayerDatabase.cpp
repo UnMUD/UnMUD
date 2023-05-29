@@ -28,25 +28,27 @@ void PlayerDatabase::LoadPlayer(string p_name) {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("PlayerDatabase::LoadPlayer opened database successfully: " + string(dbConnection.dbname()));
+      USERLOG.Log("PlayerDatabase::LoadPlayer opened database successfully: " +
+                  string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("PlayerDatabase::LoadPlayer can't open database\n");
-        return;
+      ERRORLOG.Log("PlayerDatabase::LoadPlayer can't open database\n");
+      return;
     }
 
     /* Create SQL statement */
     string sql = fmt::format(
-                        "SELECT p.*, (p.attributes).*, ARRAY_AGG(i.itemId) AS itemIds "
-                        "FROM Player p "
-                        "LEFT JOIN Inventory i ON p.id = i.playerid "
-                        "WHERE p.name = '{}'"
-                        "GROUP BY p.id;", p_name);
+        "SELECT p.*, (p.attributes).*, ARRAY_AGG(i.itemId) AS itemIds "
+        "FROM Player p "
+        "LEFT JOIN Inventory i ON p.id = i.playerid "
+        "WHERE p.name = '{}'"
+        "GROUP BY p.id;",
+        p_name);
 
     /* Create a non-transactional object. */
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    
+
     /* Execute SQL query */
-    pqxx::row queryResult( nonTransactionConnection.exec1( sql ));
+    pqxx::row queryResult(nonTransactionConnection.exec1(sql));
     nonTransactionConnection.commit();
 
     id = queryResult["id"].as<entityid>();
@@ -55,7 +57,7 @@ void PlayerDatabase::LoadPlayer(string p_name) {
     USERLOG.Log("Loaded Player: " + m_map[id].Name());
 
     USERLOG.Log("PlayerDatabase::LoadPlayer done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("PlayerDatabase::LoadPlayer " + string(e.what()));
     return;
@@ -71,46 +73,42 @@ void PlayerDatabase::SavePlayer(entityid p_player) {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("PlayerDatabase::SavePlayer opened database successfully: " + string(dbConnection.dbname()));
+      USERLOG.Log("PlayerDatabase::SavePlayer opened database successfully: " +
+                  string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("PlayerDatabase::SavePlayer can't open database\n");
-        return;
+      ERRORLOG.Log("PlayerDatabase::SavePlayer can't open database\n");
+      return;
     }
     string sql = fmt::format("SELECT EXISTS("
-                        "SELECT 1 FROM Player "
-                        "WHERE id = {})",
-                        BasicLib::tostring(p_player)
-                      );
-    
+                             "SELECT 1 FROM Player "
+                             "WHERE id = {})",
+                             BasicLib::tostring(p_player));
+
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    pqxx::row queryRow( nonTransactionConnection.exec1( sql ));
+    pqxx::row queryRow(nonTransactionConnection.exec1(sql));
     nonTransactionConnection.commit();
 
     pqxx::work transactionConnection(dbConnection);
-    if(!queryRow["exists"].as<bool>()){
-      sql = fmt::format(
-        "INSERT INTO Player VALUES ( "
-        " {}, '', '', 'REGULAR', "
-        " 0, 0, 1, 1, 0, 10, 0, "
-        " ROW(0, 0, 0, 0, 0, 0, 0, 0, 0), NULL, NULL"
-        ")",
-        BasicLib::tostring(p_player)
-      );
-      transactionConnection.exec( sql );
+    if (!queryRow["exists"].as<bool>()) {
+      sql = fmt::format("INSERT INTO Player VALUES ( "
+                        " {}, '', '', 'REGULAR', "
+                        " 0, 0, 1, 1, 0, 10, 0, "
+                        " ROW(0, 0, 0, 0, 0, 0, 0, 0, 0), NULL, NULL"
+                        ")",
+                        BasicLib::tostring(p_player));
+      transactionConnection.exec(sql);
     }
 
-    sql = fmt::format(
-      "UPDATE Player "
-      "SET {} "
-      "WHERE id = {}",
-      DumpSQL(itr->second), BasicLib::tostring(p_player)
-    );
-    transactionConnection.exec( sql );
+    sql = fmt::format("UPDATE Player "
+                      "SET {} "
+                      "WHERE id = {}",
+                      DumpSQL(itr->second), BasicLib::tostring(p_player));
+    transactionConnection.exec(sql);
     transactionConnection.commit();
 
     SavePlayerInventory(p_player);
     USERLOG.Log("PlayerDatabase::SavePlayer done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("PlayerDatabase::SavePlayer " + string(e.what()));
     return;
@@ -126,26 +124,26 @@ void PlayerDatabase::SavePlayerInventory(entityid &p_player) {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("PlayerDatabase::SavePlayerInventory opened database successfully: " + string(dbConnection.dbname()));
+      USERLOG.Log(
+          "PlayerDatabase::SavePlayerInventory opened database successfully: " +
+          string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("PlayerDatabase::SavePlayerInventory can't open database\n");
-        return;
+      ERRORLOG.Log("PlayerDatabase::SavePlayerInventory can't open database\n");
+      return;
     }
-    string sql = fmt::format(
-                        "SELECT itemId "
-                        "FROM Inventory "
-                        "WHERE playerId = {}",
-                        BasicLib::tostring(p_player)
-                      );
-    
+    string sql = fmt::format("SELECT itemId "
+                             "FROM Inventory "
+                             "WHERE playerId = {}",
+                             BasicLib::tostring(p_player));
+
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    pqxx::result queryResult(nonTransactionConnection.exec(sql));
     nonTransactionConnection.commit();
 
     std::set<entityid> databaseItems;
     std::set<entityid> inGameItems;
-    
-    for(auto row : queryResult) {
+
+    for (auto row : queryResult) {
       databaseItems.insert(row["itemId"].as<entityid>());
     }
 
@@ -165,40 +163,34 @@ void PlayerDatabase::SavePlayerInventory(entityid &p_player) {
       }
     }
 
-    if(databaseItemsNotInGame.size() > 1) {
+    if (databaseItemsNotInGame.size() > 1) {
       databaseItemsNotInGame.pop_back();
       databaseItemsNotInGame.push_back(')');
-      sql = fmt::format(
-        "DELETE FROM Inventory "
-        "WHERE playerId = {} "
-        "AND itemId IN {}",
-        p_player, databaseItemsNotInGame
-      );
-      transactionConnection.exec( sql );
+      sql = fmt::format("DELETE FROM Inventory "
+                        "WHERE playerId = {} "
+                        "AND itemId IN {}",
+                        p_player, databaseItemsNotInGame);
+      transactionConnection.exec(sql);
     }
 
     string inGameItemsNotInDatabase = "";
     for (entityid itemId : inGameItems) {
       if (databaseItems.find(itemId) == databaseItems.end()) {
-        inGameItemsNotInDatabase += fmt::format(
-          "({}, {}),", p_player, itemId
-        );
+        inGameItemsNotInDatabase += fmt::format("({}, {}),", p_player, itemId);
       }
     }
 
-    if(!inGameItemsNotInDatabase.empty()){
+    if (!inGameItemsNotInDatabase.empty()) {
       inGameItemsNotInDatabase.pop_back();
-      sql = fmt::format(
-        "INSERT INTO Inventory "
-        "VALUES {}",
-        inGameItemsNotInDatabase
-      );
-      transactionConnection.exec( sql );
+      sql = fmt::format("INSERT INTO Inventory "
+                        "VALUES {}",
+                        inGameItemsNotInDatabase);
+      transactionConnection.exec(sql);
     }
 
     transactionConnection.commit();
     USERLOG.Log("PlayerDatabase::SavePlayerInventory done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("PlayerDatabase::SavePlayerInventory " + string(e.what()));
     return;
@@ -212,24 +204,24 @@ bool PlayerDatabase::Load() {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("PlayerDatabase::Load opened database successfully: " + string(dbConnection.dbname()));
+      USERLOG.Log("PlayerDatabase::Load opened database successfully: " +
+                  string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("PlayerDatabase::Load can't open database\n");
-        return false;
+      ERRORLOG.Log("PlayerDatabase::Load can't open database\n");
+      return false;
     }
 
     /* Create SQL statement */
     string sql = "SELECT p.*, (p.attributes).*, ARRAY_AGG(i.itemId) AS itemIds "
-                      "FROM Player p "
-                      "LEFT JOIN Inventory i ON p.id = i.playerid "
-                      "GROUP BY p.id;";
-
+                 "FROM Player p "
+                 "LEFT JOIN Inventory i ON p.id = i.playerid "
+                 "GROUP BY p.id;";
 
     /* Create a non-transactional object. */
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    
+
     /* Execute SQL query */
-    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    pqxx::result queryResult(nonTransactionConnection.exec(sql));
     nonTransactionConnection.commit();
 
     /* List down all the records */
@@ -240,7 +232,7 @@ bool PlayerDatabase::Load() {
       USERLOG.Log("Loaded Player: " + m_map[id].Name());
     }
     USERLOG.Log("PlayerDatabase::Load done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("PlayerDatabase::Load " + string(e.what()));
     return false;

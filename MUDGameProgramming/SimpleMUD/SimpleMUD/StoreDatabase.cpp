@@ -26,10 +26,11 @@ bool StoreDatabase::Load() {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("StoreDatabase::Load opened database successfully: " + std::string(dbConnection.dbname()));
+      USERLOG.Log("StoreDatabase::Load opened database successfully: " +
+                  std::string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("StoreDatabase::Load can't open database\n");
-        return false;
+      ERRORLOG.Log("StoreDatabase::Load can't open database\n");
+      return false;
     }
 
     /* Create SQL statement */
@@ -40,9 +41,9 @@ bool StoreDatabase::Load() {
 
     /* Create a non-transactional object. */
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    
+
     /* Execute SQL query */
-    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    pqxx::result queryResult(nonTransactionConnection.exec(sql));
     nonTransactionConnection.commit();
 
     /* List down all the records */
@@ -53,7 +54,7 @@ bool StoreDatabase::Load() {
       USERLOG.Log("Loaded Store: " + m_map[id].Name());
     }
     USERLOG.Log("StoreDatabase::Load done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("StoreDatabase::Load " + std::string(e.what()));
     return false;

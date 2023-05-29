@@ -11,8 +11,8 @@
 #include "BasicLib/BasicLib.h"
 #include <iostream>
 #include <list>
-#include <string>
 #include <pqxx/pqxx>
+#include <string>
 
 #include "Attributes.h"
 #include "DatabasePointer.h"
@@ -58,7 +58,8 @@ public:
   void RemoveEnemy(enemy p_enemy);
 
   void LoadTemplate(istream &p_stream);
-  void LoadTemplate(const pqxx::const_result_iterator::reference &row, const pqxx::result &connectionsResult);
+  void LoadTemplate(const pqxx::const_result_iterator::reference &row,
+                    const pqxx::result &connectionsResult);
   void LoadData(istream &p_stream);
   void LoadData(const pqxx::const_result_iterator::reference &row);
   void SaveData(ostream &p_stream);

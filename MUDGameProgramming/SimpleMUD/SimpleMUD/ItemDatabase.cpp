@@ -5,8 +5,8 @@
 //
 //
 
-#include "Attributes.h"
 #include "ItemDatabase.h"
+#include "Attributes.h"
 #include "BasicLib/BasicLib.h"
 #include "SimpleMUDLogs.h"
 #include <fstream>
@@ -29,10 +29,11 @@ bool ItemDatabase::Load() {
   try {
     pqxx::connection dbConnection;
     if (dbConnection.is_open()) {
-        USERLOG.Log("ItemDatabase::Load opened database successfully: " + std::string(dbConnection.dbname()));
+      USERLOG.Log("ItemDatabase::Load opened database successfully: " +
+                  std::string(dbConnection.dbname()));
     } else {
-        ERRORLOG.Log("ItemDatabase::Load can't open database\n");
-        return false;
+      ERRORLOG.Log("ItemDatabase::Load can't open database\n");
+      return false;
     }
 
     /* Create SQL statement */
@@ -40,9 +41,9 @@ bool ItemDatabase::Load() {
 
     /* Create a non-transactional object. */
     pqxx::nontransaction nonTransactionConnection(dbConnection);
-    
+
     /* Execute SQL query */
-    pqxx::result queryResult( nonTransactionConnection.exec( sql ));
+    pqxx::result queryResult(nonTransactionConnection.exec(sql));
     nonTransactionConnection.commit();
 
     /* List down all the records */
@@ -53,7 +54,7 @@ bool ItemDatabase::Load() {
       USERLOG.Log("Loaded Item: " + m_map[id].Name());
     }
     USERLOG.Log("ItemDatabase::Load done successfully");
-    dbConnection.disconnect ();
+    dbConnection.disconnect();
   } catch (const std::exception &e) {
     ERRORLOG.Log("ItemDatabase::Load " + std::string(e.what()));
     return false;

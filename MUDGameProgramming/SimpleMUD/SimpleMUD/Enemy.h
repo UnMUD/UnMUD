@@ -27,8 +27,8 @@ class EnemyTemplate : public Entity {
 public:
   EnemyTemplate();
   friend istream &operator>>(istream &p_stream, EnemyTemplate &t);
-  friend void ParseRow(const pqxx::const_result_iterator::reference &row, 
-                        const pqxx::result &lootResult, EnemyTemplate &t);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row,
+                       const pqxx::result &lootResult, EnemyTemplate &t);
 
   int m_hitpoints;
   int m_accuracy;
@@ -68,7 +68,8 @@ public:
   friend ostream &operator<<(ostream &p_stream, const Enemy &e);
   friend istream &operator>>(istream &p_stream, Enemy &e);
   friend std::string DumpSQL(Enemy &e);
-  friend void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &e);
+  friend void ParseRow(const pqxx::const_result_iterator::reference &row,
+                       Enemy &e);
 
 protected:
   enemytemplate m_template;
