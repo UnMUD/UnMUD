@@ -6,6 +6,7 @@
 //
 
 #include <cmath>
+#include <fmt/core.h>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -293,6 +294,75 @@ istream &operator>>(istream &p_stream, Player &p) {
   p.RecalculateStats();
 
   return p_stream;
+}
+
+std::string DumpSQL(Player &p) {
+  std::string dump = fmt::format(
+      "name = '{}', pass = '{}', rank = '{}', statPoints = {}, "
+      "experience = {}, level = {}, mapId = {}, money = {}, "
+      "hitPoints = {}, nextAttackTime = {}, "
+      "{}, "
+      "weaponId = {}, armorId = {} ",
+      p.m_name, p.m_pass, GetRankString(p.m_rank), p.m_statpoints,
+      p.m_experience, p.m_level, BasicLib::tostring(p.m_room), 100,
+      p.m_hitpoints, p.m_nextattacktime, DumpSQL(p.m_baseattributes),
+      (p.m_weapon == -1 ? "NULL" : BasicLib::tostring(p.GetItem(p.m_weapon))),
+      (p.m_armor == -1 ? "NULL" : BasicLib::tostring(p.GetItem(p.m_armor))));
+
+  return dump;
+}
+
+void ParseRow(const pqxx::const_result_iterator::reference &row, Player &p) {
+  row["name"] >> p.m_name;
+  row["pass"] >> p.m_pass;
+  p.m_rank = GetRank(row["rank"].as<std::string>());
+  row["statPoints"] >> p.m_statpoints;
+  row["experience"] >> p.m_experience;
+  row["level"] >> p.m_level;
+  p.m_room = row["mapId"].as<entityid>();
+  row["money"] >> p.m_money;
+  row["hitPoints"] >> p.m_hitpoints;
+  row["nextAttackTime"] >> p.m_nextattacktime;
+
+  ParseRow(row, p.m_baseattributes);
+
+  auto arr = row["itemIds"].as_array();
+  std::pair<pqxx::array_parser::juncture, string> elem;
+  int i = -1;
+  do {
+    i++;
+    elem = arr.get_next();
+    if (elem.first == pqxx::array_parser::juncture::string_value) {
+      p.m_inventory[i] = totype<entityid>(elem.second);
+    }
+  } while (elem.first != pqxx::array_parser::juncture::done &&
+           i < p.MaxItems());
+
+  if (!row["weaponId"].is_null()) {
+    entityid weaponId = row["weaponId"].as<entityid>();
+    for (int i = 0; i < p.MaxItems(); ++i) {
+      if (weaponId == p.m_inventory[i].m_id) {
+        p.m_weapon = i;
+        break;
+      }
+    }
+  } else {
+    p.m_weapon = -1;
+  }
+
+  if (!row["armorId"].is_null()) {
+    entityid armorId = row["armorId"].as<entityid>();
+    for (int i = 0; i < PLAYERITEMS; ++i) {
+      if (armorId == p.m_inventory[i].m_id) {
+        p.m_armor = i;
+        break;
+      }
+    }
+  } else {
+    p.m_armor = -1;
+  }
+
+  p.RecalculateStats();
 }
 
 } // end namespace SimpleMUD

@@ -40,6 +40,7 @@ public:
   void Delete(enemy p_enemy);
   void Load();
   void Save();
+  void RemoveDeadEnemies();
 
 private:
   EnemyDatabase() {}

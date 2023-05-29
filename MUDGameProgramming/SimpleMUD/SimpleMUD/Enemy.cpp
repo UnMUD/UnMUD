@@ -9,6 +9,7 @@
 #include "BasicLib/BasicLib.h"
 #include "Item.h"
 #include "Player.h"
+#include <fmt/core.h>
 
 namespace SimpleMUD {
 
@@ -46,6 +47,26 @@ istream &operator>>(istream &p_stream, EnemyTemplate &t) {
   return p_stream;
 }
 
+void ParseRow(const pqxx::const_result_iterator::reference &row,
+              const pqxx::result &lootResult, EnemyTemplate &t) {
+  row["name"] >> t.m_name;
+  row["hitPoints"] >> t.m_hitpoints;
+  row["accuracy"] >> t.m_accuracy;
+  row["dodging"] >> t.m_dodging;
+  row["strikeDamage"] >> t.m_strikedamage;
+  row["damageAbsorb"] >> t.m_damageabsorb;
+  row["experience"] >> t.m_experience;
+  t.m_weapon = (row["weaponId"].is_null() ? 0 : row["weaponId"].as<entityid>());
+  row["moneyMin"] >> t.m_moneymin;
+  row["moneyMax"] >> t.m_moneymax;
+
+  t.m_loot.clear();
+  for (auto const lootRow : lootResult) {
+    t.m_loot.emplace_back(lootRow["itemId"].as<entityid>(),
+                          lootRow["itemQuantity"].as<int>());
+  }
+}
+
 Enemy::Enemy()
     : m_template(0), m_hitpoints(0), m_room(0), m_nextattacktime(0) {}
 
@@ -68,12 +89,12 @@ list<loot> &Enemy::LootList() { return m_template->m_loot; }
 // --------------------------------------------------------------------
 //  writes an enemy instance to a stream
 // --------------------------------------------------------------------
-ostream &operator<<(ostream &p_stream, const Enemy &t) {
-  p_stream << "[TEMPLATEID]     " << t.m_template << "\n";
-  p_stream << "[HITPOINTS]      " << t.m_hitpoints << "\n";
-  p_stream << "[ROOM]           " << t.m_room << "\n";
+ostream &operator<<(ostream &p_stream, const Enemy &e) {
+  p_stream << "[TEMPLATEID]     " << e.m_template << "\n";
+  p_stream << "[HITPOINTS]      " << e.m_hitpoints << "\n";
+  p_stream << "[ROOM]           " << e.m_room << "\n";
   p_stream << "[NEXTATTACKTIME] ";
-  insert(p_stream, t.m_nextattacktime);
+  insert(p_stream, e.m_nextattacktime);
   p_stream << "\n";
 
   return p_stream;
@@ -82,16 +103,32 @@ ostream &operator<<(ostream &p_stream, const Enemy &t) {
 // --------------------------------------------------------------------
 //  reads an enemy instance from a stream
 // --------------------------------------------------------------------
-istream &operator>>(istream &p_stream, Enemy &t) {
+istream &operator>>(istream &p_stream, Enemy &e) {
   std::string temp;
 
-  p_stream >> temp >> t.m_template;
-  p_stream >> temp >> t.m_hitpoints;
-  p_stream >> temp >> t.m_room;
+  p_stream >> temp >> e.m_template;
+  p_stream >> temp >> e.m_hitpoints;
+  p_stream >> temp >> e.m_room;
   p_stream >> temp;
-  extract(p_stream, t.m_nextattacktime);
+  extract(p_stream, e.m_nextattacktime);
 
   return p_stream;
+}
+
+std::string DumpSQL(Enemy &e) {
+  std::string dump =
+      fmt::format("templateId = {}, hitPoints = {}, "
+                  "mapId = {}, nextAttackTime = {}",
+                  BasicLib::tostring(e.m_template), e.m_hitpoints,
+                  BasicLib::tostring(e.m_room), e.m_nextattacktime);
+  return dump;
+}
+
+void ParseRow(const pqxx::const_result_iterator::reference &row, Enemy &e) {
+  e.m_template = row["templateId"].as<entityid>();
+  row["hitPoints"] >> e.m_hitpoints;
+  e.m_room = row["mapId"].as<entityid>();
+  row["nextAttackTime"] >> e.m_nextattacktime;
 }
 
 } // end namespace SimpleMUD

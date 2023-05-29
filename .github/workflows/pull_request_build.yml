@@ -43,6 +43,9 @@ jobs:
           sudo apt install -y libmsgsl-dev
           sudo apt install -y cppcheck clang clang-tidy
           sudo apt install -y libgtest-dev gcovr
+          sudo apt install -y postgresql-client
+          sudo apt install -y libpqxx-dev libpqxx-doc
+          sudo apt install -y libfmt-dev libfmt-doc
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper

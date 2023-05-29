@@ -21,15 +21,43 @@ StoreDatabase &StoreDatabase::GetInstance() {
 }
 
 bool StoreDatabase::Load() {
-  std::ifstream file("stores/stores.str");
   entityid id;
-  std::string temp;
 
-  while (file.good()) {
-    file >> temp >> id; // load ID
-    m_map[id].ID() = id;
-    file >> m_map[id] >> std::ws;                     // load store
-    USERLOG.Log("Loaded Store: " + m_map[id].Name()); // log it
+  try {
+    pqxx::connection dbConnection;
+    if (dbConnection.is_open()) {
+      USERLOG.Log("StoreDatabase::Load opened database successfully: " +
+                  std::string(dbConnection.dbname()));
+    } else {
+      ERRORLOG.Log("StoreDatabase::Load can't open database\n");
+      return false;
+    }
+
+    /* Create SQL statement */
+    std::string sql = "SELECT s.id, s.name, ARRAY_AGG(sv.itemId) AS itemIds "
+                      "FROM Store s "
+                      "LEFT JOIN StoreVendeItem sv ON s.id = sv.storeId "
+                      "GROUP BY s.id, s.name;";
+
+    /* Create a non-transactional object. */
+    pqxx::nontransaction nonTransactionConnection(dbConnection);
+
+    /* Execute SQL query */
+    pqxx::result queryResult(nonTransactionConnection.exec(sql));
+    nonTransactionConnection.commit();
+
+    /* List down all the records */
+    for (auto const row : queryResult) {
+      id = row["id"].as<entityid>();
+      m_map[id].ID() = id;
+      ParseRow(row, m_map[id]);
+      USERLOG.Log("Loaded Store: " + m_map[id].Name());
+    }
+    USERLOG.Log("StoreDatabase::Load done successfully");
+    dbConnection.disconnect();
+  } catch (const std::exception &e) {
+    ERRORLOG.Log("StoreDatabase::Load " + std::string(e.what()));
+    return false;
   }
   return true;
 }

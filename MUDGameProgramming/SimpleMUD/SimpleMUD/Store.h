@@ -11,6 +11,7 @@
 #include "BasicLib/BasicLib.h"
 #include <iostream>
 #include <list>
+#include <pqxx/pqxx>
 #include <string>
 #include <utility>
 
@@ -51,6 +52,8 @@ public:
   }
 
   friend istream &operator>>(istream &p_stream, Store &s);
+  friend void ParseRow(const pqxx::const_result_iterator::reference row,
+                       Store &s);
 
 protected:
   std::list<item> m_items;
@@ -75,6 +78,20 @@ inline istream &operator>>(istream &p_stream, Store &s) {
     s.m_items.push_back(last);         // add item
 
   return p_stream;
+}
+
+inline void ParseRow(const pqxx::const_result_iterator::reference row,
+                     Store &s) {
+  row["name"] >> s.m_name;
+
+  auto arr = row["itemIds"].as_array();
+  std::pair<pqxx::array_parser::juncture, string> elem;
+  do {
+    elem = arr.get_next();
+    if (elem.first == pqxx::array_parser::juncture::string_value) {
+      s.m_items.push_back(totype<entityid>(elem.second));
+    }
+  } while (elem.first != pqxx::array_parser::juncture::done);
 }
 
 } // end namespace SimpleMUD

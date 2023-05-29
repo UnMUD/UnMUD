@@ -118,10 +118,10 @@ CREATE TABLE MapVolatileGuardaItem(
 
 
 CREATE TABLE EnemyInstance(
-    id BIGSERIAL,
-    templateId BIGINT,
+    id BIGINT,
+    templateId BIGINT NOT NULL,
     hitPoints INTEGER,
-    mapId BIGINT,
+    mapId BIGINT NOT NULL,
     nextAttackTime BIGINT,
 
     CONSTRAINT EnemyInstance_PK PRIMARY KEY(id),
@@ -132,13 +132,13 @@ CREATE TABLE EnemyInstance(
 
 CREATE TABLE Player(
     id BIGINT,
-    name TEXT,
+    name TEXT UNIQUE NOT NULL,
     pass TEXT,
     rank PLAYERRANK,
     statPoints INTEGER,
     experience INTEGER,
     level INTEGER,
-    mapId INTEGER,
+    mapId BIGINT NOT NULL,
     money UBIGINT,
     hitPoints INTEGER,
     nextAttackTime BIGINT,

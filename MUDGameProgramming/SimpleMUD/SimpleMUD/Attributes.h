@@ -9,6 +9,8 @@
 #define ATTRIBUTES_H
 
 #include <array>
+#include <fmt/core.h>
+#include <pqxx/pqxx>
 
 #include "BasicLib/BasicLib.h"
 
@@ -101,6 +103,32 @@ inline istream &operator>>(istream &p_stream, AttributeSet &a) {
   }
 
   return p_stream;
+}
+
+inline std::string DumpSQL(AttributeSet &a) {
+  std::string dump = fmt::format(
+      "attributes.strength = {}, attributes.health = {}, attributes.agility = "
+      "{}, "
+      "attributes.maxhitpoints = {}, attributes.accuracy = {}, "
+      "attributes.dodging = {}, "
+      "attributes.strikedamage = {}, attributes.damageabsorb = {}, "
+      "attributes.hpregen = {}",
+      a[STRENGTH], a[HEALTH], a[AGILITY], a[MAXHITPOINTS], a[ACCURACY],
+      a[DODGING], a[STRIKEDAMAGE], a[DAMAGEABSORB], a[HPREGEN]);
+  return dump;
+}
+
+inline void ParseRow(const pqxx::const_result_iterator::reference row,
+                     AttributeSet &a) {
+  row["strength"] >> a[STRENGTH];
+  row["health"] >> a[HEALTH];
+  row["agility"] >> a[AGILITY];
+  row["maxhitpoints"] >> a[MAXHITPOINTS];
+  row["accuracy"] >> a[ACCURACY];
+  row["dodging"] >> a[DODGING];
+  row["strikedamage"] >> a[STRIKEDAMAGE];
+  row["damageabsorb"] >> a[DAMAGEABSORB];
+  row["hpregen"] >> a[HPREGEN];
 }
 
 // ======================================

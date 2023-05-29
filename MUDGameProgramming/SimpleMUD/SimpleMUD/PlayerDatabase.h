@@ -35,6 +35,7 @@ public:
   inline string PlayerFileName(const string &p_name);
   void LoadPlayer(string p_name);
   void SavePlayer(entityid p_player);
+  void SavePlayerInventory(entityid &p_player);
 
   entityid LastID() {
     // since the ID's are sorted in ascending order within the map,

@@ -15,6 +15,11 @@ services:
       - POSTGRES_DB=unmud
     volumes:
       - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "unmud"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   unmud:
     build:
@@ -31,6 +36,12 @@ services:
       - '5100'
     ports:
       - '5100:5100'
+    environment:
+      - PGHOST=db
+      - PGPORT=5432
+      - PGDATABASE=unmud
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
     restart: always
     stdin_open: true # docker run -i
     tty: true        # docker run -t
