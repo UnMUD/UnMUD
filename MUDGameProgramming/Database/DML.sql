@@ -1,4 +1,6 @@
 \c unmud;
+\set iuriPassword `echo "$IURI_PASSWORD"`
+\set mauricioPassword `echo "$MAURICIO_PASSWORD"`
 
 INSERT INTO Item VALUES 
     (1, 'LIES!!!@~', 'HEALING', 0, 0, 0, 1, ROW(0, 0, 0, 0, 0, 0, 0, 0, 0)),
@@ -285,5 +287,6 @@ INSERT INTO EnemyInstance VALUES
 
 INSERT INTO Player VALUES
     (3435973837, 'Mithrandir', 'booga', 'REGULAR', 0, 0, 1, 1, 0, 10, 0, ROW(7, 7, 7, 0, 0, 0, 0, 0, 0), NULL, NULL),
-    (3435973838, 'iuriell', '123456789', 'REGULAR', 0, 15, 1, 4, 5, 9, 97578016, ROW(6, 6, 9, 0, 0, 0, 0, 0, 0), NULL, NULL);
+    (3435973838, 'iuriell', :'iuriPassword', 'ADMIN', 0, 0, 1, 1, 0, 10, 0, ROW(100, 100, 100, 0, 0, 0, 0, 0, 0), NULL, NULL),
+    (3435973839, 'mauricio', :'mauricioPassword', 'ADMIN', 0, 0, 1, 1, 0, 10, 0, ROW(100, 100, 100, 0, 0, 0, 0, 0, 0), NULL, NULL);
 
