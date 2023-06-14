@@ -1,0 +1,243 @@
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ../Libraries/SocketLib/SocketLib.h:18,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from SimpleMUD/EntityDatabase.h:18,
+                 from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Entity.h: In constructor 'SimpleMUD::Entity::Entity()':
+SimpleMUD/Entity.h:36:12: warning: 'SimpleMUD::Entity::m_name' should be initialized in the member initialization list [-Weffc++]
+   36 |     inline Entity()
+      |            ^~~~~~
+SimpleMUD/Entity.h:36:12: warning: 'SimpleMUD::Entity::m_id' should be initialized in the member initialization list [-Weffc++]
+In file included from SimpleMUD/ItemDatabase.h:15,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/EntityDatabase.h: In static member function 'static int SimpleMUD::EntityDatabase<datatype>::size()':
+SimpleMUD/EntityDatabase.h:147:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  147 |     inline static int size() { return (int)m_map.size(); }
+      |                                                       ^
+In file included from SimpleMUD/Item.h:16,
+                 from SimpleMUD/ItemDatabase.h:16,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Attributes.h: In function 'enumeration SimpleMUD::StrToEnum(std::string, const string*)':
+SimpleMUD/Attributes.h:37:35: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   37 |             return (enumeration)(i);
+      |                                   ^
+SimpleMUD/Attributes.h:40:27: warning: use of old-style cast to 'enumeration' [-Wold-style-cast]
+   40 |     return (enumeration)(0);
+      |                           ^
+SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const SimpleMUD::AttributeSet&)':
+SimpleMUD/Attributes.h:134:59: warning: use of old-style cast to 'enum SimpleMUD::Attribute' [-Wold-style-cast]
+  134 |         p_stream << "[" << GetAttributeString( (Attribute)i ) <<
+      |                                                           ^
+      |                                                ------------
+      |                                                static_cast<Attribute> (i)
+In file included from SimpleMUD/ItemDatabase.h:16,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Item.h: In constructor 'SimpleMUD::Item::Item()':
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_type' should be initialized in the member initialization list [-Weffc++]
+   32 |     Item()
+      |     ^~~~
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_min' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_max' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_speed' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_price' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Item.h:32:5: warning: 'SimpleMUD::Item::m_attributes' should be initialized in the member initialization list [-Weffc++]
+In file included from SimpleMUD/PlayerDatabase.h:19,
+                 from SimpleMUD.cpp:13:
+SimpleMUD/Player.h: At global scope:
+SimpleMUD/Player.h:35:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   35 | class Player : public Entity
+      |       ^~~~~~
+SimpleMUD/Player.h:35:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+SimpleMUD/Player.h:35:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+SimpleMUD/Player.h: In static member function 'static int SimpleMUD::Player::NeedForLevel(int)':
+SimpleMUD/Player.h:165:55: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  165 |     return (int)(100 * ( pow( 1.4, p_level - 1 ) - 1 ));
+      |                                                       ^
+      |            -----
+      |            static_cast<int> (                          )
+In file included from ../Libraries/SocketLib/SocketLib.h:15,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+SimpleMUD/Logon.h:33:30:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from SimpleMUD.cpp:18:
+SimpleMUD/Logon.h: In constructor 'SimpleMUD::Logon::Logon(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_state' should be initialized in the member initialization list [-Weffc++]
+   47 |     Logon( Connection<Telnet>& p_conn )
+      |     ^~~~~
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_errors' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_name' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Logon.h:47:5: warning: 'SimpleMUD::Logon::m_pass' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:89:59: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   89 |             p_connection.Send( msg.c_str(), (int)msg.size() );
+      |                                                           ^
+      |                                             ---------------
+      |                                             static_cast<int> (msg.size())
+SimpleMUD/Logon.h:91:27: warning: catching polymorphic type 'class SocketLib::Exception' by value [-Wcatch-value=]
+   91 |         catch( SocketLib::Exception )
+      |                           ^~~~~~~~~
+In file included from SimpleMUD.cpp:19:
+SimpleMUD/Game.h: In constructor 'SimpleMUD::Game::Game(SocketLib::Connection<SocketLib::Telnet>&, SimpleMUD::player)':
+SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_player' should be initialized in the member initialization list [-Weffc++]
+   42 |     Game( Connection<Telnet>& p_conn, player p_player )
+      |     ^~~~
+SimpleMUD/Game.h:42:5: warning: 'SimpleMUD::Game::m_lastcommand' should be initialized in the member initialization list [-Weffc++]
+In file included from SimpleMUD.cpp:20:
+SimpleMUD/GameLoop.h: In constructor 'SimpleMUD::GameLoop::GameLoop()':
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_savedatabases' should be initialized in the member initialization list [-Weffc++]
+   29 |     GameLoop()      { LoadDatabases(); }
+      |     ^~~~~~~~
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextround' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextregen' should be initialized in the member initialization list [-Weffc++]
+SimpleMUD/GameLoop.h:29:5: warning: 'SimpleMUD::GameLoop::m_nextheal' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/SocketLib.h:14,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ListeningManager.h: In instantiation of 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>':
+SimpleMUD.cpp:35:41:   required from here
+../Libraries/SocketLib/ListeningManager.h:43:7: warning: 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>' has pointer data members [-Weffc++]
+   43 | class ListeningManager
+      |       ^~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ListeningManager.h:43:7: warning:   but does not override 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h:43:7: warning:   or 'operator=(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h: In instantiation of 'SocketLib::ListeningManager<protocol, defaulthandler>::ListeningManager() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]':
+SimpleMUD.cpp:35:41:   required from here
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_sockets' should be initialized in the member initialization list [-Weffc++]
+  101 | ListeningManager<protocol, defaulthandler>::ListeningManager()
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_set' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h:101:1: warning: 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>::m_manager' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In instantiation of 'SocketLib::ConnectionManager<protocol, defaulthandler>::ConnectionManager(int, int, int) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]':
+SimpleMUD.cpp:36:61:   required from here
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_connections' should be initialized in the member initialization list [-Weffc++]
+  144 | ConnectionManager<protocol, defaulthandler>::
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_maxdatarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_sendtimeout' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_maxbuffered' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/ConnectionManager.h:144:1: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_set' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/SocketLib/SocketLib.h:13,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In instantiation of 'SocketLib::Connection<protocol>::Connection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:177:26:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::NewConnection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ListeningManager.h:188:21:   required from 'void SocketLib::ListeningManager<protocol, defaulthandler>::Listen() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:44:23:   required from here
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_protocol' should be initialized in the member initialization list [-Weffc++]
+  245 | Connection<protocol>::Connection( DataSocket& p_socket )
+      | ^~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_handlerstack' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_sendbuffer' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_datarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastdatarate' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastReceiveTime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_lastSendTime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_creationtime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_checksendtime' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h:245:1: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_closed' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/Connection.h: In instantiation of 'void SocketLib::Connection<protocol>::SendBuffer() [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:322:13:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Send() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ConnectionManager.h:100:9:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Manage() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:45:23:   required from here
+../Libraries/SocketLib/Connection.h:301:32: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  301 |         m_sendbuffer.erase( 0, sent );
+      |                                ^~~~
