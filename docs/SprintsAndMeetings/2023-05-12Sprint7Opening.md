@@ -28,3 +28,4 @@
 | US48 | Iuri Severo | 14 | 0 |
 | US55 | Iuri Severo | 2 | 0 |
 | US56 | Iuri Severo | 3 | 0 |
+| US58 | Iuri Severo | 2 | 0 |

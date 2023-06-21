@@ -1,20 +1,17 @@
-# Fechamento Sprint 10
+# Fechamento Sprint 11
 
 |  **Data**  | **Versão** | **Descrição** | **Autor(es)** |
 | ---------- | ---------- | ------------- | ------------- |
-| 12/06/2023 |  1.0   | Criação do documento de fechamento da Sprint 10 | [Iuri Severo](https://github.com/iurisevero) |
+| 21/06/2023 |  1.0   | Criação do documento de fechamento da Sprint 11 | [Iuri Severo](https://github.com/iurisevero) |
 
-**Data**: 09 de Junho de 2023
+**Data**: 16 de Junho de 2023
 
 **Redigida por**: Iuri Severo
 
 **Participantes**: 
 * Iuri Severo
 * Prof. Edson Alves
-
-## Notas Pré-reunião
-
-Por motivos da saúde, não foi possível desenvolver as tarefas propostas para essa sprint.
+* Prof. Maurício Serrano
 
 ## Planning
 
@@ -22,7 +19,7 @@ Por motivos da saúde, não foi possível desenvolver as tarefas propostas para 
 
 | Duração |   Início   |     Fim    |
 | ------- | ---------- | ---------- |
-| 7 dias  | 02/06/2023 | 09/06/2023 |
+| 7 dias  | 09/06/2023 | 16/06/2023 |
 
 ### Sprint Backlog
 
@@ -32,4 +29,5 @@ Por motivos da saúde, não foi possível desenvolver as tarefas propostas para 
 | US26 | Iuri Severo | - | 1 |
 | US27 | Iuri Severo | - | 1 |
 | US28 | Iuri Severo | - | 1 |
-| US45 | Iuri Severo | - | 1 |
+| US45 | Iuri Severo | 7 | 1 |
+| US52 | Iuri Severo | - | 1 |
