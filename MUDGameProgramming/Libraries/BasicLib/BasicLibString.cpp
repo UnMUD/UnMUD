@@ -30,8 +30,12 @@ std::string LowerCase(const std::string &p_string) {
 std::string SearchAndReplace(const std::string &p_target,
                              const std::string &p_search,
                              const std::string &p_replace) {
+
   std::string str(p_target);
   std::string::size_type i = str.find(p_search);
+
+  if(p_search == "")
+    return str;
 
   // loop while replacing all occurances
   while (i != std::string::npos) {
@@ -58,6 +62,9 @@ std::string TrimWhitespace(const std::string &p_string) {
 }
 
 std::string ParseWord(const std::string &p_string, int p_index) {
+  if(p_index < 0)
+    return "";
+  
   size_t wss = p_string.find_first_not_of(WHITESPACE);
 
   while (p_index > 0) {
@@ -82,6 +89,9 @@ std::string ParseWord(const std::string &p_string, int p_index) {
 }
 
 std::string RemoveWord(const std::string &p_string, int p_index) {
+  if(p_index < 0)
+    return p_string;
+  
   size_t wss = p_string.find_first_not_of(WHITESPACE);
 
   while (p_index > 0) {

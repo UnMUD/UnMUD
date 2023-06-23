@@ -30,6 +30,9 @@ filelist GetFileList(const std::string p_directory) {
   }
 #else
   DIR *d = opendir(p_directory.c_str());
+  if(!d)
+    return s;
+
   dirent *ent = readdir(d);
 
   while (ent != 0) {

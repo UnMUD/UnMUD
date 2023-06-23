@@ -39,10 +39,8 @@ TEST_F(BasicLibFilesTest, GetFileList) {
     EXPECT_NE(fileList.find(m_tempDirName + m_tempFilesName[0]), fileList.end());
     EXPECT_NE(fileList.find(m_tempDirName + m_tempFilesName[1]), fileList.end());
 
+    fileList.clear();
     // Chama a função GetFileList com um diretório inexistente
-    // BasicLib::filelist fileList = BasicLib::GetFileList("nonexistent_dir"); // Segmentation Fault
-    FAIL() << "The call to BasicLib::GetFileList with a non existent directory "
-              "results on Segmentation Fault (core dumped)\n";
-    // Verifica se a lista de arquivos retornada está vazia
-    // EXPECT_TRUE(fileList.empty());
+    fileList = BasicLib::GetFileList("nonexistent_dir"); // Segmentation Fault
+    EXPECT_TRUE(fileList.empty());
 }

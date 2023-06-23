@@ -149,9 +149,8 @@ As melhorias do projeto serão realizadas utilizando as ferramentas `clang-forma
 
 Desse modo, os passos realizados para correção serão:
 1. Utilização do `clang-format`
-2. Utilização do `clang-tidy` com a flag `-fix`
-3. Geração de novos relatórios de análise utilizando o `cppcheck` e o `clang-tidy`
-4. Compilação das bibliotecas e do MUD com flags de warning ativas
-5. Correção de warnings
+2. Geração de novos relatórios de análise utilizando o `cppcheck` e o `clang-tidy`
+3. Compilação das bibliotecas e do MUD com flags de warning ativas
+4. Correção de warnings
 
 O erros elicitados já foram corrigidos, por conta disso o foco das melhorias será na correção dos warnings

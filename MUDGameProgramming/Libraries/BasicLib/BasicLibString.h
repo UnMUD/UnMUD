@@ -24,7 +24,7 @@ std::string SearchAndReplace(const std::string &p_target,
                              const std::string &p_search,
                              const std::string &p_replace);
 
-const std::string WHITESPACE = " \t\n\r";
+const std::string WHITESPACE = " \t\n\r\f";
 
 std::string TrimWhitespace(const std::string &p_string);
 std::string ParseWord(const std::string &p_string, int p_index);
@@ -38,7 +38,9 @@ template <typename type> inline void insert(std::ostream &s, const type &t) {
   s << t;
 }
 template <typename type> inline type &extract(std::istream &s, type &t) {
-  s >> t;
+  if (!(s >> t)) {
+      throw std::runtime_error("Extract error. Invalid content.");
+  }
   return t;
 }
 
