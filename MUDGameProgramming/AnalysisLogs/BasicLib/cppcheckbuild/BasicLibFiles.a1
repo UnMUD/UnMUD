@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="1622987118">
+<analyzerinfo checksum="3586483229">
         <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_directory&apos; should be passed by const reference." verbose="Parameter &apos;p_directory&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="Libraries/BasicLib/BasicLibFiles.cpp">
             <location file="Libraries/BasicLib/BasicLibFiles.cpp" line="17" column="40"/>
             <symbol>p_directory</symbol>

@@ -1,0 +1,718 @@
+---
+MainSourceFile:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/./Libraries/ThreadLib/ThreadLibFunctions.cpp'
+Diagnostics:
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         'invalid argument ''-std=c++2a'' not allowed with ''C'''
+      FilePath:        ''
+      FileOffset:      0
+      Replacements:    []
+    Level:           Error
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      219
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          219
+          Length:          17
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADEXCEPTION_H
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          246
+          Length:          17
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADEXCEPTION_H
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''exception'' file not found'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      276
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          FileOffset:      276
+          Length:          11
+    Level:           Error
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-restrict-system-libc-headers
+    DiagnosticMessage:
+      Message:         system include pthread.h not allowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      575
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          575
+          Length:          22
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-implementation-in-namespace
+    DiagnosticMessage:
+      Message:         '''__llvm_libc'' needs to be the outermost namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      617
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  google-explicit-constructor
+    DiagnosticMessage:
+      Message:         single-argument constructors must be marked explicit to avoid unintentional implicit conversions
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1102
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1102
+          Length:          0
+          ReplacementText: 'explicit '
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  fuchsia-default-arguments-declarations
+    DiagnosticMessage:
+      Message:         declaring a parameter with a default argument is disallowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1112
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1125
+          Length:          14
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-nodiscard
+    DiagnosticMessage:
+      Message:         'function ''GetError'' should be marked [[nodiscard]]'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1374
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1374
+          Length:          0
+          ReplacementText: '[[nodiscard]] '
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1380
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1374
+          Length:          5
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+          Offset:          1396
+          Length:          0
+          ReplacementText: ' -> Error'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_error'' has protected visibility'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+      FileOffset:      1440
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLib.h'
+      FileOffset:      111
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLib.h'
+          Offset:          111
+          Length:          11
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIB_H
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLib.h'
+          Offset:          132
+          Length:          11
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIB_H
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-implementation-in-namespace
+    DiagnosticMessage:
+      Message:         '''__llvm_libc'' needs to be the outermost namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      270
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      978
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          972
+          Length:          6
+          ReplacementText: 'auto '
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1000
+          Length:          0
+          ReplacementText: ' -> void *'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with a cast to avoid duplicating the type name
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1044
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1044
+          Length:          9
+          ReplacementText: auto
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'deleting a pointer through a type that is not marked ''gsl::owner<>''; consider using a smart pointer instead'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1203
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          FileOffset:      1210
+          Length:          4
+    Notes:
+      - Message:         variable declared here
+        FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+        FileOffset:      1044
+        Replacements:    []
+        Ranges:
+          - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+            FileOffset:      1044
+            Length:          50
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+      FileOffset:      1248
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.cpp'
+          Offset:          1248
+          Length:          1
+          ReplacementText: nullptr
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      155
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          155
+          Length:          20
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIBFUNCTIONS_H
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          185
+          Length:          20
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIBFUNCTIONS_H
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-restrict-system-libc-headers
+    DiagnosticMessage:
+      Message:         system include pthread.h not allowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      509
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          509
+          Length:          22
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-restrict-system-libc-headers
+    DiagnosticMessage:
+      Message:         system include unistd.h not allowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      531
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          531
+          Length:          21
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-implementation-in-namespace
+    DiagnosticMessage:
+      Message:         '''__llvm_libc'' needs to be the outermost namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      604
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-using
+    DiagnosticMessage:
+      Message:         'use ''using'' instead of ''typedef'''
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      883
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          883
+          Length:          34
+          ReplacementText: 'using ThreadFunc = void (*)(void *)'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-using
+    DiagnosticMessage:
+      Message:         'use ''using'' instead of ''typedef'''
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      1267
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          1267
+          Length:          26
+          ReplacementText: 'using ThreadID = pthread_t'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2218
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2212
+          Length:          6
+          ReplacementText: 'auto '
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2240
+          Length:          0
+          ReplacementText: ' -> void *'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2477
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2468
+          Length:          8
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2517
+          Length:          0
+          ReplacementText: ' -> ThreadID'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''ret'' is not initialized'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2527
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2530
+          Length:          0
+          ReplacementText: ' = 0'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-init-variables
+    DiagnosticMessage:
+      Message:         'variable ''t'' is not initialized'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2544
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2545
+          Length:          0
+          ReplacementText: ' = 0'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  readability-identifier-length
+    DiagnosticMessage:
+      Message:         'variable name ''t'' is too short, expected at least 3 characters'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2544
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  readability-implicit-bool-conversion
+    DiagnosticMessage:
+      Message:         'implicit conversion ''ThreadLib::ThreadFunc'' (aka ''void (*)(void *)'') -> bool'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2592
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2591
+          Length:          1
+          ReplacementText: ''
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2598
+          Length:          0
+          ReplacementText: ' == nullptr'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  google-readability-braces-around-statements
+    DiagnosticMessage:
+      Message:         statement should be inside braces
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2599
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2599
+          Length:          0
+          ReplacementText: ' {'
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2638
+          Length:          0
+          ReplacementText: "\n}"
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-exception-baseclass
+    DiagnosticMessage:
+      Message:         'throwing an exception whose type ''ThreadLib::Exception'' is not derived from ''std::exception'''
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2611
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          FileOffset:      2605
+          Length:          32
+    Notes:
+      - Message:         type defined here
+        FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+        FileOffset:      792
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'initializing non-owner ''ThreadLib::DummyData *'' with a newly created ''gsl::owner<>'''
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2644
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          FileOffset:      2644
+          Length:          31
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-use-auto
+    DiagnosticMessage:
+      Message:         use auto when initializing with new to avoid duplicating the type name
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2644
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2644
+          Length:          9
+          ReplacementText: auto
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_create'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2970
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      5402
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2989
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          2989
+          Length:          1
+          ReplacementText: nullptr
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''DummyRun'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      2992
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+        FileOffset:      2218
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-owning-memory
+    DiagnosticMessage:
+      Message:         'deleting a pointer through a type that is not marked ''gsl::owner<>''; consider using a smart pointer instead'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3083
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          FileOffset:      3090
+          Length:          4
+    Notes:
+      - Message:         variable declared here
+        FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+        FileOffset:      2644
+        Replacements:    []
+        Ranges:
+          - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+            FileOffset:      2644
+            Length:          31
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-exception-baseclass
+    DiagnosticMessage:
+      Message:         'throwing an exception whose type ''ThreadLib::Exception'' is not derived from ''std::exception'''
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3132
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          FileOffset:      3126
+          Length:          32
+    Notes:
+      - Message:         type defined here
+        FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadException.h'
+        FileOffset:      792
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-trailing-return-type
+    DiagnosticMessage:
+      Message:         use a trailing return type for this function
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3404
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          3395
+          Length:          8
+          ReplacementText: auto
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          3411
+          Length:          0
+          ReplacementText: ' -> ThreadID'
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_self'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      3477
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      8285
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_join'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      4206
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      6084
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  modernize-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      4229
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          4229
+          Length:          4
+          ReplacementText: nullptr
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_cancel'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      4835
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      18106
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  fuchsia-default-arguments-declarations
+    DiagnosticMessage:
+      Message:         declaring a parameter with a default argument is disallowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      5171
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+          Offset:          5196
+          Length:          4
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''usleep'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      5254
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/unistd.h'
+        FileOffset:      17771
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-avoid-magic-numbers
+    DiagnosticMessage:
+      Message:         '1000 is a magic number; consider replacing it with a named constant'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibFunctions.h'
+      FileOffset:      5278
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvm-header-guard
+    DiagnosticMessage:
+      Message:         header guard does not follow preferred style
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      115
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          115
+          Length:          16
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIBMUTEX_H
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          141
+          Length:          16
+          ReplacementText: HOME_RUNNER_WORK_UNMUD_UNMUD_MUDGAMEPROGRAMMING_LIBRARIES_THREADLIB_THREADLIBMUTEX_H
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-restrict-system-libc-headers
+    DiagnosticMessage:
+      Message:         system include pthread.h not allowed
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      445
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          445
+          Length:          22
+          ReplacementText: ''
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  clang-diagnostic-error
+    DiagnosticMessage:
+      Message:         '''string'' file not found'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      486
+      Replacements:    []
+      Ranges:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+          FileOffset:      486
+          Length:          8
+    Level:           Error
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-implementation-in-namespace
+    DiagnosticMessage:
+      Message:         '''__llvm_libc'' needs to be the outermost namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      508
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-special-member-functions
+    DiagnosticMessage:
+      Message:         'class ''Mutex'' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      529
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_mutex_init'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      890
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      27881
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  hicpp-use-nullptr
+    DiagnosticMessage:
+      Message:         use nullptr
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      919
+      Replacements:
+        - FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+          Offset:          919
+          Length:          1
+          ReplacementText: nullptr
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_mutex_destroy'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      1210
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      28043
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_mutex_lock'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      1550
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      28276
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  llvmlibc-callee-namespace
+    DiagnosticMessage:
+      Message:         '''pthread_mutex_unlock'' must resolve to a function declared within the ''__llvm_libc'' namespace'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      1870
+      Replacements:    []
+    Notes:
+      - Message:         resolves to this declaration
+        FilePath:        '/usr/include/pthread.h'
+        FileOffset:      29764
+        Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+  - DiagnosticName:  cppcoreguidelines-non-private-member-variables-in-classes
+    DiagnosticMessage:
+      Message:         'member variable ''m_mutex'' has protected visibility'
+      FilePath:        '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming/Libraries/ThreadLib/ThreadLibMutex.h'
+      FileOffset:      2030
+      Replacements:    []
+    Level:           Warning
+    BuildDirectory:  '/home/runner/work/UnMUD/UnMUD/MUDGameProgramming'
+...
