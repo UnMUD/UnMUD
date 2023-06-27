@@ -28,4 +28,5 @@
 | US26 | Iuri Severo | 1 | 1 |
 | US27 | Iuri Severo | 1 | 1 |
 | US28 | Iuri Severo | 2 | 1 |
+| US43 | Iuri Severo | 2 | 0 |
 | US52 | Iuri Severo | 6 | 1 |
