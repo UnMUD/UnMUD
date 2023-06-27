@@ -69,6 +69,9 @@ template <class datatype> struct always {
 
 template <typename type>
 inline int percent(const type &first, const type &second) {
+  if(second == 0)
+    throw std::runtime_error("Division by zero.");
+
   return static_cast<int>(100.0 * static_cast<double>(first) /
                           static_cast<double>(second));
 }

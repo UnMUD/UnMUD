@@ -26,10 +26,10 @@
 | Descrição da Tarefa | Responsável(eis) | Tempo real (dias) | Débito Técnico |
 | ------------------- | ---------------- | -------------------------- | -------------- |
 | US57 | Iuri Severo | 4 | 0 |
-| US25 | Iuri Severo | 1 | 1 |
-| US26 | Iuri Severo | 1 | 1 |
-| US27 | Iuri Severo | 1 | 1 |
-| US28 | Iuri Severo | 2 | 1 |
+| US25 | Iuri Severo | - | 1 |
+| US26 | Iuri Severo | - | 1 |
+| US27 | Iuri Severo | - | 1 |
+| US28 | Iuri Severo | - | 1 |
 
 ## Notas pós reunião
 

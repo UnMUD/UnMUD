@@ -65,8 +65,13 @@ void *DummyRun(void *p_data);
 // Description: Creates a thread and returns its ID.
 // ========================================================================
 inline ThreadID Create(ThreadFunc p_func, void *p_param) {
+  int ret;
   ThreadID t;
   // create a new dummy data block
+
+  if(!p_func)
+    throw Exception(CreationFailure);
+
   DummyData *data = new DummyData;
   data->m_func = p_func;
   data->m_data = p_param;
@@ -79,10 +84,10 @@ inline ThreadID Create(ThreadFunc p_func, void *p_param) {
     g_handlemap[t] = h;
   }
 #else // create a linux thread
-  pthread_create(&t, 0, DummyRun, data);
+  ret = pthread_create(&t, 0, DummyRun, data);
 #endif
 
-  if (t == 0) {
+  if (ret != 0 || t == 0) {
     // delete the data first
     delete data;
 

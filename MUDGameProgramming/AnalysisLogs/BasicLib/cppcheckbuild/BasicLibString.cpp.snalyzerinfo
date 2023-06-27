@@ -1,5 +1,5 @@
 insert
-extract
+extract call:[runtime_error] noreturn:[runtime_error]
 tostring call:[insert,size,str,string] noreturn:[str,string]
 totype call:[extract,str]
 UpperCase call:[size,toupper]

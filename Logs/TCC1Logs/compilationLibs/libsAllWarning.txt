@@ -1,0 +1,484 @@
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+../Libraries/SocketLib/SocketLibErrors.cpp: In constructor 'SocketLib::Exception::Exception(SocketLib::Error)':
+../Libraries/SocketLib/SocketLibErrors.cpp:220:5: warning: 'SocketLib::Exception::m_code' should be initialized in the member initialization list [-Weffc++]
+  220 |     Exception::Exception( Error p_code )
+      |     ^~~~~~~~~
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketLibSocket.h:15,
+                 from ../Libraries/SocketLib/SocketLibSocket.cpp:8:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::Socket::Socket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:76:5: warning: 'SocketLib::Socket::m_localinfo' should be initialized in the member initialization list [-Weffc++]
+   76 |     Socket::Socket( sock p_socket )
+      |     ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:76:5: warning: 'SocketLib::Socket::m_isblocking' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/SocketLibSocket.cpp:82:60: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+   82 |             getsockname( p_socket, (sockaddr*)(&m_localinfo), &s );
+      |                                                            ^
+      |                                    -------------------------
+      |                                    reinterpret_cast<sockaddr*> ((&m_localinfo))
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::DataSocket::DataSocket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.cpp:95:5: warning: 'SocketLib::DataSocket::m_remoteinfo' should be initialized in the member initialization list [-Weffc++]
+   95 |     DataSocket::DataSocket( sock p_socket )
+      |     ^~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:102:61: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  102 |             getpeername( p_socket, (sockaddr*)(&m_remoteinfo), &s );
+      |                                                             ^
+      |                                    --------------------------
+      |                                    reinterpret_cast<sockaddr*> ((&m_remoteinfo))
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'void SocketLib::DataSocket::Connect(SocketLib::ipaddress, SocketLib::port)':
+../Libraries/SocketLib/SocketLibSocket.cpp:140:40: warning: conversion from 'SocketLib::ipaddress' {aka 'long unsigned int'} to 'in_addr_t' {aka 'unsigned int'} may change value [-Wconversion]
+  140 |         m_remoteinfo.sin_addr.s_addr = p_addr;
+      |                                        ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:145:64: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  145 |         err = connect( m_sock, (struct sockaddr*)(&m_remoteinfo), s );
+      |                                                                ^
+      |                                -
+      |                                reinterpret_cast<-
+      |                                                 > (             )
+../Libraries/SocketLib/SocketLibSocket.cpp:154:67: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  154 |         err = getsockname( m_sock, (struct sockaddr*)(&m_localinfo), &s );
+      |                                                                   ^
+      |                                    -
+      |                                    reinterpret_cast<-
+      |                                                     > (            )
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Send(const char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:177:39: warning: conversion to 'size_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  177 |         err = send( m_sock, p_buffer, p_size, 0 );
+      |                                       ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:177:19: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  177 |         err = send( m_sock, p_buffer, p_size, 0 );
+      |               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'int SocketLib::DataSocket::Receive(char*, int)':
+../Libraries/SocketLib/SocketLibSocket.cpp:212:39: warning: conversion to 'size_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  212 |         err = recv( m_sock, p_buffer, p_size, 0 );
+      |                                       ^~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:212:19: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  212 |         err = recv( m_sock, p_buffer, p_size, 0 );
+      |               ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In constructor 'SocketLib::ListeningSocket::ListeningSocket()':
+../Libraries/SocketLib/SocketLibSocket.cpp:247:5: warning: 'SocketLib::ListeningSocket::m_listening' should be initialized in the member initialization list [-Weffc++]
+  247 |     ListeningSocket::ListeningSocket()
+      |     ^~~~~~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'void SocketLib::ListeningSocket::Listen(SocketLib::port)':
+../Libraries/SocketLib/SocketLibSocket.cpp:279:41: warning: use of old-style cast to 'char*' [-Wold-style-cast]
+  279 |                           (char*)(&reuse), sizeof( reuse ) );
+      |                                         ^
+      |                           ---------------
+      |                           reinterpret_cast<char*> ((&reuse))
+../Libraries/SocketLib/SocketLibSocket.cpp:292:48: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  292 |         err = bind( m_sock, (struct sockaddr*)&m_localinfo,
+      |                                                ^~~~~~~~~~~
+      |                             -
+      |                             reinterpret_cast<-
+      |                                              > (          )
+../Libraries/SocketLib/SocketLibSocket.cpp: In member function 'SocketLib::DataSocket SocketLib::ListeningSocket::Accept()':
+../Libraries/SocketLib/SocketLibSocket.cpp:325:48: warning: use of old-style cast to 'struct sockaddr*' [-Wold-style-cast]
+  325 |         s = accept( m_sock, (struct sockaddr*)&socketaddress, &size );
+      |                                                ^~~~~~~~~~~~~
+      |                             -
+      |                             reinterpret_cast<-
+      |                                              > (            )
+../Libraries/SocketLib/SocketLibSystem.cpp: In function 'std::string SocketLib::GetIPString(SocketLib::ipaddress)':
+../Libraries/SocketLib/SocketLibSystem.cpp:107:45: warning: use of old-style cast to 'struct in_addr*' [-Wold-style-cast]
+  107 |         char* str = inet_ntoa( *((in_addr*)&p_address) );
+      |                                             ^~~~~~~~~
+      |                                  --------------------
+      |                                  reinterpret_cast<in_addr*> (&p_address)
+../Libraries/SocketLib/SocketLibSystem.cpp: In function 'std::string SocketLib::GetHostNameString(SocketLib::ipaddress)':
+../Libraries/SocketLib/SocketLibSystem.cpp:123:55: warning: use of old-style cast to 'char*' [-Wold-style-cast]
+  123 |         struct hostent* host = gethostbyaddr( (char*)&p_address, 4, AF_INET );
+      |                                                       ^~~~~~~~~
+      |                                               -----------------
+      |                                               reinterpret_cast<char*> (&p_address)
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/SocketSet.h:12,
+                 from ../Libraries/SocketLib/SocketSet.cpp:10:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/SocketSet.h:12,
+                 from ../Libraries/SocketLib/SocketSet.cpp:10:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/SocketLib/SocketSet.cpp: In constructor 'SocketLib::SocketSet::SocketSet()':
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_set' should be initialized in the member initialization list [-Weffc++]
+   16 | SocketSet::SocketSet()
+      | ^~~~~~~~~
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_activityset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/SocketLib/SocketSet.cpp:16:1: warning: 'SocketLib::SocketSet::m_socketdescs' should be initialized in the member initialization list [-Weffc++]
+In file included from ../Libraries/BasicLib/BasicLib.h:15,
+                 from ../Libraries/SocketLib/Connection.h:15,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+In file included from ../Libraries/BasicLib/BasicLib.h:16,
+                 from ../Libraries/SocketLib/Connection.h:15,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'int BasicLib::percent(const type&, const type&)':
+../Libraries/BasicLib/BasicLibFunctions.h:94:34: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                  ^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:50: warning: use of old-style cast to 'double' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                  ^~~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:94:56: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   94 |     return (int)(100.0 * (double)first / (double)second);
+      |                                                        ^
+../Libraries/BasicLib/BasicLibFunctions.h: In function 'char BasicLib::ASCIIToHex(char)':
+../Libraries/BasicLib/BasicLibFunctions.h:101:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  101 |         return c - '0';
+      |                ~~^~~~~
+../Libraries/BasicLib/BasicLibFunctions.h:103:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  103 |         return c - 'A' + 10;
+      |                ~~~~~~~~^~~~
+../Libraries/BasicLib/BasicLibFunctions.h:105:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  105 |         return c - 'a' + 10;
+      |                ~~~~~~~~^~~~
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/SocketLib/ConnectionManager.h:11,
+                 from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+In file included from ../Libraries/SocketLib/Connection.h:17,
+                 from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::AvailableConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:65:46: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   65 |         return MAX - (int)m_connections.size();
+      |                                              ^
+../Libraries/SocketLib/ConnectionManager.h: In member function 'int SocketLib::ConnectionManager<protocol, defaulthandler>::TotalConnections() const':
+../Libraries/SocketLib/ConnectionManager.h:73:40: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   73 |         return (int)m_connections.size();
+      |                                        ^
+In file included from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Connection.h: In member function 'int SocketLib::Connection<protocol>::GetBufferedBytes() const':
+../Libraries/SocketLib/Connection.h:121:39: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  121 |         return (int)m_sendbuffer.size();
+      |                                       ^
+../Libraries/SocketLib/Connection.h: In member function 'void SocketLib::Connection<protocol>::SendBuffer()':
+../Libraries/SocketLib/Connection.h:300:70: warning: use of old-style cast to 'int' [-Wold-style-cast]
+  300 |         int sent = Send( m_sendbuffer.data(), (int)m_sendbuffer.size() );
+      |                                                                      ^
+In file included from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Telnet.h: In constructor 'SocketLib::Telnet::Telnet()':
+../Libraries/SocketLib/Telnet.h:74:12: warning: 'SocketLib::Telnet::m_buffersize' should be initialized in the member initialization list [-Weffc++]
+   74 |     inline Telnet()
+      |            ^~~~~~
+In file included from ../Libraries/SocketLib/Telnet.h:15,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+../Libraries/SocketLib/Telnet.cpp:49:33:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   19 | class ConnectionHandler
+      |       ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:19:7: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/Telnet.cpp: In member function 'void SocketLib::Telnet::Translate(SocketLib::Connection<SocketLib::Telnet>&, char*, int)':
+../Libraries/SocketLib/Telnet.cpp:49:61: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |                 p_conn.Handler()->Handle( string( m_buffer, m_buffersize ) );
+      |                                                             ^~~~~~~~~~~~
+../Libraries/SocketLib/Telnet.cpp: In member function 'void SocketLib::Telnet::SendString(SocketLib::Connection<SocketLib::Telnet>&, std::string)':
+../Libraries/SocketLib/Telnet.cpp:64:60: warning: use of old-style cast to 'int' [-Wold-style-cast]
+   64 |     p_conn.BufferData( p_string.data(), (int)p_string.size() );
+      |                                                            ^
+      |                                         -----
+      |                                         static_cast<int> (  )
+In file included from ../Libraries/SocketLib/Telnet.h:14,
+                 from ../Libraries/SocketLib/Telnet.cpp:9:
+../Libraries/SocketLib/Connection.h: In instantiation of 'void SocketLib::Connection<protocol>::BufferData(const char*, int) [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/Telnet.cpp:64:62:   required from here
+../Libraries/SocketLib/Connection.h:288:36: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  288 |     m_sendbuffer.append( p_buffer, p_size );
+      |                                    ^~~~~~
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+In file included from ../Libraries/ThreadLib/ThreadLibFunctions.h:21,
+                 from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadException.h: In constructor 'ThreadLib::Exception::Exception(ThreadLib::Error)':
+../Libraries/ThreadLib/ThreadException.h:41:9: warning: 'ThreadLib::Exception::m_error' should be initialized in the member initialization list [-Weffc++]
+   41 |         Exception( Error p_error = Unspecified )
+      |         ^~~~~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:12,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadLibFunctions.h: In function 'void ThreadLib::YieldThread(int)':
+../Libraries/ThreadLib/ThreadLibFunctions.h:169:36: warning: conversion to '__useconds_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |             usleep( p_milliseconds * 1000 );
+      |                     ~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Libraries/ThreadLib/ThreadLib.h:14,
+                 from ../Libraries/ThreadLib/ThreadLibFunctions.cpp:9:
+../Libraries/ThreadLib/ThreadLibMutex.h: In constructor 'ThreadLib::Mutex::Mutex()':
+../Libraries/ThreadLib/ThreadLibMutex.h:29:9: warning: 'ThreadLib::Mutex::m_mutex' should be initialized in the member initialization list [-Weffc++]
+   29 |         Mutex()
+      |         ^~~~~
+../Libraries/ThreadLib/ThreadLibFunctions.cpp: In function 'void* ThreadLib::DummyRun(void*)':
+../Libraries/ThreadLib/ThreadLibFunctions.cpp:34:43: warning: use of old-style cast to 'class ThreadLib::DummyData*' [-Wold-style-cast]
+   34 |             DummyData* data = (DummyData*)p_data;
+      |                                           ^~~~~~
+      |                               ------------------
+      |                               static_cast<DummyData*> (p_data)
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLibRandom.cpp:8:
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::minimum()':
+../Libraries/BasicLib/BasicLibRandom.h:247:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  247 |     sint32 minimum() { return (sint32)(m_generator.minimum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::maximum()':
+../Libraries/BasicLib/BasicLibRandom.h:248:71: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  248 |     sint32 maximum() { return (sint32)(m_generator.maximum() * m_range) + m_offset; }
+      |                                                                       ^
+../Libraries/BasicLib/BasicLibRandom.h: In member function 'BasicLib::sint32 BasicLib::random_int_range<generator>::generate(BasicLib::sint32, BasicLib::sint32)':
+../Libraries/BasicLib/BasicLibRandom.h:252:48: warning: use of old-style cast to 'BasicLib::sint32' {aka 'long int'} [-Wold-style-cast]
+  252 |         return (sint32)(m_generator() * p_range) + p_offset;
+      |                                                ^
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:16:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+   60 |     random_percent() { init(); }
+      |     ^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<true>::m_max' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:17:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<false>::m_generator' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:60:5: warning: 'BasicLib::random_percent<false>::m_max' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_range<inclusive, generator>::random_range(double, double) [with bool inclusive = true; generator = BasicLib::random_percent<true>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:18:24:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  166 |     random_range( double a = 0, double b = 1 )
+      |     ^~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<true>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_range<inclusive, generator>::random_range(double, double) [with bool inclusive = false; generator = BasicLib::random_percent<false>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:19:24:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_generator' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:166:5: warning: 'BasicLib::random_range<false>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::random_int_range<generator>::random_int_range(BasicLib::sint32, BasicLib::sint32) [with generator = BasicLib::random_percent<false>; BasicLib::sint32 = long int]':
+../Libraries/BasicLib/BasicLibRandom.cpp:20:12:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  227 |     random_int_range( sint32 a = 0, sint32 b = 1 )
+      |     ^~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:227:5: warning: 'BasicLib::random_int_range<>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::normal_generator<inclusive, generator>::normal_generator(double, double) [with bool inclusive = true; generator = BasicLib::random_percent<true>]':
+../Libraries/BasicLib/BasicLibRandom.cpp:21:15:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  101 |     normal_generator( double p_mean = 0, double p_sigma = 1 )
+      |     ^~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_mean' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_sigma' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho1' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho2' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_rho' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:101:5: warning: 'BasicLib::normal_generator<true>::m_valid' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'BasicLib::simulated_binomial<N, generator>::simulated_binomial(BasicLib::sint32, BasicLib::sint32) [with long int N = 4; generator = BasicLib::random_int_range<>; BasicLib::sint32 = long int]':
+../Libraries/BasicLib/BasicLibRandom.cpp:22:17:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_generator' should be initialized in the member initialization list [-Weffc++]
+  281 |     simulated_binomial( sint32 a = 0, sint32 b = 1 )
+      |     ^~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_range' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h:281:5: warning: 'BasicLib::simulated_binomial<>::m_offset' should be initialized in the member initialization list [-Weffc++]
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'void BasicLib::random_percent<inclusive, generator>::init() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.h:60:24:   required from 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = true; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]'
+../Libraries/BasicLib/BasicLibRandom.cpp:16:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:66:15: warning: conversion from 'long unsigned int' to 'double' may change value [-Wconversion]
+   66 |         m_max = m_generator.maximum();
+../Libraries/BasicLib/BasicLibRandom.h: In instantiation of 'void BasicLib::random_percent<inclusive, generator>::init() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]':
+../Libraries/BasicLib/BasicLibRandom.h:60:24:   required from 'BasicLib::random_percent<inclusive, generator>::random_percent() [with bool inclusive = false; generator = BasicLib::linear_congruency<long unsigned int, 2147483648, 1103515245, 12345>]'
+../Libraries/BasicLib/BasicLibRandom.cpp:17:26:   required from here
+../Libraries/BasicLib/BasicLibRandom.h:66:15: warning: conversion from 'long unsigned int' to 'double' may change value [-Wconversion]
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::UpperCase(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:20:25: warning: conversion from 'int' to '__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type' {aka 'char'} may change value [-Wconversion]
+   20 |         str[i] = toupper( str[i] );
+      |                  ~~~~~~~^~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::LowerCase(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:31:25: warning: conversion from 'int' to '__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type' {aka 'char'} may change value [-Wconversion]
+   31 |         str[i] = tolower( str[i] );
+      |                  ~~~~~~~^~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::TrimWhitespace(const string&)':
+../Libraries/BasicLib/BasicLibString.cpp:64:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   64 |     wsf = p_string.find_first_not_of( WHITESPACE );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:65:36: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   65 |     wsb = p_string.find_last_not_of( WHITESPACE );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:67:13: warning: comparison of integer expressions of different signedness: 'int' and 'const size_type' {aka 'const long unsigned int'} [-Wsign-compare]
+   67 |     if( wsf == std::string::npos )
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:73:29: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |     return p_string.substr( wsf, wsb - wsf + 1 );
+      |                             ^~~
+../Libraries/BasicLib/BasicLibString.cpp:73:44: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |     return p_string.substr( wsf, wsb - wsf + 1 );
+      |                                  ~~~~~~~~~~^~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::ParseWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:79:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   79 |     int wss = p_string.find_first_not_of( WHITESPACE );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:88:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   88 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:88:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   88 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:89:55: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   89 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |                                                       ^~~
+../Libraries/BasicLib/BasicLibString.cpp:89:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   89 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:93:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   93 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:93:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+   93 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:95:13: warning: comparison of integer expressions of different signedness: 'int' and 'const size_type' {aka 'const long unsigned int'} [-Wsign-compare]
+   95 |     if( wss == std::string::npos )
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:101:29: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |     return p_string.substr( wss, wse - wss );
+      |                             ^~~
+../Libraries/BasicLib/BasicLibString.cpp:101:38: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |     return p_string.substr( wss, wse - wss );
+      |                                  ~~~~^~~~~
+../Libraries/BasicLib/BasicLibString.cpp: In function 'std::string BasicLib::RemoveWord(const string&, int)':
+../Libraries/BasicLib/BasicLibString.cpp:106:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  106 |     int wss = p_string.find_first_not_of( WHITESPACE );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:115:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  115 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:115:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  115 |         wss = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:116:55: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  116 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |                                                       ^~~
+../Libraries/BasicLib/BasicLibString.cpp:116:41: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  116 |         wss = p_string.find_first_not_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:120:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  120 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:120:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  120 |     int wse = p_string.find_first_of( WHITESPACE, wss );
+      |               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:123:51: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  123 |     wse = p_string.find_first_not_of( WHITESPACE, wse );
+      |                                                   ^~~
+../Libraries/BasicLib/BasicLibString.cpp:123:37: warning: conversion from 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} to 'int' may change value [-Wconversion]
+  123 |     wse = p_string.find_first_not_of( WHITESPACE, wse );
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:125:13: warning: comparison of integer expressions of different signedness: 'int' and 'const size_type' {aka 'const long unsigned int'} [-Wsign-compare]
+  125 |     if( wss == std::string::npos )
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~
+../Libraries/BasicLib/BasicLibString.cpp:132:16: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |     str.erase( wss, wse - wss );
+      |                ^~~
+../Libraries/BasicLib/BasicLibString.cpp:132:25: warning: conversion to 'std::__cxx11::basic_string<char>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |     str.erase( wss, wse - wss );
+      |                     ~~~~^~~~~
+../Libraries/BasicLib/BasicLibTime.cpp: In constructor 'BasicLib::Timer::Timer()':
+../Libraries/BasicLib/BasicLibTime.cpp:135:5: warning: 'BasicLib::Timer::m_inittime' should be initialized in the member initialization list [-Weffc++]
+  135 |     Timer::Timer()
+      |     ^~~~~
+../Libraries/BasicLib/BasicLibTime.cpp:135:5: warning: 'BasicLib::Timer::m_starttime' should be initialized in the member initialization list [-Weffc++]

@@ -1,16 +1,15 @@
-# Fechamento Sprint 7
+# Fechamento Sprint 12
 
 |  **Data**  | **Versão** | **Descrição** | **Autor(es)** |
 | ---------- | ---------- | ------------- | ------------- |
-| 22/05/2023 |  1.0   | Criação do documento de fechamento da Sprint 7 | [Iuri Severo](https://github.com/iurisevero) |
+| 26/06/2023 |  1.0   | Criação do documento de fechamento da Sprint 12 | [Iuri Severo](https://github.com/iurisevero) |
 
-**Data**: 19 de Maio de 2023
+**Data**: 23 de Junho de 2023
 
 **Redigida por**: Iuri Severo
 
 **Participantes**: 
 * Iuri Severo
-* Prof. Edson Alves
 * Prof. Maurício Serrano
 
 ## Planning
@@ -19,13 +18,16 @@
 
 | Duração |   Início   |     Fim    |
 | ------- | ---------- | ---------- |
-| 7 dias  | 12/05/2023 | 19/05/2023 |
+| 7 dias  | 16/06/2023 | 23/06/2023 |
 
 ### Sprint Backlog
 
 | Descrição da Tarefa | Responsável(eis) | Tempo real (dias) | Débito Técnico |
 | ------------------- | ---------------- | -------------------------- | -------------- |
-| US48 | Iuri Severo | 14 | 0 |
-| US55 | Iuri Severo | 3 | 0 |
-| US56 | Iuri Severo | 2 | 0 |
-| US58 | Iuri Severo | 2 | 0 |
+| US25 | Iuri Severo | - | 1 |
+| US26 | Iuri Severo | - | 1 |
+| US27 | Iuri Severo | - | 1 |
+| US28 | Iuri Severo | - | 1 |
+| US51 | Iuri Severo | 1 | 0 |
+| US52 | Iuri Severo | - | 1 |
+| US61 | Iuri Severo | 2 | 0 |

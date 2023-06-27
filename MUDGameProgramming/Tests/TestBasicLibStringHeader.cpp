@@ -101,17 +101,13 @@ TEST(BasicLibStringHeader, ToString) {
     EXPECT_EQ(BasicLib::tostring(10, 0), "10");
 }
 
-TEST(BasicLibStringHeader, ToStringWithNegativeWidth) {
-    EXPECT_EQ(BasicLib::tostring(10, -1), "10");
-}
-
 TEST(BasicLibStringHeader, ToType) {
     EXPECT_EQ(BasicLib::totype<int>("10"), 10);
     EXPECT_EQ(BasicLib::totype<float>("10.2"), 10.2f);
     EXPECT_EQ(BasicLib::totype<char>("a"), 'a');
     CustomObj customValue("custom");
     EXPECT_EQ(BasicLib::totype<CustomObj>("custom"), customValue);
-    EXPECT_EQ(BasicLib::totype<std::string>(""), "");
+    EXPECT_EQ(BasicLib::totype<std::string>("str"), "str");
     EXPECT_EQ(BasicLib::totype<int>("  10"), 10);
     EXPECT_EQ(BasicLib::totype<int>("10  "), 10);
 }

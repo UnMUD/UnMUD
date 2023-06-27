@@ -20,17 +20,14 @@ TEST(ThreadLibFunctions, Create)
     ThreadLib::WaitForFinish(threadId);
     ASSERT_EQ(42, value);
 
-    // try {
-    //     threadId = ThreadLib::Create(nullptr, &value);
-    //     FAIL() << "Exception not thrown";
-    // } catch (const ThreadLib::Exception& e) {
-    //     EXPECT_EQ(ThreadLib::Error::CreationFailure, e.GetError());
-    // } catch (...) {
-    //     FAIL() << "Unexpected exception thrown";
-    // }
-
-    FAIL() << "Thread creation with null function results in"
-              " Segmentation Fault (core dumped) error";
+    try {
+        threadId = ThreadLib::Create(nullptr, &value);
+        FAIL() << "Exception not thrown";
+    } catch (const ThreadLib::Exception& e) {
+        EXPECT_EQ(ThreadLib::Error::CreationFailure, e.GetError());
+    } catch (...) {
+        FAIL() << "Unexpected exception thrown";
+    }
 }
 
 TEST(ThreadLibFunctions, GetThreadID) {
