@@ -66,6 +66,7 @@ dkms.conf
 MUDGameProgramming/SimpleEdit/*
 MUDGameProgramming/SimpleMUD/logs/*.log
 MUDGameProgramming/BetterMUD/*
+MUDGameProgramming/SimpleMUD/game.data
 
 ## Visual Studio
 .vscode/**

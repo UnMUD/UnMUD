@@ -8,15 +8,15 @@ Este documento tem como objetivo reunir as informações levantadas a respeito d
 
 ## Testes na AWS
 
-Para realização da implantação do sistema foram realizados testes em uma máquina t2.micro nos servidores virtuais que a Amazon disponibiliza. A máquina t2.micro possui um processador Intel Xeon escalável de até 3,3 GHz (Haswell E5-2676 v3 ou Broadwell E5-2686 v4), uma CPU e 1 GiB de memória.
+Para realização da implantação do sistema foram realizados testes em uma máquina t2.micro instanciada nos servidores virtuais disponibilizadas pela empresa Amazon por meio da Amazon Web Services (AWS). A máquina t2.micro possui um processador Intel Xeon escalável de até 3,3 GHz (Haswell E5-2676 v3 ou Broadwell E5-2686 v4), uma CPU e 1 GiB de memória.
 
-Após a instação da ferramentas git e docker, necessárias para executar o MUD, o código foi compilado, executado e testado com 5 usuários jogando simultaneamente. O momento de maior esforço da CPU foi durante a compilação do código, onde ela alcançou 26.76% de consumo. Durante os momentos de conexão dos jogadores e o tempo que eles estiveram no jogo não afetaram a CPU de maneira significativa, sendo o menor valor atingido nesse período 4.86% e o maior valor 5.54%.
+Após a instalação da ferramentas git e docker, necessárias para executar o MUD, o código foi compilado, executado e testado com 5 usuários jogando simultaneamente. O momento de maior esforço da CPU foi durante a compilação do código, onde ela alcançou 26,76% de consumo. Durante os momentos de conexão dos jogadores e o tempo que eles estiveram no jogo não afetaram a CPU de maneira significativa, sendo o menor valor atingido nesse período 4,86% e o maior valor 5,54%.
 
 Durante esse teste também foi verificado que o jogo fica disponível para conexão a partir do momento que o container docker é executado.
 
 ## Implantação manual no servidor físico
 
-Após os testes, a principal alteração necessária para implantar o código era a criação de variáveis de ambiente para guardar dados sigilosos, como senhas de jogadores administradores, que permitem o provisionamento de usuários. Para isso foi criado um arquivo ```.env``` com as variáveis apresentadas no exemplo abaixo. Essas variáveis são passadas para o programa por meio do docker-compose e permitiram também a variação da porta utilizada pelo MUD.
+Após os testes, a principal alteração necessária para implantar o código era a criação de variáveis de ambiente para guardar dados sigilosos, como senhas de jogadores administradores. Para isso foi criado um arquivo ```.env``` com as variáveis apresentadas no exemplo abaixo. Essas variáveis são passadas para o programa por meio do docker-compose e permitiram também a variação da porta utilizada pelo MUD.
 
 ```
 # Database environment variables
@@ -40,9 +40,10 @@ Para realizar a implantação de maneira manual é necessário seguir os seguint
 2. Clonar o repositório do MUD com o comando ```git clone https://github.com/UnMUD/UnMUD.git```
 3. Instalar o Docker e o Docker Compose
 4. Entrar na pasta ```MUDGameProgramming``` com o comando ```cd UnMUD/MUDGameProgramming```
-5. Criar e executar os containers com o comando ```sudo docker compose up --build -d```
-6. Compilar o MUD com o comando ```docker-compose exec unmud bash Scripts/compile.sh```
-7. Executar o binário gerado com o comando ```docker-compose exec unmud bash Scripts/run.sh```
+5. Criar o arquivo ```.env``` e adicionar as variáveis de ambiente
+6. Criar e executar os containers com o comando ```sudo docker-compose up --build -d```
+7. Compilar o MUD com o comando ```docker-compose exec unmud bash Scripts/compile.sh```
+8. Executar o binário gerado com o comando ```docker-compose exec unmud bash Scripts/run.sh```
 
 Após isso deve ser possível conectar ao jogo utilizando o ip do servidor e a porta especificada nas variáveis de ambiente.
 

@@ -67,23 +67,15 @@ protected:
 inline istream &operator>>(istream &p_stream, Item &i) {
   std::string temp;
 
-  std::cout << "Item operator>>:\n";
   p_stream >> temp >> std::ws;
-  std::cout << temp << ": " << i.ID() << std::endl;
   std::getline(p_stream, i.m_name);
   p_stream >> temp >> temp;
-  std::cout << temp << ": " << i.m_name << std::endl;
   i.m_type = GetItemType(temp);
   p_stream >> temp >> i.m_min;
-  std::cout << temp << ": " << i.m_min << std::endl;
   p_stream >> temp >> i.m_max;
-  std::cout << temp << ": " << i.m_max << std::endl;
   p_stream >> temp >> i.m_speed;
-  std::cout << temp << ": " << i.m_speed << std::endl;
   p_stream >> temp >> i.m_price;
-  std::cout << temp << ": " << i.m_price << std::endl;
   p_stream >> i.m_attributes;
-  std::cout << i.m_attributes << std::endl;
 
   return p_stream;
 }
