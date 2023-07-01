@@ -102,13 +102,13 @@ US09 - Criar guia de contribuição
 Para uma maior praticidade e segurança no desenvolvimento foi criado um ambiente containerizado para rodar o UnMUD. Para executá-lo basta entrar na pasta `MUDGameProgramming` e executar o comando:
 
 ```
-docker-compose up
+docker compose up
 ```
 
 Após o container ser levantado, é possível acessá-lo com o comando:
 
 ```
-docker-compose exec -it unmud /bin/bash
+docker compose exec -it unmud /bin/bash
 
 ```
 
@@ -117,13 +117,13 @@ Dentro do container é possível realizar qualquer operação desejada, no entan
 Para compilar o código do MUD basta executar:
 
 ```
-docker-compose exec unmud bash Scripts/compile.sh 
+docker compose exec unmud bash Scripts/compile.sh 
 ```
 
 Para executar o MUD basta executar:
 
 ```
-docker-compose exec unmud bash Scripts/run.sh 
+docker compose exec unmud bash Scripts/run.sh 
 ```
 
 Após isso, deve ser possível entrar no UnMUD a partir da porta 5100 utilizando a ferramenta `telnet`.
@@ -131,13 +131,13 @@ Após isso, deve ser possível entrar no UnMUD a partir da porta 5100 utilizando
 Para realizar a análise estática do código execute:
 
 ```
-docker-compose exec unmud bash Scripts/static_test.sh 
+docker compose exec unmud bash Scripts/static_test.sh 
 ```
 
 Para realizar a verificação do lint execute:
 
 ```
-docker-compose exec unmud bash Scripts/lint.sh
+docker compose exec unmud bash Scripts/lint.sh
 ```
 
 O resultado das análises será exibido no terminal e também ficará salvo na pasta `AnalysisLogs`.
@@ -145,7 +145,7 @@ O resultado das análises será exibido no terminal e também ficará salvo na p
 Para formatar os arquivos, basta executar:
 
 ```
-docker-compose exec unmud bash Scripts/format.sh
+docker compose exec unmud bash Scripts/format.sh
 ```
 
 A formatação é realizada pela ferramenta [clang-format](https://clang.llvm.org/docs/ClangFormat.html) e possui uma [extensão disponível para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=xaver.clang-format).
@@ -155,7 +155,7 @@ A formatação é realizada pela ferramenta [clang-format](https://clang.llvm.or
 Para rodar os testes é necessário compilar as bibliotecas e o jogo. Após isso basta executar o comando:
 
 ```
-docker-compose up exec unmud bash Scripts/tests.sh
+docker compose up exec unmud bash Scripts/tests.sh
 ```
 
 Esse scripts irá realizar a compilação, execução e análise de cobertura dos testes, gerando um arquivo na pasta `AnalysisLogs/GCOVR`, com o nome `ano-mês-dia-hora-segundo-coverage.html`.

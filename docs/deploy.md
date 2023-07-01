@@ -16,7 +16,7 @@ Durante esse teste também foi verificado que o jogo fica disponível para conex
 
 ## Implantação manual no servidor físico
 
-Após os testes, a principal alteração necessária para implantar o código era a criação de variáveis de ambiente para guardar dados sigilosos, como senhas de jogadores administradores. Para isso foi criado um arquivo ```.env``` com as variáveis apresentadas no exemplo abaixo. Essas variáveis são passadas para o programa por meio do docker-compose e permitiram também a variação da porta utilizada pelo MUD.
+Após os testes, a principal alteração necessária para implantar o código era a criação de variáveis de ambiente para guardar dados sigilosos, como senhas de jogadores administradores. Para isso foi criado um arquivo ```.env``` com as variáveis apresentadas no exemplo abaixo. Essas variáveis são passadas para o programa por meio do docker compose e permitiram também a variação da porta utilizada pelo MUD.
 
 ```
 # Database environment variables
@@ -41,17 +41,17 @@ Para realizar a implantação de maneira manual é necessário seguir os seguint
 3. Instalar o Docker e o Docker Compose
 4. Entrar na pasta ```MUDGameProgramming``` com o comando ```cd UnMUD/MUDGameProgramming```
 5. Criar o arquivo ```.env``` e adicionar as variáveis de ambiente
-6. Criar e executar os containers com o comando ```sudo docker-compose up --build -d```
-7. Compilar o MUD com o comando ```docker-compose exec unmud bash Scripts/compile.sh```
-8. Executar o binário gerado com o comando ```docker-compose exec unmud bash Scripts/run.sh```
+6. Criar e executar os containers com o comando ```docker compose up --build -d```
+7. Compilar o MUD com o comando ```docker compose exec unmud bash Scripts/compile.sh```
+8. Executar o binário gerado com o comando ```docker compose exec unmud bash Scripts/run.sh```
 
-Após isso deve ser possível conectar ao jogo utilizando o ip do servidor e a porta especificada nas variáveis de ambiente.
+Após isso deve ser possível conectar ao jogo utilizando o ip do servidor e a porta especificada nas variáveis de ambiente. Dependendo da configuração do ambiente, pode ser necessário adicionar permissão de administrador para rodar o docker.
 
 ## Criação de Usuários Privilegiados
 
 Para criação de usuários com privilégios é necessário realizar alterações em 3 documentos: ```.env```, ```docker-compose.yml``` e ```Database/DML.sql```. 
 
-No arquivo de variáveis de ambiente é necessário adicionar a senha do usuário que se deseja criar. Ex: ```NOVO_USUARIO_PASSWORD=novaSenha```. Após isso é necessário adicionar essa variável nas variáveis do container ```db```, através da tag ```environment```, seguindo o padrão esperado pelo ```docker-compose```. Ex:
+No arquivo de variáveis de ambiente é necessário adicionar a senha do usuário que se deseja criar. Ex: ```NOVO_USUARIO_PASSWORD=novaSenha```. Após isso é necessário adicionar essa variável nas variáveis do container ```db```, através da tag ```environment```, seguindo o padrão esperado pelo ```docker compose```. Ex:
 
 ```
     environment:
