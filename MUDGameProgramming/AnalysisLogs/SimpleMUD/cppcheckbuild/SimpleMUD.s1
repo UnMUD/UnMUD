@@ -57,7 +57,7 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,ID,getline]
+operator>> call:[GetItemType,getline]
 ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 HitPoints
 CurrentRoom
@@ -128,7 +128,7 @@ Leave
 Hungup call:[GetIPString,GetRemoteAddress,Log] noreturn:[Log]
 Flooded call:[GetIPString,GetRemoteAddress,Log] noreturn:[Log]
 NoRoom call:[Send,c_str,size] noreturn:[Send]
-main call:[AddPort,Listen,Log,Loop,Manage,PrintError,Running,SetConnectionManager,YieldThread,cm,string,what] noreturn:[Log,YieldThread]
+main call:[AddPort,Listen,Log,Loop,Manage,PrintError,Running,SetConnectionManager,YieldThread,cm,printf,string,what] noreturn:[Log,YieldThread]
 EntityDatabaseVector < EnemyTemplate >
 begin call:[begin]
 end call:[end] noreturn:[end]

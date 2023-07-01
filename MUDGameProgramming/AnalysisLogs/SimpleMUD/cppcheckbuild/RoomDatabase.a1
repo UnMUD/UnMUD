@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo checksum="921173004">
+<analyzerinfo checksum="3878774279">
         <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp">
             <location file="SimpleMUD/SimpleMUD/Entity.h" line="99" column="3"/>
             <symbol>matchentityfull</symbol>
@@ -61,7 +61,7 @@
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/EntityDatabase.h:82:12" my-argnr="1" my-argname="p_name" file="SimpleMUD/SimpleMUD/EntityDatabase.h" line="83" col="69" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:108:20" my-argnr="1" my-argname="a" file="SimpleMUD/SimpleMUD/Attributes.h" line="116" col="7" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:121:13" my-argnr="2" my-argname="a" file="SimpleMUD/SimpleMUD/Attributes.h" line="123" col="22" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:95:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="97" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:87:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="89" col="3" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
@@ -87,9 +87,8 @@
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="2" my-argname="p" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/DatabasePointer.h:60:1" my-argnr="1" my-argname="s" file="SimpleMUD/SimpleMUD/DatabasePointer.h" line="60" col="1" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:67:17" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Item.h" line="71" col="3" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:67:17" my-argnr="2" my-argname="i" file="SimpleMUD/SimpleMUD/Item.h" line="72" col="32" value="0"/>
-    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:95:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="97" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:67:17" my-argnr="1" my-argname="p_stream" file="SimpleMUD/SimpleMUD/Item.h" line="70" col="3" value="0"/>
+    <unsafe-usage my-id="SimpleMUD/SimpleMUD/Item.h:87:13" my-argnr="1" my-argname="row" file="SimpleMUD/SimpleMUD/Item.h" line="89" col="3" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>
     <unsafe-usage my-id="SimpleMUD/SimpleMUD/Attributes.h:50:15" my-argnr="2" my-argname="strs" file="SimpleMUD/SimpleMUD/Attributes.h" line="51" col="10" value="0"/>

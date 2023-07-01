@@ -32,7 +32,7 @@ Min
 Max
 Speed
 Price
-operator>> call:[GetItemType,ID,getline]
+operator>> call:[GetItemType,getline]
 ParseRow call:[GetItemType,ParseRow] noreturn:[ParseRow]
 player
 operator=
