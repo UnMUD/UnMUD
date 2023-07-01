@@ -22,16 +22,16 @@ Atualmente não há uma base dados que pode ser usada como fonte para dados de t
 
 As ferramentas utilizadas para realização dos testes unitários é a GoogleTest, um framework desenvolvido pela Google para testes em C/C++, em conjunto com a ferramenta gcovr, responsável por analisar a cobertura de testes. Para realização dos testes é possível levantar um ambiente local, utilizando as ferramentas Docker e Docker Compose.
 
-Para levantar o ambiente basta executar o comando `docker-compose up`, estando na pasta `MUDGameProgramming`. Após o container ser criado, é necessário compilar as bibliotecas e o MUD, o que pode ser feito com o comando:
+Para levantar o ambiente basta executar o comando `docker compose up`, estando na pasta `MUDGameProgramming`. Após o container ser criado, é necessário compilar as bibliotecas e o MUD, o que pode ser feito com o comando:
 
 ```
-docker-compose exec unmud bash Scripts/compile.sh 
+docker compose exec unmud bash Scripts/compile.sh 
 ```
 
 Após a compilação ser concluída, é possível compilar e executar os testes com o comando:
 
 ```
-docker-compose exec unmud bash Scripts/tests.sh 
+docker compose exec unmud bash Scripts/tests.sh 
 ```
 
 Caso todos os testes passem, será criado um arquivo informando a cobertura de testes nas pasta `AnalysisLogs/GCOVR`, com o nome `ano-mês-dia-hora-segundo-coverage.html`.
@@ -40,7 +40,7 @@ Também é possível executar os comandos de forma independente, basta entrar na
 
 Para acessar o container basta executar:
 ```
-docker-compose exec -it unmud /bin/bash
+docker compose exec -it unmud /bin/bash
 
 ```
 

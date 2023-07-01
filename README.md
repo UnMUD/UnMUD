@@ -28,10 +28,10 @@ nesse tópico, são apresentados quais são os requisitos mínimos para se execu
 
 O UnMUD foi desenvolvido utilizando C++ como sua principal linguagem, na versão C++XX. O código foi atualizado para seguir as diretrizes especificadas no [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main) e deve funcionar em versões superiores a especificada, porém é possível que haja erros de compilação em versões anteriores.
 
-Para criar um ambiente de desenvolvimento isolado foram utilizadas as ferramentas [Docker](https://www.docker.com/) e [Docker-compose](https://docs.docker.com/compose/). Caso você não possua essas ferramentas, é possível instalá-la seguindo suas documentações oficiais:
+Para criar um ambiente de desenvolvimento isolado foram utilizadas as ferramentas [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/). Caso você não possua essas ferramentas, é possível instalá-la seguindo suas documentações oficiais:
 
-* Arch: [Docker Desktop](https://docs.docker.com/desktop/install/archlinux/); [Docker Engine](https://wiki.archlinux.org/title/docker#Installation); [Docker-compose](https://wiki.archlinux.org/title/docker#Docker_Compose)
-* Ubuntu: [Docker Desktop](https://docs.docker.com/desktop/install/ubuntu/); [Docker Engine](https://docs.docker.com/engine/install/ubuntu/); [Docker-compose](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
+* Arch: [Docker Desktop](https://docs.docker.com/desktop/install/archlinux/); [Docker Engine](https://wiki.archlinux.org/title/docker#Installation); [Docker Compose](https://wiki.archlinux.org/title/docker#Docker_Compose)
+* Ubuntu: [Docker Desktop](https://docs.docker.com/desktop/install/ubuntu/); [Docker Engine](https://docs.docker.com/engine/install/ubuntu/); [Docker Compose](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
 * Windows: [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)
 * Mac: [Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
 

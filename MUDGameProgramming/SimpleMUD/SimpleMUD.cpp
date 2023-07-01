@@ -24,8 +24,13 @@
 using namespace SocketLib;
 using namespace SimpleMUD;
 
-int main() {
+int main(int argc, char **argv) {
   try {
+    if(argc < 2){
+      printf("Use: %s <Port>\n", argv[0]);
+      return 0;
+    }
+
     GameLoop gameloop;
 
     ListeningManager<Telnet, Logon> lm;
@@ -35,9 +40,10 @@ int main() {
 
     lm.SetConnectionManager(&cm);
 
-    const SocketLib::port port = 5100;
+    const SocketLib::port port = BasicLib::totype<SocketLib::port>(argv[1]);
     lm.AddPort(port);
 
+    printf("Game running at port %d\n", port);
     while (Game::Running()) {
       lm.Listen();
       cm.Manage();

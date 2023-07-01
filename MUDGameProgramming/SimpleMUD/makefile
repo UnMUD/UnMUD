@@ -44,7 +44,7 @@ link: $(wildcard *.cpp)
 
 run:
 	rm -f *.gcda
-	./$(UNMUDBINFILE)
+	./$(UNMUDBINFILE) ${MUD_PORT}
 
 tests: $(wildcard *.cpp)
 	$(CXX) $(CFLAGS) $(TESTSDIR)/*.cpp -c --coverage;

@@ -6,13 +6,15 @@ services:
       context: ./Database
       dockerfile: Dockerfile.PostgreSQL
     ports:
-      - 5435:5432
+      - ${PG_PORT}:${PG_PORT}
     networks:
       - mud-network
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=unmud
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_DATABASE}
+      - IURI_PASSWORD=${IURI_PASSWORD}
+      - MAURICIO_PASSWORD=${MAURICIO_PASSWORD}
     volumes:
       - db_data:/var/lib/postgresql/data
     healthcheck:
@@ -33,15 +35,16 @@ services:
     networks:
       - mud-network
     expose:
-      - '5100'
+      - ${MUD_PORT}
     ports:
-      - '5100:5100'
+      - ${MUD_PORT}:${MUD_PORT}
     environment:
-      - PGHOST=db
-      - PGPORT=5432
-      - PGDATABASE=unmud
-      - PGUSER=postgres
-      - PGPASSWORD=postgres
+      - PGHOST=${PG_HOST}
+      - PGPORT=${PG_PORT}
+      - PGDATABASE=${PG_DATABASE}
+      - PGUSER=${PG_USER}
+      - PGPASSWORD=${PG_PASSWORD}
+      - MUD_PORT=${MUD_PORT}
     restart: always
     stdin_open: true # docker run -i
     tty: true        # docker run -t
