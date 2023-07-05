@@ -1,0 +1,119 @@
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries *.cpp -c;
+In file included from SimpleMUD/Item.h:11,
+                 from SimpleMUD/Enemy.h:13,
+                 from SimpleMUD/EnemyDatabase.h:12,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Attributes.h: In function 'std::ostream& SimpleMUD::operator<<(std::ostream&, const AttributeSet&)':
+SimpleMUD/Attributes.h:92:19: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   92 |              << a[i] << "\n";
+      |                   ^
+SimpleMUD/Attributes.h: In function 'std::istream& SimpleMUD::operator>>(std::istream&, SimpleMUD::AttributeSet&)':
+SimpleMUD/Attributes.h:102:27: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  102 |     p_stream >> temp >> a[i];
+      |                           ^
+In file included from SimpleMUD/Enemy.h:13,
+                 from SimpleMUD/EnemyDatabase.h:12,
+                 from SimpleMUD.cpp:12:
+SimpleMUD/Item.h: In member function 'int& SimpleMUD::Item::GetAttr(int)':
+SimpleMUD/Item.h:36:56: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   36 |   inline int &GetAttr(int p_att) { return m_attributes[p_att]; }
+      |                                                        ^~~~~
+In file included from SimpleMUD/PlayerDatabase.h:18,
+                 from SimpleMUD.cpp:14:
+SimpleMUD/Player.h: At global scope:
+SimpleMUD/Player.h:33:7: warning: 'class SimpleMUD::Player' has pointer data members [-Weffc++]
+   33 | class Player : public Entity {
+      |       ^~~~~~
+SimpleMUD/Player.h:33:7: warning:   but does not override 'SimpleMUD::Player(const SimpleMUD::Player&)' [-Weffc++]
+SimpleMUD/Player.h:33:7: warning:   or 'operator=(const SimpleMUD::Player&)' [-Weffc++]
+SimpleMUD/Player.h: In member function 'int SimpleMUD::Player::GetAttr(int)':
+SimpleMUD/Player.h:164:26: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  164 |   int val = m_attributes[p_attr] + m_baseattributes[p_attr];
+      |                          ^~~~~~
+SimpleMUD/Player.h:164:53: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  164 |   int val = m_attributes[p_attr] + m_baseattributes[p_attr];
+      |                                                     ^~~~~~
+SimpleMUD/Player.h: In member function 'int SimpleMUD::Player::GetBaseAttr(int)':
+SimpleMUD/Player.h:177:27: warning: conversion to 'std::array<int, 9>::size_type' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  177 |   return m_baseattributes[p_attr];
+      |                           ^~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:10,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+SimpleMUD/Game.h:25:29:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   15 | template <typename protocol, typename command> class ConnectionHandler {
+      |                                                      ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+In file included from SimpleMUD.cpp:20:
+SimpleMUD/Logon.h: In static member function 'static void SimpleMUD::Logon::NoRoom(SocketLib::Connection<SocketLib::Telnet>&)':
+SimpleMUD/Logon.h:74:25: warning: catching polymorphic type 'class SocketLib::Exception' by value [-Wcatch-value=]
+   74 |     } catch (SocketLib::Exception) {
+      |                         ^~~~~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:12,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ListeningManager.h: In instantiation of 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>':
+SimpleMUD.cpp:36:37:   required from here
+../Libraries/SocketLib/ListeningManager.h:36:61: warning: 'class SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>' has pointer data members [-Weffc++]
+   36 | template <typename protocol, typename defaulthandler> class ListeningManager {
+      |                                                             ^~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ListeningManager.h:36:61: warning:   but does not override 'SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+../Libraries/SocketLib/ListeningManager.h:36:61: warning:   or 'operator=(const SocketLib::ListeningManager<SocketLib::Telnet, SimpleMUD::Logon>&)' [-Weffc++]
+In file included from ../Libraries/SocketLib/Connection.h:14,
+                 from ../Libraries/SocketLib/SocketLib.h:9,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/ConnectionManager.h: In instantiation of 'SocketLib::ConnectionManager<protocol, defaulthandler>::ConnectionManager(int, int, int) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]':
+SimpleMUD.cpp:39:77:   required from here
+../Libraries/SocketLib/ConnectionManager.h:112:7: warning: 'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_maxbuffered' will be initialized after [-Wreorder]
+  112 |   int m_maxbuffered;
+      |       ^~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionManager.h:100:9: warning:   'SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::clist SocketLib::ConnectionManager<SocketLib::Telnet, SimpleMUD::Logon>::m_connections' [-Wreorder]
+  100 |   clist m_connections;
+      |         ^~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionManager.h:123:1: warning:   when initialized here [-Wreorder]
+  123 | ConnectionManager<protocol, defaulthandler>::ConnectionManager(
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Libraries/SocketLib/SocketLib.h:9,
+                 from SimpleMUD.cpp:10:
+../Libraries/SocketLib/Connection.h: In instantiation of 'SocketLib::Connection<protocol>::Connection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:147:24:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::NewConnection(SocketLib::DataSocket&) [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ListeningManager.h:154:11:   required from 'void SocketLib::ListeningManager<protocol, defaulthandler>::Listen() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:48:17:   required from here
+../Libraries/SocketLib/Connection.h:185:8: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_checksendtime' will be initialized after [-Wreorder]
+  185 |   bool m_checksendtime;
+      |        ^~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:179:20: warning:   'BasicLib::sint64 SocketLib::Connection<SocketLib::Telnet>::m_creationtime' [-Wreorder]
+  179 |   BasicLib::sint64 m_creationtime;
+      |                    ^~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:204:1: warning:   when initialized here [-Wreorder]
+  204 | Connection<protocol>::Connection(DataSocket &p_socket)
+      | ^~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:190:8: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_closed' will be initialized after [-Wreorder]
+  190 |   bool m_closed;
+      |        ^~~~~~~~
+../Libraries/SocketLib/Connection.h:187:8: warning:   'char SocketLib::Connection<SocketLib::Telnet>::m_buffer [1024]' [-Wreorder]
+  187 |   char m_buffer[BUFFERSIZE];
+      |        ^~~~~~~~
+../Libraries/SocketLib/Connection.h:204:1: warning:   when initialized here [-Wreorder]
+  204 | Connection<protocol>::Connection(DataSocket &p_socket)
+      | ^~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h:187:8: warning: 'SocketLib::Connection<SocketLib::Telnet>::m_buffer' will be initialized after [-Wreorder]
+  187 |   char m_buffer[BUFFERSIZE];
+      |        ^~~~~~~~
+../Libraries/SocketLib/Connection.h:154:12: warning:   'SocketLib::Telnet SocketLib::Connection<SocketLib::Telnet>::m_protocol' [-Wreorder]
+  154 |   protocol m_protocol;
+      |            ^~~~~~~~~~
+../Libraries/SocketLib/Connection.h:204:1: warning:   when initialized here [-Wreorder]
+  204 | Connection<protocol>::Connection(DataSocket &p_socket)
+      | ^~~~~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/Connection.h: In instantiation of 'void SocketLib::Connection<protocol>::Receive() [with protocol = SocketLib::Telnet]':
+../Libraries/SocketLib/ConnectionManager.h:219:11:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Listen() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+../Libraries/SocketLib/ConnectionManager.h:85:5:   required from 'void SocketLib::ConnectionManager<protocol, defaulthandler>::Manage() [with protocol = SocketLib::Telnet; defaulthandler = SimpleMUD::Logon]'
+SimpleMUD.cpp:49:17:   required from here
+../Libraries/SocketLib/Connection.h:285:14: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  285 |   m_datarate += bytes;
+      |   ~~~~~~~~~~~^~~~~~~~
+../Libraries/SocketLib/Connection.h:288:41: warning: conversion from 'ssize_t' {aka 'long int'} to 'int' may change value [-Wconversion]
+  288 |   m_protocol.Translate(*this, m_buffer, bytes);
+      |                                         ^~~~~

@@ -1,0 +1,3 @@
+./Libraries/ThreadLib/ThreadLibFunctions.h:72:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(!p_func)
+    ^

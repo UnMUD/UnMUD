@@ -38,3 +38,5 @@
     * [Abertura Sprint 12](SprintsAndMeetings/2023-06-16Sprint12Opening.md)
     * [Fechamento Sprint 12](SprintsAndMeetings/2023-06-23Sprint12Closure.md)
     * [Abertura Sprint 13](SprintsAndMeetings/2023-06-23Sprint13Opening.md)
+    * [Fechamento Sprint 13](SprintsAndMeetings/2023-06-30Sprint13Closure.md)
+    * [Abertura Sprint 14](SprintsAndMeetings/2023-06-30Sprint14Opening.md)

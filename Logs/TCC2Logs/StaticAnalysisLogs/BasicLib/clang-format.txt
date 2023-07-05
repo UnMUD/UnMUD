@@ -1,0 +1,24 @@
+./Libraries/BasicLib/BasicLibFiles.cpp:33:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(!d)
+    ^
+./Libraries/BasicLib/BasicLibString.cpp:37:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(p_search == "")
+    ^
+./Libraries/BasicLib/BasicLibString.cpp:65:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(p_index < 0)
+    ^
+./Libraries/BasicLib/BasicLibString.cpp:66:15: warning: code should be clang-formatted [-Wclang-format-violations]
+    return "";
+              ^
+./Libraries/BasicLib/BasicLibString.cpp:92:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(p_index < 0)
+    ^
+./Libraries/BasicLib/BasicLibString.cpp:93:21: warning: code should be clang-formatted [-Wclang-format-violations]
+    return p_string;
+                    ^
+./Libraries/BasicLib/BasicLibFunctions.h:72:5: warning: code should be clang-formatted [-Wclang-format-violations]
+  if(second == 0)
+    ^
+./Libraries/BasicLib/BasicLibString.h:41:19: warning: code should be clang-formatted [-Wclang-format-violations]
+  if (!(s >> t)) {
+                  ^

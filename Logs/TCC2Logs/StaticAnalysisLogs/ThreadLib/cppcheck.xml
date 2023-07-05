@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+Checking Libraries/ThreadLib/ThreadLibFunctions.cpp ...
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: ret" verbose="Uninitialized variable: ret" cwe="457">
+            <location file="Libraries/ThreadLib/ThreadLibFunctions.h" line="90" column="7"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: ret" verbose="Uninitialized variable: ret" cwe="457">
+            <location file="Libraries/ThreadLib/ThreadLibFunctions.h" line="90" column="7"/>
+            <location file="Libraries/ThreadLib/ThreadLibFunctions.h" line="72" column="6" info="Assuming condition is false"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;ret&apos; is not assigned a value." verbose="Variable &apos;ret&apos; is not assigned a value." cwe="665">
+            <location file="Libraries/ThreadLib/ThreadLibFunctions.h" line="68" column="7"/>
+        </error>
+    </errors>
+</results>

@@ -1,0 +1,6 @@
+SimpleMUD/SimpleMUD.cpp:29:7: warning: code should be clang-formatted [-Wclang-format-violations]
+    if(argc < 2){
+      ^
+SimpleMUD/SimpleMUD.cpp:29:17: warning: code should be clang-formatted [-Wclang-format-violations]
+    if(argc < 2){
+                ^

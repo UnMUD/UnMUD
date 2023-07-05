@@ -1,0 +1,34 @@
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/SocketLib/*.cpp -c;
+In file included from ../Libraries/SocketLib/SocketLibSocket.cpp:7:
+../Libraries/SocketLib/SocketLibSocket.h: In constructor 'SocketLib::Socket::Socket(SocketLib::sock)':
+../Libraries/SocketLib/SocketLibSocket.h:79:8: warning: 'SocketLib::Socket::m_isblocking' will be initialized after [-Wreorder]
+   79 |   bool m_isblocking; // this tells whether the socket is
+      |        ^~~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.h:76:22: warning:   'sockaddr_in SocketLib::Socket::m_localinfo' [-Wreorder]
+   76 |   struct sockaddr_in m_localinfo; // structure containing information
+      |                      ^~~~~~~~~~~
+../Libraries/SocketLib/SocketLibSocket.cpp:67:1: warning:   when initialized here [-Wreorder]
+   67 | Socket::Socket(sock p_socket)
+      | ^~~~~~
+In file included from ../Libraries/SocketLib/Telnet.h:12,
+                 from ../Libraries/SocketLib/Telnet.cpp:8:
+../Libraries/SocketLib/ConnectionHandler.h: In instantiation of 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >':
+../Libraries/SocketLib/Telnet.cpp:41:25:   required from here
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning: 'class SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >' has pointer data members [-Weffc++]
+   15 | template <typename protocol, typename command> class ConnectionHandler {
+      |                                                      ^~~~~~~~~~~~~~~~~
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning:   but does not override 'SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+../Libraries/SocketLib/ConnectionHandler.h:15:54: warning:   or 'operator=(const SocketLib::ConnectionHandler<SocketLib::Telnet, std::__cxx11::basic_string<char> >&)' [-Weffc++]
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/ThreadLib/*.cpp -c;
+g++ -std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wmisleading-indentation -Weffc++ -pedantic -I../Libraries ../Libraries/BasicLib/*.cpp -c;
+In file included from ../Libraries/BasicLib/BasicLibTime.cpp:6:
+../Libraries/BasicLib/BasicLibTime.h: In constructor 'BasicLib::Timer::Timer()':
+../Libraries/BasicLib/BasicLibTime.h:56:10: warning: 'BasicLib::Timer::m_starttime' will be initialized after [-Wreorder]
+   56 |   sint64 m_starttime;
+      |          ^~~~~~~~~~~
+../Libraries/BasicLib/BasicLibTime.h:53:10: warning:   'BasicLib::sint64 BasicLib::Timer::m_inittime' [-Wreorder]
+   53 |   sint64 m_inittime;
+      |          ^~~~~~~~~~
+../Libraries/BasicLib/BasicLibTime.cpp:109:1: warning:   when initialized here [-Wreorder]
+  109 | Timer::Timer() : m_starttime(0), m_inittime(0) {}
+      | ^~~~~
