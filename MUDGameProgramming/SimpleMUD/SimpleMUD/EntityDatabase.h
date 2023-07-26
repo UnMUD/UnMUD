@@ -107,7 +107,7 @@ public:
     if (m_map.size() == 0)
       return 1;
 
-    if (m_map.size() == m_map.rend()->first)
+    if (m_map.size() == m_map.rbegin()->first)
       return static_cast<entityid>(m_map.size()) + 1;
 
     entityid openid = 0;

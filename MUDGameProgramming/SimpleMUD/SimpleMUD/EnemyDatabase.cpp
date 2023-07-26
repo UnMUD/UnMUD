@@ -157,9 +157,7 @@ void EnemyDatabase::Save() {
 
       pqxx::work transactionConnection(dbConnection);
       if (!queryRow["exists"].as<bool>()) {
-        sql = fmt::format("INSERT INTO EnemyInstance VALUES ( "
-                          "({}, 1, 0, 0, 0)"
-                          ")",
+        sql = fmt::format("INSERT INTO EnemyInstance VALUES ({}, 1, 0, 1, 0)",
                           BasicLib::tostring(enemy.ID()));
         transactionConnection.exec(sql);
       }
