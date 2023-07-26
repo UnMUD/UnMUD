@@ -187,7 +187,7 @@ has call:[end,find,return] noreturn:[return]
 hasfull call:[end,findfull] noreturn:[end]
 has call:[end,find] noreturn:[end]
 size call:[size]
-FindOpenID call:[begin,rend,size]
+FindOpenID call:[begin,rbegin,size]
 EntityDatabase < Enemy >
 iterator
 iterator
@@ -203,7 +203,7 @@ has call:[end,find,return] noreturn:[return]
 hasfull call:[end,findfull] noreturn:[end]
 has call:[end,find] noreturn:[end]
 size call:[size]
-FindOpenID call:[begin,rend,size]
+FindOpenID call:[begin,rbegin,size]
 EntityDatabase < Item >
 iterator
 iterator
@@ -219,7 +219,7 @@ has call:[end,find,return] noreturn:[return]
 hasfull call:[end,findfull] noreturn:[end]
 has call:[end,find] noreturn:[end]
 size call:[size]
-FindOpenID call:[begin,rend,size]
+FindOpenID call:[begin,rbegin,size]
 EntityDatabase < Store >
 iterator
 iterator
@@ -235,7 +235,7 @@ has call:[end,find,return] noreturn:[return]
 hasfull call:[end,findfull] noreturn:[end]
 has call:[end,find] noreturn:[end]
 size call:[size]
-FindOpenID call:[begin,rend,size]
+FindOpenID call:[begin,rbegin,size]
 EnumToStr < Attribute >
 EnumToStr < ItemType >
 EnumToStr < PlayerRank >

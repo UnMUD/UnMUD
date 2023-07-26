@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+Checking SimpleMUD/SimpleMUD.cpp ...
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentityfull&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Entity.h" line="99" column="3"/>
+            <symbol>matchentityfull</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;matchentity&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Entity.h" line="112" column="3"/>
+            <symbol>matchentity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;playersend&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Player.h" line="222" column="3"/>
+            <symbol>playersend</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Logon&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Logon.h" line="41" column="3"/>
+            <symbol>Logon</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;iterator&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;iterator&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/EntityDatabase.h" line="36" column="5"/>
+            <symbol>iterator</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="80" column="38"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="148" column="36"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="170" column="34"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="192" column="36"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/Attributes.h" line="216" column="38"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_name&apos; should be passed by const reference." verbose="Parameter &apos;p_name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/EntityDatabase.h" line="100" column="35"/>
+            <symbol>p_name</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_name&apos; should be passed by const reference." verbose="Parameter &apos;p_name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD.cpp">
+            <location file="SimpleMUD/SimpleMUD/EntityDatabase.h" line="102" column="31"/>
+            <symbol>p_name</symbol>
+        </error>
+1/15 files checked 1% done
+Checking SimpleMUD/SimpleMUD/DatabasePointer.cpp ...
+2/15 files checked 3% done
+Checking SimpleMUD/SimpleMUD/Enemy.cpp ...
+3/15 files checked 8% done
+Checking SimpleMUD/SimpleMUD/EnemyDatabase.cpp ...
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" line="30" column="12"/>
+            <symbol>id</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/EnemyDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/EnemyDatabase.cpp" line="98" column="12"/>
+            <symbol>id</symbol>
+        </error>
+4/15 files checked 15% done
+Checking SimpleMUD/SimpleMUD/Game.cpp ...
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_str&apos; should be passed by const reference." verbose="Parameter &apos;p_str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Game.cpp">
+            <location file="SimpleMUD/SimpleMUD/Game.cpp" line="400" column="32"/>
+            <symbol>p_str</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_player&apos; should be passed by const reference." verbose="Parameter &apos;p_player&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Game.cpp">
+            <location file="SimpleMUD/SimpleMUD/Game.cpp" line="400" column="51"/>
+            <symbol>p_player</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;p_text&apos; should be passed by const reference." verbose="Parameter &apos;p_text&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="SimpleMUD/SimpleMUD/Game.cpp">
+            <location file="SimpleMUD/SimpleMUD/Game.cpp" line="776" column="28"/>
+            <symbol>p_text</symbol>
+        </error>
+5/15 files checked 51% done
+Checking SimpleMUD/SimpleMUD/GameLoop.cpp ...
+6/15 files checked 55% done
+Checking SimpleMUD/SimpleMUD/ItemDatabase.cpp ...
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/ItemDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/ItemDatabase.cpp" line="27" column="12"/>
+            <symbol>id</symbol>
+        </error>
+7/15 files checked 56% done
+Checking SimpleMUD/SimpleMUD/Logon.cpp ...
+8/15 files checked 63% done
+Checking SimpleMUD/SimpleMUD/Player.cpp ...
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="343" column="14" info="Shadow variable"/>
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="331" column="7" info="Shadowed declaration"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="355" column="14" info="Shadow variable"/>
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="331" column="7" info="Shadowed declaration"/>
+        </error>
+9/15 files checked 74% done
+Checking SimpleMUD/SimpleMUD/PlayerDatabase.cpp ...
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" line="26" column="12"/>
+            <symbol>id</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/PlayerDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/PlayerDatabase.cpp" line="202" column="12"/>
+            <symbol>id</symbol>
+        </error>
+10/15 files checked 82% done
+Checking SimpleMUD/SimpleMUD/Room.cpp ...
+11/15 files checked 87% done
+Checking SimpleMUD/SimpleMUD/RoomDatabase.cpp ...
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/RoomDatabase.cpp" line="28" column="12"/>
+            <symbol>id</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;roomid&apos; can be reduced." verbose="The scope of the variable &apos;roomid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/RoomDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/RoomDatabase.cpp" line="75" column="12"/>
+            <symbol>roomid</symbol>
+        </error>
+12/15 files checked 94% done
+Checking SimpleMUD/SimpleMUD/SimpleMUDLogs.cpp ...
+13/15 files checked 95% done
+Checking SimpleMUD/SimpleMUD/StoreDatabase.cpp ...
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;id&apos; can be reduced." verbose="The scope of the variable &apos;id&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="SimpleMUD/SimpleMUD/StoreDatabase.cpp">
+            <location file="SimpleMUD/SimpleMUD/StoreDatabase.cpp" line="24" column="12"/>
+            <symbol>id</symbol>
+        </error>
+14/15 files checked 97% done
+Checking SimpleMUD/SimpleMUD/Train.cpp ...
+15/15 files checked 100% done
+        <error id="unusedFunction" severity="style" msg="The function &apos;Flooded&apos; is never used." verbose="The function &apos;Flooded&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Game.cpp" line="356" column="0"/>
+            <symbol>Flooded</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;Handle&apos; is never used." verbose="The function &apos;Handle&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Train.cpp" line="20" column="0"/>
+            <symbol>Handle</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;SetBaseAttr&apos; is never used." verbose="The function &apos;SetBaseAttr&apos; is never used." cwe="561">
+            <location file="SimpleMUD/SimpleMUD/Player.cpp" line="82" column="0"/>
+            <symbol>SetBaseAttr</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>
