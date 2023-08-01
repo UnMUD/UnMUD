@@ -4,18 +4,16 @@ O UnMUD é um Multi-User Dungeon (MUD) desenvolvido como Projeto de Pesquisa e T
 
 Esse projeto foi desenvolvido com o objetivo principal de tornar a base de códigos de um MUD implantável, para que outros estudantes possam explorá-la e evoluí-la conforme desejarem, dando a eles a oportunidade de jogar, testar e analisar o jogo, a fim de compreender mais profundamente seu desenvolvimento, arquitetura e outros aspectos relevantes de seu software. Devido ao seu aspecto multidisciplinar e seu potencial evolutivo, MUDs se enquandram bem nessa função de "material de estudo".
 
-A monografia e o relatório de pesquisa resultantes desse projeto podem ser acessados nos links: [TCC](); [PIBIC]().
-
-![Imagem do Software em funcionamento]()
+<!-- A monografia e o relatório de pesquisa resultantes desse projeto podem ser acessados nos links: [TCC](); [PIBIC](). -->
 
 ## Documentação
 
 Toda documentação referente ao projeto pode ser visto em seu [site no GitHub Pages](https://unmud.github.io/UnMUD/#/). Caso você seja novo por aqui, alguns links interessantes de dar uma olhada caso você esteja interessado em:
 
 * [Contribuir com o projeto](https://unmud.github.io/UnMUD/#/contributionGuide)
-* [Jogar UnMUD](https://unmud.github.io/UnMUD/#/)
+* [Jogar UnMUD](https://unmud.github.io/UnMUD/#/game)
 
-É sempre bom também dar uma olhada nosso [Código de Conduta](https://unmud.github.io/UnMUD/#/) antes de interagir com a comunidade!
+<!-- É sempre bom também dar uma olhada nosso [Código de Conduta](https://unmud.github.io/UnMUD/#/) antes de interagir com a comunidade! -->
 
 ## Área do suporte
 
@@ -35,20 +33,15 @@ Para criar um ambiente de desenvolvimento isolado foram utilizadas as ferramenta
 * Windows: [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)
 * Mac: [Docker Desktop](https://docs.docker.com/desktop/install/mac-install/)
 
-Também foi utilizada a ferramenta (Makefile ou CMake) para compilação e linkagem dos códigos, assim como a geração de arquivo um executável. Não é necessária a instalação dessas ferramentas para execução do programa, uma vez que o ambiente de desenvolvimento é levantado de forma isolada pelo Docker. De todo modo, caso seja do seu interesse utilizá-la para rodar o programa, é possível acessar o guia de instalação nos links abaixo:
-
-* Arch:
-* Ubuntu:
-* Windows:
-* Mac:
+Também foi utilizada a ferramenta [Make](https://www.gnu.org/software/make/) para compilação e linkagem dos códigos, assim como a geração de arquivo um executável. Não é necessária a instalação dessas ferramentas para execução do programa, uma vez que o ambiente de desenvolvimento é levantado de forma isolada pelo Docker.
 
 Para análise estática de código foram utilizadas as ferramentas:
 
-* Ferramenta 1
-* Ferramenta 2
-* Ferramenta 3
+* [Cppcheck](https://cppcheck.sourceforge.io/): O Cppcheck é uma ferramenta de análise estática usada para analisar códigos C/C++. Ela fornece recursos de análise de código distintos para identificar erros de programação e se concentra na detecção de comportamentos indefinidos e práticas de codificação potencialmente perigosas.
+* [Clang Tidy](https://clang.llvm.org/extra/clang-tidy/): O clang-tidy é uma ferramenta de "linter" para C++ baseada em clang. Seu propósito é fornecer um framework extensível para diagnosticar e corrigir erros típicos de programação, como violações de estilo, uso incorreto de interface ou _bugs_ que podem ser deduzidos por meio de análise estática.
+* [Clang Format](https://clang.llvm.org/docs/ClangFormat.html): ClangFormat é uma ferramenta desenvolvida a partir da LibFormat, uma biblioteca que implementa formatação automática de código-fonte baseada no Clang.
 
-E para realização de testes unitários foi utilizado o framework [Framework](), em conjunto com a ferramenta [Ferramenta]() para análise da cobertura de testes.
+E para realização de testes unitários foi utilizado o framework [GoogleTest](https://google.github.io/googletest/primer.html), em conjunto com a ferramenta [gcovr](https://gcovr.com/en/stable/) para análise da cobertura de testes.
 
 A integração contínua e o deploy foram realizados com o auxílio do [GitHub Actions](https://github.com/features/actions).
 

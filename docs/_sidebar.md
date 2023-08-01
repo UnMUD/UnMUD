@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 * [Home](/)
+* [Como jogar](/game.md)
 * [Guia de Contribuição](/contributionGuide.md)
 * Requisitos
     * [Brainstorming](/Requirements/brainstorming.md)
@@ -42,3 +43,4 @@
     * [Abertura Sprint 14](SprintsAndMeetings/2023-06-30Sprint14Opening.md)
     * [Fechamento Sprint 14](SprintsAndMeetings/2023-07-07Sprint14Closure.md)
     * [Abertura Sprint 15](SprintsAndMeetings/2023-07-07Sprint15Opening.md)
+    * [Fechamento Sprint 15](SprintsAndMeetings/2023-07-14Sprint15Closure.md)

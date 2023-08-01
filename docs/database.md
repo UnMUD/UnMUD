@@ -26,6 +26,8 @@ Para mapeamento da generalizações foram utilizadas a regras definidas por Bagu
 
 ![Diagrama Lógico](Images/database/DL.png)
 
+![Diagrama Lógico para PostgreSQL](Images/database/DLPostgreSQL.png)
+
 ## Referências
 * Barcelar, Ricardo R. (2012). Banco de Dados. Disponível em: <https://www.academia.edu/download/35243840/BANCO_DE_DADOS__1_-_Introducao_ao_Estudo_de_Bancos_de_Dados_-_Ricardo_Barcelar_-_2014.pdf>.Acessado em Maio de 2023.
 * Bagui, Sikha. (2009). Mapping Generalizations and Specializations and Categories to Relational Databases
