@@ -4,7 +4,7 @@ O UnMUD é um Multi-User Dungeon (MUD) desenvolvido como Projeto de Pesquisa e T
 
 Esse projeto foi desenvolvido com o objetivo principal de tornar a base de códigos de um MUD implantável, para que outros estudantes possam explorá-la e evoluí-la conforme desejarem, dando a eles a oportunidade de jogar, testar e analisar o jogo, a fim de compreender mais profundamente seu desenvolvimento, arquitetura e outros aspectos relevantes de seu software. Devido ao seu aspecto multidisciplinar e seu potencial evolutivo, MUDs se enquandram bem nessa função de "material de estudo".
 
-<!-- A monografia e o relatório de pesquisa resultantes desse projeto podem ser acessados nos links: [TCC](); [PIBIC](). -->
+A monografia <!-- e o relatório de pesquisa --> resultante desse projeto pode ser acessado no link: [TCC](https://bdm.unb.br/handle/10483/39147). <!-- [PIBIC](). -->
 
 ## Documentação
 
